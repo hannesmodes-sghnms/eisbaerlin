@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+  <Name>de.hokejovyzapis.cz</Name>
+  <Prefix>league-team-matches/2026/1/</Prefix>
+  <Marker></Marker>
+  <MaxKeys>2</MaxKeys>
+  <IsTruncated>true</IsTruncated>
+  <Contents>
+    <Key>league-team-matches/2026/1/1.json</Key>
+    <LastModified>2026-09-28T12:00:00.000Z</LastModified>
+    <ETag>"aaa"</ETag>
+    <Size>1234</Size>
+  </Contents>
+  <Contents>
+    <Key>league-team-matches/2026/1/2.json</Key>
+    <LastModified>2026-09-28T12:00:00.000Z</LastModified>
+    <ETag>"bbb"</ETag>
+    <Size>2345</Size>
+  </Contents>
+</ListBucketResult>

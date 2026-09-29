@@ -1,0 +1,18 @@
+{
+  "matches": [
+    {
+      "id": 9001,
+      "start_date": "2026-09-18 19:30:00",
+      "status": "AFTER_MATCH",
+      "home": {"id": 1, "name": "Team A"},
+      "guest": {"id": 2, "name": "Team B"}
+    },
+    {
+      "id": 9002,
+      "start_date": "2026-09-20 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home": {"id": 3, "name": "Team C"},
+      "guest": {"id": 1, "name": "Team A"}
+    }
+  ]
+}
