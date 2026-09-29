@@ -48,6 +48,15 @@ jobs:
       - name: Validate season dataset
         run: python scripts/validate_season.py
 
+      - name: Build analytics exports
+        run: python scripts/generate_season_reports.py
+
+      - name: Build upcoming podcast prep
+        run: |
+          python scripts/generate_upcoming_reports.py \
+            --days 7 \
+            --last-games 5
+
       - name: Commit raw data and reports
         run: |
           git config user.name "github-actions[bot]"
@@ -69,6 +78,8 @@ jobs:
             data/reports/season_quality.json
             data/reports/season_quality.md
             data/reports/season_update_summary.json
+            data/reports/analytics/
+            data/reports/podcast/
           retention-days: 30
 
       - name: Publish latest DuckDB release asset
@@ -81,12 +92,16 @@ jobs:
               data/del_2026_27.duckdb \
               data/reports/season_quality.json \
               data/reports/season_quality.md \
+              data/reports/analytics/team_season_stats.csv \
+              data/reports/analytics/team_game_stats.csv \
               --clobber
           else
             gh release create "$TAG" \
               data/del_2026_27.duckdb \
               data/reports/season_quality.json \
               data/reports/season_quality.md \
+              data/reports/analytics/team_season_stats.csv \
+              data/reports/analytics/team_game_stats.csv \
               --title "DEL 2026/27 latest dataset" \
               --notes "Automatically refreshed DEL 2026/27 dataset. The assets on this release are replaced by the daily workflow."
           fi
