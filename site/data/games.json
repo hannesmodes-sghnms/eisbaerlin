@@ -4,7 +4,7 @@
     "abbr": "EBB",
     "name": "Eisbären Berlin"
   },
-  "generated_at": "2026-09-29T13:20:28.590668+00:00",
+  "generated_at": "2026-09-29T20:36:20.297225+00:00",
   "completed_games": [
     {
       "match_id": 4411,
@@ -64,7 +64,199 @@
       "away_team_id": 3,
       "away_team_name": "Eisbären Berlin",
       "ebb_home": false,
-      "opponent_name": "Löwen Frankfurt"
+      "opponent_name": "Löwen Frankfurt",
+      "opponent_team_id": 44,
+      "opponent_abbr": "FRA",
+      "key_stats": [
+        {
+          "label": "Bilanz",
+          "key": "record",
+          "kind": "text",
+          "ebb": "3-1",
+          "opponent": "2-2"
+        },
+        {
+          "label": "Corsi 5v5 %",
+          "key": "corsi_5v5_pct",
+          "kind": "percent",
+          "ebb": 47.959,
+          "opponent": 39.695
+        },
+        {
+          "label": "Corsi / Spiel",
+          "key": "corsi_per_game",
+          "kind": "decimal",
+          "ebb": 48.25,
+          "opponent": 42.0
+        },
+        {
+          "label": "SOG / Spiel",
+          "key": "sog_per_game",
+          "kind": "decimal",
+          "ebb": 26.5,
+          "opponent": 20.75
+        },
+        {
+          "label": "Slot Attempts / Spiel",
+          "key": "slot_per_game",
+          "kind": "decimal",
+          "ebb": 13.75,
+          "opponent": 11.75
+        },
+        {
+          "label": "Tore / Spiel",
+          "key": "goals_per_game",
+          "kind": "decimal",
+          "ebb": 4.25,
+          "opponent": 3.25
+        },
+        {
+          "label": "Gegentore / Spiel",
+          "key": "goals_against_per_game",
+          "kind": "decimal",
+          "ebb": 2.75,
+          "opponent": 1.75
+        },
+        {
+          "label": "PDO 5v5",
+          "key": "pdo_5v5",
+          "kind": "decimal",
+          "ebb": 102.834,
+          "opponent": 106.327
+        },
+        {
+          "label": "Zeit in Führung / Spiel",
+          "key": "time_leading_per_game_s",
+          "kind": "time",
+          "ebb": 2062,
+          "opponent": 1121
+        }
+      ],
+      "ebb_recent": [
+        {
+          "match_id": 4411,
+          "match_date": "2026-09-27",
+          "opponent_team_id": 7,
+          "opponent_shortcut": "IEC",
+          "opponent_name": "Iserlohn Roosters",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 0,
+          "corsi_5v5_pct": 64.179,
+          "slot_attempts_for": 15,
+          "pdo_5v5": 110.0,
+          "result": "4:0",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4405,
+          "match_date": "2026-09-25",
+          "opponent_team_id": 11,
+          "opponent_shortcut": "KEC",
+          "opponent_name": "Kölner Haie",
+          "home_road": "visitor",
+          "goals_for": 6,
+          "goals_against": 5,
+          "corsi_5v5_pct": 39.13,
+          "slot_attempts_for": 14,
+          "pdo_5v5": 111.441,
+          "result": "6:5",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4396,
+          "match_date": "2026-09-20",
+          "opponent_team_id": 2,
+          "opponent_shortcut": "MAN",
+          "opponent_name": "Adler Mannheim",
+          "home_road": "visitor",
+          "goals_for": 3,
+          "goals_against": 4,
+          "corsi_5v5_pct": 46.914,
+          "slot_attempts_for": 17,
+          "pdo_5v5": 86.364,
+          "result": "3:4",
+          "outcome": "L"
+        },
+        {
+          "match_id": 4389,
+          "match_date": "2026-09-17",
+          "opponent_team_id": 6,
+          "opponent_shortcut": "STR",
+          "opponent_name": "Straubing Tigers",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 2,
+          "corsi_5v5_pct": 42.857,
+          "slot_attempts_for": 9,
+          "pdo_5v5": 107.576,
+          "result": "4:2",
+          "outcome": "W"
+        }
+      ],
+      "opponent_recent": [
+        {
+          "match_id": 4415,
+          "match_date": "2026-09-27",
+          "opponent_team_id": 12,
+          "opponent_shortcut": "RBM",
+          "opponent_name": "EHC Red Bull München",
+          "home_road": "visitor",
+          "goals_for": 4,
+          "goals_against": 1,
+          "corsi_5v5_pct": 42.254,
+          "slot_attempts_for": 14,
+          "pdo_5v5": 111.905,
+          "result": "4:1",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4406,
+          "match_date": "2026-09-25",
+          "opponent_team_id": 14,
+          "opponent_shortcut": "NIT",
+          "opponent_name": "Nürnberg Ice Tigers",
+          "home_road": "home",
+          "goals_for": 1,
+          "goals_against": 2,
+          "corsi_5v5_pct": 50.746,
+          "slot_attempts_for": 15,
+          "pdo_5v5": 101.587,
+          "result": "1:2",
+          "outcome": "L"
+        },
+        {
+          "match_id": 4402,
+          "match_date": "2026-09-20",
+          "opponent_team_id": 11,
+          "opponent_shortcut": "KEC",
+          "opponent_name": "Kölner Haie",
+          "home_road": "visitor",
+          "goals_for": 3,
+          "goals_against": 4,
+          "corsi_5v5_pct": 37.5,
+          "slot_attempts_for": 10,
+          "pdo_5v5": 100.654,
+          "result": "3:4",
+          "outcome": "L"
+        },
+        {
+          "match_id": 4395,
+          "match_date": "2026-09-18",
+          "opponent_team_id": 15,
+          "opponent_shortcut": "SWW",
+          "opponent_name": "Schwenninger Wild Wings",
+          "home_road": "visitor",
+          "goals_for": 5,
+          "goals_against": 0,
+          "corsi_5v5_pct": 22.727,
+          "slot_attempts_for": 8,
+          "pdo_5v5": 120.0,
+          "result": "5:0",
+          "outcome": "W"
+        }
+      ],
+      "head_to_head": []
     },
     {
       "match_id": 4425,
@@ -74,7 +266,214 @@
       "away_team_id": 14,
       "away_team_name": "Nürnberg Ice Tigers",
       "ebb_home": true,
-      "opponent_name": "Nürnberg Ice Tigers"
+      "opponent_name": "Nürnberg Ice Tigers",
+      "opponent_team_id": 14,
+      "opponent_abbr": "NIT",
+      "key_stats": [
+        {
+          "label": "Bilanz",
+          "key": "record",
+          "kind": "text",
+          "ebb": "3-1",
+          "opponent": "4-1"
+        },
+        {
+          "label": "Corsi 5v5 %",
+          "key": "corsi_5v5_pct",
+          "kind": "percent",
+          "ebb": 47.959,
+          "opponent": 41.69
+        },
+        {
+          "label": "Corsi / Spiel",
+          "key": "corsi_per_game",
+          "kind": "decimal",
+          "ebb": 48.25,
+          "opponent": 44.2
+        },
+        {
+          "label": "SOG / Spiel",
+          "key": "sog_per_game",
+          "kind": "decimal",
+          "ebb": 26.5,
+          "opponent": 25.4
+        },
+        {
+          "label": "Slot Attempts / Spiel",
+          "key": "slot_per_game",
+          "kind": "decimal",
+          "ebb": 13.75,
+          "opponent": 11.0
+        },
+        {
+          "label": "Tore / Spiel",
+          "key": "goals_per_game",
+          "kind": "decimal",
+          "ebb": 4.25,
+          "opponent": 3.8
+        },
+        {
+          "label": "Gegentore / Spiel",
+          "key": "goals_against_per_game",
+          "kind": "decimal",
+          "ebb": 2.75,
+          "opponent": 2.0
+        },
+        {
+          "label": "PDO 5v5",
+          "key": "pdo_5v5",
+          "kind": "decimal",
+          "ebb": 102.834,
+          "opponent": 102.972
+        },
+        {
+          "label": "Zeit in Führung / Spiel",
+          "key": "time_leading_per_game_s",
+          "kind": "time",
+          "ebb": 2062,
+          "opponent": 1728
+        }
+      ],
+      "ebb_recent": [
+        {
+          "match_id": 4411,
+          "match_date": "2026-09-27",
+          "opponent_team_id": 7,
+          "opponent_shortcut": "IEC",
+          "opponent_name": "Iserlohn Roosters",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 0,
+          "corsi_5v5_pct": 64.179,
+          "slot_attempts_for": 15,
+          "pdo_5v5": 110.0,
+          "result": "4:0",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4405,
+          "match_date": "2026-09-25",
+          "opponent_team_id": 11,
+          "opponent_shortcut": "KEC",
+          "opponent_name": "Kölner Haie",
+          "home_road": "visitor",
+          "goals_for": 6,
+          "goals_against": 5,
+          "corsi_5v5_pct": 39.13,
+          "slot_attempts_for": 14,
+          "pdo_5v5": 111.441,
+          "result": "6:5",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4396,
+          "match_date": "2026-09-20",
+          "opponent_team_id": 2,
+          "opponent_shortcut": "MAN",
+          "opponent_name": "Adler Mannheim",
+          "home_road": "visitor",
+          "goals_for": 3,
+          "goals_against": 4,
+          "corsi_5v5_pct": 46.914,
+          "slot_attempts_for": 17,
+          "pdo_5v5": 86.364,
+          "result": "3:4",
+          "outcome": "L"
+        },
+        {
+          "match_id": 4389,
+          "match_date": "2026-09-17",
+          "opponent_team_id": 6,
+          "opponent_shortcut": "STR",
+          "opponent_name": "Straubing Tigers",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 2,
+          "corsi_5v5_pct": 42.857,
+          "slot_attempts_for": 9,
+          "pdo_5v5": 107.576,
+          "result": "4:2",
+          "outcome": "W"
+        }
+      ],
+      "opponent_recent": [
+        {
+          "match_id": 4412,
+          "match_date": "2026-09-27",
+          "opponent_team_id": 6,
+          "opponent_shortcut": "STR",
+          "opponent_name": "Straubing Tigers",
+          "home_road": "home",
+          "goals_for": 2,
+          "goals_against": 3,
+          "corsi_5v5_pct": 38.889,
+          "slot_attempts_for": 8,
+          "pdo_5v5": 95.238,
+          "result": "2:3",
+          "outcome": "L"
+        },
+        {
+          "match_id": 4406,
+          "match_date": "2026-09-25",
+          "opponent_team_id": 44,
+          "opponent_shortcut": "FRA",
+          "opponent_name": "Löwen Frankfurt",
+          "home_road": "visitor",
+          "goals_for": 2,
+          "goals_against": 1,
+          "corsi_5v5_pct": 49.254,
+          "slot_attempts_for": 12,
+          "pdo_5v5": 98.413,
+          "result": "2:1",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4403,
+          "match_date": "2026-09-22",
+          "opponent_team_id": 2,
+          "opponent_shortcut": "MAN",
+          "opponent_name": "Adler Mannheim",
+          "home_road": "home",
+          "goals_for": 5,
+          "goals_against": 3,
+          "corsi_5v5_pct": 27.869,
+          "slot_attempts_for": 11,
+          "pdo_5v5": 108.586,
+          "result": "5:3",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4399,
+          "match_date": "2026-09-20",
+          "opponent_team_id": 1,
+          "opponent_shortcut": "ING",
+          "opponent_name": "ERC Ingolstadt",
+          "home_road": "visitor",
+          "goals_for": 6,
+          "goals_against": 2,
+          "corsi_5v5_pct": 50.0,
+          "slot_attempts_for": 8,
+          "pdo_5v5": 109.524,
+          "result": "6:2",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4391,
+          "match_date": "2026-09-18",
+          "opponent_team_id": 13,
+          "opponent_shortcut": "AEV",
+          "opponent_name": "Augsburger Panther",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 1,
+          "corsi_5v5_pct": 40.741,
+          "slot_attempts_for": 16,
+          "pdo_5v5": 106.822,
+          "result": "4:1",
+          "outcome": "W"
+        }
+      ],
+      "head_to_head": []
     },
     {
       "match_id": 4434,
@@ -84,7 +483,199 @@
       "away_team_id": 8,
       "away_team_name": "Grizzlys Wolfsburg",
       "ebb_home": true,
-      "opponent_name": "Grizzlys Wolfsburg"
+      "opponent_name": "Grizzlys Wolfsburg",
+      "opponent_team_id": 8,
+      "opponent_abbr": "WOB",
+      "key_stats": [
+        {
+          "label": "Bilanz",
+          "key": "record",
+          "kind": "text",
+          "ebb": "3-1",
+          "opponent": "3-1"
+        },
+        {
+          "label": "Corsi 5v5 %",
+          "key": "corsi_5v5_pct",
+          "kind": "percent",
+          "ebb": 47.959,
+          "opponent": 41.212
+        },
+        {
+          "label": "Corsi / Spiel",
+          "key": "corsi_per_game",
+          "kind": "decimal",
+          "ebb": 48.25,
+          "opponent": 45.5
+        },
+        {
+          "label": "SOG / Spiel",
+          "key": "sog_per_game",
+          "kind": "decimal",
+          "ebb": 26.5,
+          "opponent": 25.0
+        },
+        {
+          "label": "Slot Attempts / Spiel",
+          "key": "slot_per_game",
+          "kind": "decimal",
+          "ebb": 13.75,
+          "opponent": 10.5
+        },
+        {
+          "label": "Tore / Spiel",
+          "key": "goals_per_game",
+          "kind": "decimal",
+          "ebb": 4.25,
+          "opponent": 4.5
+        },
+        {
+          "label": "Gegentore / Spiel",
+          "key": "goals_against_per_game",
+          "kind": "decimal",
+          "ebb": 2.75,
+          "opponent": 3.25
+        },
+        {
+          "label": "PDO 5v5",
+          "key": "pdo_5v5",
+          "kind": "decimal",
+          "ebb": 102.834,
+          "opponent": 110.648
+        },
+        {
+          "label": "Zeit in Führung / Spiel",
+          "key": "time_leading_per_game_s",
+          "kind": "time",
+          "ebb": 2062,
+          "opponent": 1362
+        }
+      ],
+      "ebb_recent": [
+        {
+          "match_id": 4411,
+          "match_date": "2026-09-27",
+          "opponent_team_id": 7,
+          "opponent_shortcut": "IEC",
+          "opponent_name": "Iserlohn Roosters",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 0,
+          "corsi_5v5_pct": 64.179,
+          "slot_attempts_for": 15,
+          "pdo_5v5": 110.0,
+          "result": "4:0",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4405,
+          "match_date": "2026-09-25",
+          "opponent_team_id": 11,
+          "opponent_shortcut": "KEC",
+          "opponent_name": "Kölner Haie",
+          "home_road": "visitor",
+          "goals_for": 6,
+          "goals_against": 5,
+          "corsi_5v5_pct": 39.13,
+          "slot_attempts_for": 14,
+          "pdo_5v5": 111.441,
+          "result": "6:5",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4396,
+          "match_date": "2026-09-20",
+          "opponent_team_id": 2,
+          "opponent_shortcut": "MAN",
+          "opponent_name": "Adler Mannheim",
+          "home_road": "visitor",
+          "goals_for": 3,
+          "goals_against": 4,
+          "corsi_5v5_pct": 46.914,
+          "slot_attempts_for": 17,
+          "pdo_5v5": 86.364,
+          "result": "3:4",
+          "outcome": "L"
+        },
+        {
+          "match_id": 4389,
+          "match_date": "2026-09-17",
+          "opponent_team_id": 6,
+          "opponent_shortcut": "STR",
+          "opponent_name": "Straubing Tigers",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 2,
+          "corsi_5v5_pct": 42.857,
+          "slot_attempts_for": 9,
+          "pdo_5v5": 107.576,
+          "result": "4:2",
+          "outcome": "W"
+        }
+      ],
+      "opponent_recent": [
+        {
+          "match_id": 4416,
+          "match_date": "2026-09-27",
+          "opponent_team_id": 9,
+          "opponent_shortcut": "BHV",
+          "opponent_name": "Pinguins Bremerhaven",
+          "home_road": "home",
+          "goals_for": 3,
+          "goals_against": 2,
+          "corsi_5v5_pct": 36.905,
+          "slot_attempts_for": 8,
+          "pdo_5v5": 107.111,
+          "result": "3:2",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4410,
+          "match_date": "2026-09-25",
+          "opponent_team_id": 15,
+          "opponent_shortcut": "SWW",
+          "opponent_name": "Schwenninger Wild Wings",
+          "home_road": "home",
+          "goals_for": 3,
+          "goals_against": 4,
+          "corsi_5v5_pct": 47.5,
+          "slot_attempts_for": 12,
+          "pdo_5v5": 108.75,
+          "result": "3:4",
+          "outcome": "L"
+        },
+        {
+          "match_id": 4401,
+          "match_date": "2026-09-20",
+          "opponent_team_id": 12,
+          "opponent_shortcut": "RBM",
+          "opponent_name": "EHC Red Bull München",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 3,
+          "corsi_5v5_pct": 43.529,
+          "slot_attempts_for": 12,
+          "pdo_5v5": 102.193,
+          "result": "4:3",
+          "outcome": "W"
+        },
+        {
+          "match_id": 4390,
+          "match_date": "2026-09-18",
+          "opponent_team_id": 11,
+          "opponent_shortcut": "KEC",
+          "opponent_name": "Kölner Haie",
+          "home_road": "visitor",
+          "goals_for": 8,
+          "goals_against": 4,
+          "corsi_5v5_pct": 37.037,
+          "slot_attempts_for": 10,
+          "pdo_5v5": 124.172,
+          "result": "8:4",
+          "outcome": "W"
+        }
+      ],
+      "head_to_head": []
     }
   ]
 }

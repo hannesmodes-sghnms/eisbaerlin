@@ -10,6 +10,7 @@
     "away_score": 6,
     "opponent_team_id": 11,
     "opponent_name": "Kölner Haie",
+    "opponent_abbr": "KEC",
     "ebb_home": false
   },
   "focus_team": {
@@ -136,10 +137,16 @@
     "Meiste Eiszeit EBB: Kai Wissmann mit 26:56.",
     "Meiste PP-Eiszeit: Ty Ronning (6:04).",
     "Meiste PK-Eiszeit: Jonas Müller (1:54).",
+    "Reihenänderung P2: Sturmreihe Vikingstad – Veilleux – Krestan wurde neu stabil eingesetzt (0:50; P1 0:00).",
+    "Reihenänderung P2: Sturmreihe Wiederer – Foudy – Fontaine wurde neu stabil eingesetzt (1:12; P1 0:00).",
+    "Reihenänderung P2: Verteidigerpaar Smith – Müller wurde neu stabil eingesetzt (1:15; P1 0:00).",
+    "Reihenänderung P3: Sturmreihe Wiederer – Foudy – Fontaine fiel nahezu aus der 5v5-Rotation (P2 1:12 → P3 0:00).",
+    "Reihenänderung P3: Verteidigerpaar Smith – Müller fiel nahezu aus der 5v5-Rotation (P2 1:15 → P3 0:00).",
     "5v5-Forward-Nutzung: Top 9 kamen in P1+P2 auf 81.0% der Forward-TOI, in P3 auf 79.2%. Forwards mit mindestens 30s 5v5-TOI: P1 12, P2 12, P3 12.",
-    "Neue stabile 5v5-Defense-Pairs in P3: Müller – Davidson (0:42), Wissmann – Geibel (0:33), Smith – Wissmann (0:30).",
     "Häufigste stabile 5v5-Forward-Unit: Ronning – Kirk – Tiffels mit 10:16 gemeinsamer Eiszeit.",
-    "Häufigstes 5v5-Verteidigerpaar: Wissmann – Müller mit 14:27."
+    "Häufigstes 5v5-Verteidigerpaar: Wissmann – Müller mit 14:27.",
+    "Häufigstes Line-Matching: EBB Ronning – Kirk – Tiffels gegen Russell – MacLeod – Noebels mit 4:17 stabiler gemeinsamer 5v5-Eiszeit.",
+    "Lineup-Datencheck: stabile Units decken 95.3% der rekonstruierten 5v5-Forward-TOI und 97.1% der 5v5-Defense-TOI ab."
   ],
   "players": [
     {
@@ -156,9 +163,12 @@
       "pk_s": 87,
       "shifts": 32,
       "avg_shift_s": 50.5,
+      "five_v_five_s": 971,
       "five_v_five_p1_s": 264,
       "five_v_five_p2_s": 342,
-      "five_v_five_p3_s": 365
+      "five_v_five_p3_s": 365,
+      "stable_unit_s": 941,
+      "stable_unit_coverage_pct": 96.9
     },
     {
       "player_id": 506,
@@ -174,9 +184,12 @@
       "pk_s": 114,
       "shifts": 34,
       "avg_shift_s": 46.6,
+      "five_v_five_s": 1053,
       "five_v_five_p1_s": 287,
       "five_v_five_p2_s": 421,
-      "five_v_five_p3_s": 345
+      "five_v_five_p3_s": 345,
+      "stable_unit_s": 1006,
+      "stable_unit_coverage_pct": 95.5
     },
     {
       "player_id": 3410,
@@ -192,9 +205,12 @@
       "pk_s": 0,
       "shifts": 24,
       "avg_shift_s": 54.2,
+      "five_v_five_s": 803,
       "five_v_five_p1_s": 239,
       "five_v_five_p2_s": 303,
-      "five_v_five_p3_s": 261
+      "five_v_five_p3_s": 261,
+      "stable_unit_s": 788,
+      "stable_unit_coverage_pct": 98.1
     },
     {
       "player_id": 2209,
@@ -210,9 +226,12 @@
       "pk_s": 0,
       "shifts": 23,
       "avg_shift_s": 55.7,
+      "five_v_five_s": 789,
       "five_v_five_p1_s": 263,
       "five_v_five_p2_s": 258,
-      "five_v_five_p3_s": 268
+      "five_v_five_p3_s": 268,
+      "stable_unit_s": 746,
+      "stable_unit_coverage_pct": 94.6
     },
     {
       "player_id": 3411,
@@ -228,9 +247,12 @@
       "pk_s": 42,
       "shifts": 25,
       "avg_shift_s": 45.8,
+      "five_v_five_s": 821,
       "five_v_five_p1_s": 225,
       "five_v_five_p2_s": 325,
-      "five_v_five_p3_s": 271
+      "five_v_five_p3_s": 271,
+      "stable_unit_s": 775,
+      "stable_unit_coverage_pct": 94.4
     },
     {
       "player_id": 92,
@@ -246,9 +268,12 @@
       "pk_s": 0,
       "shifts": 26,
       "avg_shift_s": 41.9,
+      "five_v_five_s": 613,
       "five_v_five_p1_s": 204,
       "five_v_five_p2_s": 212,
-      "five_v_five_p3_s": 197
+      "five_v_five_p3_s": 197,
+      "stable_unit_s": 602,
+      "stable_unit_coverage_pct": 98.2
     },
     {
       "player_id": 546,
@@ -264,9 +289,12 @@
       "pk_s": 49,
       "shifts": 26,
       "avg_shift_s": 41.2,
+      "five_v_five_s": 682,
       "five_v_five_p1_s": 243,
       "five_v_five_p2_s": 252,
-      "five_v_five_p3_s": 187
+      "five_v_five_p3_s": 187,
+      "stable_unit_s": 622,
+      "stable_unit_coverage_pct": 91.2
     },
     {
       "player_id": 1402,
@@ -282,9 +310,12 @@
       "pk_s": 0,
       "shifts": 22,
       "avg_shift_s": 48.4,
+      "five_v_five_s": 691,
       "five_v_five_p1_s": 227,
       "five_v_five_p2_s": 237,
-      "five_v_five_p3_s": 227
+      "five_v_five_p3_s": 227,
+      "stable_unit_s": 682,
+      "stable_unit_coverage_pct": 98.7
     },
     {
       "player_id": 3533,
@@ -300,9 +331,12 @@
       "pk_s": 56,
       "shifts": 24,
       "avg_shift_s": 42.3,
+      "five_v_five_s": 816,
       "five_v_five_p1_s": 209,
       "five_v_five_p2_s": 364,
-      "five_v_five_p3_s": 243
+      "five_v_five_p3_s": 243,
+      "stable_unit_s": 799,
+      "stable_unit_coverage_pct": 97.9
     },
     {
       "player_id": 4701,
@@ -318,9 +352,12 @@
       "pk_s": 85,
       "shifts": 23,
       "avg_shift_s": 44.0,
+      "five_v_five_s": 843,
       "five_v_five_p1_s": 230,
       "five_v_five_p2_s": 308,
-      "five_v_five_p3_s": 305
+      "five_v_five_p3_s": 305,
+      "stable_unit_s": 820,
+      "stable_unit_coverage_pct": 97.3
     },
     {
       "player_id": 1796,
@@ -336,9 +373,12 @@
       "pk_s": 74,
       "shifts": 26,
       "avg_shift_s": 37.3,
+      "five_v_five_s": 622,
       "five_v_five_p1_s": 200,
       "five_v_five_p2_s": 172,
-      "five_v_five_p3_s": 250
+      "five_v_five_p3_s": 250,
+      "stable_unit_s": 588,
+      "stable_unit_coverage_pct": 94.5
     },
     {
       "player_id": 1425,
@@ -354,9 +394,12 @@
       "pk_s": 0,
       "shifts": 21,
       "avg_shift_s": 45.6,
+      "five_v_five_s": 826,
       "five_v_five_p1_s": 289,
       "five_v_five_p2_s": 256,
-      "five_v_five_p3_s": 281
+      "five_v_five_p3_s": 281,
+      "stable_unit_s": 818,
+      "stable_unit_coverage_pct": 99.0
     },
     {
       "player_id": 1762,
@@ -372,9 +415,12 @@
       "pk_s": 17,
       "shifts": 21,
       "avg_shift_s": 44.9,
+      "five_v_five_s": 634,
       "five_v_five_p1_s": 199,
       "five_v_five_p2_s": 226,
-      "five_v_five_p3_s": 209
+      "five_v_five_p3_s": 209,
+      "stable_unit_s": 594,
+      "stable_unit_coverage_pct": 93.7
     },
     {
       "player_id": 1738,
@@ -390,9 +436,12 @@
       "pk_s": 0,
       "shifts": 18,
       "avg_shift_s": 51.1,
+      "five_v_five_s": 858,
       "five_v_five_p1_s": 321,
       "five_v_five_p2_s": 222,
-      "five_v_five_p3_s": 315
+      "five_v_five_p3_s": 315,
+      "stable_unit_s": 828,
+      "stable_unit_coverage_pct": 96.5
     },
     {
       "player_id": 4895,
@@ -408,9 +457,12 @@
       "pk_s": 0,
       "shifts": 19,
       "avg_shift_s": 45.0,
+      "five_v_five_s": 726,
       "five_v_five_p1_s": 216,
       "five_v_five_p2_s": 266,
-      "five_v_five_p3_s": 244
+      "five_v_five_p3_s": 244,
+      "stable_unit_s": 703,
+      "stable_unit_coverage_pct": 96.8
     },
     {
       "player_id": 1823,
@@ -426,9 +478,12 @@
       "pk_s": 81,
       "shifts": 14,
       "avg_shift_s": 52.2,
+      "five_v_five_s": 616,
       "five_v_five_p1_s": 160,
       "five_v_five_p2_s": 225,
-      "five_v_five_p3_s": 231
+      "five_v_five_p3_s": 231,
+      "stable_unit_s": 589,
+      "stable_unit_coverage_pct": 95.6
     },
     {
       "player_id": 2126,
@@ -444,9 +499,12 @@
       "pk_s": 77,
       "shifts": 13,
       "avg_shift_s": 51.5,
+      "five_v_five_s": 555,
       "five_v_five_p1_s": 156,
       "five_v_five_p2_s": 164,
-      "five_v_five_p3_s": 235
+      "five_v_five_p3_s": 235,
+      "stable_unit_s": 509,
+      "stable_unit_coverage_pct": 91.7
     },
     {
       "player_id": 4311,
@@ -462,9 +520,12 @@
       "pk_s": 0,
       "shifts": 9,
       "avg_shift_s": 60.1,
+      "five_v_five_s": 506,
       "five_v_five_p1_s": 98,
       "five_v_five_p2_s": 217,
-      "five_v_five_p3_s": 191
+      "five_v_five_p3_s": 191,
+      "stable_unit_s": 482,
+      "stable_unit_coverage_pct": 95.3
     },
     {
       "player_id": 3412,
@@ -480,9 +541,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     },
     {
       "player_id": 2510,
@@ -498,9 +562,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     },
     {
       "player_id": 4310,
@@ -516,9 +583,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     },
     {
       "player_id": 4181,
@@ -534,9 +604,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     },
     {
       "player_id": 4312,
@@ -552,9 +625,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     },
     {
       "player_id": 4160,
@@ -570,9 +646,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     },
     {
       "player_id": 3547,
@@ -588,9 +667,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     },
     {
       "player_id": 1069,
@@ -606,9 +688,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     },
     {
       "player_id": 3523,
@@ -624,9 +709,12 @@
       "pk_s": 0,
       "shifts": 0,
       "avg_shift_s": null,
+      "five_v_five_s": 0,
       "five_v_five_p1_s": 0,
       "five_v_five_p2_s": 0,
-      "five_v_five_p3_s": 0
+      "five_v_five_p3_s": 0,
+      "stable_unit_s": 0,
+      "stable_unit_coverage_pct": null
     }
   ],
   "lineups": {
@@ -658,7 +746,10 @@
         "p1_s": 211,
         "p2_s": 191,
         "p3_s": 214,
-        "appearances": 19
+        "appearances": 19,
+        "p1_appearances": 5,
+        "p2_appearances": 5,
+        "p3_appearances": 9
       },
       {
         "player_ids": [
@@ -681,7 +772,10 @@
         "p1_s": 181,
         "p2_s": 191,
         "p3_s": 173,
-        "appearances": 18
+        "appearances": 18,
+        "p1_appearances": 4,
+        "p2_appearances": 7,
+        "p3_appearances": 7
       },
       {
         "player_ids": [
@@ -704,7 +798,10 @@
         "p1_s": 153,
         "p2_s": 116,
         "p3_s": 159,
-        "appearances": 12
+        "appearances": 12,
+        "p1_appearances": 4,
+        "p2_appearances": 4,
+        "p3_appearances": 4
       },
       {
         "player_ids": [
@@ -727,7 +824,10 @@
         "p1_s": 84,
         "p2_s": 136,
         "p3_s": 176,
-        "appearances": 10
+        "appearances": 10,
+        "p1_appearances": 2,
+        "p2_appearances": 5,
+        "p3_appearances": 3
       },
       {
         "player_ids": [
@@ -750,7 +850,10 @@
         "p1_s": 49,
         "p2_s": 0,
         "p3_s": 36,
-        "appearances": 2
+        "appearances": 2,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -773,7 +876,10 @@
         "p1_s": 0,
         "p2_s": 72,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -796,7 +902,10 @@
         "p1_s": 0,
         "p2_s": 50,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -819,7 +928,10 @@
         "p1_s": 0,
         "p2_s": 27,
         "p3_s": 21,
-        "appearances": 2
+        "appearances": 2,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -842,7 +954,10 @@
         "p1_s": 8,
         "p2_s": 35,
         "p3_s": 0,
-        "appearances": 2
+        "appearances": 2,
+        "p1_appearances": 1,
+        "p2_appearances": 1,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -865,7 +980,10 @@
         "p1_s": 0,
         "p2_s": 43,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -888,7 +1006,10 @@
         "p1_s": 0,
         "p2_s": 18,
         "p3_s": 19,
-        "appearances": 2
+        "appearances": 2,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -911,7 +1032,10 @@
         "p1_s": 8,
         "p2_s": 0,
         "p3_s": 19,
-        "appearances": 2
+        "appearances": 2,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -934,7 +1058,10 @@
         "p1_s": 27,
         "p2_s": 0,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -957,7 +1084,10 @@
         "p1_s": 0,
         "p2_s": 0,
         "p3_s": 24,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -980,7 +1110,10 @@
         "p1_s": 0,
         "p2_s": 0,
         "p3_s": 19,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -1003,7 +1136,10 @@
         "p1_s": 0,
         "p2_s": 18,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -1026,7 +1162,10 @@
         "p1_s": 0,
         "p2_s": 17,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -1049,7 +1188,10 @@
         "p1_s": 15,
         "p2_s": 0,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -1072,7 +1214,10 @@
         "p1_s": 0,
         "p2_s": 0,
         "p3_s": 15,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -1095,7 +1240,10 @@
         "p1_s": 0,
         "p2_s": 0,
         "p3_s": 10,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -1118,7 +1266,10 @@
         "p1_s": 0,
         "p2_s": 9,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -1141,7 +1292,10 @@
         "p1_s": 8,
         "p2_s": 0,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -1164,7 +1318,10 @@
         "p1_s": 8,
         "p2_s": 0,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
       }
     ],
     "defense_pairs": [
@@ -1186,7 +1343,10 @@
         "p1_s": 251,
         "p2_s": 334,
         "p3_s": 282,
-        "appearances": 24
+        "appearances": 24,
+        "p1_appearances": 7,
+        "p2_appearances": 7,
+        "p3_appearances": 10
       },
       {
         "player_ids": [
@@ -1206,7 +1366,10 @@
         "p1_s": 287,
         "p2_s": 225,
         "p3_s": 247,
-        "appearances": 18
+        "appearances": 18,
+        "p1_appearances": 7,
+        "p2_appearances": 5,
+        "p3_appearances": 6
       },
       {
         "player_ids": [
@@ -1226,7 +1389,10 @@
         "p1_s": 206,
         "p2_s": 288,
         "p3_s": 200,
-        "appearances": 20
+        "appearances": 20,
+        "p1_appearances": 6,
+        "p2_appearances": 8,
+        "p3_appearances": 6
       },
       {
         "player_ids": [
@@ -1246,7 +1412,10 @@
         "p1_s": 0,
         "p2_s": 75,
         "p3_s": 0,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
       },
       {
         "player_ids": [
@@ -1266,7 +1435,10 @@
         "p1_s": 0,
         "p2_s": 0,
         "p3_s": 42,
-        "appearances": 3
+        "appearances": 3,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 3
       },
       {
         "player_ids": [
@@ -1286,7 +1458,10 @@
         "p1_s": 0,
         "p2_s": 18,
         "p3_s": 19,
-        "appearances": 2
+        "appearances": 2,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -1306,7 +1481,10 @@
         "p1_s": 13,
         "p2_s": 0,
         "p3_s": 23,
-        "appearances": 2
+        "appearances": 2,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -1326,7 +1504,10 @@
         "p1_s": 0,
         "p2_s": 0,
         "p3_s": 33,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -1346,7 +1527,10 @@
         "p1_s": 0,
         "p2_s": 0,
         "p3_s": 30,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -1366,7 +1550,10 @@
         "p1_s": 0,
         "p2_s": 12,
         "p3_s": 10,
-        "appearances": 2
+        "appearances": 2,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 1
       },
       {
         "player_ids": [
@@ -1386,7 +1573,1658 @@
         "p1_s": 0,
         "p2_s": 0,
         "p3_s": 11,
-        "appearances": 1
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      }
+    ],
+    "opponent_forward_trios": [
+      {
+        "player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "names": [
+          "Russell",
+          "MacLeod",
+          "Noebels"
+        ],
+        "jerseys": [
+          63,
+          89,
+          92
+        ],
+        "label": "Russell – MacLeod – Noebels",
+        "total_s": 841,
+        "p1_s": 238,
+        "p2_s": 280,
+        "p3_s": 323,
+        "appearances": 21,
+        "p1_appearances": 6,
+        "p2_appearances": 6,
+        "p3_appearances": 9
+      },
+      {
+        "player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "names": [
+          "Fleischer",
+          "Niedenz",
+          "Ljungh"
+        ],
+        "jerseys": [
+          29,
+          46,
+          61
+        ],
+        "label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 619,
+        "p1_s": 196,
+        "p2_s": 225,
+        "p3_s": 198,
+        "appearances": 17,
+        "p1_appearances": 5,
+        "p2_appearances": 6,
+        "p3_appearances": 6
+      },
+      {
+        "player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "names": [
+          "Kammerer",
+          "Tyrväinen",
+          "Fischbuch"
+        ],
+        "jerseys": [
+          9,
+          21,
+          71
+        ],
+        "label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 415,
+        "p1_s": 163,
+        "p2_s": 143,
+        "p3_s": 109,
+        "appearances": 14,
+        "p1_appearances": 5,
+        "p2_appearances": 5,
+        "p3_appearances": 4
+      },
+      {
+        "player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "names": [
+          "Storm",
+          "Münzenberger",
+          "MacInnis"
+        ],
+        "jerseys": [
+          19,
+          65,
+          77
+        ],
+        "label": "Storm – Münzenberger – MacInnis",
+        "total_s": 351,
+        "p1_s": 129,
+        "p2_s": 183,
+        "p3_s": 39,
+        "appearances": 8,
+        "p1_appearances": 3,
+        "p2_appearances": 4,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          115,
+          3432,
+          2172
+        ],
+        "names": [
+          "Kammerer",
+          "Tyrväinen",
+          "MacInnis"
+        ],
+        "jerseys": [
+          9,
+          21,
+          77
+        ],
+        "label": "Kammerer – Tyrväinen – MacInnis",
+        "total_s": 58,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 58,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          499,
+          1799,
+          507
+        ],
+        "names": [
+          "Fischbuch",
+          "MacLeod",
+          "Noebels"
+        ],
+        "jerseys": [
+          71,
+          89,
+          92
+        ],
+        "label": "Fischbuch – MacLeod – Noebels",
+        "total_s": 55,
+        "p1_s": 8,
+        "p2_s": 36,
+        "p3_s": 11,
+        "appearances": 3,
+        "p1_appearances": 1,
+        "p2_appearances": 1,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          1678,
+          3572,
+          1799
+        ],
+        "names": [
+          "Niedenz",
+          "Russell",
+          "MacLeod"
+        ],
+        "jerseys": [
+          46,
+          63,
+          89
+        ],
+        "label": "Niedenz – Russell – MacLeod",
+        "total_s": 40,
+        "p1_s": 0,
+        "p2_s": 40,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "player_ids": [
+          1678,
+          4260,
+          2172
+        ],
+        "names": [
+          "Niedenz",
+          "Ljungh",
+          "MacInnis"
+        ],
+        "jerseys": [
+          46,
+          61,
+          77
+        ],
+        "label": "Niedenz – Ljungh – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          115,
+          4260,
+          2172
+        ],
+        "names": [
+          "Kammerer",
+          "Ljungh",
+          "MacInnis"
+        ],
+        "jerseys": [
+          9,
+          61,
+          77
+        ],
+        "label": "Kammerer – Ljungh – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          4260,
+          499,
+          2172
+        ],
+        "names": [
+          "Ljungh",
+          "Fischbuch",
+          "MacInnis"
+        ],
+        "jerseys": [
+          61,
+          71,
+          77
+        ],
+        "label": "Ljungh – Fischbuch – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          4260,
+          3572,
+          507
+        ],
+        "names": [
+          "Ljungh",
+          "Russell",
+          "Noebels"
+        ],
+        "jerseys": [
+          61,
+          63,
+          92
+        ],
+        "label": "Ljungh – Russell – Noebels",
+        "total_s": 19,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 19,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          3432,
+          4260,
+          2172
+        ],
+        "names": [
+          "Tyrväinen",
+          "Ljungh",
+          "MacInnis"
+        ],
+        "jerseys": [
+          21,
+          61,
+          77
+        ],
+        "label": "Tyrväinen – Ljungh – MacInnis",
+        "total_s": 15,
+        "p1_s": 15,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "player_ids": [
+          3432,
+          1678,
+          2172
+        ],
+        "names": [
+          "Tyrväinen",
+          "Niedenz",
+          "MacInnis"
+        ],
+        "jerseys": [
+          21,
+          46,
+          77
+        ],
+        "label": "Tyrväinen – Niedenz – MacInnis",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          3432,
+          1491,
+          1678
+        ],
+        "names": [
+          "Tyrväinen",
+          "Fleischer",
+          "Niedenz"
+        ],
+        "jerseys": [
+          21,
+          29,
+          46
+        ],
+        "label": "Tyrväinen – Fleischer – Niedenz",
+        "total_s": 13,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 13,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          1644,
+          2172,
+          507
+        ],
+        "names": [
+          "Storm",
+          "MacInnis",
+          "Noebels"
+        ],
+        "jerseys": [
+          19,
+          77,
+          92
+        ],
+        "label": "Storm – MacInnis – Noebels",
+        "total_s": 13,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 13,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "player_ids": [
+          115,
+          1491,
+          4260
+        ],
+        "names": [
+          "Kammerer",
+          "Fleischer",
+          "Ljungh"
+        ],
+        "jerseys": [
+          9,
+          29,
+          61
+        ],
+        "label": "Kammerer – Fleischer – Ljungh",
+        "total_s": 12,
+        "p1_s": 12,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "player_ids": [
+          1491,
+          1678,
+          1799
+        ],
+        "names": [
+          "Fleischer",
+          "Niedenz",
+          "MacLeod"
+        ],
+        "jerseys": [
+          29,
+          46,
+          89
+        ],
+        "label": "Fleischer – Niedenz – MacLeod",
+        "total_s": 11,
+        "p1_s": 11,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      }
+    ],
+    "forward_matchups": [
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 257,
+        "p1_s": 56,
+        "p2_s": 103,
+        "p3_s": 98,
+        "appearances": 10,
+        "p1_appearances": 2,
+        "p2_appearances": 3,
+        "p3_appearances": 5
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 217,
+        "p1_s": 37,
+        "p2_s": 102,
+        "p3_s": 78,
+        "appearances": 6,
+        "p1_appearances": 1,
+        "p2_appearances": 3,
+        "p3_appearances": 2
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 171,
+        "p1_s": 66,
+        "p2_s": 0,
+        "p3_s": 105,
+        "appearances": 5,
+        "p1_appearances": 2,
+        "p2_appearances": 0,
+        "p3_appearances": 3
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 142,
+        "p1_s": 98,
+        "p2_s": 0,
+        "p3_s": 44,
+        "appearances": 4,
+        "p1_appearances": 3,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 136,
+        "p1_s": 42,
+        "p2_s": 60,
+        "p3_s": 34,
+        "appearances": 4,
+        "p1_appearances": 1,
+        "p2_appearances": 2,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 134,
+        "p1_s": 48,
+        "p2_s": 34,
+        "p3_s": 52,
+        "appearances": 5,
+        "p1_appearances": 2,
+        "p2_appearances": 1,
+        "p3_appearances": 2
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 111,
+        "p1_s": 47,
+        "p2_s": 64,
+        "p3_s": 0,
+        "appearances": 3,
+        "p1_appearances": 1,
+        "p2_appearances": 2,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 102,
+        "p1_s": 74,
+        "p2_s": 28,
+        "p3_s": 0,
+        "appearances": 3,
+        "p1_appearances": 2,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 95,
+        "p1_s": 40,
+        "p2_s": 17,
+        "p3_s": 38,
+        "appearances": 4,
+        "p1_appearances": 1,
+        "p2_appearances": 1,
+        "p3_appearances": 2
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          2126
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Foudy – Hördler",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 85,
+        "p1_s": 49,
+        "p2_s": 0,
+        "p3_s": 36,
+        "appearances": 2,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 77,
+        "p1_s": 34,
+        "p2_s": 33,
+        "p3_s": 10,
+        "appearances": 3,
+        "p1_appearances": 1,
+        "p2_appearances": 1,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Foudy – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 59,
+        "p1_s": 0,
+        "p2_s": 59,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 51,
+        "p1_s": 0,
+        "p2_s": 27,
+        "p3_s": 24,
+        "appearances": 3,
+        "p1_appearances": 0,
+        "p2_appearances": 2,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4311
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 50,
+        "p1_s": 0,
+        "p2_s": 50,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 46,
+        "p1_s": 46,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 39,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 39,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 8,
+        "p3_s": 27,
+        "appearances": 2,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 35,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          4895,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Foudy – Kirk – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 35,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          499,
+          1799,
+          507
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Fischbuch – MacLeod – Noebels",
+        "total_s": 34,
+        "p1_s": 0,
+        "p2_s": 34,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Eder – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 33,
+        "p1_s": 0,
+        "p2_s": 33,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          1678,
+          4260,
+          2172
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Niedenz – Ljungh – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          4260,
+          2172
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Ljungh – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          4260,
+          499,
+          2172
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Ljungh – Fischbuch – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          2172
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Kammerer – Tyrväinen – MacInnis",
+        "total_s": 28,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 28,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          1823,
+          3410
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Wiederer – Kirk",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 27,
+        "p1_s": 27,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          1678,
+          3572,
+          1799
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Niedenz – Russell – MacLeod",
+        "total_s": 27,
+        "p1_s": 0,
+        "p2_s": 27,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          2172
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – MacInnis",
+        "total_s": 23,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 23,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          4895,
+          3410
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Veilleux – Foudy – Kirk",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 21,
+        "p1_s": 0,
+        "p2_s": 21,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          4895,
+          3410
+        ],
+        "opponent_player_ids": [
+          4260,
+          3572,
+          507
+        ],
+        "ebb_label": "Veilleux – Foudy – Kirk",
+        "opponent_label": "Ljungh – Russell – Noebels",
+        "total_s": 17,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 17,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          92
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Pföderl",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 15,
+        "p1_s": 15,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          3411
+        ],
+        "opponent_player_ids": [
+          3432,
+          1678,
+          2172
+        ],
+        "ebb_label": "Ronning – Kirk – Fontaine",
+        "opponent_label": "Tyrväinen – Niedenz – MacInnis",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          1796,
+          1402
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Vikingstad – Tiffels",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Kirk – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 14,
+        "p1_s": 0,
+        "p2_s": 14,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          3411
+        ],
+        "opponent_player_ids": [
+          1644,
+          2172,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Fontaine",
+        "opponent_label": "Storm – MacInnis – Noebels",
+        "total_s": 13,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 13,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          4895,
+          3411
+        ],
+        "opponent_player_ids": [
+          3432,
+          1491,
+          1678
+        ],
+        "ebb_label": "Vikingstad – Foudy – Fontaine",
+        "opponent_label": "Tyrväinen – Fleischer – Niedenz",
+        "total_s": 13,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 13,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          1491,
+          4260
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Fleischer – Ljungh",
+        "total_s": 12,
+        "p1_s": 12,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1678,
+          3572,
+          1799
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Niedenz – Russell – MacLeod",
+        "total_s": 12,
+        "p1_s": 0,
+        "p2_s": 12,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          2126,
+          92
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 12,
+        "p1_s": 0,
+        "p2_s": 12,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          1799
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – MacLeod",
+        "total_s": 11,
+        "p1_s": 11,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          4311,
+          3410
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Veilleux – Krestan – Kirk",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 10,
+        "p1_s": 0,
+        "p2_s": 10,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          1762,
+          4311
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Wiederer – Veilleux – Krestan",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 9,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 9,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          499,
+          1799,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Fischbuch – MacLeod – Noebels",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 9,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 0,
+        "p3_appearances": 1
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Ronning – Eder – Fontaine",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Ronning – Eder – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          3411
+        ],
+        "opponent_player_ids": [
+          499,
+          1799,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Fontaine",
+        "opponent_label": "Fischbuch – MacLeod – Noebels",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 0
+      }
+    ],
+    "primary_forward_matchups": [
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 257,
+        "p1_s": 56,
+        "p2_s": 103,
+        "p3_s": 98,
+        "appearances": 10,
+        "p1_appearances": 2,
+        "p2_appearances": 3,
+        "p3_appearances": 5,
+        "ebb_unit_total_s": 616,
+        "matchup_share_pct": 41.7
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 134,
+        "p1_s": 48,
+        "p2_s": 34,
+        "p3_s": 52,
+        "appearances": 5,
+        "p1_appearances": 2,
+        "p2_appearances": 1,
+        "p3_appearances": 2,
+        "ebb_unit_total_s": 545,
+        "matchup_share_pct": 24.6
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 171,
+        "p1_s": 66,
+        "p2_s": 0,
+        "p3_s": 105,
+        "appearances": 5,
+        "p1_appearances": 2,
+        "p2_appearances": 0,
+        "p3_appearances": 3,
+        "ebb_unit_total_s": 428,
+        "matchup_share_pct": 40.0
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 217,
+        "p1_s": 37,
+        "p2_s": 102,
+        "p3_s": 78,
+        "appearances": 6,
+        "p1_appearances": 1,
+        "p2_appearances": 3,
+        "p3_appearances": 2,
+        "ebb_unit_total_s": 396,
+        "matchup_share_pct": 54.8
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          2126
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Foudy – Hördler",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 85,
+        "p1_s": 49,
+        "p2_s": 0,
+        "p3_s": 36,
+        "appearances": 2,
+        "p1_appearances": 1,
+        "p2_appearances": 0,
+        "p3_appearances": 1,
+        "ebb_unit_total_s": 85,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Foudy – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 59,
+        "p1_s": 0,
+        "p2_s": 59,
+        "p3_s": 0,
+        "appearances": 1,
+        "p1_appearances": 0,
+        "p2_appearances": 1,
+        "p3_appearances": 0,
+        "ebb_unit_total_s": 72,
+        "matchup_share_pct": 81.9
       }
     ],
     "player_5v5_usage": [
@@ -1399,7 +3237,9 @@
         "p1_s": 287,
         "p2_s": 421,
         "p3_s": 345,
-        "total_s": 1053
+        "total_s": 1053,
+        "stable_unit_s": 1006,
+        "stable_unit_coverage_pct": 95.5
       },
       {
         "player_id": 512,
@@ -1410,7 +3250,9 @@
         "p1_s": 264,
         "p2_s": 342,
         "p3_s": 365,
-        "total_s": 971
+        "total_s": 971,
+        "stable_unit_s": 941,
+        "stable_unit_coverage_pct": 96.9
       },
       {
         "player_id": 1738,
@@ -1421,7 +3263,9 @@
         "p1_s": 321,
         "p2_s": 222,
         "p3_s": 315,
-        "total_s": 858
+        "total_s": 858,
+        "stable_unit_s": 828,
+        "stable_unit_coverage_pct": 96.5
       },
       {
         "player_id": 4701,
@@ -1432,7 +3276,9 @@
         "p1_s": 230,
         "p2_s": 308,
         "p3_s": 305,
-        "total_s": 843
+        "total_s": 843,
+        "stable_unit_s": 820,
+        "stable_unit_coverage_pct": 97.3
       },
       {
         "player_id": 1425,
@@ -1443,7 +3289,9 @@
         "p1_s": 289,
         "p2_s": 256,
         "p3_s": 281,
-        "total_s": 826
+        "total_s": 826,
+        "stable_unit_s": 818,
+        "stable_unit_coverage_pct": 99.0
       },
       {
         "player_id": 3411,
@@ -1454,7 +3302,9 @@
         "p1_s": 225,
         "p2_s": 325,
         "p3_s": 271,
-        "total_s": 821
+        "total_s": 821,
+        "stable_unit_s": 775,
+        "stable_unit_coverage_pct": 94.4
       },
       {
         "player_id": 3533,
@@ -1465,7 +3315,9 @@
         "p1_s": 209,
         "p2_s": 364,
         "p3_s": 243,
-        "total_s": 816
+        "total_s": 816,
+        "stable_unit_s": 799,
+        "stable_unit_coverage_pct": 97.9
       },
       {
         "player_id": 3410,
@@ -1476,7 +3328,9 @@
         "p1_s": 239,
         "p2_s": 303,
         "p3_s": 261,
-        "total_s": 803
+        "total_s": 803,
+        "stable_unit_s": 788,
+        "stable_unit_coverage_pct": 98.1
       },
       {
         "player_id": 2209,
@@ -1487,7 +3341,9 @@
         "p1_s": 263,
         "p2_s": 258,
         "p3_s": 268,
-        "total_s": 789
+        "total_s": 789,
+        "stable_unit_s": 746,
+        "stable_unit_coverage_pct": 94.6
       },
       {
         "player_id": 4895,
@@ -1498,7 +3354,9 @@
         "p1_s": 216,
         "p2_s": 266,
         "p3_s": 244,
-        "total_s": 726
+        "total_s": 726,
+        "stable_unit_s": 703,
+        "stable_unit_coverage_pct": 96.8
       },
       {
         "player_id": 1402,
@@ -1509,7 +3367,9 @@
         "p1_s": 227,
         "p2_s": 237,
         "p3_s": 227,
-        "total_s": 691
+        "total_s": 691,
+        "stable_unit_s": 682,
+        "stable_unit_coverage_pct": 98.7
       },
       {
         "player_id": 546,
@@ -1520,7 +3380,9 @@
         "p1_s": 243,
         "p2_s": 252,
         "p3_s": 187,
-        "total_s": 682
+        "total_s": 682,
+        "stable_unit_s": 622,
+        "stable_unit_coverage_pct": 91.2
       },
       {
         "player_id": 1762,
@@ -1531,7 +3393,9 @@
         "p1_s": 199,
         "p2_s": 226,
         "p3_s": 209,
-        "total_s": 634
+        "total_s": 634,
+        "stable_unit_s": 594,
+        "stable_unit_coverage_pct": 93.7
       },
       {
         "player_id": 1796,
@@ -1542,7 +3406,9 @@
         "p1_s": 200,
         "p2_s": 172,
         "p3_s": 250,
-        "total_s": 622
+        "total_s": 622,
+        "stable_unit_s": 588,
+        "stable_unit_coverage_pct": 94.5
       },
       {
         "player_id": 1823,
@@ -1553,7 +3419,9 @@
         "p1_s": 160,
         "p2_s": 225,
         "p3_s": 231,
-        "total_s": 616
+        "total_s": 616,
+        "stable_unit_s": 589,
+        "stable_unit_coverage_pct": 95.6
       },
       {
         "player_id": 92,
@@ -1564,7 +3432,9 @@
         "p1_s": 204,
         "p2_s": 212,
         "p3_s": 197,
-        "total_s": 613
+        "total_s": 613,
+        "stable_unit_s": 602,
+        "stable_unit_coverage_pct": 98.2
       },
       {
         "player_id": 2126,
@@ -1575,7 +3445,9 @@
         "p1_s": 156,
         "p2_s": 164,
         "p3_s": 235,
-        "total_s": 555
+        "total_s": 555,
+        "stable_unit_s": 509,
+        "stable_unit_coverage_pct": 91.7
       },
       {
         "player_id": 4311,
@@ -1586,7 +3458,102 @@
         "p1_s": 98,
         "p2_s": 217,
         "p3_s": 191,
-        "total_s": 506
+        "total_s": 506,
+        "stable_unit_s": 482,
+        "stable_unit_coverage_pct": 95.3
+      }
+    ],
+    "coverage": {
+      "forward_stable_pct": 95.3,
+      "defense_stable_pct": 97.1
+    },
+    "lineup_changes": [
+      {
+        "kind": "forward",
+        "change_type": "introduced",
+        "period": 2,
+        "label": "Vikingstad – Veilleux – Krestan",
+        "player_ids": [
+          1796,
+          1762,
+          4311
+        ],
+        "current_s": 50,
+        "previous_s": 0,
+        "prior_total_s": 0,
+        "appearances": 1
+      },
+      {
+        "kind": "forward",
+        "change_type": "introduced",
+        "period": 2,
+        "label": "Wiederer – Foudy – Fontaine",
+        "player_ids": [
+          1823,
+          4895,
+          3411
+        ],
+        "current_s": 72,
+        "previous_s": 0,
+        "prior_total_s": 0,
+        "appearances": 1
+      },
+      {
+        "kind": "defense",
+        "change_type": "introduced",
+        "period": 2,
+        "label": "Smith – Müller",
+        "player_ids": [
+          3533,
+          506
+        ],
+        "current_s": 75,
+        "previous_s": 0,
+        "prior_total_s": 0,
+        "appearances": 1
+      },
+      {
+        "kind": "forward",
+        "change_type": "dropped",
+        "period": 3,
+        "label": "Wiederer – Foudy – Fontaine",
+        "player_ids": [
+          1823,
+          4895,
+          3411
+        ],
+        "current_s": 0,
+        "previous_s": 72,
+        "prior_total_s": 72,
+        "appearances": 0
+      },
+      {
+        "kind": "defense",
+        "change_type": "dropped",
+        "period": 3,
+        "label": "Smith – Müller",
+        "player_ids": [
+          3533,
+          506
+        ],
+        "current_s": 0,
+        "previous_s": 75,
+        "prior_total_s": 75,
+        "appearances": 0
+      },
+      {
+        "kind": "defense",
+        "change_type": "introduced",
+        "period": 3,
+        "label": "Müller – Davidson",
+        "player_ids": [
+          506,
+          4701
+        ],
+        "current_s": 42,
+        "previous_s": 0,
+        "prior_total_s": 0,
+        "appearances": 3
       }
     ],
     "rotation": {
@@ -1627,7 +3594,10 @@
           "p1_s": 0,
           "p2_s": 0,
           "p3_s": 42,
-          "appearances": 3
+          "appearances": 3,
+          "p1_appearances": 0,
+          "p2_appearances": 0,
+          "p3_appearances": 3
         },
         {
           "player_ids": [
@@ -1647,7 +3617,10 @@
           "p1_s": 0,
           "p2_s": 0,
           "p3_s": 33,
-          "appearances": 1
+          "appearances": 1,
+          "p1_appearances": 0,
+          "p2_appearances": 0,
+          "p3_appearances": 1
         },
         {
           "player_ids": [
@@ -1667,7 +3640,10 @@
           "p1_s": 0,
           "p2_s": 0,
           "p3_s": 30,
-          "appearances": 1
+          "appearances": 1,
+          "p1_appearances": 0,
+          "p2_appearances": 0,
+          "p3_appearances": 1
         }
       ],
       "p3_toi_drops": [],
@@ -1736,7 +3712,11 @@
       "y_m": -4.936,
       "distance_m": 8.275,
       "shot_zone": "SLOT",
-      "manpower": "6v5"
+      "manpower": "6v5",
+      "player_name": "Tim Fleischer",
+      "jersey": 29,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649353,
@@ -1748,7 +3728,11 @@
       "y_m": -8.399,
       "distance_m": 16.614,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Maximilian Kammerer",
+      "jersey": 9,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649376,
@@ -1760,7 +3744,11 @@
       "y_m": -5.881,
       "distance_m": 6.743,
       "shot_zone": "LEFT",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Frederik Tiffels",
+      "jersey": 95,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649377,
@@ -1772,7 +3760,11 @@
       "y_m": -0.832,
       "distance_m": 1.696,
       "shot_zone": "SLOT",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Leonhard Pföderl",
+      "jersey": 93,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649385,
@@ -1784,7 +3776,11 @@
       "y_m": -0.285,
       "distance_m": 1.326,
       "shot_zone": "SLOT",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Frederik Tiffels",
+      "jersey": 95,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649397,
@@ -1796,7 +3792,11 @@
       "y_m": -0.853,
       "distance_m": 0.887,
       "shot_zone": "SLOT",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Ty Ronning",
+      "jersey": 9,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649404,
@@ -1808,7 +3808,11 @@
       "y_m": 3.758,
       "distance_m": 11.963,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Manuel Wiederer",
+      "jersey": 21,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649405,
@@ -1820,7 +3824,11 @@
       "y_m": -3.636,
       "distance_m": 3.656,
       "shot_zone": "LEFT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Andreas Eder",
+      "jersey": 43,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649420,
@@ -1832,7 +3840,11 @@
       "y_m": 1.574,
       "distance_m": 2.039,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Ty Ronning",
+      "jersey": 9,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649427,
@@ -1844,7 +3856,11 @@
       "y_m": 2.489,
       "distance_m": 4.272,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Marcel Noebels",
+      "jersey": 92,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649433,
@@ -1856,7 +3872,11 @@
       "y_m": 5.87,
       "distance_m": 12.201,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Liam Kirk",
+      "jersey": 94,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649441,
@@ -1868,7 +3888,11 @@
       "y_m": -10.4,
       "distance_m": 17.577,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Ryan MacInnis",
+      "jersey": 77,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649442,
@@ -1880,7 +3904,11 @@
       "y_m": -8.664,
       "distance_m": 17.229,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Valtteri Kemiläinen",
+      "jersey": 13,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649451,
@@ -1892,7 +3920,11 @@
       "y_m": 6.622,
       "distance_m": 8.143,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Leonhard Pföderl",
+      "jersey": 93,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649452,
@@ -1904,7 +3936,11 @@
       "y_m": -2.062,
       "distance_m": 3.461,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Gregor MacLeod",
+      "jersey": 89,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649470,
@@ -1916,7 +3952,11 @@
       "y_m": 14.158,
       "distance_m": 16.077,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Eric Mik",
+      "jersey": 12,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649471,
@@ -1928,7 +3968,11 @@
       "y_m": -14.138,
       "distance_m": 21.52,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Korbinian Geibel",
+      "jersey": 40,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649478,
@@ -1940,7 +3984,11 @@
       "y_m": 1.311,
       "distance_m": 6.919,
       "shot_zone": "SLOT",
-      "manpower": "4v5"
+      "manpower": "4v5",
+      "player_name": "Manuel Wiederer",
+      "jersey": 21,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649485,
@@ -1952,7 +4000,11 @@
       "y_m": -8.44,
       "distance_m": 16.198,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v5"
+      "manpower": "4v5",
+      "player_name": "Gabriel Fontaine",
+      "jersey": 97,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649509,
@@ -1964,7 +4016,11 @@
       "y_m": -7.76,
       "distance_m": 10.025,
       "shot_zone": "LEFT",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Liam Kirk",
+      "jersey": 94,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649517,
@@ -1976,7 +4032,11 @@
       "y_m": -2.406,
       "distance_m": 2.773,
       "shot_zone": "SLOT",
-      "manpower": "4v5"
+      "manpower": "4v5",
+      "player_name": "Ryan MacInnis",
+      "jersey": 77,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649521,
@@ -1988,7 +4048,11 @@
       "y_m": 2.611,
       "distance_m": 15.45,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Andreas Eder",
+      "jersey": 43,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649531,
@@ -2000,7 +4064,11 @@
       "y_m": -6.754,
       "distance_m": 15.352,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Andreas Eder",
+      "jersey": 43,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649550,
@@ -2012,7 +4080,11 @@
       "y_m": 4.113,
       "distance_m": 6.733,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649551,
@@ -2024,7 +4096,11 @@
       "y_m": -3.24,
       "distance_m": 3.596,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649552,
@@ -2036,7 +4112,11 @@
       "y_m": 5.851,
       "distance_m": 8.145,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Liam Kirk",
+      "jersey": 94,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649566,
@@ -2048,7 +4128,11 @@
       "y_m": 0.62,
       "distance_m": 1.319,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Liam Kirk",
+      "jersey": 94,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649559,
@@ -2060,7 +4144,11 @@
       "y_m": 5.657,
       "distance_m": 6.178,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Liam Kirk",
+      "jersey": 94,
+      "period": "P1",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649572,
@@ -2072,7 +4160,11 @@
       "y_m": 5.505,
       "distance_m": 14.861,
       "shot_zone": "BLUE_LINE",
-      "manpower": "6v5"
+      "manpower": "6v5",
+      "player_name": "Brady Austin",
+      "jersey": 57,
+      "period": "P1",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649599,
@@ -2084,7 +4176,11 @@
       "y_m": 6.674,
       "distance_m": 21.224,
       "shot_zone": "NEUTRAL_ZONE",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Robin Press",
+      "jersey": 94,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649600,
@@ -2096,7 +4192,11 @@
       "y_m": 14.097,
       "distance_m": 23.033,
       "shot_zone": "NEUTRAL_ZONE",
-      "manpower": "4v5"
+      "manpower": "4v5",
+      "player_name": "Manuel Wiederer",
+      "jersey": 21,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649603,
@@ -2108,7 +4208,11 @@
       "y_m": -2.611,
       "distance_m": 11.594,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Tim Fleischer",
+      "jersey": 29,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649610,
@@ -2120,7 +4224,11 @@
       "y_m": -13.731,
       "distance_m": 23.236,
       "shot_zone": "NEUTRAL_ZONE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Brandon Davidson",
+      "jersey": 44,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649622,
@@ -2132,7 +4240,11 @@
       "y_m": -8.146,
       "distance_m": 17.818,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Marco Münzenberger",
+      "jersey": 65,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649623,
@@ -2144,7 +4256,11 @@
       "y_m": -14.199,
       "distance_m": 20.962,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Marco Münzenberger",
+      "jersey": 65,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649632,
@@ -2156,7 +4272,11 @@
       "y_m": -8.531,
       "distance_m": 16.394,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Gregor MacLeod",
+      "jersey": 89,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649641,
@@ -2168,7 +4288,11 @@
       "y_m": -12.757,
       "distance_m": 16.206,
       "shot_zone": "LEFT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Andreas Eder",
+      "jersey": 43,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649642,
@@ -2180,7 +4304,11 @@
       "y_m": -13.631,
       "distance_m": 20.888,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Frederik Tiffels",
+      "jersey": 95,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649651,
@@ -2192,7 +4320,11 @@
       "y_m": 14.687,
       "distance_m": 23.054,
       "shot_zone": "NEUTRAL_ZONE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Brady Austin",
+      "jersey": 57,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649663,
@@ -2204,7 +4336,11 @@
       "y_m": 9.344,
       "distance_m": 10.179,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Eric Mik",
+      "jersey": 12,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649670,
@@ -2216,7 +4352,11 @@
       "y_m": 7.353,
       "distance_m": 9.894,
       "shot_zone": "LEFT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Ryan MacInnis",
+      "jersey": 77,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649677,
@@ -2228,7 +4368,11 @@
       "y_m": 5.698,
       "distance_m": 12.307,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Ty Ronning",
+      "jersey": 9,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649706,
@@ -2240,7 +4384,11 @@
       "y_m": -1.32,
       "distance_m": 1.658,
       "shot_zone": "SLOT",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Leonhard Pföderl",
+      "jersey": 93,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649707,
@@ -2252,7 +4400,11 @@
       "y_m": 1.137,
       "distance_m": 1.643,
       "shot_zone": "SLOT",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Markus Vikingstad",
+      "jersey": 37,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649711,
@@ -2264,7 +4416,11 @@
       "y_m": -10.837,
       "distance_m": 15.083,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649723,
@@ -2276,7 +4432,11 @@
       "y_m": 4.57,
       "distance_m": 11.444,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Liam Kirk",
+      "jersey": 94,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649724,
@@ -2288,7 +4448,11 @@
       "y_m": 6.358,
       "distance_m": 11.152,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Markus Ljungh",
+      "jersey": 61,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649725,
@@ -2300,7 +4464,11 @@
       "y_m": 2.153,
       "distance_m": 3.101,
       "shot_zone": "SLOT",
-      "manpower": "4v5"
+      "manpower": "4v5",
+      "player_name": "Tim Fleischer",
+      "jersey": 29,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649731,
@@ -2312,7 +4480,11 @@
       "y_m": 5.413,
       "distance_m": 9.221,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Markus Ljungh",
+      "jersey": 61,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649732,
@@ -2324,7 +4496,11 @@
       "y_m": 11.122,
       "distance_m": 19.171,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Jan Luca Sennhenn",
+      "jersey": 17,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649748,
@@ -2336,7 +4512,11 @@
       "y_m": -11.822,
       "distance_m": 21.605,
       "shot_zone": "NEUTRAL_ZONE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Korbinian Geibel",
+      "jersey": 40,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649750,
@@ -2348,7 +4528,11 @@
       "y_m": 1.433,
       "distance_m": 4.153,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649759,
@@ -2360,7 +4544,11 @@
       "y_m": -14.23,
       "distance_m": 20.155,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Gregor MacLeod",
+      "jersey": 89,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649765,
@@ -2372,7 +4560,11 @@
       "y_m": 11.608,
       "distance_m": 14.819,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Adam Smith",
+      "jersey": 4,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649778,
@@ -2384,7 +4576,11 @@
       "y_m": 3.656,
       "distance_m": 18.42,
       "shot_zone": "NEUTRAL_ZONE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Andreas Eder",
+      "jersey": 43,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649789,
@@ -2396,7 +4592,11 @@
       "y_m": -10.299,
       "distance_m": 18.351,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Korbinian Geibel",
+      "jersey": 40,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649792,
@@ -2408,7 +4608,11 @@
       "y_m": -11.183,
       "distance_m": 19.231,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Robin Press",
+      "jersey": 94,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649800,
@@ -2420,7 +4624,11 @@
       "y_m": -0.518,
       "distance_m": 12.261,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v5"
+      "manpower": "4v5",
+      "player_name": "Moritz Müller",
+      "jersey": 91,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649804,
@@ -2432,7 +4640,11 @@
       "y_m": -8.582,
       "distance_m": 17.312,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v5"
+      "manpower": "4v5",
+      "player_name": "Tim Fleischer",
+      "jersey": 29,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649805,
@@ -2444,7 +4656,11 @@
       "y_m": 0.712,
       "distance_m": 14.005,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Jonas Müller",
+      "jersey": 18,
+      "period": "P2",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649813,
@@ -2456,7 +4672,11 @@
       "y_m": 9.903,
       "distance_m": 20.947,
       "shot_zone": "NEUTRAL_ZONE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Robin Press",
+      "jersey": 94,
+      "period": "P2",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649836,
@@ -2468,7 +4688,11 @@
       "y_m": -14.707,
       "distance_m": 21.539,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Valtteri Kemiläinen",
+      "jersey": 13,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649837,
@@ -2480,7 +4704,11 @@
       "y_m": -12.442,
       "distance_m": 16.799,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Valtteri Kemiläinen",
+      "jersey": 13,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649850,
@@ -2492,7 +4720,11 @@
       "y_m": 8.795,
       "distance_m": 8.934,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Jean-Luc Foudy",
+      "jersey": 55,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649851,
@@ -2504,7 +4736,11 @@
       "y_m": 2.295,
       "distance_m": 3.265,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Yannick Veilleux",
+      "jersey": 38,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649866,
@@ -2516,7 +4752,11 @@
       "y_m": 8.288,
       "distance_m": 9.124,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Adam Smith",
+      "jersey": 4,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649878,
@@ -2528,7 +4768,11 @@
       "y_m": -4.773,
       "distance_m": 16.57,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Korbinian Geibel",
+      "jersey": 40,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649901,
@@ -2540,7 +4784,11 @@
       "y_m": 1.615,
       "distance_m": 1.986,
       "shot_zone": "SLOT",
-      "manpower": "5v4"
+      "manpower": "5v4",
+      "player_name": "Yannick Veilleux",
+      "jersey": 38,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649930,
@@ -2552,7 +4800,11 @@
       "y_m": -2.661,
       "distance_m": 7.63,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Marcel Noebels",
+      "jersey": 92,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649938,
@@ -2564,7 +4816,11 @@
       "y_m": 2.406,
       "distance_m": 2.418,
       "shot_zone": "LEFT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649939,
@@ -2576,7 +4832,11 @@
       "y_m": -5.525,
       "distance_m": 8.608,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Gabriel Fontaine",
+      "jersey": 97,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649940,
@@ -2588,7 +4848,11 @@
       "y_m": -0.294,
       "distance_m": 15.24,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Ryan MacInnis",
+      "jersey": 77,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649947,
@@ -2600,7 +4864,11 @@
       "y_m": -7.861,
       "distance_m": 12.763,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Moritz Müller",
+      "jersey": 91,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649948,
@@ -2612,7 +4880,11 @@
       "y_m": 7.12,
       "distance_m": 16.115,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Maximilian Kammerer",
+      "jersey": 9,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649950,
@@ -2624,7 +4896,11 @@
       "y_m": 5.585,
       "distance_m": 6.642,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Ty Ronning",
+      "jersey": 9,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649958,
@@ -2636,7 +4912,11 @@
       "y_m": -2.691,
       "distance_m": 14.295,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Markus Vikingstad",
+      "jersey": 37,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649967,
@@ -2648,7 +4928,11 @@
       "y_m": 10.471,
       "distance_m": 14.199,
       "shot_zone": "LEFT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Kevin Niedenz",
+      "jersey": 46,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649975,
@@ -2660,7 +4944,11 @@
       "y_m": 5.2,
       "distance_m": 11.736,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Gregor MacLeod",
+      "jersey": 89,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649976,
@@ -2672,7 +4960,11 @@
       "y_m": -4.895,
       "distance_m": 10.957,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Jonas Müller",
+      "jersey": 18,
+      "period": "P3",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1649988,
@@ -2684,7 +4976,11 @@
       "y_m": 9.639,
       "distance_m": 20.232,
       "shot_zone": "NEUTRAL_ZONE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Brady Austin",
+      "jersey": 57,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649989,
@@ -2696,7 +4992,11 @@
       "y_m": 10.898,
       "distance_m": 12.556,
       "shot_zone": "LEFT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Ryan MacInnis",
+      "jersey": 77,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1649990,
@@ -2708,7 +5008,11 @@
       "y_m": -14.127,
       "distance_m": 14.854,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Robin Press",
+      "jersey": 94,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650000,
@@ -2720,7 +5024,11 @@
       "y_m": 6.876,
       "distance_m": 11.439,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Veli-Matti Vittasmäki",
+      "jersey": 47,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650001,
@@ -2732,7 +5040,11 @@
       "y_m": -10.461,
       "distance_m": 16.468,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Valtteri Kemiläinen",
+      "jersey": 13,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650002,
@@ -2744,7 +5056,11 @@
       "y_m": -4.266,
       "distance_m": 4.932,
       "shot_zone": "RIGHT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650003,
@@ -2756,7 +5072,11 @@
       "y_m": 5.302,
       "distance_m": 17.28,
       "shot_zone": "BLUE_LINE",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Gregor MacLeod",
+      "jersey": 89,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650004,
@@ -2768,7 +5088,11 @@
       "y_m": 0.061,
       "distance_m": 2.659,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650012,
@@ -2780,7 +5104,11 @@
       "y_m": 5.494,
       "distance_m": 9.129,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Jan Luca Sennhenn",
+      "jersey": 17,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650014,
@@ -2792,7 +5120,11 @@
       "y_m": -0.549,
       "distance_m": 10.436,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Kevin Niedenz",
+      "jersey": 46,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650020,
@@ -2804,7 +5136,11 @@
       "y_m": -2.428,
       "distance_m": 10.353,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Robin Press",
+      "jersey": 94,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650031,
@@ -2816,7 +5152,11 @@
       "y_m": -3.027,
       "distance_m": 3.042,
       "shot_zone": "RIGHT",
-      "manpower": "6v5"
+      "manpower": "6v5",
+      "player_name": "Marcel Noebels",
+      "jersey": 92,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650041,
@@ -2828,7 +5168,11 @@
       "y_m": 1.381,
       "distance_m": 1.792,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Moritz Müller",
+      "jersey": 91,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650042,
@@ -2840,7 +5184,11 @@
       "y_m": 2.458,
       "distance_m": 17.707,
       "shot_zone": "BLUE_LINE",
-      "manpower": "6v5"
+      "manpower": "6v5",
+      "player_name": "Valtteri Kemiläinen",
+      "jersey": 13,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650049,
@@ -2852,7 +5200,11 @@
       "y_m": -2.559,
       "distance_m": 13.77,
       "shot_zone": "BLUE_LINE",
-      "manpower": "6v4"
+      "manpower": "6v4",
+      "player_name": "Valtteri Kemiläinen",
+      "jersey": 13,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650056,
@@ -2864,7 +5216,11 @@
       "y_m": -2.905,
       "distance_m": 4.699,
       "shot_zone": "SLOT",
-      "manpower": "6v4"
+      "manpower": "6v4",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650063,
@@ -2876,7 +5232,11 @@
       "y_m": -0.792,
       "distance_m": 3.333,
       "shot_zone": "SLOT",
-      "manpower": "5v5"
+      "manpower": "5v5",
+      "player_name": "Marcel Noebels",
+      "jersey": 92,
+      "period": "P3",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650077,
@@ -2888,7 +5248,11 @@
       "y_m": 6.602,
       "distance_m": 14.455,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v3"
+      "manpower": "4v3",
+      "player_name": "Kai Wissmann",
+      "jersey": 6,
+      "period": "OT",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1650082,
@@ -2900,7 +5264,11 @@
       "y_m": -4.093,
       "distance_m": 13.769,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v3"
+      "manpower": "4v3",
+      "player_name": "Kai Wissmann",
+      "jersey": 6,
+      "period": "OT",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1650083,
@@ -2912,7 +5280,11 @@
       "y_m": -2.528,
       "distance_m": 2.865,
       "shot_zone": "LEFT",
-      "manpower": "4v3"
+      "manpower": "4v3",
+      "player_name": "Leonhard Pföderl",
+      "jersey": 93,
+      "period": "OT",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1650086,
@@ -2924,7 +5296,11 @@
       "y_m": -7.974,
       "distance_m": 14.397,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v3"
+      "manpower": "4v3",
+      "player_name": "Andreas Eder",
+      "jersey": 43,
+      "period": "OT",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1650087,
@@ -2936,7 +5312,11 @@
       "y_m": -2.345,
       "distance_m": 16.441,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v3"
+      "manpower": "4v3",
+      "player_name": "Jonas Müller",
+      "jersey": 18,
+      "period": "OT",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1650088,
@@ -2948,7 +5328,11 @@
       "y_m": 6.907,
       "distance_m": 17.203,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v4"
+      "manpower": "4v4",
+      "player_name": "Andreas Eder",
+      "jersey": 43,
+      "period": "OT",
+      "team_abbr": "EBB"
     },
     {
       "shot_id": 1650089,
@@ -2960,7 +5344,11 @@
       "y_m": 1.087,
       "distance_m": 10.972,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v4"
+      "manpower": "4v4",
+      "player_name": "Patrick Russell",
+      "jersey": 63,
+      "period": "OT",
+      "team_abbr": "KEC"
     },
     {
       "shot_id": 1650090,
@@ -2972,14 +5360,20 @@
       "y_m": -10.766,
       "distance_m": 17.53,
       "shot_zone": "BLUE_LINE",
-      "manpower": "4v4"
+      "manpower": "4v4",
+      "player_name": "Robin Press",
+      "jersey": 94,
+      "period": "OT",
+      "team_abbr": "KEC"
     }
   ],
   "timeline": [
     {
       "time_s": 109,
+      "period": "P1",
       "type": "penalty",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -2988,8 +5382,10 @@
     },
     {
       "time_s": 218,
+      "period": "P1",
       "type": "goal",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": "PP1",
       "scorer": "Ty Ronning",
       "score": "0:1",
@@ -2998,8 +5394,10 @@
     },
     {
       "time_s": 459,
+      "period": "P1",
       "type": "goal",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": "EQ",
       "scorer": "Marcel Noebels",
       "score": "1:1",
@@ -3008,8 +5406,10 @@
     },
     {
       "time_s": 498,
+      "period": "P1",
       "type": "goal",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": "EQ",
       "scorer": "Liam Kirk",
       "score": "1:2",
@@ -3018,8 +5418,10 @@
     },
     {
       "time_s": 693,
+      "period": "P1",
       "type": "penalty",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3028,8 +5430,10 @@
     },
     {
       "time_s": 791,
+      "period": "P1",
       "type": "penalty",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3038,8 +5442,10 @@
     },
     {
       "time_s": 1163,
+      "period": "P1",
       "type": "goal",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": "EQ",
       "scorer": "Brady Austin",
       "score": "2:2",
@@ -3048,8 +5454,10 @@
     },
     {
       "time_s": 1197,
+      "period": "P1",
       "type": "penalty",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3058,8 +5466,10 @@
     },
     {
       "time_s": 1197,
+      "period": "P1",
       "type": "penalty",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3068,8 +5478,10 @@
     },
     {
       "time_s": 1200,
+      "period": "P2",
       "type": "penalty",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3078,8 +5490,10 @@
     },
     {
       "time_s": 1246,
+      "period": "P2",
       "type": "goal",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": "PP1",
       "scorer": "Maximilian Kammerer",
       "score": "3:2",
@@ -3088,8 +5502,10 @@
     },
     {
       "time_s": 1719,
+      "period": "P2",
       "type": "penalty",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3098,8 +5514,10 @@
     },
     {
       "time_s": 1727,
+      "period": "P2",
       "type": "goal",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": "PP1",
       "scorer": "Markus Vikingstad",
       "score": "3:3",
@@ -3108,8 +5526,10 @@
     },
     {
       "time_s": 2102,
+      "period": "P2",
       "type": "goal",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": "EQ",
       "scorer": "Andreas Eder",
       "score": "3:4",
@@ -3118,8 +5538,10 @@
     },
     {
       "time_s": 2166,
+      "period": "P2",
       "type": "penalty",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3128,8 +5550,10 @@
     },
     {
       "time_s": 2507,
+      "period": "P3",
       "type": "goal",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": "EQ",
       "scorer": "Jean-Luc Foudy",
       "score": "3:5",
@@ -3138,8 +5562,10 @@
     },
     {
       "time_s": 2791,
+      "period": "P3",
       "type": "penalty",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3148,8 +5574,10 @@
     },
     {
       "time_s": 3450,
+      "period": "P3",
       "type": "goal",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": "EQ",
       "scorer": "Marcel Noebels",
       "score": "4:5",
@@ -3158,8 +5586,10 @@
     },
     {
       "time_s": 3509,
+      "period": "P3",
       "type": "penalty",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3168,8 +5598,10 @@
     },
     {
       "time_s": 3537,
+      "period": "P3",
       "type": "goal",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": "PP1",
       "scorer": "Patrick Russell",
       "score": "5:5",
@@ -3178,8 +5610,10 @@
     },
     {
       "time_s": 3645,
+      "period": "OT",
       "type": "penalty",
       "team_id": 11,
+      "team_abbr": "KEC",
       "balance": null,
       "scorer": null,
       "score": null,
@@ -3188,8 +5622,10 @@
     },
     {
       "time_s": 3900,
+      "period": "OT",
       "type": "goal",
       "team_id": 3,
+      "team_abbr": "EBB",
       "balance": "GWS",
       "scorer": "Jean-Luc Foudy",
       "score": "5:6",
