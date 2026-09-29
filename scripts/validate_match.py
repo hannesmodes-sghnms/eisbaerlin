@@ -65,7 +65,7 @@ def main() -> None:
         print_rows(
             con,
             """
-            SELECT shot_id, game_time_s, shooting_team_id, seconds_since_faceoff,
+            SELECT shot_id, game_time_s, team_id AS shooting_team_id, seconds_since_faceoff,
                    previous_faceoff_position_shortcut,
                    previous_faceoff_won_by_shooting_team,
                    result

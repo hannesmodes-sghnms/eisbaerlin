@@ -111,5 +111,13 @@ def test_build_match_database_end_to_end(tmp_path):
         assert row == ("3v3", 5, "defensive")
         assert con.execute("SELECT count(*) FROM shot_on_ice").fetchone()[0] == 6
         assert con.execute("SELECT count(*) FROM event_log").fetchone()[0] == 3
+        row = con.execute(
+            """
+            SELECT shot_id, game_time_s, team_id AS shooting_team_id, seconds_since_faceoff
+            FROM shot_log
+            WHERE dzone_faceoff_to_shot_10s
+            """
+        ).fetchone()
+        assert row == (9001, 10, 3, 5)
     finally:
         con.close()

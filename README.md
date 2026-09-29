@@ -231,3 +231,8 @@ del-event-lab/
 ## Next milestone
 
 Run v0.3 against several completed 2026/27 games. Once the schema and join-quality distribution remain stable, add the local Streamlit/Plotly shot map and season-wide batch ingestion.
+
+## v0.3.1
+
+- Fixed `validate_match.py`: `shot_log.team_id` is now exposed as `shooting_team_id` in the D-zone validation query.
+- Added regression coverage for the D-zone shot-log query.
