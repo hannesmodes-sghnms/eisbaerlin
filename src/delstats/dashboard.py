@@ -1,10 +1,9 @@
 from __future__ import annotations
 
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-
-from datetime import datetime, timezone
 
 from .lineups import analyze_5v5_lineups
 
@@ -28,13 +27,24 @@ def _all(con: Any, sql: str, params: list[Any] | None = None) -> list[dict[str, 
     return [_row_dict(cur, row) for row in cur.fetchall()]
 
 
-def _fmt_time(seconds: int | None) -> str:
+def _fmt_time(seconds: int | float | None) -> str:
     seconds = int(seconds or 0)
     return f"{seconds // 60}:{seconds % 60:02d}"
 
 
 def _metric(label: str, key: str, ebb: dict[str, Any], opp: dict[str, Any], *, kind: str = "number") -> dict[str, Any]:
     return {"label": label, "key": key, "kind": kind, "ebb": ebb.get(key), "opponent": opp.get(key)}
+
+
+def _period_for_time(seconds: int | None) -> str:
+    value = int(seconds or 0)
+    if value < 1200:
+        return "P1"
+    if value < 2400:
+        return "P2"
+    if value < 3600:
+        return "P3"
+    return "OT"
 
 
 def _build_facts(
@@ -56,41 +66,48 @@ def _build_facts(
         f"Zeit in Führung: {_fmt_time(ebb.get('time_leading_s'))}; ausgeglichen {_fmt_time(ebb.get('time_tied_s'))}; im Rückstand {_fmt_time(ebb.get('time_trailing_s'))}."
     )
 
-    if players:
-        top_toi = max(players, key=lambda row: row["toi_s"])
-        top_pp = max(players, key=lambda row: row["pp_s"])
-        top_pk = max(players, key=lambda row: row["pk_s"])
+    skaters = [row for row in players if row.get("position") != "GK"]
+    if skaters:
+        top_toi = max(skaters, key=lambda row: row["toi_s"])
+        top_pp = max(skaters, key=lambda row: row["pp_s"])
+        top_pk = max(skaters, key=lambda row: row["pk_s"])
         facts.append(f"Meiste Eiszeit EBB: {top_toi['name']} mit {_fmt_time(top_toi['toi_s'])}.")
         if top_pp["pp_s"] > 0:
             facts.append(f"Meiste PP-Eiszeit: {top_pp['name']} ({_fmt_time(top_pp['pp_s'])}).")
         if top_pk["pk_s"] > 0:
             facts.append(f"Meiste PK-Eiszeit: {top_pk['name']} ({_fmt_time(top_pk['pk_s'])}).")
 
+    # Changes are detected period-to-period, not only for crunch time in P3.
+    change_facts = []
+    for change in lineups.get("lineup_changes") or []:
+        period = change["period"]
+        unit_name = "Sturmreihe" if change["kind"] == "forward" else "Verteidigerpaar"
+        if change["change_type"] in {"introduced", "returned"}:
+            verb = "neu stabil eingesetzt" if change["change_type"] == "introduced" else "wieder stabil eingesetzt"
+            change_facts.append(
+                f"Reihenänderung P{period}: {unit_name} {change['label']} wurde {verb} "
+                f"({_fmt_time(change['current_s'])}; P{period-1} {_fmt_time(change['previous_s'])})."
+            )
+        elif change["change_type"] == "dropped":
+            change_facts.append(
+                f"Reihenänderung P{period}: {unit_name} {change['label']} fiel nahezu aus der 5v5-Rotation "
+                f"(P{period-1} {_fmt_time(change['previous_s'])} → P{period} {_fmt_time(change['current_s'])})."
+            )
+    facts.extend(change_facts[:5])
+
     rotation = lineups.get("rotation", {})
     pre = rotation.get("top9_forward_share_pre_p3_pct")
     p3 = rotation.get("top9_forward_share_p3_pct")
     active = rotation.get("active_forwards", {})
     if pre is not None and p3 is not None:
-        statement = (
+        facts.append(
             f"5v5-Forward-Nutzung: Top 9 kamen in P1+P2 auf {pre:.1f}% der Forward-TOI, in P3 auf {p3:.1f}%. "
             f"Forwards mit mindestens 30s 5v5-TOI: P1 {active.get('p1', 0)}, P2 {active.get('p2', 0)}, P3 {active.get('p3', 0)}."
         )
-        facts.append(statement)
     if rotation.get("shortened_bank_detected"):
         reasons = "; ".join(rotation.get("shortened_bank_reasons") or [])
         facts.append(f"Hinweis auf verkürzte Bank im 3. Drittel ({reasons}).")
-    new_units = rotation.get("new_p3_forward_trios") or []
-    if new_units:
-        labels = ", ".join(f"{u['label']} ({_fmt_time(u['p3_s'])})" for u in new_units[:3])
-        facts.append(f"Neue stabile 5v5-Forward-Units in P3: {labels}.")
-    new_pairs = rotation.get("new_p3_defense_pairs") or []
-    if new_pairs:
-        labels = ", ".join(f"{u['label']} ({_fmt_time(u['p3_s'])})" for u in new_pairs[:3])
-        facts.append(f"Neue stabile 5v5-Defense-Pairs in P3: {labels}.")
-    dropped = rotation.get("dropped_p3_forward_trios") or []
-    if dropped:
-        labels = ", ".join(u["label"] for u in dropped[:3])
-        facts.append(f"In P1/P2 etablierte Forward-Units, die in P3 praktisch verschwanden: {labels}.")
+
     usage_drops = rotation.get("p3_toi_drops") or []
     if usage_drops:
         labels = ", ".join(
@@ -114,6 +131,23 @@ def _build_facts(
     if top_pairs:
         top = top_pairs[0]
         facts.append(f"Häufigstes 5v5-Verteidigerpaar: {top['label']} mit {_fmt_time(top['total_s'])}.")
+
+    matchups = lineups.get("forward_matchups") or []
+    if matchups:
+        top = matchups[0]
+        facts.append(
+            f"Häufigstes Line-Matching: EBB {top['ebb_label']} gegen {top['opponent_label']} "
+            f"mit {_fmt_time(top['total_s'])} stabiler gemeinsamer 5v5-Eiszeit."
+        )
+
+    coverage = lineups.get("coverage") or {}
+    fwd_cov = coverage.get("forward_stable_pct")
+    def_cov = coverage.get("defense_stable_pct")
+    if fwd_cov is not None and def_cov is not None:
+        facts.append(
+            f"Lineup-Datencheck: stabile Units decken {fwd_cov:.1f}% der rekonstruierten 5v5-Forward-TOI "
+            f"und {def_cov:.1f}% der 5v5-Defense-TOI ab."
+        )
     return facts
 
 
@@ -128,12 +162,133 @@ def _lineup_report(con: Any, match_id: int, opponent_team_id: int) -> dict[str, 
         "SELECT team_id, player_id, full_name, last_name, jersey, position FROM players WHERE match_id=?",
         [match_id],
     )
-    return analyze_5v5_lineups(
-        shifts,
-        players,
-        focus_team_id=FOCUS_TEAM_ID,
-        opponent_team_id=opponent_team_id,
+    return analyze_5v5_lineups(shifts, players, focus_team_id=FOCUS_TEAM_ID, opponent_team_id=opponent_team_id)
+
+
+def _team_abbr(con: Any, team_id: int, fallback: str | None = None) -> str:
+    row = _one(con, "SELECT shortcut FROM teams WHERE team_id=?", [team_id])
+    if row and row.get("shortcut"):
+        return str(row["shortcut"])
+    row = _one(
+        con,
+        "SELECT team_shortcut AS shortcut FROM team_game_stats WHERE team_id=? ORDER BY match_date DESC LIMIT 1",
+        [team_id],
     )
+    return str((row or {}).get("shortcut") or fallback or team_id)
+
+
+def _team_record(con: Any, team_id: int) -> dict[str, Any]:
+    rows = _all(con, "SELECT goals_for, goals_against FROM team_game_stats WHERE team_id=?", [team_id])
+    wins = sum(1 for row in rows if (row.get("goals_for") or 0) > (row.get("goals_against") or 0))
+    losses = sum(1 for row in rows if (row.get("goals_for") or 0) < (row.get("goals_against") or 0))
+    ties = len(rows) - wins - losses
+    return {"games": len(rows), "wins": wins, "losses": losses, "ties": ties, "label": f"{wins}-{losses}" + (f"-{ties}" if ties else "")}
+
+
+def _recent_games(con: Any, team_id: int, *, limit: int = 5) -> list[dict[str, Any]]:
+    rows = _all(
+        con,
+        """
+        SELECT match_id, match_date, opponent_team_id, opponent_shortcut, opponent_name,
+               home_road, goals_for, goals_against, corsi_5v5_pct, slot_attempts_for, pdo_5v5
+        FROM team_game_stats
+        WHERE team_id=?
+        ORDER BY match_date DESC, match_id DESC
+        LIMIT ?
+        """,
+        [team_id, limit],
+    )
+    for row in rows:
+        gf = int(row.get("goals_for") or 0)
+        ga = int(row.get("goals_against") or 0)
+        row["result"] = f"{gf}:{ga}"
+        row["outcome"] = "W" if gf > ga else "L" if gf < ga else "T"
+    return rows
+
+
+def _head_to_head(con: Any, opponent_team_id: int, *, limit: int = 5) -> list[dict[str, Any]]:
+    rows = _all(
+        con,
+        """
+        SELECT e.match_id, e.match_date, m.home_team_id, m.home_team_name, m.away_team_id, m.away_team_name,
+               m.home_score, m.away_score, e.corsi_5v5_for AS ebb_corsi_5v5,
+               o.corsi_5v5_for AS opponent_corsi_5v5, e.slot_attempts_for AS ebb_slot,
+               o.slot_attempts_for AS opponent_slot
+        FROM team_game_stats e
+        JOIN team_game_stats o ON o.match_id=e.match_id AND o.team_id=?
+        JOIN matches m ON m.match_id=e.match_id
+        WHERE e.team_id=?
+        ORDER BY e.match_date DESC, e.match_id DESC
+        LIMIT ?
+        """,
+        [opponent_team_id, FOCUS_TEAM_ID, limit],
+    )
+    for row in rows:
+        ebb_home = int(row["home_team_id"]) == FOCUS_TEAM_ID
+        own = row["home_score"] if ebb_home else row["away_score"]
+        opp = row["away_score"] if ebb_home else row["home_score"]
+        row["ebb_result"] = f"{own}:{opp}"
+    return rows
+
+
+def _season_key_stats(con: Any, team_id: int) -> dict[str, Any]:
+    stats = _one(con, "SELECT * FROM team_season_stats WHERE team_id=?", [team_id]) or {}
+    games = int(stats.get("games_played") or 0)
+
+    def per_game(key: str) -> float | None:
+        if not games:
+            return None
+        return round(float(stats.get(key) or 0) / games, 2)
+
+    return {
+        "games_played": games,
+        "record": _team_record(con, team_id)["label"],
+        "corsi_per_game": per_game("corsi_for"),
+        "corsi_5v5_pct": stats.get("corsi_5v5_pct"),
+        "sog_per_game": per_game("shots_on_goal_for"),
+        "slot_per_game": per_game("slot_attempts_for"),
+        "goals_per_game": per_game("goals_for"),
+        "goals_against_per_game": per_game("goals_against"),
+        "pdo_5v5": stats.get("pdo_5v5"),
+        "time_leading_per_game_s": round(float(stats.get("time_leading_s") or 0) / games) if games else None,
+    }
+
+
+def _key_stat_rows(ebb: dict[str, Any], opp: dict[str, Any]) -> list[dict[str, Any]]:
+    specs = [
+        ("Bilanz", "record", "text"),
+        ("Corsi 5v5 %", "corsi_5v5_pct", "percent"),
+        ("Corsi / Spiel", "corsi_per_game", "decimal"),
+        ("SOG / Spiel", "sog_per_game", "decimal"),
+        ("Slot Attempts / Spiel", "slot_per_game", "decimal"),
+        ("Tore / Spiel", "goals_per_game", "decimal"),
+        ("Gegentore / Spiel", "goals_against_per_game", "decimal"),
+        ("PDO 5v5", "pdo_5v5", "decimal"),
+        ("Zeit in Führung / Spiel", "time_leading_per_game_s", "time"),
+    ]
+    return [{"label": label, "key": key, "kind": kind, "ebb": ebb.get(key), "opponent": opp.get(key)} for label, key, kind in specs]
+
+
+def enrich_upcoming_games(con: Any, games: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    ebb_stats = _season_key_stats(con, FOCUS_TEAM_ID)
+    ebb_recent = _recent_games(con, FOCUS_TEAM_ID, limit=5)
+    result = []
+    for game in games:
+        opponent_team_id = int(game["away_team_id"] if game["ebb_home"] else game["home_team_id"])
+        opponent_abbr = _team_abbr(con, opponent_team_id, game.get("opponent_name"))
+        opponent_stats = _season_key_stats(con, opponent_team_id)
+        result.append(
+            {
+                **game,
+                "opponent_team_id": opponent_team_id,
+                "opponent_abbr": opponent_abbr,
+                "key_stats": _key_stat_rows(ebb_stats, opponent_stats),
+                "ebb_recent": ebb_recent,
+                "opponent_recent": _recent_games(con, opponent_team_id, limit=5),
+                "head_to_head": _head_to_head(con, opponent_team_id, limit=5),
+            }
+        )
+    return result
 
 
 def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
@@ -147,6 +302,7 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
     opponent_name = match["away_team_name"] if match["home_team_id"] == FOCUS_TEAM_ID else match["home_team_name"]
     ebb = _one(con, "SELECT * FROM team_game_stats WHERE match_id=? AND team_id=?", [match_id, FOCUS_TEAM_ID]) or {}
     opp = _one(con, "SELECT * FROM team_game_stats WHERE match_id=? AND team_id=?", [match_id, opponent_team_id]) or {}
+    opponent_abbr = str(opp.get("team_shortcut") or _team_abbr(con, int(opponent_team_id), opponent_name))
 
     lineups = _lineup_report(con, match_id, opponent_team_id)
     usage_5v5 = {row["player_id"]: row for row in lineups.get("player_5v5_usage", [])}
@@ -177,14 +333,19 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
                 "assists": row["assists"],
                 "points": row["points"],
                 "toi_s": total,
+                # Official EQ is total minus official PP/SH time. It is broader
+                # than exact 5v5 and can include 4v4/3v3/empty-net situations.
                 "eq_s": max(0, total - pp - pk),
                 "pp_s": pp,
                 "pk_s": pk,
                 "shifts": int(row.get("shifts") or 0),
                 "avg_shift_s": round(total / row["shifts"], 1) if row.get("shifts") else None,
+                "five_v_five_s": int(five.get("total_s") or 0),
                 "five_v_five_p1_s": int(five.get("p1_s") or 0),
                 "five_v_five_p2_s": int(five.get("p2_s") or 0),
                 "five_v_five_p3_s": int(five.get("p3_s") or 0),
+                "stable_unit_s": int(five.get("stable_unit_s") or 0),
+                "stable_unit_coverage_pct": five.get("stable_unit_coverage_pct"),
             }
         )
 
@@ -240,7 +401,15 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
         [match_id],
     )
 
-    name_map = {row["player_id"]: row["full_name"] for row in _all(con, "SELECT player_id, full_name FROM players WHERE match_id=?", [match_id])}
+    player_info = _all(con, "SELECT player_id, full_name, jersey, team_id FROM players WHERE match_id=?", [match_id])
+    name_map = {row["player_id"]: row["full_name"] for row in player_info}
+    jersey_map = {row["player_id"]: row.get("jersey") for row in player_info}
+    for shot in shots:
+        shot["player_name"] = name_map.get(shot.get("player_id"))
+        shot["jersey"] = jersey_map.get(shot.get("player_id"))
+        shot["period"] = _period_for_time(shot.get("game_time_s"))
+        shot["team_abbr"] = FOCUS_TEAM_ABBR if shot.get("team_id") == FOCUS_TEAM_ID else opponent_abbr
+
     event_rows = _all(
         con,
         """
@@ -258,11 +427,15 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
         except json.JSONDecodeError:
             payload = {}
         data = payload.get("data") or {}
+        team_id = event.get("team_id")
+        team_abbr = FOCUS_TEAM_ABBR if team_id == FOCUS_TEAM_ID else opponent_abbr if team_id == opponent_team_id else "–"
         timeline.append(
             {
                 "time_s": event["game_time_s"],
+                "period": _period_for_time(event.get("game_time_s")),
                 "type": event["event_type"],
-                "team_id": event["team_id"],
+                "team_id": team_id,
+                "team_abbr": team_abbr,
                 "balance": event["balance"],
                 "scorer": name_map.get(event.get("scorer_player_id")),
                 "score": data.get("currentScore"),
@@ -284,10 +457,11 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
             "away_score": match["away_score"],
             "opponent_team_id": opponent_team_id,
             "opponent_name": opponent_name,
+            "opponent_abbr": opponent_abbr,
             "ebb_home": match["home_team_id"] == FOCUS_TEAM_ID,
         },
         "focus_team": {"team_id": FOCUS_TEAM_ID, "abbr": FOCUS_TEAM_ABBR, "name": FOCUS_TEAM_NAME},
-        "opponent": {"team_id": opponent_team_id, "name": opponent_name, "abbr": opp.get("team_shortcut")},
+        "opponent": {"team_id": opponent_team_id, "name": opponent_name, "abbr": opponent_abbr},
         "metrics": metrics,
         "facts": facts,
         "players": players,
@@ -296,7 +470,6 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
         "shots": shots,
         "timeline": timeline,
     }
-
 
 
 def extract_upcoming_games(
@@ -342,6 +515,7 @@ def load_upcoming_games(
         return []
     payload = json.loads(discovery_path.read_text(encoding="utf-8"))
     return extract_upcoming_games(payload, focus_team_id=focus_team_id, limit=limit)
+
 
 def generate_dashboard_data(
     *,
@@ -393,15 +567,16 @@ def generate_dashboard_data(
                     "data_path": f"data/games/{match['match_id']}.json",
                 }
             )
+
+        upcoming_basic = load_upcoming_games(discovery_path, limit=upcoming_limit)
         index_payload = {
             "focus_team": {"team_id": FOCUS_TEAM_ID, "abbr": FOCUS_TEAM_ABBR, "name": FOCUS_TEAM_NAME},
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "completed_games": summaries,
-            "upcoming_games": load_upcoming_games(discovery_path, limit=upcoming_limit),
+            "upcoming_games": enrich_upcoming_games(con, upcoming_basic),
         }
         index_path = output_dir / "games.json"
         index_path.write_text(json.dumps(index_payload, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
         return index_path, paths
     finally:
         con.close()
-

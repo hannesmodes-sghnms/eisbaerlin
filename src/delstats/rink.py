@@ -10,6 +10,18 @@ Y_TO_M = 0.1524
 HOME_GOAL_COORDS = (-87.0, 0.0)
 ROAD_GOAL_COORDS = (87.0, 0.0)
 
+# Raw rink landmarks used by the dashboard drawing. The blue line is at ±29
+# in the same coordinate system as the shot-zone polygons (the BLUE_LINE shot
+# zone itself spans 29..52). Keeping these separate avoids the old UI bug where
+# the visual blue line was incorrectly drawn at ±52.
+RINK_X_EXTENT_RAW = 105.0
+RINK_Y_EXTENT_RAW = 100.0
+BLUE_LINE_X_RAW = 29.0
+GOAL_LINE_X_RAW = 87.0
+FACEOFF_X_RAW = 69.0
+FACEOFF_Y_RAW = 46.0
+GOAL_CREASE_RADIUS_M = 1.83
+
 # Polygon coordinates are intentionally copied from leaffan/del_stats
 # backend/rink_dimensions.py so historical and current analyses use the same
 # shot-zone definition.

@@ -26,3 +26,15 @@ def test_shot_geometry_uses_correct_attacking_goal():
     assert home is not None and road is not None
     assert home.distance_m == pytest.approx(0.0)
     assert road.distance_m == pytest.approx(0.0)
+
+
+def test_dashboard_landmarks_match_shot_zone_coordinate_system():
+    from delstats.rink import BLUE_LINE_X_RAW, GOAL_LINE_X_RAW, RINK_X_EXTENT_RAW
+
+    assert BLUE_LINE_X_RAW == 29.0
+    assert GOAL_LINE_X_RAW == 87.0
+    assert RINK_X_EXTENT_RAW == 105.0
+    # Immediately inside the attacking blue line is still neutral-zone territory;
+    # the blue-line shot zone starts at the boundary itself.
+    assert classify_shot_zone(28.9, 0) == "NEUTRAL_ZONE"
+    assert classify_shot_zone(29.0, 0) in {"BLUE_LINE", "NEUTRAL_ZONE"}

@@ -1,4 +1,4 @@
-# v0.6.0 – erster Lauf
+# v0.7.0 – erster Lauf
 
 ## 1. Projekt installieren
 
@@ -9,17 +9,16 @@ python -m pip install -e ".[dev]"
 pytest -q
 ```
 
-## 2. EBB-Daten aktualisieren
+## 2. DEL-Daten aktualisieren
 
 ```bash
 python scripts/update_season.py \
   --season 2026 \
   --game-type 1 \
-  --refresh-days 3 \
-  --team-id 3
+  --refresh-days 3
 ```
 
-Die DuckDB enthält danach nur die bisher abgeschlossenen EBB-Spiele sowie jeweils beide Mannschaften des betreffenden Spiels.
+Ab v0.7.0 wird die Datenbank ligaweit aufgebaut. Das ist nötig für Gegner-Vorschauen, letzte fünf Spiele und direkte Vergleiche. Im Dashboard sind abgeschlossene Spiele weiterhin nur für EBB auswählbar.
 
 ## 3. Qualität prüfen
 
@@ -37,28 +36,16 @@ python scripts/generate_dashboard.py \
   --upcoming 3
 ```
 
-Danach existieren:
-
-```text
-site/data/games.json
-site/data/games/<match_id>.json
-```
-
-`games.json` enthält die abgeschlossenen EBB-Spiele und die nächsten drei EBB-Partien.
-
 ## 5. UI lokal prüfen
 
 ```bash
 python -m http.server 8000 --directory site
 ```
 
-Im Codespace Port 8000 öffnen.
-
-## 6. GitHub Pages einmalig aktivieren
+## 6. GitHub Pages
 
 - Settings → Pages → Source: **GitHub Actions**
-- Settings → Secrets and variables → Actions → Variables
 - `ENABLE_DASHBOARD_PAGES=true`
-- Workflow manuell starten
+- Workflow einmal vollständig neu über **Run workflow** starten
 
-Danach aktualisiert die tägliche Pipeline das veröffentlichte Dashboard automatisch.
+Die Pipeline published danach das aktualisierte Dashboard automatisch.

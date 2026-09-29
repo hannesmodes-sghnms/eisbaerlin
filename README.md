@@ -2,11 +2,11 @@
 
 Automatisierte DEL-Datenpipeline für die Saison 2026/27 mit Fokus auf **Eisbären Berlin (Team-ID 3)**.
 
-Das Projekt lädt täglich nur bereits abgeschlossene EBB-Spiele, baut daraus eine DuckDB und erzeugt ein statisches Dashboard für die Podcast-Vorbereitung. Zusätzlich zeigt das Dashboard die nächsten drei EBB-Spiele aus dem aktuellen DEL-Spielplan.
+Das Dashboard bleibt EBB-zentriert: als abgeschlossene Analysefälle sind ausschließlich bereits gespielte EBB-Spiele auswählbar. Für die Vorschau auf die nächsten drei EBB-Spiele werden im Hintergrund jedoch alle abgeschlossenen DEL-Spiele importiert, damit Form, direkte Vergleiche und Gegner-Stats vollständig sind.
 
 ## Dashboard
 
-Das UI zeigt ausschließlich bereits gespielte EBB-Spiele als auswählbare Analysefälle. Für jedes Spiel stehen bereit:
+Für jedes abgeschlossene EBB-Spiel stehen bereit:
 
 - Corsi und Corsi 5v5
 - Shots on Goal
@@ -14,31 +14,42 @@ Das UI zeigt ausschließlich bereits gespielte EBB-Spiele als auswählbare Analy
 - Tore / EQ-Tore / PPG
 - Zeit in Führung / Gleichstand / Rückstand
 - SH%, SV% und PDO bei 5v5
-- EBB Player Usage mit TOI / EQ / PP / PK / Shifts / Ø Shift
-- 5v5-Eiszeit je Spieler nach Drittel
+- EBB Player Usage mit sortierbaren TOI / EQ / PP / PK / 5v5 / P1 / P2 / P3
 - stabile Forward-Trios und Defense-Pairs
-- automatische Hinweise auf verkürzte Bank in P3
-- neue bzw. verschwundene 5v5-Units in P3
+- Abdeckungscheck der stabilen Units gegen die vollständige rekonstruierte 5v5-TOI
+- automatische Lineup-Changes zwischen P1→P2 und P2→P3
+- Hinweise auf verkürzte Bank in P3
+- 5v5 Line Matching: häufigste gegnerische Forward-Unit je EBB-Reihe
 - Shot-Zonen nach der historischen `leaffan/del_stats`-Kategorisierung
-- Shotmap
-- Tor-/Strafen-Timeline
+- Shotmap mit korrekter Blue-Line-Geometrie, Torraum und Filtern nach Team, Spielsituation, EBB-Spieler, Drittel und Ergebnis
+- unterschiedliche Shot-Symbole für Tor / aufs Tor / daneben / geblockt
+- Tor-/Strafen-Timeline mit Teamkürzel
 
-Oben im Dashboard werden zusätzlich die **nächsten drei EBB-Spiele** angezeigt. Zukünftige Spiele sind reine Vorschau und haben noch keine Stats.
+## Vorschau auf die nächsten drei EBB-Spiele
+
+Jedes kommende Spiel erhält eine aufklappbare Matchup-Vorschau mit:
+
+- Saison-Key-Stats EBB vs. Gegner
+- Form der letzten fünf Spiele beider Teams
+- direkten Duellen aus der aktuell importierten Saison 2026/27
+
+Die Key Stats sind bewusst deskriptiv und enthalten u. a. Corsi 5v5 %, Corsi/Spiel, SOG/Spiel, Slot Attempts/Spiel, Tore/Gegentore pro Spiel, PDO 5v5 und Zeit in Führung pro Spiel.
 
 ## Automatische Pipeline
 
 Der GitHub-Workflow läuft täglich um 04:30 Uhr Europe/Berlin und kann zusätzlich manuell gestartet werden.
 
 1. vollständigen DEL-Spielplan 2026/27 entdecken
-2. auf EBB-Spiele filtern
-3. neue abgeschlossene EBB-Spiele herunterladen
-4. EBB-Spiele der letzten drei Tage erneut prüfen
-5. DuckDB aus den Raw-Daten neu bauen
-6. Qualitätschecks durchführen
-7. Dashboard-JSON erzeugen
-8. Raw-Daten, Discovery und Dashboard-Daten versionieren
-9. DuckDB als Release-Asset aktualisieren
-10. optional das Dashboard über GitHub Pages veröffentlichen
+2. alle abgeschlossenen DEL-Spiele aktualisieren/importieren
+3. Spiele der letzten drei Tage erneut prüfen
+4. DuckDB aus den Raw-Daten neu bauen
+5. Qualitätschecks durchführen
+6. EBB-Dashboard-JSON erzeugen
+7. Raw-Daten, Discovery und Dashboard-Daten versionieren
+8. DuckDB als Release-Asset aktualisieren
+9. optional das Dashboard über GitHub Pages veröffentlichen
+
+Die ligaweite Datengrundlage ist nötig, damit die nächsten Gegner mit ihren letzten fünf Spielen und Saisonwerten verglichen werden können. Das UI bleibt trotzdem EBB-only für abgeschlossene Spiele.
 
 ## Installation
 
@@ -55,8 +66,7 @@ pytest -q
 python scripts/update_season.py \
   --season 2026 \
   --game-type 1 \
-  --refresh-days 3 \
-  --team-id 3
+  --refresh-days 3
 
 python scripts/validate_season.py
 
@@ -72,8 +82,6 @@ Das statische Dashboard kann lokal zum Testen über einen einfachen HTTP-Server 
 ```bash
 python -m http.server 8000 --directory site
 ```
-
-Dann im Browser den vom Codespace freigegebenen Port 8000 öffnen.
 
 ## GitHub Pages
 
@@ -102,24 +110,38 @@ site/
     └── games/<match_id>.json
 ```
 
-`games.json` enthält zwei Bereiche:
+`games.json` enthält:
 
 - `completed_games`: nur bereits gespielte EBB-Spiele
-- `upcoming_games`: die nächsten drei EBB-Spiele aus dem Saisonspielplan
+- `upcoming_games`: nächste drei EBB-Spiele inkl. Matchup-Vorschau
 
-## 5v5-Lineups
+## 5v5-Lineups und Fact Check
 
-Die Lineup-Analyse rekonstruiert stabile 5v5-Kombinationen aus den Shift-Daten. Kurzlebige Kombinationen während fliegender Wechsel werden gefiltert: Eine Unit wird erst ab mindestens 8 Sekunden stabiler gemeinsamer Eiszeit gezählt.
+Die Lineup-Analyse trennt zwei Ebenen:
 
-Für P3 werden u. a. ausgewertet:
+1. **vollständige rekonstruierte 5v5-TOI**: jede Zeitspanne, in der laut Shift-Feed auf beiden Seiten exakt fünf Feldspieler auf dem Eis stehen;
+2. **stabile Units**: exakte Forward-Trios bzw. Defense-Pairs, die mindestens 8 Sekunden am Stück bestehen.
 
-- aktive Forwards je Drittel
-- Konzentration der 5v5-TOI auf die Top 9 Forwards
-- Konzentration der Defense-TOI auf die Top 4 Verteidiger
-- neue Forward-Trios in P3
-- Units aus P1/P2, die in P3 praktisch verschwinden
+Damit wird der Filterverlust transparent. Die UI zeigt zusätzlich pro Spieler und für das Team, wie viel der rekonstruierten 5v5-TOI einer stabilen Unit zugeordnet werden konnte.
 
-Die automatische Aussage beschreibt nur die beobachtete Nutzung. Eine qualitative Einstufung wie „Defensive Unit“ wird nicht aus den Daten erfunden.
+Wichtig: `EQ` aus den offiziellen Player-Stats ist nicht dasselbe wie `5v5`. `EQ = TOI - PP - PK` kann auch 4v4, 3v3 und weitere Even-Strength-/Empty-Net-Situationen enthalten. Eine größere Differenz zwischen EQ und der Summe der 5v5-Reihen ist deshalb nicht automatisch ein Fehler der Lineup-Erkennung.
+
+Lineup-Changes werden nun period-to-period erkannt. Eine neue Unit wird hervorgehoben, wenn sie im neuen Drittel mindestens 30 Sekunden stabil eingesetzt wird und im vorherigen Drittel praktisch nicht vorkam; ein einzelner vollständiger Shift ab 45 Sekunden reicht ebenfalls als starkes Signal.
+
+## Line Matching
+
+Für jedes stabile EBB-Forward-Trio wird die gegnerische Forward-Unit ermittelt, gegen die es die meiste gleichzeitig stabile 5v5-Eiszeit hatte. Dadurch lassen sich Matchups und mögliche gezielte Line Matchings direkt aus dem Shift-Feed erkennen.
+
+## Shotmap-Geometrie
+
+Das Dashboard verwendet dieselbe Raw-Koordinatenlogik wie die Shot-Zonen:
+
+- Rink-Grenze: x ±105
+- blaue Linien: x ±29
+- Torlinien: x ±87
+- offensive Bullypunkte: x ±69 / y ±46
+
+Der frühere UI-Fehler lag darin, die blaue Linie bei ±52 einzuzeichnen. ±52 ist die zweite Grenze der `BLUE_LINE`-Shot-Zone, nicht die tatsächliche blaue Linie. Zusätzlich wird nun ein Torraum eingezeichnet.
 
 ## Shot-Zonen
 
