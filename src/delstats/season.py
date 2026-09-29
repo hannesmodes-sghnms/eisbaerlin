@@ -236,13 +236,17 @@ def update_season(
     db_path: Path = Path("data/del_2026_27.duckdb"),
     reports_dir: Path = Path("data/reports"),
     timezone_name: str = "Europe/Berlin",
+    focus_team_id: int | None = None,
 ) -> SeasonUpdateSummary:
     discoverer = SeasonDiscoverer()
     downloader = RawMatchDownloader()
 
     season_discovery = discoverer.discover_season(season, game_type)
     season_json, _ = save_season_discovery(season_discovery, discovery_dir)
-    completed = [m for m in season_discovery.matches if m.status == "AFTER_MATCH"]
+    schedule_matches = list(season_discovery.matches)
+    if focus_team_id is not None:
+        schedule_matches = [m for m in schedule_matches if focus_team_id in {m.home_team_id, m.away_team_id}]
+    completed = [m for m in schedule_matches if m.status == "AFTER_MATCH"]
 
     local_today = datetime.now(ZoneInfo(timezone_name)).date()
     updates: list[MatchUpdateResult] = []
@@ -332,7 +336,7 @@ def update_season(
 
     quality = build_quality_report(db_path, season=season, game_type=game_type)
     quality["pipeline"] = {
-        "schedule_matches": len(season_discovery.matches),
+        "schedule_matches": len(schedule_matches),
         "completed_matches": len(completed),
         "failed_downloads": failed_downloads,
         "failed_imports": len(import_errors),
@@ -344,7 +348,7 @@ def update_season(
         season=season,
         game_type=game_type,
         generated_at_utc=datetime.utcnow().isoformat(timespec="seconds") + "Z",
-        schedule_matches=len(season_discovery.matches),
+        schedule_matches=len(schedule_matches),
         completed_matches=len(completed),
         refreshed_matches=refreshed_matches,
         downloaded_matches=downloaded_matches,

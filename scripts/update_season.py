@@ -20,6 +20,7 @@ def main() -> int:
     parser.add_argument("--raw-dir", type=Path, default=Path("data/raw"))
     parser.add_argument("--db", type=Path, default=Path("data/del_2026_27.duckdb"))
     parser.add_argument("--reports-dir", type=Path, default=Path("data/reports"))
+    parser.add_argument("--team-id", type=int, default=3, help="Only download/import matches involving this team (default: EBB=3)")
     args = parser.parse_args()
 
     summary = update_season(
@@ -30,6 +31,7 @@ def main() -> int:
         raw_dir=args.raw_dir,
         db_path=args.db,
         reports_dir=args.reports_dir,
+        focus_team_id=args.team_id,
     )
     print(json.dumps(asdict(summary), indent=2, ensure_ascii=False))
     return 0

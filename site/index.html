@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EBB Game Dashboard</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07111f;
+      --panel: #0d1a2b;
+      --panel2: #122238;
+      --line: #243650;
+      --text: #f5f7fb;
+      --muted: #9fb1ca;
+      --accent: #7db7ff;
+      --ebb: #4ea1ff;
+      --opp: #ff7a85;
+      --good: #65d6a1;
+      --warn: #ffc96b;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width: min(1320px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0 52px; }
+    h1,h2,h3 { margin: 0; }
+    h1 { font-size: clamp(1.7rem, 3vw, 2.5rem); letter-spacing: -0.03em; }
+    h2 { font-size: 1.15rem; margin-bottom: 14px; }
+    h3 { font-size: 1rem; margin-bottom: 10px; }
+    p { margin: 0; }
+    .muted { color: var(--muted); }
+    .header { display:flex; gap:18px; align-items:end; justify-content:space-between; margin-bottom:24px; flex-wrap:wrap; }
+    .eyebrow { color: var(--accent); text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; font-weight:700; margin-bottom:6px; }
+    .updated { color:var(--muted); font-size:.85rem; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+    .grid { display:grid; gap:16px; }
+    .two { grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); }
+    .three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .upcoming { margin-bottom:16px; }
+    .upcoming-card { background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:14px; min-width:0; }
+    .upcoming-date { color:var(--accent); font-weight:700; font-size:.83rem; margin-bottom:5px; }
+    .upcoming-match { font-weight:700; }
+    .upcoming-place { color:var(--muted); margin-top:5px; font-size:.85rem; }
+    label { display:block; color:var(--muted); font-size:.8rem; font-weight:700; margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em; }
+    select, button { font:inherit; }
+    select { width:100%; background:var(--panel2); color:var(--text); border:1px solid var(--line); border-radius:10px; padding:12px 14px; min-height:46px; }
+    button { border:1px solid var(--line); background:var(--panel2); color:var(--text); border-radius:10px; padding:8px 12px; cursor:pointer; }
+    button.active { border-color:var(--accent); color:var(--accent); background:#0f2948; }
+    .game-head { display:flex; justify-content:space-between; gap:20px; align-items:center; margin-top:16px; flex-wrap:wrap; }
+    .teams { font-size:clamp(1.3rem, 2vw, 1.8rem); font-weight:800; }
+    .score { font-size:clamp(2rem, 5vw, 3.5rem); font-weight:900; letter-spacing:-.05em; white-space:nowrap; }
+    .facts { margin:0; padding-left:20px; display:grid; gap:8px; }
+    .facts li::marker { color:var(--accent); }
+    .metric-table, .data-table { width:100%; border-collapse:collapse; }
+    th, td { border-bottom:1px solid var(--line); padding:9px 8px; text-align:right; vertical-align:top; }
+    th:first-child, td:first-child { text-align:left; }
+    th { color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.05em; }
+    tr:last-child td { border-bottom:0; }
+    .ebb { color:var(--ebb); font-weight:750; }
+    .opp { color:var(--opp); font-weight:750; }
+    .section { margin-top:16px; }
+    .scroll { overflow-x:auto; }
+    .usage-table { min-width:760px; }
+    .lineup-table { min-width:680px; }
+    .pill { display:inline-flex; align-items:center; padding:3px 8px; border-radius:999px; background:var(--panel2); border:1px solid var(--line); color:var(--muted); font-size:.78rem; }
+    .flag { border-color:#745b20; color:var(--warn); }
+    .filters { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:12px; }
+    .rink-wrap { background:#eaf4ff; border-radius:14px; padding:8px; overflow:hidden; }
+    #rink { display:block; width:100%; aspect-ratio: 2 / 1; min-height:260px; }
+    .legend { display:flex; gap:16px; flex-wrap:wrap; color:var(--muted); font-size:.8rem; margin-top:8px; }
+    .dot { width:9px; height:9px; display:inline-block; border-radius:50%; margin-right:5px; }
+    .dot.ebb { background:var(--ebb); } .dot.opp { background:var(--opp); }
+    .zone-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 18px; }
+    .zone { display:grid; grid-template-columns:1fr auto auto; gap:10px; border-bottom:1px solid var(--line); padding:7px 0; }
+    .timeline { display:grid; gap:7px; }
+    .event { display:grid; grid-template-columns:56px 72px 1fr; gap:8px; align-items:start; padding:8px 0; border-bottom:1px solid var(--line); }
+    .event:last-child { border:0; }
+    .event-type { font-weight:800; font-size:.78rem; }
+    .rotation-alert { border-left:3px solid var(--warn); padding:10px 12px; background:#2a2213; border-radius:8px; margin-bottom:12px; }
+    .empty { color:var(--muted); padding:20px 0; text-align:center; }
+    .footer-note { color:var(--muted); font-size:.78rem; margin-top:10px; }
+    @media (max-width: 860px) {
+      .two,.three { grid-template-columns:1fr; }
+      main { width:min(100% - 18px, 1320px); padding-top:18px; }
+      .zone-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <div class="header">
+    <div>
+      <div class="eyebrow">Eisbären Berlin · Podcast Prep</div>
+      <h1>EBB Game Dashboard</h1>
+      <p class="muted">Spielbezogene DEL-Daten, Eiszeit, Lineups und Shotmap.</p>
+    </div>
+    <div id="updated" class="updated"></div>
+  </div>
+
+  <section class="panel upcoming">
+    <h2>Nächste 3 Spiele</h2>
+    <div id="upcoming" class="grid three"><div class="empty">Lade Spielplan…</div></div>
+  </section>
+
+  <section class="panel">
+    <label for="gameSelect">Gespieltes EBB-Spiel auswählen</label>
+    <select id="gameSelect"><option>Lade Spiele…</option></select>
+    <div id="gameHead" class="game-head"></div>
+  </section>
+
+  <div class="grid two section">
+    <section class="panel">
+      <h2>Podcast-Fakten</h2>
+      <ul id="facts" class="facts"><li>Lade Daten…</li></ul>
+    </section>
+    <section class="panel">
+      <h2>Spiel-Stats</h2>
+      <div class="scroll"><table class="metric-table"><thead><tr><th>Stat</th><th>EBB</th><th id="oppHeader">Gegner</th></tr></thead><tbody id="metrics"></tbody></table></div>
+    </section>
+  </div>
+
+  <section class="panel section">
+    <h2>EBB Player Usage</h2>
+    <p class="muted" style="margin-bottom:10px">TOI = gesamte Eiszeit; EQ = TOI außerhalb von PP/PK. P1–P3 zeigen 5v5-Eiszeit.</p>
+    <div class="scroll"><table class="data-table usage-table"><thead><tr><th>Spieler</th><th>Pos</th><th>TOI</th><th>EQ</th><th>PP</th><th>PK</th><th>Shifts</th><th>Ø Shift</th><th>5v5 P1</th><th>5v5 P2</th><th>5v5 P3</th></tr></thead><tbody id="usage"></tbody></table></div>
+  </section>
+
+  <div class="grid two section">
+    <section class="panel">
+      <h2>5v5 Forward Units</h2>
+      <div id="rotationAlert"></div>
+      <div class="scroll"><table class="data-table lineup-table"><thead><tr><th>Unit</th><th>Gesamt</th><th>P1</th><th>P2</th><th>P3</th><th>Stabile Einsätze</th></tr></thead><tbody id="trios"></tbody></table></div>
+    </section>
+    <section class="panel">
+      <h2>5v5 Defense Pairs</h2>
+      <div class="scroll"><table class="data-table lineup-table"><thead><tr><th>Pair</th><th>Gesamt</th><th>P1</th><th>P2</th><th>P3</th><th>Stabile Einsätze</th></tr></thead><tbody id="pairs"></tbody></table></div>
+    </section>
+  </div>
+
+  <section class="panel section">
+    <div style="display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap">
+      <div><h2>Shotmap</h2><p class="muted">Koordinatensystem der DEL-Daten; Punkte können nach Team, Manpower und Ergebnis gefiltert werden.</p></div>
+      <div class="filters">
+        <button type="button" class="teamFilter active" data-team="all">Alle</button>
+        <button type="button" class="teamFilter" data-team="ebb">EBB</button>
+        <button type="button" class="teamFilter" data-team="opp">Gegner</button>
+        <select id="manpowerFilter" aria-label="Manpower" style="width:auto"><option value="all">Alle Situationen</option><option value="5v5">5v5</option></select>
+        <select id="resultFilter" aria-label="Schussergebnis" style="width:auto"><option value="all">Alle Ergebnisse</option><option value="goal">Tore</option><option value="on_goal">On Goal</option><option value="missed">Missed</option><option value="blocked">Blocked</option></select>
+      </div>
+    </div>
+    <div class="rink-wrap"><svg id="rink" viewBox="0 0 1000 500" role="img" aria-label="Shotmap"></svg></div>
+    <div class="legend"><span><i class="dot ebb"></i>EBB</span><span><i class="dot opp"></i>Gegner</span><span>● Goal / On Goal · ○ Missed / Blocked</span></div>
+  </section>
+
+  <div class="grid two section">
+    <section class="panel">
+      <h2>Shot-Zonen</h2>
+      <div class="zone-grid" id="zones"></div>
+    </section>
+    <section class="panel">
+      <h2>Spielverlauf</h2>
+      <div id="timeline" class="timeline"></div>
+    </section>
+  </div>
+</main>
+<script>
+(() => {
+  const state = { index:null, game:null, team:'all' };
+  const $ = s => document.querySelector(s);
+  const $$ = s => Array.from(document.querySelectorAll(s));
+  const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
+  const time = sec => { sec = Math.max(0, Math.round(Number(sec)||0)); return `${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}`; };
+  const fmtDateTime = raw => {
+    if (!raw) return '';
+    const [datePart,timePart=''] = raw.split(' ');
+    const [y,m,d] = datePart.split('-');
+    return `${d}.${m}.${y}${timePart ? ' · '+timePart.slice(0,5) : ''}`;
+  };
+  const metric = m => {
+    if (m.kind === 'time') return time(m.ebb);
+    if (m.kind === 'percent') return m.ebb == null ? '–' : `${Number(m.ebb).toFixed(1)} %`;
+    if (m.kind === 'decimal') return m.ebb == null ? '–' : Number(m.ebb).toFixed(1);
+    return m.ebb ?? '–';
+  };
+  const metricOpp = m => {
+    if (m.kind === 'time') return time(m.opponent);
+    if (m.kind === 'percent') return m.opponent == null ? '–' : `${Number(m.opponent).toFixed(1)} %`;
+    if (m.kind === 'decimal') return m.opponent == null ? '–' : Number(m.opponent).toFixed(1);
+    return m.opponent ?? '–';
+  };
+
+  async function loadIndex(){
+    const r = await fetch('data/games.json', {cache:'no-store'});
+    if(!r.ok) throw new Error(`games.json: ${r.status}`);
+    state.index = await r.json();
+    renderIndex();
+    const games = state.index.completed_games || [];
+    if(games.length) await loadGame(games[0]);
+  }
+  function renderIndex(){
+    const idx=state.index;
+    $('#updated').textContent = idx.generated_at ? `Datenstand: ${new Date(idx.generated_at).toLocaleString('de-DE')}` : '';
+    const up=idx.upcoming_games||[];
+    $('#upcoming').innerHTML = up.length ? up.map(g => `<article class="upcoming-card"><div class="upcoming-date">${esc(fmtDateTime(g.start_date))}</div><div class="upcoming-match">${esc(g.home_team_name)} – ${esc(g.away_team_name)}</div><div class="upcoming-place">${g.ebb_home ? 'Heimspiel' : 'Auswärtsspiel'} · Gegner: ${esc(g.opponent_name)}</div></article>`).join('') : '<div class="empty">Keine kommenden EBB-Spiele gefunden.</div>';
+    const games=idx.completed_games||[];
+    $('#gameSelect').innerHTML = games.length ? games.map(g=>`<option value="${g.match_id}">${esc(g.label)}</option>`).join('') : '<option>Keine abgeschlossenen Spiele</option>';
+  }
+  async function loadGame(summary){
+    const path = summary.data_path || `data/games/${summary.match_id}.json`;
+    const r=await fetch(path,{cache:'no-store'}); if(!r.ok) throw new Error(`${path}: ${r.status}`);
+    state.game=await r.json(); renderGame();
+  }
+  function renderGame(){
+    const g=state.game, m=g.match;
+    $('#oppHeader').textContent=m.opponent_name;
+    $('#gameHead').innerHTML=`<div><div class="muted">${esc(m.date)}</div><div class="teams">${esc(m.home_team_name)} – ${esc(m.away_team_name)}</div></div><div class="score">${m.home_score}:${m.away_score}</div>`;
+    $('#facts').innerHTML=(g.facts||[]).map(x=>`<li>${esc(x)}</li>`).join('')||'<li>Keine Fakten verfügbar.</li>';
+    $('#metrics').innerHTML=(g.metrics||[]).map(x=>`<tr><td>${esc(x.label)}</td><td class="ebb">${esc(metric(x))}</td><td class="opp">${esc(metricOpp(x))}</td></tr>`).join('');
+    $('#usage').innerHTML=(g.players||[]).filter(p=>p.position!=='GK').map(p=>`<tr><td>#${esc(p.jersey??'–')} ${esc(p.name)}</td><td>${esc(p.position)}</td><td><b>${time(p.toi_s)}</b></td><td>${time(p.eq_s)}</td><td>${time(p.pp_s)}</td><td>${time(p.pk_s)}</td><td>${p.shifts}</td><td>${p.avg_shift_s==null?'–':time(p.avg_shift_s)}</td><td>${time(p.five_v_five_p1_s)}</td><td>${time(p.five_v_five_p2_s)}</td><td>${time(p.five_v_five_p3_s)}</td></tr>`).join('');
+    renderUnits('#trios', g.lineups?.forward_trios||[]);
+    renderUnits('#pairs', g.lineups?.defense_pairs||[]);
+    const rot=g.lineups?.rotation||{};
+    $('#rotationAlert').innerHTML=rot.shortened_bank_detected?`<div class="rotation-alert"><b>Verkürzte Bank erkannt.</b><br>${esc((rot.shortened_bank_reasons||[]).join(' · '))}</div>`:'';
+    $('#zones').innerHTML=(g.shot_zones||[]).filter(z=>z.zone!=='UNKNOWN').map(z=>`<div class="zone"><span>${esc(z.zone.replaceAll('_',' '))}</span><span class="ebb">${z.ebb_attempts} (${z.ebb_sog} SOG)</span><span class="opp">${z.opponent_attempts} (${z.opponent_sog} SOG)</span></div>`).join('');
+    $('#timeline').innerHTML=(g.timeline||[]).map(e=>`<div class="event"><span>${time(e.time_s)}</span><span class="event-type">${e.type==='goal'?'TOR':'STRAFE'}</span><span>${esc(e.scorer||e.penalty||'')} ${e.score?`· ${esc(e.score)}`:''} ${e.balance?`· ${esc(e.balance)}`:''}</span></div>`).join('')||'<div class="empty">Keine Events.</div>';
+    drawRink();
+  }
+  function renderUnits(selector, rows){
+    $(selector).innerHTML=rows.slice(0,15).map(u=>`<tr><td>${esc(u.label)}</td><td><b>${time(u.total_s)}</b></td><td>${time(u.p1_s)}</td><td>${time(u.p2_s)}</td><td>${time(u.p3_s)}</td><td>${u.appearances}</td></tr>`).join('')||'<tr><td colspan="6" class="muted">Keine stabilen Units erkannt.</td></tr>';
+  }
+  function drawRink(){
+    const svg=$('#rink');
+    const g=state.game; if(!g) return;
+    const NS='http://www.w3.org/2000/svg';
+    svg.innerHTML='';
+    const add=(tag,attrs)=>{const n=document.createElementNS(NS,tag); Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,v)); svg.appendChild(n); return n;};
+    add('rect',{x:20,y:20,width:960,height:460,rx:82,fill:'#f8fbff',stroke:'#58708f','stroke-width':3});
+    add('line',{x1:500,y1:20,x2:500,y2:480,stroke:'#dc5964','stroke-width':3});
+    const rawToX=x=>(x+32.004)/64.008*960+20, rawToY=y=>(15.24-y)/30.48*460+20;
+    [-15.8496,15.8496].forEach(x=>add('line',{x1:rawToX(x),y1:20,x2:rawToX(x),y2:480,stroke:'#3e7fd1','stroke-width':6,opacity:.85}));
+    [-26.5176,26.5176].forEach(x=>add('line',{x1:rawToX(x),y1:20,x2:rawToX(x),y2:480,stroke:'#dc5964','stroke-width':2,opacity:.8}));
+    [250,750].forEach(cx=>[145,355].forEach(cy=>add('circle',{cx,cy,r:42,fill:'none',stroke:'#dc5964','stroke-width':2,opacity:.65})));
+    add('circle',{cx:500,cy:250,r:42,fill:'none',stroke:'#3e7fd1','stroke-width':2,opacity:.65});
+    const mp=$('#manpowerFilter').value, result=$('#resultFilter').value;
+    const shots=(g.shots||[]).filter(s=> (state.team==='all'||(state.team==='ebb'?s.team_id===g.focus_team.team_id:s.team_id!==g.focus_team.team_id)) && (mp==='all'||s.manpower===mp) && (result==='all'||s.result===result));
+    shots.forEach(s=>{
+      if(s.x_m==null||s.y_m==null) return;
+      const isEbb=s.team_id===g.focus_team.team_id, filled=['goal','on_goal'].includes(s.result);
+      const c=add('circle',{cx:rawToX(Number(s.x_m)),cy:rawToY(Number(s.y_m)),r:s.result==='goal'?8:6,fill:filled?(isEbb?'#2589f3':'#e74f5d'):'#f8fbff',stroke:isEbb?'#2589f3':'#e74f5d','stroke-width':3,opacity:.88});
+      const title=document.createElementNS(NS,'title'); title.textContent=`${isEbb?'EBB':'Gegner'} · ${s.result} · ${s.manpower} · ${time(s.game_time_s)} · ${s.shot_zone||''}`; c.appendChild(title);
+    });
+  }
+
+  $('#gameSelect').addEventListener('change', async e=>{const s=(state.index.completed_games||[]).find(g=>String(g.match_id)===e.target.value); if(s) await loadGame(s);});
+  $$('.teamFilter').forEach(btn=>btn.addEventListener('click',()=>{$$('.teamFilter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');state.team=btn.dataset.team;drawRink();}));
+  $('#manpowerFilter').addEventListener('change',drawRink); $('#resultFilter').addEventListener('change',drawRink);
+  loadIndex().catch(err=>{console.error(err); $('#gameHead').innerHTML=`<div class="empty">Dashboard-Daten konnten nicht geladen werden: ${esc(err.message)}</div>`;});
+})();
+</script>
+</body>
+</html>
