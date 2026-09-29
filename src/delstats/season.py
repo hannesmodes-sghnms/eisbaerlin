@@ -72,7 +72,12 @@ def _raw_match_ready(match_dir: Path) -> bool:
         match_dir / "faceoffs.json",
         match_dir / "period-events.json",
     ]
-    return all(path.exists() for path in required) and any(match_dir.glob("shifts*.json"))
+    team_stats = list((match_dir / "team-stats").glob("*.json"))
+    return (
+        all(path.exists() for path in required)
+        and any(match_dir.glob("shifts*.json"))
+        and len(team_stats) >= 2
+    )
 
 
 def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[str, Any]:
@@ -88,7 +93,10 @@ def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[
               (SELECT count(*) FROM shifts) AS shifts,
               (SELECT count(*) FROM shots) AS shots,
               (SELECT count(*) FROM faceoffs) AS faceoffs,
-              (SELECT count(*) FROM events) AS events
+              (SELECT count(*) FROM events) AS events,
+              (SELECT count(*) FROM player_game_stats) AS player_game_stats,
+              (SELECT count(*) FROM team_game_stats) AS team_game_stats,
+              (SELECT count(*) FROM shots WHERE shot_zone IS NULL) AS unclassified_shots
             """
         ).fetchone()
         cols = [d[0] for d in con.description]
@@ -123,7 +131,6 @@ def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[
             """
         ).fetchone()
 
-        # The many-to-many LEFT JOIN above would inflate event counts. Use scalar subqueries instead.
         per_match_rows = con.execute(
             """
             SELECT
@@ -190,6 +197,9 @@ def write_quality_report(report: dict[str, Any], output_dir: Path) -> tuple[Path
         f"- Shifts: {totals.get('shifts', 0)}",
         f"- Faceoffs: {totals.get('faceoffs', 0)}",
         f"- Events: {totals.get('events', 0)}",
+        f"- Player game stats: {totals.get('player_game_stats', 0)}",
+        f"- Team game stats: {totals.get('team_game_stats', 0)}",
+        f"- Unclassified shot zones: {totals.get('unclassified_shots', 0)}",
         "",
         "## On-ice quality",
         "",

@@ -6,6 +6,8 @@ from typing import Any
 
 import duckdb
 
+from .analytics import import_player_game_stats, refresh_team_game_stats
+from .rink import shot_geometry
 from .transform import (
     SHOT_RESULT_MAP,
     faceoff_zone_for_team,
@@ -80,6 +82,10 @@ CREATE TABLE IF NOT EXISTS shots (
     result VARCHAR,
     coordinate_x DOUBLE,
     coordinate_y DOUBLE,
+    shot_x_m DOUBLE,
+    shot_y_m DOUBLE,
+    shot_distance_m DOUBLE,
+    shot_zone VARCHAR,
     polygon VARCHAR,
     PRIMARY KEY (match_id, shot_id)
 );
@@ -157,6 +163,21 @@ CREATE TABLE IF NOT EXISTS shot_context (
 """
 
 
+def _migrate_schema(con: Any) -> None:
+    # v0.5 adds shot geometry fields. This also lets a developer reuse a v0.4 DB
+    # locally instead of forcing a manual delete. The daily season job still
+    # rebuilds the database from raw data.
+    existing = {row[1] for row in con.execute("PRAGMA table_info('shots')").fetchall()}
+    for column, dtype in (
+        ("shot_x_m", "DOUBLE"),
+        ("shot_y_m", "DOUBLE"),
+        ("shot_distance_m", "DOUBLE"),
+        ("shot_zone", "VARCHAR"),
+    ):
+        if column not in existing:
+            con.execute(f"ALTER TABLE shots ADD COLUMN {column} {dtype}")
+
+
 def _schedule_match(discovery_path: Path | None, match_id: int) -> dict[str, Any] | None:
     if not discovery_path or not discovery_path.exists():
         return None
@@ -195,6 +216,9 @@ def build_match_database(
     missing = [name for name in required if not (match_dir / name).exists()]
     if missing:
         raise FileNotFoundError(f"Missing raw match files: {', '.join(missing)}")
+    team_stats_files = sorted((match_dir / "team-stats").glob("*.json"))
+    if len(team_stats_files) < 2:
+        raise FileNotFoundError(f"Expected two team-stats/*.json files below {match_dir}")
     shift_files = sorted(match_dir.glob("shifts*.json"))
     if not shift_files:
         raise FileNotFoundError(f"No shifts*.json file found below {match_dir}")
@@ -219,6 +243,7 @@ def build_match_database(
     con = duckdb.connect(str(db_path))
     try:
         con.execute(SCHEMA_SQL)
+        _migrate_schema(con)
         for table in ("shot_on_ice", "shot_context", "events", "faceoffs", "shots", "shifts", "players", "matches"):
             con.execute(f"DELETE FROM {table} WHERE match_id = ?", [match_id])
 
@@ -288,8 +313,20 @@ def build_match_database(
         for shot in shots:
             result_id = int(shot["match_shot_resutl_id"])
             polygon = shot.get("polygon")
+            geometry = shot_geometry(
+                shot.get("coordinate_x"),
+                shot.get("coordinate_y"),
+                shooting_team_id=int(shot.get("team_id")),
+                home_team_id=home_team_id,
+            )
             con.execute(
-                """INSERT INTO shots VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                """
+                INSERT INTO shots (
+                    match_id, shot_id, game_time_s, real_time, team_id, player_id, jersey,
+                    first_name, last_name, result_id, result, coordinate_x, coordinate_y,
+                    shot_x_m, shot_y_m, shot_distance_m, shot_zone, polygon
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
                 [
                     match_id,
                     shot.get("id"),
@@ -304,6 +341,10 @@ def build_match_database(
                     SHOT_RESULT_MAP.get(result_id, "unknown"),
                     shot.get("coordinate_x"),
                     shot.get("coordinate_y"),
+                    geometry.x_m if geometry else None,
+                    geometry.y_m if geometry else None,
+                    geometry.distance_m if geometry else None,
+                    geometry.zone if geometry else None,
                     polygon if isinstance(polygon, str) else None,
                 ],
             )
@@ -466,6 +507,10 @@ def build_match_database(
                 s.result,
                 s.coordinate_x,
                 s.coordinate_y,
+                s.shot_x_m,
+                s.shot_y_m,
+                s.shot_distance_m,
+                s.shot_zone,
                 s.polygon,
                 c.opponent_team_id,
                 c.on_ice_for_player_ids,
@@ -487,6 +532,13 @@ def build_match_database(
             """
         )
 
+        player_game_stats_rows = import_player_game_stats(
+            con, match_dir=match_dir, match_id=match_id
+        )
+        refresh_team_game_stats(
+            con, match_id=match_id, game_header=game_header, period_events=period_events
+        )
+
         return {
             "match_id": match_id,
             "db_path": str(db_path),
@@ -496,6 +548,7 @@ def build_match_database(
             "shots": len(shots),
             "faceoffs": len(faceoffs),
             "events": sum(len(v) for v in period_events.values()),
+            "player_game_stats": player_game_stats_rows,
             "boundary_adjusted_shots": boundary_adjusted,
             "low_confidence_shots": low_confidence,
             "dzone_faceoff_to_shot_10s": dzone_10s,

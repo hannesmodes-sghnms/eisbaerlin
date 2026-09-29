@@ -22,6 +22,8 @@ def main() -> int:
     completed = int(pipeline.get("completed_matches", 0) or 0)
     imported = int(report.get("totals", {}).get("matches", 0) or 0)
     low_confidence = int(quality.get("low_confidence", 0) or 0)
+    team_game_stats = int(report.get("totals", {}).get("team_game_stats", 0) or 0)
+    unclassified_shots = int(report.get("totals", {}).get("unclassified_shots", 0) or 0)
 
     if failed_downloads:
         failures.append(f"{failed_downloads} match download(s) failed")
@@ -29,6 +31,10 @@ def main() -> int:
         failures.append(f"{failed_imports} match import(s) failed")
     if imported != completed:
         failures.append(f"imported matches ({imported}) != completed matches ({completed})")
+    if team_game_stats != imported * 2:
+        failures.append(
+            f"team game analytics rows ({team_game_stats}) != expected ({imported * 2})"
+        )
     if args.max_low_confidence >= 0 and low_confidence > args.max_low_confidence:
         failures.append(
             f"low-confidence shots ({low_confidence}) exceed limit ({args.max_low_confidence})"
@@ -39,6 +45,8 @@ def main() -> int:
     print(f"Shots:             {report.get('totals', {}).get('shots', 0)}")
     print(f"Low confidence:    {low_confidence}")
     print(f"Boundary adjusted: {quality.get('boundary_adjusted', 0)}")
+    print(f"Team game rows:     {team_game_stats}")
+    print(f"Unclassified zones: {unclassified_shots}")
 
     if failures:
         print("\nQUALITY GATE FAILED")

@@ -61,6 +61,34 @@ def main() -> None:
             [args.match_id],
         )
 
+        print("\nSHOT ZONES")
+        print_rows(
+            con,
+            """
+            SELECT team_id, shot_zone, count(*) AS attempts
+            FROM shots
+            WHERE match_id = ?
+            GROUP BY 1,2
+            ORDER BY team_id, attempts DESC, shot_zone
+            """,
+            [args.match_id],
+        )
+
+        print("\nTEAM GAME ANALYTICS")
+        print_rows(
+            con,
+            """
+            SELECT team_shortcut, corsi_for, corsi_5v5_for, slot_attempts_for,
+                   slot_attempts_5v5_for, goals_for, goals_eq_for, goals_5v5_for,
+                   pp_goals_for, sh_goals_for, time_leading_s, scoring_players,
+                   defenseman_points, shooting_pct_5v5, save_pct_5v5, pdo_5v5
+            FROM team_game_stats
+            WHERE match_id = ?
+            ORDER BY team_id
+            """,
+            [args.match_id],
+        )
+
         print("\nD-ZONE FACEOFF -> SHOT <= 10s")
         print_rows(
             con,

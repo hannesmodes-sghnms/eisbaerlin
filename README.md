@@ -1,8 +1,8 @@
 # DEL Event Lab
 
-Private tooling for building and automatically maintaining a DEL 2026/27 event-log database from the public Hokejovy zapis JSON source.
+Private tooling for automatically collecting, modelling and preparing DEL 2026/27 event data for analysis, shot maps and podcast preparation.
 
-Current version: **0.4.0 — automated daily season pipeline + DuckDB event model**.
+Current version: **0.5.0 — automated season pipeline + shot zones + podcast prep analytics**.
 
 ## What is confirmed for 2026/27
 
@@ -29,31 +29,52 @@ matches/4411/top-scorers.json
 visualization/shots/4411.json
 ```
 
-Shift filenames remain discovered dynamically. The database importer accepts `shifts*.json` rather than hard-coding `shiftsSC.json`.
+Shift filenames remain discovered dynamically. The importer accepts `shifts*.json` rather than hard-coding `shiftsSC.json`.
 
 ## Project goal
 
-Build a reproducible local DEL event database that combines:
+The project now has three layers:
 
-- season/match metadata
-- player rosters
-- shift intervals
-- shots and coordinates
-- faceoffs
-- goals, penalties and other period events
+1. **Collection:** daily GitHub Actions job discovers completed games and persists raw JSON.
+2. **Analytics:** DuckDB combines shots, shifts, faceoffs, events, player stats and derived context.
+3. **Outputs:** CSV/Markdown podcast prep plus the future local shot-map UI.
 
-The analytical layer enriches each shot with:
+The event model enriches each shot with:
 
 - skaters on ice for and against
 - manpower state (`5v5`, `5v4`, ...)
 - on-ice join quality
-- previous faceoff
-- seconds since previous faceoff
+- previous faceoff and seconds since faceoff
 - faceoff zone relative to the shooting team
-- faceoff winner
-- defensive-zone-faceoff -> shot flags
+- D-zone-faceoff -> shot flags
+- shot coordinates in source units and metres
+- distance to the attacked goal
+- leaffan-compatible shot zone
 
-A local shot-map UI comes next, using the automatically maintained season dataset.
+## Shot zones
+
+v0.5.0 reuses the zone geometry from `leaffan/del_stats` (`backend/rink_dimensions.py` / `backend/get_shots.py`) instead of inventing a new definition.
+
+Available zones:
+
+```text
+SLOT
+LEFT
+RIGHT
+BLUE_LINE
+NEUTRAL_ZONE
+BEHIND_GOAL
+```
+
+The importer classifies points using the same polygon ordering and boundary fallback as the historical project. See `docs/shot_zones.md`.
+
+## xG
+
+**xG is deliberately not calculated.**
+
+The historical values used for podcast prep came from Wisehockey. Without access to the Wisehockey source data and model definition, this project does not create a look-alike xG metric that could be mistaken for the same statistic.
+
+A future external xG import can be added separately if reliable values become available.
 
 ## Setup
 
@@ -64,152 +85,197 @@ pip install -e ".[dev]"
 pytest
 ```
 
-## End-to-end flow for one match
+## Daily season pipeline
+
+Production collection runs via `.github/workflows/update-del-data.yml`, currently scheduled for 04:30 Europe/Berlin.
+
+Manual equivalent:
 
 ```bash
-python scripts/discover_season.py --season 2026 --game-type 1
-python scripts/discover_match.py 4411 --verify-shots
-python scripts/download_match.py 4411
-python scripts/inspect_match.py 4411
-python scripts/build_database.py 4411
-python scripts/validate_match.py 4411
+python scripts/update_season.py --season 2026 --game-type 1 --refresh-days 3
+python scripts/validate_season.py
+python scripts/generate_season_reports.py
+python scripts/generate_upcoming_reports.py --days 7 --last-games 5
 ```
 
-The database is written to:
+The pipeline:
+
+1. discovers the current schedule,
+2. downloads new completed games,
+3. refreshes the last three days,
+4. rebuilds the complete DuckDB from tracked raw JSON,
+5. validates import quality,
+6. exports analytics tables,
+7. generates podcast prep for upcoming games,
+8. commits raw/discovery/report data,
+9. publishes the latest DuckDB as a rolling Release asset.
+
+## Podcast prep
+
+Generate a report manually using team shortcut, id or name:
+
+```bash
+python scripts/generate_podcast_report.py \
+  --team-a EBB \
+  --team-b MAN \
+  --last-games 5
+```
+
+Output:
 
 ```text
-data/del_2026_27.duckdb
+data/reports/podcast/EBB_vs_MAN/
+├── summary.md
+├── summary.csv
+├── head_to_head.csv
+├── recent_games.csv
+├── notes.md
+└── metadata.json
 ```
+
+The season comparison includes:
+
+- Corsi / Corsi 5v5
+- Corsi share / Corsi 5v5 share
+- Slot Attempts / Slot Attempts 5v5
+- goals, EQ goals and 5v5 goals
+- powerplay and shorthanded goals
+- time leading
+- number of scoring players
+- defenseman points
+- 5v5 shooting percentage
+- 5v5 save percentage
+- PDO 5v5
+
+`notes.md` contains descriptive talking points only; it does not invent xG or evaluative conclusions.
 
 ## Database tables
 
-### `matches`
+### Core
 
-One row per game with teams, date, score, stadium and status.
+- `matches`
+- `players`
+- `shifts`
+- `shots`
+- `faceoffs`
+- `events`
+- `shot_context`
+- `shot_on_ice`
 
-### `players`
+### Analytics
 
-Roster snapshot per game. Goalies remain here even though they are absent from the shift feed.
+- `teams`
+- `player_game_stats`
+- `team_game_stats`
 
-### `shifts`
+### Views
 
-One row per skater shift interval.
+- `event_log`
+- `shot_log`
+- `team_season_stats`
 
-### `shots`
-
-One row per shot attempt with result and coordinates.
-
-### `faceoffs`
-
-One row per faceoff. Winner/loser team IDs are derived through the match roster.
-
-### `events`
-
-Flattened `period-events.json`: goals, penalties, period starts/ends and goalkeeper changes. The complete original event is also retained in `raw_json`.
-
-### `shot_context`
-
-One row per shot with derived event context, including manpower, previous faceoff and D-zone faceoff flags.
-
-### `shot_on_ice`
-
-Normalized one-row-per-shot-per-skater relation. This is the basis for later Corsi/Fenwick/on-ice and line-combination analyses.
-
-## Views
-
-### `event_log`
-
-A single chronological log surface combining faceoffs, period events and shots on the shared `game_time_s` axis.
-
-Example:
-
-```sql
-SELECT *
-FROM event_log
-WHERE match_id = 4411
-ORDER BY game_time_s, sort_order;
-```
-
-### `shot_log`
-
-Convenience view joining shots and `shot_context`.
-
-Example:
+Useful example:
 
 ```sql
 SELECT
-    game_time_s,
-    shooter,
-    result,
-    manpower,
-    seconds_since_faceoff,
-    previous_faceoff_zone_for_shooting_team
+    team_shortcut,
+    games_played,
+    corsi_for,
+    corsi_5v5_for,
+    slot_attempts_for,
+    goals_for,
+    time_leading_s,
+    scoring_players,
+    defenseman_points,
+    pdo_5v5
+FROM team_season_stats
+ORDER BY team_shortcut;
+```
+
+Shot zones:
+
+```sql
+SELECT shot_zone, count(*) AS attempts
 FROM shot_log
 WHERE match_id = 4411
-ORDER BY game_time_s;
+GROUP BY shot_zone
+ORDER BY attempts DESC;
 ```
 
-Defensive-zone faceoff -> shot within 10 seconds:
+## Metric definitions
 
-```sql
-SELECT *
-FROM shot_log
-WHERE dzone_faceoff_to_shot_10s
-ORDER BY match_id, game_time_s;
-```
+### Corsi
 
-Require the shooting team to have won that faceoff:
+Every shot attempt in the DEL shot feed counts: on goal, goal, missed, blocked and post.
 
-```sql
-SELECT *
-FROM shot_log
-WHERE dzone_faceoff_win_to_shot_10s
-ORDER BY match_id, game_time_s;
-```
+### Corsi 5v5
 
-## Shift boundary rule
+Same definition, restricted to shots whose derived manpower is exactly `5v5`.
 
-Normal matching uses half-open intervals:
+### Slot Attempts
+
+All shot attempts whose coordinates fall into the historical leaffan `SLOT` polygon.
+
+### Tore EQ
+
+Goals whose period-event balance is `EQ`.
+
+### Tore 5v5
+
+Goal shots whose derived manpower state is `5v5`.
+
+### PDO 5v5
 
 ```text
-start_time <= event_time < end_time
+5v5 shooting % + 5v5 save %
 ```
 
-Because timestamps are integer seconds, an event can occasionally land exactly at a recorded shift end. If either team would otherwise have fewer than three active skaters, the importer applies a symmetric boundary fallback for both teams and marks the shot `boundary_adjusted`.
+The two components are exported separately as well.
 
-It does **not** silently turn uncertain joins into exact data.
+### Zeit in Führung
+
+Calculated from the chronological goal events and `currentScore`, from 00:00 through the recorded game end.
+
+### Scoring players
+
+Distinct players with at least one point in imported `team-stats` across the season.
+
+### Defenseman points
+
+Sum of player points for position code `DE` in imported `team-stats`.
 
 ## Match 4411 reference
 
-The real match used to design this version produces the expected reference values documented in:
-
-```text
-docs/match_4411_findings.md
-docs/match_4411_expected.json
-```
-
-Important checkpoints:
+The real match used to design the event model produced:
 
 - 41 rostered players
-- 37 players in shifts (the four goalies are absent)
+- 37 players in shifts (four goalies absent)
 - 772 shifts
-- 84 shots
+- 84 shot attempts
 - 50 faceoffs
 - 21 period events
 - 83 exact shot/on-ice joins
-- 1 boundary-adjusted shot/on-ice join
+- 1 boundary-adjusted join
 - 0 low-confidence shots
+
+Using the leaffan shot-zone geometry, the 84 shots split into 53 EBB attempts and 31 IEC attempts; the zone logic is now part of the database import and will be validated across the full season.
 
 ## Repository structure
 
 ```text
 del-event-lab/
+├── .github/workflows/update-del-data.yml
 ├── data/
 │   ├── discovery/
 │   ├── raw/
 │   ├── reports/
+│   │   ├── analytics/
+│   │   └── podcast/
 │   └── schema/
 ├── docs/
+│   ├── automation.md
+│   ├── shot_zones.md
+│   └── match_4411_*.md/json
 ├── scripts/
 │   ├── discover_season.py
 │   ├── discover_match.py
@@ -218,40 +284,18 @@ del-event-lab/
 │   ├── build_database.py
 │   ├── validate_match.py
 │   ├── update_season.py
-│   └── validate_season.py
+│   ├── validate_season.py
+│   ├── generate_season_reports.py
+│   ├── generate_podcast_report.py
+│   └── generate_upcoming_reports.py
 ├── src/delstats/
-│   ├── config.py
-│   ├── database.py
-│   ├── discovery.py
-│   ├── http.py
-│   ├── raw.py
-│   ├── s3.py
-│   ├── schema.py
-│   ├── season.py
-│   └── transform.py
+│   ├── analytics.py
+│   ├── podcast.py
+│   ├── rink.py
+│   └── ...
 └── tests/
 ```
 
 ## Next milestone
 
-Let the automated season pipeline collect several completed games, validate coordinate ranges and join-quality distributions, then add the local Streamlit/Plotly shot map and transition/rush analysis.
-
-## v0.3.1
-
-- Fixed `validate_match.py`: `shot_log.team_id` is now exposed as `shooting_team_id` in the D-zone validation query.
-- Added regression coverage for the D-zone shot-log query.
-
-## Automated daily season pipeline (v0.4.0)
-
-The project is no longer dependent on an active Codespace for data collection. `.github/workflows/update-del-data.yml` runs daily at 04:30 Europe/Berlin and can also be started manually from the Actions tab.
-
-The scheduled job discovers completed matches, downloads new raw JSON, refreshes the last three days, rebuilds the full DuckDB, validates the season and persists raw/discovery/report files back to the private repository. The generated DuckDB is uploaded both as a workflow artifact and as the rolling GitHub Release asset `dataset-2026-27-latest`.
-
-Manual equivalent:
-
-```bash
-python scripts/update_season.py --season 2026 --game-type 1 --refresh-days 3
-python scripts/validate_season.py
-```
-
-See `docs/automation.md` for repository settings and persistence details.
+Use the newly normalized `shot_x_m`, `shot_y_m`, `shot_distance_m` and `shot_zone` fields to build the local shot-map UI. After that, add transparent transition features such as rebound and D-zone-faceoff-to-shot sequences without labelling them as proprietary xG.

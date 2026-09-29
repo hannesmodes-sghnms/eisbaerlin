@@ -19,14 +19,15 @@ def test_build_match_database_end_to_end(tmp_path):
         "stadium": "Test Arena",
         "numberOfViewers": 100,
         "teamInfo": {
-            "home": {"id": 3, "name": "Home"},
-            "visitor": {"id": 7, "name": "Away"},
+            "home": {"id": 3, "name": "Home", "shortcut": "HOM"},
+            "visitor": {"id": 7, "name": "Away", "shortcut": "AWY"},
         },
         "results": {
             "extra_time": False,
             "shooting": False,
             "score": {"final": {"score_home": 1, "score_guest": 0}},
         },
+        "lastEventTime": 60,
     })
     roster = {"home": {}, "visitor": {}}
     for side, base in (("home", 100), ("visitor", 200)):
@@ -97,6 +98,26 @@ def test_build_match_database_end_to_end(tmp_path):
         "overtime": [],
         "shootout": [],
     })
+    (match_dir / "team-stats").mkdir()
+    for team, base, shortcut in ((3, 100, "HOM"), (7, 200, "AWY")):
+        payload = []
+        for i in range(1, 4):
+            payload.append({
+                "id": base + i,
+                "name": f"P{base+i}",
+                "firstname": "P",
+                "surname": str(base+i),
+                "position": "DE" if i == 1 else "FO",
+                "jersey": i,
+                "statistics": {
+                    "teamShortcut": shortcut,
+                    "games": 1,
+                    "goals": {"home": 0, "away": 0},
+                    "assists": {"home": 0, "away": 0},
+                    "points": {"home": 0, "away": 0},
+                },
+            })
+        _write(match_dir / "team-stats" / f"{team}.json", payload)
 
     db_path = tmp_path / "test.duckdb"
     summary = build_match_database(match_dir=match_dir, db_path=db_path)
@@ -119,5 +140,11 @@ def test_build_match_database_end_to_end(tmp_path):
             """
         ).fetchone()
         assert row == (9001, 10, 3, 5)
+        geom = con.execute("SELECT shot_x_m, shot_y_m, shot_zone FROM shots").fetchone()
+        assert geom[0] == pytest.approx(3.048)
+        assert geom[1] == pytest.approx(0.762)
+        assert geom[2] == "NEUTRAL_ZONE"
+        assert con.execute("SELECT count(*) FROM team_game_stats").fetchone()[0] == 2
+        assert con.execute("SELECT count(*) FROM team_season_stats").fetchone()[0] == 2
     finally:
         con.close()

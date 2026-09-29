@@ -91,3 +91,20 @@ For every shot the v0.3 context stores:
 - `dzone_faceoff_win_to_shot_10s`
 
 Match 4411 happens to contain **zero** shots within 10 seconds of a defensive-zone faceoff, so the implementation is present but needs more matches before we can evaluate the resulting rush-style sample.
+
+## v0.5 analytics reference
+
+Using the historical leaffan shot-zone polygons on the 2026/27 coordinates:
+
+- EBB: 53 Corsi, 43 Corsi 5v5, 15 Slot Attempts, 11 Slot Attempts 5v5.
+- IEC: 31 Corsi, 24 Corsi 5v5, 8 Slot Attempts, 5 Slot Attempts 5v5.
+- 5v5 SOG: EBB 20, IEC 11.
+- 5v5 goals: EBB 2, IEC 0.
+- EQ goals from period events: EBB 2, IEC 0.
+- PPG: EBB 1, IEC 0. SHG: EBB 1, IEC 0.
+- EBB led for 2765 seconds (46:05); the game was tied for the first 835 seconds (13:55).
+- Match-level scoring players from `team-stats`: EBB 8, IEC 0.
+- Defenseman points: EBB 2, IEC 0.
+- PDO 5v5: EBB 110.0 (10.0 SH% + 100.0 SV%), IEC 90.0 (0.0 SH% + 90.0 SV%).
+
+The raw `polygon` label and geometry-derived zone are not identical for every shot. This is expected: the historical leaffan processor also preferred the coordinate-derived polygon and only used the raw polygon field as a consistency check.
