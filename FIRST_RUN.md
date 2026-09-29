@@ -1,8 +1,6 @@
-# First live run — Phase 2
+# v0.3 first run in GitHub Codespaces
 
-The 2026/27 discovery has already confirmed match `4411` and the current resource layout, including `shiftsSC.json`, `faceoffs.json`, `period-events.json`, and the separate shots object.
-
-## 1. Setup
+From the repository root:
 
 ```bash
 python -m venv .venv
@@ -11,77 +9,58 @@ pip install -e ".[dev]"
 pytest
 ```
 
-Expected: `10 passed`.
-
-## 2. Download raw data for match 4411
-
-The supplied discovery manifest is already included at:
-
-```text
-data/discovery/match_4411_resources.json
-```
-
-Run:
+For match 4411, either keep the already downloaded raw folder in `data/raw/4411/` or download it again:
 
 ```bash
 python scripts/download_match.py 4411
 ```
 
-This stores the source JSON unchanged below:
-
-```text
-data/raw/4411/
-```
-
-Expected resources include:
-
-```text
-faceoffs.json
-game-header.json
-period-events.json
-roster.json
-shiftsSC.json
-team-stats/3.json
-team-stats/7.json
-top-goalies.json
-top-scorers.json
-shots.json
-download_manifest.json
-```
-
-`download_manifest.json` records source URLs, SHA-256 hashes, sizes, and available HTTP metadata.
-
-## 3. Generate the schema report
+Build/update DuckDB:
 
 ```bash
-python scripts/inspect_match.py 4411
+python scripts/build_database.py 4411
 ```
 
-Outputs:
+Expected database path:
 
 ```text
-data/schema/match_4411_schema.json
-data/schema/match_4411_schema.md
+data/del_2026_27.duckdb
 ```
 
-The JSON report is machine-readable. The Markdown report is convenient for inspecting field names, observed types, array sizes, examples, and nested paths.
+Then validate the imported match:
 
-## 4. Send back
+```bash
+python scripts/validate_match.py 4411
+```
 
-For the next iteration, send back either:
+The key reference values should be:
 
 ```text
-data/raw/4411/
+players:   41
+shifts:    772
+shots:     84
+faceoffs:  50
+events:    21
 ```
 
-as a ZIP, or at minimum:
+Expected shot/on-ice quality:
 
 ```text
-data/schema/match_4411_schema.json
-data/raw/4411/shiftsSC.json
-data/raw/4411/faceoffs.json
-data/raw/4411/period-events.json
-data/raw/4411/shots.json
+exact:               83
+boundary_adjusted:    1
+low_confidence:       0
 ```
 
-With those real 2026/27 payloads, the next package will create the DuckDB tables and the first enriched shot timeline with on-ice players and previous-faceoff context.
+Expected manpower distribution at shot time:
+
+```text
+5v5  67
+5v4  11
+4v5   3
+4v4   2
+6v5   1
+```
+
+For this particular game, `D-ZONE FACEOFF -> SHOT <= 10s` should be empty. That is a property of match 4411, not an error in the query.
+
+If those checks match, the next useful test is to repeat the workflow on several other completed matches before we build the shot-map frontend.

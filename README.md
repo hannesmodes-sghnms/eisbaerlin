@@ -1,19 +1,20 @@
 # DEL Event Lab
 
-Private/local tooling for building a DEL 2026/27 event log from the public Hokejovy zapis JSON source.
+Private/local tooling for building a DEL 2026/27 event-log database from the public Hokejovy zapis JSON source.
 
-Current version: **0.2.0 — raw ingestion + schema inspection**.
+Current version: **0.3.0 — DuckDB event model + shot context**.
 
-## Confirmed 2026/27 source layout
+## What is confirmed for 2026/27
 
-The first live discovery run found:
+Season discovery works via:
 
-- season prefix: `league-team-matches/2026/1/`
-- 14 DEL team IDs
-- 364 regular-season match IDs
-- 29 matches already marked `AFTER_MATCH` at the time of discovery
+```text
+league-team-matches/2026/1/
+```
 
-For completed match `4411` (Eisbaeren Berlin vs. Iserlohn Roosters), the live source exposed:
+The first live run found all 14 DEL teams and 364 regular-season games.
+
+For completed match `4411` (Eisbären Berlin vs. Iserlohn Roosters), the live source exposed:
 
 ```text
 matches/4411/game-header.json
@@ -28,33 +29,31 @@ matches/4411/top-scorers.json
 visualization/shots/4411.json
 ```
 
-This confirms that the current shift filename uses the `SC` suffix and that shots remain outside the `matches/{id}/` prefix.
+Shift filenames remain discovered dynamically. The database importer accepts `shifts*.json` rather than hard-coding `shiftsSC.json`.
 
 ## Project goal
 
-The project will ultimately build a local DuckDB event database that combines:
+Build a reproducible local DEL event database that combines:
 
-- match metadata
+- season/match metadata
 - player rosters
 - shift intervals
-- shots and shot coordinates
+- shots and coordinates
 - faceoffs
-- period events such as goals and penalties
+- goals, penalties and other period events
 
-The main analytical layer will enrich every shot with context such as:
+The analytical layer enriches each shot with:
 
-- players on ice for both teams
-- manpower situation
+- skaters on ice for and against
+- manpower state (`5v5`, `5v4`, ...)
+- on-ice join quality
 - previous faceoff
 - seconds since previous faceoff
-- faceoff zone and winner
-- later derived event sequences such as defensive-zone-faceoff-to-shot windows
+- faceoff zone relative to the shooting team
+- faceoff winner
+- defensive-zone-faceoff -> shot flags
 
-A local shot-map UI will be added after the event model is stable.
-
-## Why raw JSON is retained
-
-Every source response is stored unchanged first. Derived tables are rebuilt from these raw files instead of modifying the source payloads. This lets us correct parser assumptions later without re-fetching historical data.
+A local shot-map UI comes next, once several matches have passed data validation.
 
 ## Setup
 
@@ -65,123 +64,141 @@ pip install -e ".[dev]"
 pytest
 ```
 
-The current suite should report:
-
-```text
-10 passed
-```
-
-## Phase 1 — discovery
-
-### Discover a season
+## End-to-end flow for one match
 
 ```bash
 python scripts/discover_season.py --season 2026 --game-type 1
-```
-
-Outputs:
-
-```text
-data/discovery/season_2026_27_type_1.json
-data/discovery/season_2026_27_type_1_matches.csv
-```
-
-### Discover one match
-
-```bash
 python scripts/discover_match.py 4411 --verify-shots
-```
-
-Output:
-
-```text
-data/discovery/match_4411_resources.json
-```
-
-Shift filenames are discovered dynamically rather than hard-coded.
-
-## Phase 2 — raw download
-
-The live discovery outputs from the first successful 2026/27 run are included in this ZIP for convenience.
-
-Download every discovered JSON resource for match 4411:
-
-```bash
 python scripts/download_match.py 4411
-```
-
-Raw files are stored under:
-
-```text
-data/raw/4411/
-```
-
-The bucket hierarchy below the match is preserved where useful, for example:
-
-```text
-data/raw/4411/team-stats/3.json
-data/raw/4411/team-stats/7.json
-```
-
-The separate shot endpoint is normalized locally to:
-
-```text
-data/raw/4411/shots.json
-```
-
-A generated `download_manifest.json` records for each resource:
-
-- source S3 key
-- source URL
-- local relative path
-- whether it was downloaded or already present
-- byte size
-- SHA-256
-- ETag when supplied
-- Last-Modified when supplied
-
-Existing raw files are not downloaded again unless `--force` is used:
-
-```bash
-python scripts/download_match.py 4411 --force
-```
-
-## Phase 2 — schema inspection
-
-Once the raw match data exists:
-
-```bash
 python scripts/inspect_match.py 4411
+python scripts/build_database.py 4411
+python scripts/validate_match.py 4411
 ```
 
-Outputs:
+The database is written to:
 
 ```text
-data/schema/match_4411_schema.json
-data/schema/match_4411_schema.md
+data/del_2026_27.duckdb
 ```
 
-The inspector recursively records the observed shape of every JSON file:
+## Database tables
 
-- JSON path
-- observed data types
-- occurrence count
-- non-null count
-- array length range
-- object keys
-- a few scalar examples
-- file SHA-256 and byte size
+### `matches`
 
-Example path notation:
+One row per game with teams, date, score, stadium and status.
+
+### `players`
+
+Roster snapshot per game. Goalies remain here even though they are absent from the shift feed.
+
+### `shifts`
+
+One row per skater shift interval.
+
+### `shots`
+
+One row per shot attempt with result and coordinates.
+
+### `faceoffs`
+
+One row per faceoff. Winner/loser team IDs are derived through the match roster.
+
+### `events`
+
+Flattened `period-events.json`: goals, penalties, period starts/ends and goalkeeper changes. The complete original event is also retained in `raw_json`.
+
+### `shot_context`
+
+One row per shot with derived event context, including manpower, previous faceoff and D-zone faceoff flags.
+
+### `shot_on_ice`
+
+Normalized one-row-per-shot-per-skater relation. This is the basis for later Corsi/Fenwick/on-ice and line-combination analyses.
+
+## Views
+
+### `event_log`
+
+A single chronological log surface combining faceoffs, period events and shots on the shared `game_time_s` axis.
+
+Example:
+
+```sql
+SELECT *
+FROM event_log
+WHERE match_id = 4411
+ORDER BY game_time_s, sort_order;
+```
+
+### `shot_log`
+
+Convenience view joining shots and `shot_context`.
+
+Example:
+
+```sql
+SELECT
+    game_time_s,
+    shooter,
+    result,
+    manpower,
+    seconds_since_faceoff,
+    previous_faceoff_zone_for_shooting_team
+FROM shot_log
+WHERE match_id = 4411
+ORDER BY game_time_s;
+```
+
+Defensive-zone faceoff -> shot within 10 seconds:
+
+```sql
+SELECT *
+FROM shot_log
+WHERE dzone_faceoff_to_shot_10s
+ORDER BY match_id, game_time_s;
+```
+
+Require the shooting team to have won that faceoff:
+
+```sql
+SELECT *
+FROM shot_log
+WHERE dzone_faceoff_win_to_shot_10s
+ORDER BY match_id, game_time_s;
+```
+
+## Shift boundary rule
+
+Normal matching uses half-open intervals:
 
 ```text
-$.match.shots
-$.match.shots[]
-$.match.shots[].player_id
-$.match.shots[].coordinate_x
+start_time <= event_time < end_time
 ```
 
-The JSON report is intended as input for the next development step; the Markdown report is for human inspection.
+Because timestamps are integer seconds, an event can occasionally land exactly at a recorded shift end. If either team would otherwise have fewer than three active skaters, the importer applies a symmetric boundary fallback for both teams and marks the shot `boundary_adjusted`.
+
+It does **not** silently turn uncertain joins into exact data.
+
+## Match 4411 reference
+
+The real match used to design this version produces the expected reference values documented in:
+
+```text
+docs/match_4411_findings.md
+docs/match_4411_expected.json
+```
+
+Important checkpoints:
+
+- 41 rostered players
+- 37 players in shifts (the four goalies are absent)
+- 772 shifts
+- 84 shots
+- 50 faceoffs
+- 21 period events
+- 83 exact shot/on-ice joins
+- 1 boundary-adjusted shot/on-ice join
+- 0 low-confidence shots
 
 ## Repository structure
 
@@ -191,21 +208,26 @@ del-event-lab/
 │   ├── discovery/
 │   ├── raw/
 │   └── schema/
+├── docs/
 ├── scripts/
 │   ├── discover_season.py
 │   ├── discover_match.py
 │   ├── download_match.py
-│   └── inspect_match.py
+│   ├── inspect_match.py
+│   ├── build_database.py
+│   └── validate_match.py
 ├── src/delstats/
 │   ├── config.py
+│   ├── database.py
 │   ├── discovery.py
 │   ├── http.py
 │   ├── raw.py
 │   ├── s3.py
-│   └── schema.py
+│   ├── schema.py
+│   └── transform.py
 └── tests/
 ```
 
 ## Next milestone
 
-After one real match has been downloaded and its schema report reviewed, version 0.3 will add DuckDB ingestion for the actual 2026/27 payloads. The first derived dataset will be a shot timeline enriched with shift/on-ice and previous-faceoff context.
+Run v0.3 against several completed 2026/27 games. Once the schema and join-quality distribution remain stable, add the local Streamlit/Plotly shot map and season-wide batch ingestion.

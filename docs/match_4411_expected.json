@@ -1,0 +1,53 @@
+{
+  "match_id": 4411,
+  "teams": {
+    "home": {"id": 3, "name": "Eisbären Berlin"},
+    "away": {"id": 7, "name": "Iserlohn Roosters"}
+  },
+  "final_score": "4:0",
+  "roster_players": 41,
+  "goalies_in_roster": 4,
+  "shift_players": 37,
+  "shifts": 772,
+  "shots": 84,
+  "faceoffs": 50,
+  "period_events": 21,
+  "shot_results": {
+    "on_goal": 38,
+    "missed": 28,
+    "blocked": 14,
+    "goal": 4
+  },
+  "shot_attempts_by_team": {
+    "3": 53,
+    "7": 31
+  },
+  "shots_on_goal_including_goals_by_team": {
+    "3": 27,
+    "7": 15
+  },
+  "faceoff_wins_by_team": {
+    "3": 29,
+    "7": 21
+  },
+  "on_ice_quality": {
+    "exact": 83,
+    "boundary_adjusted": 1,
+    "low_confidence": 0
+  },
+  "manpower_at_shots": {
+    "5v5": 67,
+    "5v4": 11,
+    "4v5": 3,
+    "4v4": 2,
+    "6v5": 1
+  },
+  "dzone_faceoff_to_shot_10s": 0,
+  "dzone_faceoff_win_to_shot_10s": 0,
+  "boundary_case": {
+    "shot_id": 1650256,
+    "game_time_s": 2021,
+    "result": "goal",
+    "resolved_manpower": "5v5"
+  }
+}
