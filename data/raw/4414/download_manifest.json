@@ -1,0 +1,107 @@
+{
+  "match_id": 4414,
+  "created_at_utc": "2026-09-29T10:17:56.798649+00:00",
+  "source_manifest": "data/discovery/match_4414_resources.json",
+  "resources": [
+    {
+      "key": "matches/4414/faceoffs.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/faceoffs.json",
+      "local_path": "faceoffs.json",
+      "status": "downloaded",
+      "size_bytes": 13523,
+      "sha256": "21c31b3c2eb83d2979aa4d63c94977e40f76fb08ae0dcf89b8e7a9da06d7ab5d",
+      "etag": "ef0fecd1db16741eb39b17536d7dbe24",
+      "last_modified": "Sun, 27 Sep 2026 17:51:03 GMT"
+    },
+    {
+      "key": "matches/4414/game-header.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/game-header.json",
+      "local_path": "game-header.json",
+      "status": "downloaded",
+      "size_bytes": 1030,
+      "sha256": "d1f5018197fcb48fc1285583388306c37d831ce91acf7c4889aff5095a277366",
+      "etag": "e8ac54ae6fa2aa8613e7687546bc8f63",
+      "last_modified": "Sun, 27 Sep 2026 17:09:07 GMT"
+    },
+    {
+      "key": "matches/4414/period-events.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/period-events.json",
+      "local_path": "period-events.json",
+      "status": "downloaded",
+      "size_bytes": 20159,
+      "sha256": "7b5f347f215238f2774e24cfd27b42e34d0741616a9b93691b9700824d7cccd3",
+      "etag": "ad57755462f092a07f2673812a77ce22",
+      "last_modified": "Sun, 27 Sep 2026 17:08:21 GMT"
+    },
+    {
+      "key": "matches/4414/roster.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/roster.json",
+      "local_path": "roster.json",
+      "status": "downloaded",
+      "size_bytes": 6667,
+      "sha256": "7e38a60d6ea35a865f5983c9ff63822f42172d6e32f682c670b16c7087ba2c91",
+      "etag": "b49afdb17d5a893947d47017d6955185",
+      "last_modified": "Sun, 27 Sep 2026 17:00:18 GMT"
+    },
+    {
+      "key": "matches/4414/shiftsSC.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/shiftsSC.json",
+      "local_path": "shiftsSC.json",
+      "status": "downloaded",
+      "size_bytes": 173804,
+      "sha256": "c0ef692aaad8740b904c35e8a688c8dd33461849806e43579f3ec16b8407b479",
+      "etag": "f5af422b721034e8d73f0b47e5930d46",
+      "last_modified": "Sun, 27 Sep 2026 17:08:18 GMT"
+    },
+    {
+      "key": "matches/4414/team-stats/11.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/team-stats/11.json",
+      "local_path": "team-stats/11.json",
+      "status": "downloaded",
+      "size_bytes": 20797,
+      "sha256": "5d48291404bb354f4130f7b356c7247598b341eaf0b7f3431f27dd56b7825d83",
+      "etag": "0a23b6b720d4e4745245ff45fdee8902",
+      "last_modified": "Sun, 27 Sep 2026 17:50:12 GMT"
+    },
+    {
+      "key": "matches/4414/team-stats/13.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/team-stats/13.json",
+      "local_path": "team-stats/13.json",
+      "status": "downloaded",
+      "size_bytes": 21591,
+      "sha256": "998e79432513b9907ea9d758f1e25aecea837c7b2d82acf249d665dde4d462d1",
+      "etag": "7e6ac8470e6a7b35285f44a96d850801",
+      "last_modified": "Sun, 27 Sep 2026 17:50:12 GMT"
+    },
+    {
+      "key": "matches/4414/top-goalies.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/top-goalies.json",
+      "local_path": "top-goalies.json",
+      "status": "downloaded",
+      "size_bytes": 2359,
+      "sha256": "bf0d94394a4e7b003a698941d47c76e096b19f97e2a77f055ea11aecd06cb57a",
+      "etag": "edc442b35f0ab2b63d56bb08dc3573a1",
+      "last_modified": "Sun, 27 Sep 2026 17:55:08 GMT"
+    },
+    {
+      "key": "matches/4414/top-scorers.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/matches/4414/top-scorers.json",
+      "local_path": "top-scorers.json",
+      "status": "downloaded",
+      "size_bytes": 10335,
+      "sha256": "e4ea371b068729bed6053479624fb31e5c3b301a400f67eb7a02f79c9224a638",
+      "etag": "91bb48bcc8050638a742f268be5bfcd9",
+      "last_modified": "Sun, 27 Sep 2026 17:50:43 GMT"
+    },
+    {
+      "key": "visualization/shots/4414.json",
+      "url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/visualization/shots/4414.json",
+      "local_path": "shots.json",
+      "status": "downloaded",
+      "size_bytes": 24442,
+      "sha256": "3c97e3f4d310da952fe71f612395dda3236ee0a38b440adc47ee8c3e206c87c2",
+      "etag": "95b9501b49796d5588dee102f5d03854",
+      "last_modified": "Sun, 27 Sep 2026 17:50:52 GMT"
+    }
+  ]
+}
