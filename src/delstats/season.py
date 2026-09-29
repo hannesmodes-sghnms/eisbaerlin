@@ -123,27 +123,6 @@ def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[
             """
         ).fetchone()
 
-        per_match_rows = con.execute(
-            """
-            SELECT
-              m.match_id,
-              m.match_date,
-              m.home_team_name,
-              m.away_team_name,
-              count(DISTINCT s.shot_id) AS shots,
-              count(DISTINCT f.faceoff_id) AS faceoffs,
-              count(DISTINCT sh.shift_id) AS shifts,
-              sum(CASE WHEN c.on_ice_quality = 'boundary_adjusted' THEN 1 ELSE 0 END) AS boundary_adjusted,
-              sum(CASE WHEN c.on_ice_quality = 'low_confidence' THEN 1 ELSE 0 END) AS low_confidence
-            FROM matches m
-            LEFT JOIN shots s USING (match_id)
-            LEFT JOIN faceoffs f USING (match_id)
-            LEFT JOIN shifts sh USING (match_id)
-            LEFT JOIN shot_context c USING (match_id)
-            GROUP BY 1,2,3,4
-            ORDER BY m.match_date, m.match_id
-            """
-        ).fetchall()
         # The many-to-many LEFT JOIN above would inflate event counts. Use scalar subqueries instead.
         per_match_rows = con.execute(
             """
