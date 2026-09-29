@@ -1,0 +1,90 @@
+{
+  "focus_team": {
+    "team_id": 3,
+    "abbr": "EBB",
+    "name": "Eisbären Berlin"
+  },
+  "generated_at": "2026-09-29T13:11:03.097913+00:00",
+  "completed_games": [
+    {
+      "match_id": 4411,
+      "date": "2026-09-27",
+      "home_team_name": "Eisbären Berlin",
+      "away_team_name": "Iserlohn Roosters",
+      "home_score": 4,
+      "away_score": 0,
+      "ebb_home": true,
+      "opponent_name": "Iserlohn Roosters",
+      "label": "2026-09-27 · Eisbären Berlin 4:0 Iserlohn Roosters",
+      "data_path": "data/games/4411.json"
+    },
+    {
+      "match_id": 4405,
+      "date": "2026-09-25",
+      "home_team_name": "Kölner Haie",
+      "away_team_name": "Eisbären Berlin",
+      "home_score": 5,
+      "away_score": 6,
+      "ebb_home": false,
+      "opponent_name": "Kölner Haie",
+      "label": "2026-09-25 · Kölner Haie 5:6 Eisbären Berlin",
+      "data_path": "data/games/4405.json"
+    },
+    {
+      "match_id": 4396,
+      "date": "2026-09-20",
+      "home_team_name": "Adler Mannheim",
+      "away_team_name": "Eisbären Berlin",
+      "home_score": 4,
+      "away_score": 3,
+      "ebb_home": false,
+      "opponent_name": "Adler Mannheim",
+      "label": "2026-09-20 · Adler Mannheim 4:3 Eisbären Berlin",
+      "data_path": "data/games/4396.json"
+    },
+    {
+      "match_id": 4389,
+      "date": "2026-09-17",
+      "home_team_name": "Eisbären Berlin",
+      "away_team_name": "Straubing Tigers",
+      "home_score": 4,
+      "away_score": 2,
+      "ebb_home": true,
+      "opponent_name": "Straubing Tigers",
+      "label": "2026-09-17 · Eisbären Berlin 4:2 Straubing Tigers",
+      "data_path": "data/games/4389.json"
+    }
+  ],
+  "upcoming_games": [
+    {
+      "match_id": 4422,
+      "start_date": "2026-10-02 19:30:00",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "ebb_home": false,
+      "opponent_name": "Löwen Frankfurt"
+    },
+    {
+      "match_id": 4425,
+      "start_date": "2026-10-04 14:00:00",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "ebb_home": true,
+      "opponent_name": "Nürnberg Ice Tigers"
+    },
+    {
+      "match_id": 4434,
+      "start_date": "2026-10-09 19:30:00",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "ebb_home": true,
+      "opponent_name": "Grizzlys Wolfsburg"
+    }
+  ]
+}

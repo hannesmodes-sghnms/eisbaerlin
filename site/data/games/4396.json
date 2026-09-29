@@ -1,0 +1,3610 @@
+{
+  "match": {
+    "match_id": 4396,
+    "date": "2026-09-20",
+    "home_team_id": 2,
+    "home_team_name": "Adler Mannheim",
+    "away_team_id": 3,
+    "away_team_name": "Eisbären Berlin",
+    "home_score": 4,
+    "away_score": 3,
+    "opponent_team_id": 2,
+    "opponent_name": "Adler Mannheim",
+    "ebb_home": false
+  },
+  "focus_team": {
+    "team_id": 3,
+    "abbr": "EBB",
+    "name": "Eisbären Berlin"
+  },
+  "opponent": {
+    "team_id": 2,
+    "name": "Adler Mannheim",
+    "abbr": "MAN"
+  },
+  "metrics": [
+    {
+      "label": "Corsi",
+      "key": "corsi_for",
+      "kind": "number",
+      "ebb": 50,
+      "opponent": 52
+    },
+    {
+      "label": "Corsi 5v5",
+      "key": "corsi_5v5_for",
+      "kind": "number",
+      "ebb": 38,
+      "opponent": 43
+    },
+    {
+      "label": "Corsi-Anteil 5v5",
+      "key": "corsi_5v5_pct",
+      "kind": "percent",
+      "ebb": 46.914,
+      "opponent": 53.086
+    },
+    {
+      "label": "Shots on Goal",
+      "key": "shots_on_goal_for",
+      "kind": "number",
+      "ebb": 26,
+      "opponent": 27
+    },
+    {
+      "label": "Slot Attempts",
+      "key": "slot_attempts_for",
+      "kind": "number",
+      "ebb": 17,
+      "opponent": 20
+    },
+    {
+      "label": "Slot Attempts 5v5",
+      "key": "slot_attempts_5v5_for",
+      "kind": "number",
+      "ebb": 13,
+      "opponent": 16
+    },
+    {
+      "label": "Tore",
+      "key": "goals_for",
+      "kind": "number",
+      "ebb": 3,
+      "opponent": 4
+    },
+    {
+      "label": "Tore EQ",
+      "key": "goals_eq_for",
+      "kind": "number",
+      "ebb": 2,
+      "opponent": 3
+    },
+    {
+      "label": "PPG",
+      "key": "pp_goals_for",
+      "kind": "number",
+      "ebb": 0,
+      "opponent": 1
+    },
+    {
+      "label": "Zeit in Führung",
+      "key": "time_leading_s",
+      "kind": "time",
+      "ebb": 527,
+      "opponent": 2024
+    },
+    {
+      "label": "Scorende Spieler",
+      "key": "scoring_players",
+      "kind": "number",
+      "ebb": 6,
+      "opponent": 11
+    },
+    {
+      "label": "Verteidigerpunkte",
+      "key": "defenseman_points",
+      "kind": "number",
+      "ebb": 2,
+      "opponent": 4
+    },
+    {
+      "label": "SH% 5v5",
+      "key": "shooting_pct_5v5",
+      "kind": "percent",
+      "ebb": 0.0,
+      "opponent": 13.636
+    },
+    {
+      "label": "SV% 5v5",
+      "key": "save_pct_5v5",
+      "kind": "percent",
+      "ebb": 86.364,
+      "opponent": 100.0
+    },
+    {
+      "label": "PDO 5v5",
+      "key": "pdo_5v5",
+      "kind": "decimal",
+      "ebb": 86.364,
+      "opponent": 113.636
+    }
+  ],
+  "facts": [
+    "Corsi: EBB 50:52; bei 5v5 38:43.",
+    "Slot Attempts: EBB 17:20; bei 5v5 13:16.",
+    "Zeit in Führung: 8:47; ausgeglichen 17:29; im Rückstand 33:44.",
+    "Meiste Eiszeit EBB: Kai Wissmann mit 24:31.",
+    "Meiste PP-Eiszeit: Liam Kirk (3:29).",
+    "Meiste PK-Eiszeit: Yannick Veilleux (1:53).",
+    "5v5-Forward-Nutzung: Top 9 kamen in P1+P2 auf 84.1% der Forward-TOI, in P3 auf 93.9%. Forwards mit mindestens 30s 5v5-TOI: P1 12, P2 12, P3 11.",
+    "Hinweis auf verkürzte Bank im 3. Drittel (Top-9-Forward-Anteil +9.8 Prozentpunkte).",
+    "Neue stabile 5v5-Defense-Pairs in P3: Reinke – Davidson (1:30), Smith – Mik (0:57).",
+    "In P1/P2 etablierte Forward-Units, die in P3 praktisch verschwanden: Vikingstad – Veilleux – Krestan.",
+    "Deutlich geringerer 5v5-Nutzungsanteil in P3 gegenüber P1+P2: Hördler (9.6% → 3.9%).",
+    "Deutlich höherer 5v5-Nutzungsanteil in P3 gegenüber P1+P2: Ronning (10.1% → 14.9%), Davidson (11.1% → 15.8%).",
+    "Häufigste stabile 5v5-Forward-Unit: Ronning – Kirk – Tiffels mit 11:54 gemeinsamer Eiszeit.",
+    "Häufigstes 5v5-Verteidigerpaar: Wissmann – Müller mit 15:27."
+  ],
+  "players": [
+    {
+      "player_id": 512,
+      "name": "Kai Wissmann",
+      "jersey": 6,
+      "position": "DE",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 1471,
+      "eq_s": 1178,
+      "pp_s": 187,
+      "pk_s": 106,
+      "shifts": 31,
+      "avg_shift_s": 47.5,
+      "five_v_five_p1_s": 324,
+      "five_v_five_p2_s": 441,
+      "five_v_five_p3_s": 252
+    },
+    {
+      "player_id": 506,
+      "name": "Jonas Müller",
+      "jersey": 18,
+      "position": "DE",
+      "goals": 1,
+      "assists": 0,
+      "points": 1,
+      "toi_s": 1406,
+      "eq_s": 1267,
+      "pp_s": 28,
+      "pk_s": 111,
+      "shifts": 29,
+      "avg_shift_s": 48.5,
+      "five_v_five_p1_s": 350,
+      "five_v_five_p2_s": 408,
+      "five_v_five_p3_s": 345
+    },
+    {
+      "player_id": 2209,
+      "name": "Ty Ronning",
+      "jersey": 9,
+      "position": "FO",
+      "goals": 1,
+      "assists": 1,
+      "points": 2,
+      "toi_s": 1307,
+      "eq_s": 1105,
+      "pp_s": 202,
+      "pk_s": 0,
+      "shifts": 25,
+      "avg_shift_s": 52.3,
+      "five_v_five_p1_s": 324,
+      "five_v_five_p2_s": 258,
+      "five_v_five_p3_s": 341
+    },
+    {
+      "player_id": 3410,
+      "name": "Liam Kirk",
+      "jersey": 94,
+      "position": "FO",
+      "goals": 0,
+      "assists": 2,
+      "points": 2,
+      "toi_s": 1302,
+      "eq_s": 1070,
+      "pp_s": 209,
+      "pk_s": 23,
+      "shifts": 27,
+      "avg_shift_s": 48.2,
+      "five_v_five_p1_s": 295,
+      "five_v_five_p2_s": 333,
+      "five_v_five_p3_s": 331
+    },
+    {
+      "player_id": 92,
+      "name": "Leonhard Pföderl",
+      "jersey": 93,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 1209,
+      "eq_s": 1029,
+      "pp_s": 180,
+      "pk_s": 0,
+      "shifts": 23,
+      "avg_shift_s": 52.6,
+      "five_v_five_p1_s": 258,
+      "five_v_five_p2_s": 400,
+      "five_v_five_p3_s": 238
+    },
+    {
+      "player_id": 546,
+      "name": "Andreas Eder",
+      "jersey": 43,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 1054,
+      "eq_s": 843,
+      "pp_s": 152,
+      "pk_s": 59,
+      "shifts": 24,
+      "avg_shift_s": 43.9,
+      "five_v_five_p1_s": 254,
+      "five_v_five_p2_s": 270,
+      "five_v_five_p3_s": 197
+    },
+    {
+      "player_id": 1425,
+      "name": "Eric Mik",
+      "jersey": 12,
+      "position": "DE",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 1044,
+      "eq_s": 958,
+      "pp_s": 0,
+      "pk_s": 86,
+      "shifts": 28,
+      "avg_shift_s": 37.3,
+      "five_v_five_p1_s": 302,
+      "five_v_five_p2_s": 304,
+      "five_v_five_p3_s": 245
+    },
+    {
+      "player_id": 1402,
+      "name": "Frederik Tiffels",
+      "jersey": 95,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 1040,
+      "eq_s": 950,
+      "pp_s": 90,
+      "pk_s": 0,
+      "shifts": 24,
+      "avg_shift_s": 43.3,
+      "five_v_five_p1_s": 290,
+      "five_v_five_p2_s": 296,
+      "five_v_five_p3_s": 259
+    },
+    {
+      "player_id": 3411,
+      "name": "Gabriel Fontaine",
+      "jersey": 97,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 931,
+      "eq_s": 774,
+      "pp_s": 157,
+      "pk_s": 0,
+      "shifts": 19,
+      "avg_shift_s": 49.0,
+      "five_v_five_p1_s": 173,
+      "five_v_five_p2_s": 303,
+      "five_v_five_p3_s": 158
+    },
+    {
+      "player_id": 1762,
+      "name": "Yannick Veilleux",
+      "jersey": 38,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 916,
+      "eq_s": 635,
+      "pp_s": 168,
+      "pk_s": 113,
+      "shifts": 22,
+      "avg_shift_s": 41.6,
+      "five_v_five_p1_s": 203,
+      "five_v_five_p2_s": 192,
+      "five_v_five_p3_s": 185
+    },
+    {
+      "player_id": 1796,
+      "name": "Markus Vikingstad",
+      "jersey": 37,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 856,
+      "eq_s": 600,
+      "pp_s": 151,
+      "pk_s": 105,
+      "shifts": 23,
+      "avg_shift_s": 37.2,
+      "five_v_five_p1_s": 130,
+      "five_v_five_p2_s": 211,
+      "five_v_five_p3_s": 174
+    },
+    {
+      "player_id": 1823,
+      "name": "Manuel Wiederer",
+      "jersey": 21,
+      "position": "FO",
+      "goals": 1,
+      "assists": 0,
+      "points": 1,
+      "toi_s": 852,
+      "eq_s": 788,
+      "pp_s": 0,
+      "pk_s": 64,
+      "shifts": 19,
+      "avg_shift_s": 44.8,
+      "five_v_five_p1_s": 247,
+      "five_v_five_p2_s": 219,
+      "five_v_five_p3_s": 258
+    },
+    {
+      "player_id": 3412,
+      "name": "Mitchell Reinke",
+      "jersey": 5,
+      "position": "DE",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 789,
+      "eq_s": 617,
+      "pp_s": 172,
+      "pk_s": 0,
+      "shifts": 17,
+      "avg_shift_s": 46.4,
+      "five_v_five_p1_s": 153,
+      "five_v_five_p2_s": 221,
+      "five_v_five_p3_s": 157
+    },
+    {
+      "player_id": 3533,
+      "name": "Adam Smith",
+      "jersey": 4,
+      "position": "DE",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 782,
+      "eq_s": 782,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 20,
+      "avg_shift_s": 39.1,
+      "five_v_five_p1_s": 259,
+      "five_v_five_p2_s": 311,
+      "five_v_five_p3_s": 175
+    },
+    {
+      "player_id": 4701,
+      "name": "Brandon Davidson",
+      "jersey": 44,
+      "position": "DE",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 743,
+      "eq_s": 712,
+      "pp_s": 0,
+      "pk_s": 31,
+      "shifts": 18,
+      "avg_shift_s": 41.3,
+      "five_v_five_p1_s": 205,
+      "five_v_five_p2_s": 223,
+      "five_v_five_p3_s": 241
+    },
+    {
+      "player_id": 2126,
+      "name": "Eric Hördler",
+      "jersey": 77,
+      "position": "FO",
+      "goals": 0,
+      "assists": 1,
+      "points": 1,
+      "toi_s": 711,
+      "eq_s": 690,
+      "pp_s": 0,
+      "pk_s": 21,
+      "shifts": 15,
+      "avg_shift_s": 47.4,
+      "five_v_five_p1_s": 297,
+      "five_v_five_p2_s": 258,
+      "five_v_five_p3_s": 88
+    },
+    {
+      "player_id": 1738,
+      "name": "Korbinian Geibel",
+      "jersey": 40,
+      "position": "DE",
+      "goals": 0,
+      "assists": 1,
+      "points": 1,
+      "toi_s": 558,
+      "eq_s": 496,
+      "pp_s": 0,
+      "pk_s": 62,
+      "shifts": 17,
+      "avg_shift_s": 32.8,
+      "five_v_five_p1_s": 219,
+      "five_v_five_p2_s": 127,
+      "five_v_five_p3_s": 111
+    },
+    {
+      "player_id": 4310,
+      "name": "Rihards Griva",
+      "jersey": 23,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 387,
+      "eq_s": 387,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 7,
+      "avg_shift_s": 55.3,
+      "five_v_five_p1_s": 163,
+      "five_v_five_p2_s": 142,
+      "five_v_five_p3_s": 50
+    },
+    {
+      "player_id": 4311,
+      "name": "Tobias Krestan",
+      "jersey": 91,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 375,
+      "eq_s": 281,
+      "pp_s": 94,
+      "pk_s": 0,
+      "shifts": 10,
+      "avg_shift_s": 37.5,
+      "five_v_five_p1_s": 79,
+      "five_v_five_p2_s": 193,
+      "five_v_five_p3_s": 0
+    },
+    {
+      "player_id": 2510,
+      "name": "Noel Saffran",
+      "jersey": 8,
+      "position": "FO",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 0,
+      "eq_s": 0,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 0,
+      "avg_shift_s": null,
+      "five_v_five_p1_s": 0,
+      "five_v_five_p2_s": 0,
+      "five_v_five_p3_s": 0
+    },
+    {
+      "player_id": 4181,
+      "name": "Niclas Wolter",
+      "jersey": 32,
+      "position": "GK",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 0,
+      "eq_s": 0,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 0,
+      "avg_shift_s": null,
+      "five_v_five_p1_s": 0,
+      "five_v_five_p2_s": 0,
+      "five_v_five_p3_s": 0
+    },
+    {
+      "player_id": 4312,
+      "name": "Jack LaFontaine",
+      "jersey": 45,
+      "position": "GK",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 0,
+      "eq_s": 0,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 0,
+      "avg_shift_s": null,
+      "five_v_five_p1_s": 0,
+      "five_v_five_p2_s": 0,
+      "five_v_five_p3_s": 0
+    },
+    {
+      "player_id": 4160,
+      "name": "Gregor Stocker",
+      "jersey": 46,
+      "position": "DE",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 0,
+      "eq_s": 0,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 0,
+      "avg_shift_s": null,
+      "five_v_five_p1_s": 0,
+      "five_v_five_p2_s": 0,
+      "five_v_five_p3_s": 0
+    },
+    {
+      "player_id": 3547,
+      "name": "Lennart Neiße",
+      "jersey": 73,
+      "position": "GK",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 0,
+      "eq_s": 0,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 0,
+      "avg_shift_s": null,
+      "five_v_five_p1_s": 0,
+      "five_v_five_p2_s": 0,
+      "five_v_five_p3_s": 0
+    },
+    {
+      "player_id": 1069,
+      "name": "Jonas Neffin",
+      "jersey": 75,
+      "position": "GK",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 0,
+      "eq_s": 0,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 0,
+      "avg_shift_s": null,
+      "five_v_five_p1_s": 0,
+      "five_v_five_p2_s": 0,
+      "five_v_five_p3_s": 0
+    },
+    {
+      "player_id": 3523,
+      "name": "Moritz Kretzschmar",
+      "jersey": 83,
+      "position": "DE",
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "toi_s": 0,
+      "eq_s": 0,
+      "pp_s": 0,
+      "pk_s": 0,
+      "shifts": 0,
+      "avg_shift_s": null,
+      "five_v_five_p1_s": 0,
+      "five_v_five_p2_s": 0,
+      "five_v_five_p3_s": 0
+    }
+  ],
+  "lineups": {
+    "min_stable_unit_seconds": 8,
+    "five_v_five_seconds": {
+      "p1": 905,
+      "p2": 1022,
+      "p3": 761
+    },
+    "forward_trios": [
+      {
+        "player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "names": [
+          "Ronning",
+          "Kirk",
+          "Tiffels"
+        ],
+        "jerseys": [
+          9,
+          94,
+          95
+        ],
+        "label": "Ronning – Kirk – Tiffels",
+        "total_s": 714,
+        "p1_s": 246,
+        "p2_s": 211,
+        "p3_s": 257,
+        "appearances": 21
+      },
+      {
+        "player_ids": [
+          546,
+          2126,
+          92
+        ],
+        "names": [
+          "Eder",
+          "Hördler",
+          "Pföderl"
+        ],
+        "jerseys": [
+          43,
+          77,
+          93
+        ],
+        "label": "Eder – Hördler – Pföderl",
+        "total_s": 452,
+        "p1_s": 235,
+        "p2_s": 176,
+        "p3_s": 41,
+        "appearances": 12
+      },
+      {
+        "player_ids": [
+          1823,
+          4310,
+          3411
+        ],
+        "names": [
+          "Wiederer",
+          "Griva",
+          "Fontaine"
+        ],
+        "jerseys": [
+          21,
+          23,
+          97
+        ],
+        "label": "Wiederer – Griva – Fontaine",
+        "total_s": 253,
+        "p1_s": 111,
+        "p2_s": 101,
+        "p3_s": 41,
+        "appearances": 7
+      },
+      {
+        "player_ids": [
+          1796,
+          1762,
+          4311
+        ],
+        "names": [
+          "Vikingstad",
+          "Veilleux",
+          "Krestan"
+        ],
+        "jerseys": [
+          37,
+          38,
+          91
+        ],
+        "label": "Vikingstad – Veilleux – Krestan",
+        "total_s": 218,
+        "p1_s": 80,
+        "p2_s": 138,
+        "p3_s": 0,
+        "appearances": 8
+      },
+      {
+        "player_ids": [
+          1823,
+          1796,
+          1762
+        ],
+        "names": [
+          "Wiederer",
+          "Vikingstad",
+          "Veilleux"
+        ],
+        "jerseys": [
+          21,
+          37,
+          38
+        ],
+        "label": "Wiederer – Vikingstad – Veilleux",
+        "total_s": 155,
+        "p1_s": 22,
+        "p2_s": 0,
+        "p3_s": 133,
+        "appearances": 4
+      },
+      {
+        "player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "names": [
+          "Eder",
+          "Pföderl",
+          "Fontaine"
+        ],
+        "jerseys": [
+          43,
+          93,
+          97
+        ],
+        "label": "Eder – Pföderl – Fontaine",
+        "total_s": 118,
+        "p1_s": 0,
+        "p2_s": 31,
+        "p3_s": 87,
+        "appearances": 5
+      },
+      {
+        "player_ids": [
+          2126,
+          92,
+          3410
+        ],
+        "names": [
+          "Hördler",
+          "Pföderl",
+          "Kirk"
+        ],
+        "jerseys": [
+          77,
+          93,
+          94
+        ],
+        "label": "Hördler – Pföderl – Kirk",
+        "total_s": 88,
+        "p1_s": 0,
+        "p2_s": 47,
+        "p3_s": 41,
+        "appearances": 3
+      },
+      {
+        "player_ids": [
+          1823,
+          92,
+          3411
+        ],
+        "names": [
+          "Wiederer",
+          "Pföderl",
+          "Fontaine"
+        ],
+        "jerseys": [
+          21,
+          93,
+          97
+        ],
+        "label": "Wiederer – Pföderl – Fontaine",
+        "total_s": 78,
+        "p1_s": 0,
+        "p2_s": 78,
+        "p3_s": 0,
+        "appearances": 2
+      },
+      {
+        "player_ids": [
+          1823,
+          1762,
+          3411
+        ],
+        "names": [
+          "Wiederer",
+          "Veilleux",
+          "Fontaine"
+        ],
+        "jerseys": [
+          21,
+          38,
+          97
+        ],
+        "label": "Wiederer – Veilleux – Fontaine",
+        "total_s": 56,
+        "p1_s": 56,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          2209,
+          1823,
+          92
+        ],
+        "names": [
+          "Ronning",
+          "Wiederer",
+          "Pföderl"
+        ],
+        "jerseys": [
+          9,
+          21,
+          93
+        ],
+        "label": "Ronning – Wiederer – Pföderl",
+        "total_s": 44,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 44,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1823,
+          4310,
+          2126
+        ],
+        "names": [
+          "Wiederer",
+          "Griva",
+          "Hördler"
+        ],
+        "jerseys": [
+          21,
+          23,
+          77
+        ],
+        "label": "Wiederer – Griva – Hördler",
+        "total_s": 37,
+        "p1_s": 37,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          546,
+          3410,
+          3411
+        ],
+        "names": [
+          "Eder",
+          "Kirk",
+          "Fontaine"
+        ],
+        "jerseys": [
+          43,
+          94,
+          97
+        ],
+        "label": "Eder – Kirk – Fontaine",
+        "total_s": 31,
+        "p1_s": 0,
+        "p2_s": 31,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          2209,
+          92,
+          1402
+        ],
+        "names": [
+          "Ronning",
+          "Pföderl",
+          "Tiffels"
+        ],
+        "jerseys": [
+          9,
+          93,
+          95
+        ],
+        "label": "Ronning – Pföderl – Tiffels",
+        "total_s": 31,
+        "p1_s": 0,
+        "p2_s": 31,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          4310,
+          1796,
+          3411
+        ],
+        "names": [
+          "Griva",
+          "Vikingstad",
+          "Fontaine"
+        ],
+        "jerseys": [
+          23,
+          37,
+          97
+        ],
+        "label": "Griva – Vikingstad – Fontaine",
+        "total_s": 29,
+        "p1_s": 0,
+        "p2_s": 29,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1796,
+          1762,
+          546
+        ],
+        "names": [
+          "Vikingstad",
+          "Veilleux",
+          "Eder"
+        ],
+        "jerseys": [
+          37,
+          38,
+          43
+        ],
+        "label": "Vikingstad – Veilleux – Eder",
+        "total_s": 25,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 25,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          2209,
+          3410,
+          3411
+        ],
+        "names": [
+          "Ronning",
+          "Kirk",
+          "Fontaine"
+        ],
+        "jerseys": [
+          9,
+          94,
+          97
+        ],
+        "label": "Ronning – Kirk – Fontaine",
+        "total_s": 24,
+        "p1_s": 0,
+        "p2_s": 16,
+        "p3_s": 8,
+        "appearances": 2
+      },
+      {
+        "player_ids": [
+          2209,
+          1796,
+          1762
+        ],
+        "names": [
+          "Ronning",
+          "Vikingstad",
+          "Veilleux"
+        ],
+        "jerseys": [
+          9,
+          37,
+          38
+        ],
+        "label": "Ronning – Vikingstad – Veilleux",
+        "total_s": 23,
+        "p1_s": 14,
+        "p2_s": 0,
+        "p3_s": 9,
+        "appearances": 2
+      },
+      {
+        "player_ids": [
+          2209,
+          2126,
+          3410
+        ],
+        "names": [
+          "Ronning",
+          "Hördler",
+          "Kirk"
+        ],
+        "jerseys": [
+          9,
+          77,
+          94
+        ],
+        "label": "Ronning – Hördler – Kirk",
+        "total_s": 20,
+        "p1_s": 20,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1823,
+          2126,
+          1402
+        ],
+        "names": [
+          "Wiederer",
+          "Hördler",
+          "Tiffels"
+        ],
+        "jerseys": [
+          21,
+          77,
+          95
+        ],
+        "label": "Wiederer – Hördler – Tiffels",
+        "total_s": 19,
+        "p1_s": 0,
+        "p2_s": 19,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          4311,
+          3410,
+          1402
+        ],
+        "names": [
+          "Krestan",
+          "Kirk",
+          "Tiffels"
+        ],
+        "jerseys": [
+          91,
+          94,
+          95
+        ],
+        "label": "Krestan – Kirk – Tiffels",
+        "total_s": 18,
+        "p1_s": 0,
+        "p2_s": 18,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1796,
+          1762,
+          92
+        ],
+        "names": [
+          "Vikingstad",
+          "Veilleux",
+          "Pföderl"
+        ],
+        "jerseys": [
+          37,
+          38,
+          93
+        ],
+        "label": "Vikingstad – Veilleux – Pföderl",
+        "total_s": 16,
+        "p1_s": 16,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1823,
+          546,
+          3411
+        ],
+        "names": [
+          "Wiederer",
+          "Eder",
+          "Fontaine"
+        ],
+        "jerseys": [
+          21,
+          43,
+          97
+        ],
+        "label": "Wiederer – Eder – Fontaine",
+        "total_s": 16,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 16,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          4310,
+          546,
+          2126
+        ],
+        "names": [
+          "Griva",
+          "Eder",
+          "Hördler"
+        ],
+        "jerseys": [
+          23,
+          43,
+          77
+        ],
+        "label": "Griva – Eder – Hördler",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 15,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          2209,
+          92,
+          3410
+        ],
+        "names": [
+          "Ronning",
+          "Pföderl",
+          "Kirk"
+        ],
+        "jerseys": [
+          9,
+          93,
+          94
+        ],
+        "label": "Ronning – Pföderl – Kirk",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          2209,
+          546,
+          1402
+        ],
+        "names": [
+          "Ronning",
+          "Eder",
+          "Tiffels"
+        ],
+        "jerseys": [
+          9,
+          43,
+          95
+        ],
+        "label": "Ronning – Eder – Tiffels",
+        "total_s": 14,
+        "p1_s": 14,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          4310,
+          3410,
+          1402
+        ],
+        "names": [
+          "Griva",
+          "Kirk",
+          "Tiffels"
+        ],
+        "jerseys": [
+          23,
+          94,
+          95
+        ],
+        "label": "Griva – Kirk – Tiffels",
+        "total_s": 14,
+        "p1_s": 14,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          2209,
+          1823,
+          1402
+        ],
+        "names": [
+          "Ronning",
+          "Wiederer",
+          "Tiffels"
+        ],
+        "jerseys": [
+          9,
+          21,
+          95
+        ],
+        "label": "Ronning – Wiederer – Tiffels",
+        "total_s": 13,
+        "p1_s": 13,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1796,
+          92,
+          3411
+        ],
+        "names": [
+          "Vikingstad",
+          "Pföderl",
+          "Fontaine"
+        ],
+        "jerseys": [
+          37,
+          93,
+          97
+        ],
+        "label": "Vikingstad – Pföderl – Fontaine",
+        "total_s": 13,
+        "p1_s": 0,
+        "p2_s": 13,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1823,
+          2126,
+          92
+        ],
+        "names": [
+          "Wiederer",
+          "Hördler",
+          "Pföderl"
+        ],
+        "jerseys": [
+          21,
+          77,
+          93
+        ],
+        "label": "Wiederer – Hördler – Pföderl",
+        "total_s": 12,
+        "p1_s": 12,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          2209,
+          1762,
+          3410
+        ],
+        "names": [
+          "Ronning",
+          "Veilleux",
+          "Kirk"
+        ],
+        "jerseys": [
+          9,
+          38,
+          94
+        ],
+        "label": "Ronning – Veilleux – Kirk",
+        "total_s": 11,
+        "p1_s": 11,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1823,
+          1762,
+          4311
+        ],
+        "names": [
+          "Wiederer",
+          "Veilleux",
+          "Krestan"
+        ],
+        "jerseys": [
+          21,
+          38,
+          91
+        ],
+        "label": "Wiederer – Veilleux – Krestan",
+        "total_s": 11,
+        "p1_s": 0,
+        "p2_s": 11,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1823,
+          1762,
+          1402
+        ],
+        "names": [
+          "Wiederer",
+          "Veilleux",
+          "Tiffels"
+        ],
+        "jerseys": [
+          21,
+          38,
+          95
+        ],
+        "label": "Wiederer – Veilleux – Tiffels",
+        "total_s": 10,
+        "p1_s": 0,
+        "p2_s": 10,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1762,
+          546,
+          92
+        ],
+        "names": [
+          "Veilleux",
+          "Eder",
+          "Pföderl"
+        ],
+        "jerseys": [
+          38,
+          43,
+          93
+        ],
+        "label": "Veilleux – Eder – Pföderl",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 8,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          4310,
+          1796,
+          1762
+        ],
+        "names": [
+          "Griva",
+          "Vikingstad",
+          "Veilleux"
+        ],
+        "jerseys": [
+          23,
+          37,
+          38
+        ],
+        "label": "Griva – Vikingstad – Veilleux",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 8,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1823,
+          546,
+          92
+        ],
+        "names": [
+          "Wiederer",
+          "Eder",
+          "Pföderl"
+        ],
+        "jerseys": [
+          21,
+          43,
+          93
+        ],
+        "label": "Wiederer – Eder – Pföderl",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 8,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1823,
+          1762,
+          3410
+        ],
+        "names": [
+          "Wiederer",
+          "Veilleux",
+          "Kirk"
+        ],
+        "jerseys": [
+          21,
+          38,
+          94
+        ],
+        "label": "Wiederer – Veilleux – Kirk",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 8,
+        "appearances": 1
+      }
+    ],
+    "defense_pairs": [
+      {
+        "player_ids": [
+          512,
+          506
+        ],
+        "names": [
+          "Wissmann",
+          "Müller"
+        ],
+        "jerseys": [
+          6,
+          18
+        ],
+        "label": "Wissmann – Müller",
+        "total_s": 927,
+        "p1_s": 318,
+        "p2_s": 357,
+        "p3_s": 252,
+        "appearances": 25
+      },
+      {
+        "player_ids": [
+          3533,
+          4701
+        ],
+        "names": [
+          "Smith",
+          "Davidson"
+        ],
+        "jerseys": [
+          4,
+          44
+        ],
+        "label": "Smith – Davidson",
+        "total_s": 334,
+        "p1_s": 128,
+        "p2_s": 135,
+        "p3_s": 71,
+        "appearances": 12
+      },
+      {
+        "player_ids": [
+          1425,
+          1738
+        ],
+        "names": [
+          "Mik",
+          "Geibel"
+        ],
+        "jerseys": [
+          12,
+          40
+        ],
+        "label": "Mik – Geibel",
+        "total_s": 321,
+        "p1_s": 149,
+        "p2_s": 93,
+        "p3_s": 79,
+        "appearances": 11
+      },
+      {
+        "player_ids": [
+          1425,
+          4701
+        ],
+        "names": [
+          "Mik",
+          "Davidson"
+        ],
+        "jerseys": [
+          12,
+          44
+        ],
+        "label": "Mik – Davidson",
+        "total_s": 210,
+        "p1_s": 53,
+        "p2_s": 92,
+        "p3_s": 65,
+        "appearances": 6
+      },
+      {
+        "player_ids": [
+          3533,
+          3412
+        ],
+        "names": [
+          "Smith",
+          "Reinke"
+        ],
+        "jerseys": [
+          4,
+          5
+        ],
+        "label": "Smith – Reinke",
+        "total_s": 197,
+        "p1_s": 58,
+        "p2_s": 139,
+        "p3_s": 0,
+        "appearances": 5
+      },
+      {
+        "player_ids": [
+          3412,
+          1425
+        ],
+        "names": [
+          "Reinke",
+          "Mik"
+        ],
+        "jerseys": [
+          5,
+          12
+        ],
+        "label": "Reinke – Mik",
+        "total_s": 175,
+        "p1_s": 87,
+        "p2_s": 58,
+        "p3_s": 30,
+        "appearances": 6
+      },
+      {
+        "player_ids": [
+          3412,
+          4701
+        ],
+        "names": [
+          "Reinke",
+          "Davidson"
+        ],
+        "jerseys": [
+          5,
+          44
+        ],
+        "label": "Reinke – Davidson",
+        "total_s": 90,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 90,
+        "appearances": 2
+      },
+      {
+        "player_ids": [
+          3533,
+          506
+        ],
+        "names": [
+          "Smith",
+          "Müller"
+        ],
+        "jerseys": [
+          4,
+          18
+        ],
+        "label": "Smith – Müller",
+        "total_s": 69,
+        "p1_s": 11,
+        "p2_s": 10,
+        "p3_s": 48,
+        "appearances": 4
+      },
+      {
+        "player_ids": [
+          3533,
+          1425
+        ],
+        "names": [
+          "Smith",
+          "Mik"
+        ],
+        "jerseys": [
+          4,
+          12
+        ],
+        "label": "Smith – Mik",
+        "total_s": 57,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 57,
+        "appearances": 2
+      },
+      {
+        "player_ids": [
+          1425,
+          506
+        ],
+        "names": [
+          "Mik",
+          "Müller"
+        ],
+        "jerseys": [
+          12,
+          18
+        ],
+        "label": "Mik – Müller",
+        "total_s": 55,
+        "p1_s": 12,
+        "p2_s": 43,
+        "p3_s": 0,
+        "appearances": 3
+      },
+      {
+        "player_ids": [
+          3533,
+          1738
+        ],
+        "names": [
+          "Smith",
+          "Geibel"
+        ],
+        "jerseys": [
+          4,
+          40
+        ],
+        "label": "Smith – Geibel",
+        "total_s": 52,
+        "p1_s": 52,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 2
+      },
+      {
+        "player_ids": [
+          3533,
+          512
+        ],
+        "names": [
+          "Smith",
+          "Wissmann"
+        ],
+        "jerseys": [
+          4,
+          6
+        ],
+        "label": "Smith – Wissmann",
+        "total_s": 31,
+        "p1_s": 0,
+        "p2_s": 31,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          3412,
+          506
+        ],
+        "names": [
+          "Reinke",
+          "Müller"
+        ],
+        "jerseys": [
+          5,
+          18
+        ],
+        "label": "Reinke – Müller",
+        "total_s": 28,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 28,
+        "appearances": 2
+      },
+      {
+        "player_ids": [
+          506,
+          1738
+        ],
+        "names": [
+          "Müller",
+          "Geibel"
+        ],
+        "jerseys": [
+          18,
+          40
+        ],
+        "label": "Müller – Geibel",
+        "total_s": 27,
+        "p1_s": 15,
+        "p2_s": 0,
+        "p3_s": 12,
+        "appearances": 2
+      },
+      {
+        "player_ids": [
+          512,
+          1738
+        ],
+        "names": [
+          "Wissmann",
+          "Geibel"
+        ],
+        "jerseys": [
+          6,
+          40
+        ],
+        "label": "Wissmann – Geibel",
+        "total_s": 24,
+        "p1_s": 0,
+        "p2_s": 24,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          512,
+          4701
+        ],
+        "names": [
+          "Wissmann",
+          "Davidson"
+        ],
+        "jerseys": [
+          6,
+          44
+        ],
+        "label": "Wissmann – Davidson",
+        "total_s": 18,
+        "p1_s": 18,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          3412,
+          512
+        ],
+        "names": [
+          "Reinke",
+          "Wissmann"
+        ],
+        "jerseys": [
+          5,
+          6
+        ],
+        "label": "Reinke – Wissmann",
+        "total_s": 18,
+        "p1_s": 0,
+        "p2_s": 18,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          512,
+          1425
+        ],
+        "names": [
+          "Wissmann",
+          "Mik"
+        ],
+        "jerseys": [
+          6,
+          12
+        ],
+        "label": "Wissmann – Mik",
+        "total_s": 16,
+        "p1_s": 0,
+        "p2_s": 16,
+        "p3_s": 0,
+        "appearances": 1
+      },
+      {
+        "player_ids": [
+          1738,
+          4701
+        ],
+        "names": [
+          "Geibel",
+          "Davidson"
+        ],
+        "jerseys": [
+          40,
+          44
+        ],
+        "label": "Geibel – Davidson",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 9,
+        "appearances": 1
+      }
+    ],
+    "player_5v5_usage": [
+      {
+        "player_id": 506,
+        "name": "Jonas Müller",
+        "last_name": "Müller",
+        "jersey": 18,
+        "position": "DE",
+        "p1_s": 350,
+        "p2_s": 408,
+        "p3_s": 345,
+        "total_s": 1103
+      },
+      {
+        "player_id": 512,
+        "name": "Kai Wissmann",
+        "last_name": "Wissmann",
+        "jersey": 6,
+        "position": "DE",
+        "p1_s": 324,
+        "p2_s": 441,
+        "p3_s": 252,
+        "total_s": 1017
+      },
+      {
+        "player_id": 3410,
+        "name": "Liam Kirk",
+        "last_name": "Kirk",
+        "jersey": 94,
+        "position": "FO",
+        "p1_s": 295,
+        "p2_s": 333,
+        "p3_s": 331,
+        "total_s": 959
+      },
+      {
+        "player_id": 2209,
+        "name": "Ty Ronning",
+        "last_name": "Ronning",
+        "jersey": 9,
+        "position": "FO",
+        "p1_s": 324,
+        "p2_s": 258,
+        "p3_s": 341,
+        "total_s": 923
+      },
+      {
+        "player_id": 92,
+        "name": "Leonhard Pföderl",
+        "last_name": "Pföderl",
+        "jersey": 93,
+        "position": "FO",
+        "p1_s": 258,
+        "p2_s": 400,
+        "p3_s": 238,
+        "total_s": 896
+      },
+      {
+        "player_id": 1425,
+        "name": "Eric Mik",
+        "last_name": "Mik",
+        "jersey": 12,
+        "position": "DE",
+        "p1_s": 302,
+        "p2_s": 304,
+        "p3_s": 245,
+        "total_s": 851
+      },
+      {
+        "player_id": 1402,
+        "name": "Frederik Tiffels",
+        "last_name": "Tiffels",
+        "jersey": 95,
+        "position": "FO",
+        "p1_s": 290,
+        "p2_s": 296,
+        "p3_s": 259,
+        "total_s": 845
+      },
+      {
+        "player_id": 3533,
+        "name": "Adam Smith",
+        "last_name": "Smith",
+        "jersey": 4,
+        "position": "DE",
+        "p1_s": 259,
+        "p2_s": 311,
+        "p3_s": 175,
+        "total_s": 745
+      },
+      {
+        "player_id": 1823,
+        "name": "Manuel Wiederer",
+        "last_name": "Wiederer",
+        "jersey": 21,
+        "position": "FO",
+        "p1_s": 247,
+        "p2_s": 219,
+        "p3_s": 258,
+        "total_s": 724
+      },
+      {
+        "player_id": 546,
+        "name": "Andreas Eder",
+        "last_name": "Eder",
+        "jersey": 43,
+        "position": "FO",
+        "p1_s": 254,
+        "p2_s": 270,
+        "p3_s": 197,
+        "total_s": 721
+      },
+      {
+        "player_id": 4701,
+        "name": "Brandon Davidson",
+        "last_name": "Davidson",
+        "jersey": 44,
+        "position": "DE",
+        "p1_s": 205,
+        "p2_s": 223,
+        "p3_s": 241,
+        "total_s": 669
+      },
+      {
+        "player_id": 2126,
+        "name": "Eric Hördler",
+        "last_name": "Hördler",
+        "jersey": 77,
+        "position": "FO",
+        "p1_s": 297,
+        "p2_s": 258,
+        "p3_s": 88,
+        "total_s": 643
+      },
+      {
+        "player_id": 3411,
+        "name": "Gabriel Fontaine",
+        "last_name": "Fontaine",
+        "jersey": 97,
+        "position": "FO",
+        "p1_s": 173,
+        "p2_s": 303,
+        "p3_s": 158,
+        "total_s": 634
+      },
+      {
+        "player_id": 1762,
+        "name": "Yannick Veilleux",
+        "last_name": "Veilleux",
+        "jersey": 38,
+        "position": "FO",
+        "p1_s": 203,
+        "p2_s": 192,
+        "p3_s": 185,
+        "total_s": 580
+      },
+      {
+        "player_id": 3412,
+        "name": "Mitchell Reinke",
+        "last_name": "Reinke",
+        "jersey": 5,
+        "position": "DE",
+        "p1_s": 153,
+        "p2_s": 221,
+        "p3_s": 157,
+        "total_s": 531
+      },
+      {
+        "player_id": 1796,
+        "name": "Markus Vikingstad",
+        "last_name": "Vikingstad",
+        "jersey": 37,
+        "position": "FO",
+        "p1_s": 130,
+        "p2_s": 211,
+        "p3_s": 174,
+        "total_s": 515
+      },
+      {
+        "player_id": 1738,
+        "name": "Korbinian Geibel",
+        "last_name": "Geibel",
+        "jersey": 40,
+        "position": "DE",
+        "p1_s": 219,
+        "p2_s": 127,
+        "p3_s": 111,
+        "total_s": 457
+      },
+      {
+        "player_id": 4310,
+        "name": "Rihards Griva",
+        "last_name": "Griva",
+        "jersey": 23,
+        "position": "FO",
+        "p1_s": 163,
+        "p2_s": 142,
+        "p3_s": 50,
+        "total_s": 355
+      },
+      {
+        "player_id": 4311,
+        "name": "Tobias Krestan",
+        "last_name": "Krestan",
+        "jersey": 91,
+        "position": "FO",
+        "p1_s": 79,
+        "p2_s": 193,
+        "p3_s": 0,
+        "total_s": 272
+      }
+    ],
+    "rotation": {
+      "active_forwards": {
+        "p1": 12,
+        "p2": 12,
+        "p3": 11
+      },
+      "active_defense": {
+        "p1": 7,
+        "p2": 7,
+        "p3": 7
+      },
+      "top9_forward_share_pre_p3_pct": 84.1,
+      "top9_forward_share_p3_pct": 93.9,
+      "top4_defense_share_pre_p3_pct": 70.2,
+      "top4_defense_share_p3_pct": 71.0,
+      "shortened_bank_detected": true,
+      "shortened_bank_reasons": [
+        "Top-9-Forward-Anteil +9.8 Prozentpunkte"
+      ],
+      "new_p3_forward_trios": [],
+      "dropped_p3_forward_trios": [
+        {
+          "player_ids": [
+            1796,
+            1762,
+            4311
+          ],
+          "names": [
+            "Vikingstad",
+            "Veilleux",
+            "Krestan"
+          ],
+          "jerseys": [
+            37,
+            38,
+            91
+          ],
+          "label": "Vikingstad – Veilleux – Krestan",
+          "total_s": 218,
+          "p1_s": 80,
+          "p2_s": 138,
+          "p3_s": 0,
+          "appearances": 8
+        }
+      ],
+      "new_p3_defense_pairs": [
+        {
+          "player_ids": [
+            3412,
+            4701
+          ],
+          "names": [
+            "Reinke",
+            "Davidson"
+          ],
+          "jerseys": [
+            5,
+            44
+          ],
+          "label": "Reinke – Davidson",
+          "total_s": 90,
+          "p1_s": 0,
+          "p2_s": 0,
+          "p3_s": 90,
+          "appearances": 2
+        },
+        {
+          "player_ids": [
+            3533,
+            1425
+          ],
+          "names": [
+            "Smith",
+            "Mik"
+          ],
+          "jerseys": [
+            4,
+            12
+          ],
+          "label": "Smith – Mik",
+          "total_s": 57,
+          "p1_s": 0,
+          "p2_s": 0,
+          "p3_s": 57,
+          "appearances": 2
+        }
+      ],
+      "p3_toi_drops": [
+        {
+          "player_id": 2126,
+          "name": "Eric Hördler",
+          "last_name": "Hördler",
+          "jersey": 77,
+          "position": "FO",
+          "pre_p3_share_pct": 9.6,
+          "p3_share_pct": 3.9,
+          "delta_pp": -5.7
+        }
+      ],
+      "p3_toi_increases": [
+        {
+          "player_id": 2209,
+          "name": "Ty Ronning",
+          "last_name": "Ronning",
+          "jersey": 9,
+          "position": "FO",
+          "pre_p3_share_pct": 10.1,
+          "p3_share_pct": 14.9,
+          "delta_pp": 4.9
+        },
+        {
+          "player_id": 4701,
+          "name": "Brandon Davidson",
+          "last_name": "Davidson",
+          "jersey": 44,
+          "position": "DE",
+          "pre_p3_share_pct": 11.1,
+          "p3_share_pct": 15.8,
+          "delta_pp": 4.7
+        }
+      ]
+    }
+  },
+  "shot_zones": [
+    {
+      "zone": "SLOT",
+      "ebb_attempts": 17,
+      "ebb_sog": 10,
+      "opponent_attempts": 20,
+      "opponent_sog": 12
+    },
+    {
+      "zone": "LEFT",
+      "ebb_attempts": 6,
+      "ebb_sog": 5,
+      "opponent_attempts": 8,
+      "opponent_sog": 5
+    },
+    {
+      "zone": "RIGHT",
+      "ebb_attempts": 5,
+      "ebb_sog": 3,
+      "opponent_attempts": 4,
+      "opponent_sog": 2
+    },
+    {
+      "zone": "BLUE_LINE",
+      "ebb_attempts": 19,
+      "ebb_sog": 7,
+      "opponent_attempts": 15,
+      "opponent_sog": 6
+    },
+    {
+      "zone": "NEUTRAL_ZONE",
+      "ebb_attempts": 3,
+      "ebb_sog": 1,
+      "opponent_attempts": 5,
+      "opponent_sog": 2
+    },
+    {
+      "zone": "BEHIND_GOAL",
+      "ebb_attempts": 0,
+      "ebb_sog": 0,
+      "opponent_attempts": 0,
+      "opponent_sog": 0
+    },
+    {
+      "zone": "UNKNOWN",
+      "ebb_attempts": 0,
+      "ebb_sog": 0,
+      "opponent_attempts": 0,
+      "opponent_sog": 0
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": 1648214,
+      "game_time_s": 20,
+      "team_id": 2,
+      "player_id": 4333,
+      "result": "blocked",
+      "x_m": 19.465,
+      "y_m": 5.009,
+      "distance_m": 8.651,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648508,
+      "game_time_s": 21,
+      "team_id": 2,
+      "player_id": 487,
+      "result": "on_goal",
+      "x_m": 23.281,
+      "y_m": 1.964,
+      "distance_m": 3.786,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648230,
+      "game_time_s": 22,
+      "team_id": 2,
+      "player_id": 487,
+      "result": "on_goal",
+      "x_m": 25.365,
+      "y_m": 2.108,
+      "distance_m": 2.402,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648235,
+      "game_time_s": 35,
+      "team_id": 3,
+      "player_id": 1402,
+      "result": "on_goal",
+      "x_m": -24.448,
+      "y_m": -4.907,
+      "distance_m": 5.326,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648218,
+      "game_time_s": 55,
+      "team_id": 3,
+      "player_id": 506,
+      "result": "goal",
+      "x_m": -23.543,
+      "y_m": 0.357,
+      "distance_m": 2.996,
+      "shot_zone": "SLOT",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648221,
+      "game_time_s": 119,
+      "team_id": 3,
+      "player_id": 2209,
+      "result": "goal",
+      "x_m": -23.89,
+      "y_m": -0.611,
+      "distance_m": 2.698,
+      "shot_zone": "SLOT",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648326,
+      "game_time_s": 133,
+      "team_id": 3,
+      "player_id": 2209,
+      "result": "missed",
+      "x_m": -17.453,
+      "y_m": 2.982,
+      "distance_m": 9.543,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648222,
+      "game_time_s": 181,
+      "team_id": 2,
+      "player_id": 3565,
+      "result": "on_goal",
+      "x_m": 16.657,
+      "y_m": -8.633,
+      "distance_m": 13.106,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648223,
+      "game_time_s": 182,
+      "team_id": 2,
+      "player_id": 3567,
+      "result": "goal",
+      "x_m": 21.601,
+      "y_m": -0.194,
+      "distance_m": 4.92,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648228,
+      "game_time_s": 217,
+      "team_id": 3,
+      "player_id": 4701,
+      "result": "on_goal",
+      "x_m": -9.427,
+      "y_m": -13.154,
+      "distance_m": 21.566,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648232,
+      "game_time_s": 258,
+      "team_id": 3,
+      "player_id": 512,
+      "result": "blocked",
+      "x_m": -10.616,
+      "y_m": -0.315,
+      "distance_m": 15.905,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648236,
+      "game_time_s": 297,
+      "team_id": 3,
+      "player_id": 3412,
+      "result": "on_goal",
+      "x_m": -8.044,
+      "y_m": -3.42,
+      "distance_m": 18.788,
+      "shot_zone": "NEUTRAL_ZONE",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648237,
+      "game_time_s": 322,
+      "team_id": 2,
+      "player_id": 3562,
+      "result": "on_goal",
+      "x_m": 17.239,
+      "y_m": 8.164,
+      "distance_m": 12.359,
+      "shot_zone": "LEFT",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648239,
+      "game_time_s": 340,
+      "team_id": 3,
+      "player_id": 1762,
+      "result": "on_goal",
+      "x_m": -24.509,
+      "y_m": 1.67,
+      "distance_m": 2.612,
+      "shot_zone": "SLOT",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648249,
+      "game_time_s": 421,
+      "team_id": 2,
+      "player_id": 3429,
+      "result": "missed",
+      "x_m": 13.07,
+      "y_m": -10.272,
+      "distance_m": 16.922,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648255,
+      "game_time_s": 536,
+      "team_id": 2,
+      "player_id": 2411,
+      "result": "missed",
+      "x_m": 10.82,
+      "y_m": -5.925,
+      "distance_m": 16.778,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648257,
+      "game_time_s": 545,
+      "team_id": 2,
+      "player_id": 1611,
+      "result": "missed",
+      "x_m": 19.873,
+      "y_m": 9.997,
+      "distance_m": 12.004,
+      "shot_zone": "LEFT",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648260,
+      "game_time_s": 582,
+      "team_id": 2,
+      "player_id": 487,
+      "result": "goal",
+      "x_m": 15.764,
+      "y_m": -10.191,
+      "distance_m": 14.815,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648266,
+      "game_time_s": 658,
+      "team_id": 3,
+      "player_id": 1738,
+      "result": "missed",
+      "x_m": -12.073,
+      "y_m": -14.731,
+      "distance_m": 20.631,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648268,
+      "game_time_s": 716,
+      "team_id": 3,
+      "player_id": 506,
+      "result": "on_goal",
+      "x_m": -9.744,
+      "y_m": -7.594,
+      "distance_m": 18.412,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648269,
+      "game_time_s": 723,
+      "team_id": 3,
+      "player_id": 512,
+      "result": "blocked",
+      "x_m": -9.519,
+      "y_m": 2.534,
+      "distance_m": 17.187,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648271,
+      "game_time_s": 743,
+      "team_id": 2,
+      "player_id": 2798,
+      "result": "missed",
+      "x_m": 18.114,
+      "y_m": -3.97,
+      "distance_m": 9.294,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648273,
+      "game_time_s": 802,
+      "team_id": 2,
+      "player_id": 2411,
+      "result": "missed",
+      "x_m": 13.079,
+      "y_m": -12.684,
+      "distance_m": 18.479,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648277,
+      "game_time_s": 826,
+      "team_id": 2,
+      "player_id": 1611,
+      "result": "on_goal",
+      "x_m": 11.512,
+      "y_m": 3.889,
+      "distance_m": 15.501,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648278,
+      "game_time_s": 838,
+      "team_id": 2,
+      "player_id": 2411,
+      "result": "missed",
+      "x_m": 13.314,
+      "y_m": 3.92,
+      "distance_m": 13.773,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648279,
+      "game_time_s": 844,
+      "team_id": 2,
+      "player_id": 1611,
+      "result": "missed",
+      "x_m": 8.665,
+      "y_m": -9.997,
+      "distance_m": 20.461,
+      "shot_zone": "NEUTRAL_ZONE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648288,
+      "game_time_s": 902,
+      "team_id": 3,
+      "player_id": 506,
+      "result": "on_goal",
+      "x_m": -15.033,
+      "y_m": -14.731,
+      "distance_m": 18.679,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648289,
+      "game_time_s": 916,
+      "team_id": 3,
+      "player_id": 506,
+      "result": "missed",
+      "x_m": -24.722,
+      "y_m": 3.543,
+      "distance_m": 3.972,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648295,
+      "game_time_s": 934,
+      "team_id": 3,
+      "player_id": 1762,
+      "result": "on_goal",
+      "x_m": -12.174,
+      "y_m": -7.035,
+      "distance_m": 15.976,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648296,
+      "game_time_s": 942,
+      "team_id": 3,
+      "player_id": 2209,
+      "result": "missed",
+      "x_m": -20.126,
+      "y_m": -2.911,
+      "distance_m": 7.023,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648301,
+      "game_time_s": 1078,
+      "team_id": 3,
+      "player_id": 1823,
+      "result": "blocked",
+      "x_m": -24.113,
+      "y_m": -5.965,
+      "distance_m": 6.431,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648302,
+      "game_time_s": 1089,
+      "team_id": 3,
+      "player_id": 3411,
+      "result": "on_goal",
+      "x_m": -9.223,
+      "y_m": -3.38,
+      "distance_m": 17.622,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648308,
+      "game_time_s": 1114,
+      "team_id": 3,
+      "player_id": 1425,
+      "result": "missed",
+      "x_m": -16.67,
+      "y_m": 9.01,
+      "distance_m": 13.348,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648312,
+      "game_time_s": 1139,
+      "team_id": 2,
+      "player_id": 2411,
+      "result": "on_goal",
+      "x_m": 7.861,
+      "y_m": -12.094,
+      "distance_m": 22.234,
+      "shot_zone": "NEUTRAL_ZONE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648316,
+      "game_time_s": 1176,
+      "team_id": 2,
+      "player_id": 4332,
+      "result": "on_goal",
+      "x_m": 26.219,
+      "y_m": 1.843,
+      "distance_m": 1.867,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648317,
+      "game_time_s": 1182,
+      "team_id": 2,
+      "player_id": 1611,
+      "result": "missed",
+      "x_m": 7.995,
+      "y_m": 13.245,
+      "distance_m": 22.771,
+      "shot_zone": "NEUTRAL_ZONE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648327,
+      "game_time_s": 1222,
+      "team_id": 3,
+      "player_id": 546,
+      "result": "missed",
+      "x_m": -20.626,
+      "y_m": 5.079,
+      "distance_m": 7.779,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648328,
+      "game_time_s": 1237,
+      "team_id": 2,
+      "player_id": 4333,
+      "result": "on_goal",
+      "x_m": 10.019,
+      "y_m": 8.022,
+      "distance_m": 18.346,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648349,
+      "game_time_s": 1266,
+      "team_id": 2,
+      "player_id": 2504,
+      "result": "on_goal",
+      "x_m": 26.167,
+      "y_m": -1.273,
+      "distance_m": 1.32,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648332,
+      "game_time_s": 1292,
+      "team_id": 2,
+      "player_id": 3562,
+      "result": "on_goal",
+      "x_m": 15.908,
+      "y_m": 14.07,
+      "distance_m": 17.622,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648333,
+      "game_time_s": 1294,
+      "team_id": 2,
+      "player_id": 2504,
+      "result": "on_goal",
+      "x_m": 23.281,
+      "y_m": -2.138,
+      "distance_m": 3.879,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648337,
+      "game_time_s": 1357,
+      "team_id": 3,
+      "player_id": 3410,
+      "result": "on_goal",
+      "x_m": -16.944,
+      "y_m": 2.006,
+      "distance_m": 9.782,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648338,
+      "game_time_s": 1364,
+      "team_id": 3,
+      "player_id": 1738,
+      "result": "blocked",
+      "x_m": -7.526,
+      "y_m": -1.812,
+      "distance_m": 19.078,
+      "shot_zone": "NEUTRAL_ZONE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648339,
+      "game_time_s": 1369,
+      "team_id": 3,
+      "player_id": 3411,
+      "result": "on_goal",
+      "x_m": -17.919,
+      "y_m": 5.477,
+      "distance_m": 10.195,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648346,
+      "game_time_s": 1373,
+      "team_id": 3,
+      "player_id": 3411,
+      "result": "missed",
+      "x_m": -23.006,
+      "y_m": 2.138,
+      "distance_m": 4.111,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648347,
+      "game_time_s": 1382,
+      "team_id": 3,
+      "player_id": 3411,
+      "result": "on_goal",
+      "x_m": -16.517,
+      "y_m": -4.052,
+      "distance_m": 10.79,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648352,
+      "game_time_s": 1463,
+      "team_id": 2,
+      "player_id": 3428,
+      "result": "missed",
+      "x_m": 16.922,
+      "y_m": -11.503,
+      "distance_m": 14.98,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648353,
+      "game_time_s": 1469,
+      "team_id": 2,
+      "player_id": 3567,
+      "result": "on_goal",
+      "x_m": 9.61,
+      "y_m": 9.773,
+      "distance_m": 19.529,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648364,
+      "game_time_s": 1506,
+      "team_id": 2,
+      "player_id": 2504,
+      "result": "goal",
+      "x_m": 24.582,
+      "y_m": 1.17,
+      "distance_m": 2.262,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648409,
+      "game_time_s": 1526,
+      "team_id": 3,
+      "player_id": 506,
+      "result": "on_goal",
+      "x_m": -21.479,
+      "y_m": -0.855,
+      "distance_m": 5.11,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648412,
+      "game_time_s": 1556,
+      "team_id": 2,
+      "player_id": 1856,
+      "result": "missed",
+      "x_m": 15.968,
+      "y_m": -6.088,
+      "distance_m": 12.18,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648419,
+      "game_time_s": 1615,
+      "team_id": 3,
+      "player_id": 3411,
+      "result": "blocked",
+      "x_m": -12.052,
+      "y_m": -9.824,
+      "distance_m": 17.486,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648420,
+      "game_time_s": 1627,
+      "team_id": 2,
+      "player_id": 1611,
+      "result": "missed",
+      "x_m": 15.978,
+      "y_m": 0.927,
+      "distance_m": 10.581,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648421,
+      "game_time_s": 1650,
+      "team_id": 2,
+      "player_id": 2501,
+      "result": "on_goal",
+      "x_m": 23.403,
+      "y_m": -1.109,
+      "distance_m": 3.307,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648439,
+      "game_time_s": 1659,
+      "team_id": 2,
+      "player_id": 2501,
+      "result": "on_goal",
+      "x_m": 25.353,
+      "y_m": -2.271,
+      "distance_m": 2.552,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648426,
+      "game_time_s": 1663,
+      "team_id": 2,
+      "player_id": 2411,
+      "result": "missed",
+      "x_m": 14.859,
+      "y_m": -13.926,
+      "distance_m": 18.162,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648433,
+      "game_time_s": 1755,
+      "team_id": 3,
+      "player_id": 3410,
+      "result": "on_goal",
+      "x_m": -13.606,
+      "y_m": -4.54,
+      "distance_m": 13.686,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648442,
+      "game_time_s": 1797,
+      "team_id": 2,
+      "player_id": 3429,
+      "result": "on_goal",
+      "x_m": 16.496,
+      "y_m": -10.13,
+      "distance_m": 14.25,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648451,
+      "game_time_s": 1809,
+      "team_id": 3,
+      "player_id": 3410,
+      "result": "missed",
+      "x_m": -20.522,
+      "y_m": -3.389,
+      "distance_m": 6.887,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648447,
+      "game_time_s": 1815,
+      "team_id": 3,
+      "player_id": 1402,
+      "result": "on_goal",
+      "x_m": -19.212,
+      "y_m": 7.798,
+      "distance_m": 10.686,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648467,
+      "game_time_s": 1952,
+      "team_id": 3,
+      "player_id": 3410,
+      "result": "on_goal",
+      "x_m": -19.343,
+      "y_m": -10.404,
+      "distance_m": 12.638,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648470,
+      "game_time_s": 1984,
+      "team_id": 3,
+      "player_id": 1425,
+      "result": "blocked",
+      "x_m": -11.442,
+      "y_m": 14.048,
+      "distance_m": 20.606,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648475,
+      "game_time_s": 2036,
+      "team_id": 2,
+      "player_id": 4333,
+      "result": "missed",
+      "x_m": 8.827,
+      "y_m": 12.96,
+      "distance_m": 21.93,
+      "shot_zone": "NEUTRAL_ZONE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648476,
+      "game_time_s": 2042,
+      "team_id": 2,
+      "player_id": 3429,
+      "result": "missed",
+      "x_m": 10.049,
+      "y_m": -12.175,
+      "distance_m": 20.48,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648488,
+      "game_time_s": 2073,
+      "team_id": 3,
+      "player_id": 1762,
+      "result": "missed",
+      "x_m": -24.795,
+      "y_m": -0.479,
+      "distance_m": 1.787,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648482,
+      "game_time_s": 2126,
+      "team_id": 3,
+      "player_id": 92,
+      "result": "on_goal",
+      "x_m": -19.324,
+      "y_m": 12.349,
+      "distance_m": 14.291,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648489,
+      "game_time_s": 2185,
+      "team_id": 3,
+      "player_id": 92,
+      "result": "missed",
+      "x_m": -13.762,
+      "y_m": -5.68,
+      "distance_m": 13.963,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648490,
+      "game_time_s": 2196,
+      "team_id": 2,
+      "player_id": 3567,
+      "result": "missed",
+      "x_m": 15.834,
+      "y_m": -3.696,
+      "distance_m": 11.304,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648491,
+      "game_time_s": 2268,
+      "team_id": 2,
+      "player_id": 3562,
+      "result": "on_goal",
+      "x_m": 23.342,
+      "y_m": -1.568,
+      "distance_m": 3.542,
+      "shot_zone": "SLOT",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648492,
+      "game_time_s": 2300,
+      "team_id": 3,
+      "player_id": 4311,
+      "result": "on_goal",
+      "x_m": -18.611,
+      "y_m": 1.17,
+      "distance_m": 7.993,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648493,
+      "game_time_s": 2308,
+      "team_id": 3,
+      "player_id": 1402,
+      "result": "on_goal",
+      "x_m": -24.277,
+      "y_m": -1.812,
+      "distance_m": 2.881,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648499,
+      "game_time_s": 2329,
+      "team_id": 2,
+      "player_id": 2798,
+      "result": "on_goal",
+      "x_m": 26.332,
+      "y_m": 2.169,
+      "distance_m": 2.177,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648495,
+      "game_time_s": 2334,
+      "team_id": 2,
+      "player_id": 1611,
+      "result": "on_goal",
+      "x_m": 12.835,
+      "y_m": -5.447,
+      "distance_m": 14.727,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648500,
+      "game_time_s": 2366,
+      "team_id": 3,
+      "player_id": 3411,
+      "result": "missed",
+      "x_m": -13.914,
+      "y_m": -11.89,
+      "distance_m": 17.327,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648502,
+      "game_time_s": 2371,
+      "team_id": 3,
+      "player_id": 512,
+      "result": "blocked",
+      "x_m": -13.353,
+      "y_m": 4.194,
+      "distance_m": 13.816,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648520,
+      "game_time_s": 2515,
+      "team_id": 3,
+      "player_id": 3533,
+      "result": "missed",
+      "x_m": -11.656,
+      "y_m": 8.714,
+      "distance_m": 17.228,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648523,
+      "game_time_s": 2578,
+      "team_id": 2,
+      "player_id": 3563,
+      "result": "on_goal",
+      "x_m": 0.296,
+      "y_m": 10.465,
+      "distance_m": 28.233,
+      "shot_zone": "NEUTRAL_ZONE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648639,
+      "game_time_s": 2591,
+      "team_id": 2,
+      "player_id": 2125,
+      "result": "missed",
+      "x_m": 16.221,
+      "y_m": 6.108,
+      "distance_m": 11.972,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648526,
+      "game_time_s": 2592,
+      "team_id": 2,
+      "player_id": 3428,
+      "result": "missed",
+      "x_m": 25.122,
+      "y_m": 2.749,
+      "distance_m": 3.083,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648527,
+      "game_time_s": 2606,
+      "team_id": 2,
+      "player_id": 2798,
+      "result": "on_goal",
+      "x_m": 14.737,
+      "y_m": 6.567,
+      "distance_m": 13.487,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648530,
+      "game_time_s": 2652,
+      "team_id": 3,
+      "player_id": 92,
+      "result": "on_goal",
+      "x_m": -22.293,
+      "y_m": -6.678,
+      "distance_m": 7.902,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648531,
+      "game_time_s": 2678,
+      "team_id": 2,
+      "player_id": 3567,
+      "result": "missed",
+      "x_m": 23.799,
+      "y_m": 3.95,
+      "distance_m": 4.795,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648532,
+      "game_time_s": 2723,
+      "team_id": 3,
+      "player_id": 2209,
+      "result": "missed",
+      "x_m": -20.656,
+      "y_m": -0.968,
+      "distance_m": 5.941,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648533,
+      "game_time_s": 2745,
+      "team_id": 3,
+      "player_id": 512,
+      "result": "on_goal",
+      "x_m": -20.248,
+      "y_m": 11.096,
+      "distance_m": 12.745,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648542,
+      "game_time_s": 2884,
+      "team_id": 3,
+      "player_id": 1823,
+      "result": "goal",
+      "x_m": -23.128,
+      "y_m": -4.398,
+      "distance_m": 5.553,
+      "shot_zone": "SLOT",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648543,
+      "game_time_s": 2896,
+      "team_id": 2,
+      "player_id": 3429,
+      "result": "on_goal",
+      "x_m": 17.014,
+      "y_m": 2.321,
+      "distance_m": 9.783,
+      "shot_zone": "SLOT",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648544,
+      "game_time_s": 2905,
+      "team_id": 3,
+      "player_id": 506,
+      "result": "blocked",
+      "x_m": -11.107,
+      "y_m": -2.85,
+      "distance_m": 15.672,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648545,
+      "game_time_s": 2909,
+      "team_id": 3,
+      "player_id": 1823,
+      "result": "blocked",
+      "x_m": -8.879,
+      "y_m": 13.987,
+      "distance_m": 22.512,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648546,
+      "game_time_s": 2940,
+      "team_id": 2,
+      "player_id": 2411,
+      "result": "missed",
+      "x_m": 20.473,
+      "y_m": 6.282,
+      "distance_m": 8.717,
+      "shot_zone": "SLOT",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648548,
+      "game_time_s": 2946,
+      "team_id": 2,
+      "player_id": 1404,
+      "result": "on_goal",
+      "x_m": 19.751,
+      "y_m": -3.37,
+      "distance_m": 7.559,
+      "shot_zone": "SLOT",
+      "manpower": "5v4"
+    },
+    {
+      "shot_id": 1648549,
+      "game_time_s": 2952,
+      "team_id": 2,
+      "player_id": 2411,
+      "result": "on_goal",
+      "x_m": 18.468,
+      "y_m": 9.376,
+      "distance_m": 12.357,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648561,
+      "game_time_s": 2953,
+      "team_id": 2,
+      "player_id": 3429,
+      "result": "blocked",
+      "x_m": 22.232,
+      "y_m": -1.323,
+      "distance_m": 4.485,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648550,
+      "game_time_s": 2954,
+      "team_id": 2,
+      "player_id": 1404,
+      "result": "goal",
+      "x_m": 24.052,
+      "y_m": -1.477,
+      "distance_m": 2.874,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648562,
+      "game_time_s": 2991,
+      "team_id": 3,
+      "player_id": 512,
+      "result": "blocked",
+      "x_m": -10.668,
+      "y_m": -6.108,
+      "distance_m": 16.986,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648588,
+      "game_time_s": 3180,
+      "team_id": 2,
+      "player_id": 3567,
+      "result": "blocked",
+      "x_m": 22.385,
+      "y_m": -3.981,
+      "distance_m": 5.738,
+      "shot_zone": "SLOT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648578,
+      "game_time_s": 3236,
+      "team_id": 2,
+      "player_id": 1611,
+      "result": "missed",
+      "x_m": 10.037,
+      "y_m": -3.4,
+      "distance_m": 16.828,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648583,
+      "game_time_s": 3253,
+      "team_id": 2,
+      "player_id": 1611,
+      "result": "missed",
+      "x_m": 13.984,
+      "y_m": -10.628,
+      "distance_m": 16.433,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648589,
+      "game_time_s": 3321,
+      "team_id": 3,
+      "player_id": 3411,
+      "result": "on_goal",
+      "x_m": -19.251,
+      "y_m": -12.258,
+      "distance_m": 14.249,
+      "shot_zone": "LEFT",
+      "manpower": "4v5"
+    },
+    {
+      "shot_id": 1648592,
+      "game_time_s": 3382,
+      "team_id": 3,
+      "player_id": 3410,
+      "result": "on_goal",
+      "x_m": -20.583,
+      "y_m": -9.508,
+      "distance_m": 11.208,
+      "shot_zone": "LEFT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648595,
+      "game_time_s": 3448,
+      "team_id": 2,
+      "player_id": 3428,
+      "result": "missed",
+      "x_m": 17.227,
+      "y_m": -14.507,
+      "distance_m": 17.227,
+      "shot_zone": "RIGHT",
+      "manpower": "5v5"
+    },
+    {
+      "shot_id": 1648599,
+      "game_time_s": 3574,
+      "team_id": 3,
+      "player_id": 512,
+      "result": "missed",
+      "x_m": -8.227,
+      "y_m": -5.416,
+      "distance_m": 19.076,
+      "shot_zone": "NEUTRAL_ZONE",
+      "manpower": "6v5"
+    },
+    {
+      "shot_id": 1648600,
+      "game_time_s": 3588,
+      "team_id": 3,
+      "player_id": 3410,
+      "result": "on_goal",
+      "x_m": -13.576,
+      "y_m": -6.913,
+      "distance_m": 14.672,
+      "shot_zone": "BLUE_LINE",
+      "manpower": "6v5"
+    }
+  ],
+  "timeline": [
+    {
+      "time_s": 56,
+      "type": "goal",
+      "team_id": 3,
+      "balance": "EQ",
+      "scorer": "Jonas Müller",
+      "score": "0:1",
+      "penalty": null,
+      "duration_s": null
+    },
+    {
+      "time_s": 120,
+      "type": "goal",
+      "team_id": 3,
+      "balance": "EQ",
+      "scorer": "Ty Ronning",
+      "score": "0:2",
+      "penalty": null,
+      "duration_s": null
+    },
+    {
+      "time_s": 183,
+      "type": "goal",
+      "team_id": 2,
+      "balance": "EQ",
+      "scorer": "Anthony Greco",
+      "score": "1:2",
+      "penalty": null,
+      "duration_s": null
+    },
+    {
+      "time_s": 248,
+      "type": "penalty",
+      "team_id": 2,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "CROSS",
+      "duration_s": 120
+    },
+    {
+      "time_s": 507,
+      "type": "penalty",
+      "team_id": 3,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "HOOK",
+      "duration_s": 120
+    },
+    {
+      "time_s": 583,
+      "type": "goal",
+      "team_id": 2,
+      "balance": "PP1",
+      "scorer": "Matthias Plachta",
+      "score": "2:2",
+      "penalty": null,
+      "duration_s": null
+    },
+    {
+      "time_s": 1507,
+      "type": "goal",
+      "team_id": 2,
+      "balance": "EQ",
+      "scorer": "Tom Kühnhackl",
+      "score": "3:2",
+      "penalty": null,
+      "duration_s": null
+    },
+    {
+      "time_s": 1846,
+      "type": "penalty",
+      "team_id": 2,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "INTRF",
+      "duration_s": 120
+    },
+    {
+      "time_s": 1846,
+      "type": "penalty",
+      "team_id": 3,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "SLASH",
+      "duration_s": 120
+    },
+    {
+      "time_s": 2156,
+      "type": "penalty",
+      "team_id": 2,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "TRIP",
+      "duration_s": 120
+    },
+    {
+      "time_s": 2829,
+      "type": "penalty",
+      "team_id": 3,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "HI-ST",
+      "duration_s": 120
+    },
+    {
+      "time_s": 2886,
+      "type": "goal",
+      "team_id": 3,
+      "balance": "SH1",
+      "scorer": "Manuel Wiederer",
+      "score": "3:3",
+      "penalty": null,
+      "duration_s": null
+    },
+    {
+      "time_s": 2955,
+      "type": "goal",
+      "team_id": 2,
+      "balance": "EQ",
+      "scorer": "Justin Schütz",
+      "score": "4:3",
+      "penalty": null,
+      "duration_s": null
+    },
+    {
+      "time_s": 3025,
+      "type": "penalty",
+      "team_id": 2,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "HI-ST",
+      "duration_s": 120
+    },
+    {
+      "time_s": 3599,
+      "type": "penalty",
+      "team_id": 2,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "TRIP",
+      "duration_s": 120
+    },
+    {
+      "time_s": 3599,
+      "type": "penalty",
+      "team_id": 2,
+      "balance": null,
+      "scorer": null,
+      "score": null,
+      "penalty": "UN-SP",
+      "duration_s": 120
+    }
+  ]
+}

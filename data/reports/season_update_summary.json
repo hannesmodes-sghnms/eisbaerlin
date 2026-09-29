@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-09-29T12:28:10Z",
-  "schedule_matches": 364,
-  "completed_matches": 29,
-  "refreshed_matches": 7,
+  "generated_at_utc": "2026-09-29T13:11:02Z",
+  "schedule_matches": 52,
+  "completed_matches": 4,
+  "refreshed_matches": 1,
   "downloaded_matches": 0,
-  "skipped_matches": 22,
+  "skipped_matches": 3,
   "failed_downloads": 0,
-  "imported_matches": 29,
+  "imported_matches": 4,
   "failed_imports": 0,
   "db_path": "data/del_2026_27.duckdb",
   "quality_report_path": "data/reports/season_quality.json",
@@ -18,66 +18,6 @@
       "start_date": "2026-09-17 19:30:00",
       "home_team_name": "Eisbären Berlin",
       "away_team_name": "Straubing Tigers",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4390,
-      "start_date": "2026-09-18 19:30:00",
-      "home_team_name": "Kölner Haie",
-      "away_team_name": "Grizzlys Wolfsburg",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4391,
-      "start_date": "2026-09-18 19:30:00",
-      "home_team_name": "Nürnberg Ice Tigers",
-      "away_team_name": "Augsburger Panther",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4392,
-      "start_date": "2026-09-18 19:30:00",
-      "home_team_name": "Krefeld Pinguine",
-      "away_team_name": "Pinguins Bremerhaven",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4393,
-      "start_date": "2026-09-18 19:30:00",
-      "home_team_name": "Iserlohn Roosters",
-      "away_team_name": "ERC Ingolstadt",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4394,
-      "start_date": "2026-09-18 19:30:00",
-      "home_team_name": "EHC Red Bull München",
-      "away_team_name": "Adler Mannheim",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4395,
-      "start_date": "2026-09-18 19:30:00",
-      "home_team_name": "Schwenninger Wild Wings",
-      "away_team_name": "Löwen Frankfurt",
       "action": "skipped",
       "refresh": false,
       "downloaded_resources": 0,
@@ -94,86 +34,6 @@
       "error": null
     },
     {
-      "match_id": 4398,
-      "start_date": "2026-09-20 14:00:00",
-      "home_team_name": "Pinguins Bremerhaven",
-      "away_team_name": "Iserlohn Roosters",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4399,
-      "start_date": "2026-09-20 14:00:00",
-      "home_team_name": "ERC Ingolstadt",
-      "away_team_name": "Nürnberg Ice Tigers",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4397,
-      "start_date": "2026-09-20 16:30:00",
-      "home_team_name": "Augsburger Panther",
-      "away_team_name": "Schwenninger Wild Wings",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4400,
-      "start_date": "2026-09-20 16:30:00",
-      "home_team_name": "Straubing Tigers",
-      "away_team_name": "Krefeld Pinguine",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4401,
-      "start_date": "2026-09-20 16:30:00",
-      "home_team_name": "Grizzlys Wolfsburg",
-      "away_team_name": "EHC Red Bull München",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4402,
-      "start_date": "2026-09-20 19:00:00",
-      "home_team_name": "Kölner Haie",
-      "away_team_name": "Löwen Frankfurt",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4403,
-      "start_date": "2026-09-22 19:30:00",
-      "home_team_name": "Nürnberg Ice Tigers",
-      "away_team_name": "Adler Mannheim",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4404,
-      "start_date": "2026-09-24 19:30:00",
-      "home_team_name": "Iserlohn Roosters",
-      "away_team_name": "Augsburger Panther",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
       "match_id": 4405,
       "start_date": "2026-09-25 19:30:00",
       "home_team_name": "Kölner Haie",
@@ -184,120 +44,10 @@
       "error": null
     },
     {
-      "match_id": 4406,
-      "start_date": "2026-09-25 19:30:00",
-      "home_team_name": "Löwen Frankfurt",
-      "away_team_name": "Nürnberg Ice Tigers",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4407,
-      "start_date": "2026-09-25 19:30:00",
-      "home_team_name": "Adler Mannheim",
-      "away_team_name": "Krefeld Pinguine",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4408,
-      "start_date": "2026-09-25 19:30:00",
-      "home_team_name": "Pinguins Bremerhaven",
-      "away_team_name": "EHC Red Bull München",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4409,
-      "start_date": "2026-09-25 19:30:00",
-      "home_team_name": "Straubing Tigers",
-      "away_team_name": "ERC Ingolstadt",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
-      "match_id": 4410,
-      "start_date": "2026-09-25 19:30:00",
-      "home_team_name": "Grizzlys Wolfsburg",
-      "away_team_name": "Schwenninger Wild Wings",
-      "action": "skipped",
-      "refresh": false,
-      "downloaded_resources": 0,
-      "error": null
-    },
-    {
       "match_id": 4411,
       "start_date": "2026-09-27 14:00:00",
       "home_team_name": "Eisbären Berlin",
       "away_team_name": "Iserlohn Roosters",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
-      "error": null
-    },
-    {
-      "match_id": 4415,
-      "start_date": "2026-09-27 14:00:00",
-      "home_team_name": "EHC Red Bull München",
-      "away_team_name": "Löwen Frankfurt",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
-      "error": null
-    },
-    {
-      "match_id": 4416,
-      "start_date": "2026-09-27 14:00:00",
-      "home_team_name": "Grizzlys Wolfsburg",
-      "away_team_name": "Pinguins Bremerhaven",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
-      "error": null
-    },
-    {
-      "match_id": 4412,
-      "start_date": "2026-09-27 16:30:00",
-      "home_team_name": "Nürnberg Ice Tigers",
-      "away_team_name": "Straubing Tigers",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
-      "error": null
-    },
-    {
-      "match_id": 4413,
-      "start_date": "2026-09-27 16:30:00",
-      "home_team_name": "Krefeld Pinguine",
-      "away_team_name": "Schwenninger Wild Wings",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
-      "error": null
-    },
-    {
-      "match_id": 4414,
-      "start_date": "2026-09-27 16:30:00",
-      "home_team_name": "Augsburger Panther",
-      "away_team_name": "Kölner Haie",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
-      "error": null
-    },
-    {
-      "match_id": 4417,
-      "start_date": "2026-09-27 19:00:00",
-      "home_team_name": "ERC Ingolstadt",
-      "away_team_name": "Adler Mannheim",
       "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
