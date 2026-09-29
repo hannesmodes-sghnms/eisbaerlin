@@ -1,33 +1,87 @@
-# First live run in GitHub Codespaces
+# First live run — Phase 2
 
-Run from the repository root:
+The 2026/27 discovery has already confirmed match `4411` and the current resource layout, including `shiftsSC.json`, `faceoffs.json`, `period-events.json`, and the separate shots object.
+
+## 1. Setup
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev]"
 pytest
-python scripts/discover_season.py --season 2026 --game-type 1
 ```
 
-Then open:
+Expected: `10 passed`.
+
+## 2. Download raw data for match 4411
+
+The supplied discovery manifest is already included at:
 
 ```text
-data/discovery/season_2026_27_type_1_matches.csv
+data/discovery/match_4411_resources.json
 ```
 
-Pick one completed match ID and run:
+Run:
 
 ```bash
-python scripts/discover_match.py MATCH_ID --verify-shots
+python scripts/download_match.py 4411
 ```
 
-Please return these generated files for the ingestion/DuckDB step:
+This stores the source JSON unchanged below:
 
 ```text
-data/discovery/season_2026_27_type_1.json
-data/discovery/season_2026_27_type_1_matches.csv
-data/discovery/match_MATCH_ID_resources.json
+data/raw/4411/
 ```
 
-If season discovery reports no schedule files, copy the full terminal output. That means the current bucket path/game-type convention differs from the historical one and we will use the bucket namespace to adjust discovery rather than guessing IDs.
+Expected resources include:
+
+```text
+faceoffs.json
+game-header.json
+period-events.json
+roster.json
+shiftsSC.json
+team-stats/3.json
+team-stats/7.json
+top-goalies.json
+top-scorers.json
+shots.json
+download_manifest.json
+```
+
+`download_manifest.json` records source URLs, SHA-256 hashes, sizes, and available HTTP metadata.
+
+## 3. Generate the schema report
+
+```bash
+python scripts/inspect_match.py 4411
+```
+
+Outputs:
+
+```text
+data/schema/match_4411_schema.json
+data/schema/match_4411_schema.md
+```
+
+The JSON report is machine-readable. The Markdown report is convenient for inspecting field names, observed types, array sizes, examples, and nested paths.
+
+## 4. Send back
+
+For the next iteration, send back either:
+
+```text
+data/raw/4411/
+```
+
+as a ZIP, or at minimum:
+
+```text
+data/schema/match_4411_schema.json
+data/raw/4411/shiftsSC.json
+data/raw/4411/faceoffs.json
+data/raw/4411/period-events.json
+data/raw/4411/shots.json
+```
+
+With those real 2026/27 payloads, the next package will create the DuckDB tables and the first enriched shot timeline with on-ice players and previous-faceoff context.

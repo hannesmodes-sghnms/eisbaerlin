@@ -1,0 +1,14 @@
+[
+  {
+    "player": {"id": 101, "name": "Player One"},
+    "team": {"id": 3, "name": "Eisbaeren Berlin"},
+    "startTime": {"time": 120},
+    "endTime": {"time": 165}
+  },
+  {
+    "player": {"id": 102, "name": "Player Two"},
+    "team": {"id": 7, "name": "Iserlohn Roosters"},
+    "startTime": {"time": 121},
+    "endTime": {"time": 164}
+  }
+]

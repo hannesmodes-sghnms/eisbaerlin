@@ -1,0 +1,4771 @@
+{
+  "season": 2026,
+  "game_type": 1,
+  "schedule_prefix": "league-team-matches/2026/1/",
+  "schedule_keys": [
+    "league-team-matches/2026/1/1.json",
+    "league-team-matches/2026/1/11.json",
+    "league-team-matches/2026/1/12.json",
+    "league-team-matches/2026/1/13.json",
+    "league-team-matches/2026/1/14.json",
+    "league-team-matches/2026/1/15.json",
+    "league-team-matches/2026/1/2.json",
+    "league-team-matches/2026/1/3.json",
+    "league-team-matches/2026/1/44.json",
+    "league-team-matches/2026/1/5.json",
+    "league-team-matches/2026/1/6.json",
+    "league-team-matches/2026/1/7.json",
+    "league-team-matches/2026/1/8.json",
+    "league-team-matches/2026/1/9.json"
+  ],
+  "team_ids": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12,
+    13,
+    14,
+    15,
+    44
+  ],
+  "matches": [
+    {
+      "match_id": 4389,
+      "start_date": "2026-09-17 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4390,
+      "start_date": "2026-09-18 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4391,
+      "start_date": "2026-09-18 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4392,
+      "start_date": "2026-09-18 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4393,
+      "start_date": "2026-09-18 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4394,
+      "start_date": "2026-09-18 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4395,
+      "start_date": "2026-09-18 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4396,
+      "start_date": "2026-09-20 14:00:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4398,
+      "start_date": "2026-09-20 14:00:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/7.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4399,
+      "start_date": "2026-09-20 14:00:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4397,
+      "start_date": "2026-09-20 16:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4400,
+      "start_date": "2026-09-20 16:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4401,
+      "start_date": "2026-09-20 16:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4402,
+      "start_date": "2026-09-20 19:00:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4403,
+      "start_date": "2026-09-22 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4404,
+      "start_date": "2026-09-24 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4405,
+      "start_date": "2026-09-25 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4406,
+      "start_date": "2026-09-25 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4407,
+      "start_date": "2026-09-25 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4408,
+      "start_date": "2026-09-25 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4409,
+      "start_date": "2026-09-25 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4410,
+      "start_date": "2026-09-25 19:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4411,
+      "start_date": "2026-09-27 14:00:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4415,
+      "start_date": "2026-09-27 14:00:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4416,
+      "start_date": "2026-09-27 14:00:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/8.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4412,
+      "start_date": "2026-09-27 16:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4413,
+      "start_date": "2026-09-27 16:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4414,
+      "start_date": "2026-09-27 16:30:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4417,
+      "start_date": "2026-09-27 19:00:00",
+      "status": "AFTER_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4418,
+      "start_date": "2026-10-01 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4419,
+      "start_date": "2026-10-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/12.json"
+      ]
+    },
+    {
+      "match_id": 4420,
+      "start_date": "2026-10-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4421,
+      "start_date": "2026-10-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4422,
+      "start_date": "2026-10-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4423,
+      "start_date": "2026-10-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4424,
+      "start_date": "2026-10-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4425,
+      "start_date": "2026-10-04 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4426,
+      "start_date": "2026-10-04 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4429,
+      "start_date": "2026-10-04 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4427,
+      "start_date": "2026-10-04 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/11.json"
+      ]
+    },
+    {
+      "match_id": 4428,
+      "start_date": "2026-10-04 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4430,
+      "start_date": "2026-10-04 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4431,
+      "start_date": "2026-10-04 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4432,
+      "start_date": "2026-10-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4433,
+      "start_date": "2026-10-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4434,
+      "start_date": "2026-10-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4435,
+      "start_date": "2026-10-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4436,
+      "start_date": "2026-10-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4437,
+      "start_date": "2026-10-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/12.json"
+      ]
+    },
+    {
+      "match_id": 4438,
+      "start_date": "2026-10-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4440,
+      "start_date": "2026-10-11 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4442,
+      "start_date": "2026-10-11 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4439,
+      "start_date": "2026-10-11 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4441,
+      "start_date": "2026-10-11 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4443,
+      "start_date": "2026-10-11 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/7.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4444,
+      "start_date": "2026-10-11 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4445,
+      "start_date": "2026-10-11 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4446,
+      "start_date": "2026-10-15 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4447,
+      "start_date": "2026-10-16 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4448,
+      "start_date": "2026-10-16 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4449,
+      "start_date": "2026-10-16 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4450,
+      "start_date": "2026-10-16 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4451,
+      "start_date": "2026-10-16 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4452,
+      "start_date": "2026-10-16 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4454,
+      "start_date": "2026-10-18 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4455,
+      "start_date": "2026-10-18 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4457,
+      "start_date": "2026-10-18 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4453,
+      "start_date": "2026-10-18 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4456,
+      "start_date": "2026-10-18 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4458,
+      "start_date": "2026-10-18 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4459,
+      "start_date": "2026-10-18 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4460,
+      "start_date": "2026-10-20 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4731,
+      "start_date": "2026-10-20 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4461,
+      "start_date": "2026-10-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4462,
+      "start_date": "2026-10-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4463,
+      "start_date": "2026-10-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4464,
+      "start_date": "2026-10-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4465,
+      "start_date": "2026-10-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4466,
+      "start_date": "2026-10-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4467,
+      "start_date": "2026-10-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4469,
+      "start_date": "2026-10-25 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4472,
+      "start_date": "2026-10-25 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4468,
+      "start_date": "2026-10-25 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4470,
+      "start_date": "2026-10-25 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4471,
+      "start_date": "2026-10-25 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4473,
+      "start_date": "2026-10-25 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4474,
+      "start_date": "2026-10-27 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4475,
+      "start_date": "2026-10-28 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4476,
+      "start_date": "2026-10-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4477,
+      "start_date": "2026-10-30 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4478,
+      "start_date": "2026-10-30 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4479,
+      "start_date": "2026-10-30 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4480,
+      "start_date": "2026-10-30 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4481,
+      "start_date": "2026-10-30 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4482,
+      "start_date": "2026-10-30 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4484,
+      "start_date": "2026-11-01 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4487,
+      "start_date": "2026-11-01 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4489,
+      "start_date": "2026-11-01 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4485,
+      "start_date": "2026-11-01 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4486,
+      "start_date": "2026-11-01 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4488,
+      "start_date": "2026-11-01 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4483,
+      "start_date": "2026-11-01 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4490,
+      "start_date": "2026-11-12 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4491,
+      "start_date": "2026-11-13 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4492,
+      "start_date": "2026-11-13 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4493,
+      "start_date": "2026-11-13 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4494,
+      "start_date": "2026-11-13 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4495,
+      "start_date": "2026-11-13 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4496,
+      "start_date": "2026-11-13 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4500,
+      "start_date": "2026-11-15 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4501,
+      "start_date": "2026-11-15 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4497,
+      "start_date": "2026-11-15 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4498,
+      "start_date": "2026-11-15 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4499,
+      "start_date": "2026-11-15 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4502,
+      "start_date": "2026-11-15 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4503,
+      "start_date": "2026-11-15 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4504,
+      "start_date": "2026-11-19 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4505,
+      "start_date": "2026-11-20 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4506,
+      "start_date": "2026-11-20 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4507,
+      "start_date": "2026-11-20 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4508,
+      "start_date": "2026-11-20 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4509,
+      "start_date": "2026-11-20 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/12.json"
+      ]
+    },
+    {
+      "match_id": 4510,
+      "start_date": "2026-11-20 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/7.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4511,
+      "start_date": "2026-11-22 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4513,
+      "start_date": "2026-11-22 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/12.json"
+      ]
+    },
+    {
+      "match_id": 4515,
+      "start_date": "2026-11-22 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4512,
+      "start_date": "2026-11-22 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4514,
+      "start_date": "2026-11-22 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4516,
+      "start_date": "2026-11-22 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4517,
+      "start_date": "2026-11-22 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4518,
+      "start_date": "2026-11-24 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4519,
+      "start_date": "2026-11-24 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4520,
+      "start_date": "2026-11-24 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4521,
+      "start_date": "2026-11-24 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4522,
+      "start_date": "2026-11-24 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4523,
+      "start_date": "2026-11-25 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4524,
+      "start_date": "2026-11-25 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4525,
+      "start_date": "2026-11-26 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4526,
+      "start_date": "2026-11-27 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4527,
+      "start_date": "2026-11-27 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4528,
+      "start_date": "2026-11-27 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4529,
+      "start_date": "2026-11-27 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4530,
+      "start_date": "2026-11-27 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4531,
+      "start_date": "2026-11-27 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4532,
+      "start_date": "2026-11-29 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/11.json"
+      ]
+    },
+    {
+      "match_id": 4533,
+      "start_date": "2026-11-29 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4535,
+      "start_date": "2026-11-29 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4534,
+      "start_date": "2026-11-29 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4536,
+      "start_date": "2026-11-29 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4538,
+      "start_date": "2026-11-29 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4537,
+      "start_date": "2026-11-29 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4539,
+      "start_date": "2026-12-03 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4540,
+      "start_date": "2026-12-04 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4541,
+      "start_date": "2026-12-04 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4542,
+      "start_date": "2026-12-04 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4543,
+      "start_date": "2026-12-04 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4544,
+      "start_date": "2026-12-04 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4545,
+      "start_date": "2026-12-04 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4548,
+      "start_date": "2026-12-06 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4550,
+      "start_date": "2026-12-06 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4551,
+      "start_date": "2026-12-06 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4546,
+      "start_date": "2026-12-06 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4547,
+      "start_date": "2026-12-06 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4552,
+      "start_date": "2026-12-06 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4549,
+      "start_date": "2026-12-06 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4553,
+      "start_date": "2026-12-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4554,
+      "start_date": "2026-12-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/8.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4555,
+      "start_date": "2026-12-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4556,
+      "start_date": "2026-12-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4557,
+      "start_date": "2026-12-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4558,
+      "start_date": "2026-12-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4559,
+      "start_date": "2026-12-09 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4560,
+      "start_date": "2026-12-10 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4561,
+      "start_date": "2026-12-11 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4562,
+      "start_date": "2026-12-11 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4563,
+      "start_date": "2026-12-11 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/7.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4564,
+      "start_date": "2026-12-11 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4565,
+      "start_date": "2026-12-11 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4566,
+      "start_date": "2026-12-11 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4567,
+      "start_date": "2026-12-13 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4570,
+      "start_date": "2026-12-13 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4571,
+      "start_date": "2026-12-13 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4568,
+      "start_date": "2026-12-13 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4569,
+      "start_date": "2026-12-13 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4572,
+      "start_date": "2026-12-13 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4573,
+      "start_date": "2026-12-13 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4574,
+      "start_date": "2026-12-17 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/11.json"
+      ]
+    },
+    {
+      "match_id": 4575,
+      "start_date": "2026-12-18 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4576,
+      "start_date": "2026-12-18 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4577,
+      "start_date": "2026-12-18 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4578,
+      "start_date": "2026-12-18 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4579,
+      "start_date": "2026-12-18 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4580,
+      "start_date": "2026-12-18 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4581,
+      "start_date": "2026-12-20 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4582,
+      "start_date": "2026-12-20 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4584,
+      "start_date": "2026-12-20 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4583,
+      "start_date": "2026-12-20 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4585,
+      "start_date": "2026-12-20 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4586,
+      "start_date": "2026-12-20 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4587,
+      "start_date": "2026-12-20 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4588,
+      "start_date": "2026-12-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4589,
+      "start_date": "2026-12-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4590,
+      "start_date": "2026-12-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4591,
+      "start_date": "2026-12-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4592,
+      "start_date": "2026-12-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4593,
+      "start_date": "2026-12-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4594,
+      "start_date": "2026-12-23 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4596,
+      "start_date": "2026-12-27 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4600,
+      "start_date": "2026-12-27 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4597,
+      "start_date": "2026-12-27 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/7.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4598,
+      "start_date": "2026-12-27 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/12.json"
+      ]
+    },
+    {
+      "match_id": 4599,
+      "start_date": "2026-12-27 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4595,
+      "start_date": "2026-12-27 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4601,
+      "start_date": "2026-12-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/12.json"
+      ]
+    },
+    {
+      "match_id": 4602,
+      "start_date": "2026-12-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4603,
+      "start_date": "2026-12-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4604,
+      "start_date": "2026-12-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4605,
+      "start_date": "2026-12-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4606,
+      "start_date": "2026-12-30 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4608,
+      "start_date": "2027-01-02 18:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4607,
+      "start_date": "2027-01-02 20:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4609,
+      "start_date": "2027-01-02 20:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4612,
+      "start_date": "2027-01-03 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4610,
+      "start_date": "2027-01-03 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4611,
+      "start_date": "2027-01-03 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4613,
+      "start_date": "2027-01-03 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4614,
+      "start_date": "2027-01-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4615,
+      "start_date": "2027-01-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4616,
+      "start_date": "2027-01-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4617,
+      "start_date": "2027-01-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4618,
+      "start_date": "2027-01-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4619,
+      "start_date": "2027-01-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4620,
+      "start_date": "2027-01-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/7.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4621,
+      "start_date": "2027-01-07 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4622,
+      "start_date": "2027-01-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4623,
+      "start_date": "2027-01-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4624,
+      "start_date": "2027-01-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4625,
+      "start_date": "2027-01-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/8.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4626,
+      "start_date": "2027-01-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4627,
+      "start_date": "2027-01-08 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4629,
+      "start_date": "2027-01-10 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4630,
+      "start_date": "2027-01-10 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4628,
+      "start_date": "2027-01-10 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4631,
+      "start_date": "2027-01-10 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4632,
+      "start_date": "2027-01-10 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4633,
+      "start_date": "2027-01-10 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4634,
+      "start_date": "2027-01-10 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4635,
+      "start_date": "2027-01-14 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4636,
+      "start_date": "2027-01-15 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4637,
+      "start_date": "2027-01-15 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4638,
+      "start_date": "2027-01-15 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4639,
+      "start_date": "2027-01-15 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4640,
+      "start_date": "2027-01-15 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4641,
+      "start_date": "2027-01-15 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4642,
+      "start_date": "2027-01-17 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4643,
+      "start_date": "2027-01-17 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4644,
+      "start_date": "2027-01-17 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4645,
+      "start_date": "2027-01-17 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4646,
+      "start_date": "2027-01-17 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4647,
+      "start_date": "2027-01-17 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4648,
+      "start_date": "2027-01-17 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4649,
+      "start_date": "2027-01-21 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4650,
+      "start_date": "2027-01-22 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4651,
+      "start_date": "2027-01-22 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4652,
+      "start_date": "2027-01-22 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4653,
+      "start_date": "2027-01-22 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4654,
+      "start_date": "2027-01-22 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4655,
+      "start_date": "2027-01-22 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4657,
+      "start_date": "2027-01-24 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4659,
+      "start_date": "2027-01-24 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4660,
+      "start_date": "2027-01-24 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4656,
+      "start_date": "2027-01-24 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4661,
+      "start_date": "2027-01-24 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4658,
+      "start_date": "2027-01-24 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4662,
+      "start_date": "2027-01-24 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4663,
+      "start_date": "2027-01-26 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4664,
+      "start_date": "2027-01-28 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4665,
+      "start_date": "2027-01-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4666,
+      "start_date": "2027-01-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4667,
+      "start_date": "2027-01-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4668,
+      "start_date": "2027-01-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4669,
+      "start_date": "2027-01-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4670,
+      "start_date": "2027-01-29 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4671,
+      "start_date": "2027-01-31 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4672,
+      "start_date": "2027-01-31 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4673,
+      "start_date": "2027-01-31 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4674,
+      "start_date": "2027-01-31 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4675,
+      "start_date": "2027-01-31 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4676,
+      "start_date": "2027-02-01 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4677,
+      "start_date": "2027-02-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4678,
+      "start_date": "2027-02-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4679,
+      "start_date": "2027-02-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4680,
+      "start_date": "2027-02-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4681,
+      "start_date": "2027-02-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4682,
+      "start_date": "2027-02-03 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4683,
+      "start_date": "2027-02-03 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4684,
+      "start_date": "2027-02-04 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4685,
+      "start_date": "2027-02-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4686,
+      "start_date": "2027-02-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4687,
+      "start_date": "2027-02-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4688,
+      "start_date": "2027-02-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4689,
+      "start_date": "2027-02-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4690,
+      "start_date": "2027-02-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4692,
+      "start_date": "2027-02-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4694,
+      "start_date": "2027-02-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4696,
+      "start_date": "2027-02-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4691,
+      "start_date": "2027-02-07 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4693,
+      "start_date": "2027-02-07 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4695,
+      "start_date": "2027-02-07 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4697,
+      "start_date": "2027-02-07 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4698,
+      "start_date": "2027-02-17 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4699,
+      "start_date": "2027-02-17 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4700,
+      "start_date": "2027-02-17 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4701,
+      "start_date": "2027-02-17 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4702,
+      "start_date": "2027-02-17 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/7.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4703,
+      "start_date": "2027-02-17 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/13.json"
+      ]
+    },
+    {
+      "match_id": 4704,
+      "start_date": "2027-02-17 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4705,
+      "start_date": "2027-02-19 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4706,
+      "start_date": "2027-02-19 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4707,
+      "start_date": "2027-02-19 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4708,
+      "start_date": "2027-02-19 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4709,
+      "start_date": "2027-02-19 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4710,
+      "start_date": "2027-02-19 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4711,
+      "start_date": "2027-02-21 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4713,
+      "start_date": "2027-02-21 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4714,
+      "start_date": "2027-02-21 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/6.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4712,
+      "start_date": "2027-02-21 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4715,
+      "start_date": "2027-02-21 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4716,
+      "start_date": "2027-02-21 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4717,
+      "start_date": "2027-02-24 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/12.json"
+      ]
+    },
+    {
+      "match_id": 4718,
+      "start_date": "2027-02-25 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4719,
+      "start_date": "2027-02-26 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4720,
+      "start_date": "2027-02-26 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4721,
+      "start_date": "2027-02-26 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4722,
+      "start_date": "2027-02-26 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4723,
+      "start_date": "2027-02-26 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4724,
+      "start_date": "2027-02-26 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4727,
+      "start_date": "2027-02-28 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4730,
+      "start_date": "2027-02-28 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/8.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4726,
+      "start_date": "2027-02-28 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4728,
+      "start_date": "2027-02-28 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4729,
+      "start_date": "2027-02-28 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4725,
+      "start_date": "2027-02-28 19:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4732,
+      "start_date": "2027-03-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 3,
+      "home_team_name": "Eisbären Berlin",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4733,
+      "start_date": "2027-03-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/14.json"
+      ]
+    },
+    {
+      "match_id": 4734,
+      "start_date": "2027-03-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 11,
+      "away_team_name": "Kölner Haie",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/12.json"
+      ]
+    },
+    {
+      "match_id": 4735,
+      "start_date": "2027-03-02 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 2,
+      "away_team_name": "Adler Mannheim",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/2.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4736,
+      "start_date": "2027-03-03 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4737,
+      "start_date": "2027-03-03 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 13,
+      "home_team_name": "Augsburger Panther",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4738,
+      "start_date": "2027-03-03 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4739,
+      "start_date": "2027-03-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 1,
+      "away_team_name": "ERC Ingolstadt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/11.json"
+      ]
+    },
+    {
+      "match_id": 4740,
+      "start_date": "2027-03-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 5,
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/3.json",
+        "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4741,
+      "start_date": "2027-03-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 44,
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_id": 14,
+      "away_team_name": "Nürnberg Ice Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4742,
+      "start_date": "2027-03-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 12,
+      "away_team_name": "EHC Red Bull München",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4743,
+      "start_date": "2027-03-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 9,
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4744,
+      "start_date": "2027-03-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 8,
+      "away_team_name": "Grizzlys Wolfsburg",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/7.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4745,
+      "start_date": "2027-03-05 19:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 15,
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_id": 6,
+      "away_team_name": "Straubing Tigers",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    },
+    {
+      "match_id": 4746,
+      "start_date": "2027-03-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 11,
+      "home_team_name": "Kölner Haie",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/11.json",
+        "league-team-matches/2026/1/44.json"
+      ]
+    },
+    {
+      "match_id": 4747,
+      "start_date": "2027-03-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 14,
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_id": 7,
+      "away_team_name": "Iserlohn Roosters",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/14.json",
+        "league-team-matches/2026/1/7.json"
+      ]
+    },
+    {
+      "match_id": 4748,
+      "start_date": "2027-03-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 2,
+      "home_team_name": "Adler Mannheim",
+      "away_team_id": 15,
+      "away_team_name": "Schwenninger Wild Wings",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/15.json",
+        "league-team-matches/2026/1/2.json"
+      ]
+    },
+    {
+      "match_id": 4749,
+      "start_date": "2027-03-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 1,
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_id": 9,
+      "away_team_name": "Pinguins Bremerhaven",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/1.json",
+        "league-team-matches/2026/1/9.json"
+      ]
+    },
+    {
+      "match_id": 4750,
+      "start_date": "2027-03-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 12,
+      "home_team_name": "EHC Red Bull München",
+      "away_team_id": 3,
+      "away_team_name": "Eisbären Berlin",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/12.json",
+        "league-team-matches/2026/1/3.json"
+      ]
+    },
+    {
+      "match_id": 4751,
+      "start_date": "2027-03-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 5,
+      "away_team_name": "Krefeld Pinguine",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/5.json",
+        "league-team-matches/2026/1/8.json"
+      ]
+    },
+    {
+      "match_id": 4752,
+      "start_date": "2027-03-07 14:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 6,
+      "home_team_name": "Straubing Tigers",
+      "away_team_id": 13,
+      "away_team_name": "Augsburger Panther",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/13.json",
+        "league-team-matches/2026/1/6.json"
+      ]
+    }
+  ]
+}

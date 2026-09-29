@@ -1,0 +1,26 @@
+{
+  "match": {
+    "home_id": 3,
+    "visitor_id": 7,
+    "shots": [
+      {
+        "id": 90001,
+        "player_id": 101,
+        "team_id": 3,
+        "coordinate_x": 52,
+        "coordinate_y": -14,
+        "time": 108,
+        "match_shot_resutl_id": 1
+      },
+      {
+        "id": 90002,
+        "player_id": 102,
+        "team_id": 7,
+        "coordinate_x": -72,
+        "coordinate_y": 8,
+        "time": 240,
+        "match_shot_resutl_id": 4
+      }
+    ]
+  }
+}
