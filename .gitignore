@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Generated database / local analytical exports
+/data/*.duckdb
+/data/*.parquet
+
+# Raw JSON is intentionally versioned for reproducibility.
+# Per-run manifests contain timestamps and would create noisy commits.
+/data/raw/*/download_manifest.json
+
+# Ad-hoc schema inspection output stays local.
+/data/schema/*
+!/data/schema/.gitkeep
