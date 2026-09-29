@@ -1,301 +1,135 @@
-# DEL Event Lab
+# DEL Event Lab – EBB Game Dashboard
 
-Private tooling for automatically collecting, modelling and preparing DEL 2026/27 event data for analysis, shot maps and podcast preparation.
+Automatisierte DEL-Datenpipeline für die Saison 2026/27 mit Fokus auf **Eisbären Berlin (Team-ID 3)**.
 
-Current version: **0.5.0 — automated season pipeline + shot zones + podcast prep analytics**.
+Das Projekt lädt täglich nur bereits abgeschlossene EBB-Spiele, baut daraus eine DuckDB und erzeugt ein statisches Dashboard für die Podcast-Vorbereitung. Zusätzlich zeigt das Dashboard die nächsten drei EBB-Spiele aus dem aktuellen DEL-Spielplan.
 
-## What is confirmed for 2026/27
+## Dashboard
 
-Season discovery works via:
+Das UI zeigt ausschließlich bereits gespielte EBB-Spiele als auswählbare Analysefälle. Für jedes Spiel stehen bereit:
 
-```text
-league-team-matches/2026/1/
-```
+- Corsi und Corsi 5v5
+- Shots on Goal
+- Slot Attempts und Slot Attempts 5v5
+- Tore / EQ-Tore / PPG
+- Zeit in Führung / Gleichstand / Rückstand
+- SH%, SV% und PDO bei 5v5
+- EBB Player Usage mit TOI / EQ / PP / PK / Shifts / Ø Shift
+- 5v5-Eiszeit je Spieler nach Drittel
+- stabile Forward-Trios und Defense-Pairs
+- automatische Hinweise auf verkürzte Bank in P3
+- neue bzw. verschwundene 5v5-Units in P3
+- Shot-Zonen nach der historischen `leaffan/del_stats`-Kategorisierung
+- Shotmap
+- Tor-/Strafen-Timeline
 
-The first live run found all 14 DEL teams and 364 regular-season games.
+Oben im Dashboard werden zusätzlich die **nächsten drei EBB-Spiele** angezeigt. Zukünftige Spiele sind reine Vorschau und haben noch keine Stats.
 
-For completed match `4411` (Eisbären Berlin vs. Iserlohn Roosters), the live source exposed:
+## Automatische Pipeline
 
-```text
-matches/4411/game-header.json
-matches/4411/roster.json
-matches/4411/period-events.json
-matches/4411/shiftsSC.json
-matches/4411/faceoffs.json
-matches/4411/team-stats/3.json
-matches/4411/team-stats/7.json
-matches/4411/top-goalies.json
-matches/4411/top-scorers.json
-visualization/shots/4411.json
-```
+Der GitHub-Workflow läuft täglich um 04:30 Uhr Europe/Berlin und kann zusätzlich manuell gestartet werden.
 
-Shift filenames remain discovered dynamically. The importer accepts `shifts*.json` rather than hard-coding `shiftsSC.json`.
+1. vollständigen DEL-Spielplan 2026/27 entdecken
+2. auf EBB-Spiele filtern
+3. neue abgeschlossene EBB-Spiele herunterladen
+4. EBB-Spiele der letzten drei Tage erneut prüfen
+5. DuckDB aus den Raw-Daten neu bauen
+6. Qualitätschecks durchführen
+7. Dashboard-JSON erzeugen
+8. Raw-Daten, Discovery und Dashboard-Daten versionieren
+9. DuckDB als Release-Asset aktualisieren
+10. optional das Dashboard über GitHub Pages veröffentlichen
 
-## Project goal
-
-The project now has three layers:
-
-1. **Collection:** daily GitHub Actions job discovers completed games and persists raw JSON.
-2. **Analytics:** DuckDB combines shots, shifts, faceoffs, events, player stats and derived context.
-3. **Outputs:** CSV/Markdown podcast prep plus the future local shot-map UI.
-
-The event model enriches each shot with:
-
-- skaters on ice for and against
-- manpower state (`5v5`, `5v4`, ...)
-- on-ice join quality
-- previous faceoff and seconds since faceoff
-- faceoff zone relative to the shooting team
-- D-zone-faceoff -> shot flags
-- shot coordinates in source units and metres
-- distance to the attacked goal
-- leaffan-compatible shot zone
-
-## Shot zones
-
-v0.5.0 reuses the zone geometry from `leaffan/del_stats` (`backend/rink_dimensions.py` / `backend/get_shots.py`) instead of inventing a new definition.
-
-Available zones:
-
-```text
-SLOT
-LEFT
-RIGHT
-BLUE_LINE
-NEUTRAL_ZONE
-BEHIND_GOAL
-```
-
-The importer classifies points using the same polygon ordering and boundary fallback as the historical project. See `docs/shot_zones.md`.
-
-## xG
-
-**xG is deliberately not calculated.**
-
-The historical values used for podcast prep came from Wisehockey. Without access to the Wisehockey source data and model definition, this project does not create a look-alike xG metric that could be mistaken for the same statistic.
-
-A future external xG import can be added separately if reliable values become available.
-
-## Setup
+## Installation
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -e ".[dev]"
-pytest
+python -m pip install -e ".[dev]"
+pytest -q
 ```
 
-## Daily season pipeline
-
-Production collection runs via `.github/workflows/update-del-data.yml`, currently scheduled for 04:30 Europe/Berlin.
-
-Manual equivalent:
+## Pipeline lokal testen
 
 ```bash
-python scripts/update_season.py --season 2026 --game-type 1 --refresh-days 3
+python scripts/update_season.py \
+  --season 2026 \
+  --game-type 1 \
+  --refresh-days 3 \
+  --team-id 3
+
 python scripts/validate_season.py
-python scripts/generate_season_reports.py
-python scripts/generate_upcoming_reports.py --days 7 --last-games 5
+
+python scripts/generate_dashboard.py \
+  --db data/del_2026_27.duckdb \
+  --discovery data/discovery/season_2026_27_type_1.json \
+  --output-dir site/data \
+  --upcoming 3
 ```
 
-The pipeline:
-
-1. discovers the current schedule,
-2. downloads new completed games,
-3. refreshes the last three days,
-4. rebuilds the complete DuckDB from tracked raw JSON,
-5. validates import quality,
-6. exports analytics tables,
-7. generates podcast prep for upcoming games,
-8. commits raw/discovery/report data,
-9. publishes the latest DuckDB as a rolling Release asset.
-
-## Podcast prep
-
-Generate a report manually using team shortcut, id or name:
+Das statische Dashboard kann lokal zum Testen über einen einfachen HTTP-Server geöffnet werden:
 
 ```bash
-python scripts/generate_podcast_report.py \
-  --team-a EBB \
-  --team-b MAN \
-  --last-games 5
+python -m http.server 8000 --directory site
 ```
 
-Output:
+Dann im Browser den vom Codespace freigegebenen Port 8000 öffnen.
+
+## GitHub Pages
+
+Das Dashboard ist als statische Seite unter `site/` gebaut. Für die automatische Veröffentlichung:
+
+1. Repository **Settings → Pages** öffnen.
+2. Source auf **GitHub Actions** setzen.
+3. Unter **Settings → Secrets and variables → Actions → Variables** die Repository-Variable `ENABLE_DASHBOARD_PAGES` mit Wert `true` anlegen.
+4. Workflow `Update DEL 2026-27 dataset` einmal manuell starten.
+
+Danach wird die Seite mit jedem erfolgreichen täglichen Datenlauf aktualisiert.
+
+## Datenstruktur
 
 ```text
-data/reports/podcast/EBB_vs_MAN/
-├── summary.md
-├── summary.csv
-├── head_to_head.csv
-├── recent_games.csv
-├── notes.md
-└── metadata.json
+data/
+├── discovery/
+├── raw/<match_id>/
+├── reports/
+└── del_2026_27.duckdb   # lokal/generated, nicht in Git
+
+site/
+├── index.html
+└── data/
+    ├── games.json
+    └── games/<match_id>.json
 ```
 
-The season comparison includes:
+`games.json` enthält zwei Bereiche:
 
-- Corsi / Corsi 5v5
-- Corsi share / Corsi 5v5 share
-- Slot Attempts / Slot Attempts 5v5
-- goals, EQ goals and 5v5 goals
-- powerplay and shorthanded goals
-- time leading
-- number of scoring players
-- defenseman points
-- 5v5 shooting percentage
-- 5v5 save percentage
-- PDO 5v5
+- `completed_games`: nur bereits gespielte EBB-Spiele
+- `upcoming_games`: die nächsten drei EBB-Spiele aus dem Saisonspielplan
 
-`notes.md` contains descriptive talking points only; it does not invent xG or evaluative conclusions.
+## 5v5-Lineups
 
-## Database tables
+Die Lineup-Analyse rekonstruiert stabile 5v5-Kombinationen aus den Shift-Daten. Kurzlebige Kombinationen während fliegender Wechsel werden gefiltert: Eine Unit wird erst ab mindestens 8 Sekunden stabiler gemeinsamer Eiszeit gezählt.
 
-### Core
+Für P3 werden u. a. ausgewertet:
 
-- `matches`
-- `players`
-- `shifts`
-- `shots`
-- `faceoffs`
-- `events`
-- `shot_context`
-- `shot_on_ice`
+- aktive Forwards je Drittel
+- Konzentration der 5v5-TOI auf die Top 9 Forwards
+- Konzentration der Defense-TOI auf die Top 4 Verteidiger
+- neue Forward-Trios in P3
+- Units aus P1/P2, die in P3 praktisch verschwinden
 
-### Analytics
+Die automatische Aussage beschreibt nur die beobachtete Nutzung. Eine qualitative Einstufung wie „Defensive Unit“ wird nicht aus den Daten erfunden.
 
-- `teams`
-- `player_game_stats`
-- `team_game_stats`
+## Shot-Zonen
 
-### Views
+Übernommen aus `leaffan/del_stats`:
 
-- `event_log`
-- `shot_log`
-- `team_season_stats`
+- SLOT
+- LEFT
+- RIGHT
+- BLUE_LINE
+- NEUTRAL_ZONE
+- BEHIND_GOAL
 
-Useful example:
-
-```sql
-SELECT
-    team_shortcut,
-    games_played,
-    corsi_for,
-    corsi_5v5_for,
-    slot_attempts_for,
-    goals_for,
-    time_leading_s,
-    scoring_players,
-    defenseman_points,
-    pdo_5v5
-FROM team_season_stats
-ORDER BY team_shortcut;
-```
-
-Shot zones:
-
-```sql
-SELECT shot_zone, count(*) AS attempts
-FROM shot_log
-WHERE match_id = 4411
-GROUP BY shot_zone
-ORDER BY attempts DESC;
-```
-
-## Metric definitions
-
-### Corsi
-
-Every shot attempt in the DEL shot feed counts: on goal, goal, missed, blocked and post.
-
-### Corsi 5v5
-
-Same definition, restricted to shots whose derived manpower is exactly `5v5`.
-
-### Slot Attempts
-
-All shot attempts whose coordinates fall into the historical leaffan `SLOT` polygon.
-
-### Tore EQ
-
-Goals whose period-event balance is `EQ`.
-
-### Tore 5v5
-
-Goal shots whose derived manpower state is `5v5`.
-
-### PDO 5v5
-
-```text
-5v5 shooting % + 5v5 save %
-```
-
-The two components are exported separately as well.
-
-### Zeit in Führung
-
-Calculated from the chronological goal events and `currentScore`, from 00:00 through the recorded game end.
-
-### Scoring players
-
-Distinct players with at least one point in imported `team-stats` across the season.
-
-### Defenseman points
-
-Sum of player points for position code `DE` in imported `team-stats`.
-
-## Match 4411 reference
-
-The real match used to design the event model produced:
-
-- 41 rostered players
-- 37 players in shifts (four goalies absent)
-- 772 shifts
-- 84 shot attempts
-- 50 faceoffs
-- 21 period events
-- 83 exact shot/on-ice joins
-- 1 boundary-adjusted join
-- 0 low-confidence shots
-
-Using the leaffan shot-zone geometry, the 84 shots split into 53 EBB attempts and 31 IEC attempts; the zone logic is now part of the database import and will be validated across the full season.
-
-## Repository structure
-
-```text
-del-event-lab/
-├── .github/workflows/update-del-data.yml
-├── data/
-│   ├── discovery/
-│   ├── raw/
-│   ├── reports/
-│   │   ├── analytics/
-│   │   └── podcast/
-│   └── schema/
-├── docs/
-│   ├── automation.md
-│   ├── shot_zones.md
-│   └── match_4411_*.md/json
-├── scripts/
-│   ├── discover_season.py
-│   ├── discover_match.py
-│   ├── download_match.py
-│   ├── inspect_match.py
-│   ├── build_database.py
-│   ├── validate_match.py
-│   ├── update_season.py
-│   ├── validate_season.py
-│   ├── generate_season_reports.py
-│   ├── generate_podcast_report.py
-│   └── generate_upcoming_reports.py
-├── src/delstats/
-│   ├── analytics.py
-│   ├── podcast.py
-│   ├── rink.py
-│   └── ...
-└── tests/
-```
-
-## Next milestone
-
-Use the newly normalized `shot_x_m`, `shot_y_m`, `shot_distance_m` and `shot_zone` fields to build the local shot-map UI. After that, add transparent transition features such as rebound and D-zone-faceoff-to-shot sequences without labelling them as proprietary xG.
+xG wird bewusst nicht nachgebaut. Historische xG-Werte stammen aus Wisehockey und wären ohne deren Modell nicht vergleichbar.

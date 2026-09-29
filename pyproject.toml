@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "del-event-lab"
-version = "0.5.0"
-description = "Automated DEL event pipeline, analytics and podcast preparation"
+version = "0.6.0"
+description = "Automated DEL event pipeline and EBB podcast dashboard"
 requires-python = ">=3.11"
 dependencies = [
   "requests>=2.32,<3",
