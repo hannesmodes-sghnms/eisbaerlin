@@ -1,4 +1,4 @@
-# v0.3 first run in GitHub Codespaces
+# v0.4 first run in GitHub Codespaces
 
 From the repository root:
 
@@ -64,3 +64,18 @@ Expected manpower distribution at shot time:
 For this particular game, `D-ZONE FACEOFF -> SHOT <= 10s` should be empty. That is a property of match 4411, not an error in the query.
 
 If those checks match, the next useful test is to repeat the workflow on several other completed matches before we build the shot-map frontend.
+
+## Enable the daily GitHub job
+
+After pushing v0.4.0 to the private repository:
+
+1. Open **Settings -> Actions -> General**.
+2. Make sure workflows are allowed to use repository contents with write permissions (the workflow needs to commit newly discovered raw data).
+3. Open **Actions -> Update DEL 2026-27 dataset**.
+4. Use **Run workflow** once as the initial production test.
+5. After a successful run, check:
+   - a data commit containing `data/raw`, `data/discovery` and `data/reports`,
+   - the workflow artifact,
+   - the `dataset-2026-27-latest` Release with the DuckDB and quality report.
+
+The scheduled run is 04:30 Europe/Berlin every day.

@@ -1,8 +1,8 @@
 # DEL Event Lab
 
-Private/local tooling for building a DEL 2026/27 event-log database from the public Hokejovy zapis JSON source.
+Private tooling for building and automatically maintaining a DEL 2026/27 event-log database from the public Hokejovy zapis JSON source.
 
-Current version: **0.3.0 — DuckDB event model + shot context**.
+Current version: **0.4.0 — automated daily season pipeline + DuckDB event model**.
 
 ## What is confirmed for 2026/27
 
@@ -53,7 +53,7 @@ The analytical layer enriches each shot with:
 - faceoff winner
 - defensive-zone-faceoff -> shot flags
 
-A local shot-map UI comes next, once several matches have passed data validation.
+A local shot-map UI comes next, using the automatically maintained season dataset.
 
 ## Setup
 
@@ -207,6 +207,7 @@ del-event-lab/
 ├── data/
 │   ├── discovery/
 │   ├── raw/
+│   ├── reports/
 │   └── schema/
 ├── docs/
 ├── scripts/
@@ -215,7 +216,9 @@ del-event-lab/
 │   ├── download_match.py
 │   ├── inspect_match.py
 │   ├── build_database.py
-│   └── validate_match.py
+│   ├── validate_match.py
+│   ├── update_season.py
+│   └── validate_season.py
 ├── src/delstats/
 │   ├── config.py
 │   ├── database.py
@@ -224,15 +227,31 @@ del-event-lab/
 │   ├── raw.py
 │   ├── s3.py
 │   ├── schema.py
+│   ├── season.py
 │   └── transform.py
 └── tests/
 ```
 
 ## Next milestone
 
-Run v0.3 against several completed 2026/27 games. Once the schema and join-quality distribution remain stable, add the local Streamlit/Plotly shot map and season-wide batch ingestion.
+Let the automated season pipeline collect several completed games, validate coordinate ranges and join-quality distributions, then add the local Streamlit/Plotly shot map and transition/rush analysis.
 
 ## v0.3.1
 
 - Fixed `validate_match.py`: `shot_log.team_id` is now exposed as `shooting_team_id` in the D-zone validation query.
 - Added regression coverage for the D-zone shot-log query.
+
+## Automated daily season pipeline (v0.4.0)
+
+The project is no longer dependent on an active Codespace for data collection. `.github/workflows/update-del-data.yml` runs daily at 04:30 Europe/Berlin and can also be started manually from the Actions tab.
+
+The scheduled job discovers completed matches, downloads new raw JSON, refreshes the last three days, rebuilds the full DuckDB, validates the season and persists raw/discovery/report files back to the private repository. The generated DuckDB is uploaded both as a workflow artifact and as the rolling GitHub Release asset `dataset-2026-27-latest`.
+
+Manual equivalent:
+
+```bash
+python scripts/update_season.py --season 2026 --game-type 1 --refresh-days 3
+python scripts/validate_season.py
+```
+
+See `docs/automation.md` for repository settings and persistence details.
