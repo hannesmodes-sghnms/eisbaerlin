@@ -24,6 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Set up Python
@@ -42,11 +43,13 @@ jobs:
 
       - name: Update season data
         run: |
+          # League-wide completed games are required for the next-opponent
+          # previews (last five, season comparison and head-to-head). The UI
+          # itself remains EBB-only for completed-game selection.
           python scripts/update_season.py \
             --season 2026 \
             --game-type 1 \
-            --refresh-days 3 \
-            --team-id 3
+            --refresh-days 3
 
       - name: Validate season dataset
         run: python scripts/validate_season.py
@@ -68,7 +71,19 @@ jobs:
             echo "No persisted data changes."
           else
             git commit -m "data: update DEL 2026-27"
-            git push
+            for attempt in 1 2 3; do
+              echo "Push attempt $attempt/3"
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                echo "Data update pushed successfully."
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Could not push data update after 3 attempts."
+                exit 1
+              fi
+            done
           fi
 
       - name: Upload run artifact
