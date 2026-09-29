@@ -1,14 +1,17 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-09-29T10:20:35Z",
+  "generated_at_utc": "2026-09-29T12:28:10Z",
   "totals": {
     "matches": 29,
     "player_match_rows": 1205,
     "shifts": 22454,
     "shots": 3096,
     "faceoffs": 1713,
-    "events": 790
+    "events": 790,
+    "player_game_stats": 1461,
+    "team_game_stats": 58,
+    "unclassified_shots": 0
   },
   "on_ice_quality": {
     "boundary_adjusted": 50,

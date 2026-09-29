@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-09-29T12:28:10",
+  "season": "2026/27",
+  "team_a": {
+    "team_id": 5,
+    "name": "Krefeld Pinguine",
+    "shortcut": "KEV"
+  },
+  "team_b": {
+    "team_id": 1,
+    "name": "ERC Ingolstadt",
+    "shortcut": "ING"
+  },
+  "head_to_head_games": 0,
+  "last_games": 5,
+  "xg": {
+    "included": false,
+    "reason": "Wisehockey source/model unavailable"
+  }
+}

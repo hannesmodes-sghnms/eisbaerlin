@@ -1,6 +1,6 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-09-29T10:20:35Z
+Generated: 2026-09-29T12:28:10Z
 
 ## Totals
 
@@ -9,6 +9,9 @@ Generated: 2026-09-29T10:20:35Z
 - Shifts: 22454
 - Faceoffs: 1713
 - Events: 790
+- Player game stats: 1461
+- Team game stats: 58
+- Unclassified shot zones: 0
 
 ## On-ice quality
 

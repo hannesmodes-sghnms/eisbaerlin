@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-09-29T12:28:10",
+  "season": "2026/27",
+  "team_a": {
+    "team_id": 13,
+    "name": "Augsburger Panther",
+    "shortcut": "AEV"
+  },
+  "team_b": {
+    "team_id": 8,
+    "name": "Grizzlys Wolfsburg",
+    "shortcut": "WOB"
+  },
+  "head_to_head_games": 0,
+  "last_games": 5,
+  "xg": {
+    "included": false,
+    "reason": "Wisehockey source/model unavailable"
+  }
+}
