@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: del-2026-27-daily-update
@@ -43,25 +45,25 @@ jobs:
           python scripts/update_season.py \
             --season 2026 \
             --game-type 1 \
-            --refresh-days 3
+            --refresh-days 3 \
+            --team-id 3
 
       - name: Validate season dataset
         run: python scripts/validate_season.py
 
-      - name: Build analytics exports
-        run: python scripts/generate_season_reports.py
-
-      - name: Build upcoming podcast prep
+      - name: Build EBB dashboard data
         run: |
-          python scripts/generate_upcoming_reports.py \
-            --days 7 \
-            --last-games 5
+          python scripts/generate_dashboard.py \
+            --db data/del_2026_27.duckdb \
+            --discovery data/discovery/season_2026_27_type_1.json \
+            --output-dir site/data \
+            --upcoming 3
 
-      - name: Commit raw data and reports
+      - name: Commit raw data, reports and dashboard data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw data/discovery data/reports
+          git add data/raw data/discovery data/reports site/data
           if git diff --cached --quiet; then
             echo "No persisted data changes."
           else
@@ -78,9 +80,18 @@ jobs:
             data/reports/season_quality.json
             data/reports/season_quality.md
             data/reports/season_update_summary.json
-            data/reports/analytics/
-            data/reports/podcast/
+            site/
           retention-days: 30
+
+      - name: Configure GitHub Pages
+        if: ${{ vars.ENABLE_DASHBOARD_PAGES == 'true' }}
+        uses: actions/configure-pages@v5
+
+      - name: Upload dashboard for GitHub Pages
+        if: ${{ vars.ENABLE_DASHBOARD_PAGES == 'true' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
 
       - name: Publish latest DuckDB release asset
         env:
@@ -92,16 +103,24 @@ jobs:
               data/del_2026_27.duckdb \
               data/reports/season_quality.json \
               data/reports/season_quality.md \
-              data/reports/analytics/team_season_stats.csv \
-              data/reports/analytics/team_game_stats.csv \
               --clobber
           else
             gh release create "$TAG" \
               data/del_2026_27.duckdb \
               data/reports/season_quality.json \
               data/reports/season_quality.md \
-              data/reports/analytics/team_season_stats.csv \
-              data/reports/analytics/team_game_stats.csv \
               --title "DEL 2026/27 latest dataset" \
               --notes "Automatically refreshed DEL 2026/27 dataset. The assets on this release are replaced by the daily workflow."
           fi
+
+  deploy-dashboard:
+    if: ${{ vars.ENABLE_DASHBOARD_PAGES == 'true' }}
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy EBB dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4
