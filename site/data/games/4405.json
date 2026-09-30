@@ -142,8 +142,8 @@
     "Reihenänderung P2: Verteidigerpaar Smith – Müller wurde neu stabil eingesetzt (1:15).",
     "Reihenänderung P3: Sturmreihe Wiederer – Foudy – Fontaine fiel nahezu aus der 5v5-Rotation (P2 1:12 → P3 0:00).",
     "Reihenänderung P3: Verteidigerpaar Smith – Müller fiel nahezu aus der 5v5-Rotation (P2 1:15 → P3 0:00).",
-    "Häufigstes Line-Matching: Ronning – Kirk – Tiffels gegen Russell – MacLeod – Noebels mit 4:17; Corsi 2:8 (20.0%), Slot 1:2, Tore 0:0.",
-    "Lineup-Datencheck: stabile Units decken 95.3% der rekonstruierten 5v5-Forward-TOI und 97.1% der 5v5-Defense-TOI ab."
+    "Häufigstes Line-Matching: Ronning – Kirk – Tiffels gegen Russell – MacLeod – Noebels mit 4:17; Corsi 3:8 (27.3%), Slot 2:2, Tore 0:0.",
+    "Lineup-Datencheck: stabile Units decken 95.2% der rekonstruierten 5v5-Forward-TOI und 97.4% der 5v5-Defense-TOI ab."
   ],
   "players": [
     {
@@ -151,6 +151,9 @@
       "name": "Kai Wissmann",
       "jersey": 6,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 0,
+      "role_de_s": 971,
       "goals": 0,
       "assists": 1,
       "points": 1,
@@ -172,6 +175,9 @@
       "name": "Jonas Müller",
       "jersey": 18,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 0,
+      "role_de_s": 1053,
       "goals": 0,
       "assists": 1,
       "points": 1,
@@ -193,6 +199,9 @@
       "name": "Liam Kirk",
       "jersey": 94,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 803,
+      "role_de_s": 0,
       "goals": 1,
       "assists": 1,
       "points": 2,
@@ -214,6 +223,9 @@
       "name": "Ty Ronning",
       "jersey": 9,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 789,
+      "role_de_s": 0,
       "goals": 1,
       "assists": 1,
       "points": 2,
@@ -235,6 +247,9 @@
       "name": "Gabriel Fontaine",
       "jersey": 97,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 821,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 2,
       "points": 2,
@@ -256,6 +271,9 @@
       "name": "Leonhard Pföderl",
       "jersey": 93,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 613,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 1,
       "points": 1,
@@ -277,6 +295,9 @@
       "name": "Andreas Eder",
       "jersey": 43,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 682,
+      "role_de_s": 0,
       "goals": 1,
       "assists": 0,
       "points": 1,
@@ -298,6 +319,9 @@
       "name": "Frederik Tiffels",
       "jersey": 95,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 691,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 1,
       "points": 1,
@@ -319,6 +343,9 @@
       "name": "Adam Smith",
       "jersey": 4,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 0,
+      "role_de_s": 816,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -332,14 +359,17 @@
       "five_v_five_p1_s": 209,
       "five_v_five_p2_s": 364,
       "five_v_five_p3_s": 243,
-      "stable_unit_s": 799,
-      "stable_unit_coverage_pct": 97.9
+      "stable_unit_s": 802,
+      "stable_unit_coverage_pct": 98.3
     },
     {
       "player_id": 4701,
       "name": "Brandon Davidson",
       "jersey": 44,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 0,
+      "role_de_s": 843,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -353,14 +383,17 @@
       "five_v_five_p1_s": 230,
       "five_v_five_p2_s": 308,
       "five_v_five_p3_s": 305,
-      "stable_unit_s": 820,
-      "stable_unit_coverage_pct": 97.3
+      "stable_unit_s": 823,
+      "stable_unit_coverage_pct": 97.6
     },
     {
       "player_id": 1796,
       "name": "Markus Vikingstad",
       "jersey": 37,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 622,
+      "role_de_s": 0,
       "goals": 1,
       "assists": 1,
       "points": 2,
@@ -382,6 +415,9 @@
       "name": "Eric Mik",
       "jersey": 12,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 8,
+      "role_de_s": 818,
       "goals": 0,
       "assists": 1,
       "points": 1,
@@ -403,6 +439,9 @@
       "name": "Yannick Veilleux",
       "jersey": 38,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 634,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -424,6 +463,9 @@
       "name": "Korbinian Geibel",
       "jersey": 40,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 0,
+      "role_de_s": 858,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -445,6 +487,9 @@
       "name": "Jean-Luc Foudy",
       "jersey": 55,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 726,
+      "role_de_s": 0,
       "goals": 2,
       "assists": 0,
       "points": 2,
@@ -466,6 +511,9 @@
       "name": "Manuel Wiederer",
       "jersey": 21,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 616,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -487,6 +535,9 @@
       "name": "Eric Hördler",
       "jersey": 77,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 555,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -508,6 +559,9 @@
       "name": "Tobias Krestan",
       "jersey": 91,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 506,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -529,6 +583,9 @@
       "name": "Mitchell Reinke",
       "jersey": 5,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -550,6 +607,9 @@
       "name": "Noel Saffran",
       "jersey": 8,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -571,6 +631,9 @@
       "name": "Rihards Griva",
       "jersey": 23,
       "position": "FO",
+      "usage_role": "FO",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -592,6 +655,9 @@
       "name": "Niclas Wolter",
       "jersey": 32,
       "position": "GK",
+      "usage_role": "GK",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -613,6 +679,9 @@
       "name": "Jack LaFontaine",
       "jersey": 45,
       "position": "GK",
+      "usage_role": "GK",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -634,6 +703,9 @@
       "name": "Gregor Stocker",
       "jersey": 46,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -655,6 +727,9 @@
       "name": "Lennart Neiße",
       "jersey": 73,
       "position": "GK",
+      "usage_role": "GK",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -676,6 +751,9 @@
       "name": "Jonas Neffin",
       "jersey": 75,
       "position": "GK",
+      "usage_role": "GK",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -697,6 +775,9 @@
       "name": "Moritz Kretzschmar",
       "jersey": 83,
       "position": "DE",
+      "usage_role": "DE",
+      "role_fo_s": 0,
+      "role_de_s": 0,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -1382,8 +1463,8 @@
           44
         ],
         "label": "Smith – Davidson",
-        "total_s": 694,
-        "p1_s": 206,
+        "total_s": 697,
+        "p1_s": 209,
         "p2_s": 288,
         "p3_s": 200,
         "appearances": 20,
@@ -3231,6 +3312,9 @@
         "last_name": "Müller",
         "jersey": 18,
         "position": "DE",
+        "usage_role": "DE",
+        "role_fo_s": 0,
+        "role_de_s": 1053,
         "p1_s": 287,
         "p2_s": 421,
         "p3_s": 345,
@@ -3244,6 +3328,9 @@
         "last_name": "Wissmann",
         "jersey": 6,
         "position": "DE",
+        "usage_role": "DE",
+        "role_fo_s": 0,
+        "role_de_s": 971,
         "p1_s": 264,
         "p2_s": 342,
         "p3_s": 365,
@@ -3257,6 +3344,9 @@
         "last_name": "Geibel",
         "jersey": 40,
         "position": "DE",
+        "usage_role": "DE",
+        "role_fo_s": 0,
+        "role_de_s": 858,
         "p1_s": 321,
         "p2_s": 222,
         "p3_s": 315,
@@ -3270,12 +3360,15 @@
         "last_name": "Davidson",
         "jersey": 44,
         "position": "DE",
+        "usage_role": "DE",
+        "role_fo_s": 0,
+        "role_de_s": 843,
         "p1_s": 230,
         "p2_s": 308,
         "p3_s": 305,
         "total_s": 843,
-        "stable_unit_s": 820,
-        "stable_unit_coverage_pct": 97.3
+        "stable_unit_s": 823,
+        "stable_unit_coverage_pct": 97.6
       },
       {
         "player_id": 1425,
@@ -3283,6 +3376,9 @@
         "last_name": "Mik",
         "jersey": 12,
         "position": "DE",
+        "usage_role": "DE",
+        "role_fo_s": 8,
+        "role_de_s": 818,
         "p1_s": 289,
         "p2_s": 256,
         "p3_s": 281,
@@ -3296,6 +3392,9 @@
         "last_name": "Fontaine",
         "jersey": 97,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 821,
+        "role_de_s": 0,
         "p1_s": 225,
         "p2_s": 325,
         "p3_s": 271,
@@ -3309,12 +3408,15 @@
         "last_name": "Smith",
         "jersey": 4,
         "position": "DE",
+        "usage_role": "DE",
+        "role_fo_s": 0,
+        "role_de_s": 816,
         "p1_s": 209,
         "p2_s": 364,
         "p3_s": 243,
         "total_s": 816,
-        "stable_unit_s": 799,
-        "stable_unit_coverage_pct": 97.9
+        "stable_unit_s": 802,
+        "stable_unit_coverage_pct": 98.3
       },
       {
         "player_id": 3410,
@@ -3322,6 +3424,9 @@
         "last_name": "Kirk",
         "jersey": 94,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 803,
+        "role_de_s": 0,
         "p1_s": 239,
         "p2_s": 303,
         "p3_s": 261,
@@ -3335,6 +3440,9 @@
         "last_name": "Ronning",
         "jersey": 9,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 789,
+        "role_de_s": 0,
         "p1_s": 263,
         "p2_s": 258,
         "p3_s": 268,
@@ -3348,6 +3456,9 @@
         "last_name": "Foudy",
         "jersey": 55,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 726,
+        "role_de_s": 0,
         "p1_s": 216,
         "p2_s": 266,
         "p3_s": 244,
@@ -3361,6 +3472,9 @@
         "last_name": "Tiffels",
         "jersey": 95,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 691,
+        "role_de_s": 0,
         "p1_s": 227,
         "p2_s": 237,
         "p3_s": 227,
@@ -3374,6 +3488,9 @@
         "last_name": "Eder",
         "jersey": 43,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 682,
+        "role_de_s": 0,
         "p1_s": 243,
         "p2_s": 252,
         "p3_s": 187,
@@ -3387,6 +3504,9 @@
         "last_name": "Veilleux",
         "jersey": 38,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 634,
+        "role_de_s": 0,
         "p1_s": 199,
         "p2_s": 226,
         "p3_s": 209,
@@ -3400,6 +3520,9 @@
         "last_name": "Vikingstad",
         "jersey": 37,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 622,
+        "role_de_s": 0,
         "p1_s": 200,
         "p2_s": 172,
         "p3_s": 250,
@@ -3413,6 +3536,9 @@
         "last_name": "Wiederer",
         "jersey": 21,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 616,
+        "role_de_s": 0,
         "p1_s": 160,
         "p2_s": 225,
         "p3_s": 231,
@@ -3426,6 +3552,9 @@
         "last_name": "Pföderl",
         "jersey": 93,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 613,
+        "role_de_s": 0,
         "p1_s": 204,
         "p2_s": 212,
         "p3_s": 197,
@@ -3439,6 +3568,9 @@
         "last_name": "Hördler",
         "jersey": 77,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 555,
+        "role_de_s": 0,
         "p1_s": 156,
         "p2_s": 164,
         "p3_s": 235,
@@ -3452,6 +3584,9 @@
         "last_name": "Krestan",
         "jersey": 91,
         "position": "FO",
+        "usage_role": "FO",
+        "role_fo_s": 506,
+        "role_de_s": 0,
         "p1_s": 98,
         "p2_s": 217,
         "p3_s": 191,
@@ -3461,8 +3596,8 @@
       }
     ],
     "coverage": {
-      "forward_stable_pct": 95.3,
-      "defense_stable_pct": 97.1
+      "forward_stable_pct": 95.2,
+      "defense_stable_pct": 97.4
     },
     "lineup_changes": [
       {
@@ -3564,9 +3699,9 @@
         "p2": 6,
         "p3": 6
       },
-      "top9_forward_share_pre_p3_pct": 81.0,
+      "top9_forward_share_pre_p3_pct": 80.8,
       "top9_forward_share_p3_pct": 79.2,
-      "top4_defense_share_pre_p3_pct": 69.2,
+      "top4_defense_share_pre_p3_pct": 69.3,
       "top4_defense_share_p3_pct": 71.7,
       "shortened_bank_detected": false,
       "shortened_bank_reasons": [],
@@ -4585,14 +4720,14 @@
     "forward_matchups": [
       {
         "ebb_player_ids": [
-          1402,
           2209,
-          3410
+          3410,
+          1402
         ],
         "opponent_player_ids": [
-          507,
+          3572,
           1799,
-          3572
+          507
         ],
         "ebb_label": "Ronning – Kirk – Tiffels",
         "opponent_label": "Russell – MacLeod – Noebels",
@@ -4601,74 +4736,24 @@
         "p2_s": 103,
         "p3_s": 98,
         "appearances": 10,
-        "cf": 2,
+        "cf": 3,
         "ca": 8,
-        "cf_pct": 20.0,
-        "slot_for": 1,
+        "slot_for": 2,
         "slot_against": 2,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 43.9
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 41.7,
+        "cf_pct": 27.3,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          1823,
-          2126,
-          4311
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          4260
-        ],
-        "ebb_label": "Wiederer – Hördler – Krestan",
-        "opponent_label": "Fleischer – Niedenz – Ljungh",
-        "total_s": 217,
-        "p1_s": 37,
-        "p2_s": 102,
-        "p3_s": 78,
-        "appearances": 6,
-        "cf": 2,
-        "ca": 4,
-        "cf_pct": 33.3,
-        "slot_for": 0,
-        "slot_against": 2,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 57.6
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          1796,
-          4895
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Foudy",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 171,
-        "p1_s": 66,
-        "p2_s": 0,
-        "p3_s": 105,
-        "appearances": 5,
-        "cf": 2,
-        "ca": 1,
-        "cf_pct": 66.7,
-        "slot_for": 1,
-        "slot_against": 1,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 40.6
-      },
-      {
-        "ebb_player_ids": [
-          1402,
           2209,
-          3410
+          3410,
+          1402
         ],
         "opponent_player_ids": [
           1491,
@@ -4684,23 +4769,27 @@
         "appearances": 4,
         "cf": 4,
         "ca": 0,
-        "cf_pct": 100.0,
         "slot_for": 2,
         "slot_against": 0,
         "gf": 1,
         "ga": 0,
-        "matchup_share_pct": 24.3
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 23.1,
+        "cf_pct": 100.0,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          1402,
           2209,
-          3410
+          3410,
+          1402
         ],
         "opponent_player_ids": [
           115,
-          499,
-          3432
+          3432,
+          499
         ],
         "ebb_label": "Ronning – Kirk – Tiffels",
         "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
@@ -4711,23 +4800,120 @@
         "appearances": 4,
         "cf": 3,
         "ca": 2,
-        "cf_pct": 60.0,
         "slot_for": 0,
         "slot_against": 0,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 23.2
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 22.1,
+        "cf_pct": 60.0,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          92,
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          4260,
+          499,
+          2172
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Ljungh – Fischbuch – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 4.9,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          1799
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – MacLeod",
+        "total_s": 11,
+        "p1_s": 11,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 1.8,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 9,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 1.5,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
           115,
-          499,
-          3432
+          3432,
+          499
         ],
         "ebb_label": "Eder – Pföderl – Fontaine",
         "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
@@ -4738,50 +4924,27 @@
         "appearances": 5,
         "cf": 1,
         "ca": 1,
-        "cf_pct": 50.0,
         "slot_for": 0,
         "slot_against": 1,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 25.8
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          1796,
-          4895
-        ],
-        "opponent_player_ids": [
-          1644,
-          2172,
-          3106
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Foudy",
-        "opponent_label": "Storm – Münzenberger – MacInnis",
-        "total_s": 111,
-        "p1_s": 47,
-        "p2_s": 64,
-        "p3_s": 0,
-        "appearances": 3,
-        "cf": 1,
-        "ca": 1,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 24.6,
         "cf_pct": 50.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 26.4
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          92,
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
           1644,
-          2172,
-          3106
+          3106,
+          2172
         ],
         "ebb_label": "Eder – Pföderl – Fontaine",
         "opponent_label": "Storm – Münzenberger – MacInnis",
@@ -4792,77 +4955,27 @@
         "appearances": 3,
         "cf": 0,
         "ca": 3,
-        "cf_pct": 0.0,
         "slot_for": 0,
         "slot_against": 0,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 19.6
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          1796,
-          4895
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          4260
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Foudy",
-        "opponent_label": "Fleischer – Niedenz – Ljungh",
-        "total_s": 95,
-        "p1_s": 40,
-        "p2_s": 17,
-        "p3_s": 38,
-        "appearances": 4,
-        "cf": 0,
-        "ca": 1,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 18.7,
         "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 22.6
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          1823,
-          2126,
-          4895
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Wiederer – Foudy – Hördler",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 85,
-        "p1_s": 49,
-        "p2_s": 0,
-        "p3_s": 36,
-        "appearances": 2,
-        "cf": 0,
-        "ca": 4,
-        "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 2,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          92,
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
-          507,
+          3572,
           1799,
-          3572
+          507
         ],
         "ebb_label": "Eder – Pföderl – Fontaine",
         "opponent_label": "Russell – MacLeod – Noebels",
@@ -4873,44 +4986,21 @@
         "appearances": 3,
         "cf": 2,
         "ca": 2,
-        "cf_pct": 50.0,
         "slot_for": 0,
         "slot_against": 1,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 14.8
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 14.1,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          1823,
-          3411,
-          4895
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Wiederer – Foudy – Fontaine",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 59,
-        "p1_s": 0,
-        "p2_s": 59,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 1,
-        "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          92,
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
@@ -4925,187 +5015,29 @@
         "p2_s": 27,
         "p3_s": 24,
         "appearances": 3,
-        "cf": 1,
+        "cf": 2,
         "ca": 0,
-        "cf_pct": 100.0,
         "slot_for": 0,
         "slot_against": 0,
         "gf": 1,
         "ga": 0,
-        "matchup_share_pct": 9.8
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 9.4,
+        "cf_pct": 100.0,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          1762,
-          1796,
-          4311
-        ],
-        "opponent_player_ids": [
-          1644,
-          2172,
-          3106
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Krestan",
-        "opponent_label": "Storm – Münzenberger – MacInnis",
-        "total_s": 50,
-        "p1_s": 0,
-        "p2_s": 50,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 2,
-        "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          1823,
-          2126,
-          4311
-        ],
-        "opponent_player_ids": [
-          115,
-          499,
-          3432
-        ],
-        "ebb_label": "Wiederer – Hördler – Krestan",
-        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
-        "total_s": 46,
-        "p1_s": 46,
-        "p2_s": 0,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 12.2
-      },
-      {
-        "ebb_player_ids": [
-          1823,
-          2126,
-          4311
-        ],
-        "opponent_player_ids": [
-          1644,
-          2172,
-          3106
-        ],
-        "ebb_label": "Wiederer – Hördler – Krestan",
-        "opponent_label": "Storm – Münzenberger – MacInnis",
-        "total_s": 39,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 39,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 10.3
-      },
-      {
-        "ebb_player_ids": [
-          1823,
-          2126,
-          4311
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Wiederer – Hördler – Krestan",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 35,
-        "p1_s": 0,
-        "p2_s": 8,
-        "p3_s": 27,
-        "appearances": 2,
-        "cf": 0,
-        "ca": 1,
-        "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 1,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 9.3
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          1796,
-          4895
-        ],
-        "opponent_player_ids": [
-          115,
-          499,
-          3432
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Foudy",
-        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
-        "total_s": 35,
-        "p1_s": 0,
-        "p2_s": 35,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 8.3
-      },
-      {
-        "ebb_player_ids": [
-          1402,
-          3410,
-          4895
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          4260
-        ],
-        "ebb_label": "Foudy – Kirk – Tiffels",
-        "opponent_label": "Fleischer – Niedenz – Ljungh",
-        "total_s": 35,
-        "p1_s": 0,
-        "p2_s": 35,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          92,
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
           499,
-          507,
-          1799
+          1799,
+          507
         ],
         "ebb_label": "Eder – Pföderl – Fontaine",
         "opponent_label": "Fischbuch – MacLeod – Noebels",
@@ -5116,50 +5048,27 @@
         "appearances": 1,
         "cf": 1,
         "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 6.2,
         "cf_pct": 100.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 6.5
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
           546,
-          2209,
-          3411
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Ronning – Eder – Fontaine",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 33,
-        "p1_s": 0,
-        "p2_s": 33,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 1,
-        "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 80.5
-      },
-      {
-        "ebb_player_ids": [
           92,
-          546,
           3411
         ],
         "opponent_player_ids": [
           1678,
-          2172,
-          4260
+          4260,
+          2172
         ],
         "ebb_label": "Eder – Pföderl – Fontaine",
         "opponent_label": "Niedenz – Ljungh – MacInnis",
@@ -5170,23 +5079,27 @@
         "appearances": 1,
         "cf": 1,
         "ca": 0,
-        "cf_pct": 100.0,
         "slot_for": 1,
         "slot_against": 0,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 5.8
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 5.5,
+        "cf_pct": 100.0,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          92,
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
           115,
-          2172,
-          4260
+          4260,
+          2172
         ],
         "ebb_label": "Eder – Pföderl – Fontaine",
         "opponent_label": "Kammerer – Ljungh – MacInnis",
@@ -5197,104 +5110,27 @@
         "appearances": 1,
         "cf": 0,
         "ca": 1,
-        "cf_pct": 0.0,
         "slot_for": 0,
         "slot_against": 1,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 5.8
-      },
-      {
-        "ebb_player_ids": [
-          1402,
-          2209,
-          3410
-        ],
-        "opponent_player_ids": [
-          499,
-          2172,
-          4260
-        ],
-        "ebb_label": "Ronning – Kirk – Tiffels",
-        "opponent_label": "Ljungh – Fischbuch – MacInnis",
-        "total_s": 30,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 30,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 5.1
-      },
-      {
-        "ebb_player_ids": [
-          1823,
-          2126,
-          4311
-        ],
-        "opponent_player_ids": [
-          115,
-          2172,
-          3432
-        ],
-        "ebb_label": "Wiederer – Hördler – Krestan",
-        "opponent_label": "Kammerer – Tyrväinen – MacInnis",
-        "total_s": 28,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 28,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 3,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 5.5,
         "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 7.4
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          1823,
-          2209,
-          3410
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Ronning – Wiederer – Kirk",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 27,
-        "p1_s": 27,
-        "p2_s": 0,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          92,
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
           1678,
-          1799,
-          3572
+          3572,
+          1799
         ],
         "ebb_label": "Eder – Pföderl – Fontaine",
         "opponent_label": "Niedenz – Russell – MacLeod",
@@ -5305,23 +5141,27 @@
         "appearances": 1,
         "cf": 0,
         "ca": 0,
-        "cf_pct": null,
         "slot_for": 0,
         "slot_against": 0,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 5.2
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 5.0,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
       },
       {
         "ebb_player_ids": [
-          92,
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
           115,
-          2172,
-          3432
+          3432,
+          2172
         ],
         "ebb_label": "Eder – Pföderl – Fontaine",
         "opponent_label": "Kammerer – Tyrväinen – MacInnis",
@@ -5332,260 +5172,21 @@
         "appearances": 1,
         "cf": 1,
         "ca": 0,
-        "cf_pct": 100.0,
         "slot_for": 1,
         "slot_against": 0,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 4.4
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          3410,
-          4895
-        ],
-        "opponent_player_ids": [
-          1644,
-          2172,
-          3106
-        ],
-        "ebb_label": "Veilleux – Foudy – Kirk",
-        "opponent_label": "Storm – Münzenberger – MacInnis",
-        "total_s": 21,
-        "p1_s": 0,
-        "p2_s": 21,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 55.3
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          3410,
-          4895
-        ],
-        "opponent_player_ids": [
-          507,
-          3572,
-          4260
-        ],
-        "ebb_label": "Veilleux – Foudy – Kirk",
-        "opponent_label": "Ljungh – Russell – Noebels",
-        "total_s": 17,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 17,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 44.7
-      },
-      {
-        "ebb_player_ids": [
-          92,
-          1762,
-          1796
-        ],
-        "opponent_player_ids": [
-          115,
-          499,
-          3432
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Pföderl",
-        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
-        "total_s": 15,
-        "p1_s": 15,
-        "p2_s": 0,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 1,
-        "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          92,
-          1796,
-          3411
-        ],
-        "opponent_player_ids": [
-          115,
-          499,
-          3432
-        ],
-        "ebb_label": "Vikingstad – Pföderl – Fontaine",
-        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
-        "total_s": 15,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 15,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          2209,
-          3410,
-          3411
-        ],
-        "opponent_player_ids": [
-          1678,
-          2172,
-          3432
-        ],
-        "ebb_label": "Ronning – Kirk – Fontaine",
-        "opponent_label": "Tyrväinen – Niedenz – MacInnis",
-        "total_s": 15,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 15,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 1,
-        "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 51.7
-      },
-      {
-        "ebb_player_ids": [
-          1402,
-          1796,
-          2209
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Ronning – Vikingstad – Tiffels",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 15,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 15,
-        "appearances": 1,
-        "cf": 2,
-        "ca": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 4.2,
         "cf_pct": 100.0,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
+        "event_only": false,
+        "relevant": false
       },
       {
         "ebb_player_ids": [
-          2209,
-          3410,
-          3411
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Ronning – Kirk – Fontaine",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 14,
-        "p1_s": 0,
-        "p2_s": 14,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 48.3
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          1796,
-          3411
-        ],
-        "opponent_player_ids": [
-          507,
-          1644,
-          2172
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Fontaine",
-        "opponent_label": "Storm – MacInnis – Noebels",
-        "total_s": 13,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 13,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 61.9
-      },
-      {
-        "ebb_player_ids": [
-          1796,
-          3411,
-          4895
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          3432
-        ],
-        "ebb_label": "Vikingstad – Foudy – Fontaine",
-        "opponent_label": "Tyrväinen – Fleischer – Niedenz",
-        "total_s": 13,
-        "p1_s": 0,
-        "p2_s": 0,
-        "p3_s": 13,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 2,
-        "cf_pct": 0.0,
-        "slot_for": 0,
-        "slot_against": 2,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          92,
           546,
+          92,
           3411
         ],
         "opponent_player_ids": [
@@ -5602,185 +5203,151 @@
         "appearances": 1,
         "cf": 0,
         "ca": 0,
-        "cf_pct": null,
         "slot_for": 0,
         "slot_against": 0,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 2.3
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 2.2,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
       },
       {
         "ebb_player_ids": [
-          1823,
-          2126,
-          4311
+          1796,
+          1762,
+          4895
         ],
         "opponent_player_ids": [
-          1678,
+          3572,
           1799,
-          3572
+          507
         ],
-        "ebb_label": "Wiederer – Hördler – Krestan",
-        "opponent_label": "Niedenz – Russell – MacLeod",
-        "total_s": 12,
-        "p1_s": 0,
-        "p2_s": 12,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 3.2
-      },
-      {
-        "ebb_player_ids": [
-          92,
-          546,
-          2126
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          4260
-        ],
-        "ebb_label": "Eder – Hördler – Pföderl",
-        "opponent_label": "Fleischer – Niedenz – Ljungh",
-        "total_s": 12,
-        "p1_s": 0,
-        "p2_s": 12,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          1402,
-          2209,
-          3410
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          1799
-        ],
-        "ebb_label": "Ronning – Kirk – Tiffels",
-        "opponent_label": "Fleischer – Niedenz – MacLeod",
-        "total_s": 11,
-        "p1_s": 11,
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 171,
+        "p1_s": 66,
         "p2_s": 0,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
+        "p3_s": 105,
+        "appearances": 5,
+        "cf": 2,
+        "ca": 2,
+        "slot_for": 1,
+        "slot_against": 2,
         "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 1.9
+        "ga": 1,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 40.0,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
+          1796,
           1762,
-          3410,
-          4311
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          4260
-        ],
-        "ebb_label": "Veilleux – Krestan – Kirk",
-        "opponent_label": "Fleischer – Niedenz – Ljungh",
-        "total_s": 10,
-        "p1_s": 0,
-        "p2_s": 10,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          1823,
-          4311
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          4260
-        ],
-        "ebb_label": "Wiederer – Veilleux – Krestan",
-        "opponent_label": "Fleischer – Niedenz – Ljungh",
-        "total_s": 9,
-        "p1_s": 0,
-        "p2_s": 9,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          1402,
-          2209,
-          3410
+          4895
         ],
         "opponent_player_ids": [
           1644,
-          2172,
-          3106
+          3106,
+          2172
         ],
-        "ebb_label": "Ronning – Kirk – Tiffels",
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
         "opponent_label": "Storm – Münzenberger – MacInnis",
-        "total_s": 9,
-        "p1_s": 0,
-        "p2_s": 9,
+        "total_s": 111,
+        "p1_s": 47,
+        "p2_s": 64,
         "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
+        "appearances": 3,
+        "cf": 1,
+        "ca": 1,
         "slot_for": 0,
         "slot_against": 0,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 1.5
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 25.9,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
-          1762,
           1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 95,
+        "p1_s": 40,
+        "p2_s": 17,
+        "p3_s": 38,
+        "appearances": 4,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 22.2,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 35,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 8.2,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
           4895
         ],
         "opponent_player_ids": [
           499,
-          507,
-          1799
+          1799,
+          507
         ],
         "ebb_label": "Vikingstad – Veilleux – Foudy",
         "opponent_label": "Fischbuch – MacLeod – Noebels",
@@ -5791,176 +5358,16 @@
         "appearances": 1,
         "cf": 0,
         "ca": 0,
-        "cf_pct": null,
         "slot_for": 0,
         "slot_against": 0,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 2.1
-      },
-      {
-        "ebb_player_ids": [
-          546,
-          2209,
-          3411
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          4260
-        ],
-        "ebb_label": "Ronning – Eder – Fontaine",
-        "opponent_label": "Fleischer – Niedenz – Ljungh",
-        "total_s": 8,
-        "p1_s": 8,
-        "p2_s": 0,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 2.1,
         "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 19.5
-      },
-      {
-        "ebb_player_ids": [
-          546,
-          1402,
-          2209
-        ],
-        "opponent_player_ids": [
-          1491,
-          1678,
-          4260
-        ],
-        "ebb_label": "Ronning – Eder – Tiffels",
-        "opponent_label": "Fleischer – Niedenz – Ljungh",
-        "total_s": 8,
-        "p1_s": 8,
-        "p2_s": 0,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 100.0
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          1796,
-          3411
-        ],
-        "opponent_player_ids": [
-          499,
-          507,
-          1799
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Fontaine",
-        "opponent_label": "Fischbuch – MacLeod – Noebels",
-        "total_s": 8,
-        "p1_s": 8,
-        "p2_s": 0,
-        "p3_s": 0,
-        "appearances": 1,
-        "cf": 0,
-        "ca": 0,
-        "cf_pct": null,
-        "slot_for": 0,
-        "slot_against": 0,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 38.1
-      }
-    ],
-    "primary_forward_matchups": [
-      {
-        "ebb_player_ids": [
-          1402,
-          2209,
-          3410
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Ronning – Kirk – Tiffels",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 257,
-        "p1_s": 56,
-        "p2_s": 103,
-        "p3_s": 98,
-        "appearances": 10,
-        "cf": 2,
-        "ca": 8,
-        "cf_pct": 20.0,
-        "slot_for": 1,
-        "slot_against": 2,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 43.9
-      },
-      {
-        "ebb_player_ids": [
-          92,
-          546,
-          3411
-        ],
-        "opponent_player_ids": [
-          115,
-          499,
-          3432
-        ],
-        "ebb_label": "Eder – Pföderl – Fontaine",
-        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
-        "total_s": 134,
-        "p1_s": 48,
-        "p2_s": 34,
-        "p3_s": 52,
-        "appearances": 5,
-        "cf": 1,
-        "ca": 1,
-        "cf_pct": 50.0,
-        "slot_for": 0,
-        "slot_against": 1,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 25.8
-      },
-      {
-        "ebb_player_ids": [
-          1762,
-          1796,
-          4895
-        ],
-        "opponent_player_ids": [
-          507,
-          1799,
-          3572
-        ],
-        "ebb_label": "Vikingstad – Veilleux – Foudy",
-        "opponent_label": "Russell – MacLeod – Noebels",
-        "total_s": 171,
-        "p1_s": 66,
-        "p2_s": 0,
-        "p3_s": 105,
-        "appearances": 5,
-        "cf": 2,
-        "ca": 1,
-        "cf_pct": 66.7,
-        "slot_for": 1,
-        "slot_against": 1,
-        "gf": 0,
-        "ga": 0,
-        "matchup_share_pct": 40.6
+        "event_only": false,
+        "relevant": false
       },
       {
         "ebb_player_ids": [
@@ -5980,25 +5387,184 @@
         "p2_s": 102,
         "p3_s": 78,
         "appearances": 6,
-        "cf": 2,
+        "cf": 3,
         "ca": 4,
-        "cf_pct": 33.3,
         "slot_for": 0,
         "slot_against": 2,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 57.6
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 54.8,
+        "cf_pct": 42.9,
+        "event_only": false,
+        "relevant": true
       },
       {
         "ebb_player_ids": [
           1823,
           2126,
-          4895
+          4311
         ],
         "opponent_player_ids": [
-          507,
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 46,
+        "p1_s": 46,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 11.6,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 39,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 39,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 9.8,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          3572,
           1799,
-          3572
+          507
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 8,
+        "p3_s": 27,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 8.8,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          2172
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Kammerer – Tyrväinen – MacInnis",
+        "total_s": 28,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 28,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 3,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 7.1,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1678,
+          3572,
+          1799
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Niedenz – Russell – MacLeod",
+        "total_s": 12,
+        "p1_s": 0,
+        "p2_s": 12,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 3.0,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          2126
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
         ],
         "ebb_label": "Wiederer – Foudy – Hördler",
         "opponent_label": "Russell – MacLeod – Noebels",
@@ -6009,12 +5575,2201 @@
         "appearances": 2,
         "cf": 0,
         "ca": 4,
-        "cf_pct": 0.0,
         "slot_for": 0,
         "slot_against": 2,
         "gf": 0,
         "ga": 0,
-        "matchup_share_pct": 100.0
+        "role_notes": [],
+        "ebb_line_total_s": 85,
+        "matchup_share_pct": 100.0,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Foudy – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 59,
+        "p1_s": 0,
+        "p2_s": 59,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 72,
+        "matchup_share_pct": 81.9,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4311
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 50,
+        "p1_s": 0,
+        "p2_s": 50,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 50,
+        "matchup_share_pct": 100.0,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          4895,
+          3410
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Veilleux – Foudy – Kirk",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 21,
+        "p1_s": 0,
+        "p2_s": 21,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 48,
+        "matchup_share_pct": 43.8,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          4895,
+          3410
+        ],
+        "opponent_player_ids": [
+          4260,
+          3572,
+          507
+        ],
+        "ebb_label": "Veilleux – Foudy – Kirk",
+        "opponent_label": "Ljungh – Russell – Noebels",
+        "total_s": 17,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 17,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 48,
+        "matchup_share_pct": 35.4,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Eder – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 33,
+        "p1_s": 0,
+        "p2_s": 33,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 43,
+        "matchup_share_pct": 76.7,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Ronning – Eder – Fontaine",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 43,
+        "matchup_share_pct": 18.6,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          4895,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Foudy – Kirk – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 35,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 43,
+        "matchup_share_pct": 81.4,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          3411
+        ],
+        "opponent_player_ids": [
+          3432,
+          1678,
+          2172
+        ],
+        "ebb_label": "Ronning – Kirk – Fontaine",
+        "opponent_label": "Tyrväinen – Niedenz – MacInnis",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 37,
+        "matchup_share_pct": 40.5,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Kirk – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 14,
+        "p1_s": 0,
+        "p2_s": 14,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 37,
+        "matchup_share_pct": 37.8,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          3411
+        ],
+        "opponent_player_ids": [
+          1644,
+          2172,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Fontaine",
+        "opponent_label": "Storm – MacInnis – Noebels",
+        "total_s": 13,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 13,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 27,
+        "matchup_share_pct": 48.1,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          3411
+        ],
+        "opponent_player_ids": [
+          499,
+          1799,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Fontaine",
+        "opponent_label": "Fischbuch – MacLeod – Noebels",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 27,
+        "matchup_share_pct": 29.6,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          1823,
+          3410
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Wiederer – Kirk",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 27,
+        "p1_s": 27,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 27,
+        "matchup_share_pct": 100.0,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 24,
+        "matchup_share_pct": 62.5,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          4895,
+          3411
+        ],
+        "opponent_player_ids": [
+          3432,
+          1491,
+          1678
+        ],
+        "ebb_label": "Vikingstad – Foudy – Fontaine",
+        "opponent_label": "Tyrväinen – Fleischer – Niedenz",
+        "total_s": 13,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 13,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 19,
+        "matchup_share_pct": 68.4,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          4895,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Foudy – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 0,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 0,
+        "cf": 1,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 1,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 19,
+        "matchup_share_pct": 0.0,
+        "cf_pct": 100.0,
+        "event_only": true,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          2126,
+          92
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 12,
+        "p1_s": 0,
+        "p2_s": 12,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 18,
+        "matchup_share_pct": 66.7,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          4311,
+          3410
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Veilleux – Krestan – Kirk",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 10,
+        "p1_s": 0,
+        "p2_s": 10,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 17,
+        "matchup_share_pct": 58.8,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          1796,
+          1402
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Vikingstad – Tiffels",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "cf": 2,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 15,
+        "matchup_share_pct": 100.0,
+        "cf_pct": 100.0,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          92
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Pföderl",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 15,
+        "p1_s": 15,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 15,
+        "matchup_share_pct": 100.0,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          1762,
+          4311
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Wiederer – Veilleux – Krestan",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 9,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 9,
+        "matchup_share_pct": 100.0,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Ronning – Eder – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 8,
+        "matchup_share_pct": 100.0,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": false
+      }
+    ],
+    "relevant_forward_matchups": [
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 257,
+        "p1_s": 56,
+        "p2_s": 103,
+        "p3_s": 98,
+        "appearances": 10,
+        "cf": 3,
+        "ca": 8,
+        "slot_for": 2,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 41.7,
+        "cf_pct": 27.3,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 142,
+        "p1_s": 98,
+        "p2_s": 0,
+        "p3_s": 44,
+        "appearances": 4,
+        "cf": 4,
+        "ca": 0,
+        "slot_for": 2,
+        "slot_against": 0,
+        "gf": 1,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 23.1,
+        "cf_pct": 100.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 136,
+        "p1_s": 42,
+        "p2_s": 60,
+        "p3_s": 34,
+        "appearances": 4,
+        "cf": 3,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 22.1,
+        "cf_pct": 60.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          4260,
+          499,
+          2172
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Ljungh – Fischbuch – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 4.9,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 134,
+        "p1_s": 48,
+        "p2_s": 34,
+        "p3_s": 52,
+        "appearances": 5,
+        "cf": 1,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 24.6,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 102,
+        "p1_s": 74,
+        "p2_s": 28,
+        "p3_s": 0,
+        "appearances": 3,
+        "cf": 0,
+        "ca": 3,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 18.7,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 77,
+        "p1_s": 34,
+        "p2_s": 33,
+        "p3_s": 10,
+        "appearances": 3,
+        "cf": 2,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 14.1,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 51,
+        "p1_s": 0,
+        "p2_s": 27,
+        "p3_s": 24,
+        "appearances": 3,
+        "cf": 2,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 1,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 9.4,
+        "cf_pct": 100.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          499,
+          1799,
+          507
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Fischbuch – MacLeod – Noebels",
+        "total_s": 34,
+        "p1_s": 0,
+        "p2_s": 34,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 6.2,
+        "cf_pct": 100.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          1678,
+          4260,
+          2172
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Niedenz – Ljungh – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "slot_for": 1,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 5.5,
+        "cf_pct": 100.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          4260,
+          2172
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Ljungh – MacInnis",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 5.5,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 171,
+        "p1_s": 66,
+        "p2_s": 0,
+        "p3_s": 105,
+        "appearances": 5,
+        "cf": 2,
+        "ca": 2,
+        "slot_for": 1,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 1,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 40.0,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 111,
+        "p1_s": 47,
+        "p2_s": 64,
+        "p3_s": 0,
+        "appearances": 3,
+        "cf": 1,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 25.9,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 95,
+        "p1_s": 40,
+        "p2_s": 17,
+        "p3_s": 38,
+        "appearances": 4,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 22.2,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 35,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 8.2,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 217,
+        "p1_s": 37,
+        "p2_s": 102,
+        "p3_s": 78,
+        "appearances": 6,
+        "cf": 3,
+        "ca": 4,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 54.8,
+        "cf_pct": 42.9,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 46,
+        "p1_s": 46,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 11.6,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 39,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 39,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 9.8,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 8,
+        "p3_s": 27,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 8.8,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          2172
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Kammerer – Tyrväinen – MacInnis",
+        "total_s": 28,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 28,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 3,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 7.1,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          2126
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Foudy – Hördler",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 85,
+        "p1_s": 49,
+        "p2_s": 0,
+        "p3_s": 36,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 4,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 85,
+        "matchup_share_pct": 100.0,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Foudy – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 59,
+        "p1_s": 0,
+        "p2_s": 59,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 72,
+        "matchup_share_pct": 81.9,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4311
+        ],
+        "opponent_player_ids": [
+          1644,
+          3106,
+          2172
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Storm – Münzenberger – MacInnis",
+        "total_s": 50,
+        "p1_s": 0,
+        "p2_s": 50,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 50,
+        "matchup_share_pct": 100.0,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Eder – Fontaine",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 33,
+        "p1_s": 0,
+        "p2_s": 33,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 43,
+        "matchup_share_pct": 76.7,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          4895,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Foudy – Kirk – Tiffels",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 35,
+        "p1_s": 0,
+        "p2_s": 35,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 43,
+        "matchup_share_pct": 81.4,
+        "cf_pct": null,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          4895,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Vikingstad – Foudy – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 0,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 0,
+        "cf": 1,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 1,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 19,
+        "matchup_share_pct": 0.0,
+        "cf_pct": 100.0,
+        "event_only": true,
+        "relevant": true
+      }
+    ],
+    "line_performance": [
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "total_s": 616,
+        "p1_s": 211,
+        "p2_s": 191,
+        "p3_s": 214,
+        "appearances": 19,
+        "cf": 10,
+        "ca": 10,
+        "slot_for": 4,
+        "slot_against": 2,
+        "gf": 1,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 50.0,
+        "matchup_count": 6,
+        "relevant_matchup_count": 4,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "total_s": 545,
+        "p1_s": 181,
+        "p2_s": 191,
+        "p3_s": 173,
+        "appearances": 18,
+        "cf": 8,
+        "ca": 7,
+        "slot_for": 2,
+        "slot_against": 3,
+        "gf": 1,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 53.3,
+        "matchup_count": 10,
+        "relevant_matchup_count": 7,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "total_s": 428,
+        "p1_s": 153,
+        "p2_s": 116,
+        "p3_s": 159,
+        "appearances": 12,
+        "cf": 3,
+        "ca": 4,
+        "slot_for": 1,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 1,
+        "role_notes": [],
+        "cf_pct": 42.9,
+        "matchup_count": 5,
+        "relevant_matchup_count": 4,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "total_s": 396,
+        "p1_s": 84,
+        "p2_s": 136,
+        "p3_s": 176,
+        "appearances": 10,
+        "cf": 3,
+        "ca": 8,
+        "slot_for": 0,
+        "slot_against": 3,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 27.3,
+        "matchup_count": 6,
+        "relevant_matchup_count": 5,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          2126
+        ],
+        "ebb_label": "Wiederer – Foudy – Hördler",
+        "total_s": 85,
+        "p1_s": 49,
+        "p2_s": 0,
+        "p3_s": 36,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 4,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 0.0,
+        "matchup_count": 1,
+        "relevant_matchup_count": 1,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          3411
+        ],
+        "ebb_label": "Wiederer – Foudy – Fontaine",
+        "total_s": 72,
+        "p1_s": 0,
+        "p2_s": 72,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 0.0,
+        "matchup_count": 1,
+        "relevant_matchup_count": 1,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4311
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "total_s": 50,
+        "p1_s": 0,
+        "p2_s": 50,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 0.0,
+        "matchup_count": 1,
+        "relevant_matchup_count": 1,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          4895,
+          3410
+        ],
+        "ebb_label": "Veilleux – Foudy – Kirk",
+        "total_s": 48,
+        "p1_s": 0,
+        "p2_s": 27,
+        "p3_s": 21,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 2,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          3411
+        ],
+        "ebb_label": "Ronning – Eder – Fontaine",
+        "total_s": 43,
+        "p1_s": 8,
+        "p2_s": 35,
+        "p3_s": 0,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 0.0,
+        "matchup_count": 2,
+        "relevant_matchup_count": 1,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          4895,
+          3410,
+          1402
+        ],
+        "ebb_label": "Foudy – Kirk – Tiffels",
+        "total_s": 43,
+        "p1_s": 0,
+        "p2_s": 43,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 1,
+        "relevant_matchup_count": 1,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          3411
+        ],
+        "ebb_label": "Ronning – Kirk – Fontaine",
+        "total_s": 37,
+        "p1_s": 0,
+        "p2_s": 18,
+        "p3_s": 19,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 0.0,
+        "matchup_count": 2,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          3411
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Fontaine",
+        "total_s": 27,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 19,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 2,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          1823,
+          3410
+        ],
+        "ebb_label": "Ronning – Wiederer – Kirk",
+        "total_s": 27,
+        "p1_s": 27,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 1,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          92,
+          3411
+        ],
+        "ebb_label": "Vikingstad – Pföderl – Fontaine",
+        "total_s": 24,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 24,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 1,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          4895,
+          3411
+        ],
+        "ebb_label": "Vikingstad – Foudy – Fontaine",
+        "total_s": 19,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 19,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 2,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 1,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 33.3,
+        "matchup_count": 2,
+        "relevant_matchup_count": 1,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          2126,
+          92
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "total_s": 18,
+        "p1_s": 0,
+        "p2_s": 18,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 1,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          4311,
+          3410
+        ],
+        "ebb_label": "Veilleux – Krestan – Kirk",
+        "total_s": 17,
+        "p1_s": 0,
+        "p2_s": 17,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 1,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          1796,
+          1402
+        ],
+        "ebb_label": "Ronning – Vikingstad – Tiffels",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "cf": 2,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 100.0,
+        "matchup_count": 1,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          92
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Pföderl",
+        "total_s": 15,
+        "p1_s": 15,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": 0.0,
+        "matchup_count": 1,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          2126,
+          4311
+        ],
+        "ebb_label": "Vikingstad – Hördler – Krestan",
+        "total_s": 10,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 10,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 0,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          1762,
+          4311
+        ],
+        "ebb_label": "Wiederer – Veilleux – Krestan",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 9,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 1,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          546,
+          1402
+        ],
+        "ebb_label": "Ronning – Eder – Tiffels",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 1,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          4895,
+          3411
+        ],
+        "ebb_label": "Eder – Foudy – Fontaine",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "cf_pct": null,
+        "matchup_count": 0,
+        "relevant_matchup_count": 0,
+        "event_only": false
+      }
+    ],
+    "matchup_coverage": {
+      "team_5v5_shift_s": 2685,
+      "stable_line_toi_s": 2560,
+      "stable_line_toi_pct": 95.3,
+      "stable_matchup_toi_s": 2385,
+      "stable_matchup_toi_pct": 88.8,
+      "corsi_total": 69,
+      "corsi_assigned": 69,
+      "corsi_coverage_pct": 100.0,
+      "goals_total": 4,
+      "goals_assigned": 4,
+      "goal_coverage_pct": 100.0,
+      "goal_shot_context_mismatches": 0
+    },
+    "unresolved_matchup_goals": [],
+    "primary_forward_matchups": [
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          1402
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 257,
+        "p1_s": 56,
+        "p2_s": 103,
+        "p3_s": 98,
+        "appearances": 10,
+        "cf": 3,
+        "ca": 8,
+        "slot_for": 2,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 616,
+        "matchup_share_pct": 41.7,
+        "cf_pct": 27.3,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          92,
+          3411
+        ],
+        "opponent_player_ids": [
+          115,
+          3432,
+          499
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Kammerer – Tyrväinen – Fischbuch",
+        "total_s": 134,
+        "p1_s": 48,
+        "p2_s": 34,
+        "p3_s": 52,
+        "appearances": 5,
+        "cf": 1,
+        "ca": 1,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 545,
+        "matchup_share_pct": 24.6,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          1762,
+          4895
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Foudy",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 171,
+        "p1_s": 66,
+        "p2_s": 0,
+        "p3_s": 105,
+        "appearances": 5,
+        "cf": 2,
+        "ca": 2,
+        "slot_for": 1,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 1,
+        "role_notes": [],
+        "ebb_line_total_s": 428,
+        "matchup_share_pct": 40.0,
+        "cf_pct": 50.0,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4311
+        ],
+        "opponent_player_ids": [
+          1491,
+          1678,
+          4260
+        ],
+        "ebb_label": "Wiederer – Hördler – Krestan",
+        "opponent_label": "Fleischer – Niedenz – Ljungh",
+        "total_s": 217,
+        "p1_s": 37,
+        "p2_s": 102,
+        "p3_s": 78,
+        "appearances": 6,
+        "cf": 3,
+        "ca": 4,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 396,
+        "matchup_share_pct": 54.8,
+        "cf_pct": 42.9,
+        "event_only": false,
+        "relevant": true
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          4895,
+          2126
+        ],
+        "opponent_player_ids": [
+          3572,
+          1799,
+          507
+        ],
+        "ebb_label": "Wiederer – Foudy – Hördler",
+        "opponent_label": "Russell – MacLeod – Noebels",
+        "total_s": 85,
+        "p1_s": 49,
+        "p2_s": 0,
+        "p3_s": 36,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 4,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "role_notes": [],
+        "ebb_line_total_s": 85,
+        "matchup_share_pct": 100.0,
+        "cf_pct": 0.0,
+        "event_only": false,
+        "relevant": true
       }
     ]
   },
