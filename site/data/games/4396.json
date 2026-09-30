@@ -135,20 +135,15 @@
     "Slot Attempts: EBB 17:20; bei 5v5 13:16.",
     "Zeit in Führung: 8:47; ausgeglichen 17:29; im Rückstand 33:44.",
     "Meiste Eiszeit EBB: Kai Wissmann mit 24:31.",
-    "Meiste PP-Eiszeit: Liam Kirk (3:29).",
-    "Meiste PK-Eiszeit: Yannick Veilleux (1:53).",
-    "Reihenänderung P2: Sturmreihe Hördler – Pföderl – Kirk wurde neu stabil eingesetzt (0:47; P1 0:00).",
-    "Reihenänderung P2: Sturmreihe Wiederer – Pföderl – Fontaine wurde neu stabil eingesetzt (1:18; P1 0:00).",
-    "Reihenänderung P2: Verteidigerpaar Mik – Müller wurde neu stabil eingesetzt (0:43; P1 0:12).",
+    "5v5 bei Gleichstand: Corsi 17:21 (44.7% EBB).",
+    "5v5 On-Ice: Ronning 18:6 Corsi (75.0%), +39.9 Prozentpunkte gegenüber EBB ohne ihn auf dem Eis.",
+    "Reihenänderung P2: Sturmreihe Hördler – Pföderl – Kirk wurde neu stabil eingesetzt (0:47).",
+    "Reihenänderung P2: Sturmreihe Wiederer – Pföderl – Fontaine wurde neu stabil eingesetzt (1:18).",
+    "Reihenänderung P2: Verteidigerpaar Mik – Müller wurde neu stabil eingesetzt (0:43).",
     "Reihenänderung P3: Sturmreihe Vikingstad – Veilleux – Krestan fiel nahezu aus der 5v5-Rotation (P2 2:18 → P3 0:00).",
     "Reihenänderung P3: Sturmreihe Wiederer – Pföderl – Fontaine fiel nahezu aus der 5v5-Rotation (P2 1:18 → P3 0:00).",
-    "5v5-Forward-Nutzung: Top 9 kamen in P1+P2 auf 84.1% der Forward-TOI, in P3 auf 93.9%. Forwards mit mindestens 30s 5v5-TOI: P1 12, P2 12, P3 11.",
     "Hinweis auf verkürzte Bank im 3. Drittel (Top-9-Forward-Anteil +9.8 Prozentpunkte).",
-    "Deutlich geringerer 5v5-Nutzungsanteil in P3 gegenüber P1+P2: Hördler (9.6% → 3.9%).",
-    "Deutlich höherer 5v5-Nutzungsanteil in P3 gegenüber P1+P2: Ronning (10.1% → 14.9%), Davidson (11.1% → 15.8%).",
-    "Häufigste stabile 5v5-Forward-Unit: Ronning – Kirk – Tiffels mit 11:54 gemeinsamer Eiszeit.",
-    "Häufigstes 5v5-Verteidigerpaar: Wissmann – Müller mit 15:27.",
-    "Häufigstes Line-Matching: EBB Ronning – Kirk – Tiffels gegen Bennett – Greco – Solow mit 3:11 stabiler gemeinsamer 5v5-Eiszeit.",
+    "Häufigstes Line-Matching: Ronning – Kirk – Tiffels gegen Bennett – Greco – Solow mit 3:11; Corsi 6:1 (85.7%), Slot 1:1, Tore 0:0.",
     "Lineup-Datencheck: stabile Units decken 97.6% der rekonstruierten 5v5-Forward-TOI und 98.9% der 5v5-Defense-TOI ab."
   ],
   "players": [
@@ -5007,6 +5002,3394 @@
       ]
     }
   },
+  "advanced": {
+    "player_impact_5v5": [
+      {
+        "player_id": 2209,
+        "name": "Ty Ronning",
+        "last_name": "Ronning",
+        "jersey": 9,
+        "position": "FO",
+        "cf": 18,
+        "ca": 6,
+        "cf_pct": 75.0,
+        "relative_cf_pct": 39.9,
+        "ff": 16,
+        "fa": 5,
+        "ff_pct": 76.2,
+        "sog_for": 10,
+        "sog_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "goal_share_pct": null,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 100.0,
+        "pdo": 100.0,
+        "toi_5v5_s": 923
+      },
+      {
+        "player_id": 1402,
+        "name": "Frederik Tiffels",
+        "last_name": "Tiffels",
+        "jersey": 95,
+        "position": "FO",
+        "cf": 15,
+        "ca": 6,
+        "cf_pct": 71.4,
+        "relative_cf_pct": 33.1,
+        "ff": 14,
+        "fa": 5,
+        "ff_pct": 73.7,
+        "sog_for": 8,
+        "sog_against": 4,
+        "gf": 0,
+        "ga": 0,
+        "goal_share_pct": null,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 100.0,
+        "pdo": 100.0,
+        "toi_5v5_s": 845
+      },
+      {
+        "player_id": 512,
+        "name": "Kai Wissmann",
+        "last_name": "Wissmann",
+        "jersey": 6,
+        "position": "DE",
+        "cf": 22,
+        "ca": 9,
+        "cf_pct": 71.0,
+        "relative_cf_pct": 39.0,
+        "ff": 18,
+        "fa": 9,
+        "ff_pct": 66.7,
+        "sog_for": 10,
+        "sog_against": 5,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 80.0,
+        "pdo": 80.0,
+        "toi_5v5_s": 1017
+      },
+      {
+        "player_id": 3410,
+        "name": "Liam Kirk",
+        "last_name": "Kirk",
+        "jersey": 94,
+        "position": "FO",
+        "cf": 17,
+        "ca": 8,
+        "cf_pct": 68.0,
+        "relative_cf_pct": 30.5,
+        "ff": 16,
+        "fa": 7,
+        "ff_pct": 69.6,
+        "sog_for": 9,
+        "sog_against": 5,
+        "gf": 0,
+        "ga": 0,
+        "goal_share_pct": null,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 100.0,
+        "pdo": 100.0,
+        "toi_5v5_s": 959
+      },
+      {
+        "player_id": 506,
+        "name": "Jonas Müller",
+        "last_name": "Müller",
+        "jersey": 18,
+        "position": "DE",
+        "cf": 23,
+        "ca": 12,
+        "cf_pct": 65.7,
+        "relative_cf_pct": 33.1,
+        "ff": 19,
+        "fa": 11,
+        "ff_pct": 63.3,
+        "sog_for": 12,
+        "sog_against": 7,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 85.7,
+        "pdo": 85.7,
+        "toi_5v5_s": 1103
+      },
+      {
+        "player_id": 3411,
+        "name": "Gabriel Fontaine",
+        "last_name": "Fontaine",
+        "jersey": 97,
+        "position": "FO",
+        "cf": 13,
+        "ca": 9,
+        "cf_pct": 59.1,
+        "relative_cf_pct": 16.7,
+        "ff": 8,
+        "fa": 9,
+        "ff_pct": 47.1,
+        "sog_for": 5,
+        "sog_against": 4,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 75.0,
+        "pdo": 75.0,
+        "toi_5v5_s": 634
+      },
+      {
+        "player_id": 1762,
+        "name": "Yannick Veilleux",
+        "last_name": "Veilleux",
+        "jersey": 38,
+        "position": "FO",
+        "cf": 9,
+        "ca": 12,
+        "cf_pct": 42.9,
+        "relative_cf_pct": -5.4,
+        "ff": 7,
+        "fa": 12,
+        "ff_pct": 36.8,
+        "sog_for": 5,
+        "sog_against": 6,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 83.3,
+        "pdo": 83.3,
+        "toi_5v5_s": 580
+      },
+      {
+        "player_id": 3533,
+        "name": "Adam Smith",
+        "last_name": "Smith",
+        "jersey": 4,
+        "position": "DE",
+        "cf": 5,
+        "ca": 7,
+        "cf_pct": 41.7,
+        "relative_cf_pct": -6.1,
+        "ff": 5,
+        "fa": 6,
+        "ff_pct": 45.5,
+        "sog_for": 3,
+        "sog_against": 4,
+        "gf": 0,
+        "ga": 0,
+        "goal_share_pct": null,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 100.0,
+        "pdo": 100.0,
+        "toi_5v5_s": 745
+      },
+      {
+        "player_id": 546,
+        "name": "Andreas Eder",
+        "last_name": "Eder",
+        "jersey": 43,
+        "position": "FO",
+        "cf": 7,
+        "ca": 11,
+        "cf_pct": 38.9,
+        "relative_cf_pct": -10.3,
+        "ff": 6,
+        "fa": 9,
+        "ff_pct": 40.0,
+        "sog_for": 4,
+        "sog_against": 6,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 83.3,
+        "pdo": 83.3,
+        "toi_5v5_s": 721
+      },
+      {
+        "player_id": 92,
+        "name": "Leonhard Pföderl",
+        "last_name": "Pföderl",
+        "jersey": 93,
+        "position": "FO",
+        "cf": 8,
+        "ca": 14,
+        "cf_pct": 36.4,
+        "relative_cf_pct": -14.4,
+        "ff": 5,
+        "fa": 13,
+        "ff_pct": 27.8,
+        "sog_for": 4,
+        "sog_against": 7,
+        "gf": 0,
+        "ga": 0,
+        "goal_share_pct": null,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 100.0,
+        "pdo": 100.0,
+        "toi_5v5_s": 896
+      },
+      {
+        "player_id": 4311,
+        "name": "Tobias Krestan",
+        "last_name": "Krestan",
+        "jersey": 91,
+        "position": "FO",
+        "cf": 4,
+        "ca": 7,
+        "cf_pct": 36.4,
+        "relative_cf_pct": -12.2,
+        "ff": 3,
+        "fa": 7,
+        "ff_pct": 30.0,
+        "sog_for": 2,
+        "sog_against": 5,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 80.0,
+        "pdo": 80.0,
+        "toi_5v5_s": 272
+      },
+      {
+        "player_id": 1823,
+        "name": "Manuel Wiederer",
+        "last_name": "Wiederer",
+        "jersey": 21,
+        "position": "FO",
+        "cf": 9,
+        "ca": 18,
+        "cf_pct": 33.3,
+        "relative_cf_pct": -20.4,
+        "ff": 7,
+        "fa": 17,
+        "ff_pct": 29.2,
+        "sog_for": 4,
+        "sog_against": 8,
+        "gf": 0,
+        "ga": 2,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 75.0,
+        "pdo": 75.0,
+        "toi_5v5_s": 724
+      },
+      {
+        "player_id": 1738,
+        "name": "Korbinian Geibel",
+        "last_name": "Geibel",
+        "jersey": 40,
+        "position": "DE",
+        "cf": 6,
+        "ca": 12,
+        "cf_pct": 33.3,
+        "relative_cf_pct": -17.5,
+        "ff": 5,
+        "fa": 10,
+        "ff_pct": 33.3,
+        "sog_for": 2,
+        "sog_against": 8,
+        "gf": 0,
+        "ga": 2,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 75.0,
+        "pdo": 75.0,
+        "toi_5v5_s": 457
+      },
+      {
+        "player_id": 4310,
+        "name": "Rihards Griva",
+        "last_name": "Griva",
+        "jersey": 23,
+        "position": "FO",
+        "cf": 4,
+        "ca": 8,
+        "cf_pct": 33.3,
+        "relative_cf_pct": -16.0,
+        "ff": 3,
+        "fa": 8,
+        "ff_pct": 27.3,
+        "sog_for": 1,
+        "sog_against": 3,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 66.7,
+        "pdo": 66.7,
+        "toi_5v5_s": 355
+      },
+      {
+        "player_id": 1796,
+        "name": "Markus Vikingstad",
+        "last_name": "Vikingstad",
+        "jersey": 37,
+        "position": "FO",
+        "cf": 6,
+        "ca": 14,
+        "cf_pct": 30.0,
+        "relative_cf_pct": -22.5,
+        "ff": 4,
+        "fa": 14,
+        "ff_pct": 22.2,
+        "sog_for": 2,
+        "sog_against": 6,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 83.3,
+        "pdo": 83.3,
+        "toi_5v5_s": 515
+      },
+      {
+        "player_id": 1425,
+        "name": "Eric Mik",
+        "last_name": "Mik",
+        "jersey": 12,
+        "position": "DE",
+        "cf": 11,
+        "ca": 26,
+        "cf_pct": 29.7,
+        "relative_cf_pct": -31.7,
+        "ff": 8,
+        "fa": 24,
+        "ff_pct": 25.0,
+        "sog_for": 5,
+        "sog_against": 13,
+        "gf": 0,
+        "ga": 2,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 84.6,
+        "pdo": 84.6,
+        "toi_5v5_s": 851
+      },
+      {
+        "player_id": 3412,
+        "name": "Mitchell Reinke",
+        "last_name": "Reinke",
+        "jersey": 5,
+        "position": "DE",
+        "cf": 4,
+        "ca": 10,
+        "cf_pct": 28.6,
+        "relative_cf_pct": -22.1,
+        "ff": 3,
+        "fa": 10,
+        "ff_pct": 23.1,
+        "sog_for": 3,
+        "sog_against": 4,
+        "gf": 0,
+        "ga": 0,
+        "goal_share_pct": null,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 100.0,
+        "pdo": 100.0,
+        "toi_5v5_s": 531
+      },
+      {
+        "player_id": 4701,
+        "name": "Brandon Davidson",
+        "last_name": "Davidson",
+        "jersey": 44,
+        "position": "DE",
+        "cf": 5,
+        "ca": 13,
+        "cf_pct": 27.8,
+        "relative_cf_pct": -24.6,
+        "ff": 4,
+        "fa": 12,
+        "ff_pct": 25.0,
+        "sog_for": 3,
+        "sog_against": 5,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 80.0,
+        "pdo": 80.0,
+        "toi_5v5_s": 669
+      },
+      {
+        "player_id": 2126,
+        "name": "Eric Hördler",
+        "last_name": "Hördler",
+        "jersey": 77,
+        "position": "FO",
+        "cf": 4,
+        "ca": 13,
+        "cf_pct": 23.5,
+        "relative_cf_pct": -29.6,
+        "ff": 4,
+        "fa": 12,
+        "ff_pct": 25.0,
+        "sog_for": 3,
+        "sog_against": 8,
+        "gf": 0,
+        "ga": 0,
+        "goal_share_pct": null,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 100.0,
+        "pdo": 100.0,
+        "toi_5v5_s": 643
+      }
+    ],
+    "score_state_corsi_5v5": [
+      {
+        "state": "tied",
+        "label": "Gleichstand",
+        "cf": 17,
+        "ca": 21,
+        "cf_pct": 44.7
+      },
+      {
+        "state": "leading",
+        "label": "In Führung",
+        "cf": 2,
+        "ca": 3,
+        "cf_pct": 40.0
+      },
+      {
+        "state": "trailing",
+        "label": "Im Rückstand",
+        "cf": 19,
+        "ca": 19,
+        "cf_pct": 50.0
+      }
+    ],
+    "zone_starts": {
+      "players": [
+        {
+          "player_ids": [
+            512
+          ],
+          "player_id": 512,
+          "label": "Kai Wissmann",
+          "jersey": 6,
+          "position": "DE",
+          "oz": 12,
+          "dz": 5,
+          "nz": 6,
+          "non_neutral": 17,
+          "oz_share_pct": 70.6
+        },
+        {
+          "player_ids": [
+            506
+          ],
+          "player_id": 506,
+          "label": "Jonas Müller",
+          "jersey": 18,
+          "position": "DE",
+          "oz": 12,
+          "dz": 4,
+          "nz": 6,
+          "non_neutral": 16,
+          "oz_share_pct": 75.0
+        },
+        {
+          "player_ids": [
+            3411
+          ],
+          "player_id": 3411,
+          "label": "Gabriel Fontaine",
+          "jersey": 97,
+          "position": "FO",
+          "oz": 9,
+          "dz": 1,
+          "nz": 2,
+          "non_neutral": 10,
+          "oz_share_pct": 90.0
+        },
+        {
+          "player_ids": [
+            2209
+          ],
+          "player_id": 2209,
+          "label": "Ty Ronning",
+          "jersey": 9,
+          "position": "FO",
+          "oz": 7,
+          "dz": 2,
+          "nz": 6,
+          "non_neutral": 9,
+          "oz_share_pct": 77.8
+        },
+        {
+          "player_ids": [
+            3410
+          ],
+          "player_id": 3410,
+          "label": "Liam Kirk",
+          "jersey": 94,
+          "position": "FO",
+          "oz": 6,
+          "dz": 3,
+          "nz": 6,
+          "non_neutral": 9,
+          "oz_share_pct": 66.7
+        },
+        {
+          "player_ids": [
+            1402
+          ],
+          "player_id": 1402,
+          "label": "Frederik Tiffels",
+          "jersey": 95,
+          "position": "FO",
+          "oz": 7,
+          "dz": 2,
+          "nz": 5,
+          "non_neutral": 9,
+          "oz_share_pct": 77.8
+        },
+        {
+          "player_ids": [
+            92
+          ],
+          "player_id": 92,
+          "label": "Leonhard Pföderl",
+          "jersey": 93,
+          "position": "FO",
+          "oz": 6,
+          "dz": 1,
+          "nz": 6,
+          "non_neutral": 7,
+          "oz_share_pct": 85.7
+        },
+        {
+          "player_ids": [
+            1823
+          ],
+          "player_id": 1823,
+          "label": "Manuel Wiederer",
+          "jersey": 21,
+          "position": "FO",
+          "oz": 6,
+          "dz": 1,
+          "nz": 4,
+          "non_neutral": 7,
+          "oz_share_pct": 85.7
+        },
+        {
+          "player_ids": [
+            1425
+          ],
+          "player_id": 1425,
+          "label": "Eric Mik",
+          "jersey": 12,
+          "position": "DE",
+          "oz": 5,
+          "dz": 1,
+          "nz": 11,
+          "non_neutral": 6,
+          "oz_share_pct": 83.3
+        },
+        {
+          "player_ids": [
+            546
+          ],
+          "player_id": 546,
+          "label": "Andreas Eder",
+          "jersey": 43,
+          "position": "FO",
+          "oz": 4,
+          "dz": 2,
+          "nz": 6,
+          "non_neutral": 6,
+          "oz_share_pct": 66.7
+        },
+        {
+          "player_ids": [
+            3412
+          ],
+          "player_id": 3412,
+          "label": "Mitchell Reinke",
+          "jersey": 5,
+          "position": "DE",
+          "oz": 4,
+          "dz": 1,
+          "nz": 1,
+          "non_neutral": 5,
+          "oz_share_pct": 80.0
+        },
+        {
+          "player_ids": [
+            4310
+          ],
+          "player_id": 4310,
+          "label": "Rihards Griva",
+          "jersey": 23,
+          "position": "FO",
+          "oz": 5,
+          "dz": 0,
+          "nz": 0,
+          "non_neutral": 5,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            1762
+          ],
+          "player_id": 1762,
+          "label": "Yannick Veilleux",
+          "jersey": 38,
+          "position": "FO",
+          "oz": 2,
+          "dz": 2,
+          "nz": 10,
+          "non_neutral": 4,
+          "oz_share_pct": 50.0
+        },
+        {
+          "player_ids": [
+            1796
+          ],
+          "player_id": 1796,
+          "label": "Markus Vikingstad",
+          "jersey": 37,
+          "position": "FO",
+          "oz": 2,
+          "dz": 2,
+          "nz": 10,
+          "non_neutral": 4,
+          "oz_share_pct": 50.0
+        },
+        {
+          "player_ids": [
+            4311
+          ],
+          "player_id": 4311,
+          "label": "Tobias Krestan",
+          "jersey": 91,
+          "position": "FO",
+          "oz": 2,
+          "dz": 1,
+          "nz": 6,
+          "non_neutral": 3,
+          "oz_share_pct": 66.7
+        },
+        {
+          "player_ids": [
+            3533
+          ],
+          "player_id": 3533,
+          "label": "Adam Smith",
+          "jersey": 4,
+          "position": "DE",
+          "oz": 2,
+          "dz": 1,
+          "nz": 6,
+          "non_neutral": 3,
+          "oz_share_pct": 66.7
+        },
+        {
+          "player_ids": [
+            2126
+          ],
+          "player_id": 2126,
+          "label": "Eric Hördler",
+          "jersey": 77,
+          "position": "FO",
+          "oz": 1,
+          "dz": 1,
+          "nz": 5,
+          "non_neutral": 2,
+          "oz_share_pct": 50.0
+        },
+        {
+          "player_ids": [
+            4701
+          ],
+          "player_id": 4701,
+          "label": "Brandon Davidson",
+          "jersey": 44,
+          "position": "DE",
+          "oz": 2,
+          "dz": 0,
+          "nz": 5,
+          "non_neutral": 2,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            1738
+          ],
+          "player_id": 1738,
+          "label": "Korbinian Geibel",
+          "jersey": 40,
+          "position": "DE",
+          "oz": 1,
+          "dz": 0,
+          "nz": 9,
+          "non_neutral": 1,
+          "oz_share_pct": 100.0
+        }
+      ],
+      "forward_units": [
+        {
+          "player_ids": [
+            2209,
+            3410,
+            1402
+          ],
+          "player_id": null,
+          "label": "Ronning – Kirk – Tiffels",
+          "jersey": null,
+          "position": null,
+          "oz": 6,
+          "dz": 2,
+          "nz": 5,
+          "non_neutral": 8,
+          "oz_share_pct": 75.0
+        },
+        {
+          "player_ids": [
+            1823,
+            4310,
+            3411
+          ],
+          "player_id": null,
+          "label": "Wiederer – Griva – Fontaine",
+          "jersey": null,
+          "position": null,
+          "oz": 5,
+          "dz": 0,
+          "nz": 0,
+          "non_neutral": 5,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            1796,
+            1762,
+            4311
+          ],
+          "player_id": null,
+          "label": "Vikingstad – Veilleux – Krestan",
+          "jersey": null,
+          "position": null,
+          "oz": 2,
+          "dz": 1,
+          "nz": 6,
+          "non_neutral": 3,
+          "oz_share_pct": 66.7
+        },
+        {
+          "player_ids": [
+            546,
+            92,
+            3411
+          ],
+          "player_id": null,
+          "label": "Eder – Pföderl – Fontaine",
+          "jersey": null,
+          "position": null,
+          "oz": 3,
+          "dz": 0,
+          "nz": 0,
+          "non_neutral": 3,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            546,
+            2126,
+            92
+          ],
+          "player_id": null,
+          "label": "Eder – Hördler – Pföderl",
+          "jersey": null,
+          "position": null,
+          "oz": 1,
+          "dz": 1,
+          "nz": 5,
+          "non_neutral": 2,
+          "oz_share_pct": 50.0
+        },
+        {
+          "player_ids": [
+            1823,
+            1796,
+            1762
+          ],
+          "player_id": null,
+          "label": "Wiederer – Vikingstad – Veilleux",
+          "jersey": null,
+          "position": null,
+          "oz": 0,
+          "dz": 1,
+          "nz": 3,
+          "non_neutral": 1,
+          "oz_share_pct": 0.0
+        },
+        {
+          "player_ids": [
+            1823,
+            92,
+            3411
+          ],
+          "player_id": null,
+          "label": "Wiederer – Pföderl – Fontaine",
+          "jersey": null,
+          "position": null,
+          "oz": 1,
+          "dz": 0,
+          "nz": 1,
+          "non_neutral": 1,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            546,
+            3410,
+            3411
+          ],
+          "player_id": null,
+          "label": "Eder – Kirk – Fontaine",
+          "jersey": null,
+          "position": null,
+          "oz": 0,
+          "dz": 1,
+          "nz": 0,
+          "non_neutral": 1,
+          "oz_share_pct": 0.0
+        },
+        {
+          "player_ids": [
+            2209,
+            92,
+            1402
+          ],
+          "player_id": null,
+          "label": "Ronning – Pföderl – Tiffels",
+          "jersey": null,
+          "position": null,
+          "oz": 1,
+          "dz": 0,
+          "nz": 0,
+          "non_neutral": 1,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            1796,
+            1762,
+            546
+          ],
+          "player_id": null,
+          "label": "Vikingstad – Veilleux – Eder",
+          "jersey": null,
+          "position": null,
+          "oz": 0,
+          "dz": 0,
+          "nz": 1,
+          "non_neutral": 0,
+          "oz_share_pct": null
+        },
+        {
+          "player_ids": [
+            2209,
+            3410,
+            3411
+          ],
+          "player_id": null,
+          "label": "Ronning – Kirk – Fontaine",
+          "jersey": null,
+          "position": null,
+          "oz": 0,
+          "dz": 0,
+          "nz": 1,
+          "non_neutral": 0,
+          "oz_share_pct": null
+        }
+      ],
+      "defense_pairs": [
+        {
+          "player_ids": [
+            512,
+            506
+          ],
+          "player_id": null,
+          "label": "Wissmann – Müller",
+          "jersey": null,
+          "position": null,
+          "oz": 12,
+          "dz": 4,
+          "nz": 6,
+          "non_neutral": 16,
+          "oz_share_pct": 75.0
+        },
+        {
+          "player_ids": [
+            3412,
+            1425
+          ],
+          "player_id": null,
+          "label": "Reinke – Mik",
+          "jersey": null,
+          "position": null,
+          "oz": 2,
+          "dz": 1,
+          "nz": 0,
+          "non_neutral": 3,
+          "oz_share_pct": 66.7
+        },
+        {
+          "player_ids": [
+            3533,
+            3412
+          ],
+          "player_id": null,
+          "label": "Smith – Reinke",
+          "jersey": null,
+          "position": null,
+          "oz": 2,
+          "dz": 0,
+          "nz": 1,
+          "non_neutral": 2,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            1425,
+            4701
+          ],
+          "player_id": null,
+          "label": "Mik – Davidson",
+          "jersey": null,
+          "position": null,
+          "oz": 2,
+          "dz": 0,
+          "nz": 1,
+          "non_neutral": 2,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            1425,
+            1738
+          ],
+          "player_id": null,
+          "label": "Mik – Geibel",
+          "jersey": null,
+          "position": null,
+          "oz": 1,
+          "dz": 0,
+          "nz": 9,
+          "non_neutral": 1,
+          "oz_share_pct": 100.0
+        },
+        {
+          "player_ids": [
+            3533,
+            512
+          ],
+          "player_id": null,
+          "label": "Smith – Wissmann",
+          "jersey": null,
+          "position": null,
+          "oz": 0,
+          "dz": 1,
+          "nz": 0,
+          "non_neutral": 1,
+          "oz_share_pct": 0.0
+        },
+        {
+          "player_ids": [
+            3533,
+            4701
+          ],
+          "player_id": null,
+          "label": "Smith – Davidson",
+          "jersey": null,
+          "position": null,
+          "oz": 0,
+          "dz": 0,
+          "nz": 4,
+          "non_neutral": 0,
+          "oz_share_pct": null
+        },
+        {
+          "player_ids": [
+            3533,
+            1425
+          ],
+          "player_id": null,
+          "label": "Smith – Mik",
+          "jersey": null,
+          "position": null,
+          "oz": 0,
+          "dz": 0,
+          "nz": 1,
+          "non_neutral": 0,
+          "oz_share_pct": null
+        }
+      ]
+    },
+    "forward_matchups": [
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 191,
+        "p1_s": 55,
+        "p2_s": 46,
+        "p3_s": 90,
+        "appearances": 7,
+        "cf": 6,
+        "ca": 1,
+        "cf_pct": 85.7,
+        "slot_for": 1,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 28.1
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 180,
+        "p1_s": 95,
+        "p2_s": 44,
+        "p3_s": 41,
+        "appearances": 5,
+        "cf": 3,
+        "ca": 2,
+        "cf_pct": 60.0,
+        "slot_for": 1,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 43.5
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 157,
+        "p1_s": 52,
+        "p2_s": 0,
+        "p3_s": 105,
+        "appearances": 5,
+        "cf": 3,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 2,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 23.1
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 138,
+        "p1_s": 26,
+        "p2_s": 82,
+        "p3_s": 30,
+        "appearances": 6,
+        "cf": 1,
+        "ca": 1,
+        "cf_pct": 50.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 20.3
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 112,
+        "p1_s": 70,
+        "p2_s": 42,
+        "p3_s": 0,
+        "appearances": 5,
+        "cf": 2,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 2,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 16.5
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Wiederer – Griva – Fontaine",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 77,
+        "p1_s": 0,
+        "p2_s": 36,
+        "p3_s": 41,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 31.7
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          4311
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 67,
+        "p1_s": 0,
+        "p2_s": 67,
+        "p3_s": 0,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 3,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 1,
+        "matchup_share_pct": 32.4
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          4311
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 64,
+        "p1_s": 0,
+        "p2_s": 64,
+        "p3_s": 0,
+        "appearances": 3,
+        "cf": 1,
+        "ca": 2,
+        "cf_pct": 33.3,
+        "slot_for": 1,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 30.9
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 64,
+        "p1_s": 13,
+        "p2_s": 51,
+        "p3_s": 0,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 2,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 15.5
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 63,
+        "p1_s": 63,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 3,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 3,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 15.2
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 53,
+        "p1_s": 0,
+        "p2_s": 31,
+        "p3_s": 22,
+        "appearances": 2,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 48.2
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 53,
+        "p1_s": 0,
+        "p2_s": 53,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 12.8
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          1823
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Wiederer – Vikingstad – Veilleux",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 51,
+        "p1_s": 12,
+        "p2_s": 0,
+        "p3_s": 39,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 1,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 34.7
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          2126,
+          3410
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Hördler – Pföderl – Kirk",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 50,
+        "p1_s": 0,
+        "p2_s": 9,
+        "p3_s": 41,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 2,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 64.1
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1823,
+          3411
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Wiederer – Veilleux – Fontaine",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 49,
+        "p1_s": 49,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1823,
+          2209
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Ronning – Wiederer – Pföderl",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 44,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 44,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Wiederer – Griva – Fontaine",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 43,
+        "p1_s": 43,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 2,
+        "cf": 1,
+        "ca": 1,
+        "cf_pct": 50.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 17.7
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Wiederer – Griva – Fontaine",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 43,
+        "p1_s": 0,
+        "p2_s": 43,
+        "p3_s": 0,
+        "appearances": 2,
+        "cf": 2,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 2,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 17.7
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          1823
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Wiederer – Vikingstad – Veilleux",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 42,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 42,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 28.6
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Wiederer – Griva – Fontaine",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 41,
+        "p1_s": 41,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 16.9
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          487,
+          1856,
+          2798
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Esposito – Plachta – Nieleck",
+        "total_s": 39,
+        "p1_s": 0,
+        "p2_s": 39,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 5.7
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          2126,
+          4310
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Wiederer – Griva – Hördler",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 37,
+        "p1_s": 37,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1823,
+          3411
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Wiederer – Pföderl – Fontaine",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 37,
+        "p1_s": 0,
+        "p2_s": 37,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 48.1
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          4311
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 32,
+        "p1_s": 32,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 15.5
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          3410,
+          3411
+        ],
+        "opponent_player_ids": [
+          487,
+          2798,
+          3429
+        ],
+        "ebb_label": "Eder – Kirk – Fontaine",
+        "opponent_label": "Reichel – Esposito – Plachta",
+        "total_s": 31,
+        "p1_s": 0,
+        "p2_s": 31,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1402,
+          2209
+        ],
+        "opponent_player_ids": [
+          1404,
+          3565,
+          4332
+        ],
+        "ebb_label": "Ronning – Pföderl – Tiffels",
+        "opponent_label": "Brown – Solow – Schütz",
+        "total_s": 31,
+        "p1_s": 0,
+        "p2_s": 31,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          1823
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Wiederer – Vikingstad – Veilleux",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 31,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 31,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 3,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 21.1
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 30,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 30,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 27.3
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          487,
+          1404,
+          3429
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Reichel – Plachta – Schütz",
+        "total_s": 25,
+        "p1_s": 25,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 6.0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          1762,
+          1796
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Eder",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 25,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 25,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1823,
+          3411
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Wiederer – Pföderl – Fontaine",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 24,
+        "p1_s": 0,
+        "p2_s": 24,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 31.2
+      },
+      {
+        "ebb_player_ids": [
+          2126,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Ronning – Hördler – Kirk",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 20,
+        "p1_s": 20,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          1525,
+          2501,
+          3562
+        ],
+        "ebb_label": "Wiederer – Griva – Fontaine",
+        "opponent_label": "Bennett – Ehl – Calce",
+        "total_s": 18,
+        "p1_s": 18,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 7.4
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Griva – Vikingstad – Fontaine",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 18,
+        "p1_s": 0,
+        "p2_s": 18,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 2,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 64.3
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          1525,
+          2501,
+          3562
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Bennett – Ehl – Calce",
+        "total_s": 18,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 18,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 2.7
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1762,
+          1796
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Pföderl",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 16,
+        "p1_s": 16,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          4311
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 16,
+        "p1_s": 16,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 7.7
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          4311
+        ],
+        "opponent_player_ids": [
+          2798,
+          3429,
+          4332
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Reichel – Esposito – Brown",
+        "total_s": 16,
+        "p1_s": 16,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 7.7
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          2501,
+          3429,
+          3565
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Reichel – Bennett – Solow",
+        "total_s": 16,
+        "p1_s": 16,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 2.4
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          3411
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Ronning – Kirk – Fontaine",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 16,
+        "p1_s": 0,
+        "p2_s": 16,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 3,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 2,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 66.7
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1823,
+          3411
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          4332
+        ],
+        "ebb_label": "Wiederer – Pföderl – Fontaine",
+        "opponent_label": "Ehl – Kühnhackl – Brown",
+        "total_s": 16,
+        "p1_s": 0,
+        "p2_s": 16,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 20.8
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          2126,
+          3410
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Hördler – Pföderl – Kirk",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 16,
+        "p1_s": 0,
+        "p2_s": 16,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 20.5
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          1823,
+          3411
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Wiederer – Eder – Fontaine",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 16,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 16,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          3410,
+          4311
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Krestan – Kirk – Tiffels",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 15,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          487,
+          2504,
+          2798
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Esposito – Plachta – Kühnhackl",
+        "total_s": 15,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 15,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 13.6
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          2209
+        ],
+        "opponent_player_ids": [
+          1404,
+          1525,
+          4332
+        ],
+        "ebb_label": "Ronning – Vikingstad – Veilleux",
+        "opponent_label": "Ehl – Brown – Schütz",
+        "total_s": 14,
+        "p1_s": 14,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          3410,
+          4310
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Griva – Kirk – Tiffels",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 14,
+        "p1_s": 14,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          1823
+        ],
+        "opponent_player_ids": [
+          1525,
+          2501,
+          3565
+        ],
+        "ebb_label": "Wiederer – Vikingstad – Veilleux",
+        "opponent_label": "Bennett – Ehl – Solow",
+        "total_s": 14,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 14,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 9.5
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          1823,
+          2209
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Ronning – Wiederer – Tiffels",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 13,
+        "p1_s": 13,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          1404,
+          3567,
+          4332
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Brown – Greco – Schütz",
+        "total_s": 13,
+        "p1_s": 13,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 3.1
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1796,
+          3411
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Vikingstad – Pföderl – Fontaine",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 13,
+        "p1_s": 0,
+        "p2_s": 13,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          1402,
+          2209
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Ronning – Eder – Tiffels",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 12,
+        "p1_s": 12,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          4311
+        ],
+        "opponent_player_ids": [
+          487,
+          2798,
+          4332
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Esposito – Plachta – Brown",
+        "total_s": 12,
+        "p1_s": 12,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 5.8
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          2126,
+          3410
+        ],
+        "opponent_player_ids": [
+          1525,
+          2501,
+          3562
+        ],
+        "ebb_label": "Hördler – Pföderl – Kirk",
+        "opponent_label": "Bennett – Ehl – Calce",
+        "total_s": 12,
+        "p1_s": 0,
+        "p2_s": 12,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 15.4
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          487,
+          2798,
+          3429
+        ],
+        "ebb_label": "Wiederer – Griva – Fontaine",
+        "opponent_label": "Reichel – Esposito – Plachta",
+        "total_s": 12,
+        "p1_s": 0,
+        "p2_s": 12,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 4.9
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 12,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 12,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 10.9
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          1404,
+          1525,
+          4332
+        ],
+        "ebb_label": "Ronning – Veilleux – Kirk",
+        "opponent_label": "Ehl – Brown – Schütz",
+        "total_s": 11,
+        "p1_s": 11,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1823,
+          2126
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          3562
+        ],
+        "ebb_label": "Wiederer – Hördler – Pföderl",
+        "opponent_label": "Plachta – Calce – Heim",
+        "total_s": 11,
+        "p1_s": 11,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          1796,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          3565
+        ],
+        "ebb_label": "Griva – Vikingstad – Fontaine",
+        "opponent_label": "Reichel – Solow – Schütz",
+        "total_s": 10,
+        "p1_s": 0,
+        "p2_s": 10,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 35.7
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          1823
+        ],
+        "opponent_player_ids": [
+          487,
+          1404,
+          2798
+        ],
+        "ebb_label": "Wiederer – Vikingstad – Veilleux",
+        "opponent_label": "Esposito – Plachta – Schütz",
+        "total_s": 9,
+        "p1_s": 9,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 1,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 6.1
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          487,
+          1404,
+          2798
+        ],
+        "ebb_label": "Wiederer – Griva – Fontaine",
+        "opponent_label": "Esposito – Plachta – Schütz",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 9,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 3.7
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          1404,
+          3565,
+          3567
+        ],
+        "ebb_label": "Ronning – Pföderl – Kirk",
+        "opponent_label": "Greco – Solow – Schütz",
+        "total_s": 9,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 9,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          3429
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Reichel – Plachta – Heim",
+        "total_s": 8,
+        "p1_s": 8,
+        "p2_s": 0,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 1.9
+      },
+      {
+        "ebb_player_ids": [
+          546,
+          2126,
+          4310
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          3565
+        ],
+        "ebb_label": "Griva – Eder – Hördler",
+        "opponent_label": "Plachta – Solow – Heim",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 8,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          3565
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Plachta – Solow – Heim",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 8,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 1.9
+      },
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          2501,
+          2798,
+          3567
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Esposito – Bennett – Greco",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 8,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 1.2
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          4310
+        ],
+        "opponent_player_ids": [
+          1404,
+          2798,
+          3429
+        ],
+        "ebb_label": "Griva – Vikingstad – Veilleux",
+        "opponent_label": "Reichel – Esposito – Schütz",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 8,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          1823
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Wiederer – Eder – Pföderl",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 8,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 100.0
+      },
+      {
+        "ebb_player_ids": [
+          2209,
+          3410,
+          3411
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Ronning – Kirk – Fontaine",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 8,
+        "p1_s": 0,
+        "p2_s": 0,
+        "p3_s": 8,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 33.3
+      }
+    ],
+    "primary_forward_matchups": [
+      {
+        "ebb_player_ids": [
+          1402,
+          2209,
+          3410
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Ronning – Kirk – Tiffels",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 191,
+        "p1_s": 55,
+        "p2_s": 46,
+        "p3_s": 90,
+        "appearances": 7,
+        "cf": 6,
+        "ca": 1,
+        "cf_pct": 85.7,
+        "slot_for": 1,
+        "slot_against": 1,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 28.1
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          2126
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Eder – Hördler – Pföderl",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 180,
+        "p1_s": 95,
+        "p2_s": 44,
+        "p3_s": 41,
+        "appearances": 5,
+        "cf": 3,
+        "ca": 2,
+        "cf_pct": 60.0,
+        "slot_for": 1,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 43.5
+      },
+      {
+        "ebb_player_ids": [
+          1823,
+          3411,
+          4310
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Wiederer – Griva – Fontaine",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 77,
+        "p1_s": 0,
+        "p2_s": 36,
+        "p3_s": 41,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 31.7
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          4311
+        ],
+        "opponent_player_ids": [
+          1525,
+          2504,
+          3562
+        ],
+        "ebb_label": "Vikingstad – Veilleux – Krestan",
+        "opponent_label": "Ehl – Kühnhackl – Calce",
+        "total_s": 67,
+        "p1_s": 0,
+        "p2_s": 67,
+        "p3_s": 0,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 3,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 2,
+        "gf": 0,
+        "ga": 1,
+        "matchup_share_pct": 32.4
+      },
+      {
+        "ebb_player_ids": [
+          1762,
+          1796,
+          1823
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Wiederer – Vikingstad – Veilleux",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 51,
+        "p1_s": 12,
+        "p2_s": 0,
+        "p3_s": 39,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 1,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 34.7
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          546,
+          3411
+        ],
+        "opponent_player_ids": [
+          487,
+          2125,
+          2798
+        ],
+        "ebb_label": "Eder – Pföderl – Fontaine",
+        "opponent_label": "Esposito – Plachta – Heim",
+        "total_s": 53,
+        "p1_s": 0,
+        "p2_s": 31,
+        "p3_s": 22,
+        "appearances": 2,
+        "cf": 1,
+        "ca": 0,
+        "cf_pct": 100.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 48.2
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          2126,
+          3410
+        ],
+        "opponent_player_ids": [
+          2501,
+          3565,
+          3567
+        ],
+        "ebb_label": "Hördler – Pföderl – Kirk",
+        "opponent_label": "Bennett – Greco – Solow",
+        "total_s": 50,
+        "p1_s": 0,
+        "p2_s": 9,
+        "p3_s": 41,
+        "appearances": 2,
+        "cf": 0,
+        "ca": 2,
+        "cf_pct": 0.0,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 64.1
+      },
+      {
+        "ebb_player_ids": [
+          92,
+          1823,
+          3411
+        ],
+        "opponent_player_ids": [
+          1404,
+          3429,
+          4332
+        ],
+        "ebb_label": "Wiederer – Pföderl – Fontaine",
+        "opponent_label": "Reichel – Brown – Schütz",
+        "total_s": 37,
+        "p1_s": 0,
+        "p2_s": 37,
+        "p3_s": 0,
+        "appearances": 1,
+        "cf": 0,
+        "ca": 0,
+        "cf_pct": null,
+        "slot_for": 0,
+        "slot_against": 0,
+        "gf": 0,
+        "ga": 0,
+        "matchup_share_pct": 48.1
+      }
+    ]
+  },
+  "scoring_summary": [
+    {
+      "time_s": 56,
+      "period": "1",
+      "team_id": 3,
+      "team_abbr": "EBB",
+      "score": "0:1",
+      "balance": "EQ",
+      "scorer": {
+        "player_id": 506,
+        "name": "Jonas Müller",
+        "jersey": 18
+      },
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 2209,
+          "name": "Ty Ronning",
+          "jersey": 9
+        },
+        {
+          "order": 2,
+          "player_id": 3410,
+          "name": "Liam Kirk",
+          "jersey": 94
+        }
+      ],
+      "primary_assist": {
+        "order": 1,
+        "player_id": 2209,
+        "name": "Ty Ronning",
+        "jersey": 9
+      },
+      "secondary_assist": {
+        "order": 2,
+        "player_id": 3410,
+        "name": "Liam Kirk",
+        "jersey": 94
+      },
+      "empty_net": false
+    },
+    {
+      "time_s": 120,
+      "period": "1",
+      "team_id": 3,
+      "team_abbr": "EBB",
+      "score": "0:2",
+      "balance": "EQ",
+      "scorer": {
+        "player_id": 2209,
+        "name": "Ty Ronning",
+        "jersey": 9
+      },
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 3410,
+          "name": "Liam Kirk",
+          "jersey": 94
+        }
+      ],
+      "primary_assist": {
+        "order": 1,
+        "player_id": 3410,
+        "name": "Liam Kirk",
+        "jersey": 94
+      },
+      "secondary_assist": null,
+      "empty_net": false
+    },
+    {
+      "time_s": 183,
+      "period": "1",
+      "team_id": 2,
+      "team_abbr": "MAN",
+      "score": "1:2",
+      "balance": "EQ",
+      "scorer": {
+        "player_id": 3567,
+        "name": "Anthony Greco",
+        "jersey": 44
+      },
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 3565,
+          "name": "Zachary Solow",
+          "jersey": 73
+        },
+        {
+          "order": 2,
+          "player_id": 4333,
+          "name": "Jérémie Poirier",
+          "jersey": 54
+        }
+      ],
+      "primary_assist": {
+        "order": 1,
+        "player_id": 3565,
+        "name": "Zachary Solow",
+        "jersey": 73
+      },
+      "secondary_assist": {
+        "order": 2,
+        "player_id": 4333,
+        "name": "Jérémie Poirier",
+        "jersey": 54
+      },
+      "empty_net": false
+    },
+    {
+      "time_s": 583,
+      "period": "1",
+      "team_id": 2,
+      "team_abbr": "MAN",
+      "score": "2:2",
+      "balance": "PP1",
+      "scorer": {
+        "player_id": 487,
+        "name": "Matthias Plachta",
+        "jersey": 22
+      },
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 2489,
+          "name": "John Gilmour",
+          "jersey": 7
+        },
+        {
+          "order": 2,
+          "player_id": 2798,
+          "name": "Luke Esposito",
+          "jersey": 19
+        }
+      ],
+      "primary_assist": {
+        "order": 1,
+        "player_id": 2489,
+        "name": "John Gilmour",
+        "jersey": 7
+      },
+      "secondary_assist": {
+        "order": 2,
+        "player_id": 2798,
+        "name": "Luke Esposito",
+        "jersey": 19
+      },
+      "empty_net": false
+    },
+    {
+      "time_s": 1507,
+      "period": "2",
+      "team_id": 2,
+      "team_abbr": "MAN",
+      "score": "3:2",
+      "balance": "EQ",
+      "scorer": {
+        "player_id": 2504,
+        "name": "Tom Kühnhackl",
+        "jersey": 34
+      },
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 3562,
+          "name": "Max Calce",
+          "jersey": 39
+        },
+        {
+          "order": 2,
+          "player_id": 2411,
+          "name": "Nicolas Mattinen",
+          "jersey": 52
+        }
+      ],
+      "primary_assist": {
+        "order": 1,
+        "player_id": 3562,
+        "name": "Max Calce",
+        "jersey": 39
+      },
+      "secondary_assist": {
+        "order": 2,
+        "player_id": 2411,
+        "name": "Nicolas Mattinen",
+        "jersey": 52
+      },
+      "empty_net": false
+    },
+    {
+      "time_s": 2886,
+      "period": "3",
+      "team_id": 3,
+      "team_abbr": "EBB",
+      "score": "3:3",
+      "balance": "SH1",
+      "scorer": {
+        "player_id": 1823,
+        "name": "Manuel Wiederer",
+        "jersey": 21
+      },
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 1738,
+          "name": "Korbinian Geibel",
+          "jersey": 40
+        },
+        {
+          "order": 2,
+          "player_id": 2126,
+          "name": "Eric Hördler",
+          "jersey": 77
+        }
+      ],
+      "primary_assist": {
+        "order": 1,
+        "player_id": 1738,
+        "name": "Korbinian Geibel",
+        "jersey": 40
+      },
+      "secondary_assist": {
+        "order": 2,
+        "player_id": 2126,
+        "name": "Eric Hördler",
+        "jersey": 77
+      },
+      "empty_net": false
+    },
+    {
+      "time_s": 2955,
+      "period": "3",
+      "team_id": 2,
+      "team_abbr": "MAN",
+      "score": "4:3",
+      "balance": "EQ",
+      "scorer": {
+        "player_id": 1404,
+        "name": "Justin Schütz",
+        "jersey": 74
+      },
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 3429,
+          "name": "Kristian Reichel",
+          "jersey": 11
+        },
+        {
+          "order": 2,
+          "player_id": 2411,
+          "name": "Nicolas Mattinen",
+          "jersey": 52
+        }
+      ],
+      "primary_assist": {
+        "order": 1,
+        "player_id": 3429,
+        "name": "Kristian Reichel",
+        "jersey": 11
+      },
+      "secondary_assist": {
+        "order": 2,
+        "player_id": 2411,
+        "name": "Nicolas Mattinen",
+        "jersey": 52
+      },
+      "empty_net": false
+    }
+  ],
   "shot_zones": [
     {
       "zone": "SLOT",
@@ -5070,6 +8453,20 @@
       "distance_m": 8.651,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        1611,
+        2125,
+        2798,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        546,
+        1425,
+        1738,
+        2126
+      ],
       "player_name": "Jérémie Poirier",
       "jersey": 54,
       "period": "P1",
@@ -5086,6 +8483,20 @@
       "distance_m": 3.786,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        1611,
+        2125,
+        2798,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        546,
+        1425,
+        1738,
+        2126
+      ],
       "player_name": "Matthias Plachta",
       "jersey": 22,
       "period": "P1",
@@ -5102,6 +8513,20 @@
       "distance_m": 2.402,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        1611,
+        2125,
+        2798,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        546,
+        1425,
+        1738,
+        2126
+      ],
       "player_name": "Matthias Plachta",
       "jersey": 22,
       "period": "P1",
@@ -5118,6 +8543,20 @@
       "distance_m": 5.326,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        546,
+        1402,
+        2209
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        1611,
+        3429,
+        4332,
+        4333
+      ],
       "player_name": "Frederik Tiffels",
       "jersey": 95,
       "period": "P1",
@@ -5134,6 +8573,19 @@
       "distance_m": 2.996,
       "shot_zone": "SLOT",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        1611,
+        3429,
+        4332,
+        4333
+      ],
       "player_name": "Jonas Müller",
       "jersey": 18,
       "period": "P1",
@@ -5150,6 +8602,19 @@
       "distance_m": 2.698,
       "shot_zone": "SLOT",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        1762,
+        2209,
+        3410,
+        3533
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        1525,
+        2489,
+        3428,
+        4332
+      ],
       "player_name": "Ty Ronning",
       "jersey": 9,
       "period": "P1",
@@ -5166,6 +8631,20 @@
       "distance_m": 9.543,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1402,
+        1425,
+        1738,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        1525,
+        2411,
+        2504,
+        3562,
+        3563
+      ],
       "player_name": "Ty Ronning",
       "jersey": 9,
       "period": "P1",
@@ -5182,6 +8661,20 @@
       "distance_m": 13.106,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1611,
+        2501,
+        3565,
+        3567,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        512,
+        1823,
+        3411,
+        4310
+      ],
       "player_name": "Zachary Solow",
       "jersey": 73,
       "period": "P1",
@@ -5198,6 +8691,20 @@
       "distance_m": 4.92,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1611,
+        2501,
+        3565,
+        3567,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        512,
+        1823,
+        3411,
+        4310
+      ],
       "player_name": "Anthony Greco",
       "jersey": 44,
       "period": "P1",
@@ -5214,6 +8721,20 @@
       "distance_m": 21.566,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        92,
+        546,
+        2126,
+        3533,
+        4701
+      ],
+      "on_ice_against_player_ids": [
+        1611,
+        2501,
+        3565,
+        3567,
+        4333
+      ],
       "player_name": "Brandon Davidson",
       "jersey": 44,
       "period": "P1",
@@ -5230,6 +8751,19 @@
       "distance_m": 15.905,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        92,
+        512,
+        2209,
+        3410,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2798,
+        3563,
+        4332
+      ],
       "player_name": "Kai Wissmann",
       "jersey": 6,
       "period": "P1",
@@ -5246,6 +8780,19 @@
       "distance_m": 18.788,
       "shot_zone": "NEUTRAL_ZONE",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        92,
+        2209,
+        3410,
+        3411,
+        3412
+      ],
+      "on_ice_against_player_ids": [
+        1525,
+        2411,
+        2504,
+        3563
+      ],
       "player_name": "Mitchell Reinke",
       "jersey": 5,
       "period": "P1",
@@ -5262,6 +8809,19 @@
       "distance_m": 12.359,
       "shot_zone": "LEFT",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        2489,
+        3428,
+        3562,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        546,
+        1762,
+        1796,
+        3412,
+        4311
+      ],
       "player_name": "Max Calce",
       "jersey": 39,
       "period": "P1",
@@ -5278,6 +8838,19 @@
       "distance_m": 2.612,
       "shot_zone": "SLOT",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        546,
+        1762,
+        1796,
+        3412,
+        4311
+      ],
+      "on_ice_against_player_ids": [
+        2489,
+        2504,
+        3428,
+        3562
+      ],
       "player_name": "Yannick Veilleux",
       "jersey": 38,
       "period": "P1",
@@ -5294,6 +8867,20 @@
       "distance_m": 16.922,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        1404,
+        1611,
+        3428,
+        3429
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        546,
+        2126,
+        3533,
+        4701
+      ],
       "player_name": "Kristian Reichel",
       "jersey": 11,
       "period": "P1",
@@ -5310,6 +8897,19 @@
       "distance_m": 16.778,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        512,
+        1762,
+        1796
+      ],
       "player_name": "Nicolas Mattinen",
       "jersey": 52,
       "period": "P1",
@@ -5326,6 +8926,19 @@
       "distance_m": 12.004,
       "shot_zone": "LEFT",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        512,
+        1762,
+        1796
+      ],
       "player_name": "Leon Gawanke",
       "jersey": 9,
       "period": "P1",
@@ -5342,6 +8955,19 @@
       "distance_m": 14.815,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        487,
+        2489,
+        2798,
+        3565,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1762,
+        1796,
+        4701
+      ],
       "player_name": "Matthias Plachta",
       "jersey": 22,
       "period": "P1",
@@ -5358,6 +8984,20 @@
       "distance_m": 20.631,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1425,
+        1738,
+        1823,
+        3411,
+        4310
+      ],
+      "on_ice_against_player_ids": [
+        1611,
+        2501,
+        3565,
+        3567,
+        4333
+      ],
       "player_name": "Korbinian Geibel",
       "jersey": 40,
       "period": "P1",
@@ -5374,6 +9014,20 @@
       "distance_m": 18.412,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        92,
+        506,
+        1425,
+        1762,
+        1796
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        3428,
+        3429,
+        4332,
+        4333
+      ],
       "player_name": "Jonas Müller",
       "jersey": 18,
       "period": "P1",
@@ -5390,6 +9044,20 @@
       "distance_m": 17.187,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1762,
+        1796,
+        4311
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        2489,
+        2798,
+        3428,
+        4332
+      ],
       "player_name": "Kai Wissmann",
       "jersey": 6,
       "period": "P1",
@@ -5406,6 +9074,20 @@
       "distance_m": 9.294,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        2125,
+        2489,
+        2798,
+        3428
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        512,
+        1762,
+        1796,
+        4311
+      ],
       "player_name": "Luke Esposito",
       "jersey": 19,
       "period": "P1",
@@ -5422,6 +9104,20 @@
       "distance_m": 18.479,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1525,
+        2411,
+        2504,
+        3562,
+        3563
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1823,
+        3411,
+        3412,
+        4310
+      ],
       "player_name": "Nicolas Mattinen",
       "jersey": 52,
       "period": "P1",
@@ -5438,6 +9134,20 @@
       "distance_m": 15.501,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1525,
+        1611,
+        2411,
+        2504,
+        3562
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1823,
+        3411,
+        3412,
+        4310
+      ],
       "player_name": "Leon Gawanke",
       "jersey": 9,
       "period": "P1",
@@ -5454,6 +9164,20 @@
       "distance_m": 13.773,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1525,
+        1611,
+        2411,
+        2501,
+        3562
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1823,
+        3411,
+        3412,
+        4310
+      ],
       "player_name": "Nicolas Mattinen",
       "jersey": 52,
       "period": "P1",
@@ -5470,6 +9194,20 @@
       "distance_m": 20.461,
       "shot_zone": "NEUTRAL_ZONE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1525,
+        1611,
+        2411,
+        2501,
+        3562
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1823,
+        3411,
+        3412,
+        4310
+      ],
       "player_name": "Leon Gawanke",
       "jersey": 9,
       "period": "P1",
@@ -5486,6 +9224,20 @@
       "distance_m": 18.679,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        2501,
+        3563,
+        3565,
+        3567,
+        4333
+      ],
       "player_name": "Jonas Müller",
       "jersey": 18,
       "period": "P1",
@@ -5502,6 +9254,20 @@
       "distance_m": 3.972,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        2501,
+        3563,
+        3565,
+        3567,
+        4333
+      ],
       "player_name": "Jonas Müller",
       "jersey": 18,
       "period": "P1",
@@ -5518,6 +9284,20 @@
       "distance_m": 15.976,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1762,
+        1796,
+        4311
+      ],
+      "on_ice_against_player_ids": [
+        2489,
+        2798,
+        3428,
+        3429,
+        4332
+      ],
       "player_name": "Yannick Veilleux",
       "jersey": 38,
       "period": "P1",
@@ -5534,6 +9314,20 @@
       "distance_m": 7.023,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        2411,
+        3429,
+        3563,
+        4332
+      ],
       "player_name": "Ty Ronning",
       "jersey": 9,
       "period": "P1",
@@ -5550,6 +9344,20 @@
       "distance_m": 6.431,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1762,
+        1823,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        1525,
+        2489,
+        2504,
+        3428,
+        3562
+      ],
       "player_name": "Manuel Wiederer",
       "jersey": 21,
       "period": "P1",
@@ -5566,6 +9374,20 @@
       "distance_m": 17.622,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1762,
+        1823,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        1525,
+        2489,
+        2504,
+        3428,
+        3565
+      ],
       "player_name": "Gabriel Fontaine",
       "jersey": 97,
       "period": "P1",
@@ -5582,6 +9404,20 @@
       "distance_m": 13.348,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1402,
+        1425,
+        1738,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2501,
+        3563,
+        3565,
+        3567
+      ],
       "player_name": "Eric Mik",
       "jersey": 12,
       "period": "P1",
@@ -5598,6 +9434,20 @@
       "distance_m": 22.234,
       "shot_zone": "NEUTRAL_ZONE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1611,
+        2411,
+        2501,
+        3565,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1738,
+        2126,
+        2209,
+        3410
+      ],
       "player_name": "Nicolas Mattinen",
       "jersey": 52,
       "period": "P1",
@@ -5614,6 +9464,20 @@
       "distance_m": 1.867,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        3429,
+        4332,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        506,
+        512,
+        546,
+        2126
+      ],
       "player_name": "Patrick Brown",
       "jersey": 38,
       "period": "P1",
@@ -5630,6 +9494,20 @@
       "distance_m": 22.771,
       "shot_zone": "NEUTRAL_ZONE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        1404,
+        1611,
+        2798,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        512,
+        1762,
+        1796,
+        1823
+      ],
       "player_name": "Leon Gawanke",
       "jersey": 9,
       "period": "P1",
@@ -5646,6 +9524,20 @@
       "distance_m": 7.779,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        92,
+        506,
+        512,
+        546,
+        2126
+      ],
+      "on_ice_against_player_ids": [
+        1611,
+        2501,
+        3565,
+        3567,
+        4333
+      ],
       "player_name": "Andreas Eder",
       "jersey": 43,
       "period": "P2",
@@ -5662,6 +9554,20 @@
       "distance_m": 18.346,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1611,
+        2501,
+        3565,
+        3567,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        506,
+        512,
+        2126,
+        3410
+      ],
       "player_name": "Jérémie Poirier",
       "jersey": 54,
       "period": "P2",
@@ -5678,6 +9584,20 @@
       "distance_m": 1.32,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1525,
+        2411,
+        2504,
+        3562,
+        3563
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        506,
+        512,
+        1402,
+        3410
+      ],
       "player_name": "Tom Kühnhackl",
       "jersey": 34,
       "period": "P2",
@@ -5694,6 +9614,20 @@
       "distance_m": 17.622,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1525,
+        2489,
+        2504,
+        3428,
+        3562
+      ],
+      "on_ice_against_player_ids": [
+        1762,
+        1796,
+        3533,
+        4311,
+        4701
+      ],
       "player_name": "Max Calce",
       "jersey": 39,
       "period": "P2",
@@ -5710,6 +9644,20 @@
       "distance_m": 3.879,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1525,
+        2489,
+        2504,
+        3428,
+        3562
+      ],
+      "on_ice_against_player_ids": [
+        1762,
+        1796,
+        3533,
+        4311,
+        4701
+      ],
       "player_name": "Tom Kühnhackl",
       "jersey": 34,
       "period": "P2",
@@ -5726,6 +9674,20 @@
       "distance_m": 9.782,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1425,
+        1738,
+        2209,
+        3410,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        2411,
+        3429,
+        3563,
+        4332
+      ],
       "player_name": "Liam Kirk",
       "jersey": 94,
       "period": "P2",
@@ -5742,6 +9704,20 @@
       "distance_m": 19.078,
       "shot_zone": "NEUTRAL_ZONE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1425,
+        1738,
+        2209,
+        3410,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        2411,
+        3429,
+        3563,
+        4332
+      ],
       "player_name": "Korbinian Geibel",
       "jersey": 40,
       "period": "P2",
@@ -5758,6 +9734,20 @@
       "distance_m": 10.195,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1425,
+        1738,
+        2209,
+        3410,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        2411,
+        3429,
+        3563,
+        4332
+      ],
       "player_name": "Gabriel Fontaine",
       "jersey": 97,
       "period": "P2",
@@ -5774,6 +9764,20 @@
       "distance_m": 4.111,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1823,
+        3411,
+        4310
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        1611,
+        2125,
+        2798,
+        4333
+      ],
       "player_name": "Gabriel Fontaine",
       "jersey": 97,
       "period": "P2",
@@ -5790,6 +9794,20 @@
       "distance_m": 10.79,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1823,
+        3411,
+        4310
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        1611,
+        2125,
+        2798,
+        4333
+      ],
       "player_name": "Gabriel Fontaine",
       "jersey": 97,
       "period": "P2",
@@ -5806,6 +9824,20 @@
       "distance_m": 14.98,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        2489,
+        2501,
+        3428,
+        3565,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        546,
+        2126,
+        3533,
+        4701
+      ],
       "player_name": "Tobias Fohrler",
       "jersey": 5,
       "period": "P2",
@@ -5822,6 +9854,20 @@
       "distance_m": 19.529,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        2489,
+        2501,
+        3428,
+        3565,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        546,
+        2126,
+        3533,
+        4701
+      ],
       "player_name": "Anthony Greco",
       "jersey": 44,
       "period": "P2",
@@ -5838,6 +9884,20 @@
       "distance_m": 2.262,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1525,
+        2411,
+        2504,
+        3562,
+        3563
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1738,
+        1762,
+        1796,
+        4311
+      ],
       "player_name": "Tom Kühnhackl",
       "jersey": 34,
       "period": "P2",
@@ -5854,6 +9914,20 @@
       "distance_m": 5.11,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        2411,
+        3429,
+        3563,
+        4332
+      ],
       "player_name": "Jonas Müller",
       "jersey": 18,
       "period": "P2",
@@ -5870,6 +9944,20 @@
       "distance_m": 12.18,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        1856,
+        2411,
+        2798,
+        3563
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
       "player_name": "Lennard Nieleck",
       "jersey": 72,
       "period": "P2",
@@ -5886,6 +9974,20 @@
       "distance_m": 17.486,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        92,
+        1425,
+        1796,
+        3411,
+        3412
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        1611,
+        3429,
+        4332,
+        4333
+      ],
       "player_name": "Gabriel Fontaine",
       "jersey": 97,
       "period": "P2",
@@ -5902,6 +10004,20 @@
       "distance_m": 10.581,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        3429,
+        4332,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1762,
+        1796,
+        3412,
+        4311
+      ],
       "player_name": "Leon Gawanke",
       "jersey": 9,
       "period": "P2",
@@ -5918,6 +10034,20 @@
       "distance_m": 3.307,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        2489,
+        2501,
+        3428,
+        3565,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1762,
+        1796,
+        3412,
+        4311
+      ],
       "player_name": "Kris Bennett",
       "jersey": 21,
       "period": "P2",
@@ -5934,6 +10064,20 @@
       "distance_m": 2.552,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        2489,
+        2501,
+        3428,
+        3565,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1762,
+        1796,
+        3412,
+        4311
+      ],
       "player_name": "Kris Bennett",
       "jersey": 21,
       "period": "P2",
@@ -5950,6 +10094,20 @@
       "distance_m": 18.162,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        2411,
+        3429,
+        3563,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        506,
+        512,
+        546,
+        2126
+      ],
       "player_name": "Nicolas Mattinen",
       "jersey": 52,
       "period": "P2",
@@ -5966,6 +10124,20 @@
       "distance_m": 13.686,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1402,
+        2209,
+        3410,
+        3533,
+        4701
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        2125,
+        2411,
+        2798,
+        4333
+      ],
       "player_name": "Liam Kirk",
       "jersey": 94,
       "period": "P2",
@@ -5982,6 +10154,20 @@
       "distance_m": 14.25,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        3429,
+        4332,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        3410,
+        3411,
+        3412,
+        3533
+      ],
       "player_name": "Kristian Reichel",
       "jersey": 11,
       "period": "P2",
@@ -5998,6 +10184,20 @@
       "distance_m": 6.887,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2501,
+        3563,
+        3565,
+        3567
+      ],
       "player_name": "Liam Kirk",
       "jersey": 94,
       "period": "P2",
@@ -6014,6 +10214,20 @@
       "distance_m": 10.686,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2501,
+        3563,
+        3565,
+        3567
+      ],
       "player_name": "Frederik Tiffels",
       "jersey": 95,
       "period": "P2",
@@ -6030,6 +10244,20 @@
       "distance_m": 12.638,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        512,
+        2126,
+        2209,
+        3410,
+        3412
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        2125,
+        2411,
+        2798,
+        3563
+      ],
       "player_name": "Liam Kirk",
       "jersey": 94,
       "period": "P2",
@@ -6046,6 +10274,20 @@
       "distance_m": 20.606,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1425,
+        1823,
+        3411,
+        4310,
+        4701
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        1404,
+        2411,
+        2798,
+        3563
+      ],
       "player_name": "Eric Mik",
       "jersey": 12,
       "period": "P2",
@@ -6062,6 +10304,20 @@
       "distance_m": 21.93,
       "shot_zone": "NEUTRAL_ZONE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        2489,
+        3429,
+        4332,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1796,
+        3411,
+        4310,
+        4701
+      ],
       "player_name": "Jérémie Poirier",
       "jersey": 54,
       "period": "P2",
@@ -6078,6 +10334,20 @@
       "distance_m": 20.48,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        2489,
+        3429,
+        4332,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1796,
+        3411,
+        4310,
+        4701
+      ],
       "player_name": "Kristian Reichel",
       "jersey": 11,
       "period": "P2",
@@ -6094,6 +10364,20 @@
       "distance_m": 1.787,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1762,
+        1796,
+        4311
+      ],
+      "on_ice_against_player_ids": [
+        2489,
+        2501,
+        3428,
+        3565,
+        3567
+      ],
       "player_name": "Yannick Veilleux",
       "jersey": 38,
       "period": "P2",
@@ -6110,6 +10394,20 @@
       "distance_m": 14.291,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        92,
+        546,
+        3411,
+        3412,
+        3533
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        2125,
+        2411,
+        2798,
+        3563
+      ],
       "player_name": "Leonhard Pföderl",
       "jersey": 93,
       "period": "P2",
@@ -6126,6 +10424,19 @@
       "distance_m": 13.963,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        92,
+        512,
+        2209,
+        3410,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        2501,
+        3428,
+        3563,
+        3567
+      ],
       "player_name": "Leonhard Pföderl",
       "jersey": 93,
       "period": "P2",
@@ -6142,6 +10453,19 @@
       "distance_m": 11.304,
       "shot_zone": "BLUE_LINE",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        2501,
+        3428,
+        3563,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        512,
+        2209,
+        3410,
+        3411
+      ],
       "player_name": "Anthony Greco",
       "jersey": 44,
       "period": "P2",
@@ -6158,6 +10482,19 @@
       "distance_m": 3.542,
       "shot_zone": "SLOT",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        2489,
+        3428,
+        3562,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        546,
+        1762,
+        1796,
+        3412,
+        4311
+      ],
       "player_name": "Max Calce",
       "jersey": 39,
       "period": "P2",
@@ -6174,6 +10511,20 @@
       "distance_m": 7.993,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        1425,
+        1762,
+        1823,
+        4311
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2489,
+        3428,
+        3562,
+        4332
+      ],
       "player_name": "Tobias Krestan",
       "jersey": 91,
       "period": "P2",
@@ -6190,6 +10541,20 @@
       "distance_m": 2.881,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        1402,
+        1425,
+        1762,
+        1823
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2489,
+        3428,
+        3562,
+        4332
+      ],
       "player_name": "Frederik Tiffels",
       "jersey": 95,
       "period": "P2",
@@ -6206,6 +10571,20 @@
       "distance_m": 2.177,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        2489,
+        2798,
+        3428,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        1402,
+        1425,
+        1823,
+        2126
+      ],
       "player_name": "Luke Esposito",
       "jersey": 19,
       "period": "P2",
@@ -6222,6 +10601,20 @@
       "distance_m": 14.727,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        1611,
+        2798,
+        3429,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        1402,
+        1425,
+        1823,
+        2126
+      ],
       "player_name": "Leon Gawanke",
       "jersey": 9,
       "period": "P2",
@@ -6238,6 +10631,20 @@
       "distance_m": 17.327,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        512,
+        546,
+        3410,
+        3411,
+        3533
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        1611,
+        2798,
+        3429,
+        4333
+      ],
       "player_name": "Gabriel Fontaine",
       "jersey": 97,
       "period": "P2",
@@ -6254,6 +10661,20 @@
       "distance_m": 13.816,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        92,
+        506,
+        512,
+        1402,
+        2209
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        2411,
+        3563,
+        3565,
+        4332
+      ],
       "player_name": "Kai Wissmann",
       "jersey": 6,
       "period": "P2",
@@ -6270,6 +10691,20 @@
       "distance_m": 17.228,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1762,
+        1796,
+        1823,
+        3533,
+        4701
+      ],
+      "on_ice_against_player_ids": [
+        1525,
+        1611,
+        2504,
+        3562,
+        4333
+      ],
       "player_name": "Adam Smith",
       "jersey": 4,
       "period": "P3",
@@ -6286,6 +10721,20 @@
       "distance_m": 28.233,
       "shot_zone": "NEUTRAL_ZONE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        2125,
+        2411,
+        2798,
+        3563
+      ],
+      "on_ice_against_player_ids": [
+        1402,
+        1425,
+        1738,
+        2209,
+        3410
+      ],
       "player_name": "Dan Renouf",
       "jersey": 4,
       "period": "P3",
@@ -6302,6 +10751,20 @@
       "distance_m": 11.972,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        2125,
+        2489,
+        2798,
+        3428
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1738,
+        1762,
+        1796,
+        1823
+      ],
       "player_name": "Maximilian Heim",
       "jersey": 86,
       "period": "P3",
@@ -6318,6 +10781,20 @@
       "distance_m": 3.083,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        2125,
+        2489,
+        2798,
+        3428
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1738,
+        1762,
+        1796,
+        1823
+      ],
       "player_name": "Tobias Fohrler",
       "jersey": 5,
       "period": "P3",
@@ -6334,6 +10811,20 @@
       "distance_m": 13.487,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        487,
+        2125,
+        2489,
+        2798,
+        3428
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1738,
+        1762,
+        1796,
+        1823
+      ],
       "player_name": "Luke Esposito",
       "jersey": 19,
       "period": "P3",
@@ -6350,6 +10841,20 @@
       "distance_m": 7.902,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        92,
+        546,
+        2126,
+        3412,
+        4701
+      ],
+      "on_ice_against_player_ids": [
+        1611,
+        2501,
+        3565,
+        3567,
+        4333
+      ],
       "player_name": "Leonhard Pföderl",
       "jersey": 93,
       "period": "P3",
@@ -6366,6 +10871,20 @@
       "distance_m": 4.795,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        2411,
+        2501,
+        3565,
+        3567,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        2126,
+        3410,
+        3412,
+        4701
+      ],
       "player_name": "Anthony Greco",
       "jersey": 44,
       "period": "P3",
@@ -6382,6 +10901,20 @@
       "distance_m": 5.941,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        1525,
+        2411,
+        2504,
+        3562,
+        3563
+      ],
       "player_name": "Ty Ronning",
       "jersey": 9,
       "period": "P3",
@@ -6398,6 +10931,20 @@
       "distance_m": 12.745,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        1525,
+        2411,
+        2504,
+        3562,
+        3563
+      ],
       "player_name": "Kai Wissmann",
       "jersey": 6,
       "period": "P3",
@@ -6414,6 +10961,19 @@
       "distance_m": 5.553,
       "shot_zone": "SLOT",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        1425,
+        1738,
+        1823,
+        2126
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        1611,
+        2489,
+        3567,
+        4332
+      ],
       "player_name": "Manuel Wiederer",
       "jersey": 21,
       "period": "P3",
@@ -6430,6 +10990,19 @@
       "distance_m": 9.783,
       "shot_zone": "SLOT",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        512,
+        1762,
+        1796
+      ],
       "player_name": "Kristian Reichel",
       "jersey": 11,
       "period": "P3",
@@ -6446,6 +11019,19 @@
       "distance_m": 15.672,
       "shot_zone": "BLUE_LINE",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1762,
+        1796
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
       "player_name": "Jonas Müller",
       "jersey": 18,
       "period": "P3",
@@ -6462,6 +11048,19 @@
       "distance_m": 22.512,
       "shot_zone": "BLUE_LINE",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1762,
+        1823
+      ],
+      "on_ice_against_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
       "player_name": "Manuel Wiederer",
       "jersey": 21,
       "period": "P3",
@@ -6478,6 +11077,19 @@
       "distance_m": 8.717,
       "shot_zone": "SLOT",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        546,
+        1425,
+        1738,
+        1823
+      ],
       "player_name": "Nicolas Mattinen",
       "jersey": 52,
       "period": "P3",
@@ -6494,6 +11106,19 @@
       "distance_m": 7.559,
       "shot_zone": "SLOT",
       "manpower": "5v4",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        546,
+        1425,
+        1738,
+        1823
+      ],
       "player_name": "Justin Schütz",
       "jersey": 74,
       "period": "P3",
@@ -6510,6 +11135,20 @@
       "distance_m": 12.357,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        546,
+        1425,
+        1738,
+        1823,
+        4701
+      ],
       "player_name": "Nicolas Mattinen",
       "jersey": 52,
       "period": "P3",
@@ -6526,6 +11165,20 @@
       "distance_m": 4.485,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        546,
+        1425,
+        1738,
+        1823,
+        4701
+      ],
       "player_name": "Kristian Reichel",
       "jersey": 11,
       "period": "P3",
@@ -6542,6 +11195,20 @@
       "distance_m": 2.874,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        2411,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        546,
+        1425,
+        1738,
+        1823,
+        4701
+      ],
       "player_name": "Justin Schütz",
       "jersey": 74,
       "period": "P3",
@@ -6558,6 +11225,20 @@
       "distance_m": 16.986,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        92,
+        506,
+        512,
+        546,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        1525,
+        2411,
+        2504,
+        3562,
+        3563
+      ],
       "player_name": "Kai Wissmann",
       "jersey": 6,
       "period": "P3",
@@ -6574,6 +11255,20 @@
       "distance_m": 5.738,
       "shot_zone": "SLOT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        2411,
+        2501,
+        3563,
+        3565,
+        3567
+      ],
+      "on_ice_against_player_ids": [
+        506,
+        1402,
+        2209,
+        3410,
+        3533
+      ],
       "player_name": "Anthony Greco",
       "jersey": 44,
       "period": "P3",
@@ -6590,6 +11285,20 @@
       "distance_m": 16.828,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        3429,
+        4332,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        1425,
+        1823,
+        2209,
+        4701
+      ],
       "player_name": "Leon Gawanke",
       "jersey": 9,
       "period": "P3",
@@ -6606,6 +11315,20 @@
       "distance_m": 16.433,
       "shot_zone": "BLUE_LINE",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        1611,
+        3429,
+        4332,
+        4333
+      ],
+      "on_ice_against_player_ids": [
+        92,
+        1425,
+        1823,
+        2209,
+        4701
+      ],
       "player_name": "Leon Gawanke",
       "jersey": 9,
       "period": "P3",
@@ -6622,6 +11345,19 @@
       "distance_m": 14.249,
       "shot_zone": "LEFT",
       "manpower": "4v5",
+      "on_ice_for_player_ids": [
+        92,
+        546,
+        1425,
+        3411
+      ],
+      "on_ice_against_player_ids": [
+        487,
+        2411,
+        2504,
+        2798,
+        3563
+      ],
       "player_name": "Gabriel Fontaine",
       "jersey": 97,
       "period": "P3",
@@ -6638,6 +11374,20 @@
       "distance_m": 11.208,
       "shot_zone": "LEFT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2501,
+        3563,
+        3565,
+        3567
+      ],
       "player_name": "Liam Kirk",
       "jersey": 94,
       "period": "P3",
@@ -6654,6 +11404,20 @@
       "distance_m": 17.227,
       "shot_zone": "RIGHT",
       "manpower": "5v5",
+      "on_ice_for_player_ids": [
+        1404,
+        2489,
+        3428,
+        3429,
+        4332
+      ],
+      "on_ice_against_player_ids": [
+        1425,
+        1762,
+        1796,
+        1823,
+        3412
+      ],
       "player_name": "Tobias Fohrler",
       "jersey": 5,
       "period": "P3",
@@ -6670,6 +11434,21 @@
       "distance_m": 19.076,
       "shot_zone": "NEUTRAL_ZONE",
       "manpower": "6v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        1796,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2501,
+        2504,
+        3429,
+        3563
+      ],
       "player_name": "Kai Wissmann",
       "jersey": 6,
       "period": "P3",
@@ -6686,6 +11465,21 @@
       "distance_m": 14.672,
       "shot_zone": "BLUE_LINE",
       "manpower": "6v5",
+      "on_ice_for_player_ids": [
+        506,
+        512,
+        1402,
+        1796,
+        2209,
+        3410
+      ],
+      "on_ice_against_player_ids": [
+        2411,
+        2501,
+        2504,
+        3429,
+        3563
+      ],
       "player_name": "Liam Kirk",
       "jersey": 94,
       "period": "P3",
@@ -6701,6 +11495,20 @@
       "team_abbr": "EBB",
       "balance": "EQ",
       "scorer": "Jonas Müller",
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 2209,
+          "name": "Ty Ronning",
+          "jersey": 9
+        },
+        {
+          "order": 2,
+          "player_id": 3410,
+          "name": "Liam Kirk",
+          "jersey": 94
+        }
+      ],
       "score": "0:1",
       "penalty": null,
       "duration_s": null
@@ -6713,6 +11521,14 @@
       "team_abbr": "EBB",
       "balance": "EQ",
       "scorer": "Ty Ronning",
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 3410,
+          "name": "Liam Kirk",
+          "jersey": 94
+        }
+      ],
       "score": "0:2",
       "penalty": null,
       "duration_s": null
@@ -6725,6 +11541,20 @@
       "team_abbr": "MAN",
       "balance": "EQ",
       "scorer": "Anthony Greco",
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 3565,
+          "name": "Zachary Solow",
+          "jersey": 73
+        },
+        {
+          "order": 2,
+          "player_id": 4333,
+          "name": "Jérémie Poirier",
+          "jersey": 54
+        }
+      ],
       "score": "1:2",
       "penalty": null,
       "duration_s": null
@@ -6737,6 +11567,7 @@
       "team_abbr": "MAN",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "CROSS",
       "duration_s": 120
@@ -6749,6 +11580,7 @@
       "team_abbr": "EBB",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "HOOK",
       "duration_s": 120
@@ -6761,6 +11593,20 @@
       "team_abbr": "MAN",
       "balance": "PP1",
       "scorer": "Matthias Plachta",
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 2489,
+          "name": "John Gilmour",
+          "jersey": 7
+        },
+        {
+          "order": 2,
+          "player_id": 2798,
+          "name": "Luke Esposito",
+          "jersey": 19
+        }
+      ],
       "score": "2:2",
       "penalty": null,
       "duration_s": null
@@ -6773,6 +11619,20 @@
       "team_abbr": "MAN",
       "balance": "EQ",
       "scorer": "Tom Kühnhackl",
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 3562,
+          "name": "Max Calce",
+          "jersey": 39
+        },
+        {
+          "order": 2,
+          "player_id": 2411,
+          "name": "Nicolas Mattinen",
+          "jersey": 52
+        }
+      ],
       "score": "3:2",
       "penalty": null,
       "duration_s": null
@@ -6785,6 +11645,7 @@
       "team_abbr": "MAN",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "INTRF",
       "duration_s": 120
@@ -6797,6 +11658,7 @@
       "team_abbr": "EBB",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "SLASH",
       "duration_s": 120
@@ -6809,6 +11671,7 @@
       "team_abbr": "MAN",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "TRIP",
       "duration_s": 120
@@ -6821,6 +11684,7 @@
       "team_abbr": "EBB",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "HI-ST",
       "duration_s": 120
@@ -6833,6 +11697,20 @@
       "team_abbr": "EBB",
       "balance": "SH1",
       "scorer": "Manuel Wiederer",
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 1738,
+          "name": "Korbinian Geibel",
+          "jersey": 40
+        },
+        {
+          "order": 2,
+          "player_id": 2126,
+          "name": "Eric Hördler",
+          "jersey": 77
+        }
+      ],
       "score": "3:3",
       "penalty": null,
       "duration_s": null
@@ -6845,6 +11723,20 @@
       "team_abbr": "MAN",
       "balance": "EQ",
       "scorer": "Justin Schütz",
+      "assists": [
+        {
+          "order": 1,
+          "player_id": 3429,
+          "name": "Kristian Reichel",
+          "jersey": 11
+        },
+        {
+          "order": 2,
+          "player_id": 2411,
+          "name": "Nicolas Mattinen",
+          "jersey": 52
+        }
+      ],
       "score": "4:3",
       "penalty": null,
       "duration_s": null
@@ -6857,6 +11749,7 @@
       "team_abbr": "MAN",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "HI-ST",
       "duration_s": 120
@@ -6869,6 +11762,7 @@
       "team_abbr": "MAN",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "TRIP",
       "duration_s": 120
@@ -6881,6 +11775,7 @@
       "team_abbr": "MAN",
       "balance": null,
       "scorer": null,
+      "assists": [],
       "score": null,
       "penalty": "UN-SP",
       "duration_s": 120
