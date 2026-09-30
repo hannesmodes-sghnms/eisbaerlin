@@ -73,3 +73,28 @@ def test_line_matching_and_midgame_change_detection():
         row["kind"] == "forward" and row["period"] == 2 and row["change_type"] == "introduced"
         for row in result["lineup_changes"]
     )
+
+
+def test_flexible_player_role_is_used_for_forward_units():
+    players = [
+        {"team_id": 3, "player_id": 1, "full_name": "F1", "last_name": "F1", "jersey": 1, "position": "FO"},
+        {"team_id": 3, "player_id": 2, "full_name": "F2", "last_name": "F2", "jersey": 2, "position": "FO"},
+        {"team_id": 3, "player_id": 1425, "full_name": "Eric Mik", "last_name": "Mik", "jersey": 12, "position": "DE"},
+        {"team_id": 3, "player_id": 4, "full_name": "D1", "last_name": "D1", "jersey": 4, "position": "DE"},
+        {"team_id": 3, "player_id": 5, "full_name": "D2", "last_name": "D2", "jersey": 5, "position": "DE"},
+    ]
+    opp = [
+        {"team_id": 7, "player_id": pid, "full_name": f"O{pid}", "last_name": f"O{pid}", "jersey": pid, "position": "FO" if pid < 104 else "DE"}
+        for pid in (101, 102, 103, 104, 105)
+    ]
+    players += opp
+    shifts = []
+    _add_interval(shifts, 0, 60, [1, 2, 1425, 4, 5], [101, 102, 103, 104, 105])
+    result = analyze_5v5_lineups(shifts, players, focus_team_id=3, opponent_team_id=7)
+    trio = result["forward_trios"][0]
+    pair = result["defense_pairs"][0]
+    assert set(trio["player_ids"]) == {1, 2, 1425}
+    assert set(pair["player_ids"]) == {4, 5}
+    mik = next(row for row in result["player_5v5_usage"] if row["player_id"] == 1425)
+    assert mik["usage_role"] == "FO"
+    assert mik["role_fo_s"] == 60

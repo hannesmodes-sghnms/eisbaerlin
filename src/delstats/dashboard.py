@@ -7,12 +7,12 @@ from typing import Any
 
 from .advanced import (
     goalie_watch,
+    forward_matchup_report,
     player_impact_5v5_from_shots,
     primary_forward_matchups,
     score_state_corsi_5v5,
     scoring_summary_from_events,
     season_top_scorers,
-    stable_forward_matchup_performance,
     zone_starts_5v5,
 )
 from .lineups import analyze_5v5_lineups
@@ -251,9 +251,9 @@ def _build_facts(
         reasons = "; ".join(rotation.get("shortened_bank_reasons") or [])
         facts.append(f"Hinweis auf verkürzte Bank im 3. Drittel ({reasons}).")
 
-    matchups = advanced.get("primary_forward_matchups") or []
+    matchups = advanced.get("relevant_forward_matchups") or advanced.get("primary_forward_matchups") or []
     if matchups:
-        top = matchups[0]
+        top = max(matchups, key=lambda row: (int(row.get("total_s") or 0), int(row.get("appearances") or 0)))
         pct = "–" if top.get("cf_pct") is None else f"{top['cf_pct']:.1f}%"
         facts.append(
             f"Häufigstes Line-Matching: {top['ebb_label']} gegen {top['opponent_label']} mit {_fmt_time(top['total_s'])}; "
@@ -311,6 +311,8 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
         players.append(
             {
                 "player_id": row["player_id"], "name": row["player_name"], "jersey": row["jersey"], "position": row["position"],
+                "usage_role": five.get("usage_role") or row["position"],
+                "role_fo_s": int(five.get("role_fo_s") or 0), "role_de_s": int(five.get("role_de_s") or 0),
                 "goals": row["goals"], "assists": row["assists"], "points": row["points"], "toi_s": total,
                 "eq_s": max(0, total - pp - pk), "pp_s": pp, "pk_s": pk, "shifts": int(row.get("shifts") or 0),
                 "avg_shift_s": round(total / row["shifts"], 1) if row.get("shifts") else None,
@@ -397,8 +399,9 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
         if player["player_id"] in impact_by_id:
             impact_by_id[player["player_id"]]["toi_5v5_s"] = player["five_v_five_s"]
 
-    matchup_rows = stable_forward_matchup_performance(
-        shifts, player_info, shots, focus_team_id=FOCUS_TEAM_ID, opponent_team_id=opponent_team_id,
+    matchup_report = forward_matchup_report(
+        shifts, player_info, shots, event_rows,
+        focus_team_id=FOCUS_TEAM_ID, opponent_team_id=opponent_team_id,
     )
     advanced = {
         "player_impact_5v5": impact,
@@ -409,8 +412,12 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
             shifts, player_info, faceoffs, focus_team_id=FOCUS_TEAM_ID, opponent_team_id=opponent_team_id,
             home_team_id=int(match["home_team_id"]),
         ),
-        "forward_matchups": matchup_rows,
-        "primary_forward_matchups": primary_forward_matchups(matchup_rows),
+        "forward_matchups": matchup_report["all_matchups"],
+        "relevant_forward_matchups": matchup_report["relevant_matchups"],
+        "line_performance": matchup_report["line_performance"],
+        "matchup_coverage": matchup_report["coverage"],
+        "unresolved_matchup_goals": matchup_report["unresolved_goals"],
+        "primary_forward_matchups": primary_forward_matchups(matchup_report["all_matchups"]),
     }
 
     zone_rows = _all(

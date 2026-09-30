@@ -4,7 +4,814 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EBB Game Dashboard</title>
-<link rel="stylesheet" href="ebb-dashboard-v0.8.css">
+  <style>
+:root {
+  color-scheme: dark;
+
+  --bg: #07111f;
+  --panel: #0d1a2b;
+  --panel2: #122238;
+  --line: #243650;
+  --text: #f5f7fb;
+  --muted: #9fb1ca;
+  --accent: #7db7ff;
+  --ebb: #4ea1ff;
+  --opp: #ff7a85;
+  --good: #65d6a1;
+  --warn: #ffc96b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+main {
+  width: min(1420px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 28px 0 52px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 0.98rem;
+  margin: 0 0 9px;
+}
+
+p {
+  margin: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+
+/* Header */
+
+.header {
+  display: flex;
+  gap: 18px;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+
+/* Panels and general grid */
+
+.panel {
+  min-width: 0;
+  max-width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.two {
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+}
+
+.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+
+/* Upcoming games */
+
+.upcoming {
+  margin-bottom: 16px;
+}
+
+/*
+ * Important:
+ * opening one matchup preview must not stretch the two sibling cards
+ * to the same height and must never widen the outer 3-column grid.
+ */
+#upcoming {
+  align-items: start;
+  min-width: 0;
+}
+
+#upcoming > * {
+  min-width: 0;
+}
+
+.upcoming-card {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  align-self: start;
+  background: var(--panel2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.upcoming-date {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.83rem;
+  margin-bottom: 5px;
+}
+
+.upcoming-match {
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.upcoming-place {
+  color: var(--muted);
+  margin-top: 4px;
+  font-size: 0.84rem;
+}
+
+.form-strip {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.form-chip {
+  display: inline-flex;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  border: 1px solid var(--line);
+}
+
+.form-chip.W {
+  color: var(--good);
+  border-color: #2f7759;
+}
+
+.form-chip.L {
+  color: var(--opp);
+  border-color: #733941;
+}
+
+.form-chip.T {
+  color: var(--warn);
+}
+
+
+/* Upcoming matchup preview */
+
+details.preview {
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+details.preview summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 750;
+  list-style-position: outside;
+}
+
+details.preview[open] summary {
+  margin-bottom: 2px;
+}
+
+.preview-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  min-width: 0;
+  max-width: 100%;
+  margin-top: 12px;
+}
+
+.preview-body > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.preview-table,
+.data-table,
+.metric-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.preview-table th,
+.preview-table td {
+  padding: 5px 4px;
+  font-size: 0.8rem;
+}
+
+/*
+ * Topscorer and Goalie Watch deliberately stack vertically.
+ * Both tables are wider than a third-width upcoming card.
+ */
+.watch-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.watch-box {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #0c1929;
+}
+
+.watch-box .scroll {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.watch-box table {
+  width: 100%;
+  min-width: 520px;
+}
+
+.watch-box .goalie-table {
+  min-width: 620px;
+}
+
+.recent-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+}
+
+.recent-grid > * {
+  min-width: 0;
+}
+
+.recent-list {
+  display: grid;
+  gap: 4px;
+}
+
+.recent-row {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  gap: 6px;
+  min-width: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.recent-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.recent-row strong {
+  color: var(--text);
+}
+
+.h2h-list {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  font-size: 0.8rem;
+}
+
+.h2h-list > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+
+/* Controls */
+
+label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+select,
+button {
+  font: inherit;
+}
+
+select {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  background: var(--panel2);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+button {
+  border: 1px solid var(--line);
+  background: var(--panel2);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: #0f2948;
+}
+
+
+/* Game header */
+
+.game-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.teams {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 800;
+}
+
+.score {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+
+/* Podcast facts */
+
+.facts {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.facts li::marker {
+  color: var(--accent);
+}
+
+
+/* Tables */
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 9px 8px;
+  text-align: right;
+  vertical-align: top;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+.ebb {
+  color: var(--ebb);
+  font-weight: 750;
+}
+
+.opp {
+  color: var(--opp);
+  font-weight: 750;
+}
+
+.scroll {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.usage-table {
+  min-width: 1080px;
+}
+
+.impact-table {
+  min-width: 1050px;
+}
+
+.lineup-table {
+  min-width: 680px;
+}
+
+.matching-table {
+  min-width: 1120px;
+}
+
+.zone-start-table {
+  min-width: 580px;
+}
+
+
+/* Sort buttons */
+
+.sortBtn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  border-radius: 0;
+}
+
+.sortBtn::after {
+  content: " ↕";
+  opacity: 0.35;
+}
+
+.sortBtn.activeSort::after {
+  content: attr(data-arrow);
+  opacity: 1;
+  color: var(--accent);
+}
+
+
+/* Information boxes */
+
+.rotation-alert {
+  border-left: 3px solid var(--warn);
+  padding: 10px 12px;
+  background: #2a2213;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.data-check {
+  border-left: 3px solid var(--accent);
+  padding: 10px 12px;
+  background: #0b2139;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+
+/* Scoring summary */
+
+.scoring {
+  display: grid;
+  gap: 5px;
+}
+
+.score-row {
+  display: grid;
+  grid-template-columns: 55px 45px 48px minmax(0, 1fr);
+  gap: 8px;
+  min-width: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.score-row:last-child {
+  border-bottom: 0;
+}
+
+.score-row strong {
+  font-weight: 850;
+}
+
+.score-row > * {
+  min-width: 0;
+}
+
+.situation {
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+
+/* Shot map filters */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.filters select {
+  width: auto;
+  min-width: 145px;
+  max-width: 100%;
+}
+
+
+/* Rink */
+
+.rink-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #eaf4ff;
+  border-radius: 14px;
+  padding: 8px;
+}
+
+#rink {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 2.1 / 1;
+  min-height: 260px;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dot.ebb {
+  background: var(--ebb);
+}
+
+.dot.opp {
+  background: var(--opp);
+}
+
+.shapeLegend {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.shapeCircle,
+.shapeSquare,
+.shapeDiamond {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid currentColor;
+}
+
+.shapeCircle {
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.shapeSquare {
+  background: transparent;
+}
+
+.shapeDiamond {
+  transform: rotate(45deg);
+  background: currentColor;
+}
+
+.shapeTriangle {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid currentColor;
+}
+
+
+/* Shot zones */
+
+.zone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+}
+
+.zone {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 10px;
+  min-width: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 7px 0;
+}
+
+
+/* Timeline */
+
+.timeline {
+  display: grid;
+  gap: 7px;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 52px 44px 72px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  min-width: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.event:last-child {
+  border-bottom: 0;
+}
+
+.event > * {
+  min-width: 0;
+}
+
+.event-type,
+.event-team {
+  font-weight: 800;
+  font-size: 0.78rem;
+}
+
+.empty {
+  color: var(--muted);
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1180px) {
+  .three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .two,
+  .three,
+  .watch-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .recent-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  main {
+    width: min(100% - 18px, 1420px);
+    padding-top: 18px;
+  }
+
+  .zone-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .event {
+    grid-template-columns: 48px 40px 65px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .panel {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .upcoming-card {
+    padding: 12px;
+  }
+
+  .game-head {
+    gap: 10px;
+  }
+
+  .score-row {
+    grid-template-columns: 48px 38px 42px minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .filters {
+    align-items: stretch;
+  }
+
+  .filters button,
+  .filters select {
+    width: 100%;
+  }
+
+  #rink {
+    min-height: 220px;
+  }
+}
+
+.role-note{display:inline-flex;align-items:center;margin-left:5px;padding:1px 5px;border:1px solid var(--line);border-radius:999px;color:var(--warn);font-size:.68rem;font-weight:700;white-space:nowrap;text-transform:none;letter-spacing:0}
+.matching-table{min-width:1320px}
+</style>
 </head>
 <body>
 <main>
@@ -38,7 +845,9 @@
     <section class="panel"><h2>5v5 Defense Pairs</h2><div class="scroll"><table class="data-table lineup-table"><thead><tr><th>Pair</th><th>Gesamt</th><th>P1</th><th>P2</th><th>P3</th><th>Stabile Einsätze</th></tr></thead><tbody id="pairs"></tbody></table></div></section>
   </div>
 
-  <section class="panel section"><h2>5v5 Line Matching + Performance</h2><p class="muted" style="margin-bottom:10px">Nur stabile Trio-vs-Trio-Intervalle ≥ 8 Sekunden. Dadurch werden fliegende Wechsel vor der Performance-Zuordnung herausgefiltert.</p><div class="scroll"><table class="data-table matching-table"><thead><tr><th>EBB-Reihe</th><th>Gegner-Reihe</th><th>TOI</th><th>Anteil*</th><th>Corsi</th><th>CF%</th><th>Slot</th><th>Tore</th><th>P1</th><th>P2</th><th>P3</th></tr></thead><tbody id="matchups"></tbody></table></div><div class="note">* Anteil an der stabil gematchten 5v5-TOI dieser EBB-Reihe.</div></section>
+  <section class="panel section"><h2>5v5 Line Performance</h2><p class="muted" style="margin-bottom:10px">Gesamtbild jeder EBB-Sturmreihe über alle gegnerischen Units. TOI basiert auf stabilen Einsätzen ≥ 8 Sekunden; Tore werden über die offiziellen Goal-Attendants zugeordnet.</p><div id="matchupCoverage"></div><div class="scroll"><table class="data-table matching-table"><thead><tr><th>EBB-Reihe</th><th>5v5 TOI</th><th>Corsi</th><th>CF%</th><th>Slot</th><th>Tore</th><th>relevante Matchups</th><th>P1</th><th>P2</th><th>P3</th></tr></thead><tbody id="linePerformance"></tbody></table></div><div class="note">Flexible Rollen werden pro Unit aufgelöst. Eric Mik kann dabei je nach On-Ice-Konstellation als FO oder D geführt werden.</div></section>
+
+  <section class="panel section"><h2>5v5 Line Matching</h2><p class="muted" style="margin-bottom:10px">Alle relevanten Trio-vs-Trio-Matchups: mindestens 30 Sekunden gemeinsame stabile TOI, mindestens zwei stabile Einsätze, mindestens drei Corsi-Events oder ein Tor im Matchup.</p><div class="scroll"><table class="data-table matching-table"><thead><tr><th>EBB-Reihe</th><th>Gegner-Reihe</th><th>Line TOI</th><th>Matchup TOI</th><th>Anteil*</th><th>Corsi</th><th>CF%</th><th>Slot</th><th>Tore</th><th>P1</th><th>P2</th><th>P3</th></tr></thead><tbody id="matchups"></tbody></table></div><div id="unresolvedMatchupGoals"></div><div class="note">* Anteil der Matchup-TOI an der stabilen 5v5-TOI der jeweiligen EBB-Reihe. Tore werden direkt aus den Goal-Events zugeordnet und verschwinden dadurch nicht an Shift-Grenzen.</div></section>
 
   <div class="grid two section">
     <section class="panel"><h2>5v5 Zone Starts</h2><p class="muted" style="margin-bottom:10px">Deployment-Metrik: gezählt wird, wo Spieler/Unit beim Bully auf dem Eis stehen – unabhängig davon, wer das Bully gewinnt.</p><h3>Forward Units</h3><div class="scroll"><table class="data-table zone-start-table"><thead><tr><th>Unit</th><th>OZ</th><th>DZ</th><th>NZ</th><th>OZ-Anteil*</th></tr></thead><tbody id="zoneStartsF"></tbody></table></div><h3 style="margin-top:14px">Defense Pairs</h3><div class="scroll"><table class="data-table zone-start-table"><thead><tr><th>Pair</th><th>OZ</th><th>DZ</th><th>NZ</th><th>OZ-Anteil*</th></tr></thead><tbody id="zoneStartsD"></tbody></table></div><details class="preview"><summary>Zone Starts nach Spieler</summary><div class="scroll" style="margin-top:8px"><table class="data-table zone-start-table"><thead><tr><th>Spieler</th><th>OZ</th><th>DZ</th><th>NZ</th><th>OZ-Anteil*</th></tr></thead><tbody id="zoneStartsP"></tbody></table></div></details><div class="note">* OZ / (OZ + DZ), neutrale Starts ausgenommen.</div></section>
@@ -81,15 +890,17 @@
 
   async function loadGame(summary){const path=summary.data_path||`data/games/${summary.match_id}.json`;const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw new Error(`${path}: ${r.status}`);state.game=await r.json();state.team='all';$$('.teamFilter').forEach(b=>b.classList.toggle('active',b.dataset.team==='all'));renderGame()}
 
-  function renderGame(){const g=state.game,m=g.match;$('#oppHeader').textContent=m.opponent_abbr||m.opponent_name;$('#gameHead').innerHTML=`<div><div class="muted">${esc(m.date)}</div><div class="teams">${esc(m.home_team_name)} – ${esc(m.away_team_name)}</div></div><div class="score">${m.home_score}:${m.away_score}</div>`;$('#facts').innerHTML=(g.facts||[]).map(x=>`<li>${esc(x)}</li>`).join('')||'<li>Keine Fakten verfügbar.</li>';$('#metrics').innerHTML=(g.metrics||[]).map(x=>`<tr><td>${esc(x.label)}</td><td class="ebb">${esc(fmtVal(x.ebb,x.kind))}</td><td class="opp">${esc(fmtVal(x.opponent,x.kind))}</td></tr>`).join('');renderScoring();renderUsage();renderImpact();renderUnits('#trios',g.lineups?.forward_trios||[]);renderUnits('#pairs',g.lineups?.defense_pairs||[]);renderMatchups();renderZoneStarts();renderScoreState();
+  function renderGame(){const g=state.game,m=g.match;$('#oppHeader').textContent=m.opponent_abbr||m.opponent_name;$('#gameHead').innerHTML=`<div><div class="muted">${esc(m.date)}</div><div class="teams">${esc(m.home_team_name)} – ${esc(m.away_team_name)}</div></div><div class="score">${m.home_score}:${m.away_score}</div>`;$('#facts').innerHTML=(g.facts||[]).map(x=>`<li>${esc(x)}</li>`).join('')||'<li>Keine Fakten verfügbar.</li>';$('#metrics').innerHTML=(g.metrics||[]).map(x=>`<tr><td>${esc(x.label)}</td><td class="ebb">${esc(fmtVal(x.ebb,x.kind))}</td><td class="opp">${esc(fmtVal(x.opponent,x.kind))}</td></tr>`).join('');renderScoring();renderUsage();renderImpact();renderUnits('#trios',g.lineups?.forward_trios||[]);renderUnits('#pairs',g.lineups?.defense_pairs||[]);renderLinePerformance();renderMatchups();renderZoneStarts();renderScoreState();
     const rot=g.lineups?.rotation||{};$('#rotationAlert').innerHTML=rot.shortened_bank_detected?`<div class="rotation-alert"><b>Verkürzte Bank erkannt.</b><br>${esc((rot.shortened_bank_reasons||[]).join(' · '))}</div>`:'';const cov=g.lineups?.coverage||{};$('#lineupCoverage').innerHTML=(cov.forward_stable_pct!=null||cov.defense_stable_pct!=null)?`<div class="data-check"><b>Datengrundlage stabile Units:</b> Forward-Abdeckung ${esc(cov.forward_stable_pct??'–')} %, Defense-Abdeckung ${esc(cov.defense_stable_pct??'–')} % der rekonstruierten exakten 5v5-Eiszeit.</div>`:'';
     $('#zones').innerHTML=(g.shot_zones||[]).filter(z=>z.zone!=='UNKNOWN').map(z=>`<div class="zone"><span>${esc(z.zone.replaceAll('_',' '))}</span><span class="ebb">${z.ebb_attempts} (${z.ebb_sog} SOG)</span><span class="opp">${z.opponent_attempts} (${z.opponent_sog} SOG)</span></div>`).join('');$('#timeline').innerHTML=(g.timeline||[]).map(e=>{const a=(e.assists||[]).map(x=>x.name).filter(Boolean).join(', ');return `<div class="event"><span>${time(e.time_s)}</span><span class="event-team">${esc(e.team_abbr||'–')}</span><span class="event-type">${e.type==='goal'?'TOR':'STRAFE'}</span><span>${esc(e.scorer||e.penalty||'')}${a?` <span class="muted">(${esc(a)})</span>`:''} ${e.score?`· ${esc(e.score)}`:''} ${e.balance?`· ${esc(e.balance)}`:''}</span></div>`}).join('')||'<div class="empty">Keine Events.</div>';populateShotFilters();drawRink()}
 
   function renderScoring(){const rows=state.game?.scoring_summary||[];$('#scoring').innerHTML=rows.length?rows.map(r=>{const a1=r.primary_assist?.name?`A1 ${r.primary_assist.name}`:'';const a2=r.secondary_assist?.name?`A2 ${r.secondary_assist.name}`:'';const assists=[a1,a2].filter(Boolean);return `<div class="score-row"><span>${time(r.time_s)}</span><strong class="${r.team_abbr==='EBB'?'ebb':'opp'}">${esc(r.team_abbr)}</strong><span>${esc(r.score||'')}</span><span><strong>${esc(r.scorer?.name||'')}</strong>${assists.length?` <span class="muted">(${esc(assists.join(', '))})</span>`:''} <span class="situation">${esc(r.balance||'')}</span></span></div>`}).join(''):'<div class="empty">Keine Tore.</div>'}
-  function renderUsage(){const rows=[...(state.game?.players||[])].filter(p=>p.position!=='GK');const {key,dir}=state.usageSort,f=dir==='asc'?1:-1;rows.sort((a,b)=>{const av=a[key],bv=b[key];if(typeof av==='string'||typeof bv==='string')return String(av??'').localeCompare(String(bv??''),'de')*f;return ((Number(av)||0)-(Number(bv)||0))*f});$('#usage').innerHTML=rows.map(p=>`<tr><td>#${esc(p.jersey??'–')} ${esc(p.name)}</td><td>${esc(p.position)}</td><td><b>${time(p.toi_s)}</b></td><td>${time(p.eq_s)}</td><td>${time(p.pp_s)}</td><td>${time(p.pk_s)}</td><td>${time(p.five_v_five_s)}</td><td>${time(p.five_v_five_p1_s)}</td><td>${time(p.five_v_five_p2_s)}</td><td>${time(p.five_v_five_p3_s)}</td><td>${p.stable_unit_coverage_pct==null?'–':Number(p.stable_unit_coverage_pct).toFixed(1)+' %'}</td><td>${p.shifts}</td><td>${p.avg_shift_s==null?'–':time(p.avg_shift_s)}</td></tr>`).join('');$$('.usageSort').forEach(b=>{b.classList.toggle('activeSort',b.dataset.key===key);if(b.dataset.key===key)b.dataset.arrow=dir==='desc'?'↓':'↑'})}
+  function renderUsage(){const rows=[...(state.game?.players||[])].filter(p=>p.position!=='GK');const {key,dir}=state.usageSort,f=dir==='asc'?1:-1;rows.sort((a,b)=>{const av=a[key],bv=b[key];if(typeof av==='string'||typeof bv==='string')return String(av??'').localeCompare(String(bv??''),'de')*f;return ((Number(av)||0)-(Number(bv)||0))*f});$('#usage').innerHTML=rows.map(p=>{const role=p.usage_role&&p.usage_role!==p.position?`${p.position} → ${p.usage_role}`:(p.usage_role||p.position);return `<tr><td>#${esc(p.jersey??'–')} ${esc(p.name)}</td><td>${esc(role)}</td><td><b>${time(p.toi_s)}</b></td><td>${time(p.eq_s)}</td><td>${time(p.pp_s)}</td><td>${time(p.pk_s)}</td><td>${time(p.five_v_five_s)}</td><td>${time(p.five_v_five_p1_s)}</td><td>${time(p.five_v_five_p2_s)}</td><td>${time(p.five_v_five_p3_s)}</td><td>${p.stable_unit_coverage_pct==null?'–':Number(p.stable_unit_coverage_pct).toFixed(1)+' %'}</td><td>${p.shifts}</td><td>${p.avg_shift_s==null?'–':time(p.avg_shift_s)}</td></tr>`}).join('');$$('.usageSort').forEach(b=>{b.classList.toggle('activeSort',b.dataset.key===key);if(b.dataset.key===key)b.dataset.arrow=dir==='desc'?'↓':'↑'})}
   function renderImpact(){const rows=state.game?.advanced?.player_impact_5v5||[];$('#impact').innerHTML=rows.map(p=>`<tr><td>#${esc(p.jersey??'–')} ${esc(p.name)}</td><td>${time(p.toi_5v5_s)}</td><td>${p.cf}</td><td>${p.ca}</td><td><b>${pct(p.cf_pct)}</b></td><td>${p.relative_cf_pct==null?'–':`${p.relative_cf_pct>=0?'+':''}${Number(p.relative_cf_pct).toFixed(1)} pp`}</td><td>${pct(p.ff_pct)}</td><td>${p.sog_for}:${p.sog_against}</td><td>${p.gf}:${p.ga}</td><td>${p.pdo==null?'–':Number(p.pdo).toFixed(1)}</td></tr>`).join('')||'<tr><td colspan="10" class="muted">Keine 5v5-On-Ice-Daten.</td></tr>'}
   function renderUnits(sel,rows){$(sel).innerHTML=rows.slice(0,20).map(u=>`<tr><td>${esc(u.label)}</td><td><b>${time(u.total_s)}</b></td><td>${time(u.p1_s)}</td><td>${time(u.p2_s)}</td><td>${time(u.p3_s)}</td><td>${u.appearances}</td></tr>`).join('')||'<tr><td colspan="6" class="muted">Keine stabilen Units erkannt.</td></tr>'}
-  function renderMatchups(){const rows=state.game?.advanced?.primary_forward_matchups||[];$('#matchups').innerHTML=rows.slice(0,12).map(r=>`<tr><td class="ebb">${esc(r.ebb_label)}</td><td class="opp">${esc(r.opponent_label)}</td><td><b>${time(r.total_s)}</b></td><td>${pct(r.matchup_share_pct)}</td><td>${r.cf}:${r.ca}</td><td>${pct(r.cf_pct)}</td><td>${r.slot_for}:${r.slot_against}</td><td>${r.gf}:${r.ga}</td><td>${time(r.p1_s)}</td><td>${time(r.p2_s)}</td><td>${time(r.p3_s)}</td></tr>`).join('')||'<tr><td colspan="11" class="muted">Keine stabilen Line-Matchups erkannt.</td></tr>'}
+  function roleNote(r){const notes=r.role_notes||[];return notes.length?` <span class="role-note">${esc(notes.join(', '))}</span>`:''}
+  function renderLinePerformance(){const rows=state.game?.advanced?.line_performance||[];$('#linePerformance').innerHTML=rows.filter(r=>r.total_s>=30||r.gf+r.ga>0||r.cf+r.ca>=3).map(r=>`<tr><td class="ebb">${esc(r.ebb_label)}${roleNote(r)}</td><td><b>${time(r.total_s)}</b></td><td>${r.cf}:${r.ca}</td><td>${pct(r.cf_pct)}</td><td>${r.slot_for}:${r.slot_against}</td><td>${r.gf}:${r.ga}</td><td>${r.relevant_matchup_count??0}</td><td>${time(r.p1_s)}</td><td>${time(r.p2_s)}</td><td>${time(r.p3_s)}</td></tr>`).join('')||'<tr><td colspan="10" class="muted">Keine stabilen EBB-Reihen erkannt.</td></tr>';const c=state.game?.advanced?.matchup_coverage||{};if(c.team_5v5_shift_s!=null){const warn=(c.goal_shot_context_mismatches||0)>0?` · ${c.goal_shot_context_mismatches} 5v5-Tor(e) hatten abweichenden Shot-Context und wurden über Goal-Attendants korrigiert.`:'';$('#matchupCoverage').innerHTML=`<div class="data-check"><b>Line-Matching-Datencheck:</b> stabile Matchup-TOI ${time(c.stable_matchup_toi_s)} / ${time(c.team_5v5_shift_s)} (${pct(c.stable_matchup_toi_pct)}), Corsi zugeordnet ${c.corsi_assigned}/${c.corsi_total} (${pct(c.corsi_coverage_pct)}), 5v5-Tore zugeordnet ${c.goals_assigned}/${c.goals_total} (${pct(c.goal_coverage_pct)})${esc(warn)}</div>`}else $('#matchupCoverage').innerHTML=''}
+  function renderMatchups(){const rows=state.game?.advanced?.relevant_forward_matchups||[];$('#matchups').innerHTML=rows.map(r=>`<tr><td class="ebb">${esc(r.ebb_label)}${roleNote(r)}</td><td class="opp">${esc(r.opponent_label)}</td><td>${time(r.ebb_line_total_s)}</td><td><b>${time(r.total_s)}</b>${r.event_only?' <span class="role-note">Event only</span>':''}</td><td>${pct(r.matchup_share_pct)}</td><td>${r.cf}:${r.ca}</td><td>${pct(r.cf_pct)}</td><td>${r.slot_for}:${r.slot_against}</td><td><b>${r.gf}:${r.ga}</b></td><td>${time(r.p1_s)}</td><td>${time(r.p2_s)}</td><td>${time(r.p3_s)}</td></tr>`).join('')||'<tr><td colspan="12" class="muted">Keine relevanten Line-Matchups erkannt.</td></tr>';const unresolved=state.game?.advanced?.unresolved_matchup_goals||[];$('#unresolvedMatchupGoals').innerHTML=unresolved.length?`<div class="rotation-alert" style="margin-top:12px"><b>${unresolved.length} 5v5-Tor(e) konnten keiner normalen 3F/2D-Konstellation zugeordnet werden.</b><br>${unresolved.map(x=>`${time(x.time_s)} · EBB ${esc(x.focus_shape)} vs ${esc(x.opponent_shape)} · ${esc(x.focus_skaters)} / ${esc(x.opponent_skaters)}`).join('<br>')}</div>`:''}
   function renderZoneStarts(){const z=state.game?.advanced?.zone_starts||{};const rowHtml=rows=>rows.slice(0,14).map(r=>`<tr><td>${r.jersey?`#${esc(r.jersey)} `:''}${esc(r.label)}</td><td>${r.oz}</td><td>${r.dz}</td><td>${r.nz}</td><td>${pct(r.oz_share_pct)}</td></tr>`).join('')||'<tr><td colspan="5" class="muted">Keine 5v5 Zone Starts.</td></tr>';$('#zoneStartsF').innerHTML=rowHtml(z.forward_units||[]);$('#zoneStartsD').innerHTML=rowHtml(z.defense_pairs||[]);$('#zoneStartsP').innerHTML=rowHtml(z.players||[])}
   function renderScoreState(){const rows=state.game?.advanced?.score_state_corsi_5v5||[];$('#scoreState').innerHTML=rows.map(r=>`<tr><td>${esc(r.label)}</td><td>${r.cf}</td><td>${r.ca}</td><td>${pct(r.cf_pct)}</td></tr>`).join('')||'<tr><td colspan="4" class="muted">Keine Daten.</td></tr>'}
 

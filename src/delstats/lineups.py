@@ -2,7 +2,9 @@ from __future__ import annotations
 
 from collections import defaultdict
 from dataclasses import dataclass
-from typing import Any, Iterable
+from typing import Any, Iterable, Mapping
+
+from .roles import DEFAULT_FLEXIBLE_ROLES, resolve_skater_roles
 
 MIN_STABLE_UNIT_SECONDS = 8
 MIN_CHANGE_SECONDS = 30
@@ -224,6 +226,7 @@ def analyze_5v5_lineups(
     focus_team_id: int,
     opponent_team_id: int,
     min_stable_seconds: int = MIN_STABLE_UNIT_SECONDS,
+    flexible_roles: Mapping[int, Iterable[str]] | None = None,
 ) -> dict[str, Any]:
     """Reconstruct exact 5v5 units and line matching from skater shifts.
 
@@ -237,6 +240,7 @@ def analyze_5v5_lineups(
     shift_rows = [_normalize_shift(row) for row in shifts]
     player_rows = [_normalize_player(row) for row in players]
     pmap = {row["player_id"]: row for row in player_rows}
+    flexible_roles = flexible_roles or DEFAULT_FLEXIBLE_ROLES
 
     boundaries = set(PERIOD_BOUNDS)
     for row in shift_rows:
@@ -251,6 +255,7 @@ def analyze_5v5_lineups(
     opponent_trio_intervals: dict[tuple[int, ...], list[tuple[int, int, int]]] = defaultdict(list)
     matchup_intervals: dict[tuple[tuple[int, ...], tuple[int, ...]], list[tuple[int, int, int]]] = defaultdict(list)
     player_5v5 = defaultdict(lambda: defaultdict(int))
+    player_role_seconds = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
     team_5v5_seconds = defaultdict(int)
 
     for start, end in zip(ordered_boundaries, ordered_boundaries[1:]):
@@ -277,16 +282,19 @@ def analyze_5v5_lineups(
         for player_id in focus_active:
             player_5v5[player_id][period] += duration
 
-        forwards = tuple(sorted(pid for pid in focus_active if pmap.get(pid, {}).get("position") == "FO"))
-        defense = tuple(sorted(pid for pid in focus_active if pmap.get(pid, {}).get("position") == "DE"))
-        opp_forwards = tuple(sorted(pid for pid in opp_active if pmap.get(pid, {}).get("position") == "FO"))
-        if len(forwards) == 3:
+        focus_roles = resolve_skater_roles(focus_active, pmap, flexible_roles=flexible_roles)
+        opponent_roles = resolve_skater_roles(opp_active, pmap, flexible_roles=flexible_roles)
+        forwards = tuple(sorted(focus_roles.forwards))
+        defense = tuple(sorted(focus_roles.defense))
+        opp_forwards = tuple(sorted(opponent_roles.forwards))
+        for pid, role in focus_roles.assignments.items():
+            player_role_seconds[pid][role][period] += duration
+        if focus_roles.standard:
             trio_intervals[forwards].append((start, end, period))
-        if len(defense) == 2:
             pair_intervals[defense].append((start, end, period))
-        if len(opp_forwards) == 3:
+        if opponent_roles.standard:
             opponent_trio_intervals[opp_forwards].append((start, end, period))
-        if len(forwards) == 3 and len(opp_forwards) == 3:
+        if focus_roles.standard and opponent_roles.standard:
             matchup_intervals[(forwards, opp_forwards)].append((start, end, period))
 
     trios = _aggregate_units(trio_intervals, pmap, min_stable_seconds=min_stable_seconds)
@@ -295,15 +303,24 @@ def analyze_5v5_lineups(
     forward_matchups = _aggregate_forward_matchups(matchup_intervals, pmap, min_stable_seconds=min_stable_seconds)
 
     stable_by_player = defaultdict(int)
-    for unit in [*trios, *pairs]:
+    stable_by_player_role = defaultdict(lambda: defaultdict(int))
+    for unit in trios:
         for player_id in unit.player_ids:
             stable_by_player[player_id] += unit.total_s
+            stable_by_player_role[player_id]["FO"] += unit.total_s
+    for unit in pairs:
+        for player_id in unit.player_ids:
+            stable_by_player[player_id] += unit.total_s
+            stable_by_player_role[player_id]["DE"] += unit.total_s
 
     player_usage = []
     for player_id, periods in player_5v5.items():
         info = pmap.get(player_id, {})
         total = periods[1] + periods[2] + periods[3]
         stable = stable_by_player[player_id]
+        fo_total = sum(player_role_seconds[player_id]["FO"].values())
+        de_total = sum(player_role_seconds[player_id]["DE"].values())
+        usage_role = "FO/DE" if fo_total >= 30 and de_total >= 30 else "FO" if fo_total >= de_total else "DE"
         player_usage.append(
             {
                 "player_id": player_id,
@@ -311,6 +328,9 @@ def analyze_5v5_lineups(
                 "last_name": info.get("last_name", str(player_id)),
                 "jersey": info.get("jersey"),
                 "position": info.get("position"),
+                "usage_role": usage_role,
+                "role_fo_s": fo_total,
+                "role_de_s": de_total,
                 "p1_s": periods[1],
                 "p2_s": periods[2],
                 "p3_s": periods[3],
@@ -321,28 +341,30 @@ def analyze_5v5_lineups(
         )
     player_usage.sort(key=lambda row: row["total_s"], reverse=True)
 
-    def active_count(period: int, position: str) -> int:
-        return sum(1 for row in player_usage if row["position"] == position and row[f"p{period}_s"] >= 30)
+    def active_count(period: int, role: str) -> int:
+        return sum(1 for pid in player_5v5 if player_role_seconds[pid][role][period] >= 30)
 
-    def concentration(periods: tuple[int, ...], position: str, top_n: int) -> float | None:
+    def concentration(periods: tuple[int, ...], role: str, top_n: int) -> float | None:
         candidates = []
         total = 0
-        for row in player_usage:
-            if row["position"] != position:
+        for pid in player_5v5:
+            seconds = sum(player_role_seconds[pid][role][p] for p in periods)
+            if seconds <= 0:
                 continue
-            seconds = sum(row[f"p{p}_s"] for p in periods)
             candidates.append(seconds)
             total += seconds
         if total <= 0:
             return None
         return round(sum(sorted(candidates, reverse=True)[:top_n]) / total * 100.0, 1)
 
-    def stable_coverage(position: str) -> float | None:
-        rows = [row for row in player_usage if row["position"] == position]
-        denominator = sum(row["total_s"] for row in rows)
+    def stable_coverage(role: str) -> float | None:
+        denominator = sum(
+            sum(player_role_seconds[pid][role].values())
+            for pid in player_5v5
+        )
         if denominator <= 0:
             return None
-        numerator = sum(row["stable_unit_s"] for row in rows)
+        numerator = sum(stable_by_player_role[pid][role] for pid in player_5v5)
         return round(numerator / denominator * 100.0, 1)
 
     top9_pre = concentration((1, 2), "FO", 9)
@@ -368,11 +390,19 @@ def analyze_5v5_lineups(
     pre_team_seconds = team_5v5_seconds[1] + team_5v5_seconds[2]
     p3_team_seconds = team_5v5_seconds[3]
     for row in player_usage:
-        position_slots = 3 if row["position"] == "FO" else 2 if row["position"] == "DE" else 1
+        pid = row["player_id"]
+        pre_fo = player_role_seconds[pid]["FO"][1] + player_role_seconds[pid]["FO"][2]
+        pre_de = player_role_seconds[pid]["DE"][1] + player_role_seconds[pid]["DE"][2]
+        p3_fo = player_role_seconds[pid]["FO"][3]
+        p3_de = player_role_seconds[pid]["DE"][3]
+        role = "FO" if (pre_fo + p3_fo) >= (pre_de + p3_de) else "DE"
+        position_slots = 3 if role == "FO" else 2
+        pre_seconds = pre_fo if role == "FO" else pre_de
+        p3_seconds = p3_fo if role == "FO" else p3_de
         pre_denominator = pre_team_seconds * position_slots
         p3_denominator = p3_team_seconds * position_slots
-        pre_share_pct = ((row["p1_s"] + row["p2_s"]) / pre_denominator * 100.0) if pre_denominator else 0.0
-        p3_share_pct = (row["p3_s"] / p3_denominator * 100.0) if p3_denominator else 0.0
+        pre_share_pct = (pre_seconds / pre_denominator * 100.0) if pre_denominator else 0.0
+        p3_share_pct = (p3_seconds / p3_denominator * 100.0) if p3_denominator else 0.0
         usage_changes.append(
             {
                 "player_id": row["player_id"],
@@ -380,6 +410,7 @@ def analyze_5v5_lineups(
                 "last_name": row["last_name"],
                 "jersey": row["jersey"],
                 "position": row["position"],
+                "usage_role": row.get("usage_role"),
                 "pre_p3_share_pct": round(pre_share_pct, 1),
                 "p3_share_pct": round(p3_share_pct, 1),
                 "delta_pp": round(p3_share_pct - pre_share_pct, 1),
