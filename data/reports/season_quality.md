@@ -1,23 +1,23 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-10-01T02:41:27Z
+Generated: 2026-10-02T02:40:00Z
 
 ## Totals
 
-- Matches: 29
-- Shots: 3096
-- Shifts: 22454
-- Faceoffs: 1713
-- Events: 790
-- Player game stats: 1461
-- Team game stats: 58
+- Matches: 30
+- Shots: 3202
+- Shifts: 23212
+- Faceoffs: 1769
+- Events: 815
+- Player game stats: 1513
+- Team game stats: 60
 - Unclassified shot zones: 0
 
 ## On-ice quality
 
-- Exact: 3024
-- Boundary adjusted: 50
-- Low confidence: 22
+- Exact: 3125
+- Boundary adjusted: 53
+- Low confidence: 24
 
 ## D-zone faceoff sequences
 
@@ -57,3 +57,4 @@ Generated: 2026-10-01T02:41:27Z
 | 4415 | 2026-09-27 | EHC Red Bull München – Löwen Frankfurt | 114 | 59 | 742 | 1 | 0 |
 | 4416 | 2026-09-27 | Grizzlys Wolfsburg – Pinguins Bremerhaven | 117 | 65 | 740 | 1 | 3 |
 | 4417 | 2026-09-27 | ERC Ingolstadt – Adler Mannheim | 131 | 72 | 864 | 3 | 0 |
+| 4418 | 2026-10-01 | Adler Mannheim – Iserlohn Roosters | 106 | 56 | 758 | 3 | 2 |

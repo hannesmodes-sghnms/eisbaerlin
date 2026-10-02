@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-01T02:41:27Z",
+  "generated_at_utc": "2026-10-02T02:40:00Z",
   "schedule_matches": 364,
-  "completed_matches": 29,
+  "completed_matches": 30,
   "refreshed_matches": 0,
-  "downloaded_matches": 0,
+  "downloaded_matches": 1,
   "skipped_matches": 29,
   "failed_downloads": 0,
-  "imported_matches": 29,
+  "imported_matches": 30,
   "failed_imports": 0,
   "db_path": "data/del_2026_27.duckdb",
   "quality_report_path": "data/reports/season_quality.json",
@@ -301,6 +301,16 @@
       "action": "skipped",
       "refresh": false,
       "downloaded_resources": 0,
+      "error": null
+    },
+    {
+      "match_id": 4418,
+      "start_date": "2026-10-01 19:30:00",
+      "home_team_name": "Adler Mannheim",
+      "away_team_name": "Iserlohn Roosters",
+      "action": "downloaded",
+      "refresh": true,
+      "downloaded_resources": 10,
       "error": null
     }
   ],

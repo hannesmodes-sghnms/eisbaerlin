@@ -28,7 +28,7 @@ match_id,start_date,status,home_team_id,home_team_name,away_team_id,away_team_na
 4413,2026-09-27 16:30:00,AFTER_MATCH,5,Krefeld Pinguine,15,Schwenninger Wild Wings,league-team-matches/2026/1/15.json|league-team-matches/2026/1/5.json
 4414,2026-09-27 16:30:00,AFTER_MATCH,13,Augsburger Panther,11,Kölner Haie,league-team-matches/2026/1/11.json|league-team-matches/2026/1/13.json
 4417,2026-09-27 19:00:00,AFTER_MATCH,1,ERC Ingolstadt,2,Adler Mannheim,league-team-matches/2026/1/1.json|league-team-matches/2026/1/2.json
-4418,2026-10-01 19:30:00,BEFORE_MATCH,2,Adler Mannheim,7,Iserlohn Roosters,league-team-matches/2026/1/2.json|league-team-matches/2026/1/7.json
+4418,2026-10-01 19:30:00,AFTER_MATCH,2,Adler Mannheim,7,Iserlohn Roosters,league-team-matches/2026/1/2.json|league-team-matches/2026/1/7.json
 4419,2026-10-02 19:30:00,BEFORE_MATCH,11,Kölner Haie,12,EHC Red Bull München,league-team-matches/2026/1/11.json|league-team-matches/2026/1/12.json
 4420,2026-10-02 19:30:00,BEFORE_MATCH,14,Nürnberg Ice Tigers,15,Schwenninger Wild Wings,league-team-matches/2026/1/14.json|league-team-matches/2026/1/15.json
 4421,2026-10-02 19:30:00,BEFORE_MATCH,5,Krefeld Pinguine,1,ERC Ingolstadt,league-team-matches/2026/1/1.json|league-team-matches/2026/1/5.json

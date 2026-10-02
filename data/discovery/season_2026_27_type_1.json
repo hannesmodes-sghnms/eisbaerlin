@@ -415,7 +415,7 @@
     {
       "match_id": 4418,
       "start_date": "2026-10-01 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 2,
       "home_team_name": "Adler Mannheim",
       "away_team_id": 7,
