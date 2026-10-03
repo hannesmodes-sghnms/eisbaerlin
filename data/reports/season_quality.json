@@ -1,35 +1,35 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-02T02:40:00Z",
+  "generated_at_utc": "2026-10-03T15:20:59Z",
   "totals": {
-    "matches": 30,
-    "player_match_rows": 1247,
-    "shifts": 23212,
-    "shots": 3202,
-    "faceoffs": 1769,
-    "events": 815,
-    "player_game_stats": 1513,
-    "team_game_stats": 60,
+    "matches": 35,
+    "player_match_rows": 1454,
+    "shifts": 26967,
+    "shots": 3761,
+    "faceoffs": 2067,
+    "events": 932,
+    "player_game_stats": 1770,
+    "team_game_stats": 70,
     "unclassified_shots": 0
   },
   "on_ice_quality": {
-    "boundary_adjusted": 53,
-    "exact": 3125,
-    "low_confidence": 24
+    "boundary_adjusted": 61,
+    "exact": 3673,
+    "low_confidence": 27
   },
   "manpower": {
-    "5v5": 2273,
-    "5v4": 561,
-    "4v5": 122,
-    "4v4": 53,
-    "6v5": 46,
-    "3v3": 45,
-    "5v3": 25,
+    "5v5": 2710,
+    "5v4": 634,
+    "4v5": 134,
+    "6v5": 62,
+    "4v4": 55,
+    "3v3": 46,
+    "5v3": 31,
     "4v3": 22,
-    "0v0": 9,
-    "5v6": 9,
-    "6v4": 8,
+    "6v4": 14,
+    "0v0": 12,
+    "5v6": 12,
     "3v4": 6,
     "3v5": 5,
     "7v5": 4,
@@ -45,8 +45,8 @@
     "6v8": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 21,
-  "dzone_faceoff_win_to_shot_10s": 14,
+  "dzone_faceoff_to_shot_10s": 27,
+  "dzone_faceoff_win_to_shot_10s": 19,
   "per_match": [
     {
       "match_id": 4389,
@@ -377,13 +377,73 @@
       "shifts": 758,
       "boundary_adjusted": 3,
       "low_confidence": 2
+    },
+    {
+      "match_id": 4419,
+      "match_date": "2026-10-02",
+      "home_team_name": "Kölner Haie",
+      "away_team_name": "EHC Red Bull München",
+      "shots": 105,
+      "faceoffs": 61,
+      "shifts": 756,
+      "boundary_adjusted": 2,
+      "low_confidence": 1
+    },
+    {
+      "match_id": 4420,
+      "match_date": "2026-10-02",
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_name": "Schwenninger Wild Wings",
+      "shots": 111,
+      "faceoffs": 64,
+      "shifts": 728,
+      "boundary_adjusted": 3,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4421,
+      "match_date": "2026-10-02",
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_name": "ERC Ingolstadt",
+      "shots": 122,
+      "faceoffs": 60,
+      "shifts": 745,
+      "boundary_adjusted": 1,
+      "low_confidence": 2
+    },
+    {
+      "match_id": 4422,
+      "match_date": "2026-10-02",
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_name": "Eisbären Berlin",
+      "shots": 102,
+      "faceoffs": 47,
+      "shifts": 767,
+      "boundary_adjusted": 1,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4423,
+      "match_date": "2026-10-02",
+      "home_team_name": "Augsburger Panther",
+      "away_team_name": "Grizzlys Wolfsburg",
+      "shots": 119,
+      "faceoffs": 66,
+      "shifts": 759,
+      "boundary_adjusted": 1,
+      "low_confidence": 0
     }
   ],
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 30,
+    "completed_matches": 36,
     "failed_downloads": 0,
-    "failed_imports": 0,
-    "import_errors": []
+    "failed_imports": 1,
+    "import_errors": [
+      {
+        "match_id": 4424,
+        "error": "raw data incomplete"
+      }
+    ]
   }
 }

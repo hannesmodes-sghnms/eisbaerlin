@@ -1,0 +1,42 @@
+{
+  "match_id": 4424,
+  "match_prefix": "matches/4424/",
+  "resources": {
+    "game_header": [
+      "matches/4424/game-header.json"
+    ],
+    "roster": [
+      "matches/4424/roster.json"
+    ],
+    "period_events": [
+      "matches/4424/period-events.json"
+    ],
+    "shifts": [],
+    "faceoffs": [
+      "matches/4424/faceoffs.json"
+    ],
+    "team_stats": [
+      "matches/4424/team-stats/6.json",
+      "matches/4424/team-stats/9.json"
+    ],
+    "goalies": [
+      "matches/4424/top-goalies.json"
+    ],
+    "other": [
+      "matches/4424/top-scorers.json"
+    ]
+  },
+  "all_keys": [
+    "matches/4424/faceoffs.json",
+    "matches/4424/game-header.json",
+    "matches/4424/period-events.json",
+    "matches/4424/roster.json",
+    "matches/4424/team-stats/6.json",
+    "matches/4424/team-stats/9.json",
+    "matches/4424/top-goalies.json",
+    "matches/4424/top-scorers.json"
+  ],
+  "shot_key": "visualization/shots/4424.json",
+  "shot_url": "https://s3.eu-west-1.amazonaws.com/de.hokejovyzapis.cz/visualization/shots/4424.json",
+  "shot_exists": true
+}

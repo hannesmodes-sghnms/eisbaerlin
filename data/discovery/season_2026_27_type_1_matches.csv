@@ -29,12 +29,12 @@ match_id,start_date,status,home_team_id,home_team_name,away_team_id,away_team_na
 4414,2026-09-27 16:30:00,AFTER_MATCH,13,Augsburger Panther,11,Kölner Haie,league-team-matches/2026/1/11.json|league-team-matches/2026/1/13.json
 4417,2026-09-27 19:00:00,AFTER_MATCH,1,ERC Ingolstadt,2,Adler Mannheim,league-team-matches/2026/1/1.json|league-team-matches/2026/1/2.json
 4418,2026-10-01 19:30:00,AFTER_MATCH,2,Adler Mannheim,7,Iserlohn Roosters,league-team-matches/2026/1/2.json|league-team-matches/2026/1/7.json
-4419,2026-10-02 19:30:00,BEFORE_MATCH,11,Kölner Haie,12,EHC Red Bull München,league-team-matches/2026/1/11.json|league-team-matches/2026/1/12.json
-4420,2026-10-02 19:30:00,BEFORE_MATCH,14,Nürnberg Ice Tigers,15,Schwenninger Wild Wings,league-team-matches/2026/1/14.json|league-team-matches/2026/1/15.json
-4421,2026-10-02 19:30:00,BEFORE_MATCH,5,Krefeld Pinguine,1,ERC Ingolstadt,league-team-matches/2026/1/1.json|league-team-matches/2026/1/5.json
-4422,2026-10-02 19:30:00,BEFORE_MATCH,44,Löwen Frankfurt,3,Eisbären Berlin,league-team-matches/2026/1/3.json|league-team-matches/2026/1/44.json
-4423,2026-10-02 19:30:00,BEFORE_MATCH,13,Augsburger Panther,8,Grizzlys Wolfsburg,league-team-matches/2026/1/13.json|league-team-matches/2026/1/8.json
-4424,2026-10-02 19:30:00,BEFORE_MATCH,6,Straubing Tigers,9,Pinguins Bremerhaven,league-team-matches/2026/1/6.json|league-team-matches/2026/1/9.json
+4419,2026-10-02 19:30:00,AFTER_MATCH,11,Kölner Haie,12,EHC Red Bull München,league-team-matches/2026/1/11.json|league-team-matches/2026/1/12.json
+4420,2026-10-02 19:30:00,AFTER_MATCH,14,Nürnberg Ice Tigers,15,Schwenninger Wild Wings,league-team-matches/2026/1/14.json|league-team-matches/2026/1/15.json
+4421,2026-10-02 19:30:00,AFTER_MATCH,5,Krefeld Pinguine,1,ERC Ingolstadt,league-team-matches/2026/1/1.json|league-team-matches/2026/1/5.json
+4422,2026-10-02 19:30:00,AFTER_MATCH,44,Löwen Frankfurt,3,Eisbären Berlin,league-team-matches/2026/1/3.json|league-team-matches/2026/1/44.json
+4423,2026-10-02 19:30:00,AFTER_MATCH,13,Augsburger Panther,8,Grizzlys Wolfsburg,league-team-matches/2026/1/13.json|league-team-matches/2026/1/8.json
+4424,2026-10-02 19:30:00,AFTER_MATCH,6,Straubing Tigers,9,Pinguins Bremerhaven,league-team-matches/2026/1/6.json|league-team-matches/2026/1/9.json
 4425,2026-10-04 14:00:00,BEFORE_MATCH,3,Eisbären Berlin,14,Nürnberg Ice Tigers,league-team-matches/2026/1/14.json|league-team-matches/2026/1/3.json
 4426,2026-10-04 14:00:00,BEFORE_MATCH,9,Pinguins Bremerhaven,44,Löwen Frankfurt,league-team-matches/2026/1/44.json|league-team-matches/2026/1/9.json
 4429,2026-10-04 14:00:00,BEFORE_MATCH,15,Schwenninger Wild Wings,6,Straubing Tigers,league-team-matches/2026/1/15.json|league-team-matches/2026/1/6.json

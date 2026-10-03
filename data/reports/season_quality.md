@@ -1,28 +1,28 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-10-02T02:40:00Z
+Generated: 2026-10-03T15:20:59Z
 
 ## Totals
 
-- Matches: 30
-- Shots: 3202
-- Shifts: 23212
-- Faceoffs: 1769
-- Events: 815
-- Player game stats: 1513
-- Team game stats: 60
+- Matches: 35
+- Shots: 3761
+- Shifts: 26967
+- Faceoffs: 2067
+- Events: 932
+- Player game stats: 1770
+- Team game stats: 70
 - Unclassified shot zones: 0
 
 ## On-ice quality
 
-- Exact: 3125
-- Boundary adjusted: 53
-- Low confidence: 24
+- Exact: 3673
+- Boundary adjusted: 61
+- Low confidence: 27
 
 ## D-zone faceoff sequences
 
-- D-zone faceoff -> shot <=10s: 21
-- Won D-zone faceoff -> shot <=10s: 14
+- D-zone faceoff -> shot <=10s: 27
+- Won D-zone faceoff -> shot <=10s: 19
 
 ## Per match
 
@@ -58,3 +58,8 @@ Generated: 2026-10-02T02:40:00Z
 | 4416 | 2026-09-27 | Grizzlys Wolfsburg – Pinguins Bremerhaven | 117 | 65 | 740 | 1 | 3 |
 | 4417 | 2026-09-27 | ERC Ingolstadt – Adler Mannheim | 131 | 72 | 864 | 3 | 0 |
 | 4418 | 2026-10-01 | Adler Mannheim – Iserlohn Roosters | 106 | 56 | 758 | 3 | 2 |
+| 4419 | 2026-10-02 | Kölner Haie – EHC Red Bull München | 105 | 61 | 756 | 2 | 1 |
+| 4420 | 2026-10-02 | Nürnberg Ice Tigers – Schwenninger Wild Wings | 111 | 64 | 728 | 3 | 0 |
+| 4421 | 2026-10-02 | Krefeld Pinguine – ERC Ingolstadt | 122 | 60 | 745 | 1 | 2 |
+| 4422 | 2026-10-02 | Löwen Frankfurt – Eisbären Berlin | 102 | 47 | 767 | 1 | 0 |
+| 4423 | 2026-10-02 | Augsburger Panther – Grizzlys Wolfsburg | 119 | 66 | 759 | 1 | 0 |

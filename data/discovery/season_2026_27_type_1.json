@@ -428,7 +428,7 @@
     {
       "match_id": 4419,
       "start_date": "2026-10-02 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 11,
       "home_team_name": "Kölner Haie",
       "away_team_id": 12,
@@ -441,7 +441,7 @@
     {
       "match_id": 4420,
       "start_date": "2026-10-02 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 14,
       "home_team_name": "Nürnberg Ice Tigers",
       "away_team_id": 15,
@@ -454,7 +454,7 @@
     {
       "match_id": 4421,
       "start_date": "2026-10-02 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 5,
       "home_team_name": "Krefeld Pinguine",
       "away_team_id": 1,
@@ -467,7 +467,7 @@
     {
       "match_id": 4422,
       "start_date": "2026-10-02 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 44,
       "home_team_name": "Löwen Frankfurt",
       "away_team_id": 3,
@@ -480,7 +480,7 @@
     {
       "match_id": 4423,
       "start_date": "2026-10-02 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 13,
       "home_team_name": "Augsburger Panther",
       "away_team_id": 8,
@@ -493,7 +493,7 @@
     {
       "match_id": 4424,
       "start_date": "2026-10-02 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 6,
       "home_team_name": "Straubing Tigers",
       "away_team_id": 9,
