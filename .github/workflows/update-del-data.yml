@@ -52,7 +52,11 @@ jobs:
             --refresh-days 3
 
       - name: Validate season dataset
-        run: python scripts/validate_season.py
+        run: |
+          # DEL sometimes marks a game AFTER_MATCH before every raw resource is
+          # available. Such matches are deferred and retried on the next daily
+          # run. Real importer errors / DB inconsistencies still fail the job.
+          python scripts/validate_season.py --allow-incomplete
 
       - name: Build EBB dashboard data
         run: |
