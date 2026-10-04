@@ -1,11 +1,11 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-03T15:20:59Z",
+  "generated_at_utc": "2026-10-04T04:19:34Z",
   "schedule_matches": 364,
   "completed_matches": 36,
-  "refreshed_matches": 1,
-  "downloaded_matches": 6,
+  "refreshed_matches": 6,
+  "downloaded_matches": 1,
   "skipped_matches": 29,
   "failed_downloads": 0,
   "imported_matches": 35,
@@ -318,7 +318,7 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Kölner Haie",
       "away_team_name": "EHC Red Bull München",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -328,7 +328,7 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Nürnberg Ice Tigers",
       "away_team_name": "Schwenninger Wild Wings",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -338,7 +338,7 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Krefeld Pinguine",
       "away_team_name": "ERC Ingolstadt",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -348,7 +348,7 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Löwen Frankfurt",
       "away_team_name": "Eisbären Berlin",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -358,7 +358,7 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Augsburger Panther",
       "away_team_name": "Grizzlys Wolfsburg",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
