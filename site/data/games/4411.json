@@ -7874,6 +7874,7 @@
       "empty_net": false
     }
   ],
+  "del_insight": null,
   "shot_zones": [
     {
       "zone": "SLOT",

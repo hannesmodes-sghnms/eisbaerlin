@@ -15,3 +15,6 @@ __pycache__/
 # Ad-hoc schema inspection output stays local.
 /data/schema/*
 !/data/schema/.gitkeep
+
+# Python package metadata
+*.egg-info/
