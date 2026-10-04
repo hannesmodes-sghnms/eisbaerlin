@@ -58,11 +58,22 @@ jobs:
           # run. Real importer errors / DB inconsistencies still fail the job.
           python scripts/validate_season.py --allow-incomplete
 
+      - name: Update DEL Insight stats
+        run: |
+          # Public PENNY DEL / Wisehockey aggregates are optional. A fetch or
+          # parser issue must never stop the main DEL pipeline.
+          python scripts/update_del_insight.py \
+            --season 2026-27 \
+            --phase hauptrunde \
+            --output-dir data/del_insight \
+            --discovery data/discovery/season_2026_27_type_1.json
+
       - name: Build EBB dashboard data
         run: |
           python scripts/generate_dashboard.py \
             --db data/del_2026_27.duckdb \
             --discovery data/discovery/season_2026_27_type_1.json \
+            --insight-dir data/del_insight \
             --output-dir site/data \
             --upcoming 3
 
@@ -70,7 +81,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/raw data/discovery data/reports site/data
+          git add data/raw data/discovery data/reports data/del_insight site/data
           if git diff --cached --quiet; then
             echo "No persisted data changes."
           else
@@ -99,6 +110,7 @@ jobs:
             data/reports/season_quality.json
             data/reports/season_quality.md
             data/reports/season_update_summary.json
+            data/del_insight
             site/
           retention-days: 30
 

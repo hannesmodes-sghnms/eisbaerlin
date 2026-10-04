@@ -16,6 +16,7 @@ from .advanced import (
     zone_starts_5v5,
 )
 from .lineups import analyze_5v5_lineups
+from .del_insight import load_game_insight, load_latest_snapshot, team_season_summary
 
 FOCUS_TEAM_ID = 3
 FOCUS_TEAM_ABBR = "EBB"
@@ -158,20 +159,52 @@ def _key_stat_rows(ebb: dict[str, Any], opp: dict[str, Any]) -> list[dict[str, A
     return [{"label": label, "key": key, "kind": kind, "ebb": ebb.get(key), "opponent": opp.get(key)} for label, key, kind in specs]
 
 
-def enrich_upcoming_games(con: Any, games: list[dict[str, Any]], *, raw_dir: Path = Path("data/raw")) -> list[dict[str, Any]]:
+
+def _insight_preview_rows(ebb: dict[str, Any] | None, opp: dict[str, Any] | None) -> list[dict[str, Any]]:
+    if not ebb and not opp:
+        return []
+
+    def pair(row: dict[str, Any] | None, a: str, b: str) -> str | None:
+        if not row:
+            return None
+        av, bv = row.get(a), row.get(b)
+        if av is None and bv is None:
+            return None
+        return f"{int(av or 0)} / {int(bv or 0)}"
+
+    specs = [
+        ("Pässe", pair(ebb, "passes_completed", "passes_attempted"), pair(opp, "passes_completed", "passes_attempted"), "text"),
+        ("Passquote", (ebb or {}).get("pass_pct"), (opp or {}).get("pass_pct"), "percent"),
+        ("Puck Contests", pair(ebb, "pcw_won", "pcw_total"), pair(opp, "pcw_won", "pcw_total"), "text"),
+        ("PCW%", (ebb or {}).get("pcw_pct"), (opp or {}).get("pcw_pct"), "percent"),
+        ("xG Summe", (ebb or {}).get("xg_sum"), (opp or {}).get("xg_sum"), "decimal2"),
+        ("xG / Spiel", (ebb or {}).get("xg_per_game"), (opp or {}).get("xg_per_game"), "decimal2"),
+    ]
+    return [{"label": label, "ebb": a, "opponent": b, "kind": kind} for label, a, b, kind in specs]
+
+
+def enrich_upcoming_games(con: Any, games: list[dict[str, Any]], *, raw_dir: Path = Path("data/raw"), insight_dir: Path = Path("data/del_insight")) -> list[dict[str, Any]]:
     ebb_stats = _season_key_stats(con, FOCUS_TEAM_ID)
     ebb_recent = _recent_games(con, FOCUS_TEAM_ID, limit=5)
+    insight_snapshot = load_latest_snapshot(insight_dir)
+    ebb_insight = team_season_summary(insight_snapshot, FOCUS_TEAM_ID, games_played=int(ebb_stats.get("games_played") or 0))
     result = []
     for game in games:
         opponent_team_id = int(game["away_team_id"] if game["ebb_home"] else game["home_team_id"])
         opponent_abbr = _team_abbr(con, opponent_team_id, game.get("opponent_name"))
         opponent_stats = _season_key_stats(con, opponent_team_id)
+        opponent_insight = team_season_summary(insight_snapshot, opponent_team_id, games_played=int(opponent_stats.get("games_played") or 0))
         result.append(
             {
                 **game,
                 "opponent_team_id": opponent_team_id,
                 "opponent_abbr": opponent_abbr,
                 "key_stats": _key_stat_rows(ebb_stats, opponent_stats),
+                "del_insight": {
+                    "available": bool(ebb_insight or opponent_insight),
+                    "snapshot_at": (insight_snapshot or {}).get("generated_at_utc"),
+                    "rows": _insight_preview_rows(ebb_insight, opponent_insight),
+                },
                 "ebb_recent": ebb_recent,
                 "opponent_recent": _recent_games(con, opponent_team_id, limit=5),
                 "head_to_head": _head_to_head(con, opponent_team_id, limit=5),
@@ -278,7 +311,7 @@ def _build_facts(
     return facts
 
 
-def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
+def build_game_payload(con: Any, match_id: int, *, insight_dir: Path = Path("data/del_insight")) -> dict[str, Any]:
     match = _one(con, "SELECT * FROM matches WHERE match_id=?", [match_id])
     if not match:
         raise ValueError(f"Unknown match_id {match_id}")
@@ -440,7 +473,30 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
         for zone in zone_names
     ]
 
+    raw_game_insight = load_game_insight(insight_dir, match_id)
+    game_insight = None
+    if raw_game_insight:
+        insight_teams = raw_game_insight.get("teams") or {}
+        ebb_insight = insight_teams.get(str(FOCUS_TEAM_ID))
+        opponent_insight = insight_teams.get(str(opponent_team_id))
+        game_insight = {
+            "available": bool(ebb_insight or opponent_insight),
+            "method": raw_game_insight.get("method"),
+            "ebb": ebb_insight,
+            "opponent": opponent_insight,
+            "unavailable": raw_game_insight.get("unavailable") or {},
+        }
+
     facts = _build_facts(ebb, players, lineups, advanced)
+    if game_insight and game_insight.get("ebb") and game_insight.get("opponent"):
+        ebb_i = game_insight["ebb"].get("summary") or {}
+        opp_i = game_insight["opponent"].get("summary") or {}
+        if ebb_i.get("xg_sum") is not None and opp_i.get("xg_sum") is not None:
+            facts.append(
+                f"DEL Insight: xG {float(ebb_i['xg_sum']):.2f}:{float(opp_i['xg_sum']):.2f}; "
+                f"Passquote {float(ebb_i.get('pass_pct') or 0):.1f}%:{float(opp_i.get('pass_pct') or 0):.1f}%; "
+                f"Puck Contests {float(ebb_i.get('pcw_pct') or 0):.1f}%:{float(opp_i.get('pcw_pct') or 0):.1f}%."
+            )
     return {
         "match": {
             "match_id": match_id, "date": str(match.get("match_date") or ""),
@@ -453,7 +509,7 @@ def build_game_payload(con: Any, match_id: int) -> dict[str, Any]:
         "focus_team": {"team_id": FOCUS_TEAM_ID, "abbr": FOCUS_TEAM_ABBR, "name": FOCUS_TEAM_NAME},
         "opponent": {"team_id": opponent_team_id, "name": opponent_name, "abbr": opponent_abbr},
         "metrics": metrics, "facts": facts, "players": players, "lineups": lineups,
-        "advanced": advanced, "scoring_summary": scoring_summary,
+        "advanced": advanced, "scoring_summary": scoring_summary, "del_insight": game_insight,
         "shot_zones": shot_zones, "shots": shots, "timeline": timeline,
     }
 
@@ -492,6 +548,7 @@ def generate_dashboard_data(
     db_path: Path = Path("data/del_2026_27.duckdb"),
     discovery_path: Path = Path("data/discovery/season_2026_27_type_1.json"),
     raw_dir: Path = Path("data/raw"),
+    insight_dir: Path = Path("data/del_insight"),
     output_dir: Path = Path("site/data"),
     upcoming_limit: int = 3,
 ) -> tuple[Path, list[Path]]:
@@ -515,7 +572,7 @@ def generate_dashboard_data(
         )
         summaries, paths = [], []
         for match in matches:
-            payload = build_game_payload(con, int(match["match_id"]))
+            payload = build_game_payload(con, int(match["match_id"]), insight_dir=insight_dir)
             path = games_dir / f"{match['match_id']}.json"
             path.write_text(json.dumps(payload, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
             paths.append(path)
@@ -538,7 +595,7 @@ def generate_dashboard_data(
             "focus_team": {"team_id": FOCUS_TEAM_ID, "abbr": FOCUS_TEAM_ABBR, "name": FOCUS_TEAM_NAME},
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "completed_games": summaries,
-            "upcoming_games": enrich_upcoming_games(con, upcoming_basic, raw_dir=raw_dir),
+            "upcoming_games": enrich_upcoming_games(con, upcoming_basic, raw_dir=raw_dir, insight_dir=insight_dir),
         }
         index_path = output_dir / "games.json"
         index_path.write_text(json.dumps(index_payload, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
