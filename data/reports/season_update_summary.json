@@ -1,12 +1,12 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-05T02:44:07Z",
+  "generated_at_utc": "2026-10-06T02:43:51Z",
   "schedule_matches": 364,
   "completed_matches": 43,
-  "refreshed_matches": 12,
+  "refreshed_matches": 7,
   "downloaded_matches": 1,
-  "skipped_matches": 30,
+  "skipped_matches": 35,
   "failed_downloads": 0,
   "imported_matches": 42,
   "failed_imports": 1,
@@ -318,9 +318,9 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Kölner Haie",
       "away_team_name": "EHC Red Bull München",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
+      "action": "skipped",
+      "refresh": false,
+      "downloaded_resources": 0,
       "error": null
     },
     {
@@ -328,9 +328,9 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Nürnberg Ice Tigers",
       "away_team_name": "Schwenninger Wild Wings",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
+      "action": "skipped",
+      "refresh": false,
+      "downloaded_resources": 0,
       "error": null
     },
     {
@@ -338,9 +338,9 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Krefeld Pinguine",
       "away_team_name": "ERC Ingolstadt",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
+      "action": "skipped",
+      "refresh": false,
+      "downloaded_resources": 0,
       "error": null
     },
     {
@@ -348,9 +348,9 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Löwen Frankfurt",
       "away_team_name": "Eisbären Berlin",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
+      "action": "skipped",
+      "refresh": false,
+      "downloaded_resources": 0,
       "error": null
     },
     {
@@ -358,9 +358,9 @@
       "start_date": "2026-10-02 19:30:00",
       "home_team_name": "Augsburger Panther",
       "away_team_name": "Grizzlys Wolfsburg",
-      "action": "refreshed",
-      "refresh": true,
-      "downloaded_resources": 10,
+      "action": "skipped",
+      "refresh": false,
+      "downloaded_resources": 0,
       "error": null
     },
     {
@@ -369,8 +369,8 @@
       "home_team_name": "Straubing Tigers",
       "away_team_name": "Pinguins Bremerhaven",
       "action": "downloaded",
-      "refresh": true,
-      "downloaded_resources": 9,
+      "refresh": false,
+      "downloaded_resources": 0,
       "error": null
     },
     {
