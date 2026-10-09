@@ -1,28 +1,28 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-10-08T02:41:26Z
+Generated: 2026-10-09T02:44:52Z
 
 ## Totals
 
-- Matches: 42
-- Shots: 4484
-- Shifts: 32342
-- Faceoffs: 2469
-- Events: 1111
-- Player game stats: 2130
-- Team game stats: 84
+- Matches: 43
+- Shots: 4588
+- Shifts: 33116
+- Faceoffs: 2522
+- Events: 1133
+- Player game stats: 2181
+- Team game stats: 86
 - Unclassified shot zones: 0
 
 ## On-ice quality
 
-- Exact: 4380
+- Exact: 4484
 - Boundary adjusted: 74
 - Low confidence: 30
 
 ## D-zone faceoff sequences
 
-- D-zone faceoff -> shot <=10s: 39
-- Won D-zone faceoff -> shot <=10s: 28
+- D-zone faceoff -> shot <=10s: 40
+- Won D-zone faceoff -> shot <=10s: 29
 
 ## Per match
 
@@ -70,3 +70,4 @@ Generated: 2026-10-08T02:41:26Z
 | 4429 | 2026-10-04 | Schwenninger Wild Wings – Straubing Tigers | 103 | 64 | 777 | 1 | 2 |
 | 4430 | 2026-10-04 | Grizzlys Wolfsburg – Adler Mannheim | 104 | 54 | 757 | 2 | 0 |
 | 4431 | 2026-10-04 | EHC Red Bull München – Augsburger Panther | 118 | 70 | 783 | 6 | 0 |
+| 4432 | 2026-10-08 | Löwen Frankfurt – Krefeld Pinguine | 104 | 53 | 774 | 0 | 0 |

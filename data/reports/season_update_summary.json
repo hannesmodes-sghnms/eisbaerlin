@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-08T02:41:26Z",
+  "generated_at_utc": "2026-10-09T02:44:52Z",
   "schedule_matches": 364,
-  "completed_matches": 43,
+  "completed_matches": 44,
   "refreshed_matches": 0,
-  "downloaded_matches": 1,
+  "downloaded_matches": 2,
   "skipped_matches": 42,
   "failed_downloads": 0,
-  "imported_matches": 42,
+  "imported_matches": 43,
   "failed_imports": 1,
   "db_path": "data/del_2026_27.duckdb",
   "quality_report_path": "data/reports/season_quality.json",
@@ -441,6 +441,16 @@
       "action": "skipped",
       "refresh": false,
       "downloaded_resources": 0,
+      "error": null
+    },
+    {
+      "match_id": 4432,
+      "start_date": "2026-10-08 19:30:00",
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_name": "Krefeld Pinguine",
+      "action": "downloaded",
+      "refresh": true,
+      "downloaded_resources": 10,
       "error": null
     }
   ],

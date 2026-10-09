@@ -1,33 +1,33 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-08T02:41:26Z",
+  "generated_at_utc": "2026-10-09T02:44:52Z",
   "totals": {
-    "matches": 42,
-    "player_match_rows": 1744,
-    "shifts": 32342,
-    "shots": 4484,
-    "faceoffs": 2469,
-    "events": 1111,
-    "player_game_stats": 2130,
-    "team_game_stats": 84,
+    "matches": 43,
+    "player_match_rows": 1785,
+    "shifts": 33116,
+    "shots": 4588,
+    "faceoffs": 2522,
+    "events": 1133,
+    "player_game_stats": 2181,
+    "team_game_stats": 86,
     "unclassified_shots": 0
   },
   "on_ice_quality": {
     "boundary_adjusted": 74,
-    "exact": 4380,
+    "exact": 4484,
     "low_confidence": 30
   },
   "manpower": {
-    "5v5": 3229,
-    "5v4": 739,
-    "4v5": 179,
-    "6v5": 84,
+    "5v5": 3318,
+    "5v4": 746,
+    "4v5": 183,
+    "6v5": 85,
     "4v4": 65,
     "3v3": 47,
     "5v3": 41,
     "4v3": 22,
-    "5v6": 16,
+    "5v6": 19,
     "0v0": 15,
     "6v4": 14,
     "3v5": 8,
@@ -45,8 +45,8 @@
     "6v8": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 39,
-  "dzone_faceoff_win_to_shot_10s": 28,
+  "dzone_faceoff_to_shot_10s": 40,
+  "dzone_faceoff_win_to_shot_10s": 29,
   "per_match": [
     {
       "match_id": 4389,
@@ -509,11 +509,22 @@
       "shifts": 783,
       "boundary_adjusted": 6,
       "low_confidence": 0
+    },
+    {
+      "match_id": 4432,
+      "match_date": "2026-10-08",
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_name": "Krefeld Pinguine",
+      "shots": 104,
+      "faceoffs": 53,
+      "shifts": 774,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
     }
   ],
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 43,
+    "completed_matches": 44,
     "failed_downloads": 0,
     "failed_imports": 1,
     "import_errors": [
