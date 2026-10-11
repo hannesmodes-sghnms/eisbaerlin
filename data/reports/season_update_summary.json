@@ -1,11 +1,11 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-10T02:44:44Z",
+  "generated_at_utc": "2026-10-11T02:44:56Z",
   "schedule_matches": 364,
   "completed_matches": 50,
-  "refreshed_matches": 1,
-  "downloaded_matches": 7,
+  "refreshed_matches": 7,
+  "downloaded_matches": 1,
   "skipped_matches": 42,
   "failed_downloads": 0,
   "imported_matches": 49,
@@ -458,7 +458,7 @@
       "start_date": "2026-10-09 19:30:00",
       "home_team_name": "Kölner Haie",
       "away_team_name": "Schwenninger Wild Wings",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -468,7 +468,7 @@
       "start_date": "2026-10-09 19:30:00",
       "home_team_name": "Eisbären Berlin",
       "away_team_name": "Grizzlys Wolfsburg",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -478,7 +478,7 @@
       "start_date": "2026-10-09 19:30:00",
       "home_team_name": "Nürnberg Ice Tigers",
       "away_team_name": "Adler Mannheim",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -488,7 +488,7 @@
       "start_date": "2026-10-09 19:30:00",
       "home_team_name": "Augsburger Panther",
       "away_team_name": "Pinguins Bremerhaven",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -498,7 +498,7 @@
       "start_date": "2026-10-09 19:30:00",
       "home_team_name": "EHC Red Bull München",
       "away_team_name": "ERC Ingolstadt",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -508,7 +508,7 @@
       "start_date": "2026-10-09 19:30:00",
       "home_team_name": "Straubing Tigers",
       "away_team_name": "Iserlohn Roosters",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
