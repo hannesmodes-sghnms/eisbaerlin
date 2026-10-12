@@ -688,7 +688,7 @@
     {
       "match_id": 4440,
       "start_date": "2026-10-11 14:00:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 5,
       "home_team_name": "Krefeld Pinguine",
       "away_team_id": 13,
@@ -701,7 +701,7 @@
     {
       "match_id": 4442,
       "start_date": "2026-10-11 14:00:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 1,
       "home_team_name": "ERC Ingolstadt",
       "away_team_id": 44,
@@ -714,7 +714,7 @@
     {
       "match_id": 4439,
       "start_date": "2026-10-11 16:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 11,
       "home_team_name": "Kölner Haie",
       "away_team_id": 14,
@@ -727,7 +727,7 @@
     {
       "match_id": 4441,
       "start_date": "2026-10-11 16:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 9,
       "home_team_name": "Pinguins Bremerhaven",
       "away_team_id": 3,
@@ -740,7 +740,7 @@
     {
       "match_id": 4443,
       "start_date": "2026-10-11 16:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 7,
       "home_team_name": "Iserlohn Roosters",
       "away_team_id": 8,
@@ -753,7 +753,7 @@
     {
       "match_id": 4444,
       "start_date": "2026-10-11 16:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 15,
       "home_team_name": "Schwenninger Wild Wings",
       "away_team_id": 12,
@@ -766,7 +766,7 @@
     {
       "match_id": 4445,
       "start_date": "2026-10-11 19:00:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 2,
       "home_team_name": "Adler Mannheim",
       "away_team_id": 6,
