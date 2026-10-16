@@ -779,7 +779,7 @@
     {
       "match_id": 4446,
       "start_date": "2026-10-15 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 8,
       "home_team_name": "Grizzlys Wolfsburg",
       "away_team_id": 5,

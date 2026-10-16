@@ -1,32 +1,32 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-15T03:00:54Z",
+  "generated_at_utc": "2026-10-16T02:59:39Z",
   "totals": {
-    "matches": 56,
-    "player_match_rows": 2322,
-    "shifts": 42959,
-    "shots": 5975,
-    "faceoffs": 3242,
-    "events": 1456,
-    "player_game_stats": 2861,
-    "team_game_stats": 112,
+    "matches": 57,
+    "player_match_rows": 2363,
+    "shifts": 43738,
+    "shots": 6091,
+    "faceoffs": 3295,
+    "events": 1483,
+    "player_game_stats": 2915,
+    "team_game_stats": 114,
     "unclassified_shots": 0
   },
   "on_ice_quality": {
-    "boundary_adjusted": 107,
-    "exact": 5832,
+    "boundary_adjusted": 108,
+    "exact": 5947,
     "low_confidence": 36
   },
   "manpower": {
-    "5v5": 4351,
-    "5v4": 949,
-    "4v5": 239,
+    "5v5": 4435,
+    "5v4": 966,
+    "4v5": 245,
     "6v5": 113,
-    "4v4": 77,
-    "3v3": 54,
-    "5v3": 49,
-    "4v3": 35,
+    "4v4": 78,
+    "3v3": 57,
+    "5v3": 50,
+    "4v3": 39,
     "5v6": 29,
     "0v0": 17,
     "6v4": 16,
@@ -48,8 +48,8 @@
     "6v8": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 55,
-  "dzone_faceoff_win_to_shot_10s": 42,
+  "dzone_faceoff_to_shot_10s": 57,
+  "dzone_faceoff_win_to_shot_10s": 43,
   "per_match": [
     {
       "match_id": 4389,
@@ -666,11 +666,22 @@
       "shifts": 752,
       "boundary_adjusted": 2,
       "low_confidence": 0
+    },
+    {
+      "match_id": 4446,
+      "match_date": "2026-10-15",
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_name": "Krefeld Pinguine",
+      "shots": 116,
+      "faceoffs": 53,
+      "shifts": 779,
+      "boundary_adjusted": 1,
+      "low_confidence": 0
     }
   ],
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 57,
+    "completed_matches": 58,
     "failed_downloads": 0,
     "failed_imports": 1,
     "import_errors": [
