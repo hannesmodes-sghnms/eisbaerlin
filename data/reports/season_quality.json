@@ -1,34 +1,34 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-16T02:59:39Z",
+  "generated_at_utc": "2026-10-17T03:01:05Z",
   "totals": {
-    "matches": 57,
-    "player_match_rows": 2363,
-    "shifts": 43738,
-    "shots": 6091,
-    "faceoffs": 3295,
-    "events": 1483,
-    "player_game_stats": 2915,
-    "team_game_stats": 114,
+    "matches": 62,
+    "player_match_rows": 2573,
+    "shifts": 47706,
+    "shots": 6673,
+    "faceoffs": 3586,
+    "events": 1608,
+    "player_game_stats": 3180,
+    "team_game_stats": 124,
     "unclassified_shots": 0
   },
   "on_ice_quality": {
-    "boundary_adjusted": 108,
-    "exact": 5947,
-    "low_confidence": 36
+    "boundary_adjusted": 122,
+    "exact": 6513,
+    "low_confidence": 38
   },
   "manpower": {
-    "5v5": 4435,
-    "5v4": 966,
-    "4v5": 245,
-    "6v5": 113,
-    "4v4": 78,
-    "3v3": 57,
-    "5v3": 50,
+    "5v5": 4853,
+    "5v4": 1055,
+    "4v5": 273,
+    "6v5": 136,
+    "4v4": 93,
+    "3v3": 58,
+    "5v3": 54,
     "4v3": 39,
-    "5v6": 29,
-    "0v0": 17,
+    "5v6": 31,
+    "0v0": 18,
     "6v4": 16,
     "3v5": 13,
     "3v4": 10,
@@ -36,20 +36,20 @@
     "7v5": 4,
     "0v2": 2,
     "10v7": 2,
+    "5v2": 2,
     "2v0": 1,
     "3v0": 1,
     "3v2": 1,
     "5v0": 1,
     "5v10": 1,
-    "5v2": 1,
     "5v7": 1,
     "5v9": 1,
     "6v7": 1,
     "6v8": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 57,
-  "dzone_faceoff_win_to_shot_10s": 43,
+  "dzone_faceoff_to_shot_10s": 66,
+  "dzone_faceoff_win_to_shot_10s": 49,
   "per_match": [
     {
       "match_id": 4389,
@@ -677,16 +677,75 @@
       "shifts": 779,
       "boundary_adjusted": 1,
       "low_confidence": 0
+    },
+    {
+      "match_id": 4447,
+      "match_date": "2026-10-16",
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_name": "Kölner Haie",
+      "shots": 125,
+      "faceoffs": 49,
+      "shifts": 833,
+      "boundary_adjusted": 1,
+      "low_confidence": 1
+    },
+    {
+      "match_id": 4448,
+      "match_date": "2026-10-16",
+      "home_team_name": "Eisbären Berlin",
+      "away_team_name": "EHC Red Bull München",
+      "shots": 115,
+      "faceoffs": 62,
+      "shifts": 776,
+      "boundary_adjusted": 3,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4449,
+      "match_date": "2026-10-16",
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_name": "Straubing Tigers",
+      "shots": 102,
+      "faceoffs": 46,
+      "shifts": 736,
+      "boundary_adjusted": 2,
+      "low_confidence": 1
+    },
+    {
+      "match_id": 4450,
+      "match_date": "2026-10-16",
+      "home_team_name": "Augsburger Panther",
+      "away_team_name": "Adler Mannheim",
+      "shots": 138,
+      "faceoffs": 70,
+      "shifts": 834,
+      "boundary_adjusted": 4,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4452,
+      "match_date": "2026-10-16",
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_name": "ERC Ingolstadt",
+      "shots": 102,
+      "faceoffs": 64,
+      "shifts": 789,
+      "boundary_adjusted": 4,
+      "low_confidence": 0
     }
   ],
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 58,
+    "completed_matches": 64,
     "failed_downloads": 0,
-    "failed_imports": 1,
+    "failed_imports": 2,
     "import_errors": [
       {
         "match_id": 4424,
+        "error": "raw data incomplete"
+      },
+      {
+        "match_id": 4451,
         "error": "raw data incomplete"
       }
     ]
