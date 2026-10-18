@@ -1,11 +1,11 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-17T03:01:05Z",
+  "generated_at_utc": "2026-10-18T02:58:43Z",
   "schedule_matches": 364,
   "completed_matches": 64,
-  "refreshed_matches": 1,
-  "downloaded_matches": 7,
+  "refreshed_matches": 6,
+  "downloaded_matches": 2,
   "skipped_matches": 56,
   "failed_downloads": 0,
   "imported_matches": 62,
@@ -598,7 +598,7 @@
       "start_date": "2026-10-16 19:30:00",
       "home_team_name": "Iserlohn Roosters",
       "away_team_name": "Kölner Haie",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -608,7 +608,7 @@
       "start_date": "2026-10-16 19:30:00",
       "home_team_name": "Eisbären Berlin",
       "away_team_name": "EHC Red Bull München",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -618,7 +618,7 @@
       "start_date": "2026-10-16 19:30:00",
       "home_team_name": "Löwen Frankfurt",
       "away_team_name": "Straubing Tigers",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -628,7 +628,7 @@
       "start_date": "2026-10-16 19:30:00",
       "home_team_name": "Augsburger Panther",
       "away_team_name": "Adler Mannheim",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -648,7 +648,7 @@
       "start_date": "2026-10-16 19:30:00",
       "home_team_name": "Schwenninger Wild Wings",
       "away_team_name": "ERC Ingolstadt",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
