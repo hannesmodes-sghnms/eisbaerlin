@@ -961,7 +961,7 @@
     {
       "match_id": 4460,
       "start_date": "2026-10-20 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 1,
       "home_team_name": "ERC Ingolstadt",
       "away_team_id": 8,
@@ -974,7 +974,7 @@
     {
       "match_id": 4731,
       "start_date": "2026-10-20 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 11,
       "home_team_name": "Kölner Haie",
       "away_team_id": 15,
