@@ -16,6 +16,7 @@ from .advanced import (
     zone_starts_5v5,
 )
 from .lineups import analyze_5v5_lineups
+from .game_flow import build_game_flow
 from .del_insight import load_game_insight, load_latest_snapshot, team_season_summary
 
 FOCUS_TEAM_ID = 3
@@ -425,6 +426,14 @@ def build_game_payload(con: Any, match_id: int, *, insight_dir: Path = Path("dat
         )
 
     shifts = _all(con, "SELECT team_id, player_id, start_time_s, end_time_s FROM shifts WHERE match_id=?", [match_id])
+    game_flow = build_game_flow(
+        shots,
+        shifts,
+        player_info,
+        scoring_summary,
+        focus_team_id=FOCUS_TEAM_ID,
+        opponent_team_id=opponent_team_id,
+    )
     faceoffs = _all(con, "SELECT game_time_s, position_shortcut FROM faceoffs WHERE match_id=? ORDER BY game_time_s", [match_id])
     impact = player_impact_5v5_from_shots(shots, player_info, focus_team_id=FOCUS_TEAM_ID)
     impact_by_id = {row["player_id"]: row for row in impact}
@@ -510,6 +519,7 @@ def build_game_payload(con: Any, match_id: int, *, insight_dir: Path = Path("dat
         "opponent": {"team_id": opponent_team_id, "name": opponent_name, "abbr": opponent_abbr},
         "metrics": metrics, "facts": facts, "players": players, "lineups": lineups,
         "advanced": advanced, "scoring_summary": scoring_summary, "del_insight": game_insight,
+        "game_flow": game_flow,
         "shot_zones": shot_zones, "shots": shots, "timeline": timeline,
     }
 
