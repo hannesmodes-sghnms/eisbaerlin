@@ -23,6 +23,7 @@ concurrency:
 
 jobs:
   update:
+    if: ${{ github.event_name != 'push' }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -151,7 +152,7 @@ jobs:
           fi
 
   deploy-dashboard:
-    if: ${{ vars.ENABLE_DASHBOARD_PAGES == 'true' }}
+    if: ${{ vars.ENABLE_DASHBOARD_PAGES == 'true' && github.event_name != 'push' }}
     needs: update
     runs-on: ubuntu-latest
     environment:
@@ -159,5 +160,30 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy EBB dashboard
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+
+  deploy-static:
+    if: ${{ vars.ENABLE_DASHBOARD_PAGES == 'true' && github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload current dashboard
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy current dashboard
         id: deployment
         uses: actions/deploy-pages@v4
