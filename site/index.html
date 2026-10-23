@@ -548,6 +548,103 @@ tr:last-child td {
 .flow-swatch.pp-ebb { height: 12px; background: rgba(78,161,255,.22); }
 .flow-swatch.pp-opp { height: 12px; background: rgba(255,122,133,.22); }
 
+.game-flow-goal {
+  cursor: pointer;
+  transition: r .12s ease, opacity .12s ease;
+}
+
+.game-flow-goal:hover,
+.game-flow-goal:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.goal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(2, 8, 17, .78);
+  backdrop-filter: blur(6px);
+}
+
+.goal-overlay.open {
+  display: flex;
+}
+
+.goal-overlay-card {
+  width: min(460px, 100%);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.5);
+  padding: 20px;
+}
+
+.goal-overlay-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+}
+
+.goal-overlay-team {
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.goal-overlay-title {
+  margin-top: 3px;
+  font-size: 1.35rem;
+  font-weight: 850;
+}
+
+.goal-overlay-close {
+  min-width: 38px;
+  min-height: 38px;
+  padding: 6px 10px;
+}
+
+.goal-overlay-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.goal-overlay-chip {
+  display: inline-flex;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.goal-overlay-assists {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.goal-overlay-assist {
+  display: grid;
+  grid-template-columns: 34px minmax(0,1fr);
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.goal-overlay-assist b {
+  color: var(--muted);
+}
+
 
 /* Sort buttons */
 
@@ -922,6 +1019,20 @@ tr:last-child td {
 
   <div class="grid two section"><section class="panel"><h2>Shot-Zonen</h2><div class="zone-grid" id="zones"></div></section><section class="panel"><h2>Spielverlauf</h2><div id="timeline" class="timeline"></div></section></div>
 </main>
+
+<div id="goalOverlay" class="goal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="goalOverlayTitle">
+  <div class="goal-overlay-card">
+    <div class="goal-overlay-head">
+      <div>
+        <div id="goalOverlayTeam" class="goal-overlay-team">Tor</div>
+        <div id="goalOverlayTitle" class="goal-overlay-title"></div>
+      </div>
+      <button id="goalOverlayClose" class="goal-overlay-close" type="button" aria-label="Tor-Details schließen">×</button>
+    </div>
+    <div id="goalOverlayMeta" class="goal-overlay-meta"></div>
+    <div id="goalOverlayAssists" class="goal-overlay-assists"></div>
+  </div>
+</div>
 <script>
 (() => {
   const state={index:null,game:null,team:'all',usageSort:{key:'toi_s',dir:'desc'}};
@@ -957,6 +1068,8 @@ tr:last-child td {
 
   function renderInsight(){const ins=state.game?.del_insight,panel=$('#delInsightPanel');if(!ins||!ins.available){panel.style.display='none';return}panel.style.display='block';const ebb=ins.ebb,opp=ins.opponent,oppAbbr=state.game?.opponent?.abbr||'Gegner';const teamRow=(label,data,cls)=>{if(!data)return'';const s=data.summary||{};return `<tr><td class="${cls}">${esc(label)}</td><td>${pairText(s.passes_completed,s.passes_attempted)}</td><td>${pct(s.pass_pct)}</td><td>${pairText(s.pcw_won,s.pcw_total)}</td><td>${pct(s.pcw_pct)}</td><td><b>${s.xg_sum==null?'–':Number(s.xg_sum).toFixed(2)}</b></td><td>${s.goals??'–'}</td><td>${s.xg_diff==null?'–':Number(s.xg_diff).toFixed(2)}</td></tr>`};$('#delInsightTeams').innerHTML=teamRow('EBB',ebb,'ebb')+teamRow(oppAbbr,opp,'opp');const rows=[...(ebb?.players||[]).map(x=>({...x,_team:'EBB',_cls:'ebb'})),...(opp?.players||[]).map(x=>({...x,_team:oppAbbr,_cls:'opp'}))].sort((a,b)=>(Number(b.xg_sum)||0)-(Number(a.xg_sum)||0)||String(a.player_name||'').localeCompare(String(b.player_name||''),'de'));$('#delInsightPlayers').innerHTML=rows.map(p=>`<tr><td class="${p._cls}">${esc(p._team)}</td><td>#${esc(p.jersey??'–')} ${esc(p.player_name||'')}</td><td>${pairText(p.passes_completed,p.passes_attempted)}</td><td>${pct(p.pass_pct)}</td><td>${pairText(p.pcw_won,p.pcw_total)}</td><td>${pct(p.pcw_pct)}</td><td>${p.xg_sum==null?'–':Number(p.xg_sum).toFixed(2)}</td><td>${p.blocked_shots??'–'}</td></tr>`).join('')||'<tr><td colspan="8" class="muted">Keine Spielerwerte ableitbar.</td></tr>';const before=ebb?.snapshot_before||opp?.snapshot_before,after=ebb?.snapshot_after||opp?.snapshot_after;$('#delInsightStatus').innerHTML=`<b>Snapshot-Differenz:</b> ${before?esc(new Date(before).toLocaleString('de-DE')):'–'} → ${after?esc(new Date(after).toLocaleString('de-DE')):'–'}. ${ins.method?esc(ins.method):''}`;}
 
+  function closeGoalOverlay(){const overlay=$('#goalOverlay');if(!overlay)return;overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true')}
+  function openGoalOverlay(goal){const overlay=$('#goalOverlay');if(!overlay)return;const scorer=goal.scorer_jersey?`#${goal.scorer_jersey} ${goal.scorer||'–'}`:(goal.scorer||'–');$('#goalOverlayTeam').textContent=`${goal.team_abbr||'TOR'} · ${goal.balance||'–'}`;$('#goalOverlayTitle').textContent=scorer;$('#goalOverlayMeta').innerHTML=`<span class="goal-overlay-chip">${esc(time(goal.time_s))}</span><span class="goal-overlay-chip">Spielstand ${esc(goal.score||'–')}</span>`;const assists=goal.assists||[];$('#goalOverlayAssists').innerHTML=assists.length?assists.map(a=>`<div class="goal-overlay-assist"><b>A${esc(a.order||'')}</b><span>${a.jersey?`#${esc(a.jersey)} `:''}${esc(a.name||'–')}</span></div>`).join(''):'<div class="muted">Keine Assists.</div>';overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');$('#goalOverlayClose').focus()}
   function renderGameFlow(){const svg=$('#gameFlow'),flow=state.game?.game_flow;if(!svg||!flow){return}const NS='http://www.w3.org/2000/svg';svg.innerHTML='';const add=(tag,attrs,parent=svg)=>{const n=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,v));parent.appendChild(n);return n};const W=1200,H=400,L=54,R=18,T=24,B=42,PW=W-L-R,PH=H-T-B,mid=T+PH/2,end=Math.max(1,Number(flow.game_end_s)||3600),pts=flow.points||[],maxV=Math.max(1,...pts.flatMap(p=>[Number(p.ebb)||0,Number(p.opponent)||0]));const x=t=>L+(Math.max(0,Math.min(end,Number(t)||0))/end)*PW,yE=v=>mid-(Number(v)||0)/maxV*(PH*.43),yO=v=>mid+(Number(v)||0)/maxV*(PH*.43);
     add('rect',{x:L,y:T,width:PW,height:PH,rx:8,fill:'#091627',stroke:'#243650'});
     (flow.powerplays||[]).forEach(pp=>{const xx=x(pp.start_s),ww=Math.max(1,x(pp.end_s)-xx);add('rect',{x:xx,y:T,width:ww,height:PH,fill:pp.side==='ebb'?'#4ea1ff':'#ff7a85',opacity:.14});});
@@ -967,7 +1080,7 @@ tr:last-child td {
     add('path',{d:area('ebb',true),fill:'#4ea1ff',opacity:.22});add('path',{d:area('opponent',false),fill:'#ff7a85',opacity:.22});
     add('path',{d:line('ebb',true),fill:'none',stroke:'#4ea1ff','stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round'});add('path',{d:line('opponent',false),fill:'none',stroke:'#ff7a85','stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round'});
     const nearest=(time,key)=>{if(!pts.length)return 0;let best=pts[0];for(const p of pts)if(Math.abs(Number(p.time_s)-time)<Math.abs(Number(best.time_s)-time))best=p;return Number(best[key])||0};
-    (flow.goals||[]).forEach(g=>{const upper=g.side==='ebb',cy=upper?yE(nearest(g.time_s,'ebb')):yO(nearest(g.time_s,'opponent')),cx=x(g.time_s);const c=add('circle',{cx,cy,r:7,fill:'#07111f',stroke:upper?'#4ea1ff':'#ff7a85','stroke-width':3});const title=document.createElementNS(NS,'title');title.textContent=`${time(g.time_s)} · ${g.team_abbr||''} TOR · ${g.scorer||''} · ${g.score||''} · ${g.balance||''}`;c.appendChild(title);});
+    (flow.goals||[]).forEach(g=>{const upper=g.side==='ebb',cy=upper?yE(nearest(g.time_s,'ebb')):yO(nearest(g.time_s,'opponent')),cx=x(g.time_s);const label=`${time(g.time_s)} · ${g.team_abbr||''} TOR · ${g.scorer||''} · ${g.score||''} · ${g.balance||''}`;const c=add('circle',{cx,cy,r:8,fill:'#07111f',stroke:upper?'#4ea1ff':'#ff7a85','stroke-width':3,'class':'game-flow-goal',tabindex:0,role:'button','aria-label':label});const title=document.createElementNS(NS,'title');title.textContent=label;c.appendChild(title);c.addEventListener('click',()=>openGoalOverlay(g));c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGoalOverlay(g)}});});
     const ticks=end>3600?[0,1200,2400,3600,end]:[0,1200,2400,3600];ticks.filter((t,i,a)=>t<=end&&a.indexOf(t)===i).forEach(t=>{const xx=x(t);add('line',{x1:xx,y1:T+PH,x2:xx,y2:T+PH+6,stroke:'#9fb1ca'});const tx=add('text',{x:xx,y:H-14,'text-anchor':t===0?'start':t===end?'end':'middle',fill:'#9fb1ca','font-size':13});tx.textContent=`${Math.floor(t/60)}'`;});
     const top=add('text',{x:L+6,y:T+17,fill:'#4ea1ff','font-size':13,'font-weight':700});top.textContent='EBB';const bot=add('text',{x:L+6,y:T+PH-8,fill:'#ff7a85','font-size':13,'font-weight':700});bot.textContent=state.game?.opponent?.abbr||'Gegner';
   }
@@ -989,7 +1102,8 @@ tr:last-child td {
     const mp=$('#manpowerFilter').value,result=$('#resultFilter').value,period=$('#periodFilter').value,player=$('#playerFilter').value;const shots=(g.shots||[]).filter(s=>(state.team==='all'||(state.team==='ebb'?s.team_id===g.focus_team.team_id:s.team_id!==g.focus_team.team_id))&&(mp==='all'||s.manpower===mp)&&(result==='all'||s.result===result)&&(period==='all'||s.period===period)&&(player==='all'||(s.team_id===g.focus_team.team_id&&String(s.player_id)===player)));
     shots.forEach(s=>{if(s.x_m==null||s.y_m==null)return;const isEbb=s.team_id===g.focus_team.team_id,color=isEbb?'#2589f3':'#e74f5d',x=mx(Number(s.x_m)),y=my(Number(s.y_m));let mark;if(s.result==='goal')mark=add('polygon',{points:`${x},${y-8} ${x+8},${y} ${x},${y+8} ${x-8},${y}`,fill:color,stroke:'#10243d','stroke-width':1.5});else if(s.result==='on_goal')mark=add('circle',{cx:x,cy:y,r:6,fill:color,stroke:'#10243d','stroke-width':1});else if(s.result==='blocked')mark=add('rect',{x:x-6,y:y-6,width:12,height:12,fill:'#f8fbff',stroke:color,'stroke-width':3});else mark=add('polygon',{points:`${x},${y-7} ${x+7},${y+6} ${x-7},${y+6}`,fill:'#f8fbff',stroke:color,'stroke-width':3});const title=document.createElementNS(NS,'title');title.textContent=`${s.team_abbr||''} · ${s.player_name||''}${s.jersey?' #'+s.jersey:''} · ${s.result} · ${s.manpower} · ${s.period} · ${time(s.game_time_s)} · ${s.shot_zone||''}`;mark.appendChild(title)})}
 
-  $('#gameSelect').addEventListener('change',async e=>{const s=(state.index.completed_games||[]).find(g=>String(g.match_id)===e.target.value);if(s)await loadGame(s)});$$('.teamFilter').forEach(btn=>btn.addEventListener('click',()=>{$$('.teamFilter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');state.team=btn.dataset.team;drawRink()}));['manpowerFilter','resultFilter','periodFilter','playerFilter'].forEach(id=>$('#'+id).addEventListener('change',drawRink));$$('.usageSort').forEach(btn=>btn.addEventListener('click',()=>{const key=btn.dataset.key;if(state.usageSort.key===key)state.usageSort.dir=state.usageSort.dir==='desc'?'asc':'desc';else state.usageSort={key,dir:(key==='name'||key==='position')?'asc':'desc'};renderUsage()}));
+  $('#goalOverlayClose').addEventListener('click',closeGoalOverlay);$('#goalOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeGoalOverlay()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGoalOverlay()});
+  $('#gameSelect').addEventListener('change',async e=>{closeGoalOverlay();const s=(state.index.completed_games||[]).find(g=>String(g.match_id)===e.target.value);if(s)await loadGame(s)});$$('.teamFilter').forEach(btn=>btn.addEventListener('click',()=>{$$('.teamFilter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');state.team=btn.dataset.team;drawRink()}));['manpowerFilter','resultFilter','periodFilter','playerFilter'].forEach(id=>$('#'+id).addEventListener('change',drawRink));$$('.usageSort').forEach(btn=>btn.addEventListener('click',()=>{const key=btn.dataset.key;if(state.usageSort.key===key)state.usageSort.dir=state.usageSort.dir==='desc'?'asc':'desc';else state.usageSort={key,dir:(key==='name'||key==='position')?'asc':'desc'};renderUsage()}));
   loadIndex().catch(err=>{console.error(err);$('#gameHead').innerHTML=`<div class="empty">Dashboard-Daten konnten nicht geladen werden: ${esc(err.message)}</div>`});
 })();
 </script>
