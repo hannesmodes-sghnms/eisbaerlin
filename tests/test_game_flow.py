@@ -28,7 +28,11 @@ def test_game_flow_builds_positive_and_opponent_density_and_goal_marker():
             "team_abbr": "EBB",
             "score": "1:0",
             "balance": "EQ",
-            "scorer": {"name": "Test Player"},
+            "scorer": {"name": "Test Player", "jersey": 9},
+            "assists": [
+                {"order": 1, "name": "Primary Assist", "jersey": 94},
+                {"order": 2, "name": "Secondary Assist", "jersey": 95},
+            ],
         }
     ]
 
@@ -49,6 +53,11 @@ def test_game_flow_builds_positive_and_opponent_density_and_goal_marker():
     assert max(row["opponent"] for row in flow["points"]) > 0
     assert flow["goals"][0]["scorer"] == "Test Player"
     assert flow["goals"][0]["side"] == "ebb"
+    assert flow["goals"][0]["scorer_jersey"] == 9
+    assert flow["goals"][0]["assists"] == [
+        {"order": 1, "name": "Primary Assist", "jersey": 94},
+        {"order": 2, "name": "Secondary Assist", "jersey": 95},
+    ]
 
 
 def test_powerplay_is_reconstructed_from_skater_counts():
