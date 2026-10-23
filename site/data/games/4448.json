@@ -10498,6 +10498,1359 @@
     },
     "unavailable": {}
   },
+  "game_flow": {
+    "method": "gaussian_shot_attempt_density",
+    "label": "geglättete Shot-Attempt-Dichte",
+    "step_s": 15,
+    "sigma_s": 45,
+    "game_end_s": 3600,
+    "points": [
+      {
+        "time_s": 0,
+        "ebb": 0.352,
+        "opponent": 2.067
+      },
+      {
+        "time_s": 15,
+        "ebb": 0.6,
+        "opponent": 2.542
+      },
+      {
+        "time_s": 30,
+        "ebb": 0.919,
+        "opponent": 2.951
+      },
+      {
+        "time_s": 45,
+        "ebb": 1.314,
+        "opponent": 3.294
+      },
+      {
+        "time_s": 60,
+        "ebb": 1.821,
+        "opponent": 3.618
+      },
+      {
+        "time_s": 75,
+        "ebb": 2.481,
+        "opponent": 3.867
+      },
+      {
+        "time_s": 90,
+        "ebb": 3.333,
+        "opponent": 4.057
+      },
+      {
+        "time_s": 105,
+        "ebb": 4.32,
+        "opponent": 4.215
+      },
+      {
+        "time_s": 120,
+        "ebb": 5.306,
+        "opponent": 4.361
+      },
+      {
+        "time_s": 135,
+        "ebb": 6.075,
+        "opponent": 4.566
+      },
+      {
+        "time_s": 150,
+        "ebb": 6.415,
+        "opponent": 4.851
+      },
+      {
+        "time_s": 165,
+        "ebb": 6.223,
+        "opponent": 5.132
+      },
+      {
+        "time_s": 180,
+        "ebb": 5.551,
+        "opponent": 5.363
+      },
+      {
+        "time_s": 195,
+        "ebb": 4.579,
+        "opponent": 5.421
+      },
+      {
+        "time_s": 210,
+        "ebb": 3.516,
+        "opponent": 5.292
+      },
+      {
+        "time_s": 225,
+        "ebb": 2.545,
+        "opponent": 5.022
+      },
+      {
+        "time_s": 240,
+        "ebb": 1.742,
+        "opponent": 4.66
+      },
+      {
+        "time_s": 255,
+        "ebb": 1.13,
+        "opponent": 4.305
+      },
+      {
+        "time_s": 270,
+        "ebb": 0.692,
+        "opponent": 3.914
+      },
+      {
+        "time_s": 285,
+        "ebb": 0.373,
+        "opponent": 3.473
+      },
+      {
+        "time_s": 300,
+        "ebb": 0.208,
+        "opponent": 2.969
+      },
+      {
+        "time_s": 315,
+        "ebb": 0.153,
+        "opponent": 2.408
+      },
+      {
+        "time_s": 330,
+        "ebb": 0.166,
+        "opponent": 1.836
+      },
+      {
+        "time_s": 345,
+        "ebb": 0.274,
+        "opponent": 1.325
+      },
+      {
+        "time_s": 360,
+        "ebb": 0.446,
+        "opponent": 0.885
+      },
+      {
+        "time_s": 375,
+        "ebb": 0.733,
+        "opponent": 0.538
+      },
+      {
+        "time_s": 390,
+        "ebb": 1.13,
+        "opponent": 0.305
+      },
+      {
+        "time_s": 405,
+        "ebb": 1.601,
+        "opponent": 0.149
+      },
+      {
+        "time_s": 420,
+        "ebb": 2.168,
+        "opponent": 0.066
+      },
+      {
+        "time_s": 435,
+        "ebb": 2.835,
+        "opponent": 0.029
+      },
+      {
+        "time_s": 450,
+        "ebb": 3.597,
+        "opponent": 0.011
+      },
+      {
+        "time_s": 465,
+        "ebb": 4.442,
+        "opponent": 0.0
+      },
+      {
+        "time_s": 480,
+        "ebb": 5.228,
+        "opponent": 0.0
+      },
+      {
+        "time_s": 495,
+        "ebb": 5.823,
+        "opponent": 0.0
+      },
+      {
+        "time_s": 510,
+        "ebb": 6.092,
+        "opponent": 0.0
+      },
+      {
+        "time_s": 525,
+        "ebb": 5.98,
+        "opponent": 0.027
+      },
+      {
+        "time_s": 540,
+        "ebb": 5.538,
+        "opponent": 0.062
+      },
+      {
+        "time_s": 555,
+        "ebb": 4.891,
+        "opponent": 0.129
+      },
+      {
+        "time_s": 570,
+        "ebb": 4.169,
+        "opponent": 0.24
+      },
+      {
+        "time_s": 585,
+        "ebb": 3.465,
+        "opponent": 0.399
+      },
+      {
+        "time_s": 600,
+        "ebb": 2.796,
+        "opponent": 0.593
+      },
+      {
+        "time_s": 615,
+        "ebb": 2.159,
+        "opponent": 0.789
+      },
+      {
+        "time_s": 630,
+        "ebb": 1.578,
+        "opponent": 0.939
+      },
+      {
+        "time_s": 645,
+        "ebb": 1.052,
+        "opponent": 1.0
+      },
+      {
+        "time_s": 660,
+        "ebb": 0.634,
+        "opponent": 0.953
+      },
+      {
+        "time_s": 675,
+        "ebb": 0.364,
+        "opponent": 0.812
+      },
+      {
+        "time_s": 690,
+        "ebb": 0.187,
+        "opponent": 0.634
+      },
+      {
+        "time_s": 705,
+        "ebb": 0.086,
+        "opponent": 0.457
+      },
+      {
+        "time_s": 720,
+        "ebb": 0.036,
+        "opponent": 0.335
+      },
+      {
+        "time_s": 735,
+        "ebb": 0.0,
+        "opponent": 0.296
+      },
+      {
+        "time_s": 750,
+        "ebb": 0.0,
+        "opponent": 0.363
+      },
+      {
+        "time_s": 765,
+        "ebb": 0.0,
+        "opponent": 0.517
+      },
+      {
+        "time_s": 780,
+        "ebb": 0.0,
+        "opponent": 0.743
+      },
+      {
+        "time_s": 795,
+        "ebb": 0.0,
+        "opponent": 1.003
+      },
+      {
+        "time_s": 810,
+        "ebb": 0.018,
+        "opponent": 1.263
+      },
+      {
+        "time_s": 825,
+        "ebb": 0.043,
+        "opponent": 1.472
+      },
+      {
+        "time_s": 840,
+        "ebb": 0.093,
+        "opponent": 1.613
+      },
+      {
+        "time_s": 855,
+        "ebb": 0.183,
+        "opponent": 1.662
+      },
+      {
+        "time_s": 870,
+        "ebb": 0.332,
+        "opponent": 1.631
+      },
+      {
+        "time_s": 885,
+        "ebb": 0.532,
+        "opponent": 1.544
+      },
+      {
+        "time_s": 900,
+        "ebb": 0.773,
+        "opponent": 1.449
+      },
+      {
+        "time_s": 915,
+        "ebb": 1.025,
+        "opponent": 1.393
+      },
+      {
+        "time_s": 930,
+        "ebb": 1.272,
+        "opponent": 1.397
+      },
+      {
+        "time_s": 945,
+        "ebb": 1.471,
+        "opponent": 1.483
+      },
+      {
+        "time_s": 960,
+        "ebb": 1.624,
+        "opponent": 1.635
+      },
+      {
+        "time_s": 975,
+        "ebb": 1.735,
+        "opponent": 1.87
+      },
+      {
+        "time_s": 990,
+        "ebb": 1.813,
+        "opponent": 2.177
+      },
+      {
+        "time_s": 1005,
+        "ebb": 1.855,
+        "opponent": 2.509
+      },
+      {
+        "time_s": 1020,
+        "ebb": 1.847,
+        "opponent": 2.863
+      },
+      {
+        "time_s": 1035,
+        "ebb": 1.771,
+        "opponent": 3.29
+      },
+      {
+        "time_s": 1050,
+        "ebb": 1.616,
+        "opponent": 3.773
+      },
+      {
+        "time_s": 1065,
+        "ebb": 1.386,
+        "opponent": 4.335
+      },
+      {
+        "time_s": 1080,
+        "ebb": 1.099,
+        "opponent": 4.944
+      },
+      {
+        "time_s": 1095,
+        "ebb": 0.811,
+        "opponent": 5.525
+      },
+      {
+        "time_s": 1110,
+        "ebb": 0.546,
+        "opponent": 5.902
+      },
+      {
+        "time_s": 1125,
+        "ebb": 0.334,
+        "opponent": 5.971
+      },
+      {
+        "time_s": 1140,
+        "ebb": 0.175,
+        "opponent": 5.665
+      },
+      {
+        "time_s": 1155,
+        "ebb": 0.089,
+        "opponent": 5.043
+      },
+      {
+        "time_s": 1170,
+        "ebb": 0.04,
+        "opponent": 4.234
+      },
+      {
+        "time_s": 1185,
+        "ebb": 0.016,
+        "opponent": 3.412
+      },
+      {
+        "time_s": 1200,
+        "ebb": 0.022,
+        "opponent": 2.688
+      },
+      {
+        "time_s": 1215,
+        "ebb": 0.065,
+        "opponent": 2.086
+      },
+      {
+        "time_s": 1230,
+        "ebb": 0.143,
+        "opponent": 1.615
+      },
+      {
+        "time_s": 1245,
+        "ebb": 0.283,
+        "opponent": 1.258
+      },
+      {
+        "time_s": 1260,
+        "ebb": 0.505,
+        "opponent": 1.034
+      },
+      {
+        "time_s": 1275,
+        "ebb": 0.838,
+        "opponent": 0.963
+      },
+      {
+        "time_s": 1290,
+        "ebb": 1.241,
+        "opponent": 1.03
+      },
+      {
+        "time_s": 1305,
+        "ebb": 1.684,
+        "opponent": 1.186
+      },
+      {
+        "time_s": 1320,
+        "ebb": 2.111,
+        "opponent": 1.396
+      },
+      {
+        "time_s": 1335,
+        "ebb": 2.47,
+        "opponent": 1.584
+      },
+      {
+        "time_s": 1350,
+        "ebb": 2.73,
+        "opponent": 1.695
+      },
+      {
+        "time_s": 1365,
+        "ebb": 2.901,
+        "opponent": 1.691
+      },
+      {
+        "time_s": 1380,
+        "ebb": 2.959,
+        "opponent": 1.576
+      },
+      {
+        "time_s": 1395,
+        "ebb": 2.913,
+        "opponent": 1.358
+      },
+      {
+        "time_s": 1410,
+        "ebb": 2.763,
+        "opponent": 1.078
+      },
+      {
+        "time_s": 1425,
+        "ebb": 2.527,
+        "opponent": 0.784
+      },
+      {
+        "time_s": 1440,
+        "ebb": 2.246,
+        "opponent": 0.52
+      },
+      {
+        "time_s": 1455,
+        "ebb": 1.962,
+        "opponent": 0.313
+      },
+      {
+        "time_s": 1470,
+        "ebb": 1.695,
+        "opponent": 0.161
+      },
+      {
+        "time_s": 1485,
+        "ebb": 1.448,
+        "opponent": 0.081
+      },
+      {
+        "time_s": 1500,
+        "ebb": 1.217,
+        "opponent": 0.051
+      },
+      {
+        "time_s": 1515,
+        "ebb": 0.972,
+        "opponent": 0.053
+      },
+      {
+        "time_s": 1530,
+        "ebb": 0.723,
+        "opponent": 0.085
+      },
+      {
+        "time_s": 1545,
+        "ebb": 0.487,
+        "opponent": 0.168
+      },
+      {
+        "time_s": 1560,
+        "ebb": 0.332,
+        "opponent": 0.298
+      },
+      {
+        "time_s": 1575,
+        "ebb": 0.266,
+        "opponent": 0.474
+      },
+      {
+        "time_s": 1590,
+        "ebb": 0.289,
+        "opponent": 0.674
+      },
+      {
+        "time_s": 1605,
+        "ebb": 0.424,
+        "opponent": 0.857
+      },
+      {
+        "time_s": 1620,
+        "ebb": 0.67,
+        "opponent": 0.976
+      },
+      {
+        "time_s": 1635,
+        "ebb": 0.999,
+        "opponent": 0.994
+      },
+      {
+        "time_s": 1650,
+        "ebb": 1.375,
+        "opponent": 0.906
+      },
+      {
+        "time_s": 1665,
+        "ebb": 1.743,
+        "opponent": 0.739
+      },
+      {
+        "time_s": 1680,
+        "ebb": 1.996,
+        "opponent": 0.551
+      },
+      {
+        "time_s": 1695,
+        "ebb": 2.116,
+        "opponent": 0.383
+      },
+      {
+        "time_s": 1710,
+        "ebb": 2.122,
+        "opponent": 0.275
+      },
+      {
+        "time_s": 1725,
+        "ebb": 2.081,
+        "opponent": 0.249
+      },
+      {
+        "time_s": 1740,
+        "ebb": 2.079,
+        "opponent": 0.309
+      },
+      {
+        "time_s": 1755,
+        "ebb": 2.139,
+        "opponent": 0.461
+      },
+      {
+        "time_s": 1770,
+        "ebb": 2.244,
+        "opponent": 0.66
+      },
+      {
+        "time_s": 1785,
+        "ebb": 2.331,
+        "opponent": 0.901
+      },
+      {
+        "time_s": 1800,
+        "ebb": 2.339,
+        "opponent": 1.145
+      },
+      {
+        "time_s": 1815,
+        "ebb": 2.251,
+        "opponent": 1.351
+      },
+      {
+        "time_s": 1830,
+        "ebb": 2.143,
+        "opponent": 1.519
+      },
+      {
+        "time_s": 1845,
+        "ebb": 2.02,
+        "opponent": 1.658
+      },
+      {
+        "time_s": 1860,
+        "ebb": 1.975,
+        "opponent": 1.78
+      },
+      {
+        "time_s": 1875,
+        "ebb": 2.04,
+        "opponent": 1.879
+      },
+      {
+        "time_s": 1890,
+        "ebb": 2.232,
+        "opponent": 1.931
+      },
+      {
+        "time_s": 1905,
+        "ebb": 2.53,
+        "opponent": 1.928
+      },
+      {
+        "time_s": 1920,
+        "ebb": 2.866,
+        "opponent": 1.829
+      },
+      {
+        "time_s": 1935,
+        "ebb": 3.131,
+        "opponent": 1.659
+      },
+      {
+        "time_s": 1950,
+        "ebb": 3.237,
+        "opponent": 1.451
+      },
+      {
+        "time_s": 1965,
+        "ebb": 3.104,
+        "opponent": 1.307
+      },
+      {
+        "time_s": 1980,
+        "ebb": 2.763,
+        "opponent": 1.232
+      },
+      {
+        "time_s": 1995,
+        "ebb": 2.319,
+        "opponent": 1.25
+      },
+      {
+        "time_s": 2010,
+        "ebb": 1.889,
+        "opponent": 1.339
+      },
+      {
+        "time_s": 2025,
+        "ebb": 1.576,
+        "opponent": 1.448
+      },
+      {
+        "time_s": 2040,
+        "ebb": 1.372,
+        "opponent": 1.55
+      },
+      {
+        "time_s": 2055,
+        "ebb": 1.269,
+        "opponent": 1.593
+      },
+      {
+        "time_s": 2070,
+        "ebb": 1.183,
+        "opponent": 1.553
+      },
+      {
+        "time_s": 2085,
+        "ebb": 1.12,
+        "opponent": 1.442
+      },
+      {
+        "time_s": 2100,
+        "ebb": 1.154,
+        "opponent": 1.254
+      },
+      {
+        "time_s": 2115,
+        "ebb": 1.336,
+        "opponent": 1.011
+      },
+      {
+        "time_s": 2130,
+        "ebb": 1.716,
+        "opponent": 0.75
+      },
+      {
+        "time_s": 2145,
+        "ebb": 2.306,
+        "opponent": 0.508
+      },
+      {
+        "time_s": 2160,
+        "ebb": 3.036,
+        "opponent": 0.312
+      },
+      {
+        "time_s": 2175,
+        "ebb": 3.765,
+        "opponent": 0.168
+      },
+      {
+        "time_s": 2190,
+        "ebb": 4.322,
+        "opponent": 0.085
+      },
+      {
+        "time_s": 2205,
+        "ebb": 4.55,
+        "opponent": 0.038
+      },
+      {
+        "time_s": 2220,
+        "ebb": 4.393,
+        "opponent": 0.015
+      },
+      {
+        "time_s": 2235,
+        "ebb": 3.869,
+        "opponent": 0.0
+      },
+      {
+        "time_s": 2250,
+        "ebb": 3.102,
+        "opponent": 0.021
+      },
+      {
+        "time_s": 2265,
+        "ebb": 2.273,
+        "opponent": 0.05
+      },
+      {
+        "time_s": 2280,
+        "ebb": 1.524,
+        "opponent": 0.121
+      },
+      {
+        "time_s": 2295,
+        "ebb": 0.964,
+        "opponent": 0.26
+      },
+      {
+        "time_s": 2310,
+        "ebb": 0.629,
+        "opponent": 0.477
+      },
+      {
+        "time_s": 2325,
+        "ebb": 0.489,
+        "opponent": 0.813
+      },
+      {
+        "time_s": 2340,
+        "ebb": 0.534,
+        "opponent": 1.269
+      },
+      {
+        "time_s": 2355,
+        "ebb": 0.664,
+        "opponent": 1.832
+      },
+      {
+        "time_s": 2370,
+        "ebb": 0.824,
+        "opponent": 2.453
+      },
+      {
+        "time_s": 2385,
+        "ebb": 0.959,
+        "opponent": 3.077
+      },
+      {
+        "time_s": 2400,
+        "ebb": 0.999,
+        "opponent": 3.638
+      },
+      {
+        "time_s": 2415,
+        "ebb": 0.931,
+        "opponent": 4.076
+      },
+      {
+        "time_s": 2430,
+        "ebb": 0.777,
+        "opponent": 4.34
+      },
+      {
+        "time_s": 2445,
+        "ebb": 0.58,
+        "opponent": 4.392
+      },
+      {
+        "time_s": 2460,
+        "ebb": 0.387,
+        "opponent": 4.224
+      },
+      {
+        "time_s": 2475,
+        "ebb": 0.231,
+        "opponent": 3.865
+      },
+      {
+        "time_s": 2490,
+        "ebb": 0.124,
+        "opponent": 3.376
+      },
+      {
+        "time_s": 2505,
+        "ebb": 0.059,
+        "opponent": 2.869
+      },
+      {
+        "time_s": 2520,
+        "ebb": 0.025,
+        "opponent": 2.517
+      },
+      {
+        "time_s": 2535,
+        "ebb": 0.0,
+        "opponent": 2.446
+      },
+      {
+        "time_s": 2550,
+        "ebb": 0.0,
+        "opponent": 2.702
+      },
+      {
+        "time_s": 2565,
+        "ebb": 0.0,
+        "opponent": 3.25
+      },
+      {
+        "time_s": 2580,
+        "ebb": 0.0,
+        "opponent": 3.919
+      },
+      {
+        "time_s": 2595,
+        "ebb": 0.0,
+        "opponent": 4.464
+      },
+      {
+        "time_s": 2610,
+        "ebb": 0.0,
+        "opponent": 4.696
+      },
+      {
+        "time_s": 2625,
+        "ebb": 0.0,
+        "opponent": 4.529
+      },
+      {
+        "time_s": 2640,
+        "ebb": 0.0,
+        "opponent": 4.013
+      },
+      {
+        "time_s": 2655,
+        "ebb": 0.0,
+        "opponent": 3.276
+      },
+      {
+        "time_s": 2670,
+        "ebb": 0.0,
+        "opponent": 2.528
+      },
+      {
+        "time_s": 2685,
+        "ebb": 0.0,
+        "opponent": 1.947
+      },
+      {
+        "time_s": 2700,
+        "ebb": 0.0,
+        "opponent": 1.63
+      },
+      {
+        "time_s": 2715,
+        "ebb": 0.0,
+        "opponent": 1.582
+      },
+      {
+        "time_s": 2730,
+        "ebb": 0.0,
+        "opponent": 1.72
+      },
+      {
+        "time_s": 2745,
+        "ebb": 0.0,
+        "opponent": 1.89
+      },
+      {
+        "time_s": 2760,
+        "ebb": 0.0,
+        "opponent": 2.007
+      },
+      {
+        "time_s": 2775,
+        "ebb": 0.0,
+        "opponent": 1.956
+      },
+      {
+        "time_s": 2790,
+        "ebb": 0.0,
+        "opponent": 1.715
+      },
+      {
+        "time_s": 2805,
+        "ebb": 0.0,
+        "opponent": 1.374
+      },
+      {
+        "time_s": 2820,
+        "ebb": 0.0,
+        "opponent": 1.002
+      },
+      {
+        "time_s": 2835,
+        "ebb": 0.0,
+        "opponent": 0.698
+      },
+      {
+        "time_s": 2850,
+        "ebb": 0.0,
+        "opponent": 0.517
+      },
+      {
+        "time_s": 2865,
+        "ebb": 0.013,
+        "opponent": 0.477
+      },
+      {
+        "time_s": 2880,
+        "ebb": 0.032,
+        "opponent": 0.556
+      },
+      {
+        "time_s": 2895,
+        "ebb": 0.073,
+        "opponent": 0.707
+      },
+      {
+        "time_s": 2910,
+        "ebb": 0.16,
+        "opponent": 0.857
+      },
+      {
+        "time_s": 2925,
+        "ebb": 0.343,
+        "opponent": 0.976
+      },
+      {
+        "time_s": 2940,
+        "ebb": 0.611,
+        "opponent": 0.994
+      },
+      {
+        "time_s": 2955,
+        "ebb": 0.998,
+        "opponent": 0.906
+      },
+      {
+        "time_s": 2970,
+        "ebb": 1.506,
+        "opponent": 0.739
+      },
+      {
+        "time_s": 2985,
+        "ebb": 2.112,
+        "opponent": 0.539
+      },
+      {
+        "time_s": 3000,
+        "ebb": 2.782,
+        "opponent": 0.352
+      },
+      {
+        "time_s": 3015,
+        "ebb": 3.397,
+        "opponent": 0.219
+      },
+      {
+        "time_s": 3030,
+        "ebb": 3.892,
+        "opponent": 0.14
+      },
+      {
+        "time_s": 3045,
+        "ebb": 4.218,
+        "opponent": 0.123
+      },
+      {
+        "time_s": 3060,
+        "ebb": 4.372,
+        "opponent": 0.169
+      },
+      {
+        "time_s": 3075,
+        "ebb": 4.392,
+        "opponent": 0.268
+      },
+      {
+        "time_s": 3090,
+        "ebb": 4.325,
+        "opponent": 0.436
+      },
+      {
+        "time_s": 3105,
+        "ebb": 4.18,
+        "opponent": 0.633
+      },
+      {
+        "time_s": 3120,
+        "ebb": 3.93,
+        "opponent": 0.824
+      },
+      {
+        "time_s": 3135,
+        "ebb": 3.562,
+        "opponent": 0.959
+      },
+      {
+        "time_s": 3150,
+        "ebb": 3.142,
+        "opponent": 0.999
+      },
+      {
+        "time_s": 3165,
+        "ebb": 2.739,
+        "opponent": 0.931
+      },
+      {
+        "time_s": 3180,
+        "ebb": 2.434,
+        "opponent": 0.777
+      },
+      {
+        "time_s": 3195,
+        "ebb": 2.302,
+        "opponent": 0.58
+      },
+      {
+        "time_s": 3210,
+        "ebb": 2.293,
+        "opponent": 0.387
+      },
+      {
+        "time_s": 3225,
+        "ebb": 2.307,
+        "opponent": 0.257
+      },
+      {
+        "time_s": 3240,
+        "ebb": 2.292,
+        "opponent": 0.183
+      },
+      {
+        "time_s": 3255,
+        "ebb": 2.203,
+        "opponent": 0.183
+      },
+      {
+        "time_s": 3270,
+        "ebb": 2.066,
+        "opponent": 0.257
+      },
+      {
+        "time_s": 3285,
+        "ebb": 1.978,
+        "opponent": 0.387
+      },
+      {
+        "time_s": 3300,
+        "ebb": 1.977,
+        "opponent": 0.58
+      },
+      {
+        "time_s": 3315,
+        "ebb": 2.031,
+        "opponent": 0.798
+      },
+      {
+        "time_s": 3330,
+        "ebb": 2.174,
+        "opponent": 0.982
+      },
+      {
+        "time_s": 3345,
+        "ebb": 2.378,
+        "opponent": 1.129
+      },
+      {
+        "time_s": 3360,
+        "ebb": 2.683,
+        "opponent": 1.218
+      },
+      {
+        "time_s": 3375,
+        "ebb": 3.097,
+        "opponent": 1.289
+      },
+      {
+        "time_s": 3390,
+        "ebb": 3.726,
+        "opponent": 1.387
+      },
+      {
+        "time_s": 3405,
+        "ebb": 4.502,
+        "opponent": 1.538
+      },
+      {
+        "time_s": 3420,
+        "ebb": 5.395,
+        "opponent": 1.727
+      },
+      {
+        "time_s": 3435,
+        "ebb": 6.23,
+        "opponent": 1.893
+      },
+      {
+        "time_s": 3450,
+        "ebb": 6.882,
+        "opponent": 1.963
+      },
+      {
+        "time_s": 3465,
+        "ebb": 7.257,
+        "opponent": 1.885
+      },
+      {
+        "time_s": 3480,
+        "ebb": 7.339,
+        "opponent": 1.657
+      },
+      {
+        "time_s": 3495,
+        "ebb": 7.169,
+        "opponent": 1.32
+      },
+      {
+        "time_s": 3510,
+        "ebb": 6.825,
+        "opponent": 0.959
+      },
+      {
+        "time_s": 3525,
+        "ebb": 6.383,
+        "opponent": 0.629
+      },
+      {
+        "time_s": 3540,
+        "ebb": 5.854,
+        "opponent": 0.373
+      },
+      {
+        "time_s": 3555,
+        "ebb": 5.233,
+        "opponent": 0.199
+      },
+      {
+        "time_s": 3570,
+        "ebb": 4.501,
+        "opponent": 0.096
+      },
+      {
+        "time_s": 3585,
+        "ebb": 3.716,
+        "opponent": 0.036
+      },
+      {
+        "time_s": 3600,
+        "ebb": 2.893,
+        "opponent": 0.014
+      }
+    ],
+    "powerplays": [
+      {
+        "team_id": 3,
+        "start_s": 51,
+        "end_s": 57,
+        "side": "ebb"
+      },
+      {
+        "team_id": 3,
+        "start_s": 411,
+        "end_s": 416,
+        "side": "ebb"
+      },
+      {
+        "team_id": 3,
+        "start_s": 478,
+        "end_s": 599,
+        "side": "ebb"
+      },
+      {
+        "team_id": 12,
+        "start_s": 617,
+        "end_s": 737,
+        "side": "opponent"
+      },
+      {
+        "team_id": 12,
+        "start_s": 738,
+        "end_s": 809,
+        "side": "opponent"
+      },
+      {
+        "team_id": 3,
+        "start_s": 917,
+        "end_s": 930,
+        "side": "ebb"
+      },
+      {
+        "team_id": 3,
+        "start_s": 1754,
+        "end_s": 1874,
+        "side": "ebb"
+      },
+      {
+        "team_id": 12,
+        "start_s": 2563,
+        "end_s": 2568,
+        "side": "opponent"
+      },
+      {
+        "team_id": 12,
+        "start_s": 2861,
+        "end_s": 2912,
+        "side": "opponent"
+      },
+      {
+        "team_id": 12,
+        "start_s": 2915,
+        "end_s": 2935,
+        "side": "opponent"
+      },
+      {
+        "team_id": 3,
+        "start_s": 2956,
+        "end_s": 3060,
+        "side": "ebb"
+      },
+      {
+        "team_id": 3,
+        "start_s": 3063,
+        "end_s": 3076,
+        "side": "ebb"
+      }
+    ],
+    "goals": [
+      {
+        "time_s": 219,
+        "team_id": 3,
+        "side": "ebb",
+        "team_abbr": "EBB",
+        "score": "1:0",
+        "balance": "EQ",
+        "scorer": "Ty Ronning"
+      },
+      {
+        "time_s": 232,
+        "team_id": 12,
+        "side": "opponent",
+        "team_abbr": "RBM",
+        "score": "1:1",
+        "balance": "EQ",
+        "scorer": "Ryan Murphy"
+      },
+      {
+        "time_s": 1058,
+        "team_id": 3,
+        "side": "ebb",
+        "team_abbr": "EBB",
+        "score": "2:1",
+        "balance": "EQ",
+        "scorer": "Liam Kirk"
+      },
+      {
+        "time_s": 1218,
+        "team_id": 12,
+        "side": "opponent",
+        "team_abbr": "RBM",
+        "score": "2:2",
+        "balance": "EQ",
+        "scorer": "Taro Hirose"
+      },
+      {
+        "time_s": 2936,
+        "team_id": 12,
+        "side": "opponent",
+        "team_abbr": "RBM",
+        "score": "2:3",
+        "balance": "PP1",
+        "scorer": "Elis Hede"
+      },
+      {
+        "time_s": 3441,
+        "team_id": 12,
+        "side": "opponent",
+        "team_abbr": "RBM",
+        "score": "2:4",
+        "balance": "EQ",
+        "scorer": "Yasin Ehliz"
+      },
+      {
+        "time_s": 3599,
+        "team_id": 3,
+        "side": "ebb",
+        "team_abbr": "EBB",
+        "score": "3:4",
+        "balance": "EQ",
+        "scorer": "Liam Kirk"
+      }
+    ]
+  },
   "shot_zones": [
     {
       "zone": "SLOT",
