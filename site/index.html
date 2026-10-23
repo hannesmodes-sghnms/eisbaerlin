@@ -507,6 +507,7 @@ tr:last-child td {
 /* Game flow */
 
 .game-flow-wrap {
+  position: relative;
   width: 100%;
   min-width: 0;
   overflow-x: auto;
@@ -547,6 +548,55 @@ tr:last-child td {
 .flow-swatch.opp { background: var(--opp); }
 .flow-swatch.pp-ebb { height: 12px; background: rgba(78,161,255,.22); }
 .flow-swatch.pp-opp { height: 12px; background: rgba(255,122,133,.22); }
+
+.game-flow-tooltip {
+  position: fixed;
+  z-index: 1100;
+  display: none;
+  width: min(330px, calc(100vw - 24px));
+  padding: 12px 13px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(9, 22, 39, .97);
+  box-shadow: 0 14px 40px rgba(0,0,0,.42);
+  pointer-events: none;
+  font-size: .8rem;
+}
+
+.game-flow-tooltip.open {
+  display: block;
+}
+
+.game-flow-tooltip-time {
+  font-weight: 850;
+  margin-bottom: 8px;
+}
+
+.game-flow-tooltip-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto auto;
+  gap: 5px 10px;
+  align-items: baseline;
+}
+
+.game-flow-tooltip-grid .head {
+  color: var(--muted);
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.game-flow-tooltip-grid .team {
+  font-weight: 800;
+}
+
+.game-flow-tooltip-note {
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  line-height: 1.35;
+}
 
 .game-flow-goal {
   cursor: pointer;
@@ -968,8 +1018,8 @@ tr:last-child td {
 
   <section class="panel section">
     <h2>Game Flow · Shot Momentum</h2>
-    <p class="muted" style="margin-bottom:10px">EBB oberhalb, Gegner unterhalb der Nulllinie. Die Kurve zeigt eine geglättete Dichte aller DEL-Shot-Attempts (45-Sekunden-Kernel) – kein xG-Modell. Hinterlegte Flächen markieren rekonstruierte Powerplays, Punkte markieren Tore.</p>
-    <div class="game-flow-wrap"><svg id="gameFlow" viewBox="0 0 1200 400" role="img" aria-label="Shot Momentum im Spielverlauf"></svg></div>
+    <p class="muted" style="margin-bottom:10px">EBB oberhalb, Gegner unterhalb der Nulllinie. Die Kurve zeigt eine geglättete Dichte aller DEL-Shot-Attempts (45-Sekunden-Kernel) – kein xG-Modell. Mouseover zeigt Kurvenwert, beitragende Versuche/SOG und die Rohwerte der letzten 2:00 Minuten. Hinterlegte Flächen markieren rekonstruierte Powerplays, Punkte markieren Tore.</p>
+    <div class="game-flow-wrap"><svg id="gameFlow" viewBox="0 0 1200 400" role="img" aria-label="Shot Momentum im Spielverlauf"></svg><div id="gameFlowTooltip" class="game-flow-tooltip" role="status" aria-live="polite"></div></div>
     <div class="flow-legend"><span class="flow-key"><i class="flow-swatch ebb"></i>EBB Shot Momentum</span><span class="flow-key"><i class="flow-swatch opp"></i>Gegner Shot Momentum</span><span class="flow-key"><i class="flow-swatch pp-ebb"></i>EBB Powerplay</span><span class="flow-key"><i class="flow-swatch pp-opp"></i>Gegner Powerplay</span></div>
   </section>
 
@@ -1070,7 +1120,7 @@ tr:last-child td {
 
   function closeGoalOverlay(){const overlay=$('#goalOverlay');if(!overlay)return;overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true')}
   function openGoalOverlay(goal){const overlay=$('#goalOverlay');if(!overlay)return;const scorer=goal.scorer_jersey?`#${goal.scorer_jersey} ${goal.scorer||'–'}`:(goal.scorer||'–');$('#goalOverlayTeam').textContent=`${goal.team_abbr||'TOR'} · ${goal.balance||'–'}`;$('#goalOverlayTitle').textContent=scorer;$('#goalOverlayMeta').innerHTML=`<span class="goal-overlay-chip">${esc(time(goal.time_s))}</span><span class="goal-overlay-chip">Spielstand ${esc(goal.score||'–')}</span>`;const assists=goal.assists||[];$('#goalOverlayAssists').innerHTML=assists.length?assists.map(a=>`<div class="goal-overlay-assist"><b>A${esc(a.order||'')}</b><span>${a.jersey?`#${esc(a.jersey)} `:''}${esc(a.name||'–')}</span></div>`).join(''):'<div class="muted">Keine Assists.</div>';overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');$('#goalOverlayClose').focus()}
-  function renderGameFlow(){const svg=$('#gameFlow'),flow=state.game?.game_flow;if(!svg||!flow){return}const NS='http://www.w3.org/2000/svg';svg.innerHTML='';const add=(tag,attrs,parent=svg)=>{const n=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,v));parent.appendChild(n);return n};const W=1200,H=400,L=54,R=18,T=24,B=42,PW=W-L-R,PH=H-T-B,mid=T+PH/2,end=Math.max(1,Number(flow.game_end_s)||3600),pts=flow.points||[],maxV=Math.max(1,...pts.flatMap(p=>[Number(p.ebb)||0,Number(p.opponent)||0]));const x=t=>L+(Math.max(0,Math.min(end,Number(t)||0))/end)*PW,yE=v=>mid-(Number(v)||0)/maxV*(PH*.43),yO=v=>mid+(Number(v)||0)/maxV*(PH*.43);
+  function renderGameFlow(){const svg=$('#gameFlow'),flow=state.game?.game_flow,tip=$('#gameFlowTooltip');if(!svg||!flow){return}const NS='http://www.w3.org/2000/svg';svg.innerHTML='';if(tip)tip.classList.remove('open');const add=(tag,attrs,parent=svg)=>{const n=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,v));parent.appendChild(n);return n};const W=1200,H=400,L=54,R=18,T=24,B=42,PW=W-L-R,PH=H-T-B,mid=T+PH/2,end=Math.max(1,Number(flow.game_end_s)||3600),pts=flow.points||[],maxV=Math.max(1,...pts.flatMap(p=>[Number(p.ebb)||0,Number(p.opponent)||0]));const x=t=>L+(Math.max(0,Math.min(end,Number(t)||0))/end)*PW,yE=v=>mid-(Number(v)||0)/maxV*(PH*.43),yO=v=>mid+(Number(v)||0)/maxV*(PH*.43);
     add('rect',{x:L,y:T,width:PW,height:PH,rx:8,fill:'#091627',stroke:'#243650'});
     (flow.powerplays||[]).forEach(pp=>{const xx=x(pp.start_s),ww=Math.max(1,x(pp.end_s)-xx);add('rect',{x:xx,y:T,width:ww,height:PH,fill:pp.side==='ebb'?'#4ea1ff':'#ff7a85',opacity:.14});});
     [1200,2400,3600].filter(t=>t<end).forEach(t=>{const xx=x(t);add('line',{x1:xx,y1:T,x2:xx,y2:T+PH,stroke:'#58708f','stroke-width':1,'stroke-dasharray':'5 5',opacity:.75});});
@@ -1079,7 +1129,14 @@ tr:last-child td {
     const line=(key,upper)=>pts.map((p,i)=>`${i?'L':'M'} ${x(p.time_s)} ${upper?yE(p[key]):yO(p[key])}`).join(' ');
     add('path',{d:area('ebb',true),fill:'#4ea1ff',opacity:.22});add('path',{d:area('opponent',false),fill:'#ff7a85',opacity:.22});
     add('path',{d:line('ebb',true),fill:'none',stroke:'#4ea1ff','stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round'});add('path',{d:line('opponent',false),fill:'none',stroke:'#ff7a85','stroke-width':3,'stroke-linejoin':'round','stroke-linecap':'round'});
-    const nearest=(time,key)=>{if(!pts.length)return 0;let best=pts[0];for(const p of pts)if(Math.abs(Number(p.time_s)-time)<Math.abs(Number(best.time_s)-time))best=p;return Number(best[key])||0};
+    const nearest=(at,key)=>{if(!pts.length)return 0;let best=pts[0];for(const p of pts)if(Math.abs(Number(p.time_s)-at)<Math.abs(Number(best.time_s)-at))best=p;return Number(best[key])||0};
+    const hoverLine=add('line',{x1:L,y1:T,x2:L,y2:T+PH,stroke:'#d8e3f2','stroke-width':1,'stroke-dasharray':'4 4',opacity:0,'pointer-events':'none'});
+    const hoverE=add('circle',{cx:L,cy:mid,r:5,fill:'#4ea1ff',stroke:'#07111f','stroke-width':2,opacity:0,'pointer-events':'none'});
+    const hoverO=add('circle',{cx:L,cy:mid,r:5,fill:'#ff7a85',stroke:'#07111f','stroke-width':2,opacity:0,'pointer-events':'none'});
+    const shots=state.game?.shots||[],focusId=Number(state.game?.focus_team?.team_id),oppId=Number(state.game?.opponent?.team_id),support=Math.max(1,Number(flow.sigma_s)||45)*3,trailing=120;
+    const shotCounts=(teamId,from,to)=>{const rows=shots.filter(sh=>Number(sh.team_id)===teamId&&Number(sh.game_time_s)>=from&&Number(sh.game_time_s)<=to);return{attempts:rows.length,sog:rows.filter(sh=>sh.result==='on_goal'||sh.result==='goal').length,goals:rows.filter(sh=>sh.result==='goal').length}};
+    const moveTip=e=>{if(!pts.length||!tip)return;const rect=svg.getBoundingClientRect(),sx=(e.clientX-rect.left)*(W/rect.width);if(sx<L||sx>L+PW){tip.classList.remove('open');hoverLine.setAttribute('opacity',0);hoverE.setAttribute('opacity',0);hoverO.setAttribute('opacity',0);return}const rawT=(sx-L)/PW*end,step=Math.max(1,Number(flow.step_s)||15),t=Math.max(0,Math.min(end,Math.round(rawT/step)*step)),px=x(t),ebb=nearest(t,'ebb'),opp=nearest(t,'opponent'),ebbSupport=shotCounts(focusId,Math.max(0,t-support),Math.min(end,t+support)),oppSupport=shotCounts(oppId,Math.max(0,t-support),Math.min(end,t+support)),ebbLast=shotCounts(focusId,Math.max(0,t-trailing),t),oppLast=shotCounts(oppId,Math.max(0,t-trailing),t),oppLabel=state.game?.opponent?.abbr||'Gegner';hoverLine.setAttribute('x1',px);hoverLine.setAttribute('x2',px);hoverLine.setAttribute('opacity',.78);hoverE.setAttribute('cx',px);hoverE.setAttribute('cy',yE(ebb));hoverE.setAttribute('opacity',1);hoverO.setAttribute('cx',px);hoverO.setAttribute('cy',yO(opp));hoverO.setAttribute('opacity',1);tip.innerHTML=`<div class="game-flow-tooltip-time">${esc(time(t))}</div><div class="game-flow-tooltip-grid"><span class="head">Team</span><span class="head">±${esc(time(support))}</span><span class="head">letzte 2:00</span><span class="team ebb">EBB</span><span>${ebbSupport.attempts} Vers. · ${ebbSupport.sog} SOG</span><span>${ebbLast.attempts} · ${ebbLast.sog} SOG</span><span class="team opp">${esc(oppLabel)}</span><span>${oppSupport.attempts} Vers. · ${oppSupport.sog} SOG</span><span>${oppLast.attempts} · ${oppLast.sog} SOG</span></div><div class="game-flow-tooltip-note">Kurvenwert: EBB <b>${ebb.toFixed(2)}</b> · ${esc(oppLabel)} <b>${opp.toFixed(2)}</b>. Für die Kurve zählen Versuche im ±${esc(time(support))}-Fenster; je näher am Cursor, desto stärker die Gewichtung (σ ${esc(time(flow.sigma_s||45))}).</div>`;tip.classList.add('open');const margin=12,tw=tip.offsetWidth,th=tip.offsetHeight;let left=e.clientX+14,top=e.clientY+14;if(left+tw>window.innerWidth-margin)left=e.clientX-tw-14;if(top+th>window.innerHeight-margin)top=e.clientY-th-14;tip.style.left=`${Math.max(margin,left)}px`;tip.style.top=`${Math.max(margin,top)}px`};
+    svg.onpointermove=moveTip;svg.onpointerleave=()=>{if(tip)tip.classList.remove('open');hoverLine.setAttribute('opacity',0);hoverE.setAttribute('opacity',0);hoverO.setAttribute('opacity',0)};
     (flow.goals||[]).forEach(g=>{const upper=g.side==='ebb',cy=upper?yE(nearest(g.time_s,'ebb')):yO(nearest(g.time_s,'opponent')),cx=x(g.time_s);const label=`${time(g.time_s)} · ${g.team_abbr||''} TOR · ${g.scorer||''} · ${g.score||''} · ${g.balance||''}`;const c=add('circle',{cx,cy,r:8,fill:'#07111f',stroke:upper?'#4ea1ff':'#ff7a85','stroke-width':3,'class':'game-flow-goal',tabindex:0,role:'button','aria-label':label});const title=document.createElementNS(NS,'title');title.textContent=label;c.appendChild(title);c.addEventListener('click',()=>openGoalOverlay(g));c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGoalOverlay(g)}});});
     const ticks=end>3600?[0,1200,2400,3600,end]:[0,1200,2400,3600];ticks.filter((t,i,a)=>t<=end&&a.indexOf(t)===i).forEach(t=>{const xx=x(t);add('line',{x1:xx,y1:T+PH,x2:xx,y2:T+PH+6,stroke:'#9fb1ca'});const tx=add('text',{x:xx,y:H-14,'text-anchor':t===0?'start':t===end?'end':'middle',fill:'#9fb1ca','font-size':13});tx.textContent=`${Math.floor(t/60)}'`;});
     const top=add('text',{x:L+6,y:T+17,fill:'#4ea1ff','font-size':13,'font-weight':700});top.textContent='EBB';const bot=add('text',{x:L+6,y:T+PH-8,fill:'#ff7a85','font-size':13,'font-weight':700});bot.textContent=state.game?.opponent?.abbr||'Gegner';
