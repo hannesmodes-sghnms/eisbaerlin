@@ -12637,7 +12637,20 @@
         "team_abbr": "EBB",
         "score": "0:1",
         "balance": "EQ",
-        "scorer": "Brandon Davidson"
+        "scorer": "Brandon Davidson",
+        "scorer_jersey": 44,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Manuel Wiederer",
+            "jersey": 21
+          },
+          {
+            "order": 2,
+            "name": "Liam Kirk",
+            "jersey": 94
+          }
+        ]
       },
       {
         "time_s": 2151,
@@ -12646,7 +12659,20 @@
         "team_abbr": "EBB",
         "score": "0:2",
         "balance": "EQ",
-        "scorer": "Liam Kirk"
+        "scorer": "Liam Kirk",
+        "scorer_jersey": 94,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Ty Ronning",
+            "jersey": 9
+          },
+          {
+            "order": 2,
+            "name": "Eric Mik",
+            "jersey": 12
+          }
+        ]
       }
     ]
   },

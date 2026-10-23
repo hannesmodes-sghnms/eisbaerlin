@@ -9577,7 +9577,20 @@
         "team_abbr": "EBB",
         "score": "0:1",
         "balance": "PP1",
-        "scorer": "Ty Ronning"
+        "scorer": "Ty Ronning",
+        "scorer_jersey": 9,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Frederik Tiffels",
+            "jersey": 95
+          },
+          {
+            "order": 2,
+            "name": "Liam Kirk",
+            "jersey": 94
+          }
+        ]
       },
       {
         "time_s": 459,
@@ -9586,7 +9599,15 @@
         "team_abbr": "KEC",
         "score": "1:1",
         "balance": "EQ",
-        "scorer": "Marcel Noebels"
+        "scorer": "Marcel Noebels",
+        "scorer_jersey": 92,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Patrick Russell",
+            "jersey": 63
+          }
+        ]
       },
       {
         "time_s": 498,
@@ -9595,7 +9616,20 @@
         "team_abbr": "EBB",
         "score": "1:2",
         "balance": "EQ",
-        "scorer": "Liam Kirk"
+        "scorer": "Liam Kirk",
+        "scorer_jersey": 94,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Ty Ronning",
+            "jersey": 9
+          },
+          {
+            "order": 2,
+            "name": "Jonas Müller",
+            "jersey": 18
+          }
+        ]
       },
       {
         "time_s": 1163,
@@ -9604,7 +9638,20 @@
         "team_abbr": "KEC",
         "score": "2:2",
         "balance": "EQ",
-        "scorer": "Brady Austin"
+        "scorer": "Brady Austin",
+        "scorer_jersey": 57,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Robin Press",
+            "jersey": 94
+          },
+          {
+            "order": 2,
+            "name": "Gregor MacLeod",
+            "jersey": 89
+          }
+        ]
       },
       {
         "time_s": 1246,
@@ -9613,7 +9660,20 @@
         "team_abbr": "KEC",
         "score": "3:2",
         "balance": "PP1",
-        "scorer": "Maximilian Kammerer"
+        "scorer": "Maximilian Kammerer",
+        "scorer_jersey": 9,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Tim Fleischer",
+            "jersey": 29
+          },
+          {
+            "order": 2,
+            "name": "Markus Ljungh",
+            "jersey": 61
+          }
+        ]
       },
       {
         "time_s": 1727,
@@ -9622,7 +9682,20 @@
         "team_abbr": "EBB",
         "score": "3:3",
         "balance": "PP1",
-        "scorer": "Markus Vikingstad"
+        "scorer": "Markus Vikingstad",
+        "scorer_jersey": 37,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Leonhard Pföderl",
+            "jersey": 93
+          },
+          {
+            "order": 2,
+            "name": "Kai Wissmann",
+            "jersey": 6
+          }
+        ]
       },
       {
         "time_s": 2102,
@@ -9631,7 +9704,20 @@
         "team_abbr": "EBB",
         "score": "3:4",
         "balance": "EQ",
-        "scorer": "Andreas Eder"
+        "scorer": "Andreas Eder",
+        "scorer_jersey": 43,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Gabriel Fontaine",
+            "jersey": 97
+          },
+          {
+            "order": 2,
+            "name": "Eric Mik",
+            "jersey": 12
+          }
+        ]
       },
       {
         "time_s": 2507,
@@ -9640,7 +9726,20 @@
         "team_abbr": "EBB",
         "score": "3:5",
         "balance": "EQ",
-        "scorer": "Jean-Luc Foudy"
+        "scorer": "Jean-Luc Foudy",
+        "scorer_jersey": 55,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Markus Vikingstad",
+            "jersey": 37
+          },
+          {
+            "order": 2,
+            "name": "Gabriel Fontaine",
+            "jersey": 97
+          }
+        ]
       },
       {
         "time_s": 3450,
@@ -9649,7 +9748,20 @@
         "team_abbr": "KEC",
         "score": "4:5",
         "balance": "EQ",
-        "scorer": "Marcel Noebels"
+        "scorer": "Marcel Noebels",
+        "scorer_jersey": 92,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Veli-Matti Vittasmäki",
+            "jersey": 47
+          },
+          {
+            "order": 2,
+            "name": "Patrick Russell",
+            "jersey": 63
+          }
+        ]
       },
       {
         "time_s": 3537,
@@ -9658,7 +9770,20 @@
         "team_abbr": "KEC",
         "score": "5:5",
         "balance": "PP1",
-        "scorer": "Patrick Russell"
+        "scorer": "Patrick Russell",
+        "scorer_jersey": 63,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Marcel Noebels",
+            "jersey": 92
+          },
+          {
+            "order": 2,
+            "name": "Gregor MacLeod",
+            "jersey": 89
+          }
+        ]
       },
       {
         "time_s": 3900,
@@ -9667,7 +9792,9 @@
         "team_abbr": "EBB",
         "score": "5:6",
         "balance": "GWS",
-        "scorer": "Jean-Luc Foudy"
+        "scorer": "Jean-Luc Foudy",
+        "scorer_jersey": 55,
+        "assists": []
       }
     ]
   },

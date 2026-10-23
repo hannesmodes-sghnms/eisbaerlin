@@ -11793,7 +11793,15 @@
         "team_abbr": "EBB",
         "score": "1:0",
         "balance": "EQ",
-        "scorer": "Ty Ronning"
+        "scorer": "Ty Ronning",
+        "scorer_jersey": 9,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Liam Kirk",
+            "jersey": 94
+          }
+        ]
       },
       {
         "time_s": 232,
@@ -11802,7 +11810,20 @@
         "team_abbr": "RBM",
         "score": "1:1",
         "balance": "EQ",
-        "scorer": "Ryan Murphy"
+        "scorer": "Ryan Murphy",
+        "scorer_jersey": 24,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Yasin Ehliz",
+            "jersey": 42
+          },
+          {
+            "order": 2,
+            "name": "Markus Eisenschmid",
+            "jersey": 11
+          }
+        ]
       },
       {
         "time_s": 1058,
@@ -11811,7 +11832,20 @@
         "team_abbr": "EBB",
         "score": "2:1",
         "balance": "EQ",
-        "scorer": "Liam Kirk"
+        "scorer": "Liam Kirk",
+        "scorer_jersey": 94,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Kai Wissmann",
+            "jersey": 6
+          },
+          {
+            "order": 2,
+            "name": "Leonhard Pföderl",
+            "jersey": 93
+          }
+        ]
       },
       {
         "time_s": 1218,
@@ -11820,7 +11854,20 @@
         "team_abbr": "RBM",
         "score": "2:2",
         "balance": "EQ",
-        "scorer": "Taro Hirose"
+        "scorer": "Taro Hirose",
+        "scorer_jersey": 17,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Ryan Murphy",
+            "jersey": 24
+          },
+          {
+            "order": 2,
+            "name": "Lucas Thaler",
+            "jersey": 48
+          }
+        ]
       },
       {
         "time_s": 2936,
@@ -11829,7 +11876,20 @@
         "team_abbr": "RBM",
         "score": "2:3",
         "balance": "PP1",
-        "scorer": "Elis Hede"
+        "scorer": "Elis Hede",
+        "scorer_jersey": 10,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Ville Pokka",
+            "jersey": 22
+          },
+          {
+            "order": 2,
+            "name": "Markus Eisenschmid",
+            "jersey": 11
+          }
+        ]
       },
       {
         "time_s": 3441,
@@ -11838,7 +11898,20 @@
         "team_abbr": "RBM",
         "score": "2:4",
         "balance": "EQ",
-        "scorer": "Yasin Ehliz"
+        "scorer": "Yasin Ehliz",
+        "scorer_jersey": 42,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Markus Eisenschmid",
+            "jersey": 11
+          },
+          {
+            "order": 2,
+            "name": "Ryan Murphy",
+            "jersey": 24
+          }
+        ]
       },
       {
         "time_s": 3599,
@@ -11847,7 +11920,20 @@
         "team_abbr": "EBB",
         "score": "3:4",
         "balance": "EQ",
-        "scorer": "Liam Kirk"
+        "scorer": "Liam Kirk",
+        "scorer_jersey": 94,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Markus Vikingstad",
+            "jersey": 37
+          },
+          {
+            "order": 2,
+            "name": "Jonas Müller",
+            "jersey": 18
+          }
+        ]
       }
     ]
   },

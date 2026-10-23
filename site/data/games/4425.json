@@ -9879,7 +9879,20 @@
         "team_abbr": "NIT",
         "score": "0:1",
         "balance": "EQ",
-        "scorer": "Evan Barratt"
+        "scorer": "Evan Barratt",
+        "scorer_jersey": 10,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Jakob Ustorf",
+            "jersey": 48
+          },
+          {
+            "order": 2,
+            "name": "Marcus Weber",
+            "jersey": 24
+          }
+        ]
       },
       {
         "time_s": 1854,
@@ -9888,7 +9901,20 @@
         "team_abbr": "EBB",
         "score": "1:1",
         "balance": "EQ",
-        "scorer": "Andreas Eder"
+        "scorer": "Andreas Eder",
+        "scorer_jersey": 43,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Liam Kirk",
+            "jersey": 94
+          },
+          {
+            "order": 2,
+            "name": "Leonhard Pföderl",
+            "jersey": 93
+          }
+        ]
       },
       {
         "time_s": 2294,
@@ -9897,7 +9923,20 @@
         "team_abbr": "EBB",
         "score": "2:1",
         "balance": "PP2",
-        "scorer": "Ty Ronning"
+        "scorer": "Ty Ronning",
+        "scorer_jersey": 9,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Liam Kirk",
+            "jersey": 94
+          },
+          {
+            "order": 2,
+            "name": "Leonhard Pföderl",
+            "jersey": 93
+          }
+        ]
       },
       {
         "time_s": 3351,
@@ -9906,7 +9945,15 @@
         "team_abbr": "EBB",
         "score": "3:1",
         "balance": "EQ",
-        "scorer": "Ty Ronning"
+        "scorer": "Ty Ronning",
+        "scorer_jersey": 9,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Liam Kirk",
+            "jersey": 94
+          }
+        ]
       },
       {
         "time_s": 3556,
@@ -9915,7 +9962,15 @@
         "team_abbr": "EBB",
         "score": "4:1",
         "balance": "EQ",
-        "scorer": "Ty Ronning"
+        "scorer": "Ty Ronning",
+        "scorer_jersey": 9,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Frederik Tiffels",
+            "jersey": 95
+          }
+        ]
       }
     ]
   },

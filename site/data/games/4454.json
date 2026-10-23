@@ -10407,7 +10407,20 @@
         "team_abbr": "EBB",
         "score": "0:1",
         "balance": "EQ",
-        "scorer": "Markus Vikingstad"
+        "scorer": "Markus Vikingstad",
+        "scorer_jersey": 37,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Brandon Davidson",
+            "jersey": 44
+          },
+          {
+            "order": 2,
+            "name": "Tobias Krestan",
+            "jersey": 91
+          }
+        ]
       },
       {
         "time_s": 2918,
@@ -10416,7 +10429,20 @@
         "team_abbr": "EBB",
         "score": "0:2",
         "balance": "EQ",
-        "scorer": "Tobias Krestan"
+        "scorer": "Tobias Krestan",
+        "scorer_jersey": 91,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Markus Vikingstad",
+            "jersey": 37
+          },
+          {
+            "order": 2,
+            "name": "Jonas Neffin",
+            "jersey": 75
+          }
+        ]
       },
       {
         "time_s": 3445,
@@ -10425,7 +10451,20 @@
         "team_abbr": "EBB",
         "score": "0:3",
         "balance": "EQ",
-        "scorer": "Markus Vikingstad"
+        "scorer": "Markus Vikingstad",
+        "scorer_jersey": 37,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Manuel Wiederer",
+            "jersey": 21
+          },
+          {
+            "order": 2,
+            "name": "Yannick Veilleux",
+            "jersey": 38
+          }
+        ]
       },
       {
         "time_s": 3547,
@@ -10434,7 +10473,20 @@
         "team_abbr": "EBB",
         "score": "0:4",
         "balance": "EQ",
-        "scorer": "Andreas Eder"
+        "scorer": "Andreas Eder",
+        "scorer_jersey": 43,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Yannick Veilleux",
+            "jersey": 38
+          },
+          {
+            "order": 2,
+            "name": "Eric Mik",
+            "jersey": 12
+          }
+        ]
       }
     ]
   },

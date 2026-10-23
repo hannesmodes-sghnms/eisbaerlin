@@ -12448,7 +12448,20 @@
         "team_abbr": "EBB",
         "score": "0:1",
         "balance": "EQ",
-        "scorer": "Jonas Müller"
+        "scorer": "Jonas Müller",
+        "scorer_jersey": 18,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Kai Wissmann",
+            "jersey": 6
+          },
+          {
+            "order": 2,
+            "name": "Frederik Tiffels",
+            "jersey": 95
+          }
+        ]
       },
       {
         "time_s": 1899,
@@ -12457,7 +12470,20 @@
         "team_abbr": "EBB",
         "score": "0:2",
         "balance": "EQ",
-        "scorer": "Andreas Eder"
+        "scorer": "Andreas Eder",
+        "scorer_jersey": 43,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Jean-Luc Foudy",
+            "jersey": 55
+          },
+          {
+            "order": 2,
+            "name": "Korbinian Geibel",
+            "jersey": 40
+          }
+        ]
       },
       {
         "time_s": 3425,
@@ -12466,7 +12492,20 @@
         "team_abbr": "EBB",
         "score": "0:3",
         "balance": "EQ",
-        "scorer": "Manuel Wiederer"
+        "scorer": "Manuel Wiederer",
+        "scorer_jersey": 21,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Frederik Tiffels",
+            "jersey": 95
+          },
+          {
+            "order": 2,
+            "name": "Korbinian Geibel",
+            "jersey": 40
+          }
+        ]
       }
     ]
   },

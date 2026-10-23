@@ -11913,7 +11913,20 @@
         "team_abbr": "EBB",
         "score": "1:0",
         "balance": "EQ",
-        "scorer": "Frederik Tiffels"
+        "scorer": "Frederik Tiffels",
+        "scorer_jersey": 95,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Liam Kirk",
+            "jersey": 94
+          },
+          {
+            "order": 2,
+            "name": "Ty Ronning",
+            "jersey": 9
+          }
+        ]
       },
       {
         "time_s": 2118,
@@ -11922,7 +11935,9 @@
         "team_abbr": "EBB",
         "score": "2:0",
         "balance": "PS",
-        "scorer": "Jean-Luc Foudy"
+        "scorer": "Jean-Luc Foudy",
+        "scorer_jersey": 55,
+        "assists": []
       },
       {
         "time_s": 2855,
@@ -11931,7 +11946,20 @@
         "team_abbr": "EBB",
         "score": "3:0",
         "balance": "EQ",
-        "scorer": "Liam Kirk"
+        "scorer": "Liam Kirk",
+        "scorer_jersey": 94,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Frederik Tiffels",
+            "jersey": 95
+          },
+          {
+            "order": 2,
+            "name": "Jonas Müller",
+            "jersey": 18
+          }
+        ]
       },
       {
         "time_s": 3326,
@@ -11940,7 +11968,20 @@
         "team_abbr": "EBB",
         "score": "4:0",
         "balance": "PP1",
-        "scorer": "Andreas Eder"
+        "scorer": "Andreas Eder",
+        "scorer_jersey": 43,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Jean-Luc Foudy",
+            "jersey": 55
+          },
+          {
+            "order": 2,
+            "name": "Mitchell Reinke",
+            "jersey": 5
+          }
+        ]
       },
       {
         "time_s": 3438,
@@ -11949,7 +11990,20 @@
         "team_abbr": "EBB",
         "score": "5:0",
         "balance": "EQ",
-        "scorer": "Frederik Tiffels"
+        "scorer": "Frederik Tiffels",
+        "scorer_jersey": 95,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Liam Kirk",
+            "jersey": 94
+          },
+          {
+            "order": 2,
+            "name": "Jonas Müller",
+            "jersey": 18
+          }
+        ]
       }
     ]
   },

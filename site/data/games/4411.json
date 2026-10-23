@@ -9152,7 +9152,20 @@
         "team_abbr": "EBB",
         "score": "1:0",
         "balance": "PP1",
-        "scorer": "Markus Vikingstad"
+        "scorer": "Markus Vikingstad",
+        "scorer_jersey": 37,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Mitchell Reinke",
+            "jersey": 5
+          },
+          {
+            "order": 2,
+            "name": "Jean-Luc Foudy",
+            "jersey": 55
+          }
+        ]
       },
       {
         "time_s": 1265,
@@ -9161,7 +9174,9 @@
         "team_abbr": "EBB",
         "score": "2:0",
         "balance": "SH1",
-        "scorer": "Manuel Wiederer"
+        "scorer": "Manuel Wiederer",
+        "scorer_jersey": 21,
+        "assists": []
       },
       {
         "time_s": 2022,
@@ -9170,7 +9185,20 @@
         "team_abbr": "EBB",
         "score": "3:0",
         "balance": "EQ",
-        "scorer": "Liam Kirk"
+        "scorer": "Liam Kirk",
+        "scorer_jersey": 94,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Ty Ronning",
+            "jersey": 9
+          },
+          {
+            "order": 2,
+            "name": "Adam Smith",
+            "jersey": 4
+          }
+        ]
       },
       {
         "time_s": 2365,
@@ -9179,7 +9207,20 @@
         "team_abbr": "EBB",
         "score": "4:0",
         "balance": "EQ",
-        "scorer": "Ty Ronning"
+        "scorer": "Ty Ronning",
+        "scorer_jersey": 9,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Frederik Tiffels",
+            "jersey": 95
+          },
+          {
+            "order": 2,
+            "name": "Liam Kirk",
+            "jersey": 94
+          }
+        ]
       }
     ]
   },

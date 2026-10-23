@@ -11047,7 +11047,20 @@
         "team_abbr": "EBB",
         "score": "1:0",
         "balance": "EQ",
-        "scorer": "Manuel Wiederer"
+        "scorer": "Manuel Wiederer",
+        "scorer_jersey": 21,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Brandon Davidson",
+            "jersey": 44
+          },
+          {
+            "order": 2,
+            "name": "Mitchell Reinke",
+            "jersey": 5
+          }
+        ]
       },
       {
         "time_s": 1307,
@@ -11056,7 +11069,20 @@
         "team_abbr": "EBB",
         "score": "2:0",
         "balance": "EQ",
-        "scorer": "Liam Kirk"
+        "scorer": "Liam Kirk",
+        "scorer_jersey": 94,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Ty Ronning",
+            "jersey": 9
+          },
+          {
+            "order": 2,
+            "name": "Jonas Müller",
+            "jersey": 18
+          }
+        ]
       },
       {
         "time_s": 2161,
@@ -11065,7 +11091,15 @@
         "team_abbr": "EBB",
         "score": "3:0",
         "balance": "EQ",
-        "scorer": "Ty Ronning"
+        "scorer": "Ty Ronning",
+        "scorer_jersey": 9,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Liam Kirk",
+            "jersey": 94
+          }
+        ]
       },
       {
         "time_s": 3035,
@@ -11074,7 +11108,15 @@
         "team_abbr": "STR",
         "score": "3:1",
         "balance": "EQ",
-        "scorer": "Adrian Klein"
+        "scorer": "Adrian Klein",
+        "scorer_jersey": 17,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Filip Varejcka",
+            "jersey": 90
+          }
+        ]
       },
       {
         "time_s": 3372,
@@ -11083,7 +11125,9 @@
         "team_abbr": "STR",
         "score": "3:2",
         "balance": "EQ",
-        "scorer": "Stefan Loibl"
+        "scorer": "Stefan Loibl",
+        "scorer_jersey": 38,
+        "assists": []
       },
       {
         "time_s": 3522,
@@ -11092,7 +11136,15 @@
         "team_abbr": "EBB",
         "score": "4:2",
         "balance": "EQ",
-        "scorer": "Eric Mik"
+        "scorer": "Eric Mik",
+        "scorer_jersey": 12,
+        "assists": [
+          {
+            "order": 1,
+            "name": "Ty Ronning",
+            "jersey": 9
+          }
+        ]
       }
     ]
   },
