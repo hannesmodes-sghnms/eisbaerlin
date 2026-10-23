@@ -190,6 +190,15 @@ def build_game_flow(
                 "score": row.get("score"),
                 "balance": row.get("balance"),
                 "scorer": scorer.get("name"),
+                "scorer_jersey": scorer.get("jersey"),
+                "assists": [
+                    {
+                        "order": int(assist.get("order") or index + 1),
+                        "name": assist.get("name"),
+                        "jersey": assist.get("jersey"),
+                    }
+                    for index, assist in enumerate(row.get("assists") or [])
+                ],
             }
         )
 

@@ -2,6 +2,12 @@ name: Update DEL 2026-27 dataset
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/**"
+      - "site/data/**"
+      - "*.md"
   schedule:
     - cron: "30 4 * * *"
       timezone: "Europe/Berlin"
