@@ -151,6 +151,101 @@ def _unit_identity(row: dict[str, Any]) -> tuple[int, ...]:
     return tuple(sorted(int(player_id) for player_id in row.get("player_ids") or []))
 
 
+def _unit_toi(row: dict[str, Any], keys: tuple[str, ...]) -> int:
+    return sum(int(row.get(key) or 0) for key in keys)
+
+
+def _pair_unit_changes(
+    previous_rows: list[dict[str, Any]],
+    current_rows: list[dict[str, Any]],
+    *,
+    previous_toi_keys: tuple[str, ...],
+    current_toi_keys: tuple[str, ...],
+    prefer_overlap: bool,
+) -> list[dict[str, Any]]:
+    previous = sorted(
+        previous_rows,
+        key=lambda row: (_unit_toi(row, previous_toi_keys), int(row.get("appearances") or 0)),
+        reverse=True,
+    )
+    current = sorted(
+        current_rows,
+        key=lambda row: (_unit_toi(row, current_toi_keys), int(row.get("appearances") or 0)),
+        reverse=True,
+    )
+    previous_rank = {id(row): idx for idx, row in enumerate(previous)}
+    current_rank = {id(row): idx for idx, row in enumerate(current)}
+
+    matched_previous: set[int] = set()
+    matched_current: set[int] = set()
+    pairs: list[tuple[dict[str, Any], dict[str, Any]]] = []
+
+    if prefer_overlap:
+        overlap_candidates: list[tuple[int, int, int, int, dict[str, Any], dict[str, Any]]] = []
+        for old in previous:
+            old_ids = set(_unit_identity(old))
+            for new in current:
+                overlap = len(old_ids & set(_unit_identity(new)))
+                if overlap < 2:
+                    continue
+                overlap_candidates.append(
+                    (
+                        -overlap,
+                        abs(previous_rank[id(old)] - current_rank[id(new)]),
+                        previous_rank[id(old)],
+                        current_rank[id(new)],
+                        old,
+                        new,
+                    )
+                )
+        overlap_candidates.sort(key=lambda item: item[:4])
+        for _neg_overlap, _rank_gap, _old_rank, _new_rank, old, new in overlap_candidates:
+            old_key, new_key = id(old), id(new)
+            if old_key in matched_previous or new_key in matched_current:
+                continue
+            matched_previous.add(old_key)
+            matched_current.add(new_key)
+            pairs.append((old, new))
+
+    remaining_previous = [row for row in previous if id(row) not in matched_previous]
+    remaining_current = [row for row in current if id(row) not in matched_current]
+    for old, new in zip(remaining_previous, remaining_current):
+        matched_previous.add(id(old))
+        matched_current.add(id(new))
+        pairs.append((old, new))
+
+    pairs.sort(key=lambda pair: previous_rank[id(pair[0])])
+    result = [
+        {
+            "previous": old,
+            "current": new,
+            "overlap": len(set(_unit_identity(old)) & set(_unit_identity(new))),
+        }
+        for old, new in pairs
+    ]
+    for old in previous:
+        if id(old) not in matched_previous:
+            result.append({"previous": old, "current": None, "overlap": 0})
+    for new in current:
+        if id(new) not in matched_current:
+            result.append({"previous": None, "current": new, "overlap": 0})
+    return result
+
+
+def _format_unit_pairs(pairs: list[dict[str, Any]]) -> str:
+    parts: list[str] = []
+    for pair in pairs:
+        old = pair.get("previous")
+        new = pair.get("current")
+        if old and new:
+            parts.append(f"{old.get('label')} → {new.get('label')}")
+        elif old:
+            parts.append(f"{old.get('label')} → entfällt")
+        elif new:
+            parts.append(f"neu: {new.get('label')}")
+    return "; ".join(parts)
+
+
 def _active_skaters(con: Any, match_id: int, team_id: int) -> list[dict[str, Any]]:
     cur = con.execute(
         """
@@ -263,6 +358,8 @@ def previous_game_lineup_diff(
             "previous_count": len(previous_rows),
             "current": [row.get("label") for row in current_rows],
             "previous": [row.get("label") for row in previous_rows],
+            "current_units": current_rows,
+            "previous_units": previous_rows,
             "stable": [row.get("label") for _, row in sorted(((uid, current_map[uid]) for uid in stable_ids), key=sort_key, reverse=True)],
             "new": [row.get("label") for _, row in sorted(((uid, current_map[uid]) for uid in new_ids), key=sort_key, reverse=True)],
             "dropped": [row.get("label") for _, row in sorted(((uid, previous_map[uid]) for uid in dropped_ids), key=sort_key, reverse=True)],
@@ -290,31 +387,22 @@ def _p3_rebuild_fact(lineups: dict[str, Any]) -> StoryFact | None:
     if len(dropped) < 2 or not new:
         return None
 
-    dropped = sorted(
+    pairs = _pair_unit_changes(
         dropped,
-        key=lambda row: (
-            int(row.get("p1_s") or 0) + int(row.get("p2_s") or 0),
-            int(row.get("appearances") or 0),
-        ),
-        reverse=True,
-    )
-    new = sorted(
         new,
-        key=lambda row: (int(row.get("p3_s") or 0), int(row.get("p3_appearances") or 0)),
-        reverse=True,
+        previous_toi_keys=("p1_s", "p2_s"),
+        current_toi_keys=("p3_s",),
+        prefer_overlap=True,
     )
-    top = new[0]
-    before = " / ".join(str(row.get("label")) for row in dropped[:4] if row.get("label"))
-    after = " / ".join(str(row.get("label")) for row in new[:4] if row.get("label"))
+    top = max(new, key=lambda row: (int(row.get("p3_s") or 0), int(row.get("p3_appearances") or 0)))
     dropped_count = len(dropped)
     text = (
-        f"Umbau im Schlussdrittel: Vorher: {before}. → Nachher: {after}. "
+        f"Umbau im Schlussdrittel: {_format_unit_pairs(pairs)}. "
         f"{dropped_count} zuvor regelmäßig eingesetzte Sturmreihen verschwanden damit aus der 5v5-Rotation. "
         f"{top.get('label')} war mit {_fmt_time(top.get('p3_s'))} Minuten und "
         f"{int(top.get('p3_appearances') or 0)} gemeinsamen Einsätzen die häufigste neue Kombination."
     )
     return StoryFact("lineup", 100 if dropped_count >= 3 else 88, "p3_rebuild", text)
-
 
 def _previous_lineup_facts(diff: dict[str, Any]) -> list[StoryFact]:
     if not diff.get("available"):
@@ -343,51 +431,75 @@ def _previous_lineup_facts(diff: dict[str, Any]) -> list[StoryFact]:
             )
         )
 
-    previous_forwards = [str(label) for label in forwards.get("previous") or [] if label]
-    current_forwards = [str(label) for label in forwards.get("current") or [] if label]
-    stable_forwards = [str(label) for label in forwards.get("stable") or [] if label]
-    if previous_forwards or current_forwards:
-        changed = previous_forwards != current_forwards
-        text = (
-            f"Sturmreihen gegenüber {opponent}: Vorher: "
-            + (" / ".join(previous_forwards) if previous_forwards else "keine stabile Kombination")
-            + ". → Jetzt: "
-            + (" / ".join(current_forwards) if current_forwards else "keine stabile Kombination")
-            + "."
+    previous_forward_units = list(forwards.get("previous_units") or [])
+    current_forward_units = list(forwards.get("current_units") or [])
+    if previous_forward_units or current_forward_units:
+        forward_pairs = _pair_unit_changes(
+            previous_forward_units,
+            current_forward_units,
+            previous_toi_keys=("total_s",),
+            current_toi_keys=("total_s",),
+            prefer_overlap=True,
         )
-        if stable_forwards:
-            text += " Unverändert blieben: " + " / ".join(stable_forwards) + "."
-        facts.append(
-            StoryFact(
-                "lineup",
-                88 if changed else 70,
-                "previous_game_forward_units",
-                text,
+        changed_pairs = [
+            pair
+            for pair in forward_pairs
+            if not (
+                pair.get("previous")
+                and pair.get("current")
+                and _unit_identity(pair["previous"]) == _unit_identity(pair["current"])
             )
-        )
+        ]
+        stable_forwards = [str(label) for label in forwards.get("stable") or [] if label]
+        if changed_pairs:
+            text = f"Sturmreihen gegenüber {opponent}: {_format_unit_pairs(changed_pairs)}."
+            if stable_forwards:
+                text += " Unverändert blieben: " + " / ".join(stable_forwards) + "."
+            facts.append(StoryFact("lineup", 88, "previous_game_forward_units", text))
+        elif stable_forwards:
+            facts.append(
+                StoryFact(
+                    "lineup",
+                    70,
+                    "previous_game_forward_units",
+                    f"Sturmreihen gegenüber {opponent}: unverändert – " + " / ".join(stable_forwards) + ".",
+                )
+            )
 
-    previous_defense = [str(label) for label in defense.get("previous") or [] if label]
-    current_defense = [str(label) for label in defense.get("current") or [] if label]
-    stable_defense = [str(label) for label in defense.get("stable") or [] if label]
-    if previous_defense or current_defense:
-        changed = previous_defense != current_defense
-        text = (
-            f"Verteidigerpaare gegenüber {opponent}: Vorher: "
-            + (" / ".join(previous_defense) if previous_defense else "keine stabilen Paare")
-            + ". → Jetzt: "
-            + (" / ".join(current_defense) if current_defense else "keine stabilen Paare")
-            + "."
+    previous_defense_units = list(defense.get("previous_units") or [])
+    current_defense_units = list(defense.get("current_units") or [])
+    if previous_defense_units or current_defense_units:
+        defense_pairs = _pair_unit_changes(
+            previous_defense_units,
+            current_defense_units,
+            previous_toi_keys=("total_s",),
+            current_toi_keys=("total_s",),
+            prefer_overlap=False,
         )
-        if stable_defense:
-            text += " Unverändert blieben: " + " / ".join(stable_defense) + "."
-        facts.append(
-            StoryFact(
-                "lineup",
-                82 if changed else 70,
-                "previous_game_defense_units",
-                text,
+        changed_pairs = [
+            pair
+            for pair in defense_pairs
+            if not (
+                pair.get("previous")
+                and pair.get("current")
+                and _unit_identity(pair["previous"]) == _unit_identity(pair["current"])
             )
-        )
+        ]
+        stable_defense = [str(label) for label in defense.get("stable") or [] if label]
+        if changed_pairs:
+            text = f"Verteidigerpaare gegenüber {opponent}: {_format_unit_pairs(changed_pairs)}."
+            if stable_defense:
+                text += " Unverändert blieben: " + " / ".join(stable_defense) + "."
+            facts.append(StoryFact("lineup", 82, "previous_game_defense_units", text))
+        elif stable_defense:
+            facts.append(
+                StoryFact(
+                    "lineup",
+                    70,
+                    "previous_game_defense_units",
+                    f"Verteidigerpaare gegenüber {opponent}: unverändert – " + " / ".join(stable_defense) + ".",
+                )
+            )
 
     return facts
 

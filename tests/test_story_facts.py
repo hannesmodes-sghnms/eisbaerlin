@@ -2,7 +2,13 @@ import pytest
 
 duckdb = pytest.importorskip("duckdb")
 
-from delstats.story_facts import StoryFact, build_story_facts, scoring_streaks, select_story_facts
+from delstats.story_facts import (
+    StoryFact,
+    _pair_unit_changes,
+    build_story_facts,
+    scoring_streaks,
+    select_story_facts,
+)
 
 
 def test_scoring_streaks_detects_active_and_ended_series():
@@ -85,20 +91,46 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
     lineups = {
         "rotation": {
             "dropped_p3_forward_trios": [
-                {"label": "Ronning – Kirk – Tiffels"},
-                {"label": "Eder – Foudy – Pföderl"},
-                {"label": "Wiederer – Griva – Hördler"},
+                {
+                    "label": "Ronning – Kirk – Tiffels",
+                    "player_ids": [2209, 3410, 1402],
+                    "p1_s": 188,
+                    "p2_s": 265,
+                    "appearances": 10,
+                },
+                {
+                    "label": "Eder – Foudy – Pföderl",
+                    "player_ids": [546, 4895, 92],
+                    "p1_s": 89,
+                    "p2_s": 173,
+                    "appearances": 8,
+                },
+                {
+                    "label": "Wiederer – Griva – Hördler",
+                    "player_ids": [1823, 4310, 2126],
+                    "p1_s": 149,
+                    "p2_s": 106,
+                    "appearances": 6,
+                },
             ],
             "new_p3_forward_trios": [
                 {
                     "label": "Wiederer – Pföderl – Tiffels",
+                    "player_ids": [1823, 92, 1402],
                     "p3_s": 174,
                     "p3_appearances": 6,
                 },
                 {
                     "label": "Eder – Foudy – Hördler",
+                    "player_ids": [546, 4895, 2126],
                     "p3_s": 83,
                     "p3_appearances": 3,
+                },
+                {
+                    "label": "Ronning – Vikingstad – Kirk",
+                    "player_ids": [2209, 1796, 3410],
+                    "p3_s": 69,
+                    "p3_appearances": 2,
                 },
             ],
         }
@@ -109,22 +141,40 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
         "players_in": [],
         "players_out": [],
         "forwards": {
-            "previous": ["A", "B", "E", "F"],
-            "current": ["A", "B", "C", "D"],
-            "stable": ["A", "B"],
-            "new": ["C", "D"],
-            "dropped": ["E", "F"],
-            "current_count": 4,
-            "previous_count": 4,
-        },
-        "defense": {
-            "previous": ["G", "H", "I"],
-            "current": ["G", "H", "I"],
-            "stable": ["G", "H", "I"],
-            "new": [],
-            "dropped": [],
+            "previous": ["Old 1", "Old 2", "Stable 3"],
+            "current": ["New 1", "New 2", "Stable 3"],
+            "previous_units": [
+                {"label": "Old 1", "player_ids": [1, 2, 3], "total_s": 600},
+                {"label": "Old 2", "player_ids": [4, 5, 6], "total_s": 500},
+                {"label": "Stable 3", "player_ids": [7, 8, 9], "total_s": 400},
+            ],
+            "current_units": [
+                {"label": "New 1", "player_ids": [1, 2, 10], "total_s": 590},
+                {"label": "New 2", "player_ids": [4, 11, 12], "total_s": 480},
+                {"label": "Stable 3", "player_ids": [7, 8, 9], "total_s": 410},
+            ],
+            "stable": ["Stable 3"],
+            "new": ["New 1", "New 2"],
+            "dropped": ["Old 1", "Old 2"],
             "current_count": 3,
             "previous_count": 3,
+        },
+        "defense": {
+            "previous": ["Old D1", "Old D2"],
+            "current": ["New D1", "New D2"],
+            "previous_units": [
+                {"label": "Old D1", "player_ids": [21, 22], "total_s": 700},
+                {"label": "Old D2", "player_ids": [23, 24], "total_s": 550},
+            ],
+            "current_units": [
+                {"label": "New D1", "player_ids": [23, 24], "total_s": 680},
+                {"label": "New D2", "player_ids": [21, 22], "total_s": 500},
+            ],
+            "stable": [],
+            "new": ["New D1", "New D2"],
+            "dropped": ["Old D1", "Old D2"],
+            "current_count": 2,
+            "previous_count": 2,
         },
     }
     insight = {
@@ -175,14 +225,14 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
     assert 4 <= len(facts) <= 12
     assert any(
         "Umbau im Schlussdrittel" in fact
-        and "Vorher:" in fact
-        and "Nachher:" in fact
+        and "Ronning – Kirk – Tiffels → Ronning – Vikingstad – Kirk" in fact
+        and "Eder – Foudy – Pföderl → Eder – Foudy – Hördler" in fact
         for fact in facts
     )
     assert any(
         "Sturmreihen gegenüber Krefeld Pinguine" in fact
-        and "Vorher:" in fact
-        and "→ Jetzt:" in fact
+        and "Old 1 → New 1" in fact
+        and "Old 2 → New 2" in fact
         for fact in facts
     )
     assert any("Mehr Schussvolumen als klare Chancenüberlegenheit" in fact for fact in facts)
@@ -191,7 +241,12 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
     assert any(group["title"] == "🔄 Lineup & Reihen" for group in groups)
     assert any(group["title"] == "🔬 Nerd Fact" for group in groups)
     lineup_group = next(group for group in groups if group["title"] == "🔄 Lineup & Reihen")
-    assert any("Verteidigerpaare gegenüber Krefeld Pinguine" in fact for fact in lineup_group["facts"])
+    assert any(
+        "Verteidigerpaare gegenüber Krefeld Pinguine" in fact
+        and "Old D1 → New D1" in fact
+        and "Old D2 → New D2" in fact
+        for fact in lineup_group["facts"]
+    )
 
 
 
@@ -213,3 +268,64 @@ def test_story_selection_can_fill_twelve_fact_slots():
 
     assert len(facts) == 12
     assert sum(len(group["facts"]) for group in groups) == 12
+
+
+
+def test_forward_pairing_prefers_two_player_overlap_but_not_single_player_overlap():
+    previous = [
+        {"label": "Old 1", "player_ids": [1, 2, 3], "total_s": 600},
+        {"label": "Old 2", "player_ids": [4, 5, 6], "total_s": 500},
+        {"label": "Old 3", "player_ids": [7, 8, 9], "total_s": 400},
+    ]
+    current = [
+        {"label": "New 1", "player_ids": [1, 2, 10], "total_s": 550},
+        {"label": "New 2", "player_ids": [7, 11, 12], "total_s": 450},
+        {"label": "New 3", "player_ids": [4, 13, 14], "total_s": 350},
+    ]
+
+    pairs = _pair_unit_changes(
+        previous,
+        current,
+        previous_toi_keys=("total_s",),
+        current_toi_keys=("total_s",),
+        prefer_overlap=True,
+    )
+
+    assert [
+        (pair["previous"]["label"], pair["current"]["label"])
+        for pair in pairs
+    ] == [
+        ("Old 1", "New 1"),
+        ("Old 2", "New 2"),
+        ("Old 3", "New 3"),
+    ]
+    assert pairs[0]["overlap"] == 2
+    assert pairs[1]["overlap"] == 0
+    assert pairs[2]["overlap"] == 0
+
+
+def test_defense_pairing_uses_toi_rank_even_when_player_overlap_points_elsewhere():
+    previous = [
+        {"label": "Old D1", "player_ids": [1, 2], "total_s": 700},
+        {"label": "Old D2", "player_ids": [3, 4], "total_s": 500},
+    ]
+    current = [
+        {"label": "New D1", "player_ids": [3, 4], "total_s": 650},
+        {"label": "New D2", "player_ids": [1, 2], "total_s": 450},
+    ]
+
+    pairs = _pair_unit_changes(
+        previous,
+        current,
+        previous_toi_keys=("total_s",),
+        current_toi_keys=("total_s",),
+        prefer_overlap=False,
+    )
+
+    assert [
+        (pair["previous"]["label"], pair["current"]["label"])
+        for pair in pairs
+    ] == [
+        ("Old D1", "New D1"),
+        ("Old D2", "New D2"),
+    ]
