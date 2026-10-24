@@ -4,7 +4,11 @@ from pathlib import Path
 import pytest
 
 duckdb = pytest.importorskip("duckdb")
-from delstats.database import build_match_database
+from delstats.database import (
+    _goal_event_contexts,
+    _match_goal_event_context,
+    build_match_database,
+)
 
 
 def _write(path: Path, payload):
@@ -148,3 +152,66 @@ def test_build_match_database_end_to_end(tmp_path):
         assert con.execute("SELECT count(*) FROM team_season_stats").fetchone()[0] == 2
     finally:
         con.close()
+
+
+
+def test_goal_event_attendants_override_shift_boundary_context():
+    period_events = {
+        "2": [
+            {
+                "time": 2062,
+                "type": "goal",
+                "data": {
+                    "team": "home",
+                    "balance": "EQ",
+                    "scorer": {"playerId": 10},
+                    "attendants": {
+                        "positive": [
+                            *[{"playerId": pid} for pid in (10, 11, 12, 13, 14)],
+                            {"playerId": 30},
+                        ],
+                        "negative": [
+                            *[{"playerId": pid} for pid in (20, 21, 22, 23, 24)],
+                            {"playerId": 40},
+                        ],
+                    },
+                },
+            }
+        ],
+        "1": [],
+        "3": [],
+        "overtime": [],
+        "shootout": [],
+    }
+    contexts = _goal_event_contexts(
+        period_events,
+        home_team_id=3,
+        away_team_id=13,
+        goalie_ids={30, 40},
+    )
+    assert contexts == [
+        {
+            "time_s": 2062,
+            "team_id": 3,
+            "scorer_player_id": 10,
+            "on_for": [10, 11, 12, 13, 14],
+            "on_against": [20, 21, 22, 23, 24],
+        }
+    ]
+
+    matched = _match_goal_event_context(
+        contexts,
+        shot_time_s=2061,
+        shooting_team_id=3,
+        shooter_player_id=10,
+    )
+    assert matched is not None
+    assert len(matched["on_for"]) == 5
+    assert len(matched["on_against"]) == 5
+
+    assert _match_goal_event_context(
+        contexts,
+        shot_time_s=2061,
+        shooting_team_id=3,
+        shooter_player_id=99,
+    ) is None
