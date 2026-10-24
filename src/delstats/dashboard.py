@@ -466,7 +466,9 @@ def build_game_payload(con: Any, match_id: int, *, insight_dir: Path = Path("dat
         con,
         """SELECT team_id, coalesce(shot_zone, 'UNKNOWN') AS shot_zone, count(*) AS attempts,
                   sum(CASE WHEN result IN ('on_goal','goal') THEN 1 ELSE 0 END) AS sog
-           FROM shots WHERE match_id=? GROUP BY team_id, shot_zone""",
+           FROM shots
+           WHERE match_id=? AND coalesce(source, 'shot_feed') != 'goal_event_reconstructed'
+           GROUP BY team_id, shot_zone""",
         [match_id],
     )
     zone_names = ["SLOT", "LEFT", "RIGHT", "BLUE_LINE", "NEUTRAL_ZONE", "BEHIND_GOAL", "UNKNOWN"]
