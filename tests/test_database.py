@@ -6,7 +6,7 @@ import pytest
 duckdb = pytest.importorskip("duckdb")
 from delstats.database import (
     _goal_event_contexts,
-    _match_goal_event_context,
+    _goal_event_context_by_shot_id,
     build_match_database,
 )
 from delstats.quality import audit_database
@@ -202,19 +202,43 @@ def test_goal_event_attendants_override_shift_boundary_context():
         }
     ]
 
-    matched = _match_goal_event_context(
-        contexts,
-        shot_time_s=2061,
-        shooting_team_id=3,
-        shooter_player_id=10,
-    )
-    assert matched is not None
-    assert len(matched["on_for"]) == 5
-    assert len(matched["on_against"]) == 5
+    # The pairing is deliberately independent of a fixed time tolerance and
+    # scorer equality. DEL examples exist with >30s timestamp drift and with a
+    # shot-feed shooter who differs from the officially credited scorer.
+    shots = [
+        {
+            "id": 9001,
+            "time": 2031,
+            "team_id": 3,
+            "player_id": 99,
+            "match_shot_resutl_id": 4,
+        }
+    ]
+    mapping = _goal_event_context_by_shot_id(shots, contexts)
+    assert mapping[9001]["time_s"] == 2062
+    assert len(mapping[9001]["on_for"]) == 5
+    assert len(mapping[9001]["on_against"]) == 5
 
-    assert _match_goal_event_context(
-        contexts,
-        shot_time_s=2061,
-        shooting_team_id=3,
-        shooter_player_id=99,
-    ) is None
+
+def test_goal_event_context_mapping_refuses_count_mismatch():
+    contexts = [
+        {
+            "time_s": 100,
+            "team_id": 3,
+            "scorer_player_id": 10,
+            "on_for": [1, 2, 3, 4, 5],
+            "on_against": [11, 12, 13, 14, 15],
+        },
+        {
+            "time_s": 200,
+            "team_id": 3,
+            "scorer_player_id": 20,
+            "on_for": [1, 2, 3, 4, 5],
+            "on_against": [11, 12, 13, 14, 15],
+        },
+    ]
+    shots = [
+        {"id": 1, "time": 99, "team_id": 3, "player_id": 10, "match_shot_resutl_id": 4}
+    ]
+    assert _goal_event_context_by_shot_id(shots, contexts) == {}
+
