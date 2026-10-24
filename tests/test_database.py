@@ -9,6 +9,7 @@ from delstats.database import (
     _match_goal_event_context,
     build_match_database,
 )
+from delstats.quality import audit_database
 
 
 def _write(path: Path, payload):
@@ -150,6 +151,8 @@ def test_build_match_database_end_to_end(tmp_path):
         assert geom[2] == "NEUTRAL_ZONE"
         assert con.execute("SELECT count(*) FROM team_game_stats").fetchone()[0] == 2
         assert con.execute("SELECT count(*) FROM team_season_stats").fetchone()[0] == 2
+        audit = audit_database(con)
+        assert any(issue["code"] == "final_score_vs_events" for issue in audit["hard_failures"])
     finally:
         con.close()
 
