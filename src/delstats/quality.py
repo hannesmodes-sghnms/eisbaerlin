@@ -126,6 +126,9 @@ def audit_database(con: Any) -> dict[str, Any]:
                     opponent=a.get(against),
                 ))
 
+        if int(a.get("time_leading_s") or 0) != int(b.get("time_trailing_s") or 0) or int(b.get("time_leading_s") or 0) != int(a.get("time_trailing_s") or 0) or int(a.get("time_tied_s") or 0) != int(b.get("time_tied_s") or 0):
+            hard.append(_issue("score_state_symmetry", "leading/tied/trailing durations are not opponent mirrors", match_id=mid))
+
         for row in rows:
             tid = int(row["team_id"])
             corsi, sog, goals = int(row["corsi_for"] or 0), int(row["shots_on_goal_for"] or 0), int(row["goals_for"] or 0)
@@ -161,7 +164,68 @@ def audit_database(con: Any) -> dict[str, Any]:
             if pdo is not None and not (0 <= float(pdo) <= 200):
                 hard.append(_issue("pdo_range", "PDO outside 0..200", match_id=mid, team_id=tid, value=pdo))
 
-    # 2) Goal events are the authoritative scoring source.
+            expected_corsi_pct = round(corsi * 100.0 / (corsi + int(row["corsi_against"] or 0)), 3) if corsi + int(row["corsi_against"] or 0) else None
+            expected_corsi5_pct = round(corsi5 * 100.0 / (corsi5 + int(row["corsi_5v5_against"] or 0)), 3) if corsi5 + int(row["corsi_5v5_against"] or 0) else None
+            if not _close(row.get("corsi_pct"), expected_corsi_pct, 0.001):
+                hard.append(_issue("corsi_pct_formula", "Corsi% does not match CF/(CF+CA)", match_id=mid, team_id=tid, actual=row.get("corsi_pct"), expected=expected_corsi_pct))
+            if not _close(row.get("corsi_5v5_pct"), expected_corsi5_pct, 0.001):
+                hard.append(_issue("corsi_5v5_pct_formula", "5v5 Corsi% does not match CF/(CF+CA)", match_id=mid, team_id=tid, actual=row.get("corsi_5v5_pct"), expected=expected_corsi5_pct))
+
+    # 2) Structural coverage and referential integrity.
+    shot_count = int(_rows(con, "SELECT count(*) AS n FROM shots")[0]["n"])
+    context_count = int(_rows(con, "SELECT count(*) AS n FROM shot_context")[0]["n"])
+    if shot_count != context_count:
+        hard.append(_issue("shot_context_coverage", f"shots ({shot_count}) != shot contexts ({context_count})"))
+
+    bad_context_teams = _rows(
+        con,
+        """
+        SELECT c.match_id, c.shot_id, c.shooting_team_id, c.opponent_team_id,
+               s.team_id AS shot_team_id, m.home_team_id, m.away_team_id
+        FROM shot_context c
+        JOIN shots s USING(match_id, shot_id)
+        JOIN matches m USING(match_id)
+        WHERE c.shooting_team_id != s.team_id
+           OR c.opponent_team_id = c.shooting_team_id
+           OR c.shooting_team_id NOT IN (m.home_team_id, m.away_team_id)
+           OR c.opponent_team_id NOT IN (m.home_team_id, m.away_team_id)
+        LIMIT 50
+        """,
+    )
+    for row in bad_context_teams:
+        hard.append(_issue("shot_context_team_reference", "shot context team IDs contradict shot/match teams", match_id=int(row["match_id"]), shot_id=int(row["shot_id"])))
+
+    unknown_results = _rows(con, "SELECT match_id, shot_id, result_id FROM shots WHERE result='unknown' LIMIT 50")
+    for row in unknown_results:
+        hard.append(_issue("unknown_shot_result", "unknown DEL shot result ID", match_id=int(row["match_id"]), shot_id=int(row["shot_id"]), result_id=row.get("result_id")))
+
+    bad_shift_durations = _rows(
+        con,
+        """
+        SELECT match_id, shift_id, start_time_s, end_time_s, duration_s
+        FROM shifts
+        WHERE end_time_s < start_time_s OR duration_s != greatest(0, end_time_s-start_time_s)
+        LIMIT 50
+        """,
+    )
+    for row in bad_shift_durations:
+        hard.append(_issue("shift_duration", "shift duration contradicts start/end time", match_id=int(row["match_id"]), shift_id=int(row["shift_id"])))
+
+    bad_shift_refs = _rows(
+        con,
+        """
+        SELECT sh.match_id, sh.shift_id, sh.team_id, sh.player_id
+        FROM shifts sh
+        LEFT JOIN players p
+          ON p.match_id=sh.match_id AND p.team_id=sh.team_id AND p.player_id=sh.player_id
+        WHERE p.player_id IS NULL
+        LIMIT 50
+        """,
+    )
+    for row in bad_shift_refs:
+        warnings.append(_issue("shift_player_reference", "shift references player outside match roster/team", match_id=int(row["match_id"]), team_id=int(row["team_id"]), shift_id=int(row["shift_id"]), player_id=int(row["player_id"])))
+
+    # 3) Goal events are the authoritative scoring source.
     goal_events = _rows(
         con,
         """
@@ -212,7 +276,7 @@ def audit_database(con: Any) -> dict[str, Any]:
                 hard.append(_issue("goal_score_progression", f"goal score progression {prev_home}:{prev_away} -> {home}:{away} contradicts scoring team", match_id=mid, team_id=team_id, time_s=event.get("game_time_s")))
             prev_home, prev_away = home, away
 
-    # 3) Every official non-shootout goal must pair to one goal shot.
+    # 4) Every official non-shootout goal must pair to one goal shot.
     goal_shots = _rows(
         con,
         """
@@ -381,7 +445,7 @@ def audit_database(con: Any) -> dict[str, Any]:
                 elif balance.startswith("SH") and len(expected_for) >= len(expected_against):
                     warnings.append(_issue("goal_balance_attendant_disagreement", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
 
-    # 4) Referential integrity across shot, faceoff and on-ice data.
+    # 5) Referential integrity across shot, faceoff and on-ice data.
     bad_shot_refs = _rows(
         con,
         """
@@ -415,7 +479,22 @@ def audit_database(con: Any) -> dict[str, Any]:
     for row in bad_faceoffs:
         warnings.append(_issue("faceoff_team_reference", "faceoff winner/loser team mapping is missing or identical", match_id=int(row["match_id"]), faceoff_id=int(row["faceoff_id"]), winner_team_id=row.get("winner_team_id"), loser_team_id=row.get("loser_team_id")))
 
-    # 5) Implausible manpower is not safe to auto-correct for normal shots.
+    bad_faceoff_players = _rows(
+        con,
+        """
+        SELECT f.match_id, f.faceoff_id, f.winner_player_id, f.winner_team_id,
+               f.loser_player_id, f.loser_team_id
+        FROM faceoffs f
+        LEFT JOIN players wp ON wp.match_id=f.match_id AND wp.player_id=f.winner_player_id AND wp.team_id=f.winner_team_id
+        LEFT JOIN players lp ON lp.match_id=f.match_id AND lp.player_id=f.loser_player_id AND lp.team_id=f.loser_team_id
+        WHERE wp.player_id IS NULL OR lp.player_id IS NULL
+        LIMIT 50
+        """,
+    )
+    for row in bad_faceoff_players:
+        warnings.append(_issue("faceoff_player_reference", "faceoff participant is missing from mapped match roster/team", match_id=int(row["match_id"]), faceoff_id=int(row["faceoff_id"])))
+
+    # 6) Implausible manpower is not safe to auto-correct for normal shots.
     # Some DEL shift feeds contain real gaps or overlapping shifts. Keep these
     # visible as match-level warnings instead of inventing players.
     implausible = _rows(
@@ -441,7 +520,7 @@ def audit_database(con: Any) -> dict[str, Any]:
             against_range=[int(row["min_against"]), int(row["max_against"])],
         ))
 
-    # 6) Player-game aggregates should be internally coherent and reconcile to goals.
+    # 7) Player-game aggregates should be internally coherent and reconcile to goals.
     pstats = _rows(
         con,
         """
@@ -470,10 +549,18 @@ def audit_database(con: Any) -> dict[str, Any]:
         if points != goals + assists:
             hard.append(_issue("player_points_formula", "player points != goals + assists", match_id=mid, team_id=tid, player_id=int(row["player_id"]), goals=goals, assists=assists, points=points))
         attempts, sog = int(row.get("shots_attempts") or 0), int(row.get("shots_on_goal") or 0)
-        if attempts < 0 or sog < 0 or int(row.get("shots_missed") or 0) < 0 or int(row.get("shots_blocked") or 0) < 0:
-            hard.append(_issue("negative_player_stat", "negative player shot statistic", match_id=mid, team_id=tid, player_id=int(row["player_id"])))
+        missed, blocked = int(row.get("shots_missed") or 0), int(row.get("shots_blocked") or 0)
+        if min(attempts, sog, missed, blocked, goals, assists, points, int(row.get("pp_goals") or 0), int(row.get("sh_goals") or 0), int(row.get("faceoffs_won") or 0), int(row.get("faceoffs_lost") or 0), int(row.get("time_on_ice_s") or 0), int(row.get("shifts") or 0)) < 0:
+            hard.append(_issue("negative_player_stat", "negative player statistic", match_id=mid, team_id=tid, player_id=int(row["player_id"])))
         if sog > attempts and attempts > 0:
             warnings.append(_issue("player_sog_vs_attempts", "player SOG exceeds reported shot attempts", match_id=mid, team_id=tid, player_id=int(row["player_id"]), sog=sog, attempts=attempts))
+        if attempts != sog + missed + blocked:
+            warnings.append(_issue("player_shot_attempt_components", "reported attempts != SOG + missed + blocked", match_id=mid, team_id=tid, player_id=int(row["player_id"]), attempts=attempts, components=sog + missed + blocked))
+        if int(row.get("pp_goals") or 0) + int(row.get("sh_goals") or 0) > goals:
+            hard.append(_issue("player_special_team_goals", "PP + SH goals exceed total goals", match_id=mid, team_id=tid, player_id=int(row["player_id"])))
+        toi = int(row.get("time_on_ice_s") or 0)
+        if int(row.get("time_on_ice_pp_s") or 0) > toi or int(row.get("time_on_ice_sh_s") or 0) > toi:
+            hard.append(_issue("player_toi_components", "PP/SH TOI exceeds total TOI", match_id=mid, team_id=tid, player_id=int(row["player_id"])))
 
     event_goal_totals: dict[tuple[int, int], int] = defaultdict(int)
     for event in goal_events:
