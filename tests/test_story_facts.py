@@ -2,7 +2,7 @@ import pytest
 
 duckdb = pytest.importorskip("duckdb")
 
-from delstats.story_facts import build_story_facts, scoring_streaks
+from delstats.story_facts import StoryFact, build_story_facts, scoring_streaks, select_story_facts
 
 
 def test_scoring_streaks_detects_active_and_ended_series():
@@ -108,8 +108,24 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
         "previous_match": {"opponent_name": "Krefeld Pinguine"},
         "players_in": [],
         "players_out": [],
-        "forwards": {"stable": ["A", "B"], "new": ["C", "D"], "dropped": ["E", "F"], "current_count": 4, "previous_count": 4},
-        "defense": {"stable": ["G", "H", "I"], "new": [], "dropped": [], "current_count": 3, "previous_count": 3},
+        "forwards": {
+            "previous": ["A", "B", "E", "F"],
+            "current": ["A", "B", "C", "D"],
+            "stable": ["A", "B"],
+            "new": ["C", "D"],
+            "dropped": ["E", "F"],
+            "current_count": 4,
+            "previous_count": 4,
+        },
+        "defense": {
+            "previous": ["G", "H", "I"],
+            "current": ["G", "H", "I"],
+            "stable": ["G", "H", "I"],
+            "new": [],
+            "dropped": [],
+            "current_count": 3,
+            "previous_count": 3,
+        },
     }
     insight = {
         "ebb": {
@@ -156,10 +172,42 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
         opponent_label="AEV",
     )
 
-    assert 4 <= len(facts) <= 8
-    assert any("Umbau im Schlussdrittel" in fact for fact in facts)
+    assert 4 <= len(facts) <= 12
+    assert any(
+        "Umbau im Schlussdrittel" in fact
+        and "Vorher:" in fact
+        and "Nachher:" in fact
+        for fact in facts
+    )
+    assert any(
+        "Lineup gegenüber Krefeld Pinguine" in fact
+        and "Sturm vorher:" in fact
+        and "→ Jetzt:" in fact
+        for fact in facts
+    )
     assert any("Mehr Schussvolumen als klare Chancenüberlegenheit" in fact for fact in facts)
     assert any("Frederik Tiffels" in fact and "0,53 xG" in fact for fact in facts)
     assert any(group["title"] == "🔥 Aktuelle Story" for group in groups)
     assert any(group["title"] == "🔄 Lineup & Reihen" for group in groups)
     assert any(group["title"] == "🔬 Nerd Fact" for group in groups)
+
+
+
+def test_story_selection_can_fill_twelve_fact_slots():
+    categories = ("current_story", "lineup", "form", "nerd")
+    candidates = []
+    for category in categories:
+        for idx in range(3):
+            candidates.append(
+                StoryFact(
+                    category=category,
+                    score=100 - idx,
+                    kind=f"{category}_{idx}",
+                    text=f"{category} fact {idx}",
+                )
+            )
+
+    facts, groups = select_story_facts(candidates)
+
+    assert len(facts) == 12
+    assert sum(len(group["facts"]) for group in groups) == 12
