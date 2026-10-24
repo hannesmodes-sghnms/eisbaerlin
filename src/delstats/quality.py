@@ -229,80 +229,124 @@ def audit_database(con: Any) -> dict[str, Any]:
     for row in goal_shots:
         shots_by_match[int(row["match_id"])].append(row)
 
-    matched_shots: set[tuple[int, int]] = set()
+    events_by_match_team: dict[tuple[int, int], list[dict[str, Any]]] = defaultdict(list)
+    shots_by_match_team: dict[tuple[int, int], list[dict[str, Any]]] = defaultdict(list)
     for event in goal_events:
-        mid = int(event["match_id"])
         if str(event.get("period_key") or "").lower() == "shootout":
             continue
-        team_id = int(event.get("team_id") or -1)
-        scorer = event.get("scorer_player_id")
-        t = int(event.get("game_time_s") or 0)
-        candidates = [
-            shot for shot in shots_by_match.get(mid, [])
-            if int(shot["team_id"]) == team_id
-            and abs(int(shot["game_time_s"]) - t) <= 2
-            and (scorer is None or shot.get("player_id") is None or int(shot["player_id"]) == int(scorer))
-        ]
-        if not candidates:
-            hard.append(_issue("goal_event_without_shot", "official goal event has no matching goal shot within ±2s", match_id=mid, team_id=team_id, time_s=t, scorer_player_id=scorer))
-            continue
-        candidates.sort(key=lambda shot: (abs(int(shot["game_time_s"]) - t), int(shot["shot_id"])))
-        if len(candidates) > 1 and abs(int(candidates[0]["game_time_s"]) - t) == abs(int(candidates[1]["game_time_s"]) - t):
-            hard.append(_issue("ambiguous_goal_shot", "multiple equally close goal shots match one event", match_id=mid, team_id=team_id, time_s=t, shot_ids=[int(x["shot_id"]) for x in candidates[:3]]))
-            continue
-        shot = candidates[0]
-        matched_shots.add((mid, int(shot["shot_id"])))
+        if event.get("team_id") is not None:
+            events_by_match_team[(int(event["match_id"]), int(event["team_id"]))].append(event)
+    for shot in goal_shots:
+        shots_by_match_team[(int(shot["match_id"]), int(shot["team_id"]))].append(shot)
 
-        data = _safe_json(event.get("raw_json")).get("data") or {}
-        attendants = data.get("attendants") or {}
-        goalies = goalies_by_match.get(mid, set())
-
-        def skaters(entries: list[dict[str, Any]]) -> list[int]:
-            return sorted({
-                int(item["playerId"])
-                for item in entries
-                if item.get("playerId") is not None and int(item["playerId"]) not in goalies
-            })
-
-        expected_for = skaters(attendants.get("positive") or [])
-        expected_against = skaters(attendants.get("negative") or [])
-        if not (3 <= len(expected_for) <= 6 and 3 <= len(expected_against) <= 6):
-            warnings.append(_issue("goal_attendants_incomplete", "goal attendants do not resolve to 3..6 skaters per side", match_id=mid, team_id=team_id, time_s=t, for_count=len(expected_for), against_count=len(expected_against)))
-            continue
-
-        actual_for = sorted(int(x) for x in (shot.get("on_ice_for_player_ids") or []))
-        actual_against = sorted(int(x) for x in (shot.get("on_ice_against_player_ids") or []))
-        if actual_for != expected_for or actual_against != expected_against:
+    for key in sorted(set(events_by_match_team) | set(shots_by_match_team)):
+        mid, team_id = key
+        events = sorted(
+            events_by_match_team.get(key, []),
+            key=lambda row: (int(row.get("game_time_s") or 0), int(row.get("sequence") or 0)),
+        )
+        shots = sorted(
+            shots_by_match_team.get(key, []),
+            key=lambda row: (int(row.get("game_time_s") or 0), int(row.get("shot_id") or 0)),
+        )
+        if len(events) != len(shots):
             hard.append(_issue(
-                "goal_context_mismatch",
-                "goal shot on-ice context differs from official goal attendants",
+                "goal_feed_count_mismatch",
+                f"official goal events ({len(events)}) != goal shots ({len(shots)}) for team",
                 match_id=mid,
                 team_id=team_id,
-                time_s=t,
-                shot_id=int(shot["shot_id"]),
-                expected_for=expected_for,
-                actual_for=actual_for,
-                expected_against=expected_against,
-                actual_against=actual_against,
             ))
-        expected_manpower = f"{len(expected_for)}v{len(expected_against)}"
-        if str(shot.get("manpower")) != expected_manpower:
-            hard.append(_issue("goal_manpower_mismatch", f"goal manpower {shot.get('manpower')} != official attendants {expected_manpower}", match_id=mid, team_id=team_id, time_s=t, shot_id=int(shot["shot_id"])))
+            continue
 
-        balance = str(event.get("balance") or data.get("balance") or "")
-        empty_net = bool(data.get("en"))
-        if not empty_net:
-            if balance == "EQ" and len(expected_for) != len(expected_against):
-                hard.append(_issue("goal_balance_mismatch", f"EQ goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=t))
-            elif balance.startswith("PP") and balance != "PP0" and len(expected_for) <= len(expected_against):
-                hard.append(_issue("goal_balance_mismatch", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=t))
-            elif balance.startswith("SH") and len(expected_for) >= len(expected_against):
-                hard.append(_issue("goal_balance_mismatch", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=t))
+        for event, shot in zip(events, shots):
+            event_time = int(event.get("game_time_s") or 0)
+            shot_time = int(shot.get("game_time_s") or 0)
+            delta = event_time - shot_time
+            scorer = event.get("scorer_player_id")
+            shot_player = shot.get("player_id")
+            if abs(delta) > 5:
+                warnings.append(_issue(
+                    "goal_time_drift",
+                    f"goal event/shot timestamps differ by {delta:+d}s",
+                    match_id=mid,
+                    team_id=team_id,
+                    event_time_s=event_time,
+                    shot_time_s=shot_time,
+                    shot_id=int(shot["shot_id"]),
+                ))
+            if scorer is not None and shot_player is not None and int(scorer) != int(shot_player):
+                warnings.append(_issue(
+                    "goal_scorer_disagreement",
+                    "official scorer differs from shot-feed shooter",
+                    match_id=mid,
+                    team_id=team_id,
+                    event_time_s=event_time,
+                    shot_time_s=shot_time,
+                    official_scorer=int(scorer),
+                    shot_player=int(shot_player),
+                    shot_id=int(shot["shot_id"]),
+                ))
 
-    for shot in goal_shots:
-        key = (int(shot["match_id"]), int(shot["shot_id"]))
-        if key not in matched_shots:
-            warnings.append(_issue("goal_shot_without_event", "goal shot has no matching non-shootout goal event", match_id=key[0], team_id=int(shot["team_id"]), time_s=int(shot["game_time_s"]), shot_id=key[1]))
+            data = _safe_json(event.get("raw_json")).get("data") or {}
+            attendants = data.get("attendants") or {}
+            goalies = goalies_by_match.get(mid, set())
+
+            def skaters(entries: list[dict[str, Any]]) -> list[int]:
+                return sorted({
+                    int(item["playerId"])
+                    for item in entries
+                    if item.get("playerId") is not None and int(item["playerId"]) not in goalies
+                })
+
+            expected_for = skaters(attendants.get("positive") or [])
+            expected_against = skaters(attendants.get("negative") or [])
+            if not (3 <= len(expected_for) <= 6 and 3 <= len(expected_against) <= 6):
+                warnings.append(_issue(
+                    "goal_attendants_incomplete",
+                    "goal attendants do not resolve to 3..6 skaters per side",
+                    match_id=mid,
+                    team_id=team_id,
+                    time_s=event_time,
+                    for_count=len(expected_for),
+                    against_count=len(expected_against),
+                ))
+                continue
+
+            actual_for = sorted(int(x) for x in (shot.get("on_ice_for_player_ids") or []))
+            actual_against = sorted(int(x) for x in (shot.get("on_ice_against_player_ids") or []))
+            if actual_for != expected_for or actual_against != expected_against:
+                hard.append(_issue(
+                    "goal_context_mismatch",
+                    "goal shot on-ice context differs from official goal attendants",
+                    match_id=mid,
+                    team_id=team_id,
+                    time_s=event_time,
+                    shot_id=int(shot["shot_id"]),
+                    expected_for=expected_for,
+                    actual_for=actual_for,
+                    expected_against=expected_against,
+                    actual_against=actual_against,
+                ))
+            expected_manpower = f"{len(expected_for)}v{len(expected_against)}"
+            if str(shot.get("manpower")) != expected_manpower:
+                hard.append(_issue(
+                    "goal_manpower_mismatch",
+                    f"goal manpower {shot.get('manpower')} != official attendants {expected_manpower}",
+                    match_id=mid,
+                    team_id=team_id,
+                    time_s=event_time,
+                    shot_id=int(shot["shot_id"]),
+                ))
+
+            balance = str(event.get("balance") or data.get("balance") or "")
+            empty_net = bool(data.get("en"))
+            if not empty_net:
+                if balance == "EQ" and len(expected_for) != len(expected_against):
+                    hard.append(_issue("goal_balance_mismatch", f"EQ goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
+                elif balance.startswith("PP") and balance != "PP0" and len(expected_for) <= len(expected_against):
+                    hard.append(_issue("goal_balance_mismatch", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
+                elif balance.startswith("SH") and len(expected_for) >= len(expected_against):
+                    hard.append(_issue("goal_balance_mismatch", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
 
     # 4) Referential integrity across shot, faceoff and on-ice data.
     bad_shot_refs = _rows(
