@@ -35,7 +35,7 @@ def test_scoring_streaks_detects_active_and_ended_series():
     for match_id, day in enumerate(("2026-10-01", "2026-10-03", "2026-10-05", "2026-10-07"), start=1):
         con.execute("INSERT INTO team_game_stats VALUES (?, 3, ?)", [match_id, day])
 
-    active = [(1, 1, 0), (0, 1, 1), (1, 1, 0), (0, 1, 1)]
+    active = [(1, 1, 2), (0, 1, 1), (1, 1, 2), (0, 1, 1)]
     ended = [(0, 1, 1), (1, 0, 1), (0, 2, 2), (0, 0, 0)]
     for idx, (goals, assists, points) in enumerate(active, start=1):
         con.execute(
@@ -57,7 +57,7 @@ def test_scoring_streaks_detects_active_and_ended_series():
             "games": 4,
             "goals": 2,
             "assists": 4,
-            "points": 4,
+            "points": 6,
         }
     ]
     assert result["ended_this_game"] == [
