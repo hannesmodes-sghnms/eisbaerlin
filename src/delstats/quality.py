@@ -338,7 +338,33 @@ def audit_database(con: Any) -> dict[str, Any]:
     for row in bad_faceoffs:
         warnings.append(_issue("faceoff_team_reference", "faceoff winner/loser team mapping is missing or identical", match_id=int(row["match_id"]), faceoff_id=int(row["faceoff_id"]), winner_team_id=row.get("winner_team_id"), loser_team_id=row.get("loser_team_id")))
 
-    # 5) Player-game aggregates should be internally coherent and reconcile to goals.
+    # 5) Implausible manpower is not safe to auto-correct for normal shots.
+    # Some DEL shift feeds contain real gaps or overlapping shifts. Keep these
+    # visible as match-level warnings instead of inventing players.
+    implausible = _rows(
+        con,
+        """
+        SELECT match_id, count(*) AS shots,
+               min(on_ice_for_count) AS min_for, max(on_ice_for_count) AS max_for,
+               min(on_ice_against_count) AS min_against, max(on_ice_against_count) AS max_against
+        FROM shot_context
+        WHERE on_ice_for_count NOT BETWEEN 3 AND 6
+           OR on_ice_against_count NOT BETWEEN 3 AND 6
+        GROUP BY match_id
+        ORDER BY shots DESC, match_id
+        """,
+    )
+    for row in implausible:
+        warnings.append(_issue(
+            "implausible_manpower",
+            f"{row['shots']} shot(s) have incomplete/overlapping shift context",
+            match_id=int(row["match_id"]),
+            shots=int(row["shots"]),
+            for_range=[int(row["min_for"]), int(row["max_for"])],
+            against_range=[int(row["min_against"]), int(row["max_against"])],
+        ))
+
+    # 6) Player-game aggregates should be internally coherent and reconcile to goals.
     pstats = _rows(
         con,
         """
