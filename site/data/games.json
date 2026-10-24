@@ -4,8 +4,20 @@
     "abbr": "EBB",
     "name": "Eisbären Berlin"
   },
-  "generated_at": "2026-10-23T19:19:56.130488+00:00",
+  "generated_at": "2026-10-24T03:03:56.452719+00:00",
   "completed_games": [
+    {
+      "match_id": 4462,
+      "date": "2026-10-23",
+      "home_team_name": "Eisbären Berlin",
+      "away_team_name": "Augsburger Panther",
+      "home_score": 2,
+      "away_score": 1,
+      "ebb_home": true,
+      "opponent_name": "Augsburger Panther",
+      "label": "2026-10-23 · Eisbären Berlin 2:1 Augsburger Panther",
+      "data_path": "data/games/4462.json"
+    },
     {
       "match_id": 4454,
       "date": "2026-10-18",
@@ -144,109 +156,124 @@
           "label": "Bilanz",
           "key": "record",
           "kind": "text",
-          "ebb": "8-2",
-          "opponent": "4-7"
+          "ebb": "9-2",
+          "opponent": "5-7"
         },
         {
           "label": "Corsi 5v5 %",
           "key": "corsi_5v5_pct",
           "kind": "percent",
-          "ebb": 52.016,
-          "opponent": 48.872
+          "ebb": 52.32,
+          "opponent": 48.144
         },
         {
           "label": "Corsi / Spiel",
           "key": "corsi_per_game",
           "kind": "decimal",
-          "ebb": 54.2,
-          "opponent": 51.73
+          "ebb": 54.55,
+          "opponent": 50.5
         },
         {
           "label": "SOG / Spiel",
           "key": "sog_per_game",
           "kind": "decimal",
-          "ebb": 29.6,
-          "opponent": 27.45
+          "ebb": 29.27,
+          "opponent": 27.08
         },
         {
           "label": "Slot Attempts / Spiel",
           "key": "slot_per_game",
           "kind": "decimal",
-          "ebb": 16.2,
-          "opponent": 13.73
+          "ebb": 15.64,
+          "opponent": 13.5
         },
         {
           "label": "Tore / Spiel",
           "key": "goals_per_game",
           "kind": "decimal",
-          "ebb": 3.8,
-          "opponent": 2.36
+          "ebb": 3.64,
+          "opponent": 2.5
         },
         {
           "label": "Gegentore / Spiel",
           "key": "goals_against_per_game",
           "kind": "decimal",
-          "ebb": 1.6,
-          "opponent": 3.73
+          "ebb": 1.55,
+          "opponent": 3.58
         },
         {
           "label": "PDO 5v5",
           "key": "pdo_5v5",
           "kind": "decimal",
-          "ebb": 104.873,
-          "opponent": 96.551
+          "ebb": 103.877,
+          "opponent": 97.305
         },
         {
           "label": "Zeit in Führung / Spiel",
           "key": "time_leading_per_game_s",
           "kind": "time",
-          "ebb": 1824,
-          "opponent": 569
+          "ebb": 1765,
+          "opponent": 611
         }
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-10-23T19:01:43Z",
+        "snapshot_at": "2026-10-24T03:03:50Z",
         "rows": [
           {
             "label": "Pässe",
-            "ebb": "2601 / 3168",
-            "opponent": "2647 / 3220",
+            "ebb": "2835 / 3453",
+            "opponent": "2830 / 3448",
             "kind": "text"
           },
           {
             "label": "Passquote",
             "ebb": 82.1,
-            "opponent": 82.2,
+            "opponent": 82.08,
             "kind": "percent"
           },
           {
             "label": "Puck Contests",
-            "ebb": "1120 / 2105",
-            "opponent": "1099 / 2184",
+            "ebb": "1250 / 2334",
+            "opponent": "1222 / 2415",
             "kind": "text"
           },
           {
             "label": "PCW%",
-            "ebb": 53.21,
-            "opponent": 50.32,
+            "ebb": 53.56,
+            "opponent": 50.6,
             "kind": "percent"
           },
           {
             "label": "xG Summe",
-            "ebb": 33.14,
-            "opponent": 32.24,
+            "ebb": 35.85,
+            "opponent": 34.66,
             "kind": "decimal2"
           },
           {
             "label": "xG / Spiel",
-            "ebb": 3.31,
-            "opponent": 2.93,
+            "ebb": 3.26,
+            "opponent": 2.89,
             "kind": "decimal2"
           }
         ]
       },
       "ebb_recent": [
+        {
+          "match_id": 4462,
+          "match_date": "2026-10-23",
+          "opponent_team_id": 13,
+          "opponent_shortcut": "AEV",
+          "opponent_name": "Augsburger Panther",
+          "home_road": "home",
+          "goals_for": 2,
+          "goals_against": 1,
+          "corsi_5v5_pct": 54.839,
+          "slot_attempts_for": 10,
+          "pdo_5v5": 94.118,
+          "result": "2:1",
+          "outcome": "W"
+        },
         {
           "match_id": 4454,
           "match_date": "2026-10-18",
@@ -306,24 +333,24 @@
           "pdo_5v5": 113.636,
           "result": "5:0",
           "outcome": "W"
-        },
-        {
-          "match_id": 4425,
-          "match_date": "2026-10-04",
-          "opponent_team_id": 14,
-          "opponent_shortcut": "NIT",
-          "opponent_name": "Nürnberg Ice Tigers",
-          "home_road": "home",
-          "goals_for": 4,
-          "goals_against": 1,
-          "corsi_5v5_pct": 44.737,
-          "slot_attempts_for": 18,
-          "pdo_5v5": 113.333,
-          "result": "4:1",
-          "outcome": "W"
         }
       ],
       "opponent_recent": [
+        {
+          "match_id": 4461,
+          "match_date": "2026-10-23",
+          "opponent_team_id": 9,
+          "opponent_shortcut": "BHV",
+          "opponent_name": "Pinguins Bremerhaven",
+          "home_road": "home",
+          "goals_for": 4,
+          "goals_against": 2,
+          "corsi_5v5_pct": 39.062,
+          "slot_attempts_for": 11,
+          "pdo_5v5": 105.556,
+          "result": "4:2",
+          "outcome": "W"
+        },
         {
           "match_id": 4731,
           "match_date": "2026-10-20",
@@ -383,59 +410,64 @@
           "pdo_5v5": 99.545,
           "result": "3:4",
           "outcome": "L"
-        },
-        {
-          "match_id": 4433,
-          "match_date": "2026-10-09",
-          "opponent_team_id": 11,
-          "opponent_shortcut": "KEC",
-          "opponent_name": "Kölner Haie",
-          "home_road": "visitor",
-          "goals_for": 4,
-          "goals_against": 1,
-          "corsi_5v5_pct": 44.444,
-          "slot_attempts_for": 21,
-          "pdo_5v5": 105.678,
-          "result": "4:1",
-          "outcome": "W"
         }
       ],
       "head_to_head": [],
       "opponent_top_scorers": [
         {
-          "player_id": 27,
-          "player_name": "Mirko Höfflin",
-          "jersey": 10,
-          "position": "FO",
-          "games": 11,
-          "goals": 6,
-          "assists": 3,
-          "points": 9,
-          "shots_on_goal": 24,
-          "primary_assists": 2,
-          "secondary_assists": 1,
-          "primary_points": 8,
-          "points_per_game": 0.82,
-          "last5_games": 5,
-          "last5_goals": 4,
-          "last5_assists": 2,
-          "last5_points": 6,
-          "last5_primary_assists": 1
-        },
-        {
           "player_id": 1850,
           "player_name": "Philip Feist",
           "jersey": 9,
           "position": "FO",
-          "games": 11,
+          "games": 12,
           "goals": 5,
-          "assists": 4,
-          "points": 9,
-          "shots_on_goal": 18,
-          "primary_assists": 2,
-          "secondary_assists": 2,
+          "assists": 6,
+          "points": 11,
+          "shots_on_goal": 20,
+          "primary_assists": 3,
+          "secondary_assists": 3,
+          "primary_points": 8,
+          "points_per_game": 0.92,
+          "last5_games": 5,
+          "last5_goals": 3,
+          "last5_assists": 4,
+          "last5_points": 7,
+          "last5_primary_assists": 2
+        },
+        {
+          "player_id": 2238,
+          "player_name": "Kyle Platzer",
+          "jersey": 88,
+          "position": "FO",
+          "games": 12,
+          "goals": 4,
+          "assists": 6,
+          "points": 10,
+          "shots_on_goal": 23,
+          "primary_assists": 3,
+          "secondary_assists": 3,
           "primary_points": 7,
-          "points_per_game": 0.82,
+          "points_per_game": 0.83,
+          "last5_games": 5,
+          "last5_goals": 3,
+          "last5_assists": 2,
+          "last5_points": 5,
+          "last5_primary_assists": 1
+        },
+        {
+          "player_id": 27,
+          "player_name": "Mirko Höfflin",
+          "jersey": 10,
+          "position": "FO",
+          "games": 12,
+          "goals": 6,
+          "assists": 3,
+          "points": 9,
+          "shots_on_goal": 25,
+          "primary_assists": 2,
+          "secondary_assists": 1,
+          "primary_points": 8,
+          "points_per_game": 0.75,
           "last5_games": 5,
           "last5_goals": 3,
           "last5_assists": 2,
@@ -447,59 +479,39 @@
           "player_name": "Håkon Hänelt",
           "jersey": 19,
           "position": "FO",
-          "games": 11,
-          "goals": 1,
-          "assists": 6,
-          "points": 7,
-          "shots_on_goal": 8,
-          "primary_assists": 4,
+          "games": 12,
+          "goals": 2,
+          "assists": 7,
+          "points": 9,
+          "shots_on_goal": 10,
+          "primary_assists": 5,
           "secondary_assists": 2,
-          "primary_points": 5,
-          "points_per_game": 0.64,
+          "primary_points": 7,
+          "points_per_game": 0.75,
           "last5_games": 5,
-          "last5_goals": 1,
+          "last5_goals": 2,
           "last5_assists": 4,
-          "last5_points": 5,
+          "last5_points": 6,
           "last5_primary_assists": 4
-        },
-        {
-          "player_id": 2238,
-          "player_name": "Kyle Platzer",
-          "jersey": 88,
-          "position": "FO",
-          "games": 11,
-          "goals": 1,
-          "assists": 6,
-          "points": 7,
-          "shots_on_goal": 20,
-          "primary_assists": 3,
-          "secondary_assists": 3,
-          "primary_points": 4,
-          "points_per_game": 0.64,
-          "last5_games": 5,
-          "last5_goals": 0,
-          "last5_assists": 3,
-          "last5_points": 3,
-          "last5_primary_assists": 1
         },
         {
           "player_id": 3560,
           "player_name": "Eric Martinsson",
           "jersey": 46,
           "position": "DE",
-          "games": 11,
+          "games": 12,
           "goals": 0,
           "assists": 7,
           "points": 7,
-          "shots_on_goal": 8,
+          "shots_on_goal": 9,
           "primary_assists": 4,
           "secondary_assists": 3,
           "primary_points": 4,
-          "points_per_game": 0.64,
+          "points_per_game": 0.58,
           "last5_games": 5,
           "last5_goals": 0,
-          "last5_assists": 4,
-          "last5_points": 4,
+          "last5_assists": 3,
+          "last5_points": 3,
           "last5_primary_assists": 1
         }
       ],
@@ -519,7 +531,7 @@
           "sa_5v5": 128,
           "ga_5v5": 11,
           "save_pct_5v5": 91.4,
-          "gsaa_5v5": -1.53,
+          "gsaa_5v5": -1.48,
           "slot_sa_5v5": 36,
           "slot_save_pct_5v5": 75.0,
           "last5_games": 5,
@@ -529,22 +541,22 @@
           "player_id": 3424,
           "name": "Simon Wolf",
           "jersey": 35,
-          "games": 4,
-          "wins": 1,
+          "games": 5,
+          "wins": 2,
           "losses": 2,
-          "toi_s": 11888,
-          "saves": 99,
-          "goals_against": 14,
-          "save_pct": 87.6,
-          "gaa": 4.24,
-          "sa_5v5": 83,
-          "ga_5v5": 9,
-          "save_pct_5v5": 89.2,
-          "gsaa_5v5": -2.86,
-          "slot_sa_5v5": 30,
-          "slot_save_pct_5v5": 76.7,
-          "last5_games": 4,
-          "last5_save_pct": 87.6
+          "toi_s": 15488,
+          "saves": 131,
+          "goals_against": 16,
+          "save_pct": 89.1,
+          "gaa": 3.72,
+          "sa_5v5": 101,
+          "ga_5v5": 11,
+          "save_pct_5v5": 89.1,
+          "gsaa_5v5": -3.49,
+          "slot_sa_5v5": 36,
+          "slot_save_pct_5v5": 75.0,
+          "last5_games": 5,
+          "last5_save_pct": 89.1
         }
       ]
     },
@@ -564,73 +576,73 @@
           "label": "Bilanz",
           "key": "record",
           "kind": "text",
-          "ebb": "8-2",
-          "opponent": "6-5"
+          "ebb": "9-2",
+          "opponent": "7-5"
         },
         {
           "label": "Corsi 5v5 %",
           "key": "corsi_5v5_pct",
           "kind": "percent",
-          "ebb": 52.016,
-          "opponent": 50.397
+          "ebb": 52.32,
+          "opponent": 50.83
         },
         {
           "label": "Corsi / Spiel",
           "key": "corsi_per_game",
           "kind": "decimal",
-          "ebb": 54.2,
-          "opponent": 58.91
+          "ebb": 54.55,
+          "opponent": 59.17
         },
         {
           "label": "SOG / Spiel",
           "key": "sog_per_game",
           "kind": "decimal",
-          "ebb": 29.6,
-          "opponent": 31.0
+          "ebb": 29.27,
+          "opponent": 31.75
         },
         {
           "label": "Slot Attempts / Spiel",
           "key": "slot_per_game",
           "kind": "decimal",
-          "ebb": 16.2,
-          "opponent": 17.0
+          "ebb": 15.64,
+          "opponent": 17.17
         },
         {
           "label": "Tore / Spiel",
           "key": "goals_per_game",
           "kind": "decimal",
-          "ebb": 3.8,
-          "opponent": 3.09
+          "ebb": 3.64,
+          "opponent": 3.17
         },
         {
           "label": "Gegentore / Spiel",
           "key": "goals_against_per_game",
           "kind": "decimal",
-          "ebb": 1.6,
-          "opponent": 3.27
+          "ebb": 1.55,
+          "opponent": 3.08
         },
         {
           "label": "PDO 5v5",
           "key": "pdo_5v5",
           "kind": "decimal",
-          "ebb": 104.873,
-          "opponent": 97.634
+          "ebb": 103.877,
+          "opponent": 98.002
         },
         {
           "label": "Zeit in Führung / Spiel",
           "key": "time_leading_per_game_s",
           "kind": "time",
-          "ebb": 1824,
-          "opponent": 1584
+          "ebb": 1765,
+          "opponent": 1679
         }
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-10-23T19:01:43Z",
+        "snapshot_at": "2026-10-24T03:03:50Z",
         "rows": [
           {
             "label": "Pässe",
-            "ebb": "2601 / 3168",
+            "ebb": "2835 / 3453",
             "opponent": null,
             "kind": "text"
           },
@@ -642,31 +654,46 @@
           },
           {
             "label": "Puck Contests",
-            "ebb": "1120 / 2105",
+            "ebb": "1250 / 2334",
             "opponent": null,
             "kind": "text"
           },
           {
             "label": "PCW%",
-            "ebb": 53.21,
+            "ebb": 53.56,
             "opponent": null,
             "kind": "percent"
           },
           {
             "label": "xG Summe",
-            "ebb": 33.14,
+            "ebb": 35.85,
             "opponent": null,
             "kind": "decimal2"
           },
           {
             "label": "xG / Spiel",
-            "ebb": 3.31,
+            "ebb": 3.26,
             "opponent": null,
             "kind": "decimal2"
           }
         ]
       },
       "ebb_recent": [
+        {
+          "match_id": 4462,
+          "match_date": "2026-10-23",
+          "opponent_team_id": 13,
+          "opponent_shortcut": "AEV",
+          "opponent_name": "Augsburger Panther",
+          "home_road": "home",
+          "goals_for": 2,
+          "goals_against": 1,
+          "corsi_5v5_pct": 54.839,
+          "slot_attempts_for": 10,
+          "pdo_5v5": 94.118,
+          "result": "2:1",
+          "outcome": "W"
+        },
         {
           "match_id": 4454,
           "match_date": "2026-10-18",
@@ -726,24 +753,24 @@
           "pdo_5v5": 113.636,
           "result": "5:0",
           "outcome": "W"
-        },
-        {
-          "match_id": 4425,
-          "match_date": "2026-10-04",
-          "opponent_team_id": 14,
-          "opponent_shortcut": "NIT",
-          "opponent_name": "Nürnberg Ice Tigers",
-          "home_road": "home",
-          "goals_for": 4,
-          "goals_against": 1,
-          "corsi_5v5_pct": 44.737,
-          "slot_attempts_for": 18,
-          "pdo_5v5": 113.333,
-          "result": "4:1",
-          "outcome": "W"
         }
       ],
       "opponent_recent": [
+        {
+          "match_id": 4467,
+          "match_date": "2026-10-23",
+          "opponent_team_id": 8,
+          "opponent_shortcut": "WOB",
+          "opponent_name": "Grizzlys Wolfsburg",
+          "home_road": "visitor",
+          "goals_for": 4,
+          "goals_against": 1,
+          "corsi_5v5_pct": 55.422,
+          "slot_attempts_for": 19,
+          "pdo_5v5": 102.143,
+          "result": "4:1",
+          "outcome": "W"
+        },
         {
           "match_id": 4460,
           "match_date": "2026-10-20",
@@ -803,21 +830,6 @@
           "pdo_5v5": 86.904,
           "result": "2:3",
           "outcome": "L"
-        },
-        {
-          "match_id": 4437,
-          "match_date": "2026-10-09",
-          "opponent_team_id": 12,
-          "opponent_shortcut": "RBM",
-          "opponent_name": "EHC Red Bull München",
-          "home_road": "visitor",
-          "goals_for": 5,
-          "goals_against": 1,
-          "corsi_5v5_pct": 43.182,
-          "slot_attempts_for": 24,
-          "pdo_5v5": 105.882,
-          "result": "5:1",
-          "outcome": "W"
         }
       ],
       "head_to_head": [],
@@ -827,20 +839,40 @@
           "player_name": "Peter Abbandonato",
           "jersey": 98,
           "position": "FO",
-          "games": 11,
+          "games": 12,
           "goals": 5,
-          "assists": 9,
-          "points": 14,
-          "shots_on_goal": 15,
+          "assists": 10,
+          "points": 15,
+          "shots_on_goal": 22,
           "primary_assists": 4,
-          "secondary_assists": 5,
+          "secondary_assists": 6,
           "primary_points": 9,
-          "points_per_game": 1.27,
+          "points_per_game": 1.25,
           "last5_games": 5,
           "last5_goals": 3,
-          "last5_assists": 4,
-          "last5_points": 7,
+          "last5_assists": 5,
+          "last5_points": 8,
           "last5_primary_assists": 2
+        },
+        {
+          "player_id": 442,
+          "player_name": "Daniel Schmölz",
+          "jersey": 92,
+          "position": "FO",
+          "games": 10,
+          "goals": 8,
+          "assists": 3,
+          "points": 11,
+          "shots_on_goal": 23,
+          "primary_assists": 1,
+          "secondary_assists": 2,
+          "primary_points": 9,
+          "points_per_game": 1.1,
+          "last5_games": 3,
+          "last5_goals": 5,
+          "last5_assists": 1,
+          "last5_points": 6,
+          "last5_primary_assists": 0
         },
         {
           "player_id": 3576,
@@ -856,71 +888,51 @@
           "secondary_assists": 2,
           "primary_points": 9,
           "points_per_game": 1.22,
-          "last5_games": 3,
-          "last5_goals": 3,
-          "last5_assists": 4,
-          "last5_points": 7,
-          "last5_primary_assists": 2
-        },
-        {
-          "player_id": 442,
-          "player_name": "Daniel Schmölz",
-          "jersey": 92,
-          "position": "FO",
-          "games": 9,
-          "goals": 6,
-          "assists": 3,
-          "points": 9,
-          "shots_on_goal": 17,
-          "primary_assists": 1,
-          "secondary_assists": 2,
-          "primary_points": 7,
-          "points_per_game": 1.0,
-          "last5_games": 3,
-          "last5_goals": 4,
-          "last5_assists": 1,
-          "last5_points": 5,
-          "last5_primary_assists": 0
-        },
-        {
-          "player_id": 2874,
-          "player_name": "Alex Breton",
-          "jersey": 75,
-          "position": "DE",
-          "games": 11,
-          "goals": 2,
-          "assists": 7,
-          "points": 9,
-          "shots_on_goal": 36,
-          "primary_assists": 6,
-          "secondary_assists": 1,
-          "primary_points": 8,
-          "points_per_game": 0.82,
-          "last5_games": 5,
+          "last5_games": 2,
           "last5_goals": 2,
-          "last5_assists": 5,
-          "last5_points": 7,
-          "last5_primary_assists": 4
+          "last5_assists": 3,
+          "last5_points": 5,
+          "last5_primary_assists": 1
         },
         {
           "player_id": 2813,
           "player_name": "Kenny Agostino",
           "jersey": 11,
           "position": "FO",
-          "games": 10,
+          "games": 11,
           "goals": 2,
-          "assists": 6,
-          "points": 8,
+          "assists": 8,
+          "points": 10,
           "shots_on_goal": 20,
-          "primary_assists": 2,
-          "secondary_assists": 4,
-          "primary_points": 4,
-          "points_per_game": 0.8,
+          "primary_assists": 3,
+          "secondary_assists": 5,
+          "primary_points": 5,
+          "points_per_game": 0.91,
           "last5_games": 5,
           "last5_goals": 0,
+          "last5_assists": 6,
+          "last5_points": 6,
+          "last5_primary_assists": 3
+        },
+        {
+          "player_id": 2874,
+          "player_name": "Alex Breton",
+          "jersey": 75,
+          "position": "DE",
+          "games": 12,
+          "goals": 2,
+          "assists": 7,
+          "points": 9,
+          "shots_on_goal": 40,
+          "primary_assists": 6,
+          "secondary_assists": 1,
+          "primary_points": 8,
+          "points_per_game": 0.75,
+          "last5_games": 5,
+          "last5_goals": 2,
           "last5_assists": 5,
-          "last5_points": 5,
-          "last5_primary_assists": 2
+          "last5_points": 7,
+          "last5_primary_assists": 4
         }
       ],
       "opponent_goalies": [
@@ -928,22 +940,22 @@
           "player_id": 1459,
           "name": "Jonas Stettmer",
           "jersey": 1,
-          "games": 6,
-          "wins": 3,
+          "games": 7,
+          "wins": 4,
           "losses": 3,
-          "toi_s": 21559,
-          "saves": 161,
-          "goals_against": 19,
-          "save_pct": 89.4,
-          "gaa": 3.17,
-          "sa_5v5": 138,
-          "ga_5v5": 11,
-          "save_pct_5v5": 92.0,
-          "gsaa_5v5": -0.79,
-          "slot_sa_5v5": 41,
-          "slot_save_pct_5v5": 87.8,
+          "toi_s": 25159,
+          "saves": 184,
+          "goals_against": 20,
+          "save_pct": 90.2,
+          "gaa": 2.86,
+          "sa_5v5": 158,
+          "ga_5v5": 12,
+          "save_pct_5v5": 92.4,
+          "gsaa_5v5": -0.25,
+          "slot_sa_5v5": 47,
+          "slot_save_pct_5v5": 89.4,
           "last5_games": 5,
-          "last5_save_pct": 90.8
+          "last5_save_pct": 90.4
         },
         {
           "player_id": 2351,
@@ -960,7 +972,7 @@
           "sa_5v5": 105,
           "ga_5v5": 10,
           "save_pct_5v5": 90.5,
-          "gsaa_5v5": -2.23,
+          "gsaa_5v5": -2.19,
           "slot_sa_5v5": 41,
           "slot_save_pct_5v5": 85.4,
           "last5_games": 4,
@@ -984,109 +996,124 @@
           "label": "Bilanz",
           "key": "record",
           "kind": "text",
-          "ebb": "8-2",
-          "opponent": "6-5"
+          "ebb": "9-2",
+          "opponent": "7-5"
         },
         {
           "label": "Corsi 5v5 %",
           "key": "corsi_5v5_pct",
           "kind": "percent",
-          "ebb": 52.016,
-          "opponent": 59.243
+          "ebb": 52.32,
+          "opponent": 59.401
         },
         {
           "label": "Corsi / Spiel",
           "key": "corsi_per_game",
           "kind": "decimal",
-          "ebb": 54.2,
-          "opponent": 65.18
+          "ebb": 54.55,
+          "opponent": 65.33
         },
         {
           "label": "SOG / Spiel",
           "key": "sog_per_game",
           "kind": "decimal",
-          "ebb": 29.6,
-          "opponent": 34.27
+          "ebb": 29.27,
+          "opponent": 34.25
         },
         {
           "label": "Slot Attempts / Spiel",
           "key": "slot_per_game",
           "kind": "decimal",
-          "ebb": 16.2,
-          "opponent": 16.82
+          "ebb": 15.64,
+          "opponent": 17.08
         },
         {
           "label": "Tore / Spiel",
           "key": "goals_per_game",
           "kind": "decimal",
-          "ebb": 3.8,
-          "opponent": 3.36
+          "ebb": 3.64,
+          "opponent": 3.33
         },
         {
           "label": "Gegentore / Spiel",
           "key": "goals_against_per_game",
           "kind": "decimal",
-          "ebb": 1.6,
-          "opponent": 2.64
+          "ebb": 1.55,
+          "opponent": 2.42
         },
         {
           "label": "PDO 5v5",
           "key": "pdo_5v5",
           "kind": "decimal",
-          "ebb": 104.873,
-          "opponent": 102.124
+          "ebb": 103.877,
+          "opponent": 102.278
         },
         {
           "label": "Zeit in Führung / Spiel",
           "key": "time_leading_per_game_s",
           "kind": "time",
-          "ebb": 1824,
-          "opponent": 1135
+          "ebb": 1765,
+          "opponent": 1298
         }
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-10-23T19:01:43Z",
+        "snapshot_at": "2026-10-24T03:03:50Z",
         "rows": [
           {
             "label": "Pässe",
-            "ebb": "2601 / 3168",
-            "opponent": "3156 / 3766",
+            "ebb": "2835 / 3453",
+            "opponent": "3466 / 4139",
             "kind": "text"
           },
           {
             "label": "Passquote",
             "ebb": 82.1,
-            "opponent": 83.8,
+            "opponent": 83.74,
             "kind": "percent"
           },
           {
             "label": "Puck Contests",
-            "ebb": "1120 / 2105",
-            "opponent": "1002 / 1884",
+            "ebb": "1250 / 2334",
+            "opponent": "1070 / 2014",
             "kind": "text"
           },
           {
             "label": "PCW%",
-            "ebb": 53.21,
-            "opponent": 53.18,
+            "ebb": 53.56,
+            "opponent": 53.13,
             "kind": "percent"
           },
           {
             "label": "xG Summe",
-            "ebb": 33.14,
-            "opponent": 36.51,
+            "ebb": 35.85,
+            "opponent": 39.2,
             "kind": "decimal2"
           },
           {
             "label": "xG / Spiel",
-            "ebb": 3.31,
-            "opponent": 3.32,
+            "ebb": 3.26,
+            "opponent": 3.27,
             "kind": "decimal2"
           }
         ]
       },
       "ebb_recent": [
+        {
+          "match_id": 4462,
+          "match_date": "2026-10-23",
+          "opponent_team_id": 13,
+          "opponent_shortcut": "AEV",
+          "opponent_name": "Augsburger Panther",
+          "home_road": "home",
+          "goals_for": 2,
+          "goals_against": 1,
+          "corsi_5v5_pct": 54.839,
+          "slot_attempts_for": 10,
+          "pdo_5v5": 94.118,
+          "result": "2:1",
+          "outcome": "W"
+        },
         {
           "match_id": 4454,
           "match_date": "2026-10-18",
@@ -1146,24 +1173,24 @@
           "pdo_5v5": 113.636,
           "result": "5:0",
           "outcome": "W"
-        },
-        {
-          "match_id": 4425,
-          "match_date": "2026-10-04",
-          "opponent_team_id": 14,
-          "opponent_shortcut": "NIT",
-          "opponent_name": "Nürnberg Ice Tigers",
-          "home_road": "home",
-          "goals_for": 4,
-          "goals_against": 1,
-          "corsi_5v5_pct": 44.737,
-          "slot_attempts_for": 18,
-          "pdo_5v5": 113.333,
-          "result": "4:1",
-          "outcome": "W"
         }
       ],
       "opponent_recent": [
+        {
+          "match_id": 4464,
+          "match_date": "2026-10-23",
+          "opponent_team_id": 44,
+          "opponent_shortcut": "FRA",
+          "opponent_name": "Löwen Frankfurt",
+          "home_road": "home",
+          "goals_for": 3,
+          "goals_against": 0,
+          "corsi_5v5_pct": 61.429,
+          "slot_attempts_for": 20,
+          "pdo_5v5": 104.762,
+          "result": "3:0",
+          "outcome": "W"
+        },
         {
           "match_id": 4456,
           "match_date": "2026-10-18",
@@ -1223,21 +1250,6 @@
           "pdo_5v5": 112.5,
           "result": "5:2",
           "outcome": "W"
-        },
-        {
-          "match_id": 4430,
-          "match_date": "2026-10-04",
-          "opponent_team_id": 8,
-          "opponent_shortcut": "WOB",
-          "opponent_name": "Grizzlys Wolfsburg",
-          "home_road": "visitor",
-          "goals_for": 1,
-          "goals_against": 4,
-          "corsi_5v5_pct": 64.384,
-          "slot_attempts_for": 13,
-          "pdo_5v5": 83.125,
-          "result": "1:4",
-          "outcome": "L"
         }
       ],
       "head_to_head": [
@@ -1263,55 +1275,75 @@
           "player_name": "Matthias Plachta",
           "jersey": 22,
           "position": "FO",
-          "games": 10,
+          "games": 11,
           "goals": 3,
-          "assists": 7,
-          "points": 10,
-          "shots_on_goal": 30,
-          "primary_assists": 4,
+          "assists": 8,
+          "points": 11,
+          "shots_on_goal": 34,
+          "primary_assists": 5,
           "secondary_assists": 3,
-          "primary_points": 7,
+          "primary_points": 8,
           "points_per_game": 1.0,
           "last5_games": 5,
           "last5_goals": 1,
-          "last5_assists": 4,
-          "last5_points": 5,
-          "last5_primary_assists": 2
+          "last5_assists": 5,
+          "last5_points": 6,
+          "last5_primary_assists": 3
         },
         {
           "player_id": 1611,
           "player_name": "Leon Gawanke",
           "jersey": 9,
           "position": "DE",
-          "games": 11,
+          "games": 12,
           "goals": 3,
-          "assists": 7,
-          "points": 10,
-          "shots_on_goal": 45,
+          "assists": 8,
+          "points": 11,
+          "shots_on_goal": 50,
           "primary_assists": 3,
-          "secondary_assists": 4,
+          "secondary_assists": 5,
           "primary_points": 6,
-          "points_per_game": 0.91,
+          "points_per_game": 0.92,
           "last5_games": 5,
           "last5_goals": 2,
-          "last5_assists": 3,
-          "last5_points": 5,
+          "last5_assists": 4,
+          "last5_points": 6,
           "last5_primary_assists": 1
+        },
+        {
+          "player_id": 3567,
+          "player_name": "Anthony Greco",
+          "jersey": 44,
+          "position": "FO",
+          "games": 12,
+          "goals": 3,
+          "assists": 6,
+          "points": 9,
+          "shots_on_goal": 31,
+          "primary_assists": 5,
+          "secondary_assists": 1,
+          "primary_points": 8,
+          "points_per_game": 0.75,
+          "last5_games": 5,
+          "last5_goals": 0,
+          "last5_assists": 4,
+          "last5_points": 4,
+          "last5_primary_assists": 3
         },
         {
           "player_id": 2411,
           "player_name": "Nicolas Mattinen",
           "jersey": 52,
           "position": "DE",
-          "games": 11,
+          "games": 12,
           "goals": 5,
           "assists": 3,
           "points": 8,
-          "shots_on_goal": 36,
+          "shots_on_goal": 39,
           "primary_assists": 1,
           "secondary_assists": 2,
           "primary_points": 6,
-          "points_per_game": 0.73,
+          "points_per_game": 0.67,
           "last5_games": 5,
           "last5_goals": 2,
           "last5_assists": 0,
@@ -1319,39 +1351,19 @@
           "last5_primary_assists": 0
         },
         {
-          "player_id": 3567,
-          "player_name": "Anthony Greco",
-          "jersey": 44,
+          "player_id": 3565,
+          "player_name": "Zachary Solow",
+          "jersey": 73,
           "position": "FO",
           "games": 11,
           "goals": 3,
           "assists": 5,
           "points": 8,
-          "shots_on_goal": 29,
+          "shots_on_goal": 18,
           "primary_assists": 4,
           "secondary_assists": 1,
           "primary_points": 7,
           "points_per_game": 0.73,
-          "last5_games": 5,
-          "last5_goals": 0,
-          "last5_assists": 3,
-          "last5_points": 3,
-          "last5_primary_assists": 2
-        },
-        {
-          "player_id": 3565,
-          "player_name": "Zachary Solow",
-          "jersey": 73,
-          "position": "FO",
-          "games": 10,
-          "goals": 3,
-          "assists": 5,
-          "points": 8,
-          "shots_on_goal": 16,
-          "primary_assists": 4,
-          "secondary_assists": 1,
-          "primary_points": 7,
-          "points_per_game": 0.8,
           "last5_games": 5,
           "last5_goals": 2,
           "last5_assists": 2,
@@ -1364,22 +1376,22 @@
           "player_id": 1985,
           "name": "Jake Hildebrand",
           "jersey": 30,
-          "games": 6,
-          "wins": 4,
+          "games": 7,
+          "wins": 5,
           "losses": 2,
-          "toi_s": 21386,
-          "saves": 133,
+          "toi_s": 24986,
+          "saves": 148,
           "goals_against": 14,
-          "save_pct": 90.5,
-          "gaa": 2.36,
-          "sa_5v5": 96,
+          "save_pct": 91.4,
+          "gaa": 2.02,
+          "sa_5v5": 109,
           "ga_5v5": 8,
-          "save_pct_5v5": 91.7,
-          "gsaa_5v5": -0.9,
-          "slot_sa_5v5": 32,
-          "slot_save_pct_5v5": 78.1,
+          "save_pct_5v5": 92.7,
+          "gsaa_5v5": 0.11,
+          "slot_sa_5v5": 34,
+          "slot_save_pct_5v5": 79.4,
           "last5_games": 5,
-          "last5_save_pct": 90.9
+          "last5_save_pct": 93.9
         },
         {
           "player_id": 500,
@@ -1396,7 +1408,7 @@
           "sa_5v5": 91,
           "ga_5v5": 4,
           "save_pct_5v5": 95.6,
-          "gsaa_5v5": 2.73,
+          "gsaa_5v5": 2.77,
           "slot_sa_5v5": 31,
           "slot_save_pct_5v5": 87.1,
           "last5_games": 5,

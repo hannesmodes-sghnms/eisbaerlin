@@ -1,28 +1,28 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-10-23T19:19:44Z
+Generated: 2026-10-24T03:03:41Z
 
 ## Totals
 
-- Matches: 71
-- Shots: 7627
-- Shifts: 54445
-- Faceoffs: 4100
-- Events: 1818
-- Player game stats: 3659
-- Team game stats: 142
+- Matches: 78
+- Shots: 8369
+- Shifts: 59850
+- Faceoffs: 4543
+- Events: 1993
+- Player game stats: 4032
+- Team game stats: 156
 - Unclassified shot zones: 0
 
 ## On-ice quality
 
-- Exact: 7451
-- Boundary adjusted: 130
-- Low confidence: 46
+- Exact: 8173
+- Boundary adjusted: 148
+- Low confidence: 48
 
 ## D-zone faceoff sequences
 
-- D-zone faceoff -> shot <=10s: 73
-- Won D-zone faceoff -> shot <=10s: 53
+- D-zone faceoff -> shot <=10s: 84
+- Won D-zone faceoff -> shot <=10s: 62
 
 ## Per match
 
@@ -99,3 +99,10 @@ Generated: 2026-10-23T19:19:44Z
 | 4459 | 2026-10-18 | Nürnberg Ice Tigers – EHC Red Bull München | 107 | 64 | 778 | 0 | 0 |
 | 4460 | 2026-10-20 | ERC Ingolstadt – Grizzlys Wolfsburg | 121 | 63 | 759 | 1 | 1 |
 | 4731 | 2026-10-20 | Kölner Haie – Schwenninger Wild Wings | 112 | 61 | 761 | 1 | 0 |
+| 4461 | 2026-10-23 | Schwenninger Wild Wings – Pinguins Bremerhaven | 101 | 60 | 777 | 1 | 0 |
+| 4462 | 2026-10-23 | Eisbären Berlin – Augsburger Panther | 107 | 56 | 764 | 1 | 0 |
+| 4463 | 2026-10-23 | Nürnberg Ice Tigers – Krefeld Pinguine | 99 | 66 | 753 | 2 | 1 |
+| 4464 | 2026-10-23 | Adler Mannheim – Löwen Frankfurt | 98 | 59 | 765 | 1 | 0 |
+| 4465 | 2026-10-23 | EHC Red Bull München – Iserlohn Roosters | 108 | 62 | 733 | 3 | 0 |
+| 4466 | 2026-10-23 | Straubing Tigers – Kölner Haie | 119 | 64 | 792 | 4 | 0 |
+| 4467 | 2026-10-23 | Grizzlys Wolfsburg – ERC Ingolstadt | 110 | 76 | 821 | 6 | 1 |
