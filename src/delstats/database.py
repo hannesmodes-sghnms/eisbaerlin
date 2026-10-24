@@ -87,6 +87,9 @@ CREATE TABLE IF NOT EXISTS shots (
     shot_distance_m DOUBLE,
     shot_zone VARCHAR,
     polygon VARCHAR,
+    source VARCHAR,
+    source_game_time_s INTEGER,
+    source_player_id BIGINT,
     PRIMARY KEY (match_id, shot_id)
 );
 
@@ -173,6 +176,9 @@ def _migrate_schema(con: Any) -> None:
         ("shot_y_m", "DOUBLE"),
         ("shot_distance_m", "DOUBLE"),
         ("shot_zone", "VARCHAR"),
+        ("source", "VARCHAR"),
+        ("source_game_time_s", "INTEGER"),
+        ("source_player_id", "BIGINT"),
     ):
         if column not in existing:
             con.execute(f"ALTER TABLE shots ADD COLUMN {column} {dtype}")
@@ -212,23 +218,21 @@ def _goal_event_contexts(
     away_team_id: int,
     goalie_ids: set[int],
 ) -> list[dict[str, Any]]:
-    """Build authoritative on-ice contexts for goals from DEL attendants.
+    """Normalize every official non-shootout goal event.
 
-    Goal events can be one second later than the matching shot feed. At shift
-    boundaries that can make the shot-derived manpower look like 4v3 or 3v3
-    even though the official goal event is a normal 5v5 goal. Goal attendants
-    are the better source for goal shots because they list the players credited
-    as being on ice for that event.
+    Goal events are authoritative for scorer, scoreboard time and goal
+    attendants. Some penalty-shot events intentionally have only the shooter
+    and goalie as attendants; those are retained for chronological pairing but
+    marked unusable for normal manpower reconstruction.
     """
     contexts: list[dict[str, Any]] = []
 
     def skaters(entries: list[dict[str, Any]]) -> list[int]:
-        ids = {
+        return sorted({
             int(entry["playerId"])
             for entry in entries
             if entry.get("playerId") is not None and int(entry["playerId"]) not in goalie_ids
-        }
-        return sorted(ids)
+        })
 
     for event in flatten_period_events(period_events):
         if event.get("type") != "goal":
@@ -242,18 +246,24 @@ def _goal_event_contexts(
         attendants = data.get("attendants") or {}
         on_for = skaters(attendants.get("positive") or [])
         on_against = skaters(attendants.get("negative") or [])
-        if not (3 <= len(on_for) <= 6 and 3 <= len(on_against) <= 6):
-            continue
         scorer = data.get("scorer") or {}
         contexts.append(
             {
+                "sequence": int(event.get("sequence") or 0),
+                "event_id": int(data["id"]) if data.get("id") is not None else None,
                 "time_s": int(event.get("time") or 0),
+                "real_time": data.get("realTime"),
                 "team_id": int(team_id),
-                "scorer_player_id": (
-                    int(scorer["playerId"]) if scorer.get("playerId") is not None else None
-                ),
+                "balance": str(data.get("balance") or ""),
+                "shooting": bool(data.get("shooting")),
+                "empty_net": bool(data.get("en")),
+                "scorer_player_id": int(scorer["playerId"]) if scorer.get("playerId") is not None else None,
+                "scorer_jersey": scorer.get("jersey"),
+                "scorer_first_name": scorer.get("name"),
+                "scorer_last_name": scorer.get("surname"),
                 "on_for": on_for,
                 "on_against": on_against,
+                "attendants_usable": 3 <= len(on_for) <= 6 and 3 <= len(on_against) <= 6,
             }
         )
     return contexts
@@ -263,20 +273,15 @@ def _goal_event_context_by_shot_id(
     shots: list[dict[str, Any]],
     contexts: list[dict[str, Any]],
 ) -> dict[int, dict[str, Any]]:
-    """Pair official goal events and goal shots chronologically per team.
+    """Sequence-align official goal events and goal shots per team.
 
-    DEL's two feeds are not guaranteed to share the same scoreboard second:
-    observed offsets range from zero to tens of seconds, and the shot-feed
-    shooter can differ from the officially credited scorer after a deflection
-    or scoring correction. Ordering within a team is the stable join key.
-
-    We only reconcile a team when both sources contain the same number of
-    non-shootout goals. Any count mismatch is left untouched and is surfaced by
-    the cross-source QA instead of guessing.
+    DEL goal-event and shot feeds can disagree on time, scorer and even count.
+    Dynamic programming preserves chronological order while allowing a missing
+    event/shot. A 31-second timestamp drift still pairs; a genuinely absent goal
+    shot is left unmatched and reconstructed separately.
     """
     goal_shots = [
-        shot
-        for shot in shots
+        shot for shot in shots
         if SHOT_RESULT_MAP.get(int(shot["match_shot_resutl_id"]), "unknown") == "goal"
     ]
     shots_by_team: dict[int, list[dict[str, Any]]] = {}
@@ -287,6 +292,7 @@ def _goal_event_context_by_shot_id(
         contexts_by_team.setdefault(int(context["team_id"]), []).append(context)
 
     result: dict[int, dict[str, Any]] = {}
+    gap_cost = 60
     for team_id in sorted(set(shots_by_team) | set(contexts_by_team)):
         team_shots = sorted(
             shots_by_team.get(team_id, []),
@@ -294,13 +300,115 @@ def _goal_event_context_by_shot_id(
         )
         team_contexts = sorted(
             contexts_by_team.get(team_id, []),
-            key=lambda row: int(row.get("time_s") or 0),
+            key=lambda row: (int(row.get("time_s") or 0), int(row.get("sequence") or 0)),
         )
-        if len(team_shots) != len(team_contexts):
-            continue
-        for shot, context in zip(team_shots, team_contexts):
-            result[int(shot["id"])] = context
+        m, n = len(team_contexts), len(team_shots)
+        dp = [[0] * (n + 1) for _ in range(m + 1)]
+        action = [[""] * (n + 1) for _ in range(m + 1)]
+        for i in range(1, m + 1):
+            dp[i][0] = i * gap_cost
+            action[i][0] = "skip_event"
+        for j in range(1, n + 1):
+            dp[0][j] = j * gap_cost
+            action[0][j] = "skip_shot"
+
+        for i in range(1, m + 1):
+            event = team_contexts[i - 1]
+            for j in range(1, n + 1):
+                shot = team_shots[j - 1]
+                delta = abs(int(event.get("time_s") or 0) - int(shot.get("time") or 0))
+                scorer = event.get("scorer_player_id")
+                shooter = shot.get("player_id")
+                scorer_penalty = 20 if scorer is not None and shooter is not None and int(scorer) != int(shooter) else 0
+                choices = [
+                    (dp[i - 1][j - 1] + delta + scorer_penalty, "match"),
+                    (dp[i - 1][j] + gap_cost, "skip_event"),
+                    (dp[i][j - 1] + gap_cost, "skip_shot"),
+                ]
+                dp[i][j], action[i][j] = min(choices, key=lambda item: item[0])
+
+        i, j = m, n
+        pairs: list[tuple[dict[str, Any], dict[str, Any]]] = []
+        while i or j:
+            step = action[i][j]
+            if step == "match":
+                pairs.append((team_contexts[i - 1], team_shots[j - 1]))
+                i -= 1
+                j -= 1
+            elif step == "skip_event":
+                i -= 1
+            else:
+                j -= 1
+        for event, shot in reversed(pairs):
+            result[int(shot["id"])] = event
     return result
+
+
+def _reconcile_goal_shots(
+    shots: list[dict[str, Any]],
+    contexts: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], dict[int, dict[str, Any]], int]:
+    """Apply official goal identity/time and reconstruct missing goal shots."""
+    mapping = _goal_event_context_by_shot_id(shots, contexts)
+    reconciled: list[dict[str, Any]] = []
+    matched_events: set[tuple[int, int]] = set()
+    used_ids = {int(shot["id"]) for shot in shots if shot.get("id") is not None}
+
+    for raw in shots:
+        shot = dict(raw)
+        shot["_source"] = "shot_feed"
+        shot["_source_game_time_s"] = int(raw.get("time") or 0)
+        shot["_source_player_id"] = int(raw["player_id"]) if raw.get("player_id") is not None else None
+        context = mapping.get(int(raw["id"])) if raw.get("id") is not None else None
+        if context is not None:
+            matched_events.add((int(context["team_id"]), int(context["sequence"])))
+            shot["time"] = int(context["time_s"])
+            if context.get("real_time"):
+                shot["real_date"] = context["real_time"]
+            if context.get("scorer_player_id") is not None:
+                shot["player_id"] = int(context["scorer_player_id"])
+            if context.get("scorer_jersey") is not None:
+                shot["jersey"] = context["scorer_jersey"]
+            if context.get("scorer_first_name"):
+                shot["first_name"] = context["scorer_first_name"]
+            if context.get("scorer_last_name"):
+                shot["last_name"] = context["scorer_last_name"]
+        reconciled.append(shot)
+
+    reconstructed = 0
+    for context in contexts:
+        key = (int(context["team_id"]), int(context["sequence"]))
+        if key in matched_events:
+            continue
+        event_id = context.get("event_id")
+        shot_id = -abs(int(event_id)) if event_id is not None else -(1_000_000_000 + int(context["sequence"]))
+        while shot_id in used_ids:
+            shot_id -= 1
+        used_ids.add(shot_id)
+        reconciled.append(
+            {
+                "id": shot_id,
+                "time": int(context["time_s"]),
+                "real_date": context.get("real_time"),
+                "team_id": int(context["team_id"]),
+                "player_id": context.get("scorer_player_id"),
+                "jersey": context.get("scorer_jersey"),
+                "first_name": context.get("scorer_first_name"),
+                "last_name": context.get("scorer_last_name"),
+                "match_shot_resutl_id": 4,
+                "coordinate_x": None,
+                "coordinate_y": None,
+                "polygon": None,
+                "_source": "goal_event_reconstructed",
+                "_source_game_time_s": None,
+                "_source_player_id": None,
+            }
+        )
+        mapping[shot_id] = context
+        reconstructed += 1
+
+    reconciled.sort(key=lambda row: (int(row.get("time") or 0), int(row.get("id") or 0)))
+    return reconciled, mapping, reconstructed
 
 
 def build_match_database(
@@ -336,6 +444,21 @@ def build_match_database(
     away_team_id = int(shots_payload["visitor_id"])
     pteam = player_team_map(match_dir)
     schedule = _schedule_match(discovery_path, match_id)
+    goalie_ids = {
+        int(player["playerId"])
+        for side in ("home", "visitor")
+        for player in roster.get(side, {}).values()
+        if player.get("playerId") is not None and str(player.get("position") or "").upper() == "GK"
+    }
+    goal_event_contexts = _goal_event_contexts(
+        period_events,
+        home_team_id=home_team_id,
+        away_team_id=away_team_id,
+        goalie_ids=goalie_ids,
+    )
+    shots, goal_context_by_shot_id, reconstructed_goal_shots = _reconcile_goal_shots(
+        shots, goal_event_contexts
+    )
 
     db_path.parent.mkdir(parents=True, exist_ok=True)
     con = duckdb.connect(str(db_path))
@@ -422,8 +545,9 @@ def build_match_database(
                 INSERT INTO shots (
                     match_id, shot_id, game_time_s, real_time, team_id, player_id, jersey,
                     first_name, last_name, result_id, result, coordinate_x, coordinate_y,
-                    shot_x_m, shot_y_m, shot_distance_m, shot_zone, polygon
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    shot_x_m, shot_y_m, shot_distance_m, shot_zone, polygon,
+                    source, source_game_time_s, source_player_id
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 [
                     match_id,
@@ -444,6 +568,9 @@ def build_match_database(
                     geometry.distance_m if geometry else None,
                     geometry.zone if geometry else None,
                     polygon if isinstance(polygon, str) else None,
+                    shot.get("_source") or "shot_feed",
+                    shot.get("_source_game_time_s"),
+                    shot.get("_source_player_id"),
                 ],
             )
 
@@ -492,19 +619,6 @@ def build_match_database(
             )
 
         sorted_faceoffs = sorted(faceoffs, key=lambda x: int(x["time"]))
-        goalie_ids = {
-            int(player["playerId"])
-            for side in ("home", "visitor")
-            for player in roster.get(side, {}).values()
-            if player.get("playerId") is not None and str(player.get("position") or "").upper() == "GK"
-        }
-        goal_event_contexts = _goal_event_contexts(
-            period_events,
-            home_team_id=home_team_id,
-            away_team_id=away_team_id,
-            goalie_ids=goalie_ids,
-        )
-        goal_context_by_shot_id = _goal_event_context_by_shot_id(shots, goal_event_contexts)
         boundary_adjusted = 0
         low_confidence = 0
         goal_event_context_shots = 0
@@ -521,14 +635,31 @@ def build_match_database(
                 game_time_s=t,
             )
             result_name = SHOT_RESULT_MAP.get(int(shot["match_shot_resutl_id"]), "unknown")
+            manpower = f"{len(on_for)}v{len(on_against)}"
             if result_name == "goal":
                 goal_context = goal_context_by_shot_id.get(int(shot["id"]))
                 if goal_context is not None:
-                    on_for = list(goal_context["on_for"])
-                    on_against = list(goal_context["on_against"])
-                    method_for = method_against = "goal_event_attendants"
-                    goal_event_context_shots += 1
-            quality = _on_ice_quality(len(on_for), len(on_against), method_for, method_against)
+                    if goal_context.get("shooting") or goal_context.get("balance") == "PS":
+                        scorer_id = goal_context.get("scorer_player_id")
+                        on_for = [int(scorer_id)] if scorer_id is not None else []
+                        on_against = []
+                        method_for = method_against = "goal_event_penalty_shot"
+                        manpower = "PS"
+                        quality = "event_special"
+                        goal_event_context_shots += 1
+                    elif goal_context.get("attendants_usable"):
+                        on_for = list(goal_context["on_for"])
+                        on_against = list(goal_context["on_against"])
+                        method_for = method_against = "goal_event_attendants"
+                        manpower = f"{len(on_for)}v{len(on_against)}"
+                        quality = "exact"
+                        goal_event_context_shots += 1
+                    else:
+                        quality = _on_ice_quality(len(on_for), len(on_against), method_for, method_against)
+                else:
+                    quality = _on_ice_quality(len(on_for), len(on_against), method_for, method_against)
+            else:
+                quality = _on_ice_quality(len(on_for), len(on_against), method_for, method_against)
             if quality == "boundary_adjusted":
                 boundary_adjusted += 1
             elif quality == "low_confidence":
@@ -575,7 +706,7 @@ def build_match_database(
                     on_against,
                     len(on_for),
                     len(on_against),
-                    f"{len(on_for)}v{len(on_against)}",
+                    manpower,
                     method_for,
                     method_against,
                     quality,
@@ -632,6 +763,9 @@ def build_match_database(
                 s.shot_distance_m,
                 s.shot_zone,
                 s.polygon,
+                s.source,
+                s.source_game_time_s,
+                s.source_player_id,
                 c.opponent_team_id,
                 c.on_ice_for_player_ids,
                 c.on_ice_against_player_ids,
@@ -672,6 +806,7 @@ def build_match_database(
             "boundary_adjusted_shots": boundary_adjusted,
             "low_confidence_shots": low_confidence,
             "goal_event_context_shots": goal_event_context_shots,
+            "reconstructed_goal_shots": reconstructed_goal_shots,
             "dzone_faceoff_to_shot_10s": dzone_10s,
             "dzone_faceoff_win_to_shot_10s": dzone_win_10s,
         }
