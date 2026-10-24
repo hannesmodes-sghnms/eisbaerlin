@@ -10,6 +10,7 @@ from zoneinfo import ZoneInfo
 
 from .discovery import SeasonDiscoverer, save_match_discovery, save_season_discovery
 from .raw import RawMatchDownloader
+from .quality import audit_database
 
 
 @dataclass
@@ -96,7 +97,8 @@ def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[
               (SELECT count(*) FROM events) AS events,
               (SELECT count(*) FROM player_game_stats) AS player_game_stats,
               (SELECT count(*) FROM team_game_stats) AS team_game_stats,
-              (SELECT count(*) FROM shots WHERE shot_zone IS NULL) AS unclassified_shots
+              (SELECT count(*) FROM shots WHERE shot_zone IS NULL AND coalesce(source, 'shot_feed') = 'shot_feed') AS unclassified_shots,
+              (SELECT count(*) FROM shots WHERE source = 'goal_event_reconstructed') AS reconstructed_goal_shots
             """
         ).fetchone()
         cols = [d[0] for d in con.description]
@@ -162,6 +164,8 @@ def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[
             for row in per_match_rows
         ]
 
+        integrity = audit_database(con)
+
         return {
             "season": season,
             "game_type": game_type,
@@ -172,6 +176,7 @@ def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[
             "dzone_faceoff_to_shot_10s": int(dzone[0] or 0),
             "dzone_faceoff_win_to_shot_10s": int(dzone[1] or 0),
             "per_match": per_match,
+            "integrity": integrity,
         }
     finally:
         con.close()
@@ -200,6 +205,7 @@ def write_quality_report(report: dict[str, Any], output_dir: Path) -> tuple[Path
         f"- Player game stats: {totals.get('player_game_stats', 0)}",
         f"- Team game stats: {totals.get('team_game_stats', 0)}",
         f"- Unclassified shot zones: {totals.get('unclassified_shots', 0)}",
+        f"- Reconstructed goal shots: {totals.get('reconstructed_goal_shots', 0)}",
         "",
         "## On-ice quality",
         "",
@@ -212,6 +218,32 @@ def write_quality_report(report: dict[str, Any], output_dir: Path) -> tuple[Path
         f"- D-zone faceoff -> shot <=10s: {report['dzone_faceoff_to_shot_10s']}",
         f"- Won D-zone faceoff -> shot <=10s: {report['dzone_faceoff_win_to_shot_10s']}",
         "",
+        "## Cross-source integrity",
+        "",
+        f"- Hard failures: {len((report.get('integrity') or {}).get('hard_failures') or [])}",
+        f"- Warnings: {len((report.get('integrity') or {}).get('warnings') or [])}",
+        f"- Goal events checked: {((report.get('integrity') or {}).get('checks') or {}).get('goal_events', 0)}",
+        f"- Goal shots checked: {((report.get('integrity') or {}).get('checks') or {}).get('goal_shots', 0)}",
+        "",
+    ]
+    integrity = report.get("integrity") or {}
+    hard = list(integrity.get("hard_failures") or [])
+    warn = list(integrity.get("warnings") or [])
+    if hard:
+        lines += ["### Hard failures", ""]
+        for issue in hard[:50]:
+            lines.append(f"- {issue.get('code')}: match {issue.get('match_id', '–')} · {issue.get('message')}")
+        if len(hard) > 50:
+            lines.append(f"- … {len(hard) - 50} more")
+        lines.append("")
+    if warn:
+        lines += ["### Warnings", ""]
+        for issue in warn[:50]:
+            lines.append(f"- {issue.get('code')}: match {issue.get('match_id', '–')} · {issue.get('message')}")
+        if len(warn) > 50:
+            lines.append(f"- … {len(warn) - 50} more")
+        lines.append("")
+    lines += [
         "## Per match",
         "",
         "| Match | Date | Game | Shots | Faceoffs | Shifts | Boundary | Low confidence |",

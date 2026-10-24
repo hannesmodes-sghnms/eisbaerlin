@@ -33,6 +33,9 @@ def evaluate_report(
     low_confidence = int(quality.get("low_confidence", 0) or 0)
     team_game_stats = int(totals.get("team_game_stats", 0) or 0)
     import_errors = list(pipeline.get("import_errors") or [])
+    integrity = report.get("integrity") or {}
+    integrity_hard = list(integrity.get("hard_failures") or [])
+    integrity_warnings = list(integrity.get("warnings") or [])
     raw_incomplete = [row for row in import_errors if _is_raw_incomplete(row)]
     hard_import_errors = [row for row in import_errors if not _is_raw_incomplete(row)]
 
@@ -63,6 +66,20 @@ def evaluate_report(
         failures.append(f"team game analytics rows ({team_game_stats}) != expected ({imported * 2})")
     if max_low_confidence >= 0 and low_confidence > max_low_confidence:
         failures.append(f"low-confidence shots ({low_confidence}) exceed limit ({max_low_confidence})")
+    if integrity_hard:
+        failures.append(f"{len(integrity_hard)} cross-source integrity failure(s)")
+        for issue in integrity_hard[:20]:
+            failures.append(
+                f"{issue.get('code', 'integrity')}: match {issue.get('match_id', '?')} · {issue.get('message', 'data contradiction')}"
+            )
+        if len(integrity_hard) > 20:
+            failures.append(f"... {len(integrity_hard) - 20} more integrity failure(s); see season_quality.json")
+    if integrity_warnings:
+        warnings.append(f"{len(integrity_warnings)} cross-source integrity warning(s)")
+        for issue in integrity_warnings[:10]:
+            warnings.append(
+                f"{issue.get('code', 'integrity')}: match {issue.get('match_id', '?')} · {issue.get('message', 'inspect source data')}"
+            )
     return warnings, failures
 
 
@@ -91,6 +108,9 @@ def main() -> int:
     print(f"Boundary adjusted: {quality.get('boundary_adjusted', 0)}")
     print(f"Team game rows:    {team_game_stats}")
     print(f"Unclassified zones: {unclassified_shots}")
+    integrity = report.get("integrity") or {}
+    print(f"Integrity failures: {len(integrity.get('hard_failures') or [])}")
+    print(f"Integrity warnings: {len(integrity.get('warnings') or [])}")
 
     if warnings:
         print("\nQUALITY WARNINGS")
