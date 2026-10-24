@@ -18,6 +18,7 @@ from .advanced import (
 from .lineups import analyze_5v5_lineups
 from .game_flow import build_game_flow
 from .del_insight import load_game_insight, load_latest_snapshot, team_season_summary
+from .story_facts import build_story_facts, previous_game_lineup_diff, scoring_streaks
 
 FOCUS_TEAM_ID = 3
 FOCUS_TEAM_ABBR = "EBB"
@@ -498,16 +499,46 @@ def build_game_payload(con: Any, match_id: int, *, insight_dir: Path = Path("dat
             "unavailable": raw_game_insight.get("unavailable") or {},
         }
 
-    facts = _build_facts(ebb, players, lineups, advanced)
-    if game_insight and game_insight.get("ebb") and game_insight.get("opponent"):
-        ebb_i = game_insight["ebb"].get("summary") or {}
-        opp_i = game_insight["opponent"].get("summary") or {}
-        if ebb_i.get("xg_sum") is not None and opp_i.get("xg_sum") is not None:
-            facts.append(
-                f"DEL Insight: xG {float(ebb_i['xg_sum']):.2f}:{float(opp_i['xg_sum']):.2f}; "
-                f"Passquote {float(ebb_i.get('pass_pct') or 0):.1f}%:{float(opp_i.get('pass_pct') or 0):.1f}%; "
-                f"Puck Contests {float(ebb_i.get('pcw_pct') or 0):.1f}%:{float(opp_i.get('pcw_pct') or 0):.1f}%."
-            )
+    if game_insight:
+        ebb_i = ((game_insight.get("ebb") or {}).get("summary") or {})
+        opp_i = ((game_insight.get("opponent") or {}).get("summary") or {})
+        if ebb_i.get("xg_sum") is not None or opp_i.get("xg_sum") is not None:
+            xg_metric = {
+                "label": "xG",
+                "key": "xg",
+                "kind": "decimal2",
+                "ebb": ebb_i.get("xg_sum"),
+                "opponent": opp_i.get("xg_sum"),
+            }
+            goals_index = next((idx for idx, row in enumerate(metrics) if row.get("key") == "goals_for"), len(metrics))
+            metrics.insert(goals_index, xg_metric)
+
+    previous_lineup = previous_game_lineup_diff(
+        con,
+        team_id=FOCUS_TEAM_ID,
+        match_id=match_id,
+        current_lineups=lineups,
+    )
+    streaks = scoring_streaks(
+        con,
+        team_id=FOCUS_TEAM_ID,
+        match_id=match_id,
+        min_games=3,
+    )
+    facts, fact_groups = build_story_facts(
+        ebb=ebb,
+        lineups=lineups,
+        previous_lineup=previous_lineup,
+        streaks=streaks,
+        advanced=advanced,
+        game_insight=game_insight,
+        shots=shots,
+        scoring_summary=scoring_summary,
+        focus_team_id=FOCUS_TEAM_ID,
+        opponent_team_id=opponent_team_id,
+        opponent_name=opponent_name,
+        opponent_label=opponent_abbr,
+    )
     return {
         "match": {
             "match_id": match_id, "date": str(match.get("match_date") or ""),
@@ -519,7 +550,8 @@ def build_game_payload(con: Any, match_id: int, *, insight_dir: Path = Path("dat
         },
         "focus_team": {"team_id": FOCUS_TEAM_ID, "abbr": FOCUS_TEAM_ABBR, "name": FOCUS_TEAM_NAME},
         "opponent": {"team_id": opponent_team_id, "name": opponent_name, "abbr": opponent_abbr},
-        "metrics": metrics, "facts": facts, "players": players, "lineups": lineups,
+        "metrics": metrics, "facts": facts, "fact_groups": fact_groups, "players": players, "lineups": lineups,
+        "previous_game_lineup": previous_lineup, "scoring_streaks": streaks,
         "advanced": advanced, "scoring_summary": scoring_summary, "del_insight": game_insight,
         "game_flow": game_flow,
         "shot_zones": shot_zones, "shots": shots, "timeline": timeline,

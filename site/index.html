@@ -422,6 +422,27 @@ button.active {
 
 /* Podcast facts */
 
+.fact-groups {
+  display: grid;
+  gap: 14px;
+}
+
+.fact-group {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.fact-group:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.fact-group h3 {
+  margin: 0 0 7px;
+  font-size: .82rem;
+  letter-spacing: .02em;
+}
+
 .facts {
   margin: 0;
   padding-left: 20px;
@@ -1024,7 +1045,7 @@ tr:last-child td {
   </section>
 
   <div class="grid two section">
-    <section class="panel"><h2>Podcast-Fakten</h2><ul id="facts" class="facts"><li>Lade Daten…</li></ul></section>
+    <section class="panel"><h2>Podcast-Fakten</h2><div id="facts" class="fact-groups"><ul class="facts"><li>Lade Daten…</li></ul></div><div id="scoringStreaks"></div></section>
     <section class="panel"><h2>Spiel-Stats</h2><div class="scroll"><table class="metric-table"><thead><tr><th>Stat</th><th>EBB</th><th id="oppHeader">Gegner</th></tr></thead><tbody id="metrics"></tbody></table></div></section>
   </div>
 
@@ -1112,7 +1133,7 @@ tr:last-child td {
 
   async function loadGame(summary){const path=summary.data_path||`data/games/${summary.match_id}.json`;const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw new Error(`${path}: ${r.status}`);state.game=await r.json();state.team='all';$$('.teamFilter').forEach(b=>b.classList.toggle('active',b.dataset.team==='all'));renderGame()}
 
-  function renderGame(){const g=state.game,m=g.match;$('#oppHeader').textContent=m.opponent_abbr||m.opponent_name;$('#gameHead').innerHTML=`<div><div class="muted">${esc(m.date)}</div><div class="teams">${esc(m.home_team_name)} – ${esc(m.away_team_name)}</div></div><div class="score">${m.home_score}:${m.away_score}</div>`;$('#facts').innerHTML=(g.facts||[]).map(x=>`<li>${esc(x)}</li>`).join('')||'<li>Keine Fakten verfügbar.</li>';$('#metrics').innerHTML=(g.metrics||[]).map(x=>`<tr><td>${esc(x.label)}</td><td class="ebb">${esc(fmtVal(x.ebb,x.kind))}</td><td class="opp">${esc(fmtVal(x.opponent,x.kind))}</td></tr>`).join('');renderGameFlow();renderScoring();renderInsight();renderUsage();renderImpact();renderUnits('#trios',g.lineups?.forward_trios||[]);renderUnits('#pairs',g.lineups?.defense_pairs||[]);renderLinePerformance();renderMatchups();renderZoneStarts();renderScoreState();
+  function renderGame(){const g=state.game,m=g.match;$('#oppHeader').textContent=m.opponent_abbr||m.opponent_name;$('#gameHead').innerHTML=`<div><div class="muted">${esc(m.date)}</div><div class="teams">${esc(m.home_team_name)} – ${esc(m.away_team_name)}</div></div><div class="score">${m.home_score}:${m.away_score}</div>`;const factGroups=g.fact_groups||[];$('#facts').innerHTML=factGroups.length?factGroups.map(group=>`<div class="fact-group"><h3>${esc(group.title)}</h3><ul class="facts">${(group.facts||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`).join(''):`<ul class="facts">${(g.facts||[]).map(x=>`<li>${esc(x)}</li>`).join('')||'<li>Keine Fakten verfügbar.</li>'}</ul>`;const streaks=g.scoring_streaks||{},activeStreaks=streaks.active||[],endedStreaks=streaks.ended_this_game||[];$('#scoringStreaks').innerHTML=(activeStreaks.length||endedStreaks.length)?`<div class="fact-group" style="margin-top:14px"><h3>Scoring Streaks</h3><div class="recent-list">${activeStreaks.map(s=>`<div class="recent-row"><strong>${esc(s.player_name)}</strong><span>${s.games} Spiele</span><span>${s.goals} G · ${s.assists} A · ${s.points} P</span></div>`).join('')}${endedStreaks.map(s=>`<div class="recent-row"><strong>${esc(s.player_name)}</strong><span>Serie beendet</span><span>${s.games} Spiele · ${s.goals} G · ${s.assists} A · ${s.points} P</span></div>`).join('')}</div></div>`:'';$('#metrics').innerHTML=(g.metrics||[]).map(x=>`<tr><td>${esc(x.label)}</td><td class="ebb">${esc(fmtVal(x.ebb,x.kind))}</td><td class="opp">${esc(fmtVal(x.opponent,x.kind))}</td></tr>`).join('');renderGameFlow();renderScoring();renderInsight();renderUsage();renderImpact();renderUnits('#trios',g.lineups?.forward_trios||[]);renderUnits('#pairs',g.lineups?.defense_pairs||[]);renderLinePerformance();renderMatchups();renderZoneStarts();renderScoreState();
     const rot=g.lineups?.rotation||{};$('#rotationAlert').innerHTML=rot.shortened_bank_detected?`<div class="rotation-alert"><b>Verkürzte Bank erkannt.</b><br>${esc((rot.shortened_bank_reasons||[]).join(' · '))}</div>`:'';const cov=g.lineups?.coverage||{};$('#lineupCoverage').innerHTML=(cov.forward_stable_pct!=null||cov.defense_stable_pct!=null)?`<div class="data-check"><b>Datengrundlage stabile Units:</b> Forward-Abdeckung ${esc(cov.forward_stable_pct??'–')} %, Defense-Abdeckung ${esc(cov.defense_stable_pct??'–')} % der rekonstruierten exakten 5v5-Eiszeit.</div>`:'';
     $('#zones').innerHTML=(g.shot_zones||[]).filter(z=>z.zone!=='UNKNOWN').map(z=>`<div class="zone"><span>${esc(z.zone.replaceAll('_',' '))}</span><span class="ebb">${z.ebb_attempts} (${z.ebb_sog} SOG)</span><span class="opp">${z.opponent_attempts} (${z.opponent_sog} SOG)</span></div>`).join('');$('#timeline').innerHTML=(g.timeline||[]).map(e=>{const a=(e.assists||[]).map(x=>x.name).filter(Boolean).join(', ');return `<div class="event"><span>${time(e.time_s)}</span><span class="event-team">${esc(e.team_abbr||'–')}</span><span class="event-type">${e.type==='goal'?'TOR':'STRAFE'}</span><span>${esc(e.scorer||e.penalty||'')}${a?` <span class="muted">(${esc(a)})</span>`:''} ${e.score?`· ${esc(e.score)}`:''} ${e.balance?`· ${esc(e.balance)}`:''}</span></div>`}).join('')||'<div class="empty">Keine Events.</div>';populateShotFilters();drawRink()}
 
