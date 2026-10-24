@@ -369,17 +369,27 @@ def audit_database(con: Any) -> dict[str, Any]:
         con,
         """
         SELECT match_id, team_id, player_id, goals, assists, points,
-               shots_attempts, shots_on_goal, shots_missed, shots_blocked
+               shots_attempts, shots_on_goal, shots_missed, shots_blocked,
+               faceoffs_won, faceoffs_lost
         FROM player_game_stats
         """,
     )
     player_goal_totals: dict[tuple[int, int], int] = defaultdict(int)
     player_assist_totals: dict[tuple[int, int], int] = defaultdict(int)
+    player_attempt_totals: dict[tuple[int, int], int] = defaultdict(int)
+    player_sog_totals: dict[tuple[int, int], int] = defaultdict(int)
+    player_faceoff_wins: dict[tuple[int, int], int] = defaultdict(int)
+    player_faceoff_losses: dict[tuple[int, int], int] = defaultdict(int)
     for row in pstats:
         mid, tid = int(row["match_id"]), int(row["team_id"])
         goals, assists, points = int(row.get("goals") or 0), int(row.get("assists") or 0), int(row.get("points") or 0)
-        player_goal_totals[(mid, tid)] += goals
-        player_assist_totals[(mid, tid)] += assists
+        key = (mid, tid)
+        player_goal_totals[key] += goals
+        player_assist_totals[key] += assists
+        player_attempt_totals[key] += int(row.get("shots_attempts") or 0)
+        player_sog_totals[key] += int(row.get("shots_on_goal") or 0)
+        player_faceoff_wins[key] += int(row.get("faceoffs_won") or 0)
+        player_faceoff_losses[key] += int(row.get("faceoffs_lost") or 0)
         if points != goals + assists:
             hard.append(_issue("player_points_formula", "player points != goals + assists", match_id=mid, team_id=tid, player_id=int(row["player_id"]), goals=goals, assists=assists, points=points))
         attempts, sog = int(row.get("shots_attempts") or 0), int(row.get("shots_on_goal") or 0)
@@ -402,6 +412,55 @@ def audit_database(con: Any) -> dict[str, Any]:
         assists = player_assist_totals.get(key, 0)
         if assists > event_goals * 2:
             hard.append(_issue("assist_ceiling", "player assists exceed two per official goal", match_id=key[0], team_id=key[1], assists=assists, goals=event_goals))
+
+    team_lookup = {
+        (int(row["match_id"]), int(row["team_id"])): row
+        for row in team_rows
+    }
+    for key, team in team_lookup.items():
+        attempts = player_attempt_totals.get(key, 0)
+        sog = player_sog_totals.get(key, 0)
+        if attempts != int(team.get("corsi_for") or 0):
+            warnings.append(_issue(
+                "player_attempts_vs_shots",
+                "sum of player shot attempts differs from raw shot-feed attempts",
+                match_id=key[0],
+                team_id=key[1],
+                player_attempts=attempts,
+                shot_feed_attempts=int(team.get("corsi_for") or 0),
+            ))
+        if sog != int(team.get("shots_on_goal_for") or 0):
+            warnings.append(_issue(
+                "player_sog_vs_shots",
+                "sum of player SOG differs from raw shot-feed SOG",
+                match_id=key[0],
+                team_id=key[1],
+                player_sog=sog,
+                shot_feed_sog=int(team.get("shots_on_goal_for") or 0),
+            ))
+
+    raw_faceoff_wins: dict[tuple[int, int], int] = defaultdict(int)
+    raw_faceoff_losses: dict[tuple[int, int], int] = defaultdict(int)
+    for row in _rows(con, "SELECT match_id, winner_team_id, loser_team_id FROM faceoffs"):
+        mid = int(row["match_id"])
+        if row.get("winner_team_id") is not None:
+            raw_faceoff_wins[(mid, int(row["winner_team_id"]))] += 1
+        if row.get("loser_team_id") is not None:
+            raw_faceoff_losses[(mid, int(row["loser_team_id"]))] += 1
+    for key in set(raw_faceoff_wins) | set(raw_faceoff_losses) | set(player_faceoff_wins) | set(player_faceoff_losses):
+        pw, pl = player_faceoff_wins.get(key, 0), player_faceoff_losses.get(key, 0)
+        rw, rl = raw_faceoff_wins.get(key, 0), raw_faceoff_losses.get(key, 0)
+        if pw != rw or pl != rl:
+            warnings.append(_issue(
+                "player_faceoffs_vs_feed",
+                "player faceoff totals differ from raw faceoff feed",
+                match_id=key[0],
+                team_id=key[1],
+                player_wins=pw,
+                raw_wins=rw,
+                player_losses=pl,
+                raw_losses=rl,
+            ))
 
     checks["matches"] = len(matches)
     checks["team_game_rows"] = len(team_rows)
