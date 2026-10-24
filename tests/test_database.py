@@ -7,6 +7,7 @@ duckdb = pytest.importorskip("duckdb")
 from delstats.database import (
     _goal_event_contexts,
     _goal_event_context_by_shot_id,
+    _reconcile_goal_shots,
     build_match_database,
 )
 from delstats.quality import audit_database
@@ -192,15 +193,13 @@ def test_goal_event_attendants_override_shift_boundary_context():
         away_team_id=13,
         goalie_ids={30, 40},
     )
-    assert contexts == [
-        {
-            "time_s": 2062,
-            "team_id": 3,
-            "scorer_player_id": 10,
-            "on_for": [10, 11, 12, 13, 14],
-            "on_against": [20, 21, 22, 23, 24],
-        }
-    ]
+    assert len(contexts) == 1
+    assert contexts[0]["time_s"] == 2062
+    assert contexts[0]["team_id"] == 3
+    assert contexts[0]["scorer_player_id"] == 10
+    assert contexts[0]["on_for"] == [10, 11, 12, 13, 14]
+    assert contexts[0]["on_against"] == [20, 21, 22, 23, 24]
+    assert contexts[0]["attendants_usable"] is True
 
     # The pairing is deliberately independent of a fixed time tolerance and
     # scorer equality. DEL examples exist with >30s timestamp drift and with a
@@ -220,25 +219,112 @@ def test_goal_event_attendants_override_shift_boundary_context():
     assert len(mapping[9001]["on_against"]) == 5
 
 
-def test_goal_event_context_mapping_refuses_count_mismatch():
+def test_goal_event_context_alignment_recovers_missing_shot():
     contexts = [
         {
+            "sequence": 1,
+            "event_id": 101,
             "time_s": 100,
+            "real_time": None,
             "team_id": 3,
+            "balance": "EQ",
+            "shooting": False,
+            "empty_net": False,
             "scorer_player_id": 10,
+            "scorer_jersey": 10,
+            "scorer_first_name": "First",
+            "scorer_last_name": "Goal",
             "on_for": [1, 2, 3, 4, 5],
             "on_against": [11, 12, 13, 14, 15],
+            "attendants_usable": True,
         },
         {
+            "sequence": 2,
+            "event_id": 102,
             "time_s": 200,
+            "real_time": None,
             "team_id": 3,
+            "balance": "EQ",
+            "shooting": False,
+            "empty_net": False,
             "scorer_player_id": 20,
+            "scorer_jersey": 20,
+            "scorer_first_name": "Missing",
+            "scorer_last_name": "Shot",
             "on_for": [1, 2, 3, 4, 5],
             "on_against": [11, 12, 13, 14, 15],
+            "attendants_usable": True,
+        },
+        {
+            "sequence": 3,
+            "event_id": 103,
+            "time_s": 300,
+            "real_time": None,
+            "team_id": 3,
+            "balance": "EQ",
+            "shooting": False,
+            "empty_net": False,
+            "scorer_player_id": 30,
+            "scorer_jersey": 30,
+            "scorer_first_name": "Third",
+            "scorer_last_name": "Goal",
+            "on_for": [1, 2, 3, 4, 5],
+            "on_against": [11, 12, 13, 14, 15],
+            "attendants_usable": True,
         },
     ]
     shots = [
-        {"id": 1, "time": 99, "team_id": 3, "player_id": 10, "match_shot_resutl_id": 4}
+        {"id": 1, "time": 99, "team_id": 3, "player_id": 10, "match_shot_resutl_id": 4},
+        {"id": 3, "time": 299, "team_id": 3, "player_id": 30, "match_shot_resutl_id": 4},
     ]
-    assert _goal_event_context_by_shot_id(shots, contexts) == {}
 
+    mapping = _goal_event_context_by_shot_id(shots, contexts)
+    assert mapping[1]["event_id"] == 101
+    assert mapping[3]["event_id"] == 103
+
+    reconciled, mapping, reconstructed = _reconcile_goal_shots(shots, contexts)
+    assert reconstructed == 1
+    synthetic = [row for row in reconciled if row["_source"] == "goal_event_reconstructed"]
+    assert len(synthetic) == 1
+    assert synthetic[0]["time"] == 200
+    assert synthetic[0]["player_id"] == 20
+    assert synthetic[0]["match_shot_resutl_id"] == 4
+    assert mapping[synthetic[0]["id"]]["event_id"] == 102
+
+
+def test_penalty_shot_goal_context_is_retained_but_not_normal_manpower():
+    period_events = {
+        "1": [],
+        "2": [],
+        "3": [
+            {
+                "time": 3498,
+                "type": "goal",
+                "data": {
+                    "id": 500,
+                    "team": "home",
+                    "balance": "PS",
+                    "shooting": True,
+                    "scorer": {"playerId": 10, "jersey": 9, "name": "Penalty", "surname": "Shooter"},
+                    "attendants": {
+                        "positive": [{"playerId": 10}],
+                        "negative": [{"playerId": 40}],
+                    },
+                },
+            }
+        ],
+        "overtime": [],
+        "shootout": [],
+    }
+    contexts = _goal_event_contexts(
+        period_events,
+        home_team_id=3,
+        away_team_id=13,
+        goalie_ids={40},
+    )
+    assert len(contexts) == 1
+    assert contexts[0]["shooting"] is True
+    assert contexts[0]["balance"] == "PS"
+    assert contexts[0]["attendants_usable"] is False
+    assert contexts[0]["on_for"] == [10]
+    assert contexts[0]["on_against"] == []
