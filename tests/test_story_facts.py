@@ -180,8 +180,8 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
         for fact in facts
     )
     assert any(
-        "Lineup gegenüber Krefeld Pinguine" in fact
-        and "Sturm vorher:" in fact
+        "Sturmreihen gegenüber Krefeld Pinguine" in fact
+        and "Vorher:" in fact
         and "→ Jetzt:" in fact
         for fact in facts
     )
@@ -190,6 +190,8 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
     assert any(group["title"] == "🔥 Aktuelle Story" for group in groups)
     assert any(group["title"] == "🔄 Lineup & Reihen" for group in groups)
     assert any(group["title"] == "🔬 Nerd Fact" for group in groups)
+    lineup_group = next(group for group in groups if group["title"] == "🔄 Lineup & Reihen")
+    assert any("Verteidigerpaare gegenüber Krefeld Pinguine" in fact for fact in lineup_group["facts"])
 
 
 
