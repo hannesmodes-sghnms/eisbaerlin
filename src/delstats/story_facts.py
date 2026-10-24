@@ -157,6 +157,7 @@ def _active_skaters(con: Any, match_id: int, team_id: int) -> list[dict[str, Any
         SELECT player_id, player_name, jersey
         FROM player_game_stats
         WHERE match_id=? AND team_id=? AND coalesce(position, '') <> 'GK'
+          AND coalesce(games, 1) > 0
         ORDER BY jersey, player_name
         """,
         [match_id, team_id],
