@@ -499,10 +499,10 @@ def build_game_payload(con: Any, match_id: int, *, insight_dir: Path = Path("dat
             "unavailable": raw_game_insight.get("unavailable") or {},
         }
 
-    if game_insight and game_insight.get("ebb") and game_insight.get("opponent"):
-        ebb_i = game_insight["ebb"].get("summary") or {}
-        opp_i = game_insight["opponent"].get("summary") or {}
-        if ebb_i.get("xg_sum") is not None and opp_i.get("xg_sum") is not None:
+    if game_insight:
+        ebb_i = ((game_insight.get("ebb") or {}).get("summary") or {})
+        opp_i = ((game_insight.get("opponent") or {}).get("summary") or {})
+        if ebb_i.get("xg_sum") is not None or opp_i.get("xg_sum") is not None:
             xg_metric = {
                 "label": "xG",
                 "key": "xg",
