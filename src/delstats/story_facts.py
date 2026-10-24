@@ -316,62 +316,80 @@ def _p3_rebuild_fact(lineups: dict[str, Any]) -> StoryFact | None:
     return StoryFact("lineup", 100 if dropped_count >= 3 else 88, "p3_rebuild", text)
 
 
-def _previous_lineup_fact(diff: dict[str, Any]) -> StoryFact | None:
+def _previous_lineup_facts(diff: dict[str, Any]) -> list[StoryFact]:
     if not diff.get("available"):
-        return None
+        return []
+
     previous = diff.get("previous_match") or {}
     opponent = previous.get("opponent_name") or "dem vorherigen Spiel"
     players_in = [row.get("name") for row in diff.get("players_in") or [] if row.get("name")]
     players_out = [row.get("name") for row in diff.get("players_out") or [] if row.get("name")]
     forwards = diff.get("forwards") or {}
     defense = diff.get("defense") or {}
+    facts: list[StoryFact] = []
 
-    parts = [f"Lineup gegenüber {opponent}:"]
     if players_in or players_out:
-        player_parts = []
+        pieces = []
         if players_out:
-            player_parts.append("raus: " + ", ".join(players_out))
+            pieces.append("raus: " + ", ".join(players_out))
         if players_in:
-            player_parts.append("rein: " + ", ".join(players_in))
-        parts.append("Personal " + " → ".join(player_parts) + ".")
+            pieces.append("rein: " + ", ".join(players_in))
+        facts.append(
+            StoryFact(
+                "lineup",
+                92,
+                "previous_game_roster",
+                f"Personal gegenüber {opponent}: " + " → ".join(pieces) + ".",
+            )
+        )
 
     previous_forwards = [str(label) for label in forwards.get("previous") or [] if label]
     current_forwards = [str(label) for label in forwards.get("current") or [] if label]
     stable_forwards = [str(label) for label in forwards.get("stable") or [] if label]
     if previous_forwards or current_forwards:
-        parts.append(
-            "Sturm vorher: "
+        changed = previous_forwards != current_forwards
+        text = (
+            f"Sturmreihen gegenüber {opponent}: Vorher: "
             + (" / ".join(previous_forwards) if previous_forwards else "keine stabile Kombination")
             + ". → Jetzt: "
             + (" / ".join(current_forwards) if current_forwards else "keine stabile Kombination")
             + "."
         )
         if stable_forwards:
-            parts.append("Unverändert: " + " / ".join(stable_forwards) + ".")
+            text += " Unverändert blieben: " + " / ".join(stable_forwards) + "."
+        facts.append(
+            StoryFact(
+                "lineup",
+                88 if changed else 70,
+                "previous_game_forward_units",
+                text,
+            )
+        )
 
     previous_defense = [str(label) for label in defense.get("previous") or [] if label]
     current_defense = [str(label) for label in defense.get("current") or [] if label]
     stable_defense = [str(label) for label in defense.get("stable") or [] if label]
     if previous_defense or current_defense:
-        if previous_defense == current_defense and previous_defense:
-            parts.append("Defense unverändert: " + " / ".join(previous_defense) + ".")
-        else:
-            parts.append(
-                "Defense vorher: "
-                + (" / ".join(previous_defense) if previous_defense else "keine stabilen Paare")
-                + ". → Jetzt: "
-                + (" / ".join(current_defense) if current_defense else "keine stabilen Paare")
-                + "."
+        changed = previous_defense != current_defense
+        text = (
+            f"Verteidigerpaare gegenüber {opponent}: Vorher: "
+            + (" / ".join(previous_defense) if previous_defense else "keine stabilen Paare")
+            + ". → Jetzt: "
+            + (" / ".join(current_defense) if current_defense else "keine stabilen Paare")
+            + "."
+        )
+        if stable_defense:
+            text += " Unverändert blieben: " + " / ".join(stable_defense) + "."
+        facts.append(
+            StoryFact(
+                "lineup",
+                82 if changed else 70,
+                "previous_game_defense_units",
+                text,
             )
-            if stable_defense:
-                parts.append("Stabile Paare: " + " / ".join(stable_defense) + ".")
+        )
 
-    if len(parts) <= 1:
-        return None
-    changed_units = len(forwards.get("new") or []) + len(defense.get("new") or [])
-    score = 92 if players_in or players_out else 84 if changed_units >= 2 else 72
-    return StoryFact("lineup", score, "previous_game_lineup", " ".join(parts))
-
+    return facts
 
 def _possession_danger_fact(
     ebb: dict[str, Any],
@@ -640,7 +658,6 @@ def build_story_facts(
     candidates: list[StoryFact] = []
     for candidate in (
         _p3_rebuild_fact(lineups),
-        _previous_lineup_fact(previous_lineup),
         _possession_danger_fact(ebb, game_insight),
         _xg_player_fact(game_insight),
         _momentum_fact(
@@ -655,5 +672,6 @@ def build_story_facts(
     ):
         if candidate is not None:
             candidates.append(candidate)
+    candidates.extend(_previous_lineup_facts(previous_lineup))
     candidates.extend(_streak_facts(streaks, opponent_name))
     return select_story_facts(candidates)
