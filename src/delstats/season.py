@@ -97,7 +97,8 @@ def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[
               (SELECT count(*) FROM events) AS events,
               (SELECT count(*) FROM player_game_stats) AS player_game_stats,
               (SELECT count(*) FROM team_game_stats) AS team_game_stats,
-              (SELECT count(*) FROM shots WHERE shot_zone IS NULL) AS unclassified_shots
+              (SELECT count(*) FROM shots WHERE shot_zone IS NULL AND coalesce(source, 'shot_feed') = 'shot_feed') AS unclassified_shots,
+              (SELECT count(*) FROM shots WHERE source = 'goal_event_reconstructed') AS reconstructed_goal_shots
             """
         ).fetchone()
         cols = [d[0] for d in con.description]
@@ -204,6 +205,7 @@ def write_quality_report(report: dict[str, Any], output_dir: Path) -> tuple[Path
         f"- Player game stats: {totals.get('player_game_stats', 0)}",
         f"- Team game stats: {totals.get('team_game_stats', 0)}",
         f"- Unclassified shot zones: {totals.get('unclassified_shots', 0)}",
+        f"- Reconstructed goal shots: {totals.get('reconstructed_goal_shots', 0)}",
         "",
         "## On-ice quality",
         "",
