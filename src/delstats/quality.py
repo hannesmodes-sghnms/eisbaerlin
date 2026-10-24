@@ -217,6 +217,7 @@ def audit_database(con: Any) -> dict[str, Any]:
         con,
         """
         SELECT s.match_id, s.shot_id, s.game_time_s, s.team_id, s.player_id,
+               s.source, s.source_game_time_s, s.source_player_id,
                c.manpower, c.on_ice_for_player_ids, c.on_ice_against_player_ids,
                c.on_ice_method_for, c.on_ice_method_against
         FROM shots s
@@ -261,29 +262,61 @@ def audit_database(con: Any) -> dict[str, Any]:
         for event, shot in zip(events, shots):
             event_time = int(event.get("game_time_s") or 0)
             shot_time = int(shot.get("game_time_s") or 0)
-            delta = event_time - shot_time
             scorer = event.get("scorer_player_id")
-            shot_player = shot.get("player_id")
-            if abs(delta) > 5:
+            source = str(shot.get("source") or "shot_feed")
+            source_time = shot.get("source_game_time_s")
+            source_player = shot.get("source_player_id")
+            if source == "goal_event_reconstructed":
                 warnings.append(_issue(
-                    "goal_time_drift",
-                    f"goal event/shot timestamps differ by {delta:+d}s",
+                    "reconstructed_goal_shot",
+                    "official goal event was missing from the DEL shot feed and was reconstructed without coordinates",
                     match_id=mid,
                     team_id=team_id,
                     event_time_s=event_time,
-                    shot_time_s=shot_time,
                     shot_id=int(shot["shot_id"]),
                 ))
-            if scorer is not None and shot_player is not None and int(scorer) != int(shot_player):
-                warnings.append(_issue(
-                    "goal_scorer_disagreement",
-                    "official scorer differs from shot-feed shooter",
+            elif source_time is not None:
+                delta = event_time - int(source_time)
+                if abs(delta) > 5:
+                    warnings.append(_issue(
+                        "goal_time_drift",
+                        f"goal event/shot timestamps differ by {delta:+d}s",
+                        match_id=mid,
+                        team_id=team_id,
+                        event_time_s=event_time,
+                        shot_time_s=int(source_time),
+                        shot_id=int(shot["shot_id"]),
+                    ))
+                if scorer is not None and source_player is not None and int(scorer) != int(source_player):
+                    warnings.append(_issue(
+                        "goal_scorer_disagreement",
+                        "official scorer differs from shot-feed shooter",
+                        match_id=mid,
+                        team_id=team_id,
+                        event_time_s=event_time,
+                        shot_time_s=int(source_time),
+                        official_scorer=int(scorer),
+                        shot_player=int(source_player),
+                        shot_id=int(shot["shot_id"]),
+                    ))
+            if shot_time != event_time:
+                hard.append(_issue(
+                    "goal_time_not_reconciled",
+                    "stored goal shot time differs from official goal event",
                     match_id=mid,
                     team_id=team_id,
                     event_time_s=event_time,
-                    shot_time_s=shot_time,
+                    stored_shot_time_s=shot_time,
+                    shot_id=int(shot["shot_id"]),
+                ))
+            if scorer is not None and shot.get("player_id") is not None and int(scorer) != int(shot["player_id"]):
+                hard.append(_issue(
+                    "goal_scorer_not_reconciled",
+                    "stored goal shooter differs from official scorer",
+                    match_id=mid,
+                    team_id=team_id,
                     official_scorer=int(scorer),
-                    shot_player=int(shot_player),
+                    stored_player=int(shot["player_id"]),
                     shot_id=int(shot["shot_id"]),
                 ))
 
@@ -342,11 +375,11 @@ def audit_database(con: Any) -> dict[str, Any]:
             empty_net = bool(data.get("en"))
             if not empty_net:
                 if balance == "EQ" and len(expected_for) != len(expected_against):
-                    hard.append(_issue("goal_balance_mismatch", f"EQ goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
+                    warnings.append(_issue("goal_balance_attendant_disagreement", f"EQ goal has {expected_manpower} attendants; possible delayed penalty/extra attacker", match_id=mid, team_id=team_id, time_s=event_time))
                 elif balance.startswith("PP") and balance != "PP0" and len(expected_for) <= len(expected_against):
-                    hard.append(_issue("goal_balance_mismatch", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
+                    warnings.append(_issue("goal_balance_attendant_disagreement", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
                 elif balance.startswith("SH") and len(expected_for) >= len(expected_against):
-                    hard.append(_issue("goal_balance_mismatch", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
+                    warnings.append(_issue("goal_balance_attendant_disagreement", f"{balance} goal has {expected_manpower} attendants", match_id=mid, team_id=team_id, time_s=event_time))
 
     # 4) Referential integrity across shot, faceoff and on-ice data.
     bad_shot_refs = _rows(
@@ -451,7 +484,9 @@ def audit_database(con: Any) -> dict[str, Any]:
 
     for key, event_goals in event_goal_totals.items():
         player_goals = player_goal_totals.get(key, 0)
-        if player_goals != event_goals:
+        match = matches.get(key[0]) or {}
+        shootout_adjusted = bool(match.get("shootout")) and player_goals == event_goals + 1
+        if player_goals != event_goals and not shootout_adjusted:
             warnings.append(_issue("player_goals_vs_events", "sum of player-game goals differs from official goal events", match_id=key[0], team_id=key[1], player_goals=player_goals, event_goals=event_goals))
         assists = player_assist_totals.get(key, 0)
         if assists > event_goals * 2:
