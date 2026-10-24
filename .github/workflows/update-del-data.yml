@@ -167,6 +167,7 @@ jobs:
   deploy-static:
     if: ${{ vars.ENABLE_DASHBOARD_PAGES == 'true' && github.event_name == 'push' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -176,14 +177,65 @@ jobs:
         with:
           ref: main
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install project
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Download latest season database
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f data/del_2026_27.duckdb
+          gh release download dataset-2026-27-latest \
+            --pattern "del_2026_27.duckdb" \
+            --dir data \
+            --clobber
+
+      - name: Rebuild dashboard JSON with current code
+        run: |
+          python scripts/generate_dashboard.py \
+            --db data/del_2026_27.duckdb \
+            --discovery data/discovery/season_2026_27_type_1.json \
+            --insight-dir data/del_insight \
+            --output-dir site/data \
+            --upcoming 3
+
+      - name: Verify generated dashboard payload
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          index = json.loads(Path("site/data/games.json").read_text(encoding="utf-8"))
+          games = index.get("completed_games") or []
+          if not games:
+              raise SystemExit("No completed EBB games in generated dashboard")
+          latest = games[0]
+          payload = json.loads(Path("site") .joinpath(latest["data_path"]).read_text(encoding="utf-8"))
+          if "fact_groups" not in payload:
+              raise SystemExit("Generated game payload is missing fact_groups")
+          print(
+              f"Verified {latest['match_id']}: "
+              f"{len(payload.get('facts') or [])} facts, "
+              f"{len(payload.get('fact_groups') or [])} fact groups"
+          )
+          PY
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload current dashboard
+      - name: Upload rebuilt dashboard
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
-      - name: Deploy current dashboard
+      - name: Deploy rebuilt dashboard
         id: deployment
         uses: actions/deploy-pages@v4
