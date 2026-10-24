@@ -233,6 +233,8 @@ def _goal_event_contexts(
     for event in flatten_period_events(period_events):
         if event.get("type") != "goal":
             continue
+        if str(event.get("period_key") or "").lower() == "shootout":
+            continue
         data = event.get("data") or {}
         team_id = _event_team_id(data.get("team"), home_team_id, away_team_id)
         if team_id is None:
@@ -257,26 +259,48 @@ def _goal_event_contexts(
     return contexts
 
 
-def _match_goal_event_context(
+def _goal_event_context_by_shot_id(
+    shots: list[dict[str, Any]],
     contexts: list[dict[str, Any]],
-    *,
-    shot_time_s: int,
-    shooting_team_id: int,
-    shooter_player_id: int | None,
-) -> dict[str, Any] | None:
-    candidates = []
+) -> dict[int, dict[str, Any]]:
+    """Pair official goal events and goal shots chronologically per team.
+
+    DEL's two feeds are not guaranteed to share the same scoreboard second:
+    observed offsets range from zero to tens of seconds, and the shot-feed
+    shooter can differ from the officially credited scorer after a deflection
+    or scoring correction. Ordering within a team is the stable join key.
+
+    We only reconcile a team when both sources contain the same number of
+    non-shootout goals. Any count mismatch is left untouched and is surfaced by
+    the cross-source QA instead of guessing.
+    """
+    goal_shots = [
+        shot
+        for shot in shots
+        if SHOT_RESULT_MAP.get(int(shot["match_shot_resutl_id"]), "unknown") == "goal"
+    ]
+    shots_by_team: dict[int, list[dict[str, Any]]] = {}
+    contexts_by_team: dict[int, list[dict[str, Any]]] = {}
+    for shot in goal_shots:
+        shots_by_team.setdefault(int(shot["team_id"]), []).append(shot)
     for context in contexts:
-        if int(context["team_id"]) != int(shooting_team_id):
+        contexts_by_team.setdefault(int(context["team_id"]), []).append(context)
+
+    result: dict[int, dict[str, Any]] = {}
+    for team_id in sorted(set(shots_by_team) | set(contexts_by_team)):
+        team_shots = sorted(
+            shots_by_team.get(team_id, []),
+            key=lambda row: (int(row.get("time") or 0), int(row.get("id") or 0)),
+        )
+        team_contexts = sorted(
+            contexts_by_team.get(team_id, []),
+            key=lambda row: int(row.get("time_s") or 0),
+        )
+        if len(team_shots) != len(team_contexts):
             continue
-        if abs(int(context["time_s"]) - int(shot_time_s)) > 2:
-            continue
-        scorer_id = context.get("scorer_player_id")
-        if scorer_id is not None and shooter_player_id is not None and int(scorer_id) != int(shooter_player_id):
-            continue
-        candidates.append(context)
-    if not candidates:
-        return None
-    return min(candidates, key=lambda row: abs(int(row["time_s"]) - int(shot_time_s)))
+        for shot, context in zip(team_shots, team_contexts):
+            result[int(shot["id"])] = context
+    return result
 
 
 def build_match_database(
@@ -480,6 +504,7 @@ def build_match_database(
             away_team_id=away_team_id,
             goalie_ids=goalie_ids,
         )
+        goal_context_by_shot_id = _goal_event_context_by_shot_id(shots, goal_event_contexts)
         boundary_adjusted = 0
         low_confidence = 0
         goal_event_context_shots = 0
@@ -497,14 +522,7 @@ def build_match_database(
             )
             result_name = SHOT_RESULT_MAP.get(int(shot["match_shot_resutl_id"]), "unknown")
             if result_name == "goal":
-                goal_context = _match_goal_event_context(
-                    goal_event_contexts,
-                    shot_time_s=t,
-                    shooting_team_id=shooting_team_id,
-                    shooter_player_id=(
-                        int(shot["player_id"]) if shot.get("player_id") is not None else None
-                    ),
-                )
+                goal_context = goal_context_by_shot_id.get(int(shot["id"]))
                 if goal_context is not None:
                     on_for = list(goal_context["on_for"])
                     on_against = list(goal_context["on_against"])
