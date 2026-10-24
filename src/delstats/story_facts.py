@@ -16,10 +16,10 @@ class StoryFact:
 
 
 CATEGORY_META: tuple[tuple[str, str, int], ...] = (
-    ("current_story", "🔥 Aktuelle Story", 2),
-    ("lineup", "🔄 Lineup & Reihen", 2),
-    ("form", "📈 Form & Serien", 2),
-    ("nerd", "🔬 Nerd Fact", 2),
+    ("current_story", "🔥 Aktuelle Story", 3),
+    ("lineup", "🔄 Lineup & Reihen", 4),
+    ("form", "📈 Form & Serien", 3),
+    ("nerd", "🔬 Nerd Fact", 3),
 )
 
 
@@ -261,6 +261,8 @@ def previous_game_lineup_diff(
         return {
             "current_count": len(current_rows),
             "previous_count": len(previous_rows),
+            "current": [row.get("label") for row in current_rows],
+            "previous": [row.get("label") for row in previous_rows],
             "stable": [row.get("label") for _, row in sorted(((uid, current_map[uid]) for uid in stable_ids), key=sort_key, reverse=True)],
             "new": [row.get("label") for _, row in sorted(((uid, current_map[uid]) for uid in new_ids), key=sort_key, reverse=True)],
             "dropped": [row.get("label") for _, row in sorted(((uid, previous_map[uid]) for uid in dropped_ids), key=sort_key, reverse=True)],
@@ -287,11 +289,28 @@ def _p3_rebuild_fact(lineups: dict[str, Any]) -> StoryFact | None:
     new = list(rotation.get("new_p3_forward_trios") or [])
     if len(dropped) < 2 or not new:
         return None
-    top = max(new, key=lambda row: (int(row.get("p3_s") or 0), int(row.get("p3_appearances") or 0)))
+
+    dropped = sorted(
+        dropped,
+        key=lambda row: (
+            int(row.get("p1_s") or 0) + int(row.get("p2_s") or 0),
+            int(row.get("appearances") or 0),
+        ),
+        reverse=True,
+    )
+    new = sorted(
+        new,
+        key=lambda row: (int(row.get("p3_s") or 0), int(row.get("p3_appearances") or 0)),
+        reverse=True,
+    )
+    top = new[0]
+    before = " / ".join(str(row.get("label")) for row in dropped[:4] if row.get("label"))
+    after = " / ".join(str(row.get("label")) for row in new[:4] if row.get("label"))
     dropped_count = len(dropped)
     text = (
-        f"Umbau im Schlussdrittel: {dropped_count} zuvor regelmäßig eingesetzte Sturmreihen verschwanden "
-        f"aus der 5v5-Rotation. {top.get('label')} war mit {_fmt_time(top.get('p3_s'))} Minuten und "
+        f"Umbau im Schlussdrittel: Vorher: {before}. → Nachher: {after}. "
+        f"{dropped_count} zuvor regelmäßig eingesetzte Sturmreihen verschwanden damit aus der 5v5-Rotation. "
+        f"{top.get('label')} war mit {_fmt_time(top.get('p3_s'))} Minuten und "
         f"{int(top.get('p3_appearances') or 0)} gemeinsamen Einsätzen die häufigste neue Kombination."
     )
     return StoryFact("lineup", 100 if dropped_count >= 3 else 88, "p3_rebuild", text)
@@ -308,21 +327,44 @@ def _previous_lineup_fact(diff: dict[str, Any]) -> StoryFact | None:
     defense = diff.get("defense") or {}
 
     parts = [f"Lineup gegenüber {opponent}:"]
-    if players_in:
-        parts.append("neu dabei " + ", ".join(players_in) + ".")
-    if players_out:
-        parts.append("nicht mehr dabei " + ", ".join(players_out) + ".")
+    if players_in or players_out:
+        player_parts = []
+        if players_out:
+            player_parts.append("raus: " + ", ".join(players_out))
+        if players_in:
+            player_parts.append("rein: " + ", ".join(players_in))
+        parts.append("Personal " + " → ".join(player_parts) + ".")
 
-    stable_f = len(forwards.get("stable") or [])
-    current_f = int(forwards.get("current_count") or 0)
-    stable_d = len(defense.get("stable") or [])
-    current_d = int(defense.get("current_count") or 0)
-    if current_f:
-        parts.append(f"Im Sturm blieben {stable_f} der {current_f} meistgenutzten Kombinationen identisch.")
-    if current_d and stable_d == current_d:
-        parts.append("Die meistgenutzten Verteidigerpaare blieben unverändert.")
-    elif current_d:
-        parts.append(f"In der Defense blieben {stable_d} der {current_d} meistgenutzten Paare identisch.")
+    previous_forwards = [str(label) for label in forwards.get("previous") or [] if label]
+    current_forwards = [str(label) for label in forwards.get("current") or [] if label]
+    stable_forwards = [str(label) for label in forwards.get("stable") or [] if label]
+    if previous_forwards or current_forwards:
+        parts.append(
+            "Sturm vorher: "
+            + (" / ".join(previous_forwards) if previous_forwards else "keine stabile Kombination")
+            + ". → Jetzt: "
+            + (" / ".join(current_forwards) if current_forwards else "keine stabile Kombination")
+            + "."
+        )
+        if stable_forwards:
+            parts.append("Unverändert: " + " / ".join(stable_forwards) + ".")
+
+    previous_defense = [str(label) for label in defense.get("previous") or [] if label]
+    current_defense = [str(label) for label in defense.get("current") or [] if label]
+    stable_defense = [str(label) for label in defense.get("stable") or [] if label]
+    if previous_defense or current_defense:
+        if previous_defense == current_defense and previous_defense:
+            parts.append("Defense unverändert: " + " / ".join(previous_defense) + ".")
+        else:
+            parts.append(
+                "Defense vorher: "
+                + (" / ".join(previous_defense) if previous_defense else "keine stabilen Paare")
+                + ". → Jetzt: "
+                + (" / ".join(current_defense) if current_defense else "keine stabilen Paare")
+                + "."
+            )
+            if stable_defense:
+                parts.append("Stabile Paare: " + " / ".join(stable_defense) + ".")
 
     if len(parts) <= 1:
         return None
@@ -539,7 +581,7 @@ def _efficiency_fact(ebb: dict[str, Any]) -> StoryFact | None:
 def select_story_facts(
     candidates: list[StoryFact],
     *,
-    max_facts: int = 8,
+    max_facts: int = 12,
     min_score: int = 70,
 ) -> tuple[list[str], list[dict[str, Any]]]:
     unique: dict[tuple[str, str], StoryFact] = {}
