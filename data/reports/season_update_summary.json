@@ -1,11 +1,11 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-24T03:03:41Z",
+  "generated_at_utc": "2026-10-24T10:22:42Z",
   "schedule_matches": 364,
   "completed_matches": 80,
-  "refreshed_matches": 0,
-  "downloaded_matches": 9,
+  "refreshed_matches": 7,
+  "downloaded_matches": 2,
   "skipped_matches": 71,
   "failed_downloads": 0,
   "imported_matches": 78,
@@ -748,7 +748,7 @@
       "start_date": "2026-10-23 19:30:00",
       "home_team_name": "Schwenninger Wild Wings",
       "away_team_name": "Pinguins Bremerhaven",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -758,7 +758,7 @@
       "start_date": "2026-10-23 19:30:00",
       "home_team_name": "Eisbären Berlin",
       "away_team_name": "Augsburger Panther",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -768,7 +768,7 @@
       "start_date": "2026-10-23 19:30:00",
       "home_team_name": "Nürnberg Ice Tigers",
       "away_team_name": "Krefeld Pinguine",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -778,7 +778,7 @@
       "start_date": "2026-10-23 19:30:00",
       "home_team_name": "Adler Mannheim",
       "away_team_name": "Löwen Frankfurt",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -788,7 +788,7 @@
       "start_date": "2026-10-23 19:30:00",
       "home_team_name": "EHC Red Bull München",
       "away_team_name": "Iserlohn Roosters",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -798,7 +798,7 @@
       "start_date": "2026-10-23 19:30:00",
       "home_team_name": "Straubing Tigers",
       "away_team_name": "Kölner Haie",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null
@@ -808,7 +808,7 @@
       "start_date": "2026-10-23 19:30:00",
       "home_team_name": "Grizzlys Wolfsburg",
       "away_team_name": "ERC Ingolstadt",
-      "action": "downloaded",
+      "action": "refreshed",
       "refresh": true,
       "downloaded_resources": 10,
       "error": null

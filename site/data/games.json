@@ -4,7 +4,7 @@
     "abbr": "EBB",
     "name": "Eisbären Berlin"
   },
-  "generated_at": "2026-10-24T03:03:56.452719+00:00",
+  "generated_at": "2026-10-24T10:22:57.700445+00:00",
   "completed_games": [
     {
       "match_id": 4462,
@@ -163,22 +163,22 @@
           "label": "Corsi 5v5 %",
           "key": "corsi_5v5_pct",
           "kind": "percent",
-          "ebb": 52.32,
-          "opponent": 48.144
+          "ebb": 52.752,
+          "opponent": 48.276
         },
         {
           "label": "Corsi / Spiel",
           "key": "corsi_per_game",
           "kind": "decimal",
           "ebb": 54.55,
-          "opponent": 50.5
+          "opponent": 50.58
         },
         {
           "label": "SOG / Spiel",
           "key": "sog_per_game",
           "kind": "decimal",
           "ebb": 29.27,
-          "opponent": 27.08
+          "opponent": 27.17
         },
         {
           "label": "Slot Attempts / Spiel",
@@ -205,8 +205,8 @@
           "label": "PDO 5v5",
           "key": "pdo_5v5",
           "kind": "decimal",
-          "ebb": 103.877,
-          "opponent": 97.305
+          "ebb": 106.948,
+          "opponent": 98.233
         },
         {
           "label": "Zeit in Führung / Spiel",
@@ -268,9 +268,9 @@
           "home_road": "home",
           "goals_for": 2,
           "goals_against": 1,
-          "corsi_5v5_pct": 54.839,
+          "corsi_5v5_pct": 55.789,
           "slot_attempts_for": 10,
-          "pdo_5v5": 94.118,
+          "pdo_5v5": 102.451,
           "result": "2:1",
           "outcome": "W"
         },
@@ -283,9 +283,9 @@
           "home_road": "visitor",
           "goals_for": 4,
           "goals_against": 0,
-          "corsi_5v5_pct": 59.701,
+          "corsi_5v5_pct": 61.429,
           "slot_attempts_for": 18,
-          "pdo_5v5": 103.846,
+          "pdo_5v5": 113.793,
           "result": "4:0",
           "outcome": "W"
         },
@@ -298,9 +298,9 @@
           "home_road": "home",
           "goals_for": 3,
           "goals_against": 4,
-          "corsi_5v5_pct": 45.679,
+          "corsi_5v5_pct": 45.122,
           "slot_attempts_for": 19,
-          "pdo_5v5": 103.642,
+          "pdo_5v5": 100.953,
           "result": "3:4",
           "outcome": "L"
         },
@@ -313,9 +313,9 @@
           "home_road": "visitor",
           "goals_for": 3,
           "goals_against": 0,
-          "corsi_5v5_pct": 57.143,
+          "corsi_5v5_pct": 57.609,
           "slot_attempts_for": 12,
-          "pdo_5v5": 105.0,
+          "pdo_5v5": 109.524,
           "result": "3:0",
           "outcome": "W"
         },
@@ -360,9 +360,9 @@
           "home_road": "visitor",
           "goals_for": 3,
           "goals_against": 2,
-          "corsi_5v5_pct": 34.524,
+          "corsi_5v5_pct": 35.294,
           "slot_attempts_for": 15,
-          "pdo_5v5": 100.0,
+          "pdo_5v5": 106.25,
           "result": "3:2",
           "outcome": "W"
         },
@@ -375,9 +375,9 @@
           "home_road": "visitor",
           "goals_for": 2,
           "goals_against": 1,
-          "corsi_5v5_pct": 43.662,
+          "corsi_5v5_pct": 44.444,
           "slot_attempts_for": 12,
-          "pdo_5v5": 107.143,
+          "pdo_5v5": 113.333,
           "result": "2:1",
           "outcome": "W"
         },
@@ -405,9 +405,9 @@
           "home_road": "home",
           "goals_for": 3,
           "goals_against": 4,
-          "corsi_5v5_pct": 47.887,
+          "corsi_5v5_pct": 47.222,
           "slot_attempts_for": 13,
-          "pdo_5v5": 99.545,
+          "pdo_5v5": 95.021,
           "result": "3:4",
           "outcome": "L"
         }
@@ -528,12 +528,12 @@
           "goals_against": 27,
           "save_pct": 87.1,
           "gaa": 3.49,
-          "sa_5v5": 128,
-          "ga_5v5": 11,
-          "save_pct_5v5": 91.4,
-          "gsaa_5v5": -1.48,
-          "slot_sa_5v5": 36,
-          "slot_save_pct_5v5": 75.0,
+          "sa_5v5": 130,
+          "ga_5v5": 13,
+          "save_pct_5v5": 90.0,
+          "gsaa_5v5": -1.15,
+          "slot_sa_5v5": 38,
+          "slot_save_pct_5v5": 71.1,
           "last5_games": 5,
           "last5_save_pct": 89.9
         },
@@ -549,12 +549,12 @@
           "goals_against": 16,
           "save_pct": 89.1,
           "gaa": 3.72,
-          "sa_5v5": 101,
-          "ga_5v5": 11,
-          "save_pct_5v5": 89.1,
-          "gsaa_5v5": -3.49,
-          "slot_sa_5v5": 36,
-          "slot_save_pct_5v5": 75.0,
+          "sa_5v5": 102,
+          "ga_5v5": 12,
+          "save_pct_5v5": 88.2,
+          "gsaa_5v5": -2.7,
+          "slot_sa_5v5": 37,
+          "slot_save_pct_5v5": 73.0,
           "last5_games": 5,
           "last5_save_pct": 89.1
         }
@@ -583,8 +583,8 @@
           "label": "Corsi 5v5 %",
           "key": "corsi_5v5_pct",
           "kind": "percent",
-          "ebb": 52.32,
-          "opponent": 50.83
+          "ebb": 52.752,
+          "opponent": 50.875
         },
         {
           "label": "Corsi / Spiel",
@@ -625,8 +625,8 @@
           "label": "PDO 5v5",
           "key": "pdo_5v5",
           "kind": "decimal",
-          "ebb": 103.877,
-          "opponent": 98.002
+          "ebb": 106.948,
+          "opponent": 98.351
         },
         {
           "label": "Zeit in Führung / Spiel",
@@ -688,9 +688,9 @@
           "home_road": "home",
           "goals_for": 2,
           "goals_against": 1,
-          "corsi_5v5_pct": 54.839,
+          "corsi_5v5_pct": 55.789,
           "slot_attempts_for": 10,
-          "pdo_5v5": 94.118,
+          "pdo_5v5": 102.451,
           "result": "2:1",
           "outcome": "W"
         },
@@ -703,9 +703,9 @@
           "home_road": "visitor",
           "goals_for": 4,
           "goals_against": 0,
-          "corsi_5v5_pct": 59.701,
+          "corsi_5v5_pct": 61.429,
           "slot_attempts_for": 18,
-          "pdo_5v5": 103.846,
+          "pdo_5v5": 113.793,
           "result": "4:0",
           "outcome": "W"
         },
@@ -718,9 +718,9 @@
           "home_road": "home",
           "goals_for": 3,
           "goals_against": 4,
-          "corsi_5v5_pct": 45.679,
+          "corsi_5v5_pct": 45.122,
           "slot_attempts_for": 19,
-          "pdo_5v5": 103.642,
+          "pdo_5v5": 100.953,
           "result": "3:4",
           "outcome": "L"
         },
@@ -733,9 +733,9 @@
           "home_road": "visitor",
           "goals_for": 3,
           "goals_against": 0,
-          "corsi_5v5_pct": 57.143,
+          "corsi_5v5_pct": 57.609,
           "slot_attempts_for": 12,
-          "pdo_5v5": 105.0,
+          "pdo_5v5": 109.524,
           "result": "3:0",
           "outcome": "W"
         },
@@ -765,9 +765,9 @@
           "home_road": "visitor",
           "goals_for": 4,
           "goals_against": 1,
-          "corsi_5v5_pct": 55.422,
+          "corsi_5v5_pct": 55.952,
           "slot_attempts_for": 19,
-          "pdo_5v5": 102.143,
+          "pdo_5v5": 105.345,
           "result": "4:1",
           "outcome": "W"
         },
@@ -780,9 +780,9 @@
           "home_road": "home",
           "goals_for": 3,
           "goals_against": 2,
-          "corsi_5v5_pct": 56.522,
+          "corsi_5v5_pct": 55.914,
           "slot_attempts_for": 26,
-          "pdo_5v5": 98.444,
+          "pdo_5v5": 93.474,
           "result": "3:2",
           "outcome": "W"
         },
@@ -948,12 +948,12 @@
           "goals_against": 20,
           "save_pct": 90.2,
           "gaa": 2.86,
-          "sa_5v5": 158,
-          "ga_5v5": 12,
-          "save_pct_5v5": 92.4,
-          "gsaa_5v5": -0.25,
-          "slot_sa_5v5": 47,
-          "slot_save_pct_5v5": 89.4,
+          "sa_5v5": 161,
+          "ga_5v5": 15,
+          "save_pct_5v5": 90.7,
+          "gsaa_5v5": -0.32,
+          "slot_sa_5v5": 49,
+          "slot_save_pct_5v5": 85.7,
           "last5_games": 5,
           "last5_save_pct": 90.4
         },
@@ -972,7 +972,7 @@
           "sa_5v5": 105,
           "ga_5v5": 10,
           "save_pct_5v5": 90.5,
-          "gsaa_5v5": -2.19,
+          "gsaa_5v5": -0.43,
           "slot_sa_5v5": 41,
           "slot_save_pct_5v5": 85.4,
           "last5_games": 4,
@@ -1003,8 +1003,8 @@
           "label": "Corsi 5v5 %",
           "key": "corsi_5v5_pct",
           "kind": "percent",
-          "ebb": 52.32,
-          "opponent": 59.401
+          "ebb": 52.752,
+          "opponent": 59.016
         },
         {
           "label": "Corsi / Spiel",
@@ -1045,8 +1045,8 @@
           "label": "PDO 5v5",
           "key": "pdo_5v5",
           "kind": "decimal",
-          "ebb": 103.877,
-          "opponent": 102.278
+          "ebb": 106.948,
+          "opponent": 99.402
         },
         {
           "label": "Zeit in Führung / Spiel",
@@ -1108,9 +1108,9 @@
           "home_road": "home",
           "goals_for": 2,
           "goals_against": 1,
-          "corsi_5v5_pct": 54.839,
+          "corsi_5v5_pct": 55.789,
           "slot_attempts_for": 10,
-          "pdo_5v5": 94.118,
+          "pdo_5v5": 102.451,
           "result": "2:1",
           "outcome": "W"
         },
@@ -1123,9 +1123,9 @@
           "home_road": "visitor",
           "goals_for": 4,
           "goals_against": 0,
-          "corsi_5v5_pct": 59.701,
+          "corsi_5v5_pct": 61.429,
           "slot_attempts_for": 18,
-          "pdo_5v5": 103.846,
+          "pdo_5v5": 113.793,
           "result": "4:0",
           "outcome": "W"
         },
@@ -1138,9 +1138,9 @@
           "home_road": "home",
           "goals_for": 3,
           "goals_against": 4,
-          "corsi_5v5_pct": 45.679,
+          "corsi_5v5_pct": 45.122,
           "slot_attempts_for": 19,
-          "pdo_5v5": 103.642,
+          "pdo_5v5": 100.953,
           "result": "3:4",
           "outcome": "L"
         },
@@ -1153,9 +1153,9 @@
           "home_road": "visitor",
           "goals_for": 3,
           "goals_against": 0,
-          "corsi_5v5_pct": 57.143,
+          "corsi_5v5_pct": 57.609,
           "slot_attempts_for": 12,
-          "pdo_5v5": 105.0,
+          "pdo_5v5": 109.524,
           "result": "3:0",
           "outcome": "W"
         },
@@ -1200,9 +1200,9 @@
           "home_road": "home",
           "goals_for": 1,
           "goals_against": 2,
-          "corsi_5v5_pct": 56.338,
+          "corsi_5v5_pct": 55.556,
           "slot_attempts_for": 17,
-          "pdo_5v5": 92.857,
+          "pdo_5v5": 86.667,
           "result": "1:2",
           "outcome": "L"
         },
@@ -1230,9 +1230,9 @@
           "home_road": "home",
           "goals_for": 2,
           "goals_against": 1,
-          "corsi_5v5_pct": 55.0,
+          "corsi_5v5_pct": 53.333,
           "slot_attempts_for": 14,
-          "pdo_5v5": 111.765,
+          "pdo_5v5": 100.0,
           "result": "2:1",
           "outcome": "W"
         },
@@ -1262,7 +1262,7 @@
           "away_team_name": "Eisbären Berlin",
           "home_score": 4,
           "away_score": 3,
-          "ebb_corsi_5v5": 38,
+          "ebb_corsi_5v5": 40,
           "opponent_corsi_5v5": 43,
           "ebb_slot": 17,
           "opponent_slot": 20,
@@ -1384,12 +1384,12 @@
           "goals_against": 14,
           "save_pct": 91.4,
           "gaa": 2.02,
-          "sa_5v5": 109,
-          "ga_5v5": 8,
-          "save_pct_5v5": 92.7,
-          "gsaa_5v5": 0.11,
-          "slot_sa_5v5": 34,
-          "slot_save_pct_5v5": 79.4,
+          "sa_5v5": 113,
+          "ga_5v5": 12,
+          "save_pct_5v5": 89.4,
+          "gsaa_5v5": -1.7,
+          "slot_sa_5v5": 37,
+          "slot_save_pct_5v5": 73.0,
           "last5_games": 5,
           "last5_save_pct": 93.9
         },
@@ -1405,12 +1405,12 @@
           "goals_against": 11,
           "save_pct": 91.5,
           "gaa": 2.17,
-          "sa_5v5": 91,
-          "ga_5v5": 4,
-          "save_pct_5v5": 95.6,
-          "gsaa_5v5": 2.77,
-          "slot_sa_5v5": 31,
-          "slot_save_pct_5v5": 87.1,
+          "sa_5v5": 94,
+          "ga_5v5": 7,
+          "save_pct_5v5": 92.6,
+          "gsaa_5v5": 1.57,
+          "slot_sa_5v5": 33,
+          "slot_save_pct_5v5": 81.8,
           "last5_games": 5,
           "last5_save_pct": 91.5
         }

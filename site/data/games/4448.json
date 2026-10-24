@@ -36,14 +36,14 @@
       "key": "corsi_5v5_for",
       "kind": "number",
       "ebb": 37,
-      "opponent": 44
+      "opponent": 45
     },
     {
       "label": "Corsi-Anteil 5v5",
       "key": "corsi_5v5_pct",
       "kind": "percent",
-      "ebb": 45.679,
-      "opponent": 54.321
+      "ebb": 45.122,
+      "opponent": 54.878
     },
     {
       "label": "Shots on Goal",
@@ -64,7 +64,7 @@
       "key": "slot_attempts_5v5_for",
       "kind": "number",
       "ebb": 10,
-      "opponent": 13
+      "opponent": 14
     },
     {
       "label": "Tore",
@@ -113,30 +113,30 @@
       "key": "shooting_pct_5v5",
       "kind": "percent",
       "ebb": 9.524,
-      "opponent": 5.882
+      "opponent": 8.571
     },
     {
       "label": "SV% 5v5",
       "key": "save_pct_5v5",
       "kind": "percent",
-      "ebb": 94.118,
+      "ebb": 91.429,
       "opponent": 90.476
     },
     {
       "label": "PDO 5v5",
       "key": "pdo_5v5",
       "kind": "decimal",
-      "ebb": 103.642,
-      "opponent": 96.358
+      "ebb": 100.953,
+      "opponent": 99.047
     }
   ],
   "facts": [
-    "Corsi: EBB 63:52; bei 5v5 37:44.",
-    "Slot Attempts: EBB 19:17; bei 5v5 10:13.",
+    "Corsi: EBB 63:52; bei 5v5 37:45.",
+    "Slot Attempts: EBB 19:17; bei 5v5 10:14.",
     "Zeit in Führung: 2:53; ausgeglichen 46:03; im Rückstand 11:04.",
     "Meiste Eiszeit EBB: Kai Wissmann mit 25:33.",
     "5v5 bei Gleichstand: Corsi 27:34 (44.3% EBB).",
-    "5v5 On-Ice: Veilleux 13:7 Corsi (65.0%), +25.7 Prozentpunkte gegenüber EBB ohne ihn auf dem Eis.",
+    "5v5 On-Ice: Veilleux 13:7 Corsi (65.0%), +26.3 Prozentpunkte gegenüber EBB ohne ihn auf dem Eis.",
     "Reihenänderung P2: Sturmreihe Eder – Foudy – Pföderl fiel nahezu aus der 5v5-Rotation (P1 2:00 → P2 0:00).",
     "Reihenänderung P2: Sturmreihe Ronning – Kirk – Tiffels fiel nahezu aus der 5v5-Rotation (P1 2:11 → P2 0:00).",
     "Reihenänderung P2: Sturmreihe Eder – Foudy – Hördler wurde neu stabil eingesetzt (0:54).",
@@ -4635,7 +4635,7 @@
         "cf": 13,
         "ca": 7,
         "cf_pct": 65.0,
-        "relative_cf_pct": 25.7,
+        "relative_cf_pct": 26.3,
         "ff": 10,
         "fa": 6,
         "ff_pct": 62.5,
@@ -4658,7 +4658,7 @@
         "cf": 13,
         "ca": 11,
         "cf_pct": 54.2,
-        "relative_cf_pct": 12.1,
+        "relative_cf_pct": 12.8,
         "ff": 12,
         "fa": 10,
         "ff_pct": 54.5,
@@ -4673,29 +4673,6 @@
         "toi_5v5_s": 759
       },
       {
-        "player_id": 3410,
-        "name": "Liam Kirk",
-        "last_name": "Kirk",
-        "jersey": 94,
-        "position": "FO",
-        "cf": 13,
-        "ca": 11,
-        "cf_pct": 54.2,
-        "relative_cf_pct": 12.1,
-        "ff": 11,
-        "fa": 10,
-        "ff_pct": 52.4,
-        "sog_for": 7,
-        "sog_against": 8,
-        "gf": 2,
-        "ga": 1,
-        "goal_share_pct": 66.7,
-        "on_ice_shooting_pct": 28.6,
-        "on_ice_save_pct": 87.5,
-        "pdo": 116.1,
-        "toi_5v5_s": 715
-      },
-      {
         "player_id": 4701,
         "name": "Brandon Davidson",
         "last_name": "Davidson",
@@ -4704,7 +4681,7 @@
         "cf": 11,
         "ca": 10,
         "cf_pct": 52.4,
-        "relative_cf_pct": 9.1,
+        "relative_cf_pct": 9.8,
         "ff": 10,
         "fa": 9,
         "ff_pct": 52.6,
@@ -4719,50 +4696,50 @@
         "toi_5v5_s": 708
       },
       {
+        "player_id": 3410,
+        "name": "Liam Kirk",
+        "last_name": "Kirk",
+        "jersey": 94,
+        "position": "FO",
+        "cf": 13,
+        "ca": 12,
+        "cf_pct": 52.0,
+        "relative_cf_pct": 9.9,
+        "ff": 11,
+        "fa": 11,
+        "ff_pct": 50.0,
+        "sog_for": 7,
+        "sog_against": 9,
+        "gf": 2,
+        "ga": 2,
+        "goal_share_pct": 50.0,
+        "on_ice_shooting_pct": 28.6,
+        "on_ice_save_pct": 77.8,
+        "pdo": 106.4,
+        "toi_5v5_s": 715
+      },
+      {
         "player_id": 2209,
         "name": "Ty Ronning",
         "last_name": "Ronning",
         "jersey": 9,
         "position": "FO",
         "cf": 13,
-        "ca": 12,
-        "cf_pct": 52.0,
-        "relative_cf_pct": 9.1,
-        "ff": 11,
-        "fa": 11,
-        "ff_pct": 50.0,
-        "sog_for": 8,
-        "sog_against": 8,
-        "gf": 2,
-        "ga": 1,
-        "goal_share_pct": 66.7,
-        "on_ice_shooting_pct": 25.0,
-        "on_ice_save_pct": 87.5,
-        "pdo": 112.5,
-        "toi_5v5_s": 729
-      },
-      {
-        "player_id": 512,
-        "name": "Kai Wissmann",
-        "last_name": "Wissmann",
-        "jersey": 6,
-        "position": "DE",
-        "cf": 15,
-        "ca": 15,
+        "ca": 13,
         "cf_pct": 50.0,
-        "relative_cf_pct": 6.9,
+        "relative_cf_pct": 7.1,
         "ff": 11,
-        "fa": 14,
-        "ff_pct": 44.0,
-        "sog_for": 10,
-        "sog_against": 11,
+        "fa": 12,
+        "ff_pct": 47.8,
+        "sog_for": 8,
+        "sog_against": 9,
         "gf": 2,
         "ga": 2,
         "goal_share_pct": 50.0,
-        "on_ice_shooting_pct": 20.0,
-        "on_ice_save_pct": 81.8,
-        "pdo": 101.8,
-        "toi_5v5_s": 939
+        "on_ice_shooting_pct": 25.0,
+        "on_ice_save_pct": 77.8,
+        "pdo": 102.8,
+        "toi_5v5_s": 729
       },
       {
         "player_id": 4311,
@@ -4773,7 +4750,7 @@
         "cf": 6,
         "ca": 6,
         "cf_pct": 50.0,
-        "relative_cf_pct": 5.1,
+        "relative_cf_pct": 5.7,
         "ff": 6,
         "fa": 5,
         "ff_pct": 54.5,
@@ -4788,6 +4765,29 @@
         "toi_5v5_s": 475
       },
       {
+        "player_id": 512,
+        "name": "Kai Wissmann",
+        "last_name": "Wissmann",
+        "jersey": 6,
+        "position": "DE",
+        "cf": 15,
+        "ca": 16,
+        "cf_pct": 48.4,
+        "relative_cf_pct": 5.3,
+        "ff": 11,
+        "fa": 15,
+        "ff_pct": 42.3,
+        "sog_for": 10,
+        "sog_against": 12,
+        "gf": 2,
+        "ga": 3,
+        "goal_share_pct": 40.0,
+        "on_ice_shooting_pct": 20.0,
+        "on_ice_save_pct": 75.0,
+        "pdo": 95.0,
+        "toi_5v5_s": 939
+      },
+      {
         "player_id": 506,
         "name": "Jonas Müller",
         "last_name": "Müller",
@@ -4796,7 +4796,7 @@
         "cf": 14,
         "ca": 15,
         "cf_pct": 48.3,
-        "relative_cf_pct": 4.1,
+        "relative_cf_pct": 4.9,
         "ff": 10,
         "fa": 14,
         "ff_pct": 41.7,
@@ -4811,29 +4811,6 @@
         "toi_5v5_s": 905
       },
       {
-        "player_id": 92,
-        "name": "Leonhard Pföderl",
-        "last_name": "Pföderl",
-        "jersey": 93,
-        "position": "FO",
-        "cf": 13,
-        "ca": 14,
-        "cf_pct": 48.1,
-        "relative_cf_pct": 3.7,
-        "ff": 11,
-        "fa": 13,
-        "ff_pct": 45.8,
-        "sog_for": 7,
-        "sog_against": 10,
-        "gf": 1,
-        "ga": 1,
-        "goal_share_pct": 50.0,
-        "on_ice_shooting_pct": 14.3,
-        "on_ice_save_pct": 90.0,
-        "pdo": 104.3,
-        "toi_5v5_s": 762
-      },
-      {
         "player_id": 1796,
         "name": "Markus Vikingstad",
         "last_name": "Vikingstad",
@@ -4842,7 +4819,7 @@
         "cf": 14,
         "ca": 16,
         "cf_pct": 46.7,
-        "relative_cf_pct": 1.6,
+        "relative_cf_pct": 2.5,
         "ff": 11,
         "fa": 13,
         "ff_pct": 45.8,
@@ -4857,27 +4834,27 @@
         "toi_5v5_s": 771
       },
       {
-        "player_id": 1738,
-        "name": "Korbinian Geibel",
-        "last_name": "Geibel",
-        "jersey": 40,
-        "position": "DE",
-        "cf": 7,
-        "ca": 8,
-        "cf_pct": 46.7,
-        "relative_cf_pct": 1.2,
-        "ff": 7,
-        "fa": 7,
-        "ff_pct": 50.0,
-        "sog_for": 4,
-        "sog_against": 7,
-        "gf": 0,
-        "ga": 0,
-        "goal_share_pct": null,
-        "on_ice_shooting_pct": 0.0,
-        "on_ice_save_pct": 100.0,
-        "pdo": 100.0,
-        "toi_5v5_s": 451
+        "player_id": 92,
+        "name": "Leonhard Pföderl",
+        "last_name": "Pföderl",
+        "jersey": 93,
+        "position": "FO",
+        "cf": 13,
+        "ca": 15,
+        "cf_pct": 46.4,
+        "relative_cf_pct": 2.0,
+        "ff": 11,
+        "fa": 14,
+        "ff_pct": 44.0,
+        "sog_for": 7,
+        "sog_against": 11,
+        "gf": 1,
+        "ga": 2,
+        "goal_share_pct": 33.3,
+        "on_ice_shooting_pct": 14.3,
+        "on_ice_save_pct": 81.8,
+        "pdo": 96.1,
+        "toi_5v5_s": 762
       },
       {
         "player_id": 4310,
@@ -4888,7 +4865,7 @@
         "cf": 6,
         "ca": 7,
         "cf_pct": 46.2,
-        "relative_cf_pct": 0.6,
+        "relative_cf_pct": 1.3,
         "ff": 6,
         "fa": 6,
         "ff_pct": 50.0,
@@ -4911,7 +4888,7 @@
         "cf": 9,
         "ca": 11,
         "cf_pct": 45.0,
-        "relative_cf_pct": -0.9,
+        "relative_cf_pct": -0.2,
         "ff": 8,
         "fa": 11,
         "ff_pct": 42.1,
@@ -4926,6 +4903,29 @@
         "toi_5v5_s": 679
       },
       {
+        "player_id": 1738,
+        "name": "Korbinian Geibel",
+        "last_name": "Geibel",
+        "jersey": 40,
+        "position": "DE",
+        "cf": 7,
+        "ca": 9,
+        "cf_pct": 43.8,
+        "relative_cf_pct": -1.7,
+        "ff": 7,
+        "fa": 8,
+        "ff_pct": 46.7,
+        "sog_for": 4,
+        "sog_against": 8,
+        "gf": 0,
+        "ga": 1,
+        "goal_share_pct": 0.0,
+        "on_ice_shooting_pct": 0.0,
+        "on_ice_save_pct": 87.5,
+        "pdo": 87.5,
+        "toi_5v5_s": 451
+      },
+      {
         "player_id": 546,
         "name": "Andreas Eder",
         "last_name": "Eder",
@@ -4934,7 +4934,7 @@
         "cf": 6,
         "ca": 11,
         "cf_pct": 35.3,
-        "relative_cf_pct": -13.1,
+        "relative_cf_pct": -12.4,
         "ff": 6,
         "fa": 11,
         "ff_pct": 35.3,
@@ -4957,7 +4957,7 @@
         "cf": 9,
         "ca": 18,
         "cf_pct": 33.3,
-        "relative_cf_pct": -18.6,
+        "relative_cf_pct": -17.6,
         "ff": 5,
         "fa": 15,
         "ff_pct": 25.0,
@@ -4980,7 +4980,7 @@
         "cf": 8,
         "ca": 16,
         "cf_pct": 33.3,
-        "relative_cf_pct": -17.6,
+        "relative_cf_pct": -16.7,
         "ff": 7,
         "fa": 13,
         "ff_pct": 35.0,
@@ -5003,7 +5003,7 @@
         "cf": 2,
         "ca": 4,
         "cf_pct": 33.3,
-        "relative_cf_pct": -13.4,
+        "relative_cf_pct": -12.8,
         "ff": 2,
         "fa": 4,
         "ff_pct": 33.3,
@@ -5026,7 +5026,7 @@
         "cf": 7,
         "ca": 15,
         "cf_pct": 31.8,
-        "relative_cf_pct": -19.0,
+        "relative_cf_pct": -18.2,
         "ff": 6,
         "fa": 12,
         "ff_pct": 33.3,
@@ -5049,7 +5049,7 @@
         "cf": 6,
         "ca": 13,
         "cf_pct": 31.6,
-        "relative_cf_pct": -18.4,
+        "relative_cf_pct": -17.6,
         "ff": 5,
         "fa": 11,
         "ff_pct": 31.2,
@@ -5083,8 +5083,8 @@
         "state": "trailing",
         "label": "Im Rückstand",
         "cf": 10,
-        "ca": 2,
-        "cf_pct": 83.3
+        "ca": 3,
+        "cf_pct": 76.9
       }
     ],
     "zone_starts": {
@@ -5694,9 +5694,9 @@
         "p3_s": 65,
         "appearances": 3,
         "cf": 0,
-        "ca": 4,
+        "ca": 5,
         "slot_for": 0,
-        "slot_against": 1,
+        "slot_against": 2,
         "gf": 0,
         "ga": 1,
         "role_notes": [],
@@ -7556,9 +7556,9 @@
         "p3_s": 65,
         "appearances": 3,
         "cf": 0,
-        "ca": 4,
+        "ca": 5,
         "slot_for": 0,
-        "slot_against": 1,
+        "slot_against": 2,
         "gf": 0,
         "ga": 1,
         "role_notes": [],
@@ -8451,13 +8451,13 @@
         "p3_s": 177,
         "appearances": 11,
         "cf": 10,
-        "ca": 6,
+        "ca": 7,
         "slot_for": 2,
-        "slot_against": 2,
+        "slot_against": 3,
         "gf": 1,
         "ga": 2,
         "role_notes": [],
-        "cf_pct": 62.5,
+        "cf_pct": 58.8,
         "matchup_count": 7,
         "relevant_matchup_count": 6,
         "event_only": false
@@ -9069,13 +9069,13 @@
       "stable_line_toi_pct": 97.1,
       "stable_matchup_toi_s": 2018,
       "stable_matchup_toi_pct": 81.1,
-      "corsi_total": 81,
-      "corsi_assigned": 73,
-      "corsi_coverage_pct": 90.1,
+      "corsi_total": 82,
+      "corsi_assigned": 74,
+      "corsi_coverage_pct": 90.2,
       "goals_total": 5,
       "goals_assigned": 4,
       "goal_coverage_pct": 80.0,
-      "goal_shot_context_mismatches": 1
+      "goal_shot_context_mismatches": 0
     },
     "unresolved_matchup_goals": [
       {
@@ -9110,9 +9110,9 @@
         "p3_s": 65,
         "appearances": 3,
         "cf": 0,
-        "ca": 4,
+        "ca": 5,
         "slot_for": 0,
-        "slot_against": 1,
+        "slot_against": 2,
         "gf": 0,
         "ga": 1,
         "role_notes": [],
@@ -10537,98 +10537,98 @@
       },
       {
         "time_s": 90,
-        "ebb": 3.333,
+        "ebb": 3.331,
         "opponent": 4.057
       },
       {
         "time_s": 105,
-        "ebb": 4.32,
-        "opponent": 4.215
+        "ebb": 4.315,
+        "opponent": 4.214
       },
       {
         "time_s": 120,
-        "ebb": 5.306,
-        "opponent": 4.361
+        "ebb": 5.297,
+        "opponent": 4.358
       },
       {
         "time_s": 135,
-        "ebb": 6.075,
-        "opponent": 4.566
+        "ebb": 6.06,
+        "opponent": 4.561
       },
       {
         "time_s": 150,
-        "ebb": 6.415,
-        "opponent": 4.851
+        "ebb": 6.394,
+        "opponent": 4.843
       },
       {
         "time_s": 165,
-        "ebb": 6.223,
-        "opponent": 5.132
+        "ebb": 6.197,
+        "opponent": 5.121
       },
       {
         "time_s": 180,
-        "ebb": 5.551,
-        "opponent": 5.363
+        "ebb": 5.525,
+        "opponent": 5.35
       },
       {
         "time_s": 195,
-        "ebb": 4.579,
-        "opponent": 5.421
+        "ebb": 4.559,
+        "opponent": 5.408
       },
       {
         "time_s": 210,
-        "ebb": 3.516,
-        "opponent": 5.292
+        "ebb": 3.508,
+        "opponent": 5.282
       },
       {
         "time_s": 225,
-        "ebb": 2.545,
-        "opponent": 5.022
+        "ebb": 2.551,
+        "opponent": 5.019
       },
       {
         "time_s": 240,
-        "ebb": 1.742,
-        "opponent": 4.66
+        "ebb": 1.761,
+        "opponent": 4.664
       },
       {
         "time_s": 255,
-        "ebb": 1.13,
-        "opponent": 4.305
+        "ebb": 1.156,
+        "opponent": 4.315
       },
       {
         "time_s": 270,
-        "ebb": 0.692,
-        "opponent": 3.914
+        "ebb": 0.718,
+        "opponent": 3.927
       },
       {
         "time_s": 285,
-        "ebb": 0.373,
-        "opponent": 3.473
+        "ebb": 0.395,
+        "opponent": 3.486
       },
       {
         "time_s": 300,
-        "ebb": 0.208,
-        "opponent": 2.969
+        "ebb": 0.223,
+        "opponent": 2.98
       },
       {
         "time_s": 315,
-        "ebb": 0.153,
-        "opponent": 2.408
+        "ebb": 0.162,
+        "opponent": 2.415
       },
       {
         "time_s": 330,
-        "ebb": 0.166,
-        "opponent": 1.836
+        "ebb": 0.171,
+        "opponent": 1.84
       },
       {
         "time_s": 345,
-        "ebb": 0.274,
-        "opponent": 1.325
+        "ebb": 0.277,
+        "opponent": 1.327
       },
       {
         "time_s": 360,
         "ebb": 0.446,
-        "opponent": 0.885
+        "opponent": 0.886
       },
       {
         "time_s": 375,
@@ -10817,148 +10817,148 @@
       },
       {
         "time_s": 930,
-        "ebb": 1.272,
+        "ebb": 1.27,
         "opponent": 1.397
       },
       {
         "time_s": 945,
-        "ebb": 1.471,
+        "ebb": 1.466,
         "opponent": 1.483
       },
       {
         "time_s": 960,
-        "ebb": 1.624,
+        "ebb": 1.614,
         "opponent": 1.635
       },
       {
         "time_s": 975,
-        "ebb": 1.735,
+        "ebb": 1.72,
         "opponent": 1.87
       },
       {
         "time_s": 990,
-        "ebb": 1.813,
+        "ebb": 1.791,
         "opponent": 2.177
       },
       {
         "time_s": 1005,
-        "ebb": 1.855,
+        "ebb": 1.829,
         "opponent": 2.509
       },
       {
         "time_s": 1020,
-        "ebb": 1.847,
+        "ebb": 1.821,
         "opponent": 2.863
       },
       {
         "time_s": 1035,
-        "ebb": 1.771,
+        "ebb": 1.752,
         "opponent": 3.29
       },
       {
         "time_s": 1050,
-        "ebb": 1.616,
+        "ebb": 1.609,
         "opponent": 3.773
       },
       {
         "time_s": 1065,
-        "ebb": 1.386,
+        "ebb": 1.394,
         "opponent": 4.335
       },
       {
         "time_s": 1080,
-        "ebb": 1.099,
+        "ebb": 1.119,
         "opponent": 4.944
       },
       {
         "time_s": 1095,
-        "ebb": 0.811,
-        "opponent": 5.525
+        "ebb": 0.837,
+        "opponent": 5.524
       },
       {
         "time_s": 1110,
-        "ebb": 0.546,
-        "opponent": 5.902
+        "ebb": 0.572,
+        "opponent": 5.899
       },
       {
         "time_s": 1125,
-        "ebb": 0.334,
-        "opponent": 5.971
+        "ebb": 0.355,
+        "opponent": 5.966
       },
       {
         "time_s": 1140,
-        "ebb": 0.175,
-        "opponent": 5.665
+        "ebb": 0.19,
+        "opponent": 5.656
       },
       {
         "time_s": 1155,
-        "ebb": 0.089,
-        "opponent": 5.043
+        "ebb": 0.098,
+        "opponent": 5.031
       },
       {
         "time_s": 1170,
-        "ebb": 0.04,
-        "opponent": 4.234
+        "ebb": 0.045,
+        "opponent": 4.221
       },
       {
         "time_s": 1185,
-        "ebb": 0.016,
-        "opponent": 3.412
+        "ebb": 0.019,
+        "opponent": 3.399
       },
       {
         "time_s": 1200,
         "ebb": 0.022,
-        "opponent": 2.688
+        "opponent": 2.68
       },
       {
         "time_s": 1215,
         "ebb": 0.065,
-        "opponent": 2.086
+        "opponent": 2.085
       },
       {
         "time_s": 1230,
         "ebb": 0.143,
-        "opponent": 1.615
+        "opponent": 1.621
       },
       {
         "time_s": 1245,
         "ebb": 0.283,
-        "opponent": 1.258
+        "opponent": 1.27
       },
       {
         "time_s": 1260,
         "ebb": 0.505,
-        "opponent": 1.034
+        "opponent": 1.048
       },
       {
         "time_s": 1275,
         "ebb": 0.838,
-        "opponent": 0.963
+        "opponent": 0.975
       },
       {
         "time_s": 1290,
         "ebb": 1.241,
-        "opponent": 1.03
+        "opponent": 1.04
       },
       {
         "time_s": 1305,
         "ebb": 1.684,
-        "opponent": 1.186
+        "opponent": 1.192
       },
       {
         "time_s": 1320,
         "ebb": 2.111,
-        "opponent": 1.396
+        "opponent": 1.399
       },
       {
         "time_s": 1335,
         "ebb": 2.47,
-        "opponent": 1.584
+        "opponent": 1.586
       },
       {
         "time_s": 1350,
         "ebb": 2.73,
-        "opponent": 1.695
+        "opponent": 1.696
       },
       {
         "time_s": 1365,
@@ -11443,92 +11443,92 @@
       {
         "time_s": 2805,
         "ebb": 0.0,
-        "opponent": 1.374
+        "opponent": 1.373
       },
       {
         "time_s": 2820,
         "ebb": 0.0,
-        "opponent": 1.002
+        "opponent": 1.0
       },
       {
         "time_s": 2835,
         "ebb": 0.0,
-        "opponent": 0.698
+        "opponent": 0.694
       },
       {
         "time_s": 2850,
         "ebb": 0.0,
-        "opponent": 0.517
+        "opponent": 0.511
       },
       {
         "time_s": 2865,
         "ebb": 0.013,
-        "opponent": 0.477
+        "opponent": 0.467
       },
       {
         "time_s": 2880,
         "ebb": 0.032,
-        "opponent": 0.556
+        "opponent": 0.543
       },
       {
         "time_s": 2895,
         "ebb": 0.073,
-        "opponent": 0.707
+        "opponent": 0.694
       },
       {
         "time_s": 2910,
         "ebb": 0.16,
-        "opponent": 0.857
+        "opponent": 0.846
       },
       {
         "time_s": 2925,
         "ebb": 0.343,
-        "opponent": 0.976
+        "opponent": 0.971
       },
       {
         "time_s": 2940,
         "ebb": 0.611,
-        "opponent": 0.994
+        "opponent": 0.996
       },
       {
         "time_s": 2955,
         "ebb": 0.998,
-        "opponent": 0.906
+        "opponent": 0.915
       },
       {
         "time_s": 2970,
         "ebb": 1.506,
-        "opponent": 0.739
+        "opponent": 0.752
       },
       {
         "time_s": 2985,
         "ebb": 2.112,
-        "opponent": 0.539
+        "opponent": 0.553
       },
       {
         "time_s": 3000,
         "ebb": 2.782,
-        "opponent": 0.352
+        "opponent": 0.364
       },
       {
         "time_s": 3015,
         "ebb": 3.397,
-        "opponent": 0.219
+        "opponent": 0.227
       },
       {
         "time_s": 3030,
         "ebb": 3.892,
-        "opponent": 0.14
+        "opponent": 0.145
       },
       {
         "time_s": 3045,
         "ebb": 4.218,
-        "opponent": 0.123
+        "opponent": 0.126
       },
       {
         "time_s": 3060,
         "ebb": 4.372,
-        "opponent": 0.169
+        "opponent": 0.17
       },
       {
         "time_s": 3075,
@@ -11613,92 +11613,92 @@
       {
         "time_s": 3315,
         "ebb": 2.031,
-        "opponent": 0.798
+        "opponent": 0.796
       },
       {
         "time_s": 3330,
         "ebb": 2.174,
-        "opponent": 0.982
+        "opponent": 0.979
       },
       {
         "time_s": 3345,
         "ebb": 2.378,
-        "opponent": 1.129
+        "opponent": 1.124
       },
       {
         "time_s": 3360,
         "ebb": 2.683,
-        "opponent": 1.218
+        "opponent": 1.21
       },
       {
         "time_s": 3375,
         "ebb": 3.097,
-        "opponent": 1.289
+        "opponent": 1.278
       },
       {
         "time_s": 3390,
         "ebb": 3.726,
-        "opponent": 1.387
+        "opponent": 1.374
       },
       {
         "time_s": 3405,
         "ebb": 4.502,
-        "opponent": 1.538
+        "opponent": 1.526
       },
       {
         "time_s": 3420,
         "ebb": 5.395,
-        "opponent": 1.727
+        "opponent": 1.718
       },
       {
         "time_s": 3435,
         "ebb": 6.23,
-        "opponent": 1.893
+        "opponent": 1.891
       },
       {
         "time_s": 3450,
         "ebb": 6.882,
-        "opponent": 1.963
+        "opponent": 1.968
       },
       {
         "time_s": 3465,
         "ebb": 7.257,
-        "opponent": 1.885
+        "opponent": 1.896
       },
       {
         "time_s": 3480,
         "ebb": 7.339,
-        "opponent": 1.657
+        "opponent": 1.67
       },
       {
         "time_s": 3495,
         "ebb": 7.169,
-        "opponent": 1.32
+        "opponent": 1.333
       },
       {
         "time_s": 3510,
         "ebb": 6.825,
-        "opponent": 0.959
+        "opponent": 0.969
       },
       {
         "time_s": 3525,
         "ebb": 6.383,
-        "opponent": 0.629
+        "opponent": 0.636
       },
       {
         "time_s": 3540,
         "ebb": 5.854,
-        "opponent": 0.373
+        "opponent": 0.377
       },
       {
         "time_s": 3555,
         "ebb": 5.233,
-        "opponent": 0.199
+        "opponent": 0.201
       },
       {
         "time_s": 3570,
         "ebb": 4.501,
-        "opponent": 0.096
+        "opponent": 0.097
       },
       {
         "time_s": 3585,
@@ -12471,7 +12471,7 @@
     },
     {
       "shot_id": 1654583,
-      "game_time_s": 217,
+      "game_time_s": 219,
       "team_id": 3,
       "player_id": 2209,
       "result": "goal",
@@ -12501,7 +12501,7 @@
     },
     {
       "shot_id": 1654596,
-      "game_time_s": 231,
+      "game_time_s": 232,
       "team_id": 12,
       "player_id": 3557,
       "result": "goal",
@@ -13120,7 +13120,7 @@
     },
     {
       "shot_id": 1654710,
-      "game_time_s": 1056,
+      "game_time_s": 1058,
       "team_id": 3,
       "player_id": 3410,
       "result": "goal",
@@ -13330,7 +13330,7 @@
     },
     {
       "shot_id": 1654752,
-      "game_time_s": 1217,
+      "game_time_s": 1218,
       "team_id": 12,
       "player_id": 3426,
       "result": "goal",
@@ -14582,7 +14582,7 @@
     },
     {
       "shot_id": 1655037,
-      "game_time_s": 2935,
+      "game_time_s": 2936,
       "team_id": 12,
       "player_id": 2174,
       "result": "goal",
@@ -15057,7 +15057,7 @@
     },
     {
       "shot_id": 1655116,
-      "game_time_s": 3440,
+      "game_time_s": 3441,
       "team_id": 12,
       "player_id": 80,
       "result": "goal",
@@ -15065,14 +15065,16 @@
       "y_m": -0.904,
       "distance_m": 10.536,
       "shot_zone": "SLOT",
-      "manpower": "4v4",
+      "manpower": "5v5",
       "on_ice_for_player_ids": [
         16,
+        80,
         139,
         551,
         3446
       ],
       "on_ice_against_player_ids": [
+        92,
         512,
         1738,
         2209,
