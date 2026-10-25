@@ -1,6 +1,6 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-10-24T10:22:42Z
+Generated: 2026-10-25T04:05:52Z
 
 ## Totals
 

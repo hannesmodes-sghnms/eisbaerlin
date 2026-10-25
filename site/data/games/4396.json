@@ -131,20 +131,30 @@
     }
   ],
   "facts": [
-    "Corsi: EBB 50:52; bei 5v5 40:43.",
-    "Slot Attempts: EBB 17:20; bei 5v5 15:16.",
-    "Zeit in Führung: 8:47; ausgeglichen 17:29; im Rückstand 33:44.",
-    "Meiste Eiszeit EBB: Kai Wissmann mit 24:31.",
-    "5v5 bei Gleichstand: Corsi 18:21 (46.2% EBB).",
-    "5v5 On-Ice: Ronning 20:6 Corsi (76.9%), +41.8 Prozentpunkte gegenüber EBB ohne ihn auf dem Eis.",
-    "Reihenänderung P2: Sturmreihe Hördler – Pföderl – Kirk wurde neu stabil eingesetzt (0:47).",
-    "Reihenänderung P2: Sturmreihe Wiederer – Pföderl – Fontaine wurde neu stabil eingesetzt (1:18).",
-    "Reihenänderung P2: Verteidigerpaar Mik – Müller wurde neu stabil eingesetzt (0:43).",
-    "Reihenänderung P3: Sturmreihe Vikingstad – Veilleux – Krestan fiel nahezu aus der 5v5-Rotation (P2 2:18 → P3 0:00).",
-    "Reihenänderung P3: Sturmreihe Wiederer – Pföderl – Fontaine fiel nahezu aus der 5v5-Rotation (P2 1:18 → P3 0:00).",
-    "Hinweis auf verkürzte Bank im 3. Drittel (Top-9-Forward-Anteil +9.6 Prozentpunkte).",
-    "Häufigstes Line-Matching: Ronning – Kirk – Tiffels gegen Bennett – Greco – Solow mit 3:11; Corsi 6:1 (85.7%), Slot 1:1, Tore 0:0.",
-    "Lineup-Datencheck: stabile Units decken 97.5% der rekonstruierten 5v5-Forward-TOI und 99.1% der 5v5-Defense-TOI ab."
+    "Personal gegenüber Straubing Tigers: raus: Moritz Kretzschmar → rein: Frederik Tiffels, Kai Wissmann.",
+    "Sturmreihen gegenüber Straubing Tigers: Ronning – Kirk – Fontaine → Ronning – Kirk – Tiffels; Wiederer – Vikingstad – Veilleux → Wiederer – Griva – Fontaine. Unverändert blieben: Eder – Hördler – Pföderl / Vikingstad – Veilleux – Krestan.",
+    "Druckphase des Gegners: Zwischen Minute 7 und 15 hatte MAN 9 der 12 Schussversuche (9:3).",
+    "Verteidigerpaare gegenüber Straubing Tigers: Smith – Müller → Wissmann – Müller; Reinke – Davidson → Smith – Davidson; Müller – Geibel → Mik – Davidson. Unverändert blieben: Mik – Geibel.",
+    "Scoring-Breite: An den 3 Berliner Toren waren 6 verschiedene Spieler beteiligt."
+  ],
+  "fact_groups": [
+    {
+      "category": "current_story",
+      "title": "🔥 Aktuelle Story",
+      "facts": [
+        "Druckphase des Gegners: Zwischen Minute 7 und 15 hatte MAN 9 der 12 Schussversuche (9:3).",
+        "Scoring-Breite: An den 3 Berliner Toren waren 6 verschiedene Spieler beteiligt."
+      ]
+    },
+    {
+      "category": "lineup",
+      "title": "🔄 Lineup & Reihen",
+      "facts": [
+        "Personal gegenüber Straubing Tigers: raus: Moritz Kretzschmar → rein: Frederik Tiffels, Kai Wissmann.",
+        "Sturmreihen gegenüber Straubing Tigers: Ronning – Kirk – Fontaine → Ronning – Kirk – Tiffels; Wiederer – Vikingstad – Veilleux → Wiederer – Griva – Fontaine. Unverändert blieben: Eder – Hördler – Pföderl / Vikingstad – Veilleux – Krestan.",
+        "Verteidigerpaare gegenüber Straubing Tigers: Smith – Müller → Wissmann – Müller; Reinke – Davidson → Smith – Davidson; Müller – Geibel → Mik – Davidson. Unverändert blieben: Mik – Geibel."
+      ]
+    }
   ],
   "players": [
     {
@@ -5139,6 +5149,492 @@
         }
       ]
     }
+  },
+  "previous_game_lineup": {
+    "available": true,
+    "previous_match": {
+      "match_id": 4389,
+      "date": "2026-09-17",
+      "opponent_team_id": 6,
+      "opponent_name": "Straubing Tigers"
+    },
+    "players_in": [
+      {
+        "player_id": 1402,
+        "name": "Frederik Tiffels"
+      },
+      {
+        "player_id": 512,
+        "name": "Kai Wissmann"
+      }
+    ],
+    "players_out": [
+      {
+        "player_id": 3523,
+        "name": "Moritz Kretzschmar"
+      }
+    ],
+    "forwards": {
+      "current_count": 4,
+      "previous_count": 4,
+      "current": [
+        "Ronning – Kirk – Tiffels",
+        "Eder – Hördler – Pföderl",
+        "Wiederer – Griva – Fontaine",
+        "Vikingstad – Veilleux – Krestan"
+      ],
+      "previous": [
+        "Ronning – Kirk – Fontaine",
+        "Eder – Hördler – Pföderl",
+        "Vikingstad – Veilleux – Krestan",
+        "Wiederer – Vikingstad – Veilleux"
+      ],
+      "current_units": [
+        {
+          "player_ids": [
+            2209,
+            3410,
+            1402
+          ],
+          "names": [
+            "Ronning",
+            "Kirk",
+            "Tiffels"
+          ],
+          "jerseys": [
+            9,
+            94,
+            95
+          ],
+          "label": "Ronning – Kirk – Tiffels",
+          "total_s": 714,
+          "p1_s": 246,
+          "p2_s": 211,
+          "p3_s": 257,
+          "appearances": 21,
+          "p1_appearances": 8,
+          "p2_appearances": 6,
+          "p3_appearances": 7
+        },
+        {
+          "player_ids": [
+            546,
+            2126,
+            92
+          ],
+          "names": [
+            "Eder",
+            "Hördler",
+            "Pföderl"
+          ],
+          "jerseys": [
+            43,
+            77,
+            93
+          ],
+          "label": "Eder – Hördler – Pföderl",
+          "total_s": 452,
+          "p1_s": 235,
+          "p2_s": 176,
+          "p3_s": 41,
+          "appearances": 12,
+          "p1_appearances": 7,
+          "p2_appearances": 4,
+          "p3_appearances": 1
+        },
+        {
+          "player_ids": [
+            1823,
+            4310,
+            3411
+          ],
+          "names": [
+            "Wiederer",
+            "Griva",
+            "Fontaine"
+          ],
+          "jerseys": [
+            21,
+            23,
+            97
+          ],
+          "label": "Wiederer – Griva – Fontaine",
+          "total_s": 253,
+          "p1_s": 111,
+          "p2_s": 101,
+          "p3_s": 41,
+          "appearances": 7,
+          "p1_appearances": 3,
+          "p2_appearances": 3,
+          "p3_appearances": 1
+        },
+        {
+          "player_ids": [
+            1796,
+            1762,
+            4311
+          ],
+          "names": [
+            "Vikingstad",
+            "Veilleux",
+            "Krestan"
+          ],
+          "jerseys": [
+            37,
+            38,
+            91
+          ],
+          "label": "Vikingstad – Veilleux – Krestan",
+          "total_s": 218,
+          "p1_s": 80,
+          "p2_s": 138,
+          "p3_s": 0,
+          "appearances": 8,
+          "p1_appearances": 3,
+          "p2_appearances": 5,
+          "p3_appearances": 0
+        }
+      ],
+      "previous_units": [
+        {
+          "player_ids": [
+            2209,
+            3410,
+            3411
+          ],
+          "names": [
+            "Ronning",
+            "Kirk",
+            "Fontaine"
+          ],
+          "jerseys": [
+            9,
+            94,
+            97
+          ],
+          "label": "Ronning – Kirk – Fontaine",
+          "total_s": 629,
+          "p1_s": 273,
+          "p2_s": 176,
+          "p3_s": 180,
+          "appearances": 19,
+          "p1_appearances": 9,
+          "p2_appearances": 5,
+          "p3_appearances": 5
+        },
+        {
+          "player_ids": [
+            546,
+            2126,
+            92
+          ],
+          "names": [
+            "Eder",
+            "Hördler",
+            "Pföderl"
+          ],
+          "jerseys": [
+            43,
+            77,
+            93
+          ],
+          "label": "Eder – Hördler – Pföderl",
+          "total_s": 541,
+          "p1_s": 194,
+          "p2_s": 173,
+          "p3_s": 174,
+          "appearances": 16,
+          "p1_appearances": 6,
+          "p2_appearances": 5,
+          "p3_appearances": 5
+        },
+        {
+          "player_ids": [
+            1796,
+            1762,
+            4311
+          ],
+          "names": [
+            "Vikingstad",
+            "Veilleux",
+            "Krestan"
+          ],
+          "jerseys": [
+            37,
+            38,
+            91
+          ],
+          "label": "Vikingstad – Veilleux – Krestan",
+          "total_s": 359,
+          "p1_s": 225,
+          "p2_s": 36,
+          "p3_s": 98,
+          "appearances": 10,
+          "p1_appearances": 7,
+          "p2_appearances": 1,
+          "p3_appearances": 2
+        },
+        {
+          "player_ids": [
+            1823,
+            1796,
+            1762
+          ],
+          "names": [
+            "Wiederer",
+            "Vikingstad",
+            "Veilleux"
+          ],
+          "jerseys": [
+            21,
+            37,
+            38
+          ],
+          "label": "Wiederer – Vikingstad – Veilleux",
+          "total_s": 221,
+          "p1_s": 20,
+          "p2_s": 73,
+          "p3_s": 128,
+          "appearances": 7,
+          "p1_appearances": 1,
+          "p2_appearances": 2,
+          "p3_appearances": 4
+        }
+      ],
+      "stable": [
+        "Eder – Hördler – Pföderl",
+        "Vikingstad – Veilleux – Krestan"
+      ],
+      "new": [
+        "Ronning – Kirk – Tiffels",
+        "Wiederer – Griva – Fontaine"
+      ],
+      "dropped": [
+        "Ronning – Kirk – Fontaine",
+        "Wiederer – Vikingstad – Veilleux"
+      ]
+    },
+    "defense": {
+      "current_count": 4,
+      "previous_count": 4,
+      "current": [
+        "Wissmann – Müller",
+        "Smith – Davidson",
+        "Mik – Geibel",
+        "Mik – Davidson"
+      ],
+      "previous": [
+        "Smith – Müller",
+        "Reinke – Davidson",
+        "Mik – Geibel",
+        "Müller – Geibel"
+      ],
+      "current_units": [
+        {
+          "player_ids": [
+            512,
+            506
+          ],
+          "names": [
+            "Wissmann",
+            "Müller"
+          ],
+          "jerseys": [
+            6,
+            18
+          ],
+          "label": "Wissmann – Müller",
+          "total_s": 927,
+          "p1_s": 318,
+          "p2_s": 357,
+          "p3_s": 252,
+          "appearances": 25,
+          "p1_appearances": 9,
+          "p2_appearances": 7,
+          "p3_appearances": 9
+        },
+        {
+          "player_ids": [
+            3533,
+            4701
+          ],
+          "names": [
+            "Smith",
+            "Davidson"
+          ],
+          "jerseys": [
+            4,
+            44
+          ],
+          "label": "Smith – Davidson",
+          "total_s": 334,
+          "p1_s": 128,
+          "p2_s": 135,
+          "p3_s": 71,
+          "appearances": 12,
+          "p1_appearances": 4,
+          "p2_appearances": 5,
+          "p3_appearances": 3
+        },
+        {
+          "player_ids": [
+            1425,
+            1738
+          ],
+          "names": [
+            "Mik",
+            "Geibel"
+          ],
+          "jerseys": [
+            12,
+            40
+          ],
+          "label": "Mik – Geibel",
+          "total_s": 321,
+          "p1_s": 149,
+          "p2_s": 93,
+          "p3_s": 79,
+          "appearances": 11,
+          "p1_appearances": 4,
+          "p2_appearances": 4,
+          "p3_appearances": 3
+        },
+        {
+          "player_ids": [
+            1425,
+            4701
+          ],
+          "names": [
+            "Mik",
+            "Davidson"
+          ],
+          "jerseys": [
+            12,
+            44
+          ],
+          "label": "Mik – Davidson",
+          "total_s": 210,
+          "p1_s": 53,
+          "p2_s": 92,
+          "p3_s": 65,
+          "appearances": 6,
+          "p1_appearances": 2,
+          "p2_appearances": 3,
+          "p3_appearances": 1
+        }
+      ],
+      "previous_units": [
+        {
+          "player_ids": [
+            3533,
+            506
+          ],
+          "names": [
+            "Smith",
+            "Müller"
+          ],
+          "jerseys": [
+            4,
+            18
+          ],
+          "label": "Smith – Müller",
+          "total_s": 771,
+          "p1_s": 328,
+          "p2_s": 245,
+          "p3_s": 198,
+          "appearances": 24,
+          "p1_appearances": 11,
+          "p2_appearances": 7,
+          "p3_appearances": 6
+        },
+        {
+          "player_ids": [
+            3412,
+            4701
+          ],
+          "names": [
+            "Reinke",
+            "Davidson"
+          ],
+          "jerseys": [
+            5,
+            44
+          ],
+          "label": "Reinke – Davidson",
+          "total_s": 745,
+          "p1_s": 313,
+          "p2_s": 186,
+          "p3_s": 246,
+          "appearances": 21,
+          "p1_appearances": 8,
+          "p2_appearances": 6,
+          "p3_appearances": 7
+        },
+        {
+          "player_ids": [
+            1425,
+            1738
+          ],
+          "names": [
+            "Mik",
+            "Geibel"
+          ],
+          "jerseys": [
+            12,
+            40
+          ],
+          "label": "Mik – Geibel",
+          "total_s": 694,
+          "p1_s": 247,
+          "p2_s": 209,
+          "p3_s": 238,
+          "appearances": 21,
+          "p1_appearances": 9,
+          "p2_appearances": 5,
+          "p3_appearances": 7
+        },
+        {
+          "player_ids": [
+            506,
+            1738
+          ],
+          "names": [
+            "Müller",
+            "Geibel"
+          ],
+          "jerseys": [
+            18,
+            40
+          ],
+          "label": "Müller – Geibel",
+          "total_s": 152,
+          "p1_s": 0,
+          "p2_s": 107,
+          "p3_s": 45,
+          "appearances": 4,
+          "p1_appearances": 0,
+          "p2_appearances": 3,
+          "p3_appearances": 1
+        }
+      ],
+      "stable": [
+        "Mik – Geibel"
+      ],
+      "new": [
+        "Wissmann – Müller",
+        "Smith – Davidson",
+        "Mik – Davidson"
+      ],
+      "dropped": [
+        "Smith – Müller",
+        "Reinke – Davidson",
+        "Müller – Geibel"
+      ]
+    }
+  },
+  "scoring_streaks": {
+    "active": [],
+    "ended_this_game": []
   },
   "advanced": {
     "player_impact_5v5": [
