@@ -243,7 +243,7 @@ def _format_unit_pairs(pairs: list[dict[str, Any]]) -> str:
             parts.append(f"{old.get('label')} → entfällt")
         elif new:
             parts.append(f"neu: {new.get('label')}")
-    return "; ".join(parts)
+    return "\n".join(parts)
 
 
 def _active_skaters(con: Any, match_id: int, team_id: int) -> list[dict[str, Any]]:
@@ -397,7 +397,7 @@ def _p3_rebuild_fact(lineups: dict[str, Any]) -> StoryFact | None:
     top = max(new, key=lambda row: (int(row.get("p3_s") or 0), int(row.get("p3_appearances") or 0)))
     dropped_count = len(dropped)
     text = (
-        f"Umbau im Schlussdrittel: {_format_unit_pairs(pairs)}. "
+        f"Umbau im Schlussdrittel:\n{_format_unit_pairs(pairs)}.\n"
         f"{dropped_count} zuvor regelmäßig eingesetzte Sturmreihen verschwanden damit aus der 5v5-Rotation. "
         f"{top.get('label')} war mit {_fmt_time(top.get('p3_s'))} Minuten und "
         f"{int(top.get('p3_appearances') or 0)} gemeinsamen Einsätzen die häufigste neue Kombination."
@@ -452,9 +452,9 @@ def _previous_lineup_facts(diff: dict[str, Any]) -> list[StoryFact]:
         ]
         stable_forwards = [str(label) for label in forwards.get("stable") or [] if label]
         if changed_pairs:
-            text = f"Sturmreihen gegenüber {opponent}: {_format_unit_pairs(changed_pairs)}."
+            text = f"Sturmreihen gegenüber {opponent}:\n{_format_unit_pairs(changed_pairs)}."
             if stable_forwards:
-                text += " Unverändert blieben: " + " / ".join(stable_forwards) + "."
+                text += "\nUnverändert blieben: " + " / ".join(stable_forwards) + "."
             facts.append(StoryFact("lineup", 88, "previous_game_forward_units", text))
         elif stable_forwards:
             facts.append(
@@ -487,9 +487,9 @@ def _previous_lineup_facts(diff: dict[str, Any]) -> list[StoryFact]:
         ]
         stable_defense = [str(label) for label in defense.get("stable") or [] if label]
         if changed_pairs:
-            text = f"Verteidigerpaare gegenüber {opponent}: {_format_unit_pairs(changed_pairs)}."
+            text = f"Verteidigerpaare gegenüber {opponent}:\n{_format_unit_pairs(changed_pairs)}."
             if stable_defense:
-                text += " Unverändert blieben: " + " / ".join(stable_defense) + "."
+                text += "\nUnverändert blieben: " + " / ".join(stable_defense) + "."
             facts.append(StoryFact("lineup", 82, "previous_game_defense_units", text))
         elif stable_defense:
             facts.append(
