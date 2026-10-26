@@ -1,60 +1,64 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-25T04:05:52Z",
+  "generated_at_utc": "2026-10-26T04:15:46Z",
   "totals": {
-    "matches": 78,
-    "player_match_rows": 3235,
-    "shifts": 59850,
-    "shots": 8371,
-    "faceoffs": 4543,
-    "events": 1991,
-    "player_game_stats": 4032,
-    "team_game_stats": 156,
+    "matches": 84,
+    "player_match_rows": 3481,
+    "shifts": 64512,
+    "shots": 9026,
+    "faceoffs": 4913,
+    "events": 2137,
+    "player_game_stats": 4349,
+    "team_game_stats": 168,
     "unclassified_shots": 0,
     "reconstructed_goal_shots": 2
   },
   "on_ice_quality": {
-    "boundary_adjusted": 52,
+    "boundary_adjusted": 55,
     "event_special": 2,
-    "exact": 8277,
-    "low_confidence": 40
+    "exact": 8915,
+    "low_confidence": 54
   },
   "manpower": {
-    "5v5": 6136,
-    "5v4": 1328,
-    "4v5": 308,
-    "6v5": 180,
+    "5v5": 6607,
+    "5v4": 1432,
+    "4v5": 336,
+    "6v5": 201,
     "4v4": 106,
+    "5v3": 66,
     "3v3": 64,
-    "5v3": 56,
-    "5v6": 55,
-    "4v3": 40,
-    "6v4": 32,
-    "0v0": 22,
+    "5v6": 60,
+    "4v3": 41,
+    "6v4": 33,
+    "0v0": 29,
     "3v5": 11,
     "3v4": 7,
     "7v5": 4,
     "4v6": 3,
+    "10v6": 2,
+    "5v10": 2,
     "5v2": 2,
+    "6v10": 2,
     "6v3": 2,
     "PS": 2,
     "0v1": 1,
     "0v2": 1,
     "10v4": 1,
+    "10v5": 1,
     "10v7": 1,
     "2v0": 1,
     "3v6": 1,
-    "5v10": 1,
     "5v7": 1,
     "5v9": 1,
-    "6v10": 1,
     "6v7": 1,
     "6v8": 1,
+    "8v8": 1,
+    "9v5": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 80,
-  "dzone_faceoff_win_to_shot_10s": 60,
+  "dzone_faceoff_to_shot_10s": 84,
+  "dzone_faceoff_win_to_shot_10s": 63,
   "per_match": [
     {
       "match_id": 4389,
@@ -913,18 +917,84 @@
       "shifts": 821,
       "boundary_adjusted": 4,
       "low_confidence": 1
+    },
+    {
+      "match_id": 4468,
+      "match_date": "2026-10-25",
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_name": "EHC Red Bull München",
+      "shots": 100,
+      "faceoffs": 61,
+      "shifts": 738,
+      "boundary_adjusted": 0,
+      "low_confidence": 7
+    },
+    {
+      "match_id": 4469,
+      "match_date": "2026-10-25",
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_name": "Grizzlys Wolfsburg",
+      "shots": 112,
+      "faceoffs": 62,
+      "shifts": 853,
+      "boundary_adjusted": 0,
+      "low_confidence": 7
+    },
+    {
+      "match_id": 4470,
+      "match_date": "2026-10-25",
+      "home_team_name": "Augsburger Panther",
+      "away_team_name": "Straubing Tigers",
+      "shots": 112,
+      "faceoffs": 61,
+      "shifts": 761,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4471,
+      "match_date": "2026-10-25",
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_name": "Nürnberg Ice Tigers",
+      "shots": 124,
+      "faceoffs": 57,
+      "shifts": 753,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4472,
+      "match_date": "2026-10-25",
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_name": "Eisbären Berlin",
+      "shots": 103,
+      "faceoffs": 60,
+      "shifts": 766,
+      "boundary_adjusted": 1,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4473,
+      "match_date": "2026-10-25",
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_name": "ERC Ingolstadt",
+      "shots": 104,
+      "faceoffs": 69,
+      "shifts": 791,
+      "boundary_adjusted": 2,
+      "low_confidence": 0
     }
   ],
   "integrity": {
     "checks": {
-      "team_game_matches": 78,
-      "matches": 78,
-      "team_game_rows": 156,
-      "goal_events": 462,
-      "goal_shots": 456,
-      "player_game_rows": 4032,
+      "team_game_matches": 84,
+      "matches": 84,
+      "team_game_rows": 168,
+      "goal_events": 496,
+      "goal_shots": 489,
+      "player_game_rows": 4349,
       "hard_failures": 0,
-      "warnings": 54
+      "warnings": 57
     },
     "hard_failures": [],
     "warnings": [
@@ -1186,6 +1256,47 @@
           "event_time_s": 1470,
           "shot_time_s": 1464,
           "shot_id": 1655422
+        }
+      },
+      {
+        "code": "goal_balance_attendant_disagreement",
+        "message": "EQ goal has 6v5 attendants; possible delayed penalty/extra attacker",
+        "match_id": 4470,
+        "team_id": 13,
+        "details": {
+          "time_s": 3404
+        }
+      },
+      {
+        "code": "implausible_manpower",
+        "message": "7 shot(s) have incomplete/overlapping shift context",
+        "match_id": 4468,
+        "details": {
+          "shots": 7,
+          "for_range": [
+            5,
+            10
+          ],
+          "against_range": [
+            5,
+            10
+          ]
+        }
+      },
+      {
+        "code": "implausible_manpower",
+        "message": "7 shot(s) have incomplete/overlapping shift context",
+        "match_id": 4469,
+        "details": {
+          "shots": 7,
+          "for_range": [
+            0,
+            0
+          ],
+          "against_range": [
+            0,
+            0
+          ]
         }
       },
       {
@@ -1616,7 +1727,7 @@
   },
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 80,
+    "completed_matches": 86,
     "failed_downloads": 0,
     "failed_imports": 2,
     "import_errors": [
