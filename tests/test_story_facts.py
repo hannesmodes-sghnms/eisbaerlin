@@ -225,14 +225,13 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
     assert 4 <= len(facts) <= 12
     assert any(
         "Umbau im Schlussdrittel" in fact
-        and "Ronning – Kirk – Tiffels → Ronning – Vikingstad – Kirk" in fact
-        and "Eder – Foudy – Pföderl → Eder – Foudy – Hördler" in fact
+        and "Ronning – Kirk – Tiffels → Ronning – Vikingstad – Kirk\n" in fact
+        and "Eder – Foudy – Pföderl → Eder – Foudy – Hördler\n" in fact
         for fact in facts
     )
     assert any(
         "Sturmreihen gegenüber Krefeld Pinguine" in fact
-        and "Old 1 → New 1" in fact
-        and "Old 2 → New 2" in fact
+        and "Old 1 → New 1\nOld 2 → New 2" in fact
         for fact in facts
     )
     assert any("Mehr Schussvolumen als klare Chancenüberlegenheit" in fact for fact in facts)
@@ -243,8 +242,7 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
     lineup_group = next(group for group in groups if group["title"] == "🔄 Lineup & Reihen")
     assert any(
         "Verteidigerpaare gegenüber Krefeld Pinguine" in fact
-        and "Old D1 → New D1" in fact
-        and "Old D2 → New D2" in fact
+        and "Old D1 → New D1\nOld D2 → New D2" in fact
         for fact in lineup_group["facts"]
     )
 
