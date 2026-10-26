@@ -469,37 +469,38 @@ def _previous_lineup_facts(diff: dict[str, Any]) -> list[StoryFact]:
     previous_defense_units = list(defense.get("previous_units") or [])
     current_defense_units = list(defense.get("current_units") or [])
     if previous_defense_units or current_defense_units:
+        previous_identities = {_unit_identity(row) for row in previous_defense_units}
+        current_identities = {_unit_identity(row) for row in current_defense_units}
+        stable_identities = previous_identities & current_identities
+
+        changed_previous = [
+            row for row in previous_defense_units
+            if _unit_identity(row) not in stable_identities
+        ]
+        changed_current = [
+            row for row in current_defense_units
+            if _unit_identity(row) not in stable_identities
+        ]
+
+        # Identical fixed pairs are removed before TOI matching. A pair moving
+        # from rank #1 to #2 (or vice versa) is therefore not a lineup change.
         defense_pairs = _pair_unit_changes(
-            previous_defense_units,
-            current_defense_units,
+            changed_previous,
+            changed_current,
             previous_toi_keys=("total_s",),
             current_toi_keys=("total_s",),
             prefer_overlap=False,
         )
-        changed_pairs = [
-            pair
-            for pair in defense_pairs
-            if not (
-                pair.get("previous")
-                and pair.get("current")
-                and _unit_identity(pair["previous"]) == _unit_identity(pair["current"])
-            )
+        stable_defense = [
+            str(row.get("label"))
+            for row in current_defense_units
+            if row.get("label") and _unit_identity(row) in stable_identities
         ]
-        stable_defense = [str(label) for label in defense.get("stable") or [] if label]
-        if changed_pairs:
-            text = f"Verteidigerpaare gegenüber {opponent}:\n{_format_unit_pairs(changed_pairs)}."
+        if defense_pairs:
+            text = f"Verteidigerpaare gegenüber {opponent}:\n{_format_unit_pairs(defense_pairs)}."
             if stable_defense:
                 text += "\nUnverändert blieben: " + " / ".join(stable_defense) + "."
             facts.append(StoryFact("lineup", 82, "previous_game_defense_units", text))
-        elif stable_defense:
-            facts.append(
-                StoryFact(
-                    "lineup",
-                    70,
-                    "previous_game_defense_units",
-                    f"Verteidigerpaare gegenüber {opponent}: unverändert – " + " / ".join(stable_defense) + ".",
-                )
-            )
 
     return facts
 

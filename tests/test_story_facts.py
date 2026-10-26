@@ -161,18 +161,18 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
         },
         "defense": {
             "previous": ["Old D1", "Old D2"],
-            "current": ["New D1", "New D2"],
+            "current": ["New D1", "Stable D2"],
             "previous_units": [
                 {"label": "Old D1", "player_ids": [21, 22], "total_s": 700},
-                {"label": "Old D2", "player_ids": [23, 24], "total_s": 550},
+                {"label": "Stable D2", "player_ids": [23, 24], "total_s": 550},
             ],
             "current_units": [
-                {"label": "New D1", "player_ids": [23, 24], "total_s": 680},
-                {"label": "New D2", "player_ids": [21, 22], "total_s": 500},
+                {"label": "New D1", "player_ids": [21, 25], "total_s": 680},
+                {"label": "Stable D2", "player_ids": [23, 24], "total_s": 500},
             ],
-            "stable": [],
-            "new": ["New D1", "New D2"],
-            "dropped": ["Old D1", "Old D2"],
+            "stable": ["Stable D2"],
+            "new": ["New D1"],
+            "dropped": ["Old D1"],
             "current_count": 2,
             "previous_count": 2,
         },
@@ -242,7 +242,8 @@ def test_story_engine_prefers_sendable_augsburg_style_facts():
     lineup_group = next(group for group in groups if group["title"] == "🔄 Lineup & Reihen")
     assert any(
         "Verteidigerpaare gegenüber Krefeld Pinguine" in fact
-        and "Old D1 → New D1\nOld D2 → New D2" in fact
+        and "Old D1 → New D1" in fact
+        and "Unverändert blieben: Stable D2" in fact
         for fact in lineup_group["facts"]
     )
 
@@ -302,28 +303,28 @@ def test_forward_pairing_prefers_two_player_overlap_but_not_single_player_overla
     assert pairs[2]["overlap"] == 0
 
 
-def test_defense_pairing_uses_toi_rank_even_when_player_overlap_points_elsewhere():
-    previous = [
-        {"label": "Old D1", "player_ids": [1, 2], "total_s": 700},
-        {"label": "Old D2", "player_ids": [3, 4], "total_s": 500},
-    ]
-    current = [
-        {"label": "New D1", "player_ids": [3, 4], "total_s": 650},
-        {"label": "New D2", "player_ids": [1, 2], "total_s": 450},
-    ]
+def test_defense_rank_swap_is_not_reported_as_pair_change():
+    from delstats.story_facts import _previous_lineup_facts
 
-    pairs = _pair_unit_changes(
-        previous,
-        current,
-        previous_toi_keys=("total_s",),
-        current_toi_keys=("total_s",),
-        prefer_overlap=False,
-    )
+    diff = {
+        "available": True,
+        "previous_match": {"opponent_name": "Augsburger Panther"},
+        "players_in": [],
+        "players_out": [],
+        "forwards": {},
+        "defense": {
+            "previous_units": [
+                {"label": "Mik – Geibel", "player_ids": [1, 2], "total_s": 700},
+                {"label": "Smith – Davidson", "player_ids": [3, 4], "total_s": 500},
+            ],
+            "current_units": [
+                {"label": "Smith – Davidson", "player_ids": [3, 4], "total_s": 650},
+                {"label": "Mik – Geibel", "player_ids": [1, 2], "total_s": 450},
+            ],
+            "stable": ["Smith – Davidson", "Mik – Geibel"],
+        },
+    }
 
-    assert [
-        (pair["previous"]["label"], pair["current"]["label"])
-        for pair in pairs
-    ] == [
-        ("Old D1", "New D1"),
-        ("Old D2", "New D2"),
-    ]
+    facts = _previous_lineup_facts(diff)
+
+    assert not any(fact.kind == "previous_game_defense_units" for fact in facts)
