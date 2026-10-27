@@ -140,9 +140,9 @@
   "facts": [
     "Die Punkteserie von Jonas Müller über 3 Spiele ist gegen Krefeld Pinguine gerissen.",
     "Personal gegenüber EHC Red Bull München: raus: Mitchell Reinke → rein: Gregor Stocker.",
-    "Sturmreihen gegenüber EHC Red Bull München: Ronning – Pföderl – Kirk → Ronning – Kirk – Tiffels; Veilleux – Eder – Foudy → Eder – Foudy – Pföderl. Unverändert blieben: Vikingstad – Veilleux – Krestan / Wiederer – Griva – Hördler.",
+    "Sturmreihen gegenüber EHC Red Bull München:\nRonning – Pföderl – Kirk → Ronning – Kirk – Tiffels\nVeilleux – Eder – Foudy → Eder – Foudy – Pföderl.\nUnverändert blieben: Vikingstad – Veilleux – Krestan / Wiederer – Griva – Hördler.",
     "Dominante Phase: Zwischen Minute 32 und 40 gingen 10 der 11 Schussversuche an Berlin (10:1).",
-    "Verteidigerpaare gegenüber EHC Red Bull München: Smith – Davidson → Mik – Geibel; Reinke – Mik → Smith – Davidson; Mik – Geibel → entfällt. Unverändert blieben: Wissmann – Müller / Mik – Geibel / Smith – Davidson.",
+    "Verteidigerpaare gegenüber EHC Red Bull München:\nReinke – Mik → entfällt.\nUnverändert blieben: Wissmann – Müller / Mik – Geibel / Smith – Davidson.",
     "Scoring-Breite: An den 4 Berliner Toren waren 8 verschiedene Spieler beteiligt."
   ],
   "fact_groups": [
@@ -159,8 +159,8 @@
       "title": "🔄 Lineup & Reihen",
       "facts": [
         "Personal gegenüber EHC Red Bull München: raus: Mitchell Reinke → rein: Gregor Stocker.",
-        "Sturmreihen gegenüber EHC Red Bull München: Ronning – Pföderl – Kirk → Ronning – Kirk – Tiffels; Veilleux – Eder – Foudy → Eder – Foudy – Pföderl. Unverändert blieben: Vikingstad – Veilleux – Krestan / Wiederer – Griva – Hördler.",
-        "Verteidigerpaare gegenüber EHC Red Bull München: Smith – Davidson → Mik – Geibel; Reinke – Mik → Smith – Davidson; Mik – Geibel → entfällt. Unverändert blieben: Wissmann – Müller / Mik – Geibel / Smith – Davidson."
+        "Sturmreihen gegenüber EHC Red Bull München:\nRonning – Pföderl – Kirk → Ronning – Kirk – Tiffels\nVeilleux – Eder – Foudy → Eder – Foudy – Pföderl.\nUnverändert blieben: Vikingstad – Veilleux – Krestan / Wiederer – Griva – Hördler.",
+        "Verteidigerpaare gegenüber EHC Red Bull München:\nReinke – Mik → entfällt.\nUnverändert blieben: Wissmann – Müller / Mik – Geibel / Smith – Davidson."
       ]
     },
     {
