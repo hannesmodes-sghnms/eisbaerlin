@@ -1,38 +1,38 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-27T09:17:53Z",
+  "generated_at_utc": "2026-10-28T10:01:44Z",
   "totals": {
-    "matches": 84,
-    "player_match_rows": 3481,
-    "shifts": 64512,
-    "shots": 9026,
-    "faceoffs": 4913,
-    "events": 2137,
-    "player_game_stats": 4349,
-    "team_game_stats": 168,
+    "matches": 85,
+    "player_match_rows": 3522,
+    "shifts": 65309,
+    "shots": 9124,
+    "faceoffs": 4968,
+    "events": 2164,
+    "player_game_stats": 4405,
+    "team_game_stats": 170,
     "unclassified_shots": 0,
-    "reconstructed_goal_shots": 2
+    "reconstructed_goal_shots": 3
   },
   "on_ice_quality": {
     "boundary_adjusted": 55,
     "event_special": 2,
-    "exact": 8915,
+    "exact": 9013,
     "low_confidence": 54
   },
   "manpower": {
-    "5v5": 6607,
-    "5v4": 1432,
-    "4v5": 336,
-    "6v5": 201,
+    "5v5": 6682,
+    "5v4": 1445,
+    "4v5": 338,
+    "6v5": 202,
     "4v4": 106,
-    "5v3": 66,
-    "3v3": 64,
+    "5v3": 68,
+    "3v3": 67,
     "5v6": 60,
     "4v3": 41,
     "6v4": 33,
     "0v0": 29,
-    "3v5": 11,
+    "3v5": 13,
     "3v4": 7,
     "7v5": 4,
     "4v6": 3,
@@ -57,8 +57,8 @@
     "9v5": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 84,
-  "dzone_faceoff_win_to_shot_10s": 63,
+  "dzone_faceoff_to_shot_10s": 86,
+  "dzone_faceoff_win_to_shot_10s": 65,
   "per_match": [
     {
       "match_id": 4389,
@@ -983,18 +983,29 @@
       "shifts": 791,
       "boundary_adjusted": 2,
       "low_confidence": 0
+    },
+    {
+      "match_id": 4474,
+      "match_date": "2026-10-27",
+      "home_team_name": "Kölner Haie",
+      "away_team_name": "Adler Mannheim",
+      "shots": 98,
+      "faceoffs": 55,
+      "shifts": 797,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
     }
   ],
   "integrity": {
     "checks": {
-      "team_game_matches": 84,
-      "matches": 84,
-      "team_game_rows": 168,
-      "goal_events": 496,
-      "goal_shots": 489,
-      "player_game_rows": 4349,
+      "team_game_matches": 85,
+      "matches": 85,
+      "team_game_rows": 170,
+      "goal_events": 507,
+      "goal_shots": 500,
+      "player_game_rows": 4405,
       "hard_failures": 0,
-      "warnings": 57
+      "warnings": 60
     },
     "hard_failures": [],
     "warnings": [
@@ -1265,6 +1276,16 @@
         "team_id": 13,
         "details": {
           "time_s": 3404
+        }
+      },
+      {
+        "code": "reconstructed_goal_shot",
+        "message": "official goal event was missing from the DEL shot feed and was reconstructed without coordinates",
+        "match_id": 4474,
+        "team_id": 11,
+        "details": {
+          "event_time_s": 231,
+          "shot_id": -28152
         }
       },
       {
@@ -1722,12 +1743,32 @@
           "player_sog": 35,
           "shot_feed_sog": 36
         }
+      },
+      {
+        "code": "player_attempts_vs_shots",
+        "message": "sum of player shot attempts differs from raw shot-feed attempts",
+        "match_id": 4474,
+        "team_id": 11,
+        "details": {
+          "player_attempts": 33,
+          "shot_feed_attempts": 34
+        }
+      },
+      {
+        "code": "player_sog_vs_shots",
+        "message": "sum of player SOG differs from raw shot-feed SOG",
+        "match_id": 4474,
+        "team_id": 11,
+        "details": {
+          "player_sog": 19,
+          "shot_feed_sog": 20
+        }
       }
     ]
   },
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 86,
+    "completed_matches": 87,
     "failed_downloads": 0,
     "failed_imports": 2,
     "import_errors": [

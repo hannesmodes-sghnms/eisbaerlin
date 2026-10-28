@@ -1,36 +1,36 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-10-27T09:17:53Z
+Generated: 2026-10-28T10:01:44Z
 
 ## Totals
 
-- Matches: 84
-- Shots: 9026
-- Shifts: 64512
-- Faceoffs: 4913
-- Events: 2137
-- Player game stats: 4349
-- Team game stats: 168
+- Matches: 85
+- Shots: 9124
+- Shifts: 65309
+- Faceoffs: 4968
+- Events: 2164
+- Player game stats: 4405
+- Team game stats: 170
 - Unclassified shot zones: 0
-- Reconstructed goal shots: 2
+- Reconstructed goal shots: 3
 
 ## On-ice quality
 
-- Exact: 8915
+- Exact: 9013
 - Boundary adjusted: 55
 - Low confidence: 54
 
 ## D-zone faceoff sequences
 
-- D-zone faceoff -> shot <=10s: 84
-- Won D-zone faceoff -> shot <=10s: 63
+- D-zone faceoff -> shot <=10s: 86
+- Won D-zone faceoff -> shot <=10s: 65
 
 ## Cross-source integrity
 
 - Hard failures: 0
-- Warnings: 57
-- Goal events checked: 496
-- Goal shots checked: 489
+- Warnings: 60
+- Goal events checked: 507
+- Goal shots checked: 500
 
 ### Warnings
 
@@ -61,6 +61,7 @@ Generated: 2026-10-27T09:17:53Z
 - goal_balance_attendant_disagreement: match 4456 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - goal_time_drift: match 4457 · goal event/shot timestamps differ by +6s
 - goal_balance_attendant_disagreement: match 4470 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
+- reconstructed_goal_shot: match 4474 · official goal event was missing from the DEL shot feed and was reconstructed without coordinates
 - implausible_manpower: match 4468 · 7 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4469 · 7 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4392 · 6 shot(s) have incomplete/overlapping shift context
@@ -83,8 +84,7 @@ Generated: 2026-10-27T09:17:53Z
 - implausible_manpower: match 4438 · 1 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4440 · 1 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4447 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4449 · 1 shot(s) have incomplete/overlapping shift context
-- … 7 more
+- … 10 more
 
 ## Per match
 
@@ -174,3 +174,4 @@ Generated: 2026-10-27T09:17:53Z
 | 4471 | 2026-10-25 | Iserlohn Roosters – Nürnberg Ice Tigers | 124 | 57 | 753 | 0 | 0 |
 | 4472 | 2026-10-25 | Schwenninger Wild Wings – Eisbären Berlin | 103 | 60 | 766 | 1 | 0 |
 | 4473 | 2026-10-25 | Pinguins Bremerhaven – ERC Ingolstadt | 104 | 69 | 791 | 2 | 0 |
+| 4474 | 2026-10-27 | Kölner Haie – Adler Mannheim | 98 | 55 | 797 | 0 | 0 |

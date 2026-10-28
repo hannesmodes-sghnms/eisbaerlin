@@ -1156,7 +1156,7 @@
     {
       "match_id": 4474,
       "start_date": "2026-10-27 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 11,
       "home_team_name": "Kölner Haie",
       "away_team_id": 2,
