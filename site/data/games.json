@@ -4,7 +4,7 @@
     "abbr": "EBB",
     "name": "Eisbären Berlin"
   },
-  "generated_at": "2026-10-28T10:02:02.085236+00:00",
+  "generated_at": "2026-10-29T10:23:13.843278+00:00",
   "completed_games": [
     {
       "match_id": 4472,
@@ -230,7 +230,7 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-10-28T10:01:54Z",
+        "snapshot_at": "2026-10-29T10:23:06Z",
         "rows": [
           {
             "label": "Pässe",
@@ -543,7 +543,7 @@
           "sa_5v5": 165,
           "ga_5v5": 15,
           "save_pct_5v5": 90.9,
-          "gsaa_5v5": 0.12,
+          "gsaa_5v5": 0.2,
           "slot_sa_5v5": 49,
           "slot_save_pct_5v5": 85.7,
           "last5_games": 5,
@@ -564,7 +564,7 @@
           "sa_5v5": 120,
           "ga_5v5": 14,
           "save_pct_5v5": 88.3,
-          "gsaa_5v5": -3.0,
+          "gsaa_5v5": -2.95,
           "slot_sa_5v5": 46,
           "slot_save_pct_5v5": 80.4,
           "last5_games": 5,
@@ -650,7 +650,7 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-10-28T10:01:54Z",
+        "snapshot_at": "2026-10-29T10:23:06Z",
         "rows": [
           {
             "label": "Pässe",
@@ -943,24 +943,24 @@
           "last5_primary_assists": 3
         },
         {
-          "player_id": 554,
-          "player_name": "Brooks Macek",
-          "jersey": 13,
+          "player_id": 3567,
+          "player_name": "Anthony Greco",
+          "jersey": 44,
           "position": "FO",
           "games": 12,
-          "goals": 2,
-          "assists": 8,
-          "points": 10,
-          "shots_on_goal": 20,
+          "goals": 3,
+          "assists": 6,
+          "points": 9,
+          "shots_on_goal": 31,
           "primary_assists": 5,
-          "secondary_assists": 3,
-          "primary_points": 7,
-          "points_per_game": 0.83,
-          "last5_games": 5,
-          "last5_goals": 2,
+          "secondary_assists": 1,
+          "primary_points": 8,
+          "points_per_game": 0.75,
+          "last5_games": 4,
+          "last5_goals": 0,
           "last5_assists": 3,
-          "last5_points": 5,
-          "last5_primary_assists": 2
+          "last5_points": 3,
+          "last5_primary_assists": 3
         }
       ],
       "opponent_goalies": [
@@ -979,7 +979,7 @@
           "sa_5v5": 113,
           "ga_5v5": 12,
           "save_pct_5v5": 89.4,
-          "gsaa_5v5": -1.64,
+          "gsaa_5v5": -1.59,
           "slot_sa_5v5": 37,
           "slot_save_pct_5v5": 73.0,
           "last5_games": 5,
@@ -1000,7 +1000,7 @@
           "sa_5v5": 108,
           "ga_5v5": 10,
           "save_pct_5v5": 90.7,
-          "gsaa_5v5": -0.1,
+          "gsaa_5v5": -0.05,
           "slot_sa_5v5": 39,
           "slot_save_pct_5v5": 82.1,
           "last5_games": 5,
@@ -1086,7 +1086,7 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-10-28T10:01:54Z",
+        "snapshot_at": "2026-10-29T10:23:06Z",
         "rows": [
           {
             "label": "Pässe",
@@ -1415,7 +1415,7 @@
           "sa_5v5": 260,
           "ga_5v5": 22,
           "save_pct_5v5": 91.5,
-          "gsaa_5v5": 1.83,
+          "gsaa_5v5": 1.95,
           "slot_sa_5v5": 79,
           "slot_save_pct_5v5": 81.0,
           "last5_games": 5,
@@ -1436,7 +1436,7 @@
           "sa_5v5": 62,
           "ga_5v5": 5,
           "save_pct_5v5": 91.9,
-          "gsaa_5v5": 0.68,
+          "gsaa_5v5": 0.71,
           "slot_sa_5v5": 20,
           "slot_save_pct_5v5": 75.0,
           "last5_games": 3,

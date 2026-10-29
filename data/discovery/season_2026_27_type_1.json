@@ -1169,7 +1169,7 @@
     {
       "match_id": 4475,
       "start_date": "2026-10-28 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 5,
       "home_team_name": "Krefeld Pinguine",
       "away_team_id": 15,
