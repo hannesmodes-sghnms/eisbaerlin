@@ -1182,7 +1182,7 @@
     {
       "match_id": 4476,
       "start_date": "2026-10-29 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 13,
       "home_team_name": "Augsburger Panther",
       "away_team_id": 44,

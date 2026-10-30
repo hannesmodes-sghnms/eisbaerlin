@@ -1,23 +1,23 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-10-29T10:22:57Z
+Generated: 2026-10-30T10:23:55Z
 
 ## Totals
 
-- Matches: 86
-- Shots: 9221
-- Shifts: 65997
-- Faceoffs: 5019
-- Events: 2182
-- Player game stats: 4456
-- Team game stats: 172
+- Matches: 87
+- Shots: 9345
+- Shifts: 66760
+- Faceoffs: 5081
+- Events: 2210
+- Player game stats: 4507
+- Team game stats: 174
 - Unclassified shot zones: 0
 - Reconstructed goal shots: 3
 
 ## On-ice quality
 
-- Exact: 9110
-- Boundary adjusted: 55
+- Exact: 9233
+- Boundary adjusted: 56
 - Low confidence: 54
 
 ## D-zone faceoff sequences
@@ -28,9 +28,9 @@ Generated: 2026-10-29T10:22:57Z
 ## Cross-source integrity
 
 - Hard failures: 0
-- Warnings: 60
-- Goal events checked: 513
-- Goal shots checked: 506
+- Warnings: 61
+- Goal events checked: 518
+- Goal shots checked: 511
 
 ### Warnings
 
@@ -62,6 +62,7 @@ Generated: 2026-10-29T10:22:57Z
 - goal_time_drift: match 4457 · goal event/shot timestamps differ by +6s
 - goal_balance_attendant_disagreement: match 4470 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - reconstructed_goal_shot: match 4474 · official goal event was missing from the DEL shot feed and was reconstructed without coordinates
+- goal_balance_attendant_disagreement: match 4476 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - implausible_manpower: match 4468 · 7 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4469 · 7 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4392 · 6 shot(s) have incomplete/overlapping shift context
@@ -83,8 +84,7 @@ Generated: 2026-10-29T10:22:57Z
 - implausible_manpower: match 4434 · 1 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4438 · 1 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4440 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4447 · 1 shot(s) have incomplete/overlapping shift context
-- … 10 more
+- … 11 more
 
 ## Per match
 
@@ -176,3 +176,4 @@ Generated: 2026-10-29T10:22:57Z
 | 4473 | 2026-10-25 | Pinguins Bremerhaven – ERC Ingolstadt | 104 | 69 | 791 | 2 | 0 |
 | 4474 | 2026-10-27 | Kölner Haie – Adler Mannheim | 98 | 55 | 797 | 0 | 0 |
 | 4475 | 2026-10-28 | Krefeld Pinguine – Schwenninger Wild Wings | 97 | 51 | 688 | 0 | 0 |
+| 4476 | 2026-10-29 | Augsburger Panther – Löwen Frankfurt | 124 | 62 | 763 | 1 | 0 |

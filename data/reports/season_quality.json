@@ -1,38 +1,38 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-29T10:22:57Z",
+  "generated_at_utc": "2026-10-30T10:23:55Z",
   "totals": {
-    "matches": 86,
-    "player_match_rows": 3563,
-    "shifts": 65997,
-    "shots": 9221,
-    "faceoffs": 5019,
-    "events": 2182,
-    "player_game_stats": 4456,
-    "team_game_stats": 172,
+    "matches": 87,
+    "player_match_rows": 3603,
+    "shifts": 66760,
+    "shots": 9345,
+    "faceoffs": 5081,
+    "events": 2210,
+    "player_game_stats": 4507,
+    "team_game_stats": 174,
     "unclassified_shots": 0,
     "reconstructed_goal_shots": 3
   },
   "on_ice_quality": {
-    "boundary_adjusted": 55,
+    "boundary_adjusted": 56,
     "event_special": 2,
-    "exact": 9110,
+    "exact": 9233,
     "low_confidence": 54
   },
   "manpower": {
-    "5v5": 6767,
-    "5v4": 1454,
-    "4v5": 341,
-    "6v5": 202,
-    "4v4": 106,
+    "5v5": 6840,
+    "5v4": 1482,
+    "4v5": 347,
+    "6v5": 206,
+    "4v4": 108,
+    "3v3": 75,
     "5v3": 68,
-    "3v3": 67,
     "5v6": 60,
-    "4v3": 41,
+    "4v3": 43,
     "6v4": 33,
     "0v0": 29,
-    "3v5": 13,
+    "3v5": 14,
     "3v4": 7,
     "7v5": 4,
     "4v6": 3,
@@ -1005,18 +1005,29 @@
       "shifts": 688,
       "boundary_adjusted": 0,
       "low_confidence": 0
+    },
+    {
+      "match_id": 4476,
+      "match_date": "2026-10-29",
+      "home_team_name": "Augsburger Panther",
+      "away_team_name": "Löwen Frankfurt",
+      "shots": 124,
+      "faceoffs": 62,
+      "shifts": 763,
+      "boundary_adjusted": 1,
+      "low_confidence": 0
     }
   ],
   "integrity": {
     "checks": {
-      "team_game_matches": 86,
-      "matches": 86,
-      "team_game_rows": 172,
-      "goal_events": 513,
-      "goal_shots": 506,
-      "player_game_rows": 4456,
+      "team_game_matches": 87,
+      "matches": 87,
+      "team_game_rows": 174,
+      "goal_events": 518,
+      "goal_shots": 511,
+      "player_game_rows": 4507,
       "hard_failures": 0,
-      "warnings": 60
+      "warnings": 61
     },
     "hard_failures": [],
     "warnings": [
@@ -1297,6 +1308,15 @@
         "details": {
           "event_time_s": 231,
           "shot_id": -28152
+        }
+      },
+      {
+        "code": "goal_balance_attendant_disagreement",
+        "message": "EQ goal has 6v5 attendants; possible delayed penalty/extra attacker",
+        "match_id": 4476,
+        "team_id": 44,
+        "details": {
+          "time_s": 3567
         }
       },
       {
@@ -1779,7 +1799,7 @@
   },
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 88,
+    "completed_matches": 89,
     "failed_downloads": 0,
     "failed_imports": 2,
     "import_errors": [
