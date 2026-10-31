@@ -1,36 +1,36 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-10-30T10:23:55Z
+Generated: 2026-10-31T09:59:44Z
 
 ## Totals
 
-- Matches: 87
-- Shots: 9345
-- Shifts: 66760
-- Faceoffs: 5081
-- Events: 2210
-- Player game stats: 4507
-- Team game stats: 174
+- Matches: 93
+- Shots: 9968
+- Shifts: 71355
+- Faceoffs: 5403
+- Events: 2360
+- Player game stats: 4828
+- Team game stats: 186
 - Unclassified shot zones: 0
-- Reconstructed goal shots: 3
+- Reconstructed goal shots: 5
 
 ## On-ice quality
 
-- Exact: 9233
-- Boundary adjusted: 56
+- Exact: 9854
+- Boundary adjusted: 58
 - Low confidence: 54
 
 ## D-zone faceoff sequences
 
-- D-zone faceoff -> shot <=10s: 86
-- Won D-zone faceoff -> shot <=10s: 65
+- D-zone faceoff -> shot <=10s: 92
+- Won D-zone faceoff -> shot <=10s: 70
 
 ## Cross-source integrity
 
 - Hard failures: 0
-- Warnings: 61
-- Goal events checked: 518
-- Goal shots checked: 511
+- Warnings: 69
+- Goal events checked: 558
+- Goal shots checked: 551
 
 ### Warnings
 
@@ -63,6 +63,12 @@ Generated: 2026-10-30T10:23:55Z
 - goal_balance_attendant_disagreement: match 4470 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - reconstructed_goal_shot: match 4474 · official goal event was missing from the DEL shot feed and was reconstructed without coordinates
 - goal_balance_attendant_disagreement: match 4476 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
+- goal_balance_attendant_disagreement: match 4477 · EQ goal has 4v5 attendants; possible delayed penalty/extra attacker
+- goal_balance_attendant_disagreement: match 4481 · EQ goal has 5v4 attendants; possible delayed penalty/extra attacker
+- reconstructed_goal_shot: match 4481 · official goal event was missing from the DEL shot feed and was reconstructed without coordinates
+- reconstructed_goal_shot: match 4481 · official goal event was missing from the DEL shot feed and was reconstructed without coordinates
+- goal_balance_attendant_disagreement: match 4482 · EQ goal has 5v4 attendants; possible delayed penalty/extra attacker
+- goal_balance_attendant_disagreement: match 4482 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - implausible_manpower: match 4468 · 7 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4469 · 7 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4392 · 6 shot(s) have incomplete/overlapping shift context
@@ -78,13 +84,7 @@ Generated: 2026-10-30T10:23:55Z
 - implausible_manpower: match 4394 · 1 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4399 · 1 shot(s) have incomplete/overlapping shift context
 - implausible_manpower: match 4401 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4415 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4418 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4426 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4434 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4438 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4440 · 1 shot(s) have incomplete/overlapping shift context
-- … 11 more
+- … 19 more
 
 ## Per match
 
@@ -177,3 +177,9 @@ Generated: 2026-10-30T10:23:55Z
 | 4474 | 2026-10-27 | Kölner Haie – Adler Mannheim | 98 | 55 | 797 | 0 | 0 |
 | 4475 | 2026-10-28 | Krefeld Pinguine – Schwenninger Wild Wings | 97 | 51 | 688 | 0 | 0 |
 | 4476 | 2026-10-29 | Augsburger Panther – Löwen Frankfurt | 124 | 62 | 763 | 1 | 0 |
+| 4477 | 2026-10-30 | Nürnberg Ice Tigers – Grizzlys Wolfsburg | 110 | 56 | 738 | 0 | 0 |
+| 4478 | 2026-10-30 | Krefeld Pinguine – Kölner Haie | 104 | 52 | 741 | 0 | 0 |
+| 4479 | 2026-10-30 | Adler Mannheim – Pinguins Bremerhaven | 119 | 44 | 766 | 0 | 0 |
+| 4480 | 2026-10-30 | ERC Ingolstadt – Eisbären Berlin | 92 | 58 | 782 | 1 | 0 |
+| 4481 | 2026-10-30 | Iserlohn Roosters – Schwenninger Wild Wings | 102 | 50 | 782 | 0 | 0 |
+| 4482 | 2026-10-30 | Straubing Tigers – EHC Red Bull München | 96 | 62 | 786 | 1 | 0 |

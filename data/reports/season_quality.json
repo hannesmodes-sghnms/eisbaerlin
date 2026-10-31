@@ -1,38 +1,38 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-10-30T10:23:55Z",
+  "generated_at_utc": "2026-10-31T09:59:44Z",
   "totals": {
-    "matches": 87,
-    "player_match_rows": 3603,
-    "shifts": 66760,
-    "shots": 9345,
-    "faceoffs": 5081,
-    "events": 2210,
-    "player_game_stats": 4507,
-    "team_game_stats": 174,
+    "matches": 93,
+    "player_match_rows": 3849,
+    "shifts": 71355,
+    "shots": 9968,
+    "faceoffs": 5403,
+    "events": 2360,
+    "player_game_stats": 4828,
+    "team_game_stats": 186,
     "unclassified_shots": 0,
-    "reconstructed_goal_shots": 3
+    "reconstructed_goal_shots": 5
   },
   "on_ice_quality": {
-    "boundary_adjusted": 56,
+    "boundary_adjusted": 58,
     "event_special": 2,
-    "exact": 9233,
+    "exact": 9854,
     "low_confidence": 54
   },
   "manpower": {
-    "5v5": 6840,
-    "5v4": 1482,
-    "4v5": 347,
-    "6v5": 206,
-    "4v4": 108,
-    "3v3": 75,
-    "5v3": 68,
-    "5v6": 60,
-    "4v3": 43,
-    "6v4": 33,
+    "5v5": 7286,
+    "5v4": 1597,
+    "4v5": 370,
+    "6v5": 223,
+    "4v4": 115,
+    "3v3": 80,
+    "5v3": 70,
+    "5v6": 62,
+    "4v3": 45,
+    "6v4": 34,
     "0v0": 29,
-    "3v5": 14,
+    "3v5": 17,
     "3v4": 7,
     "7v5": 4,
     "4v6": 3,
@@ -57,8 +57,8 @@
     "9v5": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 86,
-  "dzone_faceoff_win_to_shot_10s": 65,
+  "dzone_faceoff_to_shot_10s": 92,
+  "dzone_faceoff_win_to_shot_10s": 70,
   "per_match": [
     {
       "match_id": 4389,
@@ -1016,18 +1016,84 @@
       "shifts": 763,
       "boundary_adjusted": 1,
       "low_confidence": 0
+    },
+    {
+      "match_id": 4477,
+      "match_date": "2026-10-30",
+      "home_team_name": "Nürnberg Ice Tigers",
+      "away_team_name": "Grizzlys Wolfsburg",
+      "shots": 110,
+      "faceoffs": 56,
+      "shifts": 738,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4478,
+      "match_date": "2026-10-30",
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_name": "Kölner Haie",
+      "shots": 104,
+      "faceoffs": 52,
+      "shifts": 741,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4479,
+      "match_date": "2026-10-30",
+      "home_team_name": "Adler Mannheim",
+      "away_team_name": "Pinguins Bremerhaven",
+      "shots": 119,
+      "faceoffs": 44,
+      "shifts": 766,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4480,
+      "match_date": "2026-10-30",
+      "home_team_name": "ERC Ingolstadt",
+      "away_team_name": "Eisbären Berlin",
+      "shots": 92,
+      "faceoffs": 58,
+      "shifts": 782,
+      "boundary_adjusted": 1,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4481,
+      "match_date": "2026-10-30",
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_name": "Schwenninger Wild Wings",
+      "shots": 102,
+      "faceoffs": 50,
+      "shifts": 782,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4482,
+      "match_date": "2026-10-30",
+      "home_team_name": "Straubing Tigers",
+      "away_team_name": "EHC Red Bull München",
+      "shots": 96,
+      "faceoffs": 62,
+      "shifts": 786,
+      "boundary_adjusted": 1,
+      "low_confidence": 0
     }
   ],
   "integrity": {
     "checks": {
-      "team_game_matches": 87,
-      "matches": 87,
-      "team_game_rows": 174,
-      "goal_events": 518,
-      "goal_shots": 511,
-      "player_game_rows": 4507,
+      "team_game_matches": 93,
+      "matches": 93,
+      "team_game_rows": 186,
+      "goal_events": 558,
+      "goal_shots": 551,
+      "player_game_rows": 4828,
       "hard_failures": 0,
-      "warnings": 61
+      "warnings": 69
     },
     "hard_failures": [],
     "warnings": [
@@ -1317,6 +1383,62 @@
         "team_id": 44,
         "details": {
           "time_s": 3567
+        }
+      },
+      {
+        "code": "goal_balance_attendant_disagreement",
+        "message": "EQ goal has 4v5 attendants; possible delayed penalty/extra attacker",
+        "match_id": 4477,
+        "team_id": 14,
+        "details": {
+          "time_s": 1979
+        }
+      },
+      {
+        "code": "goal_balance_attendant_disagreement",
+        "message": "EQ goal has 5v4 attendants; possible delayed penalty/extra attacker",
+        "match_id": 4481,
+        "team_id": 7,
+        "details": {
+          "time_s": 2286
+        }
+      },
+      {
+        "code": "reconstructed_goal_shot",
+        "message": "official goal event was missing from the DEL shot feed and was reconstructed without coordinates",
+        "match_id": 4481,
+        "team_id": 15,
+        "details": {
+          "event_time_s": 1737,
+          "shot_id": -28191
+        }
+      },
+      {
+        "code": "reconstructed_goal_shot",
+        "message": "official goal event was missing from the DEL shot feed and was reconstructed without coordinates",
+        "match_id": 4481,
+        "team_id": 15,
+        "details": {
+          "event_time_s": 2067,
+          "shot_id": -28196
+        }
+      },
+      {
+        "code": "goal_balance_attendant_disagreement",
+        "message": "EQ goal has 5v4 attendants; possible delayed penalty/extra attacker",
+        "match_id": 4482,
+        "team_id": 6,
+        "details": {
+          "time_s": 462
+        }
+      },
+      {
+        "code": "goal_balance_attendant_disagreement",
+        "message": "EQ goal has 6v5 attendants; possible delayed penalty/extra attacker",
+        "match_id": 4482,
+        "team_id": 12,
+        "details": {
+          "time_s": 3511
         }
       },
       {
@@ -1794,12 +1916,32 @@
           "player_sog": 19,
           "shot_feed_sog": 20
         }
+      },
+      {
+        "code": "player_attempts_vs_shots",
+        "message": "sum of player shot attempts differs from raw shot-feed attempts",
+        "match_id": 4481,
+        "team_id": 15,
+        "details": {
+          "player_attempts": 46,
+          "shot_feed_attempts": 48
+        }
+      },
+      {
+        "code": "player_sog_vs_shots",
+        "message": "sum of player SOG differs from raw shot-feed SOG",
+        "match_id": 4481,
+        "team_id": 15,
+        "details": {
+          "player_sog": 19,
+          "shot_feed_sog": 21
+        }
       }
     ]
   },
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 89,
+    "completed_matches": 95,
     "failed_downloads": 0,
     "failed_imports": 2,
     "import_errors": [

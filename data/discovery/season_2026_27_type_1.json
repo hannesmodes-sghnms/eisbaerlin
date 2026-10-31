@@ -1195,7 +1195,7 @@
     {
       "match_id": 4477,
       "start_date": "2026-10-30 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 14,
       "home_team_name": "Nürnberg Ice Tigers",
       "away_team_id": 8,
@@ -1208,7 +1208,7 @@
     {
       "match_id": 4478,
       "start_date": "2026-10-30 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 5,
       "home_team_name": "Krefeld Pinguine",
       "away_team_id": 11,
@@ -1221,7 +1221,7 @@
     {
       "match_id": 4479,
       "start_date": "2026-10-30 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 2,
       "home_team_name": "Adler Mannheim",
       "away_team_id": 9,
@@ -1234,7 +1234,7 @@
     {
       "match_id": 4480,
       "start_date": "2026-10-30 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 1,
       "home_team_name": "ERC Ingolstadt",
       "away_team_id": 3,
@@ -1247,7 +1247,7 @@
     {
       "match_id": 4481,
       "start_date": "2026-10-30 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 7,
       "home_team_name": "Iserlohn Roosters",
       "away_team_id": 15,
@@ -1260,7 +1260,7 @@
     {
       "match_id": 4482,
       "start_date": "2026-10-30 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 6,
       "home_team_name": "Straubing Tigers",
       "away_team_id": 12,
