@@ -24,6 +24,86 @@ FOCUS_TEAM_ID = 3
 FOCUS_TEAM_ABBR = "EBB"
 FOCUS_TEAM_NAME = "Eisbären Berlin"
 
+SOURCE_QUALITY_CODES = {
+    "shot_player_reference",
+    "shift_player_reference",
+    "on_ice_player_reference",
+    "faceoff_player_reference",
+}
+
+
+def _load_json_file(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def _data_quality_by_team(
+    quality_report_path: Path,
+    discovery_path: Path,
+) -> dict[int, dict[str, Any]]:
+    report = _load_json_file(quality_report_path)
+    discovery = _load_json_file(discovery_path)
+    match_teams: dict[int, tuple[int, int]] = {}
+    for match in discovery.get("matches") or []:
+        try:
+            match_teams[int(match["match_id"])] = (
+                int(match["home_team_id"]),
+                int(match["away_team_id"]),
+            )
+        except (KeyError, TypeError, ValueError):
+            continue
+
+    affected: dict[int, dict[str, Any]] = {}
+
+    def mark(team_id: int, *, match_id: int | None, code: str) -> None:
+        row = affected.setdefault(
+            int(team_id),
+            {"warning": True, "codes": set(), "match_ids": set()},
+        )
+        row["codes"].add(str(code))
+        if match_id is not None:
+            row["match_ids"].add(int(match_id))
+
+    integrity = report.get("integrity") or {}
+    issues = list(integrity.get("warnings") or []) + list(integrity.get("hard_failures") or [])
+    for issue in issues:
+        code = str(issue.get("code") or "")
+        if code not in SOURCE_QUALITY_CODES:
+            continue
+        match_id = int(issue["match_id"]) if issue.get("match_id") is not None else None
+        if issue.get("team_id") is not None:
+            mark(int(issue["team_id"]), match_id=match_id, code=code)
+        elif match_id in match_teams:
+            for team_id in match_teams[match_id]:
+                mark(team_id, match_id=match_id, code=code)
+
+    for error in ((report.get("pipeline") or {}).get("import_errors") or []):
+        if str(error.get("error") or "").strip().lower() != "raw data incomplete":
+            continue
+        try:
+            match_id = int(error["match_id"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        for team_id in match_teams.get(match_id, ()):
+            mark(team_id, match_id=match_id, code="raw_data_incomplete")
+
+    result: dict[int, dict[str, Any]] = {}
+    for team_id, row in affected.items():
+        codes = sorted(row["codes"])
+        match_ids = sorted(row["match_ids"])
+        result[team_id] = {
+            "warning": True,
+            "codes": codes,
+            "match_ids": match_ids,
+            "message": "Einzelne Quelldaten können unvollständig oder widersprüchlich sein.",
+        }
+    return result
+
 
 def _row_dict(cursor: Any, row: tuple[Any, ...]) -> dict[str, Any]:
     return {desc[0]: value for desc, value in zip(cursor.description, row)}
@@ -185,7 +265,14 @@ def _insight_preview_rows(ebb: dict[str, Any] | None, opp: dict[str, Any] | None
     return [{"label": label, "ebb": a, "opponent": b, "kind": kind} for label, a, b, kind in specs]
 
 
-def enrich_upcoming_games(con: Any, games: list[dict[str, Any]], *, raw_dir: Path = Path("data/raw"), insight_dir: Path = Path("data/del_insight")) -> list[dict[str, Any]]:
+def enrich_upcoming_games(
+    con: Any,
+    games: list[dict[str, Any]],
+    *,
+    raw_dir: Path = Path("data/raw"),
+    insight_dir: Path = Path("data/del_insight"),
+    data_quality_by_team: dict[int, dict[str, Any]] | None = None,
+) -> list[dict[str, Any]]:
     ebb_stats = _season_key_stats(con, FOCUS_TEAM_ID)
     ebb_recent = _recent_games(con, FOCUS_TEAM_ID, limit=5)
     insight_snapshot = load_latest_snapshot(insight_dir)
@@ -212,6 +299,10 @@ def enrich_upcoming_games(con: Any, games: list[dict[str, Any]], *, raw_dir: Pat
                 "head_to_head": _head_to_head(con, opponent_team_id, limit=5),
                 "opponent_top_scorers": season_top_scorers(con, opponent_team_id, limit=5, recent_games=5),
                 "opponent_goalies": goalie_watch(con, raw_dir, opponent_team_id, limit=2),
+                "data_quality": (data_quality_by_team or {}).get(
+                    opponent_team_id,
+                    {"warning": False, "codes": [], "match_ids": []},
+                ),
             }
         )
     return result
@@ -594,6 +685,7 @@ def generate_dashboard_data(
     raw_dir: Path = Path("data/raw"),
     insight_dir: Path = Path("data/del_insight"),
     output_dir: Path = Path("site/data"),
+    quality_report_path: Path = Path("data/reports/season_quality.json"),
     upcoming_limit: int = 3,
 ) -> tuple[Path, list[Path]]:
     import duckdb
@@ -635,11 +727,18 @@ def generate_dashboard_data(
             )
 
         upcoming_basic = load_upcoming_games(discovery_path, limit=upcoming_limit)
+        data_quality_by_team = _data_quality_by_team(quality_report_path, discovery_path)
         index_payload = {
             "focus_team": {"team_id": FOCUS_TEAM_ID, "abbr": FOCUS_TEAM_ABBR, "name": FOCUS_TEAM_NAME},
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "completed_games": summaries,
-            "upcoming_games": enrich_upcoming_games(con, upcoming_basic, raw_dir=raw_dir, insight_dir=insight_dir),
+            "upcoming_games": enrich_upcoming_games(
+                con,
+                upcoming_basic,
+                raw_dir=raw_dir,
+                insight_dir=insight_dir,
+                data_quality_by_team=data_quality_by_team,
+            ),
         }
         index_path = output_dir / "games.json"
         index_path.write_text(json.dumps(index_payload, indent=2, ensure_ascii=False, default=str) + "\n", encoding="utf-8")
