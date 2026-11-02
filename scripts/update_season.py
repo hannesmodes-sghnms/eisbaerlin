@@ -21,6 +21,7 @@ def main() -> int:
     parser.add_argument("--db", type=Path, default=Path("data/del_2026_27.duckdb"))
     parser.add_argument("--reports-dir", type=Path, default=Path("data/reports"))
     parser.add_argument("--team-id", type=int, default=None, help="Optional team filter. Omit to import all completed DEL games (needed for opponent previews).")
+    parser.add_argument("--rebuild-all", action="store_true", help="Discard any existing DuckDB and rebuild every completed match from raw data.")
     args = parser.parse_args()
 
     summary = update_season(
@@ -32,6 +33,7 @@ def main() -> int:
         db_path=args.db,
         reports_dir=args.reports_dir,
         focus_team_id=args.team_id,
+        rebuild_all=args.rebuild_all,
     )
     print(json.dumps(asdict(summary), indent=2, ensure_ascii=False))
     return 0
