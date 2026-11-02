@@ -1,39 +1,68 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-11-01T10:47:33Z
+Generated: 2026-11-02T17:27:14Z
 
 ## Totals
 
-- Matches: 93
-- Shots: 9968
-- Shifts: 71355
-- Faceoffs: 5403
-- Events: 2360
-- Player game stats: 4828
-- Team game stats: 186
+- Matches: 99
+- Shots: 10652
+- Shifts: 75919
+- Faceoffs: 5742
+- Events: 2505
+- Player game stats: 5146
+- Team game stats: 198
 - Unclassified shot zones: 0
 - Reconstructed goal shots: 5
 
 ## On-ice quality
 
-- Exact: 9854
-- Boundary adjusted: 58
-- Low confidence: 54
+- Exact: 10528
+- Boundary adjusted: 62
+- Low confidence: 60
 
 ## D-zone faceoff sequences
 
-- D-zone faceoff -> shot <=10s: 92
-- Won D-zone faceoff -> shot <=10s: 70
+- D-zone faceoff -> shot <=10s: 95
+- Won D-zone faceoff -> shot <=10s: 72
 
 ## Cross-source integrity
 
 - Hard failures: 0
-- Warnings: 69
-- Goal events checked: 558
-- Goal shots checked: 551
+- Warnings: 191
+- Goal events checked: 591
+- Goal shots checked: 583
 
 ### Warnings
 
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
+- shift_player_reference: match 4486 · shift references player outside match roster/team
 - goal_balance_attendant_disagreement: match 4390 · EQ goal has 5v4 attendants; possible delayed penalty/extra attacker
 - goal_scorer_disagreement: match 4393 · official scorer differs from shot-feed shooter
 - goal_balance_attendant_disagreement: match 4393 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
@@ -55,36 +84,7 @@ Generated: 2026-11-01T10:47:33Z
 - goal_balance_attendant_disagreement: match 4443 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - goal_balance_attendant_disagreement: match 4444 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - goal_balance_attendant_disagreement: match 4448 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
-- goal_balance_attendant_disagreement: match 4452 · EQ goal has 4v5 attendants; possible delayed penalty/extra attacker
-- goal_balance_attendant_disagreement: match 4452 · PP1 goal has 4v4 attendants
-- goal_balance_attendant_disagreement: match 4452 · PP1 goal has 4v4 attendants
-- goal_balance_attendant_disagreement: match 4456 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
-- goal_time_drift: match 4457 · goal event/shot timestamps differ by +6s
-- goal_balance_attendant_disagreement: match 4470 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
-- reconstructed_goal_shot: match 4474 · official goal event was missing from the DEL shot feed and was reconstructed without coordinates
-- goal_balance_attendant_disagreement: match 4476 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
-- goal_balance_attendant_disagreement: match 4477 · EQ goal has 4v5 attendants; possible delayed penalty/extra attacker
-- goal_balance_attendant_disagreement: match 4481 · EQ goal has 5v4 attendants; possible delayed penalty/extra attacker
-- reconstructed_goal_shot: match 4481 · official goal event was missing from the DEL shot feed and was reconstructed without coordinates
-- reconstructed_goal_shot: match 4481 · official goal event was missing from the DEL shot feed and was reconstructed without coordinates
-- goal_balance_attendant_disagreement: match 4482 · EQ goal has 5v4 attendants; possible delayed penalty/extra attacker
-- goal_balance_attendant_disagreement: match 4482 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
-- implausible_manpower: match 4468 · 7 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4469 · 7 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4392 · 6 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4454 · 6 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4391 · 2 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4397 · 2 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4408 · 2 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4413 · 2 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4416 · 2 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4421 · 2 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4429 · 2 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4441 · 2 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4394 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4399 · 1 shot(s) have incomplete/overlapping shift context
-- implausible_manpower: match 4401 · 1 shot(s) have incomplete/overlapping shift context
-- … 19 more
+- … 141 more
 
 ## Per match
 
@@ -183,3 +183,9 @@ Generated: 2026-11-01T10:47:33Z
 | 4480 | 2026-10-30 | ERC Ingolstadt – Eisbären Berlin | 92 | 58 | 782 | 1 | 0 |
 | 4481 | 2026-10-30 | Iserlohn Roosters – Schwenninger Wild Wings | 102 | 50 | 782 | 0 | 0 |
 | 4482 | 2026-10-30 | Straubing Tigers – EHC Red Bull München | 96 | 62 | 786 | 1 | 0 |
+| 4483 | 2026-11-01 | Kölner Haie – Iserlohn Roosters | 108 | 53 | 804 | 1 | 0 |
+| 4484 | 2026-11-01 | Eisbären Berlin – Adler Mannheim | 116 | 60 | 770 | 0 | 0 |
+| 4485 | 2026-11-01 | Löwen Frankfurt – ERC Ingolstadt | 120 | 62 | 771 | 0 | 0 |
+| 4486 | 2026-11-01 | Schwenninger Wild Wings – Krefeld Pinguine | 113 | 53 | 735 | 0 | 0 |
+| 4488 | 2026-11-01 | EHC Red Bull München – Nürnberg Ice Tigers | 113 | 57 | 732 | 2 | 1 |
+| 4489 | 2026-11-01 | Pinguins Bremerhaven – Straubing Tigers | 114 | 54 | 752 | 1 | 5 |

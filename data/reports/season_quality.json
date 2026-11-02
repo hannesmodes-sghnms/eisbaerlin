@@ -1,41 +1,42 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-11-01T10:47:33Z",
+  "generated_at_utc": "2026-11-02T17:27:14Z",
   "totals": {
-    "matches": 93,
-    "player_match_rows": 3849,
-    "shifts": 71355,
-    "shots": 9968,
-    "faceoffs": 5403,
-    "events": 2360,
-    "player_game_stats": 4828,
-    "team_game_stats": 186,
+    "matches": 99,
+    "player_match_rows": 4095,
+    "shifts": 75919,
+    "shots": 10652,
+    "faceoffs": 5742,
+    "events": 2505,
+    "player_game_stats": 5146,
+    "team_game_stats": 198,
     "unclassified_shots": 0,
     "reconstructed_goal_shots": 5
   },
   "on_ice_quality": {
-    "boundary_adjusted": 58,
+    "boundary_adjusted": 62,
     "event_special": 2,
-    "exact": 9854,
-    "low_confidence": 54
+    "exact": 10528,
+    "low_confidence": 60
   },
   "manpower": {
-    "5v5": 7286,
-    "5v4": 1597,
-    "4v5": 370,
-    "6v5": 223,
-    "4v4": 115,
-    "3v3": 80,
+    "5v5": 7765,
+    "5v4": 1706,
+    "4v5": 393,
+    "6v5": 263,
+    "4v4": 119,
+    "3v3": 94,
     "5v3": 70,
-    "5v6": 62,
+    "5v6": 68,
     "4v3": 45,
     "6v4": 34,
     "0v0": 29,
-    "3v5": 17,
+    "3v5": 18,
     "3v4": 7,
-    "7v5": 4,
-    "4v6": 3,
+    "7v5": 5,
+    "4v6": 4,
+    "10v7": 3,
     "10v6": 2,
     "5v10": 2,
     "5v2": 2,
@@ -44,21 +45,24 @@
     "PS": 2,
     "0v1": 1,
     "0v2": 1,
+    "0v5": 1,
     "10v4": 1,
     "10v5": 1,
-    "10v7": 1,
     "2v0": 1,
     "3v6": 1,
     "5v7": 1,
     "5v9": 1,
+    "6v6": 1,
     "6v7": 1,
     "6v8": 1,
+    "7v6": 1,
     "8v8": 1,
     "9v5": 1,
+    "9v6": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 92,
-  "dzone_faceoff_win_to_shot_10s": 70,
+  "dzone_faceoff_to_shot_10s": 95,
+  "dzone_faceoff_win_to_shot_10s": 72,
   "per_match": [
     {
       "match_id": 4389,
@@ -1082,21 +1086,377 @@
       "shifts": 786,
       "boundary_adjusted": 1,
       "low_confidence": 0
+    },
+    {
+      "match_id": 4483,
+      "match_date": "2026-11-01",
+      "home_team_name": "Kölner Haie",
+      "away_team_name": "Iserlohn Roosters",
+      "shots": 108,
+      "faceoffs": 53,
+      "shifts": 804,
+      "boundary_adjusted": 1,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4484,
+      "match_date": "2026-11-01",
+      "home_team_name": "Eisbären Berlin",
+      "away_team_name": "Adler Mannheim",
+      "shots": 116,
+      "faceoffs": 60,
+      "shifts": 770,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4485,
+      "match_date": "2026-11-01",
+      "home_team_name": "Löwen Frankfurt",
+      "away_team_name": "ERC Ingolstadt",
+      "shots": 120,
+      "faceoffs": 62,
+      "shifts": 771,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4486,
+      "match_date": "2026-11-01",
+      "home_team_name": "Schwenninger Wild Wings",
+      "away_team_name": "Krefeld Pinguine",
+      "shots": 113,
+      "faceoffs": 53,
+      "shifts": 735,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
+    },
+    {
+      "match_id": 4488,
+      "match_date": "2026-11-01",
+      "home_team_name": "EHC Red Bull München",
+      "away_team_name": "Nürnberg Ice Tigers",
+      "shots": 113,
+      "faceoffs": 57,
+      "shifts": 732,
+      "boundary_adjusted": 2,
+      "low_confidence": 1
+    },
+    {
+      "match_id": 4489,
+      "match_date": "2026-11-01",
+      "home_team_name": "Pinguins Bremerhaven",
+      "away_team_name": "Straubing Tigers",
+      "shots": 114,
+      "faceoffs": 54,
+      "shifts": 752,
+      "boundary_adjusted": 1,
+      "low_confidence": 5
     }
   ],
   "integrity": {
     "checks": {
-      "team_game_matches": 93,
-      "matches": 93,
-      "team_game_rows": 186,
-      "goal_events": 558,
-      "goal_shots": 551,
-      "player_game_rows": 4828,
+      "team_game_matches": 99,
+      "matches": 99,
+      "team_game_rows": 198,
+      "goal_events": 591,
+      "goal_shots": 583,
+      "player_game_rows": 5146,
       "hard_failures": 0,
-      "warnings": 69
+      "warnings": 191
     },
     "hard_failures": [],
     "warnings": [
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11451379,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11451380,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11451464,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11451549,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11451739,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11451808,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11451896,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452002,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452033,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452131,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452177,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452263,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452326,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452389,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452496,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452558,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452628,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452741,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452758,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452829,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11452976,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11453031,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11453067,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11453110,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11453215,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11453276,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11453299,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11453452,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shift_player_reference",
+        "message": "shift references player outside match roster/team",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shift_id": 11453464,
+          "player_id": 1350
+        }
+      },
       {
         "code": "goal_balance_attendant_disagreement",
         "message": "EQ goal has 5v4 attendants; possible delayed penalty/extra attacker",
@@ -1442,6 +1802,972 @@
         }
       },
       {
+        "code": "goal_time_drift",
+        "message": "goal event/shot timestamps differ by -9s",
+        "match_id": 4483,
+        "team_id": 11,
+        "details": {
+          "event_time_s": 3124,
+          "shot_time_s": 3133,
+          "shot_id": 1659637
+        }
+      },
+      {
+        "code": "goal_balance_attendant_disagreement",
+        "message": "EQ goal has 6v5 attendants; possible delayed penalty/extra attacker",
+        "match_id": 4486,
+        "team_id": 15,
+        "details": {
+          "time_s": 3533
+        }
+      },
+      {
+        "code": "shot_player_reference",
+        "message": "shot references a player not on that team roster",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shot_id": 1659314,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shot_player_reference",
+        "message": "shot references a player not on that team roster",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shot_id": 1659416,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shot_player_reference",
+        "message": "shot references a player not on that team roster",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shot_id": 1659419,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "shot_player_reference",
+        "message": "shot references a player not on that team roster",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "shot_id": 1659426,
+          "player_id": 1350
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659190,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659193,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659203,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659204,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659209,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659205,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659225,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659254,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659262,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659263,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659264,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659268,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659271,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659284,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659286,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659309,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659314,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659315,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659320,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659321,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659322,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659338,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659339,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659343,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659346,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659359,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659361,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659362,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659363,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659364,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659388,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659389,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659410,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659411,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659412,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659415,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659416,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659417,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659419,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659426,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659431,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659440,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659452,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659463,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659465,
+          "bad_for": [
+            1350
+          ],
+          "bad_against": []
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659469,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659470,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659480,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659481,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "on_ice_player_reference",
+        "message": "shot context contains player(s) outside roster/team",
+        "match_id": 4486,
+        "details": {
+          "shot_id": 1659505,
+          "bad_for": [],
+          "bad_against": [
+            1350
+          ]
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938819,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938830,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938844,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938846,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938854,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938874,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938885,
+          "winner_team_id": 15,
+          "loser_team_id": null
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938890,
+          "winner_team_id": 15,
+          "loser_team_id": null
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938906,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938924,
+          "winner_team_id": 15,
+          "loser_team_id": null
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938925,
+          "winner_team_id": 15,
+          "loser_team_id": null
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938932,
+          "winner_team_id": 15,
+          "loser_team_id": null
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938941,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938947,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938955,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938964,
+          "winner_team_id": 15,
+          "loser_team_id": null
+        }
+      },
+      {
+        "code": "faceoff_team_reference",
+        "message": "faceoff winner/loser team mapping is missing or identical",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938977,
+          "winner_team_id": null,
+          "loser_team_id": 15
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938885
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938890
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938924
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938925
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938932
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938964
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938819
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938830
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938844
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938846
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938854
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938874
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938906
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938941
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938947
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938955
+        }
+      },
+      {
+        "code": "faceoff_player_reference",
+        "message": "faceoff participant is missing from mapped match roster/team",
+        "match_id": 4486,
+        "details": {
+          "faceoff_id": 938977
+        }
+      },
+      {
         "code": "implausible_manpower",
         "message": "7 shot(s) have incomplete/overlapping shift context",
         "match_id": 4468,
@@ -1502,6 +2828,22 @@
           "against_range": [
             0,
             1
+          ]
+        }
+      },
+      {
+        "code": "implausible_manpower",
+        "message": "5 shot(s) have incomplete/overlapping shift context",
+        "match_id": 4489,
+        "details": {
+          "shots": 5,
+          "for_range": [
+            7,
+            10
+          ],
+          "against_range": [
+            5,
+            7
           ]
         }
       },
@@ -1858,6 +3200,22 @@
         }
       },
       {
+        "code": "implausible_manpower",
+        "message": "1 shot(s) have incomplete/overlapping shift context",
+        "match_id": 4488,
+        "details": {
+          "shots": 1,
+          "for_range": [
+            0,
+            0
+          ],
+          "against_range": [
+            5,
+            5
+          ]
+        }
+      },
+      {
         "code": "player_attempts_vs_shots",
         "message": "sum of player shot attempts differs from raw shot-feed attempts",
         "match_id": 4433,
@@ -1936,14 +3294,26 @@
           "player_sog": 19,
           "shot_feed_sog": 21
         }
+      },
+      {
+        "code": "player_faceoffs_vs_feed",
+        "message": "player faceoff totals differ from raw faceoff feed",
+        "match_id": 4486,
+        "team_id": 5,
+        "details": {
+          "player_wins": 30,
+          "raw_wins": 19,
+          "player_losses": 23,
+          "raw_losses": 17
+        }
       }
     ]
   },
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 95,
+    "completed_matches": 102,
     "failed_downloads": 0,
-    "failed_imports": 2,
+    "failed_imports": 3,
     "import_errors": [
       {
         "match_id": 4424,
@@ -1951,6 +3321,10 @@
       },
       {
         "match_id": 4451,
+        "error": "raw data incomplete"
+      },
+      {
+        "match_id": 4487,
         "error": "raw data incomplete"
       }
     ]
