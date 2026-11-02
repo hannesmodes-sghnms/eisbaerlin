@@ -1,4 +1,6 @@
-from delstats.dashboard import extract_upcoming_games
+import json
+
+from delstats.dashboard import _data_quality_by_team, extract_upcoming_games
 
 
 def test_extracts_next_three_ebb_games_only():
@@ -17,3 +19,57 @@ def test_extracts_next_three_ebb_games_only():
     assert result[0]["ebb_home"] is False
     assert result[0]["opponent_name"] == "FRA"
     assert result[1]["ebb_home"] is True
+
+
+
+def test_data_quality_flags_only_affected_teams(tmp_path):
+    discovery = {
+        "matches": [
+            {
+                "match_id": 4486,
+                "home_team_id": 15,
+                "away_team_id": 5,
+            },
+            {
+                "match_id": 4487,
+                "home_team_id": 8,
+                "away_team_id": 13,
+            },
+        ]
+    }
+    quality = {
+        "integrity": {
+            "warnings": [
+                {
+                    "code": "shot_player_reference",
+                    "match_id": 4486,
+                    "team_id": 5,
+                    "details": {"shot_id": 123, "player_id": 456},
+                },
+                {
+                    "code": "goal_balance_attendant_disagreement",
+                    "match_id": 4486,
+                    "team_id": 15,
+                },
+            ],
+            "hard_failures": [],
+        },
+        "pipeline": {
+            "import_errors": [
+                {"match_id": 4487, "error": "raw data incomplete"},
+            ]
+        },
+    }
+    discovery_path = tmp_path / "discovery.json"
+    quality_path = tmp_path / "quality.json"
+    discovery_path.write_text(json.dumps(discovery), encoding="utf-8")
+    quality_path.write_text(json.dumps(quality), encoding="utf-8")
+
+    result = _data_quality_by_team(quality_path, discovery_path)
+
+    assert result[5]["warning"] is True
+    assert result[5]["codes"] == ["shot_player_reference"]
+    assert result[5]["match_ids"] == [4486]
+    assert 15 not in result
+    assert result[8]["codes"] == ["raw_data_incomplete"]
+    assert result[13]["codes"] == ["raw_data_incomplete"]
