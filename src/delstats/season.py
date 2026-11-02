@@ -37,6 +37,7 @@ class SeasonUpdateSummary:
     skipped_matches: int
     failed_downloads: int
     imported_matches: int
+    rebuilt_matches: int
     failed_imports: int
     db_path: str
     quality_report_path: str
@@ -79,6 +80,23 @@ def _raw_match_ready(match_dir: Path) -> bool:
         and any(match_dir.glob("shifts*.json"))
         and len(team_stats) >= 2
     )
+
+
+def _existing_match_ids(db_path: Path) -> set[int]:
+    if not db_path.exists():
+        return set()
+    import duckdb
+
+    con = duckdb.connect(str(db_path), read_only=True)
+    try:
+        table = con.execute(
+            "SELECT count(*) FROM information_schema.tables WHERE table_name='matches'"
+        ).fetchone()
+        if not table or int(table[0] or 0) == 0:
+            return set()
+        return {int(row[0]) for row in con.execute("SELECT match_id FROM matches").fetchall()}
+    finally:
+        con.close()
 
 
 def build_quality_report(db_path: Path, *, season: int, game_type: int) -> dict[str, Any]:
@@ -269,6 +287,7 @@ def update_season(
     reports_dir: Path = Path("data/reports"),
     timezone_name: str = "Europe/Berlin",
     focus_team_id: int | None = None,
+    rebuild_all: bool = False,
 ) -> SeasonUpdateSummary:
     discoverer = SeasonDiscoverer()
     downloader = RawMatchDownloader()
@@ -280,18 +299,26 @@ def update_season(
         schedule_matches = [m for m in schedule_matches if focus_team_id in {m.home_team_id, m.away_team_id}]
     completed = [m for m in schedule_matches if m.status == "AFTER_MATCH"]
 
+    if rebuild_all and db_path.exists():
+        db_path.unlink()
+    existing_match_ids = _existing_match_ids(db_path)
+    full_rebuild = not db_path.exists()
+
     local_today = datetime.now(ZoneInfo(timezone_name)).date()
     updates: list[MatchUpdateResult] = []
     failed_downloads = 0
     downloaded_matches = 0
     refreshed_matches = 0
     skipped_matches = 0
+    matches_to_import: set[int] = set()
 
     for match in completed:
         match_dir = raw_dir / str(match.match_id)
         refresh = should_refresh_match(match.start_date, refresh_days=refresh_days, today=local_today)
         needs_download = not _raw_match_ready(match_dir)
         if not needs_download and not refresh:
+            if full_rebuild or match.match_id not in existing_match_ids:
+                matches_to_import.add(match.match_id)
             updates.append(
                 MatchUpdateResult(
                     match_id=match.match_id,
@@ -325,6 +352,7 @@ def update_season(
                     downloaded_resources=sum(r.status == "downloaded" for r in raw_manifest.resources),
                 )
             )
+            matches_to_import.add(match.match_id)
             if refresh and not needs_download:
                 refreshed_matches += 1
             else:
@@ -343,28 +371,40 @@ def update_season(
                 )
             )
 
-    if db_path.exists():
-        db_path.unlink()
-
     from .database import build_match_database
 
-    imported = 0
+    rebuilt_matches = 0
     import_errors: list[dict[str, Any]] = []
     for match in completed:
+        if full_rebuild:
+            matches_to_import.add(match.match_id)
+        if match.match_id not in matches_to_import:
+            continue
+
         match_dir = raw_dir / str(match.match_id)
         if not _raw_match_ready(match_dir):
-            import_errors.append({"match_id": match.match_id, "error": "raw data incomplete"})
             continue
         try:
             build_match_database(match_dir=match_dir, db_path=db_path, discovery_path=season_json)
-            imported += 1
+            rebuilt_matches += 1
         except Exception as exc:  # noqa: BLE001
             import_errors.append(
                 {"match_id": match.match_id, "error": f"{type(exc).__name__}: {exc}"}
             )
 
+    final_match_ids = _existing_match_ids(db_path)
+    for match in completed:
+        if match.match_id in final_match_ids:
+            continue
+        if any(int(row.get("match_id") or -1) == match.match_id for row in import_errors):
+            continue
+        match_dir = raw_dir / str(match.match_id)
+        error = "raw data incomplete" if not _raw_match_ready(match_dir) else "match missing from database"
+        import_errors.append({"match_id": match.match_id, "error": error})
+
+    imported = len(final_match_ids)
     if imported == 0:
-        raise RuntimeError("No completed matches could be imported into DuckDB")
+        raise RuntimeError("No completed matches are available in DuckDB")
 
     quality = build_quality_report(db_path, season=season, game_type=game_type)
     quality["pipeline"] = {
@@ -387,6 +427,7 @@ def update_season(
         skipped_matches=skipped_matches,
         failed_downloads=failed_downloads,
         imported_matches=imported,
+        rebuilt_matches=rebuilt_matches,
         failed_imports=len(import_errors),
         db_path=str(db_path),
         quality_report_path=str(quality_json),

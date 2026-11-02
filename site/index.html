@@ -251,6 +251,15 @@ details.preview[open] summary {
   max-width: 100%;
 }
 
+.quality-warning {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
 .preview-table,
 .data-table,
 .metric-table {
@@ -1166,7 +1175,8 @@ tr:last-child td {
 
   async function loadIndex(){const r=await fetch('data/games.json',{cache:'no-store'});if(!r.ok)throw new Error(`games.json: ${r.status}`);state.index=await r.json();renderIndex();const games=state.index.completed_games||[];if(games.length)await loadGame(games[0])}
   function renderIndex(){const idx=state.index;$('#updated').textContent=idx.generated_at?`Datenstand: ${new Date(idx.generated_at).toLocaleString('de-DE')}`:'';const up=idx.upcoming_games||[];
-    $('#upcoming').innerHTML=up.length?up.map(g=>{const opp=g.opponent_abbr||g.opponent_name,h2h=g.head_to_head||[],sc=g.opponent_top_scorers||[],goalies=g.opponent_goalies||[];return `<article class="upcoming-card"><div class="upcoming-date">${esc(fmtDateTime(g.start_date))}</div><div class="upcoming-match">${esc(g.home_team_name)} – ${esc(g.away_team_name)}</div><div class="upcoming-place">${g.ebb_home?'Heimspiel':'Auswärtsspiel'} · Gegner: ${esc(opp)}</div><div class="form-strip"><span class="muted">EBB:</span>${formHtml(g.ebb_recent||[])}<span class="muted" style="margin-left:6px">${esc(opp)}:</span>${formHtml(g.opponent_recent||[])}</div><details class="preview"><summary>Matchup-Vorschau</summary><div class="preview-body">
+    $('#upcoming').innerHTML=up.length?up.map(g=>{const opp=g.opponent_abbr||g.opponent_name,h2h=g.head_to_head||[],sc=g.opponent_top_scorers||[],goalies=g.opponent_goalies||[],dq=g.data_quality||{};return `<article class="upcoming-card"><div class="upcoming-date">${esc(fmtDateTime(g.start_date))}</div><div class="upcoming-match">${esc(g.home_team_name)} – ${esc(g.away_team_name)}</div><div class="upcoming-place">${g.ebb_home?'Heimspiel':'Auswärtsspiel'} · Gegner: ${esc(opp)}</div><div class="form-strip"><span class="muted">EBB:</span>${formHtml(g.ebb_recent||[])}<span class="muted" style="margin-left:6px">${esc(opp)}:</span>${formHtml(g.opponent_recent||[])}</div><details class="preview"><summary>Matchup-Vorschau</summary><div class="preview-body">
+      ${dq.warning?`<div class="quality-warning"><strong>Datenhinweis:</strong> Für ${esc(opp)} liegen Quellen-/Roster-Warnungen oder unvollständige Spieldaten vor. Einzelne Saison-, Spieler- oder Matchup-Werte können daher unvollständig sein.</div>`:''}
       <div><h3>Key Stats</h3><div class="scroll"><table class="preview-table"><thead><tr><th>Stat</th><th>EBB</th><th>${esc(opp)}</th></tr></thead><tbody>${(g.key_stats||[]).map(x=>`<tr><td>${esc(x.label)}</td><td class="ebb">${esc(fmtVal(x.ebb,x.kind))}</td><td class="opp">${esc(fmtVal(x.opponent,x.kind))}</td></tr>`).join('')}</tbody></table></div></div>
       ${insightPreviewHtml(g,opp)}
       <div class="watch-grid"><div class="watch-box"><h3>${esc(opp)} · Topscorer</h3><div class="scroll"><table class="preview-table"><thead><tr><th>Spieler</th><th>G</th><th>A</th><th>P</th><th>A1</th><th>Prim.P</th><th>P/GP</th><th>letzte 5</th></tr></thead><tbody>${sc.length?sc.map(p=>`<tr><td>${esc(p.player_name)}</td><td>${p.goals}</td><td>${p.assists}</td><td><b>${p.points}</b></td><td>${p.primary_assists}</td><td>${p.primary_points}</td><td>${p.points_per_game==null?'–':Number(p.points_per_game).toFixed(2)}</td><td>${p.last5_goals}-${p.last5_assists}-${p.last5_points}</td></tr>`).join(''):'<tr><td colspan="8">Noch keine Spielerdaten.</td></tr>'}</tbody></table></div></div>

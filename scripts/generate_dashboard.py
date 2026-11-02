@@ -14,6 +14,7 @@ def main() -> None:
     parser.add_argument("--raw-dir", type=Path, default=Path("data/raw"))
     parser.add_argument("--insight-dir", type=Path, default=Path("data/del_insight"))
     parser.add_argument("--output-dir", type=Path, default=Path("site/data"))
+    parser.add_argument("--quality-report", type=Path, default=Path("data/reports/season_quality.json"))
     parser.add_argument("--upcoming", type=int, default=3, help="Number of upcoming EBB games to include")
     args = parser.parse_args()
     index_path, games = generate_dashboard_data(
@@ -22,6 +23,7 @@ def main() -> None:
         raw_dir=args.raw_dir,
         insight_dir=args.insight_dir,
         output_dir=args.output_dir,
+        quality_report_path=args.quality_report,
         upcoming_limit=args.upcoming,
     )
     print(f"Dashboard index: {index_path}")
