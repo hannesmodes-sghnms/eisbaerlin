@@ -15,6 +15,22 @@ def _is_raw_incomplete(error: dict[str, Any]) -> bool:
     return str(error.get("error") or "").strip().lower() == RAW_INCOMPLETE_ERROR
 
 
+def _format_issue(issue: dict[str, Any]) -> str:
+    parts = [
+        f"{issue.get('code', 'integrity')}: match {issue.get('match_id', '?')}",
+        str(issue.get("message") or "inspect source data"),
+    ]
+    context: list[str] = []
+    if issue.get("team_id") is not None:
+        context.append(f"team_id={issue['team_id']}")
+    for key, value in (issue.get("details") or {}).items():
+        if value is not None:
+            context.append(f"{key}={value}")
+    if context:
+        parts.append("(" + ", ".join(context) + ")")
+    return " · ".join(parts)
+
+
 def evaluate_report(
     report: dict[str, Any],
     *,
@@ -69,17 +85,13 @@ def evaluate_report(
     if integrity_hard:
         failures.append(f"{len(integrity_hard)} cross-source integrity failure(s)")
         for issue in integrity_hard[:20]:
-            failures.append(
-                f"{issue.get('code', 'integrity')}: match {issue.get('match_id', '?')} · {issue.get('message', 'data contradiction')}"
-            )
+            failures.append(_format_issue(issue))
         if len(integrity_hard) > 20:
             failures.append(f"... {len(integrity_hard) - 20} more integrity failure(s); see season_quality.json")
     if integrity_warnings:
         warnings.append(f"{len(integrity_warnings)} cross-source integrity warning(s)")
-        for issue in integrity_warnings[:10]:
-            warnings.append(
-                f"{issue.get('code', 'integrity')}: match {issue.get('match_id', '?')} · {issue.get('message', 'inspect source data')}"
-            )
+        for issue in integrity_warnings[:20]:
+            warnings.append(_format_issue(issue))
     return warnings, failures
 
 
