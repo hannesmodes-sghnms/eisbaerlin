@@ -84,7 +84,7 @@ jobs:
           python scripts/update_season.py \
             --season 2026 \
             --game-type 1 \
-            --refresh-days 3 \
+            --refresh-days 2 \
             "${EXTRA_ARGS[@]}"
 
       - name: Validate season dataset
