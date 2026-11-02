@@ -458,7 +458,9 @@ def audit_database(con: Any) -> dict[str, Any]:
         """,
     )
     for row in bad_shot_refs:
-        hard.append(_issue("shot_player_reference", "shot references a player not on that team roster", match_id=int(row["match_id"]), team_id=int(row["team_id"]), shot_id=int(row["shot_id"]), player_id=int(row["player_id"])))
+        # The DEL shot/roster feeds can temporarily disagree about late roster
+        # changes. Keep the contradiction visible, but do not block publication.
+        warnings.append(_issue("shot_player_reference", "shot references a player not on that team roster", match_id=int(row["match_id"]), team_id=int(row["team_id"]), shot_id=int(row["shot_id"]), player_id=int(row["player_id"])))
 
     for row in _rows(con, "SELECT match_id, shooting_team_id, opponent_team_id, shot_id, on_ice_for_player_ids, on_ice_against_player_ids FROM shot_context"):
         mid, for_team, against_team = int(row["match_id"]), int(row["shooting_team_id"]), int(row["opponent_team_id"])
