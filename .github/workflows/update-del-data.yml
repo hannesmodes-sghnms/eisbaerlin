@@ -2,6 +2,12 @@ name: Update DEL 2026-27 dataset
 
 on:
   workflow_dispatch:
+    inputs:
+      full_rebuild:
+        description: "Rebuild the complete season database from raw data"
+        required: false
+        default: false
+        type: boolean
   push:
     branches: [main]
     paths-ignore:
@@ -48,21 +54,45 @@ jobs:
       - name: Run tests
         run: pytest -q
 
+      - name: Restore latest season database
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.full_rebuild != true }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p data
+          if gh release view dataset-2026-27-latest >/dev/null 2>&1; then
+            gh release download dataset-2026-27-latest \
+              --pattern "del_2026_27.duckdb" \
+              --dir data \
+              --clobber
+            echo "Restored latest DuckDB for incremental update."
+          else
+            echo "No latest dataset release found; falling back to a full rebuild."
+          fi
+
       - name: Update season data
+        env:
+          FULL_REBUILD: ${{ github.event_name == 'workflow_dispatch' && inputs.full_rebuild || false }}
         run: |
           # League-wide completed games are required for the next-opponent
           # previews (last five, season comparison and head-to-head). The UI
           # itself remains EBB-only for completed-game selection.
+          EXTRA_ARGS=()
+          if [ "$FULL_REBUILD" = "true" ]; then
+            EXTRA_ARGS+=(--rebuild-all)
+          fi
           python scripts/update_season.py \
             --season 2026 \
             --game-type 1 \
-            --refresh-days 3
+            --refresh-days 3 \
+            "${EXTRA_ARGS[@]}"
 
       - name: Validate season dataset
         run: |
           # DEL sometimes marks a game AFTER_MATCH before every raw resource is
           # available. Such matches are deferred and retried on the next daily
-          # run. Real importer errors / DB inconsistencies still fail the job.
+          # run. Source-feed roster/reference mismatches remain visible as
+          # warnings; mathematical or derived-data contradictions still fail.
           python scripts/validate_season.py --allow-incomplete
 
       - name: Update DEL Insight stats
