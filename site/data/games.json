@@ -4,7 +4,7 @@
     "abbr": "EBB",
     "name": "Eisbären Berlin"
   },
-  "generated_at": "2026-11-02T17:27:32.543944+00:00",
+  "generated_at": "2026-11-03T11:09:01.319021+00:00",
   "completed_games": [
     {
       "match_id": 4484,
@@ -254,7 +254,7 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-11-02T17:27:23Z",
+        "snapshot_at": "2026-11-03T11:08:53Z",
         "rows": [
           {
             "label": "Pässe",
@@ -700,7 +700,7 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-11-02T17:27:23Z",
+        "snapshot_at": "2026-11-03T11:08:53Z",
         "rows": [
           {
             "label": "Pässe",
@@ -1147,7 +1147,7 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-11-02T17:27:23Z",
+        "snapshot_at": "2026-11-03T11:08:53Z",
         "rows": [
           {
             "label": "Pässe",

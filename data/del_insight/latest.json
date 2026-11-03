@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-02T17:27:23Z",
+  "generated_at_utc": "2026-11-03T11:08:53Z",
   "season": "2026-27",
   "phase": "hauptrunde",
   "source": "PENNY DEL / Wisehockey public player statistics",
@@ -1423,10 +1423,10 @@
       "pcw_total": 169,
       "pcw_pct": 57.4,
       "blocked_shots": 3,
-      "xg_sum": 3.85,
+      "xg_sum": 3.96,
       "xg_avg": 0.07,
       "goals": 7,
-      "xg_diff": 3.15
+      "xg_diff": 3.04
     },
     {
       "player_id": 3549,
@@ -6548,9 +6548,9 @@
       "pcw_total": 3040,
       "pcw_pct": 55.49,
       "blocked_shots": 159,
-      "xg_sum": 45.27,
+      "xg_sum": 45.38,
       "goals": 51,
-      "xg_diff": 5.73,
+      "xg_diff": 5.62,
       "players": 27,
       "xg_per_game": null
     },
@@ -6717,5 +6717,5 @@
       "xg_per_game": null
     }
   ],
-  "content_sha256": "de8099446272a9f7fb5372665184f7a7089f80a381f7ded73ceac06b10c54eb6"
+  "content_sha256": "38a53d26fd4501fc9f9ac5f807dde7fb05f24c8f9e77932660ffd921e3758115"
 }
