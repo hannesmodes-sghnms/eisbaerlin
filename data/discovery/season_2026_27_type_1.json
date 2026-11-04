@@ -1687,19 +1687,6 @@
       ]
     },
     {
-      "match_id": 4514,
-      "start_date": "2026-11-22 16:30:00",
-      "status": "BEFORE_MATCH",
-      "home_team_id": 7,
-      "home_team_name": "Iserlohn Roosters",
-      "away_team_id": 44,
-      "away_team_name": "Löwen Frankfurt",
-      "source_schedule_keys": [
-        "league-team-matches/2026/1/44.json",
-        "league-team-matches/2026/1/7.json"
-      ]
-    },
-    {
       "match_id": 4516,
       "start_date": "2026-11-22 16:30:00",
       "status": "BEFORE_MATCH",
@@ -1710,6 +1697,19 @@
       "source_schedule_keys": [
         "league-team-matches/2026/1/13.json",
         "league-team-matches/2026/1/15.json"
+      ]
+    },
+    {
+      "match_id": 4514,
+      "start_date": "2026-11-22 18:00:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 7,
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/7.json"
       ]
     },
     {
