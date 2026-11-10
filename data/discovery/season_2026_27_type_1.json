@@ -2116,19 +2116,6 @@
       ]
     },
     {
-      "match_id": 4551,
-      "start_date": "2026-12-06 14:00:00",
-      "status": "BEFORE_MATCH",
-      "home_team_id": 8,
-      "home_team_name": "Grizzlys Wolfsburg",
-      "away_team_id": 44,
-      "away_team_name": "Löwen Frankfurt",
-      "source_schedule_keys": [
-        "league-team-matches/2026/1/44.json",
-        "league-team-matches/2026/1/8.json"
-      ]
-    },
-    {
       "match_id": 4546,
       "start_date": "2026-12-06 16:30:00",
       "status": "BEFORE_MATCH",
@@ -2152,6 +2139,19 @@
       "source_schedule_keys": [
         "league-team-matches/2026/1/2.json",
         "league-team-matches/2026/1/5.json"
+      ]
+    },
+    {
+      "match_id": 4551,
+      "start_date": "2026-12-06 16:30:00",
+      "status": "BEFORE_MATCH",
+      "home_team_id": 8,
+      "home_team_name": "Grizzlys Wolfsburg",
+      "away_team_id": 44,
+      "away_team_name": "Löwen Frankfurt",
+      "source_schedule_keys": [
+        "league-team-matches/2026/1/44.json",
+        "league-team-matches/2026/1/8.json"
       ]
     },
     {
