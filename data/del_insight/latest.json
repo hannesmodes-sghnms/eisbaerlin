@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-11-03T11:08:53Z",
+  "generated_at_utc": "2026-11-11T11:16:59Z",
   "season": "2026-27",
   "phase": "hauptrunde",
   "source": "PENNY DEL / Wisehockey public player statistics",
@@ -1640,23 +1640,6 @@
       "jersey": 92,
       "player_name": "Andreas Jenike",
       "position": "T",
-      "passes_completed": 0,
-      "passes_attempted": 0,
-      "pass_pct": 0.0,
-      "total_pass_distance_m": 0,
-      "forward_pass_distance_m": 0,
-      "received_passes": 0,
-      "xg_sum": 0.0,
-      "xg_avg": 0.0,
-      "goals": 0,
-      "xg_diff": 0.0
-    },
-    {
-      "player_id": 3586,
-      "team_id": 7,
-      "jersey": 17,
-      "player_name": "Bence Farkas",
-      "position": "S",
       "passes_completed": 0,
       "passes_attempted": 0,
       "pass_pct": 0.0,
@@ -6293,6 +6276,23 @@
       "xg_diff": -1.87
     },
     {
+      "player_id": 4913,
+      "team_id": 44,
+      "jersey": 8,
+      "player_name": "Markus Phillips",
+      "position": "V",
+      "passes_completed": 0,
+      "passes_attempted": 0,
+      "pass_pct": 0.0,
+      "total_pass_distance_m": 0,
+      "forward_pass_distance_m": 0,
+      "received_passes": 0,
+      "xg_sum": 0.0,
+      "xg_avg": 0.0,
+      "goals": 0,
+      "xg_diff": 0.0
+    },
+    {
       "player_id": 2473,
       "team_id": 44,
       "jersey": 64,
@@ -6569,7 +6569,7 @@
       "xg_sum": 36.17,
       "goals": 32,
       "xg_diff": -4.17,
-      "players": 27,
+      "players": 26,
       "xg_per_game": null
     },
     {
@@ -6713,9 +6713,9 @@
       "xg_sum": 32.26,
       "goals": 30,
       "xg_diff": -2.26,
-      "players": 25,
+      "players": 26,
       "xg_per_game": null
     }
   ],
-  "content_sha256": "38a53d26fd4501fc9f9ac5f807dde7fb05f24c8f9e77932660ffd921e3758115"
+  "content_sha256": "76465f793615e6a5644ec10f778ded420e8d5f5cf447a1599c2b655e3347205c"
 }
