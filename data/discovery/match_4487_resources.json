@@ -12,7 +12,9 @@
       "matches/4487/period-events.json"
     ],
     "shifts": [],
-    "faceoffs": [],
+    "faceoffs": [
+      "matches/4487/faceoffs.json"
+    ],
     "team_stats": [
       "matches/4487/team-stats/13.json",
       "matches/4487/team-stats/8.json"
@@ -25,6 +27,7 @@
     ]
   },
   "all_keys": [
+    "matches/4487/faceoffs.json",
     "matches/4487/game-header.json",
     "matches/4487/period-events.json",
     "matches/4487/roster.json",

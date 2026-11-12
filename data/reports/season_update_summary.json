@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-11-11T11:16:50Z",
+  "generated_at_utc": "2026-11-12T11:33:34Z",
   "schedule_matches": 364,
   "completed_matches": 102,
   "refreshed_matches": 0,
@@ -981,7 +981,7 @@
       "away_team_name": "Augsburger Panther",
       "action": "downloaded",
       "refresh": false,
-      "downloaded_resources": 0,
+      "downloaded_resources": 1,
       "error": null
     },
     {

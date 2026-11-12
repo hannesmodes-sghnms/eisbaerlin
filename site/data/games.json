@@ -4,7 +4,7 @@
     "abbr": "EBB",
     "name": "Eisbären Berlin"
   },
-  "generated_at": "2026-11-11T11:17:07.715448+00:00",
+  "generated_at": "2026-11-12T11:33:52.636009+00:00",
   "completed_games": [
     {
       "match_id": 4484,
@@ -254,42 +254,42 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-11-11T11:16:59Z",
+        "snapshot_at": "2026-11-12T11:33:43Z",
         "rows": [
           {
             "label": "Pässe",
             "ebb": "3677 / 4466",
-            "opponent": "3425 / 4122",
+            "opponent": "3613 / 4360",
             "kind": "text"
           },
           {
             "label": "Passquote",
             "ebb": 82.33,
-            "opponent": 83.09,
+            "opponent": 82.87,
             "kind": "percent"
           },
           {
             "label": "Puck Contests",
             "ebb": "1611 / 2993",
-            "opponent": "1311 / 2696",
+            "opponent": "1401 / 2876",
             "kind": "text"
           },
           {
             "label": "PCW%",
             "ebb": 53.83,
-            "opponent": 48.63,
+            "opponent": 48.71,
             "kind": "percent"
           },
           {
             "label": "xG Summe",
             "ebb": 46.33,
-            "opponent": 42.38,
+            "opponent": 44.42,
             "kind": "decimal2"
           },
           {
             "label": "xG / Spiel",
             "ebb": 3.31,
-            "opponent": 3.03,
+            "opponent": 3.17,
             "kind": "decimal2"
           }
         ]
@@ -700,7 +700,7 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-11-11T11:16:59Z",
+        "snapshot_at": "2026-11-12T11:33:43Z",
         "rows": [
           {
             "label": "Pässe",
@@ -1147,7 +1147,7 @@
       ],
       "del_insight": {
         "available": true,
-        "snapshot_at": "2026-11-11T11:16:59Z",
+        "snapshot_at": "2026-11-12T11:33:43Z",
         "rows": [
           {
             "label": "Pässe",
