@@ -1,36 +1,36 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-11-12T11:33:34Z
+Generated: 2026-11-13T11:18:17Z
 
 ## Totals
 
-- Matches: 99
-- Shots: 10652
-- Shifts: 75919
-- Faceoffs: 5742
-- Events: 2505
-- Player game stats: 5146
-- Team game stats: 198
+- Matches: 100
+- Shots: 10748
+- Shifts: 76710
+- Faceoffs: 5797
+- Events: 2530
+- Player game stats: 5199
+- Team game stats: 200
 - Unclassified shot zones: 0
 - Reconstructed goal shots: 5
 
 ## On-ice quality
 
-- Exact: 10528
+- Exact: 10624
 - Boundary adjusted: 62
 - Low confidence: 60
 
 ## D-zone faceoff sequences
 
-- D-zone faceoff -> shot <=10s: 95
-- Won D-zone faceoff -> shot <=10s: 72
+- D-zone faceoff -> shot <=10s: 97
+- Won D-zone faceoff -> shot <=10s: 73
 
 ## Cross-source integrity
 
 - Hard failures: 0
 - Warnings: 191
-- Goal events checked: 591
-- Goal shots checked: 583
+- Goal events checked: 599
+- Goal shots checked: 591
 
 ### Warnings
 
@@ -189,3 +189,4 @@ Generated: 2026-11-12T11:33:34Z
 | 4486 | 2026-11-01 | Schwenninger Wild Wings – Krefeld Pinguine | 113 | 53 | 735 | 0 | 0 |
 | 4488 | 2026-11-01 | EHC Red Bull München – Nürnberg Ice Tigers | 113 | 57 | 732 | 2 | 1 |
 | 4489 | 2026-11-01 | Pinguins Bremerhaven – Straubing Tigers | 114 | 54 | 752 | 1 | 5 |
+| 4490 | 2026-11-12 | Iserlohn Roosters – Adler Mannheim | 96 | 55 | 791 | 0 | 0 |

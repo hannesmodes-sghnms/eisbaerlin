@@ -1,15 +1,15 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-11-12T11:33:34Z",
+  "generated_at_utc": "2026-11-13T11:18:17Z",
   "schedule_matches": 364,
-  "completed_matches": 102,
+  "completed_matches": 103,
   "refreshed_matches": 0,
-  "downloaded_matches": 3,
+  "downloaded_matches": 4,
   "skipped_matches": 99,
   "failed_downloads": 0,
-  "imported_matches": 99,
-  "rebuilt_matches": 0,
+  "imported_matches": 100,
+  "rebuilt_matches": 1,
   "failed_imports": 3,
   "db_path": "data/del_2026_27.duckdb",
   "quality_report_path": "data/reports/season_quality.json",
@@ -981,7 +981,7 @@
       "away_team_name": "Augsburger Panther",
       "action": "downloaded",
       "refresh": false,
-      "downloaded_resources": 1,
+      "downloaded_resources": 0,
       "error": null
     },
     {
@@ -1032,6 +1032,16 @@
       "action": "skipped",
       "refresh": false,
       "downloaded_resources": 0,
+      "error": null
+    },
+    {
+      "match_id": 4490,
+      "start_date": "2026-11-12 19:30:00",
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_name": "Adler Mannheim",
+      "action": "downloaded",
+      "refresh": true,
+      "downloaded_resources": 10,
       "error": null
     }
   ],

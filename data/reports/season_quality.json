@@ -1,34 +1,34 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-11-12T11:33:34Z",
+  "generated_at_utc": "2026-11-13T11:18:17Z",
   "totals": {
-    "matches": 99,
-    "player_match_rows": 4095,
-    "shifts": 75919,
-    "shots": 10652,
-    "faceoffs": 5742,
-    "events": 2505,
-    "player_game_stats": 5146,
-    "team_game_stats": 198,
+    "matches": 100,
+    "player_match_rows": 4136,
+    "shifts": 76710,
+    "shots": 10748,
+    "faceoffs": 5797,
+    "events": 2530,
+    "player_game_stats": 5199,
+    "team_game_stats": 200,
     "unclassified_shots": 0,
     "reconstructed_goal_shots": 5
   },
   "on_ice_quality": {
     "boundary_adjusted": 62,
     "event_special": 2,
-    "exact": 10528,
+    "exact": 10624,
     "low_confidence": 60
   },
   "manpower": {
-    "5v5": 7765,
-    "5v4": 1706,
-    "4v5": 393,
-    "6v5": 263,
+    "5v5": 7838,
+    "5v4": 1721,
+    "4v5": 395,
+    "6v5": 267,
     "4v4": 119,
     "3v3": 94,
     "5v3": 70,
-    "5v6": 68,
+    "5v6": 70,
     "4v3": 45,
     "6v4": 34,
     "0v0": 29,
@@ -61,8 +61,8 @@
     "9v6": 1,
     "9v7": 1
   },
-  "dzone_faceoff_to_shot_10s": 95,
-  "dzone_faceoff_win_to_shot_10s": 72,
+  "dzone_faceoff_to_shot_10s": 97,
+  "dzone_faceoff_win_to_shot_10s": 73,
   "per_match": [
     {
       "match_id": 4389,
@@ -1152,16 +1152,27 @@
       "shifts": 752,
       "boundary_adjusted": 1,
       "low_confidence": 5
+    },
+    {
+      "match_id": 4490,
+      "match_date": "2026-11-12",
+      "home_team_name": "Iserlohn Roosters",
+      "away_team_name": "Adler Mannheim",
+      "shots": 96,
+      "faceoffs": 55,
+      "shifts": 791,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
     }
   ],
   "integrity": {
     "checks": {
-      "team_game_matches": 99,
-      "matches": 99,
-      "team_game_rows": 198,
-      "goal_events": 591,
-      "goal_shots": 583,
-      "player_game_rows": 5146,
+      "team_game_matches": 100,
+      "matches": 100,
+      "team_game_rows": 200,
+      "goal_events": 599,
+      "goal_shots": 591,
+      "player_game_rows": 5199,
       "hard_failures": 0,
       "warnings": 191
     },
@@ -3311,7 +3322,7 @@
   },
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 102,
+    "completed_matches": 103,
     "failed_downloads": 0,
     "failed_imports": 3,
     "import_errors": [

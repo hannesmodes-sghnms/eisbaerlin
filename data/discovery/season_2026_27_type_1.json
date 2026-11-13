@@ -1364,7 +1364,7 @@
     {
       "match_id": 4490,
       "start_date": "2026-11-12 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 7,
       "home_team_name": "Iserlohn Roosters",
       "away_team_id": 2,
