@@ -1377,7 +1377,7 @@
     {
       "match_id": 4491,
       "start_date": "2026-11-13 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 8,
       "home_team_name": "Grizzlys Wolfsburg",
       "away_team_id": 3,
@@ -1390,7 +1390,7 @@
     {
       "match_id": 4492,
       "start_date": "2026-11-13 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 5,
       "home_team_name": "Krefeld Pinguine",
       "away_team_id": 14,
@@ -1403,7 +1403,7 @@
     {
       "match_id": 4493,
       "start_date": "2026-11-13 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 44,
       "home_team_name": "Löwen Frankfurt",
       "away_team_id": 9,
@@ -1416,7 +1416,7 @@
     {
       "match_id": 4494,
       "start_date": "2026-11-13 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 13,
       "home_team_name": "Augsburger Panther",
       "away_team_id": 12,
@@ -1429,7 +1429,7 @@
     {
       "match_id": 4495,
       "start_date": "2026-11-13 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 1,
       "home_team_name": "ERC Ingolstadt",
       "away_team_id": 6,
@@ -1442,7 +1442,7 @@
     {
       "match_id": 4496,
       "start_date": "2026-11-13 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 15,
       "home_team_name": "Schwenninger Wild Wings",
       "away_team_id": 11,
