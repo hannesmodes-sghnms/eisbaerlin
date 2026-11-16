@@ -1455,7 +1455,7 @@
     {
       "match_id": 4500,
       "start_date": "2026-11-15 14:00:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 9,
       "home_team_name": "Pinguins Bremerhaven",
       "away_team_id": 13,
@@ -1468,7 +1468,7 @@
     {
       "match_id": 4501,
       "start_date": "2026-11-15 14:00:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 12,
       "home_team_name": "EHC Red Bull München",
       "away_team_id": 5,
@@ -1481,7 +1481,7 @@
     {
       "match_id": 4497,
       "start_date": "2026-11-15 16:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 11,
       "home_team_name": "Kölner Haie",
       "away_team_id": 8,
@@ -1494,7 +1494,7 @@
     {
       "match_id": 4498,
       "start_date": "2026-11-15 16:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 14,
       "home_team_name": "Nürnberg Ice Tigers",
       "away_team_id": 7,
@@ -1507,7 +1507,7 @@
     {
       "match_id": 4499,
       "start_date": "2026-11-15 16:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 2,
       "home_team_name": "Adler Mannheim",
       "away_team_id": 1,
@@ -1520,7 +1520,7 @@
     {
       "match_id": 4502,
       "start_date": "2026-11-15 16:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 6,
       "home_team_name": "Straubing Tigers",
       "away_team_id": 44,
@@ -1533,7 +1533,7 @@
     {
       "match_id": 4503,
       "start_date": "2026-11-15 19:00:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 3,
       "home_team_name": "Eisbären Berlin",
       "away_team_id": 15,

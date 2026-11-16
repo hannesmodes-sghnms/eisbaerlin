@@ -1,36 +1,36 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-11-15T11:18:28Z
+Generated: 2026-11-16T11:50:12Z
 
 ## Totals
 
-- Matches: 106
-- Shots: 11436
-- Shifts: 81391
-- Faceoffs: 6155
-- Events: 2670
-- Player game stats: 5520
-- Team game stats: 212
+- Matches: 113
+- Shots: 12178
+- Shifts: 86778
+- Faceoffs: 6587
+- Events: 2837
+- Player game stats: 5894
+- Team game stats: 226
 - Unclassified shot zones: 0
 - Reconstructed goal shots: 5
 
 ## On-ice quality
 
-- Exact: 11309
-- Boundary adjusted: 64
-- Low confidence: 61
+- Exact: 12045
+- Boundary adjusted: 66
+- Low confidence: 64
 
 ## D-zone faceoff sequences
 
-- D-zone faceoff -> shot <=10s: 107
-- Won D-zone faceoff -> shot <=10s: 80
+- D-zone faceoff -> shot <=10s: 110
+- Won D-zone faceoff -> shot <=10s: 83
 
 ## Cross-source integrity
 
 - Hard failures: 0
-- Warnings: 197
-- Goal events checked: 634
-- Goal shots checked: 625
+- Warnings: 201
+- Goal events checked: 675
+- Goal shots checked: 665
 
 ### Warnings
 
@@ -84,7 +84,7 @@ Generated: 2026-11-15T11:18:28Z
 - goal_balance_attendant_disagreement: match 4443 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - goal_balance_attendant_disagreement: match 4444 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - goal_balance_attendant_disagreement: match 4448 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
-- … 147 more
+- … 151 more
 
 ## Per match
 
@@ -196,3 +196,10 @@ Generated: 2026-11-15T11:18:28Z
 | 4494 | 2026-11-13 | Augsburger Panther – EHC Red Bull München | 102 | 54 | 819 | 0 | 0 |
 | 4495 | 2026-11-13 | ERC Ingolstadt – Straubing Tigers | 132 | 70 | 807 | 0 | 0 |
 | 4496 | 2026-11-13 | Schwenninger Wild Wings – Kölner Haie | 95 | 37 | 753 | 0 | 1 |
+| 4497 | 2026-11-15 | Kölner Haie – Grizzlys Wolfsburg | 115 | 68 | 752 | 0 | 0 |
+| 4498 | 2026-11-15 | Nürnberg Ice Tigers – Iserlohn Roosters | 110 | 71 | 830 | 1 | 0 |
+| 4499 | 2026-11-15 | Adler Mannheim – ERC Ingolstadt | 115 | 70 | 825 | 0 | 0 |
+| 4500 | 2026-11-15 | Pinguins Bremerhaven – Augsburger Panther | 100 | 63 | 781 | 0 | 0 |
+| 4501 | 2026-11-15 | EHC Red Bull München – Krefeld Pinguine | 116 | 57 | 689 | 1 | 3 |
+| 4502 | 2026-11-15 | Straubing Tigers – Löwen Frankfurt | 90 | 45 | 746 | 0 | 0 |
+| 4503 | 2026-11-15 | Eisbären Berlin – Schwenninger Wild Wings | 96 | 58 | 764 | 0 | 0 |
