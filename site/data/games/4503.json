@@ -106,7 +106,7 @@
       "key": "scoring_players",
       "kind": "number",
       "ebb": 4,
-      "opponent": 9
+      "opponent": 8
     },
     {
       "label": "Verteidigerpunkte",
@@ -9929,28 +9929,28 @@
       "assists": [
         {
           "order": 1,
-          "player_id": 1705,
-          "name": "Arkadiusz Dziambor",
-          "jersey": 16
-        },
-        {
-          "order": 2,
           "player_id": 1075,
           "name": "Phil Hungerecker",
           "jersey": 94
+        },
+        {
+          "order": 2,
+          "player_id": 4335,
+          "name": "Alexander Peters",
+          "jersey": 6
         }
       ],
       "primary_assist": {
         "order": 1,
-        "player_id": 1705,
-        "name": "Arkadiusz Dziambor",
-        "jersey": 16
-      },
-      "secondary_assist": {
-        "order": 2,
         "player_id": 1075,
         "name": "Phil Hungerecker",
         "jersey": 94
+      },
+      "secondary_assist": {
+        "order": 2,
+        "player_id": 4335,
+        "name": "Alexander Peters",
+        "jersey": 6
       },
       "empty_net": false
     },
@@ -10015,9 +10015,9 @@
         },
         {
           "order": 2,
-          "player_id": 3323,
-          "name": "Vadim Schreiner",
-          "jersey": 13
+          "player_id": 1075,
+          "name": "Phil Hungerecker",
+          "jersey": 94
         }
       ],
       "primary_assist": {
@@ -10028,9 +10028,9 @@
       },
       "secondary_assist": {
         "order": 2,
-        "player_id": 3323,
-        "name": "Vadim Schreiner",
-        "jersey": 13
+        "player_id": 1075,
+        "name": "Phil Hungerecker",
+        "jersey": 94
       },
       "empty_net": false
     },
@@ -12233,13 +12233,13 @@
         "assists": [
           {
             "order": 1,
-            "name": "Arkadiusz Dziambor",
-            "jersey": 16
+            "name": "Phil Hungerecker",
+            "jersey": 94
           },
           {
             "order": 2,
-            "name": "Phil Hungerecker",
-            "jersey": 94
+            "name": "Alexander Peters",
+            "jersey": 6
           }
         ]
       },
@@ -12282,8 +12282,8 @@
           },
           {
             "order": 2,
-            "name": "Vadim Schreiner",
-            "jersey": 13
+            "name": "Phil Hungerecker",
+            "jersey": 94
           }
         ]
       },
@@ -15295,15 +15295,15 @@
       "assists": [
         {
           "order": 1,
-          "player_id": 1705,
-          "name": "Arkadiusz Dziambor",
-          "jersey": 16
-        },
-        {
-          "order": 2,
           "player_id": 1075,
           "name": "Phil Hungerecker",
           "jersey": 94
+        },
+        {
+          "order": 2,
+          "player_id": 4335,
+          "name": "Alexander Peters",
+          "jersey": 6
         }
       ],
       "score": "0:2",
@@ -15353,9 +15353,9 @@
         },
         {
           "order": 2,
-          "player_id": 3323,
-          "name": "Vadim Schreiner",
-          "jersey": 13
+          "player_id": 1075,
+          "name": "Phil Hungerecker",
+          "jersey": 94
         }
       ],
       "score": "1:3",
