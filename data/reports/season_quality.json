@@ -1,38 +1,38 @@
 {
   "season": 2026,
   "game_type": 1,
-  "generated_at_utc": "2026-11-19T11:56:12Z",
+  "generated_at_utc": "2026-11-20T11:57:25Z",
   "totals": {
-    "matches": 113,
-    "player_match_rows": 4670,
-    "shifts": 86778,
-    "shots": 12178,
-    "faceoffs": 6587,
-    "events": 2837,
-    "player_game_stats": 5894,
-    "team_game_stats": 226,
+    "matches": 114,
+    "player_match_rows": 4713,
+    "shifts": 87510,
+    "shots": 12305,
+    "faceoffs": 6650,
+    "events": 2865,
+    "player_game_stats": 5947,
+    "team_game_stats": 228,
     "unclassified_shots": 0,
     "reconstructed_goal_shots": 5
   },
   "on_ice_quality": {
     "boundary_adjusted": 66,
     "event_special": 3,
-    "exact": 12045,
+    "exact": 12172,
     "low_confidence": 64
   },
   "manpower": {
-    "5v5": 8923,
-    "5v4": 1928,
-    "4v5": 443,
-    "6v5": 298,
-    "4v4": 137,
+    "5v5": 8995,
+    "5v4": 1959,
+    "4v5": 447,
+    "6v5": 312,
+    "4v4": 138,
     "3v3": 99,
-    "5v6": 75,
-    "5v3": 74,
+    "5v3": 76,
+    "5v6": 76,
     "4v3": 49,
     "6v4": 48,
     "0v0": 33,
-    "3v5": 21,
+    "3v5": 23,
     "3v4": 7,
     "7v5": 5,
     "4v6": 4,
@@ -1306,18 +1306,29 @@
       "shifts": 764,
       "boundary_adjusted": 0,
       "low_confidence": 0
+    },
+    {
+      "match_id": 4504,
+      "match_date": "2026-11-19",
+      "home_team_name": "Krefeld Pinguine",
+      "away_team_name": "Straubing Tigers",
+      "shots": 127,
+      "faceoffs": 63,
+      "shifts": 732,
+      "boundary_adjusted": 0,
+      "low_confidence": 0
     }
   ],
   "integrity": {
     "checks": {
-      "team_game_matches": 113,
-      "matches": 113,
-      "team_game_rows": 226,
-      "goal_events": 675,
-      "goal_shots": 665,
-      "player_game_rows": 5894,
+      "team_game_matches": 114,
+      "matches": 114,
+      "team_game_rows": 228,
+      "goal_events": 682,
+      "goal_shots": 672,
+      "player_game_rows": 5947,
       "hard_failures": 0,
-      "warnings": 201
+      "warnings": 202
     },
     "hard_failures": [],
     "warnings": [
@@ -2046,6 +2057,15 @@
           "time_s": 1362,
           "for_count": 1,
           "against_count": 0
+        }
+      },
+      {
+        "code": "goal_balance_attendant_disagreement",
+        "message": "EQ goal has 6v5 attendants; possible delayed penalty/extra attacker",
+        "match_id": 4504,
+        "team_id": 6,
+        "details": {
+          "time_s": 3447
         }
       },
       {
@@ -3586,7 +3606,7 @@
   },
   "pipeline": {
     "schedule_matches": 364,
-    "completed_matches": 116,
+    "completed_matches": 117,
     "failed_downloads": 0,
     "failed_imports": 3,
     "import_errors": [

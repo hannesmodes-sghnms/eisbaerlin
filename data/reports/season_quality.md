@@ -1,22 +1,22 @@
 # DEL 2026/27 data quality
 
-Generated: 2026-11-19T11:56:12Z
+Generated: 2026-11-20T11:57:25Z
 
 ## Totals
 
-- Matches: 113
-- Shots: 12178
-- Shifts: 86778
-- Faceoffs: 6587
-- Events: 2837
-- Player game stats: 5894
-- Team game stats: 226
+- Matches: 114
+- Shots: 12305
+- Shifts: 87510
+- Faceoffs: 6650
+- Events: 2865
+- Player game stats: 5947
+- Team game stats: 228
 - Unclassified shot zones: 0
 - Reconstructed goal shots: 5
 
 ## On-ice quality
 
-- Exact: 12045
+- Exact: 12172
 - Boundary adjusted: 66
 - Low confidence: 64
 
@@ -28,9 +28,9 @@ Generated: 2026-11-19T11:56:12Z
 ## Cross-source integrity
 
 - Hard failures: 0
-- Warnings: 201
-- Goal events checked: 675
-- Goal shots checked: 665
+- Warnings: 202
+- Goal events checked: 682
+- Goal shots checked: 672
 
 ### Warnings
 
@@ -84,7 +84,7 @@ Generated: 2026-11-19T11:56:12Z
 - goal_balance_attendant_disagreement: match 4443 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - goal_balance_attendant_disagreement: match 4444 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
 - goal_balance_attendant_disagreement: match 4448 · EQ goal has 6v5 attendants; possible delayed penalty/extra attacker
-- … 151 more
+- … 152 more
 
 ## Per match
 
@@ -203,3 +203,4 @@ Generated: 2026-11-19T11:56:12Z
 | 4501 | 2026-11-15 | EHC Red Bull München – Krefeld Pinguine | 116 | 57 | 689 | 1 | 3 |
 | 4502 | 2026-11-15 | Straubing Tigers – Löwen Frankfurt | 90 | 45 | 746 | 0 | 0 |
 | 4503 | 2026-11-15 | Eisbären Berlin – Schwenninger Wild Wings | 96 | 58 | 764 | 0 | 0 |
+| 4504 | 2026-11-19 | Krefeld Pinguine – Straubing Tigers | 127 | 63 | 732 | 0 | 0 |
