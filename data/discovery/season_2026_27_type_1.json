@@ -1559,7 +1559,7 @@
     {
       "match_id": 4505,
       "start_date": "2026-11-20 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 3,
       "home_team_name": "Eisbären Berlin",
       "away_team_id": 1,
@@ -1572,7 +1572,7 @@
     {
       "match_id": 4506,
       "start_date": "2026-11-20 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 44,
       "home_team_name": "Löwen Frankfurt",
       "away_team_id": 15,
@@ -1585,7 +1585,7 @@
     {
       "match_id": 4507,
       "start_date": "2026-11-20 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 13,
       "home_team_name": "Augsburger Panther",
       "away_team_id": 14,
@@ -1598,7 +1598,7 @@
     {
       "match_id": 4508,
       "start_date": "2026-11-20 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 9,
       "home_team_name": "Pinguins Bremerhaven",
       "away_team_id": 2,
@@ -1611,7 +1611,7 @@
     {
       "match_id": 4509,
       "start_date": "2026-11-20 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 12,
       "home_team_name": "EHC Red Bull München",
       "away_team_id": 11,
@@ -1624,7 +1624,7 @@
     {
       "match_id": 4510,
       "start_date": "2026-11-20 19:30:00",
-      "status": "BEFORE_MATCH",
+      "status": "AFTER_MATCH",
       "home_team_id": 8,
       "home_team_name": "Grizzlys Wolfsburg",
       "away_team_id": 7,
